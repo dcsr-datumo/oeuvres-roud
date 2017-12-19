@@ -1,0 +1,1128 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
+@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
+@prefix roud: <http://www.knora.org/ontology/roud#> .
+
+
+########################################################
+### Gustave Roud - Fonds et édition
+########################################################
+
+
+
+## Lists:
+## - editorial sets (flat list)
+## - document types  --
+## - support types  --
+## - writing tools  --
+## - writing colors  --
+## - genres  -- 
+## - genetic stages  --
+## - folio faces  --
+## - CRLR Inventory (tree)
+
+
+
+## __________ LIST EDITORIAL SETS __________
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Ensemble éditorial auquel le document se rattache"@fr ;
+	rdfs:label "Ensemble éditorial"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasEditorialSet-oeuvrePoetique> ,
+								<http://example.com/lists/roud-flatlist-hasEditorialSet-journal> ,
+								<http://example.com/lists/roud-flatlist-hasEditorialSet-periodiqueCollectif> ,
+								<http://example.com/lists/roud-flatlist-hasEditorialSet-traduction> ,
+								<http://example.com/lists/roud-flatlist-hasEditorialSet-divers> .
+
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet-OeuvrePoetique> a knora-base:ListNode ;
+		knora-base:listNodeName "oeuvrePoetique" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasEditorialSet> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Œuvre poétique"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet-journal> a knora-base:ListNode ;
+		knora-base:listNodeName "journal" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasEditorialSet> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Journal"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet-periodiqueCollectif> a knora-base:ListNode ;
+		knora-base:listNodeName "periodiqueCollectif" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasEditorialSet> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Publication en périodique ou ouvrage collectif"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet-traduction> a knora-base:ListNode ;
+		knora-base:listNodeName "traduction" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasEditorialSet> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Traduction"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasEditorialSet-divers> a knora-base:ListNode ;
+		knora-base:listNodeName "divers" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasEditorialSet> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Divers"@fr .		
+
+
+
+
+## ___________ LIST DOCUMENT TYPES ___________
+
+<http://example.com/lists/roud-flatlist-hasDocumentType> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Type de document"@fr ;
+	rdfs:label "Type de document"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasDocumentType-manuscript> ,
+								<http://example.com/lists/roud-flatlist-hasDocumentType-typescript> ,
+								<http://example.com/lists/roud-flatlist-hasDocumentType-print> .
+
+
+<http://example.com/lists/roud-flatlist-hasDocumentType-manuscript> a knora-base:ListNode ;
+		knora-base:listNodeName "manuscript" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasDocumentType> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Manuscrit"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasDocumentType-typescript> a knora-base:ListNode ;
+		knora-base:listNodeName "typescript" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasDocumentType> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Dactylogramme"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasDocumentType-print> a knora-base:ListNode ;
+		knora-base:listNodeName "print" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasDocumentType> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Imprimé"@fr .
+
+
+
+
+## ___________ LIST SUPPORT TYPES ____________
+
+<http://example.com/lists/roud-flatlist-hasWritingColor> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Le type de support matérial"@fr ;
+	rdfs:label "The type of material support"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasWritingColor-leaf> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-diary> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-notebookCarnet> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-notebookCahier> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-letter> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-other> .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-leaf> a knora-base:ListNode ;
+		knora-base:listNodeName "leaf" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Feuillet"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-diary> a knora-base:ListNode ;
+		knora-base:listNodeName "diary" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Agenda"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-notebookCarnet> a knora-base:ListNode ;
+		knora-base:listNodeName "notebookCarnet" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Carnet"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-notebookCahier> a knora-base:ListNode ;
+		knora-base:listNodeName "notebookCahier" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Cahier"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-letter> a knora-base:ListNode ;
+		knora-base:listNodeName "letter" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Carte"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-other> a knora-base:ListNode ;
+		knora-base:listNodeName "other" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Divers"@fr .		
+
+
+
+
+
+## __________ LIST WRITING TOOLS ______________
+
+<http://example.com/lists/roud-flatlist-hasWritingTool> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "L'instrument d'écriture"@fr ;
+	rdfs:label "L'instrument d'écriture"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasWritingTool-pencil> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-typingMachine> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-quill> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-ballpointPen> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-feltTip> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-other> ,
+								<http://example.com/lists/roud-flatlist-hasWritingTool-toBeDetermined > . 
+
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-pencil> a knora-base:ListNode ;
+		knora-base:listNodeName "pencil" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Crayon"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-typingMachine> a knora-base:ListNode ;
+		knora-base:listNodeName "typingMachine" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Machine à écrire"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-quill> a knora-base:ListNode ;
+		knora-base:listNodeName "quill" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Plume"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-ballpointPen> a knora-base:ListNode ;
+		knora-base:listNodeName "ballpointPen" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Stylo à bille"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-feltTip> a knora-base:ListNode ;
+		knora-base:listNodeName "feltTip" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Stylo feutre"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-other> a knora-base:ListNode ;
+		knora-base:listNodeName "other" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Divers"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasWritingTool-toBeDetermined> a knora-base:ListNode ;
+		knora-base:listNodeName "toBeDetermined" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingTool> ;
+		knora-base:listNodePosition 6 ;
+		rdfs:label "À déterminer"@fr .		
+
+
+
+
+## ___________ LIST WRITING COLORS ____________
+
+<http://example.com/lists/roud-flatlist-hasWritingColor> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "La couleur de l'écriture"@fr ;
+	rdfs:label "The color of the writing"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasWritingColor-black> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-red> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-blue> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-rose> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-violet> ,
+								<http://example.com/lists/roud-flatlist-hasWritingColor-gray> .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-black> a knora-base:ListNode ;
+		knora-base:listNodeName "black" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Noir"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-red> a knora-base:ListNode ;
+		knora-base:listNodeName "red" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Rouge"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-blue> a knora-base:ListNode ;
+		knora-base:listNodeName "blue" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Bleu"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-rose> a knora-base:ListNode ;
+		knora-base:listNodeName "rose" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Rose"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-violet> a knora-base:ListNode ;
+		knora-base:listNodeName "violet" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Violet"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasWritingColor-gray> a knora-base:ListNode ;
+		knora-base:listNodeName "gray" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasWritingColor> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Gray"@fr .	
+
+
+
+
+
+## __________ LIST GENRES ______________
+
+<http://example.com/lists/roud-flatlist-hasGenre> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Le genre du texte"@fr ;
+	rdfs:label "Le genre du texte"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasGenre-literaryCriticism> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-artCriticism> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-chronicle> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-poeticWork> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-translation> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-note> ,
+								<http://example.com/lists/roud-flatlist-hasGenre-other > . 
+
+
+<http://example.com/lists/roud-flatlist-hasGenre-literaryCriticism> a knora-base:ListNode ;
+		knora-base:listNodeName "literaryCriticism" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Critique litéraire"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasGenre-artCriticism> a knora-base:ListNode ;
+		knora-base:listNodeName "artCriticism" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Critique de l'art"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasGenre-chronicle> a knora-base:ListNode ;
+		knora-base:listNodeName "chronicle" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Chronique"@fr .
+
+<http://example.com/lists/roud-flatlist-hasGenre-poeticWork> a knora-base:ListNode ;
+		knora-base:listNodeName "poeticWork" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Oeuvre poétique"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasGenre-translation> a knora-base:ListNode ;
+		knora-base:listNodeName "translation" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Traduction"@fr .
+
+<http://example.com/lists/roud-flatlist-hasGenre-note> a knora-base:ListNode ;
+		knora-base:listNodeName "note" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Note"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasGenre-other> a knora-base:ListNode ;
+		knora-base:listNodeName "other" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGenre> ;
+		knora-base:listNodePosition 6 ;
+		rdfs:label "Divers"@fr .		
+
+
+
+## __________ LIST GENETIC STAGES ______________
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Le genre du texte"@fr ;
+	rdfs:label "Le genre du texte"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasGeneticStage-note> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-plan> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-draft> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-cleanMs> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-finalMs> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-editedDraftWithCorrections> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-extract> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-extractWithCorrections> ,
+								<http://example.com/lists/roud-flatlist-hasGeneticStage-other> .
+
+
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-note> a knora-base:ListNode ;
+		knora-base:listNodeName "note" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Note"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-plan> a knora-base:ListNode ;
+		knora-base:listNodeName "plan" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Plan"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-draft> a knora-base:ListNode ;
+		knora-base:listNodeName "draft" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Brouillon"@fr .
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-cleanMs> a knora-base:ListNode ;
+		knora-base:listNodeName "cleanMs" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Mise au net"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-finalMs> a knora-base:ListNode ;
+		knora-base:listNodeName "translation" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Manuscrit définitif"@fr .
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-editedDraftWithCorrections> a knora-base:ListNode ;
+		knora-base:listNodeName "editedDraftWithCorrections" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Corrections sur épreuves"@fr .		
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-extract> a knora-base:ListNode ;
+		knora-base:listNodeName "extract" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 6 ;
+		rdfs:label "Original (tiré à part)"@fr ,
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-extractWithCorrections> a knora-base:ListNode ;
+		knora-base:listNodeName "extractWithCorrections" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 7 ;
+		rdfs:label "Original (tiré à part) corrigé"@fr ,
+
+<http://example.com/lists/roud-flatlist-hasGeneticStage-other> a knora-base:ListNode ;
+		knora-base:listNodeName "other" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasGeneticStage> ;
+		knora-base:listNodePosition 8 ;
+		rdfs:label "Autre"@fr .
+
+
+
+
+## __________ LIST RESPONSIBLE PERSONS ______________
+ 
+## Is this connected with users and rights in Knora?
+
+<http://example.com/lists/roud-flatlist-hasResponsable> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "La personne qui a crée l'entrée."@fr ;
+	rdfs:label "Responsable"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasResponsable-JB> ,
+								<http://example.com/lists/roud-flatlist-hasResponsable-AC> ,
+								<http://example.com/lists/roud-flatlist-hasResponsable-BP> ,
+								<http://example.com/lists/roud-flatlist-hasResponsable-autre> .
+							
+
+<http://example.com/lists/roud-flatlist-hasResponsable-JB> a knora-base:ListNode ;
+		knora-base:listNodeName "JB" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasResponsable> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Julien Burri" .
+
+
+<http://example.com/lists/roud-flatlist-hasResponsable-AC> a knora-base:ListNode ;
+		knora-base:listNodeName "AC" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasResponsable> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Alessio Christen" .
+
+
+<http://example.com/lists/roud-flatlist-hasResponsable-BP> a knora-base:ListNode ;
+		knora-base:listNodeName "BP" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasResponsable> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Bruno Pellegrino" .
+
+
+<http://example.com/lists/roud-flatlist-hasResponsable-autre> a knora-base:ListNode ;
+		knora-base:listNodeName "autre" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasResponsable> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Autre" .
+
+
+
+
+
+## __________ LIST FOLIO FACES ______________
+
+<http://example.com/lists/roud-flatlist-hasFace> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "La face du feuillet"@fr ;
+	rdfs:label "La face du feuillet"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-hasFace-recto> ,
+								<http://example.com/lists/roud-flatlist-hasFace-verso> .
+
+
+
+<http://example.com/lists/roud-flatlist-hasFace-recto> a knora-base:ListNode ;
+		knora-base:listNodeName "recto" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasFace> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Recto"@fr .
+
+
+<http://example.com/lists/roud-flatlist-hasFace-verso> a knora-base:ListNode ;
+		knora-base:listNodeName "verso" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-hasFace> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Verso"@fr .
+
+
+
+
+
+## _____________ LIST ARCHIVES AND THEIR INVENTORIES ______________
+
+### Is this the correct approach to represent a tree (enchaining flat lists)?
+
+
+##############################################################################################
+###
+###		FONDS D'ARCHIVE QUI CONSERVENT DES DOCUMENTS POUR LE PROJET
+###
+###		Gustave Roud (CRLR, Lausanne)
+###		Mermod (CRLR, Lausanne)
+###		Daniel Simond (BCU, Lausanne)
+###		Étienne Chevalley (BCU, Lausanne)
+###		Bibliothèque de la ville (Chaux-de-Fonds)
+###		Bogansslowstky (fonds privé, Lausanne)
+###		etc., à définir
+###
+###
+###
+												
+##############################################################################################
+###
+###		INVENTAIRE DU FONDS GUSTAVE ROUD (CRLR)
+###
+###		MS 	Manuscrits
+###		MS 1	Recueils
+###		MS 1 A 		Adieu (1927)	
+###		MS 1 B 		Feuillets (1929)	
+###		MS 1 C 		Petit Traité de la marche en plaine (1932)	
+###		MS 1 D 		Essai pour un paradis (1932)	
+###		MS 1 E 		Pour un moissonneur (1941)	
+###		MS 1 F 		Air de la solitude (1945)	
+###		MS 1 G 		Haut-Jorat (1949)	
+###		MS 1 H 		Écrits I, II (1950)	
+###		MS 1 I 		Le Repos du cavalier (1958)	
+###		MS 1 J  	Requiem (1967)	
+###		MS 1 K  	Campagne perdue (1972)	
+###		MS 2	Textes parus en périodiques	
+###		MS 2 A 		1915-1920	
+###		MS 2 B 		1920-1929	
+###		MS 2 C 		1930-1939	
+###		MS 2 D 		1940-1949	
+###		MS 2 E 		1950-1959	
+###		MS 2 F 		1960-1969	
+###		MS 2 G  	1970-1976	
+###		MS 3 	Discours, conférences	
+###		MS 4 	Entretiens	
+###		MS 5	Journal	
+###		MS 6 	Textes inédits et/ou non-identifiés	
+###		MS 6 A		Textes inédits
+###		MS 6 B 		Textes sur la peinture	
+###		MS 6 C 		Auberjonois	
+###		MS 6 D 		Textes sur des écrivains	
+###		MS 6 E 		Notes, plans et ébauches	
+###		MS 6 F 		Les Fleurs et les Saisons	
+###		MS 7 	Traductions	
+###		MS 8 	Entreprises éditoriales / Roud éditeur
+###		MS 8 A 		Ramuz, Œuvres complètes (Rencontre, 1967-1968)	
+###		MS 8 B 		Georges Nicole, Poésie (Carrérouge, 1961)
+###		COR Correspondance	
+###		COR 1 	Lettres de Gustave Roud	
+###		COR 2 	Lettres à Gustave Roud	
+###		BIO Documents biographiques	
+###		PHO Photographies	
+###		DIV Divers	
+###		DIV 1 	Autour de l’œuvre de Roud	
+###		DIV 1 A 	Roud « Écrits III et IV »	
+###		DIV 1 B 	Traduction de textes de Roud	
+###		DIV 1 C 	Articles et études sur Roud	
+###		DIV 1 D 	Hommage à Gustave Roud	
+###		DIV 1 E 	Posthume	
+###		DIV 2 	Autres textes	
+###		DIV 2 A 	Textes recopiés	
+###		DIV 2 B 	Divers documents sur Philippe Jaccottet	
+###		DIV 2 C 	Cartons d’invitation et papillons	
+###		DIV 2 D 	Coupures de presse	
+###		DIV 2 E 	Enveloppes vides
+###
+###############################################################################################3
+
+
+
+<http://example.com/lists/roud-flatlist-isInArchive> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "La position dans les fonds d'archive"@fr ;
+	rdfs:label "Archive"@fr ;
+	knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ,
+								<http://example.com/lists/roud-flatlist-isInArchive-Mermod> ,
+								<http://example.com/lists/roud-flatlist-isInArchive-DanielSimond> ,
+								<http://example.com/lists/roud-flatlist-isInArchive-EtienneChevalley> ,
+								<http://example.com/lists/roud-flatlist-isInArchive-ChauxDeFonds> ,
+								<http://example.com/lists/roud-flatlist-isInArchive-Bogansslowstky> .
+								## autres vont s'ajouter .
+
+
+<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> a knora-base:ListNode ;
+		knora-base:listNodeName "GustaveRoud" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "Fonds Gustave Roud (CRLR, Lausanne)"@fr .
+	## See below for the sublists tree
+
+<http://example.com/lists/roud-flatlist-isInArchive-Mermod> a knora-base:ListNode ;
+		knora-base:listNodeName "Mermod" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "Fonds Mermod (CRLR, Lausanne)"@fr .
+
+<http://example.com/lists/roud-flatlist-isInArchive-DanielSimondni> a knora-base:ListNode ;
+		knora-base:listNodeName "DanielSimond" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "Fonds Daniel Simond (BCU, Lausanne)"@fr .
+
+<http://example.com/lists/roud-flatlist-isInArchive-EtienneChevalley> a knora-base:ListNode ;
+		knora-base:listNodeName "EtienneChevalley" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "Fonds Étienne Chevalley (BCU, Lausanne)"@fr .
+
+<http://example.com/lists/roud-flatlist-isInArchive-ChauxDeFonds> a knora-base:ListNode ;
+		knora-base:listNodeName "Chaux-de-Fonds" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "Bibliothèque de la ville (Chaux-de-Fonds)"@fr .
+
+<http://example.com/lists/roud-flatlist-isInArchive-Bogansslowstky> a knora-base:ListNode ;
+		knora-base:listNodeName "Bogansslowstky" ;
+		knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive> ;
+		knora-base:listNodePosition 5 ;
+		rdfs:label "Fonds privé Bogansslowstky"@fr .
+
+							
+
+
+	### Fonds Gustave Roud (CRLR) --> SubListNodes
+	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> a knora-base:ListNode ;
+		knora-base:isRootNode true ;
+		rdfs:comment "La position dans l'inventaire du fonds Roud"@fr ;
+		rdfs:label "La position dans l'inventaire du fonds Roud"@fr ;
+		knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits> ,
+									<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance> ,
+									<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-documentsBio> ,
+									<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-photos> ,
+									<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers> .
+
+
+			
+			### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> SubListNodes
+			<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits> a knora-base:ListNode ;
+				knora-base:listNodeName "manuscrits" ;
+				knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ;
+				knora-base:listNodePosition 0 ;
+				rdfs:label "Manuscrits"@fr ;
+				roud:hasShelfNumber "MS" ;
+				knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-discours> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entretiens> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-journal> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-traductions> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises> .
+
+					
+					
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> RECUEILS --> SubListNodes
+					<http://example.come/lists/roud-flatlist-isInCrlrInventory-manuscrits-recueils> a knora-base:ListNode ;
+						knora-base:listNodeName "recueils" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ## ?????? or <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits> ??????????
+						knora-base:listNodePosition 0 ;
+						rdfs:label "Recueils"@fr ;
+						roud:hasShelfNumber "MS 1" ;
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-adieu1927> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-feuillets1929> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-marche1932> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-paradis1932> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-moissonneur1941> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-solitude1945> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-hautjorat1949> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-ecrits1950> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-repos1958> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-requiem1967> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-campagne1972> .
+
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-adieu1927> a knora-base:ListNode ;
+								knora-base:listNodeName "adieu1927" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "Adieu (1927)"@fr ;
+								roud:hasShelfNumber "MS 1 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-feuillets1929> a knora-base:ListNode ;
+								knora-base:listNodeName "feuillets1929" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "Feuillets (1929)"@fr ;
+								roud:hasShelfNumber "MS 1 B" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-marche1932> a knora-base:ListNode ;
+								knora-base:listNodeName "marche1932" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 2 ;
+								rdfs:label "Petit Traité de la marche en plaine (1932)"@fr ;
+								roud:hasShelfNumber "MS 1 C" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-paradis1932> a knora-base:ListNode ;
+								knora-base:listNodeName "paradis1932" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 3 ;
+								rdfs:label "Essai pour un paradis (1932)"@fr ;
+								roud:hasShelfNumber "MS 1 D" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-moissonneur1941> a knora-base:ListNode ;
+								knora-base:listNodeName "moissonneur1941" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 4 ;
+								rdfs:label "Pour un moissonneur (1941)"@fr ;
+								roud:hasShelfNumber "MS 1 E" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-solitude1945> a knora-base:ListNode ;
+								knora-base:listNodeName "solitude1945" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 5 ;
+								rdfs:label "Air de la solitude (1945)"@fr ;
+								roud:hasShelfNumber "MS 1 F" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-hautjorat1949> a knora-base:ListNode ;
+								knora-base:listNodeName "hautjorat1949" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 6 ;
+								rdfs:label "Haut-Jorat (1949)"@fr ;
+								roud:hasShelfNumber "MS 1 G" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-ecrits1950> a knora-base:ListNode ;
+								knora-base:listNodeName "ecrits1950" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 7 ;
+								rdfs:label "Écrits I, II (1950)"@fr ;
+								roud:hasShelfNumber "MS 1 H" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-repos1958> a knora-base:ListNode ;
+								knora-base:listNodeName "repos1958" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 8 ;
+								rdfs:label "Le Repos du cavalier (1958)"@fr ;
+								roud:hasShelfNumber "MS 1 I" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-requiem1967> a knora-base:ListNode ;
+								knora-base:listNodeName "requiem1967" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 9 ;
+								rdfs:label "Requiem (1967)"@fr ;
+								roud:hasShelfNumber "MS 1 J" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils-campagne1972> a knora-base:ListNode ;
+								knora-base:listNodeName "campagne1972" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-recueils> ;
+								knora-base:listNodePosition 10 ;
+								rdfs:label "Campagne perdue (1972)"@fr ;
+								roud:hasShelfNumber "MS 1 K" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> PERIODIQUES --> SubListNodes
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques> a knora-base:ListNode ;
+						knora-base:listNodeName "periodiques" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 1 ;
+						rdfs:label "Périodiques"@fr ;
+						roud:hasShelfNumber "MS 2" ;
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19151920> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19201929> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19301939> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19401949> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19501959> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19601969> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit-periodiques-19701976> .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19151920> a knora-base:ListNode ;
+								knora-base:listNodeName "19151920" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "1915 - 1920"@fr ;
+								roud:hasShelfNumber "MS 2 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19201929> a knora-base:ListNode ;
+								knora-base:listNodeName "19201929" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "1920 - 1929"@fr ;
+								roud:hasShelfNumber "MS 2 B" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19301939> a knora-base:ListNode ;
+								knora-base:listNodeName "19301939" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 2 ;
+								rdfs:label "1930 - 1939"@fr ;
+								roud:hasShelfNumber "MS 2 C" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19401949> a knora-base:ListNode ;
+								knora-base:listNodeName "19401949" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 3 ;
+								rdfs:label "1940 - 1949"@fr ;
+								roud:hasShelfNumber "MS 2 D" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19501959> a knora-base:ListNode ;
+								knora-base:listNodeName "19501959" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 4 ;
+								rdfs:label "1950 - 1959"@fr ;
+								roud:hasShelfNumber "MS 2 E" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19601969> a knora-base:ListNode ;
+								knora-base:listNodeName "19601969" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 5 ;
+								rdfs:label "1960 - 1969"@fr ;
+								roud:hasShelfNumber "MS 2 F" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques-19701976> a knora-base:ListNode ;
+								knora-base:listNodeName "19701976" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-periodiques> ;
+								knora-base:listNodePosition 6 ;
+								rdfs:label "1970 - 1976"@fr ;
+								roud:hasShelfNumber "MS 1 G" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> DISCOURS .
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-discours> a knora-base:ListNode ;
+						knora-base:listNodeName "discours" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 2 ;
+						rdfs:label "Discours, conférences"@fr ;
+						roud:hasShelfNumber "MS 3" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> ENTRETIENS .
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entretiens> a knora-base:ListNode ;
+						knora-base:listNodeName "entretiens" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 3 ;
+						rdfs:label "Entretiens"@fr ;
+						roud:hasShelfNumber "MS 4" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> JOURNAL .
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-journal> a knora-base:ListNode ;
+						knora-base:listNodeName "journal" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 4 ;
+						rdfs:label "Journal"@fr ;
+						roud:hasShelfNumber "MS 5" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> INEDITS --> SubListNodes
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> a knora-base:ListNode ;
+						knora-base:listNodeName "inedits" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 5 ;
+						rdfs:label "Textes inédits et/ou non-identifiés"@fr ;
+						roud:hasShelfNumber "MS 6";
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-inedits> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-peinture> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-auberjonois> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-ecrivains> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-notes> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-fleurs> .
+
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-inedits> a knora-base:ListNode ;
+								knora-base:listNodeName "inedits" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "Textes inédits"@fr ;
+								roud:hasShelfNumber "MS 6 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-peinture> a knora-base:ListNode ;
+								knora-base:listNodeName "peinture" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "Textes sur la peinture"@fr ;
+								roud:hasShelfNumber "MS 6 B" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-auberjonois> a knora-base:ListNode ;
+								knora-base:listNodeName "auberjonois" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 2 ;
+								rdfs:label "Auberjonois"@fr ;
+								roud:hasShelfNumber "MS 6 C" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-ecrivains> a knora-base:ListNode ;
+								knora-base:listNodeName "ecrivains" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 3 ;
+								rdfs:label "Textes sur des écrivains"@fr ;
+								roud:hasShelfNumber "MS 6 D" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-notes> a knora-base:ListNode ;
+								knora-base:listNodeName "notes" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 4 ;
+								rdfs:label "Notes, plans et ébauches"@fr ;
+								roud:hasShelfNumber "MS 6 E" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits-fleurs> a knora-base:ListNode ;
+								knora-base:listNodeName "fleurs" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-inedits> ;
+								knora-base:listNodePosition 5 ;
+								rdfs:label "Les Fleurs et les Saisons"@fr ;
+								roud:hasShelfNumber "MS 6 F" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> TRADUCTIONS .
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-traductions> a knora-base:ListNode ;
+						knora-base:listNodeName "traductions" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 6 ;
+						rdfs:label "Traductions"@fr ;
+						roud:hasShelfNumber "MS 7" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> MANUSCRITS --> ENTREPRISES --> SubListNodes
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises> a knora-base:ListNode ;
+						knora-base:listNodeName "entreprises" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrit> ;
+						knora-base:listNodePosition 7 ;
+						rdfs:label "Entreprises éditoriales / Roud éditeur"@fr ;
+						roud:hasShelfNumber "MS 8";
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises-ramuz> ,
+												 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises-nicole> .
+
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises-ramuz> a knora-base:ListNode ;
+								knora-base:listNodeName "ramuz" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "Œuvres complètes de Ramuz (Rencontre, 1967-1968)"@fr ; 
+								roud:hasPublishedReference roud-biblio:Document ;
+								rdfs:comment "Ramuz, Œuvres complètes (Rencontre, 1967-1968)" ;
+								roud:hasShelfNumber "MS 8 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises-nicole> a knora-base:ListNode ;
+								knora-base:listNodeName "nicole" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-manuscrits-entreprises> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "Poésie de Georges Nicole (Carrérouge, 1961)"@fr ;
+								roud:hasPublishedReference roud-biblio:Document ;
+								rdfs:comment "Georges Nicole, Poésie (Carrérouge, 1961)" ;
+								roud:hasShelfNumber "MS 8 B" .
+
+
+
+
+			### Fonds Gustave Roud (CRLR) --> CORRESPONDANCE --> SubListNodes
+			<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance> a knora-base:ListNode ;
+				knora-base:listNodeName "correspondance" ;
+				knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ;
+				knora-base:listNodePosition 1 ;
+				rdfs:label "Correspondance"@fr ;
+				roud:hasShelfNumber "COR" ;
+				knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance-lettresde> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance-lettresa> .
+
+
+					### Fonds Gustave Roud (CRLR) --> CORRESPONDANCE --> LETTRES DE ROUD .
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance-lettresde> a knora-base:ListNode ;
+						knora-base:listNodeName "lettresde" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance> ;
+						knora-base:listNodePosition 0 ;
+						rdfs:label "Lettres de Gustave Roud" ;
+						roud:hasShelfNumber "COR 1" .
+
+
+					### Fonds Gustave Roud (CRLR) --> CORRESPONDANCE --> LETTRES À ROUD . 
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance-lettresa> a knora-base:ListNode ;
+						knora-base:listNodeName "lettresa" ;
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-correspondance> ;
+						knora-base:listNodePosition 1 ;
+						rdfs:label "Lettres à Gustave Roud" ;
+						roud:hasShelfNumber "COR 2" .
+
+
+
+			### Fonds Gustave Roud (CRLR) --> DOCUMENTS BIOGRAPHIQUES .
+			<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-documentsBio> a knora-base:ListNode ;
+				knora-base:listNodeName "documentsBio" ; 
+				knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ;
+				knora-base:listNodePosition 2 ;
+				rdfs:label "Documents biographiques"@fr ;
+				roud:hasShelfNumber "BIO" .
+
+
+			### Fonds Gustave Roud (CRLR) --> PHOTOGRAPHIES .
+			<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-photos> a knora-base:ListNode ;
+				knora-base:listNodeName "photos" ; 
+				knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ;
+				knora-base:listNodePosition 3 ;
+				rdfs:label "Photographies"@fr ;
+				roud:hasShelfNumber "PHO" .
+
+
+
+			### Fonds Gustave Roud (CRLR) --> DIVERS --> SubListNodes
+			<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers> a knora-base:ListNode ;
+				knora-base:listNodeName "divers" ; 
+				knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud> ;
+				knora-base:listNodePosition 4 ;
+				rdfs:label "Divers"@fr ;
+				roud:hasShelfNumber "DIV" ;
+				knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ,
+											<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> DIVERS --> AUTOUR --> SubListNodes
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> a knora-base:ListNode ;
+						knora-base:listNodeName "autour" ; 
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers> ;
+						knora-base:listNodePosition 0 ;
+						rdfs:label "Autour de l’œuvre de Roud"@fr ;
+						roud:hasShelfNumber "DIV 1" ;
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-ecrits34> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-traductions> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-etudes> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-hommage> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-posthume> .
+
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-ecrits34> a knora-base:ListNode ;
+								knora-base:listNodeName "ecrits34" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "Roud « Écrits III et IV »" ;
+								roud:hasShelfNumber "DIV 1 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-traductions> a knora-base:ListNode ;
+								knora-base:listNodeName "traductions" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "Traduction de textes de Roud" ;
+								roud:hasShelfNumber "DIV 1 B" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-etudes> a knora-base:ListNode ;
+								knora-base:listNodeName "etudes" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ;
+								knora-base:listNodePosition 2 ;
+								rdfs:label "Articles et études sur Roud" ;
+								roud:hasShelfNumber "DIV 1 C" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-hommage> a knora-base:ListNode ;
+								knora-base:listNodeName "hommage" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ;
+								knora-base:listNodePosition 3 ;
+								rdfs:label "Hommage à Gustave Roud" ;
+								roud:hasShelfNumber "DIV 1 D" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour-posthume> a knora-base:ListNode ;
+								knora-base:listNodeName "posthume" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autour> ;
+								knora-base:listNodePosition 4 ;
+								rdfs:label "Posthume" ;
+								roud:hasShelfNumber "DIV 1 E" .
+
+
+
+					### Fonds Gustave Roud (CRLR) --> DIVERS --> AUTRE --> SubListNodes
+					<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> a knora-base:ListNode ;
+						knora-base:listNodeName "autre" ; 
+						knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers> ;
+						knora-base:listNodePosition 1 ;
+						rdfs:label "autre de l’œuvre de Roud"@fr ;
+						roud:hasShelfNumber "DIV 2" ;
+						knora-base:hasSubListNode 	<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-recopies> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-jaccottet> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-invitations> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-presse> ,
+													<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-enveloppes> .
+
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-recopies> a knora-base:ListNode ;
+								knora-base:listNodeName "recopies" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> ;
+								knora-base:listNodePosition 0 ;
+								rdfs:label "Textes recopiés" ;
+								roud:hasShelfNumber "DIV 2 A" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-jaccottet> a knora-base:ListNode ;
+								knora-base:listNodeName "jaccottet" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> ;
+								knora-base:listNodePosition 1 ;
+								rdfs:label "Divers documents sur Philippe Jaccottet" ;
+								roud:hasShelfNumber "DIV 2 B" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-invitations> a knora-base:ListNode ;
+								knora-base:listNodeName "invitations" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> ;
+								knora-base:listNodePosition 2 ;
+								rdfs:label "Cartons d’invitation et papillons" ;
+								roud:hasShelfNumber "DIV 2 C" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-presse> a knora-base:ListNode ;
+								knora-base:listNodeName "presse" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> ;
+								knora-base:listNodePosition 3 ;
+								rdfs:label "Coupures de presse" ;
+								roud:hasShelfNumber "DIV 2 D" .
+
+							<http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre-enveloppes> a knora-base:ListNode ;
+								knora-base:listNodeName "enveloppes" ;
+								knora-base:hasRootNode <http://example.com/lists/roud-flatlist-isInArchive-GustaveRoud-divers-autre> ;
+								knora-base:listNodePosition 4 ;
+								rdfs:label "Enveloppes vides" ;
+								roud:hasShelfNumber "DIV 2 E" .
+							
+
