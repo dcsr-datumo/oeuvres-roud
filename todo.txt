@@ -15,7 +15,7 @@ Nel fondo ci sono anche oggetti, documenti amministrativi, coupures de presse ..
 
 - RIFLETTI
 
-Mis en recueil
+Mis en recueil. Pensare a properties .... isInCollection (mise en recueil) ?
 
 
 
