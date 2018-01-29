@@ -1,0 +1,53 @@
+
+
+
+............ test ...............
+
+............ texte établi ? .............
+
+
+
+##############
+## DECISO
+##############
+
+Nel fondo ci sono anche oggetti, documenti amministrativi, coupures de presse ... vogliamo inserire tutto questo? No ..., solo manoscritti. Tutto il resto sta bene in una nota, senza che debba avere il suo posto nella BD.
+
+Commenti almeno in due lingue
+
+
+
+
+
+
+##########################
+## PARLARNE CON I RAGAZZI
+##########################
+
+
+
+
+
+
+##########################
+## CHIEDERE A MARION
+##########################
+
+isPartOfCollection
+
+ParentClass inherits properties going in and out?
+
+isPreviousStageOfPartOfCollection
+
+toutes ces choses vont avoir un id?
+
+Spécifier l'utilisation de hasPages
+
+
+
+
+
+
+Nota: nel fondo c'è un solo manoscritto non di Roud, che è di Trakl.
+
+
