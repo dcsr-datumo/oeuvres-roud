@@ -33,18 +33,6 @@ Commenti almeno in due lingue
 ## CHIEDERE A MARION
 ##########################
 
-isPartOfCollection
-
-ParentClass inherits properties going in and out?
-
-isPreviousStageOfPartOfCollection
-
-toutes ces choses vont avoir un id?
-
-Spécifier l'utilisation de hasPages
-
-
-
 
 
 
