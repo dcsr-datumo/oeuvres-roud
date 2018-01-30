@@ -8,13 +8,28 @@
 
 
 ############## 
-## DECISO
+## TODO
 ##############
+
+Biblio de théâtre de société (vérifier date et titre, et tout). Regarder aussi dans Salsah Demo
+Check encore une fois notice
+
+
+
+
+####################
+## DECISO e CAPITO
+####################
 
 Nel fondo ci sono anche oggetti, documenti amministrativi, coupures de presse ... vogliamo inserire tutto questo? No ..., solo manoscritti. Tutto il resto sta bene in una nota, senza che debba avere il suo posto nella BD.
 
-Commenti almeno in due lingue
+Commenti almeno in due lingue.
 
+Dans Knora pour chaque classe il y a en plus une proprieté Label, obligatoire! Les liens outilisent ça.
+
+Les liens StandoffLinkTo peuvent se faire entre toutes les classes, pas besoin de spécifier (par exemple, pour notice)
+
+Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de Vaud.
 
 
 
