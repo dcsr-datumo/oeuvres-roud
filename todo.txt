@@ -15,7 +15,7 @@
 
 Nel fondo ci sono anche oggetti, documenti amministrativi, coupures de presse ... vogliamo inserire tutto questo? No ..., solo manoscritti. Tutto il resto sta bene in una nota, senza che debba avere il suo posto nella BD.
 
-Commenti almeno in due lingue.
+Commenti almeno in due lingue (en, fr). Label: fr, en, de.
 
 Dans Knora pour chaque classe il y a en plus une proprieté Label, obligatoire! Les liens outilisent ça.
 
