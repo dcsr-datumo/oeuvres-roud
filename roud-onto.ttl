@@ -14,6 +14,208 @@
 
 
 
+
+##########################################################
+#
+# CLASSES
+#
+##########################################################
+
+
+#### DOCUMENT DU FONDS D'ARCHIVE ##############
+roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
+                                      rdfs:subClassOf knora-base:Resource ,
+                                      
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:WrittenSourceIsInArchive ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:WrittenSourceHasTitle ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasShelfNumber ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasOldShelfNumber ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasEditorialSet ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;  
+                                        owl:onProperty roud-oeuvres:hasAnnotation ;
+                                        ## optional boolean value ??? If nothing --> false ; If True --> true .
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ; 
+                                        owl:onProperty roud-oeuvres:hasAddition ;
+                                        ## optional boolean value ??? If nothing --> false ; If True --> true .
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasPublishedReference ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasGeneticStage ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasGenre ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;  
+                                        owl:onProperty roud-oeuvres:isPhotocopy ;
+                                        ## optional boolean value ??? If nothing --> false ; If True --> true .
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:isDigitized ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:isToDigitize ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasComment ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [ 
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasInternalComment ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ];
+
+                                      rdfs:label  "Document des fonds d'archives"@fr ,
+                                                  "Archival document"@en ,
+                                                  "Documento d'archivio"@it ;
+
+                                      rdfs:comment  """Tout document écrit conservé dans un archive (CRLR ou autre)"""@fr ,
+                                                    """Any written document contained in an archive (CRLR or other)"""@en .
+
+
+
+#### MANUSCRIPT
+roud-oeuvres:Manuscript   rdf:type owl:Class ;
+                          rdfs:subClassOf roud-oeuvres:WrittenSourceInArchive ;
+                          rdfs:subClassOf knora-base:Resource ,
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasDocumentType ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasDate ;
+                            owl:minCardinality "0"
+                          ],                         
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablished ;
+                            owl:minCardinality "0"
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasSupportType ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasSupportInfo ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isNumbered ;
+                            owl:maxCardinality "1"^^xsd:boolean                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasWritingTool ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasWritingColor ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:rype owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasDigitalTextInToutRoud ;
+                            owl:cardinality "1"^^xsd:boolean
+                          ];
+                          rdfs:label  "Manuscrit"@fr ,
+                                      "Manuscript"@en ,
+                                      "Manoscritto"@it ;
+
+                          rdfs:comment  """Un manuscrit ou un dactylogramme qui se trouve dans un fonds d’archive."""@fr ,
+                                        """A manuscript or a typescript in an archive."""@en .
+
+                          
+
+
+                          
+
+
+
+
+
+#### FOLIO ################
+roud-oeuvres:Folio    rdf:type owl:Class ;
+              
+                      rdfs:subClassOf knora-base:Resource ,
+
+                                [
+                                  rdf:type owl:Restriction ;
+                                  owl:onProperty roud-oeuvres:isInWrittenSource ;
+                                  owl:cardinality "1"^^xsd:nonNegativeInteger                    ] ,
+                                [
+                                  rdf:type owl:Restriction ;
+                                  owl:onProperty roud-oeuvres:hasSeqnum ;
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger                 ] ,
+                                
+                                [ rdf:type owl:Restriction ;
+                                  owl:onProperty roud-oeuvres:hasFace ;  ## recto or verso
+                                  owl:maxCardinality "1"^^xsd:nonNegativeInteger                 ] ,
+                                [
+                                  rdf:type owl:Restriction ;
+                                  owl:onProperty roud-oeuvres:hasTranscription ;
+                                  owl:minCardinality "0"^^xsd:nonNegativeInteger                 ] ;
+                                 ## Maybe hasTranscription cardinality will change
+
+                      rdfs:label    "Feuillet"@fr ,
+                                    "Folio"@en  ;
+
+                      rdfs:comment  """Un feuillet. Spécifier la face (recto ou verso), obligatoire s'il y a une transcription"""@fr ,
+
+                                    """A folio. Specify the face (recto or verso), mandatory when a transcription is linked to the document"""@en .
+
+
+
+
+
+
+
+
 #######################
 ##
 ## PROPERTIES
@@ -535,159 +737,6 @@ roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
 
 
 
-
-
-
-##########################################################
-#
-# RESOURCES
-#
-##########################################################
-
-
-
-
-
-#### DOCUMENT DU FONDS D'ARCHIVE ##############
-roud-oeuvres:WrittenSource  rdf:type owl:Class ;
-
-                          	rdfs:subClassOf knora-base:Resource ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:isInArchive ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasTitle ;
-                                             owl:cardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasShelfNumber ;
-                                             owl:cardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasOldShelfNumber ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                   ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasEditorialSet ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;  
-                                             owl:onProperty roud-oeuvres:isPhotocopy ;
-                                             ## optional boolean value ??? If nothing --> false ; If True --> true .
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                   ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasDocumentType ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;  
-                                             owl:onProperty roud-oeuvres:hasAnnotation ;
-                                             ## optional boolean value ??? If nothing --> false ; If True --> true .
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                   ] ,
-                                          [
-                                             rdf:type owl:Restriction ; 
-                                             owl:onProperty roud-oeuvres:hasAddition ;
-                                             ## optional boolean value ??? If nothing --> false ; If True --> true .
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                   ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasSupportType ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:isNumbered ;
-                                             ## optional boolean value ??? If nothing --> false ; If True --> true .  
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasSupportInfo ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasWritingTool ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ] ,
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasWritingColor ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasDateWrittenSource ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasDateEstablishedWrittenSource ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasGenre ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasGeneticStage ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasPublishedReference ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:isDigitized ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:isToDigitize ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasComment ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ],
-                                          [
-                                             rdf:type owl:Restriction ;
-                                             owl:onProperty roud-oeuvres:hasInternalComment ;
-                                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      ];
-
-                            rdfs:label 	"Document des fonds d'archives"@fr ,
-                                       	"Archival document"@en ,
-                                       	"Documento d'archivio"@it ;
-
-                            rdfs:comment 	"""Tout document écrit conservé dans un archive (CRLR ou autre)"""@fr ,
-                            				      """Any written document contained in an archive (CRLR or other)"""@en .
-
-
-
-
-#### FOLIO ################
-roud-oeuvres:Folio    rdf:type owl:Class ;
-		          
-                      rdfs:subClassOf knora-base:Resource ,
-
-        						            [
-                                  rdf:type owl:Restriction ;
-                                  owl:onProperty roud-oeuvres:isInWrittenSource ;
-                                  owl:cardinality "1"^^xsd:nonNegativeInteger                    ] ,
-                                [
-                                 	rdf:type owl:Restriction ;
-                                 	owl:onProperty roud-oeuvres:hasSeqnum ;
-                                 	owl:maxCardinality "1"^^xsd:nonNegativeInteger                 ] ,
-                                
-                                [ rdf:type owl:Restriction ;
-                                	owl:onProperty roud-oeuvres:hasFace ;  ## recto or verso
-                                	owl:maxCardinality "1"^^xsd:nonNegativeInteger  				       ] ,
-                                [
-                                  rdf:type owl:Restriction ;
-                                  owl:onProperty roud-oeuvres:hasTranscription ;
-                                  owl:minCardinality "0"^^xsd:nonNegativeInteger                 ] ;
-                                 ## Maybe hasTranscription cardinality will change
-
-                      rdfs:label 		"Feuillet"@fr ,
-                				            "Folio"@en	;
-
-               	      rdfs:comment 	"""Un feuillet. Spécifier la face (recto ou verso), obligatoire s'il y a une transcription"""@fr ,
-
-               					            """A folio. Specify the face (recto or verso), mandatory when a transcription is linked to the document"""@en .
 
 
 
