@@ -435,7 +435,7 @@
           <y:Geometry height="40.296875" width="163.9638671875" x="3218.6495249058476" y="2539.475531131646"/>
           <y:Fill color="#3366FF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="116.615234375" x="23.67431640625" y="10.0">ro:JournalArticle<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="136.1591796875" x="13.90234375" y="10.0">ro:PeriodicalArticle<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -576,7 +576,7 @@
           <y:Geometry height="40.296875" width="119.0517578125" x="2867.6055795933476" y="2539.475531131646"/>
           <y:Fill color="#3366FF" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="71.703125" x="23.67431640625" y="10.0">ro:Journal<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="91.2470703125" x="13.90234375" y="10.0">ro:Periodical<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2435,7 +2435,7 @@
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="-35.70948568592485" anchorY="46.404472846859335" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#0000FF" upX="0.9650330201906506" upY="0.2621283463147612" verticalTextPosition="bottom" visible="true" width="149.60546875" x="-74.92531980900702" y="46.404472846859335">ro:hasJournalVolume<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="-33.14797465330912" anchorY="36.97419656117745" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#0000FF" upX="0.9650330201906506" upY="0.2621283463147612" verticalTextPosition="bottom" visible="true" width="169.1494140625" x="-77.48683084162306" y="36.97419656117745">ro:hasPeriodicalVolume<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2455,7 +2455,7 @@
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="-20.147080520103717"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="19.488207621823676" anchorY="62.41662783507627" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#0000FF" upX="0.9632229384802726" upY="-0.2687034997640128" verticalTextPosition="bottom" visible="true" width="127.6689453125" x="19.488207621823676" y="56.96278648830357">ro:jasJournalIssue<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="16.19291606905381" anchorY="50.60397777508115" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#0000FF" upX="0.9632229384802726" upY="-0.2687034997640128" verticalTextPosition="bottom" visible="true" width="152.1962890625" x="16.19291606905381" y="45.15013642830845">ro:hasPeriodicalIssue<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2475,7 +2475,7 @@
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="delta"/>
-          <y:EdgeLabel alignment="center" anchorX="-33.92360404541796" anchorY="-22.29692980585378" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="source" ratio="0.5" textColor="#000000" upX="-1.2246467991473532E-16" upY="1.0" verticalTextPosition="bottom" visible="true" width="163.537109375" x="-197.46071342041796" y="-22.2969298058538">ro:isPublishedInJournal<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="-24.25321235059255" anchorY="-22.29692980585378" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="source" ratio="0.5" textColor="#000000" upX="-1.2246467991473532E-16" upY="1.0" verticalTextPosition="bottom" visible="true" width="183.0810546875" x="-207.33426703809255" y="-22.2969298058538">ro:isPublishedInPeriodical<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="true" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
