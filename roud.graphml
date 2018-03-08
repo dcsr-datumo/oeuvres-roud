@@ -3337,47 +3337,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e83" source="n0" target="n16">
-      <data key="d10">
-        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
-          <y:Path sx="-37.92912169438" sy="6.855261602673636" tx="-58.02433174564567" ty="0.0"/>
-          <y:LineStyle color="#0000FF" type="line" width="3.0"/>
-          <y:Arrows source="delta" target="none"/>
-          <y:EdgeLabel alignment="center" anchorX="701.4543183484179" anchorY="341.83230328381774" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" upX="0.4403736917626075" upY="-0.8978145752901163" verticalTextPosition="bottom" visible="true" width="128.140625" x="701.4543183484179" y="323.60947307597615">ro:hasAvantTexte<y:LabelModel>
-              <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:RotatedDiscreteEdgeLabelModelParameter position="head"/>
-            </y:ModelParameter>
-            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:StyleProperties>
-            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
-          </y:StyleProperties>
-        </y:GenericEdge>
-      </data>
-    </edge>
-    <edge id="e84" source="n0" target="n16">
-      <data key="d10">
-        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
-          <y:Path sx="39.895808780424886" sy="-2.4096110728985423" tx="0.0" ty="0.0"/>
-          <y:LineStyle color="#0000FF" type="line" width="3.0"/>
-          <y:Arrows source="none" target="delta"/>
-          <y:EdgeLabel alignment="center" anchorX="695.2799728156042" anchorY="347.37116312194235" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" upX="0.44923731031881015" upY="-0.8934124685818533" verticalTextPosition="bottom" visible="true" width="105.1376953125" x="695.2799728156042" y="329.23768192369505">ro:isRelatedTo<y:LabelModel>
-              <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:RotatedDiscreteEdgeLabelModelParameter position="head"/>
-            </y:ModelParameter>
-            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:StyleProperties>
-            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
-          </y:StyleProperties>
-        </y:GenericEdge>
-      </data>
-    </edge>
-    <edge id="e85" source="n16" target="n69">
+    <edge id="e83" source="n16" target="n69">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3397,7 +3357,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e86" source="n16" target="n70">
+    <edge id="e84" source="n16" target="n70">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3417,7 +3377,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e87" source="n27" target="n16">
+    <edge id="e85" source="n27" target="n16">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="-21.749843129616693" ty="19.25116165325244"/>
@@ -3437,7 +3397,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e88" source="n21" target="n71">
+    <edge id="e86" source="n21" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3457,7 +3417,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e89" source="n21" target="n72">
+    <edge id="e87" source="n21" target="n72">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3477,7 +3437,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e90" source="n16" target="n73">
+    <edge id="e88" source="n16" target="n73">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3497,7 +3457,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e91" source="n16" target="n74">
+    <edge id="e89" source="n16" target="n74">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3517,7 +3477,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e92" source="n19" target="n75">
+    <edge id="e90" source="n19" target="n75">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3537,7 +3497,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e93" source="n16" target="n76">
+    <edge id="e91" source="n16" target="n76">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3557,7 +3517,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e94" source="n29" target="n16">
+    <edge id="e92" source="n29" target="n16">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="-23.58238778625946" ty="6.408665492443561">
@@ -3577,7 +3537,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e95" source="n16" target="n77">
+    <edge id="e93" source="n16" target="n77">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3597,7 +3557,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e96" source="n29" target="n29">
+    <edge id="e94" source="n29" target="n29">
       <data key="d10">
         <y:PolyLineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -3617,7 +3577,7 @@
         </y:PolyLineEdge>
       </data>
     </edge>
-    <edge id="e97" source="n0" target="n78">
+    <edge id="e95" source="n0" target="n78">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="-39.52715400265902" sy="0.05702299573886194" tx="0.0" ty="0.0"/>
@@ -3637,7 +3597,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e98" source="n16" target="n9">
+    <edge id="e96" source="n16" target="n9">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="5.854366107836086" ty="0.0"/>
@@ -3658,7 +3618,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e99" source="n79" target="n16">
+    <edge id="e97" source="n79" target="n16">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3678,7 +3638,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e100" source="n45" target="n80">
+    <edge id="e98" source="n45" target="n80">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3698,7 +3658,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e101" source="n80" target="n45">
+    <edge id="e99" source="n80" target="n45">
       <data key="d10">
         <y:SplineEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
