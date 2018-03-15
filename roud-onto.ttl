@@ -56,7 +56,7 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       ],
                                       [
                                         rdf:type owl:Restriction ;  
-                                        owl:onProperty roud-oeuvres:hasAnnotation ;
+                                        owl:onProperty roud-oeuvres:hasAddition ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                                       ],
                                       [
@@ -67,11 +67,6 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       [
                                         rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:hasGeneticStage ;
-                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasGenre ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
                                       [
@@ -86,11 +81,6 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       ],
                                       [
                                         rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:isToDigitize ;
-                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:hasComment ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
@@ -98,6 +88,11 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                         rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:hasInternalComment ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:isPreviousStageOf ;
+                                        owl:minCardinality "0"^^xsd:nonNegativeInteger
                                       ];
 
                                       rdfs:label  "Document d'archive"@fr ,
@@ -140,11 +135,6 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isNumbered ;
-                            owl:maxCardinality "1"^^xsd:boolean                      
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasWritingTool ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ],
@@ -155,7 +145,7 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           ],
                           [
                             rdf:rype owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasDigitalTextInToutRoud ;
+                            owl:onProperty roud-oeuvres:manuscriptIsTranscribed ;
                             owl:maxCardinality "1"^^xsd:boolean
                           ];
                           rdfs:label  "Document"@fr ,
@@ -176,22 +166,17 @@ roud-oeuvres:Page   rdf:type owl:Class ;
 
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:PageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
+                      owl:onProperty roud-oeuvres:pageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:PageIsInWrittenSource ;
+                      owl:onProperty roud-oeuvres:pageIsInWrittenSource ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger                    
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:PageIsInPublication ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger                    
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:PageHasSeqnum ;
+                      owl:onProperty roud-oeuvres:hasSeqnum ;
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                     ];
                                  
@@ -263,7 +248,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasDigitalTextInToutRoud ;
+                            owl:onProperty roud-oeuvres:publicationIsTranscribed;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -414,31 +399,7 @@ roud-oeuvres:Periodical   rdfs:type owl:Class ;
 ##
 #######################
 
-[
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:writtenSourceIsInArchive ;
-                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:writtenSourceHasTitle ;
-                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasShelfNumber ;
-                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasOldShelfNumber ;
-                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasEditorialSet ;
-                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
+
 
 roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
                         
@@ -548,7 +509,7 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               ## See  roud-data-lists.ttl
@@ -582,7 +543,7 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               ## See  roud-data-lists.ttl
@@ -601,7 +562,7 @@ roud-oeuvres:hasSupportInfo rdf:type owl:DatatypeProperty ;
                           
                             rdfs:subPropertyOf  knora-base:hasValue ;
 
-                            knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                            knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -617,7 +578,7 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               ## See  roud-data-lists.ttl
@@ -635,7 +596,7 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               ## See  roud-data-lists.ttl
@@ -698,23 +659,6 @@ roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:DatatypeProperty ;
                                                               "The date identified by the scholars."@en .
 
 
-roud-oeuvres:hasGenre   rdf:type  owl:ObjectProperty ;
-                      
-                        rdfs:subPropertyOf  knora-base:hasValue ;
-
-                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
-                        knora-base:objectClassConstraint knora-base:ListValue ;
-                        ## See  roud-data-lists.ttl
-
-                        rdfs:label  "Genre"@fr ,
-                                    "Genre"@en ,
-                                    "Genere"@it ;
-
-                        rdfs:comment  "Le genre du texte : critique littéraire, critique d'art, chronique, oeuvre poétique, traduction, note, divers"@fr ,
-                                      "The genre of the text: literary criticism, art criticism, chronicle, poetic work, translation, note, other"@en .
-
-
 
 roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
 
@@ -726,11 +670,11 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
                               ## See  roud-data-lists.ttl
 
                               rdfs:label  "Étapes du processus d'écriture"@fr ,
-                                          "Stages of the writing process"@en ,
-                                          "Tappe nel processo di scrittura"@it ;
+                                          "Stages of the writing process"@en ,   ## check vocab
+                                          "Stadio nel processo di scrittura"@it ; ## check vocab
 
-                              rdfs:comment  "Les étapes du processus d'écriture : note, plan, brouillon, mise au net, manuscrit définitif, corrections sur épreuves, original (tiré à part), original corrigé, autre"@fr ,
-                                            "The genre of the text: note, plan, draft, clean manuscript, final manuscript, corrections on edited drafts, original (extract), original (extract) with corrections, other"@en .
+                              rdfs:comment  "Les étapes du processus d'écriture."@fr ,
+                                            "The genetic stage of the text."@en .
 
 
 
@@ -746,8 +690,8 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     rdfs:label  "Référence bibliographique"@fr ,
                                                 "Bibliographical reference"@en ;
 
-                                    rdfs:comment  "La référence bibliographique (version publié ou autre)"@fr ,
-                                                  "The bibliographical reference (published version or other)"@en .
+                                    rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
+                                                  "The bibliographical reference (published version or other)."@en .
 
 
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
@@ -760,7 +704,7 @@ roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
+roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;     ## boolean values ?? ObjectProperty or DatatypeProperty
                     
                           rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -771,26 +715,11 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
                           rdfs:label  "Numérisé"@fr ,
                                       "Digitized"@en ,
                                       "Scannerizzato"@it ;
-                          rdfs:comment "Le document a été numérisé"@fr .
-                          ## This property has maxCardinality 1. If it's set to True is true, if it is not set is false. Is this the best way to structure something like an optional boolean value?
+
+                          rdfs:comment  "Le document a été numérisé."@fr ,
+                                        "The document has been digitized."@en . 
                           
-
-
-roud-oeuvres:isToDigitize rdf:type owl:ObjectProperty ;
-                    
-                          rdfs:subPropertyOf knora-base:hasValue ;
-
-                          knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
-                          knora-base:objectClassConstraint knora-base:BooleanValue ;
-                                          
-                          rdfs:label  "À numériser"@fr ,
-                                      "To digitize"@en ,
-                                      "Da scannerizzare"@it ;
-                          
-                          rdfs:comment "Le document a été numérisé"@fr .
-                          ## This property has maxCardinality 1. If it's set to True is true, if it is not set is false. Is this the best way to structure something like an optional boolean value?
-                          
+                     
 
 
 roud-oeuvres:hasComment   rdf:type owl:ObjectProperty ;
@@ -822,69 +751,89 @@ roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
                                               "Internal comment"@en ,
                                               "Commenti interni"@it ;
 
-                                  rdfs:comment  "Commentaire qui est outil pour le projet et qui ne sera pas publié"@fr ,
-                                                "Internal comments for the project"@en .
+                                  rdfs:comment  "Commentaire qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                "Internal comments for the project team."@en .
 
 
 
-roud-oeuvres:isInWrittenSource  rdf:type owl:ObjectProperty ;
-                  
-                                rdfs:subPropertyOf knora-base:hasLinkTo ;       
-                                
-                                knora-base:subjectClassConstraint roud-oeuvres:Folio ;
-                                
-                                knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
+roud-oeuvres:isTranscribed    rdf:type owl:DatatypeProperty ;       
+                          
+                              rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                rdfs:label  "Partie du document"@fr ,
-                                            "Part of the document"@en ,
-                                            "Parte del documento"@it ;
+                              knora-base:objectClassConstraint knora-base:BooleanValue ;
+                            
+                              rdfs:label  "Retranscrit"@fr ,
+                                          "Transcribed"@en ,
+                                          "Trascritto"@it ;
 
-                                rdfs:comment  "Spécifier le document dont le feuillet fait partie"@fr ,
-                                              "Specify the document of which the folio is part"@en .
+                              rdfs:comment  "Le texte a été retranscrit ou 'ocr'izé."@fr ,
+                                            "Text has been transcribed or ocred."@en .
 
 
-roud-oeuvres:isInWrittenSourceValue rdf:type owl:ObjectProperty ;
-                      
-                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;        
-                                    
-                                    knora-base:subjectClassConstraint roud-oeuvres:Folio ;
-                                    
-                                    knora-base:objectClassConstraint knora-base:LinkValue .
+roud-oeuvres:manuscriptIsTranscribed    rdf:type owl:DatatypeProperty ;       
+                          
+                              rdfs:subPropertyOf  knora-base:hasValue ;
+                              rdfs:subPropertyOf roud-oeuvres:isTranscribed ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                            
+                              rdfs:label  "Retranscrit"@fr ,
+                                          "Transcribed"@en ,
+                                          "Trascritto"@it ;
+
+                              rdfs:comment  "Le texte a été retranscrit ou 'ocr'izé."@fr ,
+                                            "Text has been transcribed or ocred."@en .
+
+
+roud-oeuvres:publicationIsTranscribed   rdf:type owl:DatatypeProperty ;       
+                          
+                                        rdfs:subPropertyOf  knora-base:hasValue ;
+                                        rdfs:subPropertyOf roud-oeuvres:isTranscribed ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                      
+                                        rdfs:label  "Retranscrit"@fr ,
+                                                    "Transcribed"@en ,
+                                                    "Trascritto"@it ;
+
+                                        rdfs:comment  "Le texte a été retranscrit ou 'ocr'izé."@fr ,
+                                                      "Text has been transcribed or ocred."@en .
 
 
 
-roud-oeuvres:hasFace  rdf:type  owl:ObjectProperty ;
-
-                      rdfs:subPropertyOf knora-base:hasValue ;
-
-                      knora-base:subjectClassConstraint roud-oeuvres:Folio ;
-                                
-                      knora-base:objectClassConstraint knora-base:ListValue ;
-                          ## See  roud-data-lists.ttl
-
-                      rdfs:label  "Face du feuillet"@fr ,
-                                  "Face of the folio"@en ,
-                                  "Faccia del folio"@it ;
-
-                      rdfs:comment  "La face du feuillet (recto ou verso). Obligatoire s'il y a une transription attachée"@fr ,
-                                    "The face of the folio (recto or verso). Mandatory when a transcription is attached"@en .
 
 
+roud-oeuvres:pageHasStillImageFileValue   rdf:type  owl:ObjectProperty ;
+                    
+                                          rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
 
-roud-oeuvres:hasTranscription   rdf:type  owl:ObjectProperty ;
+                                          knora-base:subjectClassConstraint roud-oeuvres:Page ;
 
-                                rdfs:subPropertyOf knora-base:hasValue ;
+                                          knora-base:objectClassConstraint knora-base:hasStillImageFileValue ;
 
-                                knora-base:subjectClassConstraint roud-oeuvres:Folio ;
-                                          
-                                knora-base:objectClassConstraint knora-base:TextValue ;
-                                ### It might become StandoffValue !!!
+                                          rdfs:label  "Fac-similé"@fr ,
+                                                      "Facsimile"@en ,
+                                                      "Facsimile"@it ;
 
-                                rdfs:label  "Transcription"@fr ,
-                                            "Transcription"@en ,
-                                            "Trascrizione"@it ;
+                                          rdfs:comment  "La page a un fac-similé numérique."@fr ,
+                                                        "The page has a digital facsimile."@en .
 
-                                rdfs:comment  "La transcription d'un feuillet"@fr .
+
+
+roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
+      
+                                        rdfs:subPropertyOf knora-base:isPartOf ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
+
+                                        knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
+
+                                        rdfs:label  "Le folio est une partie d'un document"@fr ,
+                                                    "Folio is part of a document"@en ,
+                                                    "Il folio è parte di un documento"@it ;
+
+                                        rdfs:comment    "Le folio est une partie d'un document."@fr ,
+                                                        "Folio is part of a document."@en .
 
 
 
