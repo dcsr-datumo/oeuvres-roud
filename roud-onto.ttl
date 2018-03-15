@@ -218,7 +218,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationContainsPhoto ;
+                            owl:onProperty roud-oeuvres:PublicationHasPhoto ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -391,6 +391,188 @@ roud-oeuvres:Periodical   rdfs:type owl:Class ;
 
 
 
+roud-oeuvres:Text   rdfs:type   owl:Class ;
+                    rdfs:subClassOf knora-base:Resource ,
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:hasTextContent ;
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                    ];
+                    rdfs:label  "Texte établi"@fr ,
+                                "Critical text"@en ,
+                                "Testo critico"@it ;
+
+                    rdfs:comment  """Le texte établi pour l'édition."""@fr ,
+                                  """The critical text established for the edition."""@en ,
+                                  """Il testo critico stabilito per l'edizione"""@it .
+
+
+roud-oeuvres:Work   rdfs:type   owl:Class ;
+                    rdfs:subClassOf knora-base:Resource ,
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:WorkHasTitle ;
+                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:WorkHasAuthor ;
+                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:WorkHasDate ;
+                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:WorkHasNotice ;
+                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                    ];
+                    rdfs:label  "Œuvre"@fr ,
+                                "Work"@en ,
+                                "Opera"@it ;
+
+                    rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
+                                  """A work. Abstract class, see subclasses."""@en ,
+                                  """Un'opera. Classe astratta, vedi subclasses."""@it .
+
+
+roud-oeuvres:WorkArt    rdfs:type   owl:Class ;
+
+                        rdfs:subClassOf roud-oeuvres:Work ;
+
+                        rdfs:subClassOf knora-base:Resource ;
+
+                        rdfs:label  "Œuvre d'art"@fr ,
+                                    "Artwork"@en ,
+                                    "Opera d'arte"@it ;
+
+                        rdfs:comment  """Une œuvre d'art."""@fr ,
+                                      """An artwork."""@en ,
+                                      """Un'opera d'arte."""@it .
+
+
+
+roud-oeuvres:WorkMusic      rdfs:type   owl:Class ;
+
+                            rdfs:subClassOf roud-oeuvres:Work ;
+
+                            rdfs:subClassOf knora-base:Resource ;
+
+                            rdfs:label  "Œuvre de musique"@fr ,
+                                        "Music work"@en ,
+                                        "Opera musicale"@it ;
+
+                            rdfs:comment  """Une œuvre musicale."""@fr ,
+                                          """A music work."""@en ,
+                                          """Un'opera musicale."""@it .
+
+
+
+roud-oeuvres:WorkLitterature    rdfs:type   owl:Class ;
+
+                                rdfs:subClassOf roud-oeuvres:Work ;
+
+                                rdfs:subClassOf knora-base:Resource ;
+
+                                rdfs:label  "Œuvre littéraire"@fr ,
+                                            "Work of literature"@en ,
+                                            "Opera letteraria"@it ;
+
+                                rdfs:comment  """Une œuvre littéraire."""@fr ,
+                                              """A work of literature."""@en ,
+                                              """Un'opera letteraria."""@it .
+
+
+
+roud-oeuvres:Person       rdfs:type   owl:Class ;
+    
+                          rdfs:subClassOf knora-base:Resource ,
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasGivenName ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasFamilyName ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasBirthDate ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasDeathDate ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasAuthorityID ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isReferenceFor ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isCharacterIn ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:PersonHasPhoto ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:PersonHasNotice ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ];
+                          rdfs:label  "Personne"@fr ,
+                                      "Person"@en ,
+                                      "Persona"@it ;
+
+                          rdfs:comment  """Une personne."""@fr ,
+                                        """A person."""@en ,
+                                        """Una persona."""@it .
+
+
+
+
+roud-oeuvres:BioEvent     rdfs:type   owl:Class ;
+    
+                          rdfs:subClassOf knora-base:Resource ,
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:eventHasDate ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:eventHasTitle ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:eventHasNotice ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ];
+                          rdfs:label  "Œuvre"@fr ,  ## RIPRENDERE QUI
+                                      "Work"@en ,
+                                      "Opera"@it ;
+
+                          rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
+                                        """A work. Abstract class, see subclasses."""@en ,
+                                        """Un'opera. Classe astratta, vedi subclasses."""@it .
+
+
+
 
 
 #######################
@@ -417,21 +599,36 @@ roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
                                                       "Archive and collection in which it is the document." .
 
 
+roud-oeuvres:hasTitle   rdf:type owl:DatatypeProperty ;
 
-roud-oeuvres:writtenSourceHasTitle   rdf:type owl:DatatypeProperty ;
-
-                        rdfs:subPropertyOf  knora-base:hasValue ;
-
-                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
+                        rdfs:subPropertyOf knora-base:hasValue ;
+                        
                         knora-base:objectClassConstraint knora-base:TextValue ;
 
                         rdfs:label  "Titre"@fr ,
                                     "Title"@en ,
                                     "Titolo"@it ;
 
-                        rdfs:comment  "Le titre du document."@fr ,
-                                      "The title of the document."@en .
+                        rdfs:comment  "Le titre. Property abstraite, voir les subproperties."@fr ,
+                                      "The title. Abstract property, see subproperties."@en .
+
+
+
+
+roud-oeuvres:writtenSourceHasTitle    rdf:type owl:DatatypeProperty ;
+
+                                      rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                      rdfs:subPropertyOf  roud-oeuvres:hasTitle ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+
+                                      rdfs:label  "Titre du document"@fr ,
+                                                  "Document title"@en ,
+                                                  "Titolo del documento"@it ;
+
+                                      rdfs:comment  "Le titre du document."@fr ,
+                                                    "The title of the document."@en .
 
 
 
