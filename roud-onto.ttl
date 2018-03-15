@@ -31,12 +31,12 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       
                                       [
                                         rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:WrittenSourceIsInArchive ;
+                                        owl:onProperty roud-oeuvres:writtenSourceIsInArchive ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
                                       [
                                         rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:WrittenSourceHasTitle ;
+                                        owl:onProperty roud-oeuvres:writtenSourceHasTitle ;
                                         owl:cardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
                                       [
@@ -58,11 +58,6 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                         rdf:type owl:Restriction ;  
                                         owl:onProperty roud-oeuvres:hasAnnotation ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ; 
-                                        owl:onProperty roud-oeuvres:hasAddition ;
-                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                  
                                       ],
                                       [
                                         rdf:type owl:Restriction ;
@@ -419,23 +414,50 @@ roud-oeuvres:Periodical   rdfs:type owl:Class ;
 ##
 #######################
 
-roud-oeuvres:isInArchive    rdf:type  owl:ObjectProperty ;
+[
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:writtenSourceIsInArchive ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:writtenSourceHasTitle ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasShelfNumber ;
+                                        owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasOldShelfNumber ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                                      ],
+                                      [
+                                        rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasEditorialSet ;
+                                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                                      ],
+
+roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
                         
-                            rdfs:subPropertyOf knora-base:hasValue ;
+                                        rdfs:subPropertyOf knora-base:hasValue ;
 
-                            knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
-                            knora-base:objectClassConstraint knora-base:ListValue ;
-                            
-                            rdfs:label  "Position dans les archives"@fr ,
-                                        "Location in the archives"@en ,
-                                        "Posizione nei fondi d'archivio"@it ;
+                                        knora-base:objectClassConstraint knora-base:ListValue ;
+                                        
+                                        rdfs:label  "Fonds"@fr ,
+                                                    "Collection"@en ,
+                                                    "Fondo d'archivio"@it ;
 
-                            rdfs:comment  "Archive où le document est conservé et position du document dans l'archive"@fr .
+                                        rdfs:comment  "Fonds d'archive dans lequel le document est conservé"@fr ,
+                                                      "Archive and collection in which it is the document." .
 
 
 
-roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
+roud-oeuvres:writtenSourceHasTitle   rdf:type owl:DatatypeProperty ;
 
                         rdfs:subPropertyOf  knora-base:hasValue ;
 
@@ -447,12 +469,13 @@ roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
                                     "Title"@en ,
                                     "Titolo"@it ;
 
-                        rdfs:comment  "Le titre du document"@fr .
+                        rdfs:comment  "Le titre du document."@fr ,
+                                      "The title of the document."@en .
 
 
 
 
-roud-oeuvres:hasShelfNumber   rdf:type owl:ObjectProperty ;
+roud-oeuvres:hasShelfNumber   rdf:type owl:DatatypeProperty ;
 
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
@@ -464,12 +487,13 @@ roud-oeuvres:hasShelfNumber   rdf:type owl:ObjectProperty ;
                                           "Shelf number"@en ,
                                           "Segnatura"@it ;
 
-                              rdfs:comment  "La cote du document"@fr .
+                              rdfs:comment  "La cote du document"@fr ,
+                                            "The shelfmark of the document"@en .
 
                   
 
 
-roud-oeuvres:hasOldShelfNumber    rdf:type owl:ObjectProperty ;
+roud-oeuvres:hasOldShelfNumber    rdf:type owl:DatatypeProperty ;
                           
                                   rdfs:subPropertyOf  knora-base:hasValue ;
 
@@ -481,7 +505,8 @@ roud-oeuvres:hasOldShelfNumber    rdf:type owl:ObjectProperty ;
                                               "Previous shelf number"@en ,
                                               "Segnatura precedente"@it ;
 
-                                  rdfs:comment  "Ancienne cote du document"@fr .
+                                  rdfs:comment  "Ancienne cote du document."@fr ,
+                                                "The old shelfmark of the document."@en .
 
 
 roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
@@ -497,11 +522,11 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                                           "Editorial set"@en ,
                                           "Insieme editoriale"@it ;
 
-                              rdfs:comment  "L'ensemble éditorial auquel le document se rattache : 'Œuvre poétique', 'Journal', 'Périodique ou ouvrage collectif', 'Traductions', 'Divers'"@fr ,
-                                            "The editorial set to which the document belongs: 'Œuvre poétique', 'Journal', 'Périodique ou ouvrage collectif', 'Traductions', 'Divers'"@en .
+                              rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
+                                            "The editorial set to which the document belongs."@en .
 
 
-roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
+roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;  ## boolean values ?? ObjectProperty or DatatypeProperty
                     
                             rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -512,17 +537,16 @@ roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
                             rdfs:label  "Photocopie"@fr ,
                                         "Photocopy"@en ,
                                         "Fotocopia"@it ;
-                            ## This property has maxCardinality 1. If it's set to True is true, if it is not set is false. Is this the best way to structure something like an optional boolean value?
                             
-                            rdfs:comment  "Le document est une photocopie de l'original"@fr .
+                            rdfs:comment  "Le document est une photocopie de l'original."@fr ,
+                                          "The document is a photocopy of the original."@en .
+
 
 
 
 roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
-
-                              rdfs:subPropertyOf  dc:type ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
@@ -538,7 +562,7 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
 
 
 
-roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
+roud-oeuvres:hasAnnotation  rdf:type owl:DatatypeProperty ;    ## boolean values ?? ObjectProperty or DatatypeProperty
                     
                             rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -546,29 +570,11 @@ roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
                                             
-                            rdfs:label  "Avec annotation(s)"@fr ,
+                            rdfs:label  "Avec annotations"@fr ,
                                         "With annotations"@en ;
                 
-                            rdfs:comment  "Le document presènte des annotations manuscrites"@fr ,
-                                          "Document with autograph annotations"@en .
-                            ## This property has maxCardinality 1. If it's set to True is true, if it is not set is false. Is this the best way to structure something like an optional boolean value?
-                  
-
-
-roud-oeuvres:hasAddition  rdf:type owl:ObjectProperty ;
-                    
-                          rdfs:subPropertyOf knora-base:hasValue ;
-
-                          knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
-                          knora-base:objectClassConstraint knora-base:BooleanValue ;
-                                          
-                          rdfs:label  "Avec adjonction(s)"@fr ,
-                                      "With additions"@en ;
-              
-                          rdfs:comment  "Le document presènte des adjonctions, suppressions, changements"@fr ,
-                                        "Document with additions, deletions, changes"@en . 
-                          ## This property has maxCardinality 1. If it's set to True is true, if it is not set is false. Is this the best way to structure something like an optional boolean value?
+                            rdfs:comment  "Le document presènte des annotations manuscrites."@fr ,
+                                          "The document has annotations."@en .
 
 
 
@@ -585,28 +591,13 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                                           "Support type"@en ,
                                           "Tipo di supporto"@it ;
 
-                              rdfs:comment  "Le type de support matérial du document : feuillet, agenda, carnet, cahier, carte, divers."@fr ,
-                                            "The type pf material support du document: leaf, diary, notebook-carnet, notebook-cahier, letter, other"@en .
+                              rdfs:comment  "Le type de support matérial du document."@fr ,
+                                            "The type pf material support du document."@en .
 
 
-
-roud-oeuvres:isNumbered   rdf:type owl:ObjectProperty ;
-                      
-                          rdfs:subPropertyOf knora-base:hasValue ;
-
-                          knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
-                          knora-base:objectClassConstraint knora-base:BooleanValue ;
-                                          
-                          rdfs:label  "Numéroté"@fr ,
-                                      "Numbered"@en ,
-                                      "Numerato"@it ;
-
-                          rdfs:comment  "Le document est numeroté"@fr .
-    
                     
 
-roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
+roud-oeuvres:hasSupportInfo rdf:type owl:DatatypeProperty ;
                           
                             rdfs:subPropertyOf  knora-base:hasValue ;
 
@@ -618,7 +609,7 @@ roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
                                         "More information about the material support"@en ,
                                         "Più informazioni sul supporto materiale"@it ;
 
-                            rdfs:comment  "Plus d'informations sur le support matériel, comme : étendue, quantité de feuillets, la quantité, taille du cahier, papier particulier, couleur des pages, couverture"@fr .
+                            rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr .
 
 
 
@@ -635,8 +626,8 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                                           "Writing tool"@en ,
                                           "Strumento di scrittura"@it ;
 
-                              rdfs:comment  "L'instrument d'écriture : crayon, machine à écrire, plume, stylo à bille, stylo feutre, divers, à déterminer"@fr ,
-                                            "The writing tool: pencil, typing machine, quill, ballpoint pen, felt tip, other, to be determined"@en .
+                              rdfs:comment  "L'instrument d'écriture de l'écriture principale."@fr ,
+                                            "The writing tool of the main layer."@en .  ##  ??  layer, guarda anche sotto
 
 
 
@@ -653,12 +644,12 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
                                           "Color"@en ,
                                           "Colore"@it ;
 
-                              rdfs:comment  "La couleur de l'écriture : noir, reuge, bleu, rose, violet, gris"@fr ,
-                                            "The writing color: black, red, blue, rose, violet, gray"@en .
+                              rdfs:comment  "La couleur de l'écriture principale"@fr ,
+                                            "The color or the main writing."@en .
 
 
 
-roud-oeuvres:hasDate  rdf:type  owl:ObjectProperty ;
+roud-oeuvres:hasDate  rdf:type  owl:DatatypeProperty ;
                       
                       rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -666,18 +657,18 @@ roud-oeuvres:hasDate  rdf:type  owl:ObjectProperty ;
                                   "Date"@en ,
                                   "Data"@it ;
 
-                      rdfs:comment  "Une date"@fr ,
-                                    "A date"@en .
+                      rdfs:comment  "Une date."@fr ,
+                                    "A date."@en .
 
 
 
-roud-oeuvres:hasDateWrittenSource   rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasDate      rdf:type owl:DatatypeProperty ;
 
                                     rdfs:subPropertyOf knora-base:hasValue ;
 
                                     rdfs:subPropertyOf roud-oeuvres:hasDate ;
 
-                                    knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                    knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                     knora-base:objectClassConstraint knora-base:DateValue ;
 
@@ -685,17 +676,17 @@ roud-oeuvres:hasDateWrittenSource   rdf:type owl:ObjectProperty ;
                                                 "Date on the manuscript"@en ,
                                                 "Data sul manoscritto"@it ;
 
-                                    rdfs:comment  "La date presente dans le manuscrit, s'il y en a"@fr ,
-                                                  "The date present in the manuscript, if any"@en .
+                                    rdfs:comment  "La date presente dans le manuscrit, s'il y en a."@fr ,
+                                                  "The date present in the manuscript, if any."@en .
 
 
-roud-oeuvres:hasDateEstablishedWrittenSource    rdf:type  owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:DatatypeProperty ;
 
                                                 rdfs:subPropertyOf knora-base:hasValue ;
 
                                                 rdfs:subPropertyOf roud-oeuvres:hasDate ;
 
-                                                knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                                knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                                 knora-base:objectClassConstraint knora-base:DateValue ;
 
@@ -703,8 +694,8 @@ roud-oeuvres:hasDateEstablishedWrittenSource    rdf:type  owl:ObjectProperty ;
                                                             "Date (hypothesis)"@en ,
                                                             "Data (ipotesi)"@it ;
 
-                                                rdfs:comment  "La date individué par les chercheures. À préciser aussi s'elle est égale à la date presente dans le manuscrit"@fr ,
-                                                    "The date identified by the scholars. To be entered also when it is the same as the in the manuscrit"@en .
+                                                rdfs:comment  "La date individué par les chercheures."@fr ,
+                                                              "The date identified by the scholars."@en .
 
 
 roud-oeuvres:hasGenre   rdf:type  owl:ObjectProperty ;
