@@ -86,7 +86,7 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       ],
                                       [ 
                                         rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasInternalComment ;
+                                        owl:onProperty roud-oeuvres:WrittenSourceHasInternalComment ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
                                       [
@@ -213,22 +213,22 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           rdfs:subClassOf knora-base:Resource ,
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasAuthor ;
+                            owl:onProperty roud-oeuvres:publicationHasAuthor ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationHasPhoto ;
+                            owl:onProperty roud-oeuvres:publicationHasPhoto ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationHasTitle ;
+                            owl:onProperty roud-oeuvres:publicationHasTitle ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationHasDate ;
+                            owl:onProperty roud-oeuvres:publicationHasDate ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -320,7 +320,7 @@ roud-oeuvres:Publisher    rdfs:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublisherHasName ;
+                            owl:onProperty roud-oeuvres:publisherHasName ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Maison d'édition"@fr ,
@@ -380,7 +380,7 @@ roud-oeuvres:Periodical   rdfs:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasPeriodicalVolume ;
+                            owl:onProperty roud-oeuvres:hasPeriodicalNumber ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Périodique"@fr ,
@@ -403,30 +403,29 @@ roud-oeuvres:Text   rdfs:type   owl:Class ;
                                 "Testo critico"@it ;
 
                     rdfs:comment  """Le texte établi pour l'édition."""@fr ,
-                                  """The critical text established for the edition."""@en ,
-                                  """Il testo critico stabilito per l'edizione"""@it .
+                                  """The critical text established for the edition."""@en .
 
 
 roud-oeuvres:Work   rdfs:type   owl:Class ;
                     rdfs:subClassOf knora-base:Resource ,
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:WorkHasTitle ;
+                      owl:onProperty roud-oeuvres:workHasTitle ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:WorkHasAuthor ;
+                      owl:onProperty roud-oeuvres:workHasAuthor ;
                       owl:minCardinality "0"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:WorkHasDate ;
+                      owl:onProperty roud-oeuvres:workHasDate ;
                       owl:minCardinality "0"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:WorkHasNotice ;
+                      owl:onProperty roud-oeuvres:workHasNotice ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger
                     ];
                     rdfs:label  "Œuvre"@fr ,
@@ -434,8 +433,7 @@ roud-oeuvres:Work   rdfs:type   owl:Class ;
                                 "Opera"@it ;
 
                     rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
-                                  """A work. Abstract class, see subclasses."""@en ,
-                                  """Un'opera. Classe astratta, vedi subclasses."""@it .
+                                  """A work. Abstract class, see subclasses."""@en .
 
 
 roud-oeuvres:WorkArt    rdfs:type   owl:Class ;
@@ -449,8 +447,7 @@ roud-oeuvres:WorkArt    rdfs:type   owl:Class ;
                                     "Opera d'arte"@it ;
 
                         rdfs:comment  """Une œuvre d'art."""@fr ,
-                                      """An artwork."""@en ,
-                                      """Un'opera d'arte."""@it .
+                                      """An artwork."""@en .
 
 
 
@@ -465,12 +462,11 @@ roud-oeuvres:WorkMusic      rdfs:type   owl:Class ;
                                         "Opera musicale"@it ;
 
                             rdfs:comment  """Une œuvre musicale."""@fr ,
-                                          """A music work."""@en ,
-                                          """Un'opera musicale."""@it .
+                                          """A music work."""@en .
 
 
 
-roud-oeuvres:WorkLitterature    rdfs:type   owl:Class ;
+roud-oeuvres:WorkLiterature    rdfs:type   owl:Class ;
 
                                 rdfs:subClassOf roud-oeuvres:Work ;
 
@@ -481,8 +477,7 @@ roud-oeuvres:WorkLitterature    rdfs:type   owl:Class ;
                                             "Opera letteraria"@it ;
 
                                 rdfs:comment  """Une œuvre littéraire."""@fr ,
-                                              """A work of literature."""@en ,
-                                              """Un'opera letteraria."""@it .
+                                              """A work of literature."""@en .
 
 
 
@@ -526,12 +521,12 @@ roud-oeuvres:Person       rdfs:type   owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PersonHasPhoto ;
+                            owl:onProperty roud-oeuvres:personHasPhoto ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PersonHasNotice ;
+                            owl:onProperty roud-oeuvres:personHasNotice ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
@@ -539,38 +534,110 @@ roud-oeuvres:Person       rdfs:type   owl:Class ;
                                       "Persona"@it ;
 
                           rdfs:comment  """Une personne."""@fr ,
-                                        """A person."""@en ,
-                                        """Una persona."""@it .
+                                        """A person."""@en .
 
 
 
 
-roud-oeuvres:BioEvent     rdfs:type   owl:Class ;
+roud-oeuvres:Bioevent     rdfs:type   owl:Class ;
     
                           rdfs:subClassOf knora-base:Resource ,
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:eventHasDate ;
+                            owl:onProperty roud-oeuvres:bioeventHasDate ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:eventHasTitle ;
+                            owl:onProperty roud-oeuvres:bioeventHasTitle ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:eventHasNotice ;
+                            owl:onProperty roud-oeuvres:bioeventHasNotice ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:bioeventHasPhoto ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
-                          rdfs:label  "Œuvre"@fr ,  ## RIPRENDERE QUI
-                                      "Work"@en ,
-                                      "Opera"@it ;
+                          rdfs:label  "Evenement biographique"@fr ,  ## RIPRENDERE QUI
+                                      "Biographic event"@en ,
+                                      "Evento biografico"@it ;
 
-                          rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
-                                        """A work. Abstract class, see subclasses."""@en ,
-                                        """Un'opera. Classe astratta, vedi subclasses."""@it .
+                          rdfs:comment  """Un evenement, ou une période, de la biographie de Gustave Roud."""@fr ,
+                                        """An event, or period, of Gustave Roud's biography."""@en .
 
+
+
+
+roud-oeuvres:Photo    rdfs:type   owl:Class ;
+    
+                      rdfs:subClassOf knora-base:StillImageRepresentation ,
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:photoHasDate ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:photoIsInArchive ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:photoHasShelfID ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:photoHasNotice ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ];
+                      rdfs:label  "Photo"@fr , 
+                                  "Photo"@en ,
+                                  "Foto"@it ;
+
+                      rdfs:comment  """Une photo."""@fr ,
+                                    """A photo."""@en .
+
+
+
+roud-oeuvres:Place    rdfs:type   owl:Class ;
+    
+                      rdfs:subClassOf knora-base:Resource ,
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:placeHasName ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:hasLatitude ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:hasLongitude ;
+                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:placeHasNotice ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:placeHasPhoto ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ];
+                      rdfs:label  "Lieu"@fr , 
+                                  "Place"@en ,
+                                  "Luogo"@it ;
+
+                      rdfs:comment  """Un lieu."""@fr ,
+                                    """A place."""@en .
 
 
 
@@ -605,12 +672,12 @@ roud-oeuvres:hasTitle   rdf:type owl:DatatypeProperty ;
                         
                         knora-base:objectClassConstraint knora-base:TextValue ;
 
-                        rdfs:label  "Titre"@fr ,
-                                    "Title"@en ,
-                                    "Titolo"@it ;
+                        rdfs:label  "A un titre"@fr ,
+                                    "Has a title"@en ,
+                                    "Ha un titolo"@it ;
 
-                        rdfs:comment  "Le titre. Property abstraite, voir les subproperties."@fr ,
-                                      "The title. Abstract property, see subproperties."@en .
+                        rdfs:comment  "A un titre. Property abstraite, voir les subproperties."@fr ,
+                                      "Has a title. Abstract property, see subproperties."@en .
 
 
 
@@ -811,12 +878,12 @@ roud-oeuvres:hasDate  rdf:type  owl:DatatypeProperty ;
                       
                       rdfs:subPropertyOf knora-base:hasValue ;
 
-                      rdfs:label  "Date"@fr ,
-                                  "Date"@en ,
-                                  "Data"@it ;
+                      rdfs:label  "A une date"@fr ,
+                                  "Has date"@en ,
+                                  "Ha una data"@it ;
 
-                      rdfs:comment  "Une date."@fr ,
-                                    "A date."@en .
+                      rdfs:comment  "A une date. Property abstraite, voir subproperties."@fr ,
+                                    "Has a date. Abstract property, see subproperties."@en .
 
 
 
@@ -867,10 +934,10 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
                               ## See  roud-data-lists.ttl
 
                               rdfs:label  "Étapes du processus d'écriture"@fr ,
-                                          "Stages of the writing process"@en ,   ## check vocab
-                                          "Stadio nel processo di scrittura"@it ; ## check vocab
+                                          "Stages of the writing process"@en ,  
+                                          "Stadi nel processo di scrittura"@it ;
 
-                              rdfs:comment  "Les étapes du processus d'écriture."@fr ,
+                              rdfs:comment  "L'étape du processus d'écriture répresenté par le document."@fr ,
                                             "The genetic stage of the text."@en .
 
 
@@ -881,7 +948,6 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     
                                     knora-base:subjectClassConstraint knora-base:WrittenSource ;
                                     
-                                    ## roud-biblio ontology does not exist yet, but could be derived from other bibliographical ontologies in Knora.
                                     knora-base:objectClassConstraint roud-biblio:Document ;
 
                                     rdfs:label  "Référence bibliographique"@fr ,
@@ -935,18 +1001,45 @@ roud-oeuvres:hasComment   rdf:type owl:ObjectProperty ;
                                         "All comments should go in this field, including information about uncertain dates, relations with other documents, etc."@en .
 
 
-                          
+
 roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
+                          
+                                  rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                  rdfs:label  "Commentaire interne"@fr ,
+                                              "Internal comment"@en ,
+                                              "Commento interno"@it ;
+
+                                  rdfs:comment  "Commentaire qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                "Internal comments for the project team."@en .
+
+
+                          
+roud-oeuvres:writtenSourceHasInternalComment   rdf:type owl:ObjectProperty ;
                           
                                   rdfs:subPropertyOf  knora-base:hasValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
-                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                  rdfs:label  "Cuisine interne (manuscrit)"@fr ,
+                                              "Internal comment (manuscript)"@en ,
+                                              "Commenti interni (manoscritto)"@it ;
 
-                                  rdfs:label  "Cuisine interne"@fr ,
-                                              "Internal comment"@en ,
-                                              "Commenti interni"@it ;
+                                  rdfs:comment  "Commentaire qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                "Internal comments for the project team."@en .
+
+
+roud-oeuvres:publicationHasInternalComment   rdf:type owl:ObjectProperty ;
+                          
+                                  rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                  rdfs:label  "Cuisine interne (manuscrit)"@fr ,
+                                              "Internal comment (manuscript)"@en ,
+                                              "Commenti interni (manoscritto)"@it ;
 
                                   rdfs:comment  "Commentaire qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
                                                 "Internal comments for the project team."@en .
@@ -982,19 +1075,19 @@ roud-oeuvres:manuscriptIsTranscribed    rdf:type owl:DatatypeProperty ;
                                             "Text has been transcribed or ocred."@en .
 
 
-roud-oeuvres:publicationIsTranscribed   rdf:type owl:DatatypeProperty ;       
+roud-oeuvres:publicationIsTranscribed    rdf:type owl:DatatypeProperty ;       
                           
-                                        rdfs:subPropertyOf  knora-base:hasValue ;
-                                        rdfs:subPropertyOf roud-oeuvres:isTranscribed ;
+                              rdfs:subPropertyOf  knora-base:hasValue ;
+                              rdfs:subPropertyOf roud-oeuvres:isTranscribed ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-                                      
-                                        rdfs:label  "Retranscrit"@fr ,
-                                                    "Transcribed"@en ,
-                                                    "Trascritto"@it ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+                            
+                              rdfs:label  "Retranscrit"@fr ,
+                                          "Transcribed"@en ,
+                                          "Trascritto"@it ;
 
-                                        rdfs:comment  "Le texte a été retranscrit ou 'ocr'izé."@fr ,
-                                                      "Text has been transcribed or ocred."@en .
+                              rdfs:comment  "Le texte a été retranscrit ou 'ocr'izé."@fr ,
+                                            "Text has been transcribed or ocred."@en .
 
 
 
@@ -1034,7 +1127,7 @@ roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
+roud-oeuvres:hasSeqnum  rdf:type  owl:DatatypeProperty ;
 
                         rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -1043,7 +1136,6 @@ roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
                         knora-base:subjectClassConstraint roud-oeuvres:Folio ;
                                   
                         knora-base:objectClassConstraint knora-base:TextValue ;
-                        ### It might become StandoffValue !!!
 
                         rdfs:label  "Numéro du feuillet"@fr ,
                                     "Folio number"@en ,
@@ -1051,27 +1143,590 @@ roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
 
                         rdfs:comment  "Le numéro du feuillet"@fr .
 
-                       
-
-###   Check per il momento non serve più, cmq GeonameValue non è supportato, quindi meglio usare TextValue
-### roud-oeuvres:hasLocation  rdf:type owl:ObjectProperty ;
-###                  
-###                          rdfs:subPropertyOf  knora-base:hasValue ;
-###
-###                          knora-base:subjectClassConstraint roud-oeuvres:archive ;
-###
-###                          knora-base:objectClassConstraint knora-base:TextValue .
-###
-###                          rdfs:label ""
-###
 
 
 
 
+roud-oeuvres:hasPublicationType   rdf:type  owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Folio ;
+                                            
+                                  knora-base:objectClassConstraint knora-base:ListValue ;
+
+                                  rdfs:label  "Type de publication"@fr ,
+                                              "Publication type"@en ,
+                                              "Tipo di pubblicazione"@it ;
+
+                                  rdfs:comment  "Le type de publication"@fr ,
+                                                "Publication type"@en .
 
 
 
 
+roud-oeuvres:hasPeriodicalIssue     rdf:type  owl:DatatypeProperty ;
+    
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Numéro"@fr ,
+                                                "Issue"@en ,
+                                                "Numero"@it ;
+
+                                    rdfs:comment  "Le numéro du périodique."@fr ,
+                                                  "The issue of the periodical."@en .
 
 
+
+
+roud-oeuvres:hasPeriodicalVolume    rdf:type  owl:DatatypeProperty ;
+    
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Volume d'un numéro"@fr ,
+                                                "Volume of an issue"@en ,
+                                                "Fascicolo di un numero"@it ;
+
+                                    rdfs:comment  "Le volume d'un numéro d'un périodique."@fr ,
+                                                  "The volume of a journal (or other periodical) issue."@en .
+
+
+
+roud-oeuvres:hasPages     rdf:type  owl:DatatypeProperty ;
+    
+                          rdfs:subPropertyOf knora-base:hasValue ;
+
+                          knora-base:objectClassConstraint knora-base:TextValue ;
+
+                          rdfs:label  "Est dans les pages"@fr ,
+                                      "Is in pages"@en ,
+                                      "È nelle pagine"@it ;
+
+                          rdfs:comment  "Est dans les pages. Property abstraite. Voir les subproperties."@fr ,
+                                        "Is in pages. Abstract property. See subproperties."@en .
+
+
+
+roud-oeuvres:periodicalArticleHasPages    rdf:type  owl:DatatypeProperty ;
+    
+                                          rdfs:subPropertyOf knora-base:hasValue ;
+
+                                          rdfs:subPropertyOf roud-oeuvres:hasPages ;
+
+                                          knora-base:objectClassConstraint roud-oeuvres:PeriodicalArticle ;
+
+                                          rdfs:label  "Pages"@fr ,
+                                                      "Pages"@en ,
+                                                      "Pagine"@it ;
+
+                                          rdfs:comment  "Les pages d'un article."@fr ,
+                                                        "The pages of an article."@en .
+
+
+
+roud-oeuvres:bookSectionHasPages    rdf:type  owl:DatatypeProperty ;
+    
+                                          rdfs:subPropertyOf knora-base:hasValue ;
+
+                                          rdfs:subPropertyOf roud-oeuvres:hasPages ;
+
+                                          knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                                          rdfs:label  "Pages"@fr ,
+                                                      "Pages"@en ,
+                                                      "Pagine"@it ;
+
+                                          rdfs:comment  "Les pages d'une section d'un livre."@fr ,
+                                                        "The pages of a book section."@en .
+
+
+
+roud-oeuvres:isPublishedInPeriodical  rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
+
+                                      knora-base:objectClassConstraint knora-base:Periodical ;
+
+                                      rdfs:label  "Est publié dans le périodique"@fr ,
+                                                  "Is published in the periodical"@en ,
+                                                  "È pubblicato nel periodico"@it ;
+
+                                      rdfs:comment  "Dans quelle périodique l'article est publié."@fr ,
+                                                    "In which periodical is published the article."@en .
+
+
+roud-oeuvres:isPublishedInPeriodicalValue   rdf:type owl:ObjectProperty ;
+
+                                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
+
+                                            knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:hasBookVolume    rdf:type  owl:DatatypeProperty ;
+    
+                              rdfs:subPropertyOf knora-base:hasValue ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                              knora-base:objectClassConstraint knora-base:TextValue ;
+
+                              rdfs:label  "Volume de la section d'un livre."@fr ,
+                                          "Volume of a book section"@en ,
+                                          "Volume della sezione di un libro"@it ;
+
+                              rdfs:comment  "Le volume dans lequel apparaît la section d'un livre."@fr ,
+                                            "The volume in which the book section appears."@en .
+ 
+
+roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                                      knora-base:objectClassConstraint roud-oeuvres:Book ;
+
+                                      rdfs:label  "Fait partie du livre"@fr ,
+                                                  "Is part of the book"@en ,
+                                                  "Fa parte del libro"@it ;
+
+                                      rdfs:comment  "La section (chapitre ou autre) fait partie d'un livre"@fr ,
+                                                    "The section is part of the book"@en .
+
+
+roud-oeuvres:bookSectionIsPartOfValue       rdf:type  owl:ObjectProperty ;
+
+                                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                                            knora-base:objectClassConstraint knora-base:LinkValue .
+
+roud-oeuvres:hasNumberOfVolumes     rdf:type owl:DatatypeProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Nombre des volumes"@fr ,
+                                                "Number of volumes"@en ,
+                                                "Numero di volumi"@it ;
+
+                                    rdfs:comment "Le nombre de volumes qui a une publication."@fr ,
+                                                  "The number of volumes a publication has."@en .
+
+
+roud-oeuvres:hasNumberOfEdition     rdf:type owl:DatatypeProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Numéro de la réédition"@fr ,
+                                                "Number of the republication"@en ,
+                                                "Numero della riedizione"@it ;
+
+                                    rdfs:comment  "Quand il s'agit d'une réédition, indiquer le numéro."@fr ,
+                                                  "If it is a republication, specify the number."@en .
+
+
+
+roud-oeuvres:hasCollaborators     rdf:type owl:DatatypeProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                  rdfs:label  "Collaborateurs"@fr ,
+                                              "Collaborators"@en ,
+                                              "Collaboratori"@it ;
+
+                                  rdfs:comment  "Les collaborateurs à la préface, introduction, postface, etc."@fr ,
+                                                "The collaborators to the preface, introduction, postface, etc."@en .
+
+
+
+
+roud-oeuvres:hasPublisher     rdf:type  owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                              knora-base:objectClassConstraint roud-oeuvres:Publisher ;
+
+                              rdfs:label  "Maison d'édition"@fr ,
+                                          "Publisher"@en ,
+                                          "Casa editrice"@it ;
+
+                              rdfs:comment  "La maison d'édition."@fr ,
+                                            "The publisher."@en .
+
+
+roud-oeuvres:hasPublisherValue    rdf:type  owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                                  knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:hasLocation    rdf:type owl:DatatypeProperty ;
+
+                            rdfs:subPropertyOf knora-base:hasValue ;
+
+                            knora-base:subjectClassConstraint roud-oeuvres:Publisher ;
+
+                            knora-base:objectClassConstraint knora-base:TextValue ;
+
+                            rdfs:label  "Lieu de publication"@fr ,
+                                        "Publication place"@en ,
+                                        "Luogo di pubblicazione"@it ;
+
+                            rdfs:comment  "Le lieu de publication."@fr ,
+                                          "The publication place."@en .
+
+
+roud-oeuvres:hasName    rdf:type  owl:DatatypeProperty ;
+    
+                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                        knora-base:objectClassConstraint knora-base:TextValue ;
+
+                        rdfs:label  "A un nom"@fr ,
+                                    "Has a name"@en ,
+                                    "Ha un nome"@it ;
+
+                        rdfs:comment  "A un nom. Property abstraite. Voir les subproperties."@fr ,
+                                      "Has a name. Abstract property. See subproperties."@en .
+
+
+roud-oeuvres:publisherHasName     rdf:type owl:DatatypeProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasValue ;
+
+                                  rdfs:subPropertyOf roud-oeuvres:hasName ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Publisher ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                  rdfs:label  "Nom de la maison d'édition"@fr ,
+                                              "Publisher name"@en ,
+                                              "Nome della casa editrice"@it ;
+
+                                  rdfs:comment  "Le nom de la maison d'édition."@fr ,
+                                                "The name of the publisher."@en .
+
+
+roud-oeuvres:publicationHasDateFirstEdition     rdf:type owl:DatatypeProperty ;
+
+                                                rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                rdfs:subPropertyOf roud-oeuvres:hasDate ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                                knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                                rdfs:label  "Date de la première édition"@fr ,
+                                                            "Date of the first edition"@en ,
+                                                            "Data della prima edizione"@it ;
+
+                                                rdfs:comment  "Si réédition, spécifier la date de la première édition."@fr ,
+                                                              "If republication, specify the date of the first edition."@en .
+
+
+
+roud-oeuvres:publicationHasDateFirstEdition     rdf:type owl:DatatypeProperty ;
+
+                                                rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                rdfs:subPropertyOf roud-oeuvres:hasDate ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                                knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                                rdfs:label  "Date de publication"@fr ,
+                                                            "Publication date"@en ,
+                                                            "Data di pubblicazione"@it ;
+
+                                                rdfs:comment  "La date de publication."@fr ,
+                                                              "The publication date."@en .
+
+
+
+roud-oeuvres:publicationHasTitle    rdf:type owl:DatatypeProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasTitle ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Titre de la publication"@fr ,
+                                                "Publication title"@en ,
+                                                "Titolo della pubblicazione"@it ;
+
+                                    rdfs:comment  "Le titre de la publication."@fr ,
+                                                  "The publication title."@en .
+
+
+
+
+roud-oeuvres:hasPhoto   rdf:type owl:ObjectProperty ;
+
+                        rdfs:subPropertyOf knora-base:hasLinkTo ;
+                        
+                        knora-base:objectClassConstraint roud-oeuvres:Photo ;
+
+                        rdfs:label  "A une photo"@fr ,
+                                    "Has a photo"@en ,
+                                    "Ha una foto"@it ;
+
+                        rdfs:comment  "A une photo. Property abstraite, voir les subproperties."@fr ,
+                                      "Has a photo. Abstract property, see subproperties."@en .
+
+
+
+roud-oeuvres:publicationHasPhoto    rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasPhoto ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                    rdfs:label  "Publication contient la photo"@fr ,
+                                                "Publication contains photo"@en ,
+                                                "Pubblicazione contiene foto"@it ;
+
+                                    rdfs:comment  "La publication continent la photo."@fr ,
+                                                  "The publication contains the photo."@en .
+                                                              
+
+
+roud-oeuvres:publicationHasPhotoValue   rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
+   
+
+roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
+
+                        rdfs:subPropertyOf knora-base:hasLinkTo ;
+                        
+                        knora-base:objectClassConstraint roud-oeuvres:Person ;
+
+                        rdfs:label  "A un-e auteur"@fr ,
+                                    "Has an author"@en ,
+                                    "Ha un autore o un'autrice"@it ;
+
+                        rdfs:comment  "A un-e auteur. Property abstraite, voir les subproperties."@fr ,
+                                      "Has an author. Abstract property, see subproperties."@en .
+
+
+
+roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasAuthor ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                    rdfs:label  "Publication a auteur"@fr ,
+                                                "Publication has author"@en ,
+                                                "Pubblicazione ha autore"@it ;
+
+                                    rdfs:comment  "La publication a auteur"@fr ,
+                                                  "The publication has author"@en .
+                                                              
+
+
+roud-oeuvres:publicationHasAuthorValue  rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
+   
+
+
+roud-oeuvres:publicationHasTranslator   rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint roud-oeuvres:Person ;
+
+                                        rdfs:label  "Publication a traducteur"@fr ,
+                                                    "Publication has translator"@en ,
+                                                    "Pubblicazione ha traduttore"@it ;
+
+                                        rdfs:comment  "La publication a traducteur"@fr ,
+                                                      "The publication has translator"@en .
+                                                              
+
+
+roud-oeuvres:publicationHasTranslatorValue    rdf:type owl:ObjectProperty ;
+
+                                              rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                              knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                              knora-base:objectClassConstraint knora-base:LinkValue .
+
+   
+
+roud-oeuvres:publicationHasText   rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                  knora-base:objectClassConstraint roud-oeuvres:Text ;
+
+                                  rdfs:label  "Publication a texte établi"@fr ,
+                                              "Publication has critical text"@en ,
+                                              "Pubblicazione ha testo critico"@it ;
+
+                                  rdfs:comment  "La publication a le texte établi"@fr ,
+                                                "The publication has the critical text"@en .
+                                                              
+
+
+roud-oeuvres:publicationHasTextValue    rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:hasTextContent   rdf:type owl:DatatypeProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasValue ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Text ;
+
+                              knora-base:objectClassConstraint roud-oeuvres:TextValue ;
+
+                              rdfs:label  "A un texte établi"@fr ,
+                                          "Has critical text"@en ,
+                                          "Ha testo critico"@it ;
+
+                              rdfs:comment  "A texte établi"@fr ,
+                                            "Has critical text"@en .
+
+
+roud-oeuvres:publicationIsEditionOf   rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                      knora-base:objectClassConstraint roud-oeuvres:WorkLiterature ;
+
+                                      rdfs:label  "Est un édition de l'œuvre"@fr ,
+                                                  "Is an edition of the work"@en ,
+                                                  "È un'edizione dell'opera"@it ;
+
+                                      rdfs:comment  "Est un édition de l'œuvre"@fr ,
+                                                    "Is an edition of the work"@en .
+                                                              
+
+
+roud-oeuvres:publicationIsEditionOfValue    rdf:type owl:ObjectProperty ;
+
+                                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                            knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:isReeditionOf    rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                              knora-base:objectClassConstraint roud-oeuvres:Publication ;
+
+                              rdfs:label  "Est une réédition de la publication"@fr ,
+                                          "Is a republication of the publication"@en ,
+                                          "È una riedizione della pubblicazione"@it ;
+
+                              rdfs:comment  "Est un réédition de"@fr ,
+                                            "Is a republication of"@en .
+                                                      
+
+
+roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                  knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
+
+                                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                                  knora-base:objectClassConstraint roud-oeuvres:Publication ;
+
+                                                  rdfs:label  "Est une version précédente d'une partie de la publication"@fr ,
+                                                              "Is previous version of a section of the publication"@en ,
+                                                              "È una riedizione di"@it ;
+
+                                                  rdfs:comment  "Est une version précédente d'une partie de la publication, par exemple un article paru et après inclus dans un recueil."@fr ,
+                                                                "Is previous version of a section of the publication, for instance an article which, after some reworking, has been included in a collection."@en .
+                                                      
+
+
+roud-oeuvres:isPreviousStageOfPartOfCollectionValue   rdf:type owl:ObjectProperty ;
+
+                                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                                      knora-base:objectClassConstraint knora-base:LinkValue .
 
