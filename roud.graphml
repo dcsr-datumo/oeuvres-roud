@@ -60,7 +60,7 @@
           <y:Geometry height="40.296875" width="117.2880859375" x="1171.2099282749089" y="961.8515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.2880859375" x="20.0" y="10.837500156500369">ListValue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.2880859375" x="20.0" y="3.0">ListValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2476,13 +2476,13 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e44" source="n30" target="n15">
+    <edge id="e44" source="n30" target="n31">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
-          <y:Path sx="0.0" sy="20.1484375" tx="47.28398009586272" ty="10.910388691479511"/>
+          <y:Path sx="0.0" sy="20.1484375" tx="-30.837690304754233" ty="4.505771186646825"/>
           <y:LineStyle color="#FFCC00" type="line" width="3.0"/>
           <y:Arrows source="none" target="delta"/>
-          <y:EdgeLabel alignment="center" anchorX="-752.5820432259716" anchorY="404.5916922843144" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#FF9900" upX="0.4963377323508781" upY="0.8681295153632251" verticalTextPosition="bottom" visible="true" width="116.341796875" x="-853.5817909635521" y="404.5916922843144">ro:isCharacterIn<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="-536.287823297248" anchorY="-222.44235052279146" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#FF9900" upX="-0.34737529770436293" upY="0.9377261874048337" verticalTextPosition="bottom" visible="true" width="116.341796875" x="-652.4352059122625" y="-262.8566168477051">ro:isCharacterIn<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2664,7 +2664,7 @@
           </y:Path>
           <y:LineStyle color="#008000" type="line" width="3.0"/>
           <y:Arrows source="none" target="delta"/>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" verticalTextPosition="bottom" visible="true" width="422.865234375" x="-217.33748046086293" y="-55.65657365770312">ro:isPreviousStageOfPartOfCollection [ro:isPartOfCollection]<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" verticalTextPosition="bottom" visible="true" width="263.806640625" x="-137.80818358586293" y="-55.65657365770312">ro:isPreviousStageOfPartOfCollection<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2802,7 +2802,7 @@
           <y:Path sx="0.0" sy="15.02472159957246" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="74.87128575331553" anchorY="8.218400603688451" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" upX="0.13546763108541626" upY="-0.9907817726059082" verticalTextPosition="bottom" visible="true" width="249.177734375" x="74.87128575331553" y="-11.891373187172093">ro:photoHasShelfID [ro:hasShelfID]<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="33.92219768668747" anchorY="2.6195128275194293" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" upX="0.13546763108541626" upY="-0.9907817726059082" verticalTextPosition="bottom" visible="true" width="331.837890625" x="33.92219768668747" y="-17.490260963341115">ro:photoHasShelfNumber [ro:hasShelfNumber]<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
