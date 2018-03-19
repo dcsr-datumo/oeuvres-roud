@@ -28,7 +28,7 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 
 
 ##########################
-## PARLARNE CON I RAGAZZI
+## PARLARNE CON EQUIPE
 ##########################
 
 
@@ -40,6 +40,7 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 ## CHIEDERE A MARION
 ##########################
 
+How important is it to have correct DatatypeProperty or ObjectProperty ?
 
 
 
