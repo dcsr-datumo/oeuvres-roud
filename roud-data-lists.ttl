@@ -43,7 +43,9 @@
 
 
 ## Lists:
-## - editorial sets (flat list)
+## - writtenSourceIsInArchive (flat list)
+
+## - editorial sets --
 ## - document types  --
 ## - support types  --
 ## - writing tools  --
@@ -55,7 +57,62 @@
 
 
 
-## __________ LIST EDITORIAL SETS __________
+
+
+## __________ LIST EDITORIAL SETS __________ check
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Ensemble éditorial auquel le document se rattache"@fr ;
+	rdfs:label "Ensemble éditorial"@fr ;
+	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-oeuvrePoetique> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-journal> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-periodiqueCollectif> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-traduction> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-divers> .
+
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-oeuvrePoetique> a knora-base:ListNode ;
+		knora-base:listNodeName "CRLR-GR" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "CRLR GR"@fr .
+
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-journal> a knora-base:ListNode ;
+		knora-base:listNodeName "BCU-1" ; ## CHECK
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "BCU"@fr . ## CHECK
+
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-periodiqueCollectif> a knora-base:ListNode ;
+		knora-base:listNodeName "BCU-2" ; ## CHECK
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "BCU"@fr . ## CHECK
+
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-traduction> a knora-base:ListNode ;
+		knora-base:listNodeName "BCU-3" ; ## CHECK
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "BCU"@fr . ## CHECK
+
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive-divers> a knora-base:ListNode ;
+		knora-base:listNodeName "BCU-4" ; ## CHECK
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-writtenSourceIsInArchive> ;
+		knora-base:listNodePosition 4 ;
+		rdfs:label "BCU"@fr . ## CHECK		
+
+
+
+
+
+
+
+## __________ LIST EDITORIAL SETS __________ 
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> a knora-base:ListNode ;
 	knora-base:isRootNode true ;
