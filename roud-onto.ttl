@@ -8,6 +8,7 @@
 @prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
 @prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
 @prefix roud-biblio: <http://www.knora.org/ontology/0112/roud-biblio#> .
+@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
 
 
 ## Look at correspondances with DC, SKOS, FRBR (for work and publication) etc. in a later stage. It can be problematic, because Knora may add rules that are not present in the concept from another vocabulary (but isn't subclassOf appropriate then?)
@@ -66,7 +67,9 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       ],
                                       [
                                         rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:hasPublishedReferenceValue,
+                                        owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
+                                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                      ],
                                       [
                                         rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:hasGeneticStage ;
@@ -327,7 +330,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                                        """Any kind of publication. This is an abstract class, see its subclasses."""@en .
 
 
-roud-oeuvres:Book     rdfs:type owl:Class ;
+roud-oeuvres:Book     rdf:type owl:Class ;
                       rdfs:subClassOf roud-oeuvres:Publication ;
                       rdfs:subClassOf knora-base:Resource ,
                       [
@@ -364,7 +367,9 @@ roud-oeuvres:Book     rdfs:type owl:Class ;
 
 
 
-roud-oeuvres:Publisher    rdfs:type owl:Class ;
+
+
+roud-oeuvres:Publisher    rdf:type owl:Class ;
 
                           rdfs:subClassOf knora-base:Resource ,
                           [
@@ -384,7 +389,7 @@ roud-oeuvres:Publisher    rdfs:type owl:Class ;
                                         """The publisher."""@en .
 
 
-roud-oeuvres:BookSection    rdfs:type owl:Class ;
+roud-oeuvres:BookSection    rdf:type owl:Class ;
 
                             rdfs:subClassOf roud-oeuvres:Publication ;
 
@@ -417,7 +422,7 @@ roud-oeuvres:BookSection    rdfs:type owl:Class ;
                                           """The publisher."""@en .
 
 
-roud-oeuvres:PeriodicalArticle    rdfs:type owl:Class ;
+roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                   rdfs:subClassOf roud-oeuvres:Publication ;
                                   rdfs:subClassOf knora-base:Resource ,
                                   [
@@ -442,7 +447,7 @@ roud-oeuvres:PeriodicalArticle    rdfs:type owl:Class ;
                                                 """Periodical article."""@en .
 
 
-roud-oeuvres:Periodical   rdfs:type owl:Class ;
+roud-oeuvres:Periodical   rdf:type owl:Class ;
                          
                           rdfs:subClassOf roud-oeuvres:Publication ;
                          
@@ -465,7 +470,7 @@ roud-oeuvres:Periodical   rdfs:type owl:Class ;
 
 
 
-roud-oeuvres:Text   rdfs:type   owl:Class ;
+roud-oeuvres:Text   rdf:type   owl:Class ;
                    
                     rdfs:subClassOf knora-base:Resource ,
                     [
@@ -481,7 +486,7 @@ roud-oeuvres:Text   rdfs:type   owl:Class ;
                                   """The critical text established for the edition."""@en .
 
 
-roud-oeuvres:Work   rdfs:type   owl:Class ;
+roud-oeuvres:Work   rdf:type   owl:Class ;
                   
                     rdfs:subClassOf knora-base:Resource ,
                     [
@@ -517,7 +522,7 @@ roud-oeuvres:Work   rdfs:type   owl:Class ;
                                   """A work. Abstract class, see subclasses."""@en .
 
 
-roud-oeuvres:ArtWork    rdfs:type   owl:Class ;
+roud-oeuvres:ArtWork    rdf:type   owl:Class ;
 
                         rdfs:subClassOf roud-oeuvres:Work ;
 
@@ -532,7 +537,7 @@ roud-oeuvres:ArtWork    rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:MusicWork      rdfs:type   owl:Class ;
+roud-oeuvres:MusicWork      rdf:type   owl:Class ;
 
                             rdfs:subClassOf roud-oeuvres:Work ;
 
@@ -547,7 +552,7 @@ roud-oeuvres:MusicWork      rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:LiteratureWork    rdfs:type   owl:Class ;
+roud-oeuvres:LiteratureWork    rdf:type   owl:Class ;
 
                                 rdfs:subClassOf roud-oeuvres:Work ;
 
@@ -562,7 +567,7 @@ roud-oeuvres:LiteratureWork    rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:Person       rdfs:type   owl:Class ;
+roud-oeuvres:Person       rdf:type   owl:Class ;
     
                           rdfs:subClassOf knora-base:Resource ,
                           [
@@ -630,7 +635,7 @@ roud-oeuvres:Person       rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:Bioevent     rdfs:type   owl:Class ;
+roud-oeuvres:Bioevent     rdf:type   owl:Class ;
     
                           rdfs:subClassOf knora-base:Resource ,
                           [
@@ -668,7 +673,7 @@ roud-oeuvres:Bioevent     rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:Photo    rdfs:type   owl:Class ;
+roud-oeuvres:Photo    rdf:type   owl:Class ;
     
                       rdfs:subClassOf knora-base:StillImageRepresentation ,
                       [
@@ -700,7 +705,7 @@ roud-oeuvres:Photo    rdfs:type   owl:Class ;
 
 
 
-roud-oeuvres:Place    rdfs:type   owl:Class ;
+roud-oeuvres:Place    rdf:type   owl:Class ;
     
                       rdfs:subClassOf knora-base:Resource ,
                       [
@@ -721,7 +726,7 @@ roud-oeuvres:Place    rdfs:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasNotice ;
-                        owl:cardinality "0"^^xsd:nonNegativeInteger
+                        owl:cardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -730,7 +735,9 @@ roud-oeuvres:Place    rdfs:type   owl:Class ;
                       ],
                       [
                         rdf:type owl:Restriction ;
-                        owl:onProperty roud-oeuvres:placeHasPhotoValue;
+                        owl:onProperty roud-oeuvres:placeHasPhotoValue ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        ] ;
                       rdfs:label  "Lieu"@fr , 
                                   "Place"@en ,
                                   "Luogo"@it ;
@@ -756,6 +763,10 @@ roud-oeuvres:isInArchive    rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf knora-base:hasValue ;
                             
                             knora-base:objectClassConstraint knora-base:ListValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:Pulldown ;
+                            
+                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
 
                             rdfs:label  "Est dans le fonds"@fr ,
                                         "Is in archive"@en ,
@@ -777,6 +788,10 @@ roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:ListValue ;
                                         
+                                        salsah-gui:guiElement salsah-gui:Pulldown ;
+                                        
+                                        salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                                        
                                         rdfs:label  "Fonds"@fr ,
                                                     "Collection"@en ,
                                                     "Fondo d'archivio"@it ;
@@ -790,6 +805,8 @@ roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf knora-base:hasValue ;
                         
                         knora-base:objectClassConstraint knora-base:TextValue ;
+                        
+                        salsah-gui:guiElement salsah-gui:SimpleText ;
 
                         rdfs:label  "A un titre"@fr ,
                                     "Has a title"@en ,
@@ -810,6 +827,8 @@ roud-oeuvres:writtenSourceHasTitle    rdf:type owl:ObjectProperty ;
                                       knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                                       knora-base:objectClassConstraint knora-base:TextValue ;
+                                      
+                                      salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                       rdfs:label  "Titre du document"@fr ,
                                                   "Document title"@en ,
@@ -825,6 +844,8 @@ roud-oeuvres:hasShelfmark   rdf:type owl:ObjectProperty ;
                             rdfs:subPropertyOf  knora-base:hasValue ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                             rdfs:label  "Cote"@fr ,
                                         "Shelf number"@en ,
@@ -844,6 +865,8 @@ roud-oeuvres:writtenSourceHasShelfmark  rdf:type owl:ObjectProperty ;
                                         knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
+                                        
+                                        salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                         rdfs:label  "Cote du document"@fr ,
                                                     "Shelfmark of the document"@en ,
@@ -862,6 +885,8 @@ roud-oeuvres:writtenSourceHasOldShelfmark   rdf:type owl:ObjectProperty ;
                                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                                             knora-base:objectClassConstraint knora-base:TextValue ;
+                                            
+                                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                             rdfs:label  "Ancienne cote du document"@fr ,
                                                         "Previous shelfmark of the document"@en ,
@@ -878,6 +903,10 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
 
                               rdfs:label  "Ensemble éditorial"@fr ,
                                           "Editorial set"@en ,
@@ -894,6 +923,8 @@ roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:Checkbox ;
                                             
                             rdfs:label  "Photocopie"@fr ,
                                         "Photocopy"@en ,
@@ -913,6 +944,10 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              
 
                               rdfs:label  "Type de document"@fr ,
                                           "Document type"@en ,
@@ -930,6 +965,8 @@ roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:Checkbox ;
                                             
                             rdfs:label  "Avec annotations"@fr ,
                                         "With annotations"@en ;
@@ -946,6 +983,10 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
                               
 
                               rdfs:label  "Type de support"@fr ,
@@ -965,6 +1006,8 @@ roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                             rdfs:label  "Plus d'informations sur le support matérial"@fr ,
                                         "More information about the material support"@en ,
@@ -981,6 +1024,10 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
                               
 
                               rdfs:label  "Instrument d'écriture"@fr ,
@@ -1000,6 +1047,10 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              
 
                               rdfs:label  "Couleur"@fr ,
                                           "Color"@en ,
@@ -1015,6 +1066,8 @@ roud-oeuvres:hasDate  rdf:type  owl:ObjectProperty ;
                       rdfs:subPropertyOf knora-base:hasValue ;
 
                       knora-base:objectClassConstraint knora-base:DateValue ;
+                      
+                      salsah-gui:guiElement salsah-gui:Date ;
 
                       rdfs:label  "A une date"@fr ,
                                   "Has date"@en ,
@@ -1034,6 +1087,8 @@ roud-oeuvres:manuscriptHasDate      rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                     knora-base:objectClassConstraint knora-base:DateValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Date ;
 
                                     rdfs:label  "Date dans le manuscrit"@fr ,
                                                 "Date on the manuscript"@en ,
@@ -1052,6 +1107,8 @@ roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
                                                 knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                                 knora-base:objectClassConstraint knora-base:DateValue ;
+                                                
+                                                salsah-gui:guiElement salsah-gui:Date ;
 
                                                 rdfs:label  "Date (hypothèse)"@fr ,
                                                             "Date (hypothesis)"@en ,
@@ -1070,6 +1127,10 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              
 
                               rdfs:label  "Étapes du processus d'écriture"@fr ,
                                           "Stages of the writing process"@en ,  
@@ -1087,6 +1148,8 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint knora-base:WrittenSource ;
                                     
                                     knora-base:objectClassConstraint roud-biblio:Publication ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                     rdfs:label  "Référence bibliographique"@fr ,
                                                 "Bibliographical reference"@en ;
@@ -1112,6 +1175,8 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;     ## boolean values ??
                           knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                           knora-base:objectClassConstraint knora-base:BooleanValue ;
+                          
+                          salsah-gui:guiElement salsah-gui:Checkbox ;
                                           
                           rdfs:label  "Numérisé"@fr ,
                                       "Digitized"@en ,
@@ -1130,6 +1195,8 @@ roud-oeuvres:hasComment   rdf:type owl:ObjectProperty ;
                           knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                           knora-base:objectClassConstraint knora-base:TextValue ;
+                          
+                          salsah-gui:guiElement salsah-gui:Richtext ;
 
                           rdfs:label  "Commentaire"@fr ,
                                       "Comment"@en ,
@@ -1145,6 +1212,8 @@ roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf  knora-base:hasValue ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Richtext ;
 
                                   rdfs:label  "Commentaire interne"@fr ,
                                               "Internal comment"@en ,
@@ -1162,6 +1231,8 @@ roud-oeuvres:writtenSourceHasInternalComment   rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Richtext ;
 
 
                                   rdfs:label  "Cuisine interne"@fr ,
@@ -1179,6 +1250,8 @@ roud-oeuvres:publicationHasInternalComment   rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Richtext ;
 
 
                                   rdfs:label  "Cuisine interne"@fr ,
@@ -1195,6 +1268,8 @@ roud-oeuvres:isTranscribed    rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
                               knora-base:objectClassConstraint knora-base:BooleanValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Checkbox ;
                             
                               rdfs:label  "Retranscrit"@fr ,
                                           "Transcribed"@en ,
@@ -1213,6 +1288,8 @@ roud-oeuvres:manuscriptIsTranscribed    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                               
                               knora-base:objectClassConstraint knora-base:BooleanValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Checkbox ;
 
                               rdfs:label  "Retranscrit"@fr ,
                                           "Transcribed"@en ,
@@ -1231,6 +1308,8 @@ roud-oeuvres:publicationIsTranscribed    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                               knora-base:objectClassConstraint knora-base:BooleanValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Checkbox ;
                             
                               rdfs:label  "Retranscrit"@fr ,
                                           "Transcribed"@en ,
@@ -1265,6 +1344,8 @@ roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
                                         knora-base:subjectClassConstraint roud-oeuvres:Page ;
 
                                         knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
+                                        
+                                        salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                         rdfs:label  "Folio fait partie du document"@fr ,
                                                     "Folio is part of the document"@en ,
@@ -1277,13 +1358,13 @@ roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
 
-                        rdfs:subPropertyOf knora-base:hasValue ;
-
-                        rdfs:subPropertyOf knora-base:seqnum ;
+						rdfs:subPropertyOf knora-base:seqnum ;
 
                         knora-base:subjectClassConstraint roud-oeuvres:Folio ;
                                   
-                        knora-base:objectClassConstraint knora-base:TextValue ;
+                        knora-base:objectClassConstraint knora-base:IntValue ;
+                        
+                        salsah-gui:guiElement salsah-gui:Spinbox ;
 
                         rdfs:label  "Numéro du feuillet"@fr ,
                                     "Folio number"@en ,
@@ -1301,6 +1382,10 @@ roud-oeuvres:hasPublicationType   rdf:type  owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
                                             
                                   knora-base:objectClassConstraint knora-base:ListValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Pulldown ;
+                                  
+                                  salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
 
                                   rdfs:label  "Type de publication"@fr ,
                                               "Publication type"@en ,
@@ -1319,6 +1404,8 @@ roud-oeuvres:isPeriodicalIssue      rdf:type  owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Numéro"@fr ,
                                                 "Issue"@en ,
@@ -1337,6 +1424,8 @@ roud-oeuvres:isPeriodicalVolume     rdf:type  owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Volume du numéro"@fr ,
                                                 "Volume of the issue"@en ,
@@ -1352,6 +1441,8 @@ roud-oeuvres:isInPages    rdf:type  owl:ObjectProperty ;
                           rdfs:subPropertyOf knora-base:hasValue ;
 
                           knora-base:objectClassConstraint knora-base:TextValue ;
+                          
+                          salsah-gui:guiElement salsah-gui:SimpleText ;
 
                           rdfs:label  "Est dans les pages"@fr ,
                                       "Is in pages"@en ,
@@ -1371,6 +1462,8 @@ roud-oeuvres:periodicalArticleIsInPages   rdf:type  owl:ObjectProperty ;
                                           knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
 
                                           knora-base:objectClassConstraint knora-base:TextValue ;
+                                          
+                                          salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                           rdfs:label  "Pages"@fr ,
                                                       "Pages"@en ,
@@ -1390,6 +1483,8 @@ roud-oeuvres:bookSectionIsInPages   rdf:type  owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Pages"@fr ,
                                                 "Pages"@en ,
@@ -1407,6 +1502,8 @@ roud-oeuvres:isPublishedInPeriodical  rdf:type owl:ObjectProperty ;
                                       knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
 
                                       knora-base:objectClassConstraint knora-base:Periodical ;
+                                      
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                       rdfs:label  "Est publié dans le périodique"@fr ,
                                                   "Is published in the periodical"@en ,
@@ -1433,6 +1530,8 @@ roud-oeuvres:isInBookVolume   rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               rdfs:label  "Volume de la section d'un livre."@fr ,
                                           "Volume of a book section"@en ,
@@ -1449,6 +1548,8 @@ roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
                                       knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                                       knora-base:objectClassConstraint roud-oeuvres:Book ;
+                                      
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                       rdfs:label  "Fait partie du livre"@fr ,
                                                   "Is part of the book"@en ,
@@ -1472,7 +1573,9 @@ roud-oeuvres:hasNumberOfVolumes     rdf:type owl:ObjectProperty ;
 
                                     knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
-                                    knora-base:objectClassConstraint knora-base:TextValue ;
+                                    knora-base:objectClassConstraint knora-base:IntValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Spinbox ;
 
                                     rdfs:label  "Nombre des volumes"@fr ,
                                                 "Number of volumes"@en ,
@@ -1489,6 +1592,8 @@ roud-oeuvres:isEditionNumber    rdf:type owl:ObjectProperty ;
                                 knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
                                 knora-base:objectClassConstraint knora-base:TextValue ;
+                                
+                                salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                 rdfs:label  "Numéro de la réédition"@fr ,
                                             "Number of the republication"@en ,
@@ -1506,6 +1611,8 @@ roud-oeuvres:hasCollaborators     rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                   rdfs:label  "Collaborateurs"@fr ,
                                               "Collaborators"@en ,
@@ -1524,6 +1631,8 @@ roud-oeuvres:hasPublisher     rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Publisher ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Maison d'édition"@fr ,
                                           "Publisher"@en ,
@@ -1550,6 +1659,8 @@ roud-oeuvres:publisherHasLocation   rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Publisher ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Lieu de publication"@fr ,
                                                 "Publication place"@en ,
@@ -1564,6 +1675,8 @@ roud-oeuvres:hasName    rdf:type  owl:ObjectProperty ;
                         rdfs:subPropertyOf knora-base:hasValue ;
 
                         knora-base:objectClassConstraint knora-base:TextValue ;
+                        
+                        salsah-gui:guiElement salsah-gui:SimpleText ;
 
                         rdfs:label  "A un nom"@fr ,
                                     "Has a name"@en ,
@@ -1582,6 +1695,8 @@ roud-oeuvres:publisherHasName     rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Publisher ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                   rdfs:label  "Nom de la maison d'édition"@fr ,
                                               "Publisher name"@en ,
@@ -1600,6 +1715,8 @@ roud-oeuvres:publicationHasDateFirstEdition     rdf:type owl:ObjectProperty ;
                                                 knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                                 knora-base:objectClassConstraint knora-base:DateValue ;
+                                                
+                                                salsah-gui:guiElement salsah-gui:Date ;
 
                                                 rdfs:label  "Date de la première édition"@fr ,
                                                             "Date of the first edition"@en ,
@@ -1619,6 +1736,8 @@ roud-oeuvres:publicationHasDate     rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                     knora-base:objectClassConstraint knora-base:DateValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Date ;
 
                                     rdfs:label  "Date de publication"@fr ,
                                                 "Publication date"@en ,
@@ -1638,6 +1757,8 @@ roud-oeuvres:publicationHasTitle    rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Titre de la publication"@fr ,
                                                 "Publication title"@en ,
@@ -1654,6 +1775,8 @@ roud-oeuvres:hasPhoto   rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf knora-base:hasLinkTo ;
                         
                         knora-base:objectClassConstraint roud-oeuvres:Photo ;
+                        
+                        salsah-gui:guiElement salsah-gui:Searchbox ;
 
                         rdfs:label  "A une photo"@fr ,
                                     "Has a photo"@en ,
@@ -1666,7 +1789,7 @@ roud-oeuvres:hasPhotoValue  rdf:type owl:ObjectProperty ;
 
                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
                             
-                            knora-base:objectClassConstraint roud-oeuvres:LinkValue ;
+                            knora-base:objectClassConstraint roud-oeuvres:LinkValue .
 
 
 
@@ -1680,6 +1803,8 @@ roud-oeuvres:publicationHasPhoto    rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                     knora-base:objectClassConstraint roud-oeuvres:Photo ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                     rdfs:label  "Publication contient la photo"@fr ,
                                                 "Publication contains photo"@en ,
@@ -1705,6 +1830,8 @@ roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
                         rdfs:subPropertyOf knora-base:hasLinkTo ;
                         
                         knora-base:objectClassConstraint roud-oeuvres:Person ;
+                        
+                        salsah-gui:guiElement salsah-gui:Searchbox ;
 
                         rdfs:label  "A un-e auteur"@fr ,
                                     "Has an author"@en ,
@@ -1718,7 +1845,7 @@ roud-oeuvres:hasAuthorValue   rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasLinkToValue ;
                               
-                              knora-base:objectClassConstraint roud-oeuvres:LinkValue ;
+                              knora-base:objectClassConstraint roud-oeuvres:LinkValue .
 
                        
 
@@ -1732,6 +1859,8 @@ roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                     knora-base:objectClassConstraint roud-oeuvres:Person ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                     rdfs:label  "Publication a auteur"@fr ,
                                                 "Publication has author"@en ,
@@ -1760,6 +1889,8 @@ roud-oeuvres:publicationHasTranslator   rdf:type owl:ObjectProperty ;
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                         knora-base:objectClassConstraint roud-oeuvres:Person ;
+                                        
+                                        salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                         rdfs:label  "Publication a traducteur"@fr ,
                                                     "Publication has translator"@en ,
@@ -1787,6 +1918,8 @@ roud-oeuvres:HasEstablishedText   rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                   knora-base:objectClassConstraint roud-oeuvres:Text ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                   rdfs:label  "Publication a texte établi"@fr ,
                                               "Publication has established text"@en ,
@@ -1813,6 +1946,8 @@ roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
                               knora-base:objectClassConstraint roud-oeuvres:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               rdfs:label  "A un texte établi"@fr ,
                                           "Has critical text"@en ,
@@ -1829,6 +1964,8 @@ roud-oeuvres:publicationIsEditionOf   rdf:type owl:ObjectProperty ;
                                       knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                       knora-base:objectClassConstraint roud-oeuvres:LiteratureWork ;
+                                      
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                       rdfs:label  "Est un édition de l'œuvre"@fr ,
                                                   "Is an edition of the work"@en ,
@@ -1856,6 +1993,8 @@ roud-oeuvres:isReeditionOf    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Publication ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Est une réédition de la publication"@fr ,
                                           "Is a republication of the publication"@en ,
@@ -1882,6 +2021,8 @@ roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
                                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                                   knora-base:objectClassConstraint roud-oeuvres:Publication ;
+                                                  
+                                                  salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                                   rdfs:label  "Est une version précédente d'une partie de la publication"@fr ,
                                                               "Is previous version of a section of the publication"@en ,
@@ -1911,6 +2052,8 @@ roud-oeuvres:workHasTitle     rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf roud-oeuvres:hasTitle ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -1927,6 +2070,8 @@ roud-oeuvres:hasNotice  rdf:type  owl:ObjectProperty ;
                         rdfs:subPropertyOf knora-base:hasValue ;
 
                         knora-base:objectClassConstraint knora-base:TextValue ;
+                        
+                        salsah-gui:guiElement salsah-gui:Richtext ;
 
                         rdfs:label  "A une notice"@fr ,
                                     "Has a note"@en ,
@@ -1945,6 +2090,8 @@ roud-oeuvres:workHasNotice    rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf roud-oeuvres:hasNotice ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -1964,8 +2111,12 @@ roud-oeuvres:workHasDate      rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf roud-oeuvres:hasDate ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
+                              
+                              salsah-gui:guiElement salsah-gui:Date ;
 
                               knora-base:objectClassConstraint knora-base:DateValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Date ;
 
                               rdfs:label  "Date de l'œuvre"@fr ,
                                           "The date of the work"@en ,
@@ -1983,6 +2134,8 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
                               rdfs:subPropertyOf roud-oeuvres:hasAuthor ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Person ;
 
@@ -2011,6 +2164,8 @@ roud-oeuvres:bioeventHasTitle     rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf roud-oeuvres:hasTitle ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -2032,6 +2187,8 @@ roud-oeuvres:bioeventHasNotice    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               rdfs:label  "Notice sur l'événement"@fr ,
                                           "About the event"@en ,
@@ -2049,8 +2206,12 @@ roud-oeuvres:bioeventHasDate      rdf:type owl:ObjectProperty ;
                                   rdfs:subPropertyOf roud-oeuvres:hasDate ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Date ;
 
                                   knora-base:objectClassConstraint knora-base:DateValue ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Date ;
 
                                   rdfs:label  "Date de l'événement"@fr ,
                                               "The date of the event"@en ,
@@ -2068,6 +2229,8 @@ roud-oeuvres:bioeventHasPhoto   rdf:type owl:ObjectProperty ;
                                 rdfs:subPropertyOf roud-oeuvres:hasPhoto ;
 
                                 knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
+                                
+                                salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                 knora-base:objectClassConstraint roud-oeuvres:Photo ;
 
@@ -2097,6 +2260,8 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
 
                               knora-base:objectClassConstraint knora-base:UriValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               rdfs:label  "Identifiant fichier autorités"@fr ,
                                           "Authority File ID"@en ,
@@ -2117,6 +2282,8 @@ roud-oeuvres:hasBirthDate     rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:DateValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Date ;
 
                               rdfs:label  "Date de naissance"@fr ,
                                           "The date of birth"@en ,
@@ -2135,6 +2302,8 @@ roud-oeuvres:hasDeathDate     rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:DateValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Date ;
 
                               rdfs:label  "Date de mort"@fr ,
                                           "The date of death"@en ,
@@ -2153,6 +2322,8 @@ roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               rdfs:label  "Notice sur la personne"@fr ,
                                           "About the person"@en ,
@@ -2171,6 +2342,8 @@ roud-oeuvres:hasGivenName     rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               rdfs:label  "Prénom"@fr ,
                                           "Name"@en ,
@@ -2186,6 +2359,8 @@ roud-oeuvres:hasFamilyName    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               rdfs:label  "Nom"@fr ,
                                           "Surname"@en ,
@@ -2205,6 +2380,8 @@ roud-oeuvres:personHasPhoto   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Photo ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Photo de la personne"@fr ,
                                           "Photo of the person"@en ,
@@ -2231,6 +2408,8 @@ roud-oeuvres:isCharacterIn    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Work ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Est un personnage dans"@fr ,
                                           "Is a character in"@en ,
@@ -2260,6 +2439,8 @@ roud-oeuvres:photoHasAuthor   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Photo;
 
                               knora-base:objectClassConstraint roud-oeuvres:Person ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Auteur de la photo"@fr ,
                                           "The author of the photo"@en ,
@@ -2289,6 +2470,8 @@ roud-oeuvres:photoHasDate      rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Photo ;
 
                                     knora-base:objectClassConstraint knora-base:DateValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Date ;
 
                                     rdfs:label  "Date de la photo"@fr ,
                                                 "Date of the photo"@en ,
@@ -2308,6 +2491,8 @@ roud-oeuvres:photoHasNotice   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Photo ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               rdfs:label  "Notice sur la photo"@fr ,
                                           "Note on the photo"@en ,
@@ -2328,6 +2513,10 @@ roud-oeuvres:photoIsInArchive       rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Photo ;
 
                                     knora-base:objectClassConstraint knora-base:ListValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Pulldown ;
+                                    
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
 
                                     rdfs:label  "Fonds dans lequel se trouve la photo"@fr ,
                                                 "Archive of the photo"@en ,
@@ -2346,6 +2535,8 @@ roud-oeuvres:photoHasShelfmark      rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Photo ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Cote de la photo"@fr ,
                                                 "Shelf number of the photo"@en ,
@@ -2365,6 +2556,8 @@ roud-oeuvres:placeHasName     rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Place ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
                               rdfs:label  "Nom du lieu"@fr ,
                                           "Place name"@en ,
@@ -2382,6 +2575,8 @@ roud-oeuvres:hasLatitude    rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:Place ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                             rdfs:label  "Latitude"@fr ,
                                         "Latitude"@en ,
@@ -2399,6 +2594,8 @@ roud-oeuvres:hasLongitude   rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:Place ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
+                            
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                             rdfs:label  "Longitude"@fr ,
                                         "Longitude"@en ,
@@ -2419,6 +2616,8 @@ roud-oeuvres:placeHasNotice   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Place ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
+                              
+                              salsah-gui:guiElement salsah-gui:Richtext ;
 
                               rdfs:label  "Notice sur le lieu"@fr ,
                                           "Note on the place"@en ,
@@ -2438,6 +2637,8 @@ roud-oeuvres:placeHasPhoto    rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Place ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Photo ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
 
                               rdfs:label  "Photo du lieu"@fr ,
                                           "Photo of the place"@en ,
