@@ -66,6 +66,9 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                       ],
                                       [
                                         rdf:type owl:Restriction ;
+                                        owl:onProperty roud-oeuvres:hasPublishedReferenceValue,
+                                      [
+                                        rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:hasGeneticStage ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                                       ],
@@ -223,7 +226,27 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationHasAuthorValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationHasTranslator ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationHasTranslatorValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasPhoto ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationHasPhotoValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -263,7 +286,17 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isEditionOfValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasEstablishedText ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasEstablishedTextValue ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -273,7 +306,17 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isReeditionOfValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollection ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollectionValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ];
                           rdfs:label  "Publication"@fr ,
@@ -290,6 +333,11 @@ roud-oeuvres:Book     rdfs:type owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasPublisher ;
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:hasPublisherValue ;
                         owl:minCardinality "0"^^xsd:nonNegativeInteger
                       ],
                       [
@@ -341,6 +389,17 @@ roud-oeuvres:BookSection    rdfs:type owl:Class ;
                             rdfs:subClassOf roud-oeuvres:Publication ;
 
                             rdfs:subClassOf knora-base:Resource ,
+                            
+                            [
+                              rdf:type owl:Restriction ;
+                              owl:onProperty roud-oeuvres:bookSectionIsPartOf ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ],
+                            [
+                              rdf:type owl:Restriction ;
+                              owl:onProperty roud-oeuvres:bookSectionIsPartOfValue ;
+                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                            ],
                             [
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:bookSectionIsInPages ;
@@ -369,6 +428,11 @@ roud-oeuvres:PeriodicalArticle    rdfs:type owl:Class ;
                                   [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isPublishedInPeriodical ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ],
+                                  [
+                                    rdf:type owl:Restriction ;
+                                    owl:onProperty roud-oeuvres:isPublishedInPeriodicalValue ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ];
                                   rdfs:label  "Article de périodique"@fr ,
@@ -428,6 +492,11 @@ roud-oeuvres:Work   rdfs:type   owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasAuthor ;
+                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:workHasAuthorValue ;
                       owl:minCardinality "0"^^xsd:nonNegativeInteger
                     ],
                     [
@@ -533,7 +602,17 @@ roud-oeuvres:Person       rdfs:type   owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isCharacterInValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasPhoto ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:personHasPhotoValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
@@ -572,6 +651,11 @@ roud-oeuvres:Bioevent     rdfs:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasPhoto ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:bioeventHasPhotoValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Événement biographique"@fr ,  
@@ -643,7 +727,10 @@ roud-oeuvres:Place    rdfs:type   owl:Class ;
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasPhoto ;
                         owl:minCardinality "0"^^xsd:nonNegativeInteger
-                      ];
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:placeHasPhotoValue;
                       rdfs:label  "Lieu"@fr , 
                                   "Place"@en ,
                                   "Luogo"@it ;
@@ -676,6 +763,7 @@ roud-oeuvres:isInArchive    rdf:type owl:ObjectProperty ;
 
                             rdfs:comment  "Est dans le fonds. Property abstraite, voir les subproperties."@fr ,
                                           "Is in archive. Abstract property, see subproperties."@en .
+       
 
 
 
@@ -1573,7 +1661,12 @@ roud-oeuvres:hasPhoto   rdf:type owl:ObjectProperty ;
 
                         rdfs:comment  "A une photo. Property abstraite, voir les subproperties."@fr ,
                                       "Has a photo. Abstract property, see subproperties."@en .
-                        ## no LinkValue, because it is abstract property.
+
+roud-oeuvres:hasPhotoValue  rdf:type owl:ObjectProperty ;
+
+                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+                            
+                            knora-base:objectClassConstraint roud-oeuvres:LinkValue ;
 
 
 
@@ -1619,7 +1712,15 @@ roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
 
                         rdfs:comment  "A un-e auteur. Property abstraite, voir les subproperties."@fr ,
                                       "Has an author. Abstract property, see subproperties."@en .
-                        ## no LinkValue, because it is abstract property.
+
+
+roud-oeuvres:hasAuthorValue   rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasLinkToValue ;
+                              
+                              knora-base:objectClassConstraint roud-oeuvres:LinkValue ;
+
+                       
 
 
 roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
@@ -1991,7 +2092,7 @@ roud-oeuvres:bioeventHasPhotoValue  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 
-                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+                              rdfs:subPropertyOf knora-base:hasValue ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
 
