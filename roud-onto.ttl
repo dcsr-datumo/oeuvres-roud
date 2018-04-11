@@ -528,7 +528,7 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
 
                         rdfs:subClassOf knora-base:Resource ;
 
-                        rdfs:label  "Œuvre d'art"@fr ,
+                        rdfs:label  "Œuvre d'artEZ"@fr ,
                                     "Artwork"@en ,
                                     "Opera d'arte"@it ;
 
@@ -598,6 +598,11 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isReferenceFor ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isReferenceForValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
@@ -2067,8 +2072,6 @@ roud-oeuvres:workHasTitle     rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
                               
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
                               rdfs:label  "Titre de l'œuvre"@fr ,
@@ -2076,7 +2079,13 @@ roud-oeuvres:workHasTitle     rdf:type owl:ObjectProperty ;
                                           "Titolo dell'opera"@it ;
 
                               rdfs:comment  "Le titre de l'œuvre."@fr ,
-                                            "The title of the work."@en .
+                                            "The title of the work."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "0"^^xsd:integer .
+
+
 
 
 roud-oeuvres:hasNotice  rdf:type  owl:ObjectProperty ;
@@ -2085,14 +2094,16 @@ roud-oeuvres:hasNotice  rdf:type  owl:ObjectProperty ;
 
                         knora-base:objectClassConstraint knora-base:TextValue ;
                         
-                        salsah-gui:guiElement salsah-gui:Richtext ;
-
                         rdfs:label  "A une notice"@fr ,
                                     "Has a note"@en ,
                                     "Ha una nota descrittiva"@it ;
 
                         rdfs:comment  "A une notice. Property abstraite. Voir les subproperties."@fr ,
-                                      "There is a note (short explanation or description). Abstract property. See subproperties."@en .
+                                      "There is a note (short explanation or description). Abstract property. See subproperties."@en ;
+
+                        salsah-gui:guiElement salsah-gui:Richtext ;
+
+                        salsah-gui:guiOrder "0"^^xsd:integer .
 
 
 
@@ -2105,8 +2116,6 @@ roud-oeuvres:workHasNotice    rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
                               
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
                               rdfs:label  "Notice sur l'œuvre"@fr ,
@@ -2114,7 +2123,11 @@ roud-oeuvres:workHasNotice    rdf:type owl:ObjectProperty ;
                                           "Sull'opera"@it ;
 
                               rdfs:comment  "Quelques informations sur l'œuvre, relevant dans le contexte de l'édition et de la présentation des textes de Roud."@fr ,
-                                            "Some information about the work, relevant in the context of the edition and presentation of Roud's texts."@en .
+                                            "Some information about the work, relevant in the context of the edition and presentation of Roud's texts."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Richtext ;
+
+                              salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 
@@ -2126,18 +2139,18 @@ roud-oeuvres:workHasDate      rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
                               
-                              salsah-gui:guiElement salsah-gui:Date ;
-
                               knora-base:objectClassConstraint knora-base:DateValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Date ;
-
                               rdfs:label  "Date de l'œuvre"@fr ,
                                           "The date of the work"@en ,
                                           "Data dell'opera"@it ;
 
                               rdfs:comment  "La date de l'œuvre."@fr ,
-                                            "The date of the work."@en .
+                                            "The date of the work."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Date ;
+
+                              salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 
@@ -2149,8 +2162,6 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
                               knora-base:objectClassConstraint roud-oeuvres:Person ;
 
                               rdfs:label  "Auteur de l'œuvre"@fr ,
@@ -2158,7 +2169,11 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
                                           "Autore o autrice dell'opera"@it ;
 
                               rdfs:comment  "L'auteur de l'œuvre."@fr ,
-                                            "The author of the work."@en .
+                                            "The author of the work."@en ;
+                              
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                              salsah-gui:guiOrder "1"^^xsd:integer .
                                   
 
 roud-oeuvres:workHasAuthorValue   rdf:type owl:ObjectProperty ;
@@ -2179,8 +2194,6 @@ roud-oeuvres:bioeventHasTitle     rdf:type owl:ObjectProperty ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
                                   
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                   knora-base:objectClassConstraint knora-base:TextValue ;
 
                                   rdfs:label  "Titre de l'événement"@fr ,
@@ -2188,7 +2201,11 @@ roud-oeuvres:bioeventHasTitle     rdf:type owl:ObjectProperty ;
                                               "Titolo dell'avvenimento"@it ;
 
                                   rdfs:comment  "Le titre de l'événement. Par exemple, le titre d'une section de la biographie de Gustave Roud."@fr ,
-                                                "The title of the event. For example, the title of a one section of Roud's biography."@en .
+                                                "The title of the event. For example, the title of a one section of Roud's biography."@en ;
+
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                  salsah-gui:guiOrder "0"^^xsd:integer .
 
 
 
@@ -2202,14 +2219,17 @@ roud-oeuvres:bioeventHasNotice    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
                               rdfs:label  "Notice sur l'événement"@fr ,
                                           "About the event"@en ,
                                           "Sull'avvenimento"@it ;
 
                               rdfs:comment  "Le texte qui décrit un événement en particulier ou une période de la biographie de Gustave Roud."@fr ,
-                                            "The text that describes an event or period in Roud's biography."@en .
+                                            "The text that describes an event or period in Roud's biography."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Richtext ;
+
+                              salsah-gui:guiOrder "2"^^xsd:integer .
+
 
 
 
@@ -2225,14 +2245,16 @@ roud-oeuvres:bioeventHasDate      rdf:type owl:ObjectProperty ;
 
                                   knora-base:objectClassConstraint knora-base:DateValue ;
                                   
-                                  salsah-gui:guiElement salsah-gui:Date ;
-
                                   rdfs:label  "Date de l'événement"@fr ,
                                               "The date of the event"@en ,
                                               "Data dell'avvenimento"@it ;
 
                                   rdfs:comment  "La date ou les dates d'un événement ou d'une période de la biographie de Gustave Roud."@fr ,
-                                                "The date or dates of an event or period in Roud's biography."@en .
+                                                "The date or dates of an event or period in Roud's biography."@en ;
+
+                                  salsah-gui:guiElement salsah-gui:Date ;
+
+                                  salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 
@@ -2244,8 +2266,6 @@ roud-oeuvres:bioeventHasPhoto   rdf:type owl:ObjectProperty ;
 
                                 knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
                                 
-                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
                                 knora-base:objectClassConstraint roud-oeuvres:Photo ;
 
                                 rdfs:label  "Photo liée à l'événement ou à la période"@fr ,
@@ -2253,7 +2273,12 @@ roud-oeuvres:bioeventHasPhoto   rdf:type owl:ObjectProperty ;
                                             "Foto dell'avvenimento o del periodo"@it ;
 
                                 rdfs:comment  "Une photo liée à l'événement ou à la période."@fr ,
-                                              "Photo related with the event or the period."@en .
+                                              "Photo related with the event or the period."@en ;
+
+                                salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                salsah-gui:guiOrder "3"^^xsd:integer .
+
                                                           
 
 
@@ -2271,18 +2296,20 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:Bioevent ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                               knora-base:objectClassConstraint knora-base:UriValue ;
                               
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
                               rdfs:label  "Identifiant fichier autorités"@fr ,
                                           "Authority File ID"@en ,
                                           "Identificante Autorità"@it ;
 
-                              rdfs:comment  "Identifiant unique pour la personne, par exemple VIAF."@fr ,
-                                            "Uniquer identifier for a person, for example VIAF."@en .
+                              rdfs:comment  "Identifiant unique pour la personne. Spécifier le Permalink VIAF, et non pas le VIAF ID."@fr ,
+                                            "Uniquer identifier for a person. Specify the VIAF Permalink, not the VIAF ID."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "4"^^xsd:integer .
    
 
 
@@ -2297,14 +2324,16 @@ roud-oeuvres:hasBirthDate     rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:DateValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Date ;
-
                               rdfs:label  "Date de naissance"@fr ,
                                           "The date of birth"@en ,
                                           "Data di nascita"@it ;
 
                               rdfs:comment  "La date de naissance."@fr ,
-                                            "The date of birth."@en .
+                                            "The date of birth."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Date ;
+
+                              salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 roud-oeuvres:hasDeathDate     rdf:type owl:ObjectProperty ;
@@ -2317,14 +2346,16 @@ roud-oeuvres:hasDeathDate     rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:DateValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Date ;
-
                               rdfs:label  "Date de mort"@fr ,
                                           "The date of death"@en ,
                                           "Data di morte"@it ;
 
                               rdfs:comment  "La date de mort."@fr ,
-                                            "The date of death."@en .
+                                            "The date of death."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Date ;
+
+                              salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
@@ -2337,14 +2368,16 @@ roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
                               rdfs:label  "Notice sur la personne"@fr ,
                                           "About the person"@en ,
                                           "Sulla persona"@it ;
 
                               rdfs:comment  "Brève note sur la personne."@fr ,
-                                            "Short note on the person."@en .
+                                            "Short note on the person."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Richtext ;
+
+                              salsah-gui:guiOrder "5"^^xsd:integer .
 
 
 
@@ -2357,14 +2390,17 @@ roud-oeuvres:hasGivenName     rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
                               rdfs:label  "Prénom"@fr ,
                                           "Name"@en ,
                                           "Nome"@it ;
 
                               rdfs:comment  "Le nom."@fr ,
-                                            "The name."@en .
+                                            "The name."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "0"^^xsd:integer .
+
 
 roud-oeuvres:hasFamilyName    rdf:type owl:ObjectProperty ;
 
@@ -2374,14 +2410,16 @@ roud-oeuvres:hasFamilyName    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
                               rdfs:label  "Nom"@fr ,
                                           "Surname"@en ,
                                           "Cognome"@it ;
 
                               rdfs:comment  "Le nom de famille."@fr ,
-                                            "The surname."@en .
+                                            "The surname."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 
@@ -2395,14 +2433,16 @@ roud-oeuvres:personHasPhoto   rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Photo ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
                               rdfs:label  "Photo de la personne"@fr ,
                                           "Photo of the person"@en ,
                                           "Foto della persona"@it ;
 
                               rdfs:comment  "Une photo de la personne."@fr ,
-                                            "Photo of the person."@en .
+                                            "Photo of the person."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                              salsah-gui:guiOrder "6"^^xsd:integer .
                                                         
 
 
@@ -2415,6 +2455,39 @@ roud-oeuvres:personHasPhotoValue  rdf:type owl:ObjectProperty ;
                                   knora-base:objectClassConstraint knora-base:LinkValue .
 
 
+
+
+roud-oeuvres:isReferenceFor   rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                              knora-base:objectClassConstraint roud-oeuvres:Person ;
+                              
+                              rdfs:label  "La personne réelle est une référence pour le personnage"@fr ,
+                                          "The real person is reference for a character"@en ,
+                                          "La persone reale è un riferimento per il personaggio"@it ;
+
+                              rdfs:comment  "La personne réelle est une référence pour le personnage"@fr ,
+                                            "The real person is reference for a character"@en ;
+
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                              salsah-gui:guiOrder "8"^^xsd:integer .
+                                                        
+
+
+roud-oeuvres:isReferenceForValue  rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                  knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
 roud-oeuvres:isCharacterIn    rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasLinkTo ;
@@ -2423,14 +2496,16 @@ roud-oeuvres:isCharacterIn    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Work ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
                               rdfs:label  "Est un personnage dans"@fr ,
                                           "Is a character in"@en ,
                                           "È un personaggio in"@it ;
 
                               rdfs:comment  "Est un personnage dans"@fr ,
-                                            "Is a character in"@en .
+                                            "Is a character in"@en ;
+
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                              salsah-gui:guiOrder "7"^^xsd:integer .
                                                         
 
 
@@ -2571,14 +2646,16 @@ roud-oeuvres:placeHasName     rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
                               rdfs:label  "Nom du lieu"@fr ,
                                           "Place name"@en ,
                                           "Nome del posto"@it ;
 
                               rdfs:comment  "Le nom du lieu."@fr ,
-                                            "The name of the place."@en .
+                                            "The name of the place."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "0"^^xsd:integer .
 
 
 
@@ -2590,14 +2667,16 @@ roud-oeuvres:hasLatitude    rdf:type owl:ObjectProperty ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
                             
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                            rdfs:label  "Latitude"@fr ,
+                           rdfs:label  "Latitude"@fr ,
                                         "Latitude"@en ,
                                         "Latitudine"@it ;
 
                             rdfs:comment  "La latitude du lieu."@fr ,
-                                          "The latitude of the place."@en .
+                                          "The latitude of the place."@en ;
+
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                            salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 
@@ -2609,14 +2688,16 @@ roud-oeuvres:hasLongitude   rdf:type owl:ObjectProperty ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
                             
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
                             rdfs:label  "Longitude"@fr ,
                                         "Longitude"@en ,
                                         "Longitudine"@it ;
 
                             rdfs:comment  "La longitude du lieu."@fr ,
-                                          "The longitude of the place."@en .
+                                          "The longitude of the place."@en ;
+
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                            salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 
@@ -2631,14 +2712,16 @@ roud-oeuvres:placeHasNotice   rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
                               rdfs:label  "Notice sur le lieu"@fr ,
                                           "Note on the place"@en ,
                                           "Nota sul luogo"@it ;
 
                               rdfs:comment  "Brève note sur le lieu."@fr ,
-                                            "Short note about the place."@en .
+                                            "Short note about the place."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Richtext ;
+
+                              salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 
@@ -2652,15 +2735,17 @@ roud-oeuvres:placeHasPhoto    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint roud-oeuvres:Photo ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
                               rdfs:label  "Photo du lieu"@fr ,
                                           "Photo of the place"@en ,
                                           "Foto del luogo"@it ;
 
                               rdfs:comment  "Une photo du lieu."@fr ,
-                                            "The photo of the place."@en .
-                                                              
+                                            "The photo of the place."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                              salsah-gui:guiOrder "4"^^xsd:integer .
+          
 
 
 roud-oeuvres:placeHasPhotoValue   rdf:type owl:ObjectProperty ;
