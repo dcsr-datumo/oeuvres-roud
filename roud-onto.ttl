@@ -23,7 +23,7 @@
 ##########################################################
 
 ## per Ele: Cardinality for everything about the archive often is maxCardinality 1, in order to include 'inventaire' et 'fiches'.
-
+## Change this ?
 
 
 #### DOCUMENT DU FONDS D'ARCHIVE - abstract class ##############
@@ -105,8 +105,8 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                                   "Archival document"@en ,
                                                   "Documento d'archivio"@it ;
 
-                                      rdfs:comment  """Tout document écrit conservé dans un archive (CRLR ou autre). Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."""@fr ,
-                                                    """Any written document contained in an archive (CRLR or other). This is an abstract class, see its sub-classes."""@en .
+                                      rdfs:comment  """NE PAS UTILISER. Tout document écrit conservé dans un archive (CRLR ou autre). Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."""@fr ,
+                                                    """DO NOT USE. Any written document contained in an archive (CRLR or other). This is an abstract class, see its sub-classes."""@en .
 
 
 
@@ -358,7 +358,7 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         owl:onProperty roud-oeuvres:hasNumberOfVolumes ;
                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ];
-                      rdfs:label  "Livre"@fr ,
+                      rdfs:label  "LivreEL"@fr ,
                                   "Book"@en ,
                                   "Libro"@it ;
 
@@ -764,16 +764,18 @@ roud-oeuvres:isInArchive    rdf:type owl:ObjectProperty ;
                             
                             knora-base:objectClassConstraint knora-base:ListValue ;
                             
-                            salsah-gui:guiElement salsah-gui:Pulldown ;
-                            
-                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
-
                             rdfs:label  "Est dans le fonds"@fr ,
                                         "Is in archive"@en ,
                                         "È nel fondo"@it ;
 
                             rdfs:comment  "Est dans le fonds. Property abstraite, voir les subproperties."@fr ,
-                                          "Is in archive. Abstract property, see subproperties."@en .
+                                          "Is in archive. Abstract property, see subproperties."@en ;
+
+                            salsah-gui:guiElement salsah-gui:Pulldown ;
+                            
+                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" .
+                            # abstrait, pas de guiOrder
+
        
 
 
@@ -788,16 +790,19 @@ roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:ListValue ;
                                         
-                                        salsah-gui:guiElement salsah-gui:Pulldown ;
-                                        
-                                        salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
-                                        
                                         rdfs:label  "Fonds"@fr ,
                                                     "Collection"@en ,
                                                     "Fondo d'archivio"@it ;
 
                                         rdfs:comment  "Fonds d'archive dans lequel le document est conservé"@fr ,
-                                                      "Archive and collection in which it is the document." .
+                                                      "Archive and collection in which it is the document." ;
+
+                                        salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+
+                                        salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                        salsah-gui:guiOrder "1"^^xsd:integer .
+                                        
 
 
 roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
@@ -806,15 +811,15 @@ roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
                         
                         knora-base:objectClassConstraint knora-base:TextValue ;
                         
-                        salsah-gui:guiElement salsah-gui:SimpleText ;
-
                         rdfs:label  "A un titre"@fr ,
                                     "Has a title"@en ,
                                     "Ha un titolo"@it ;
 
                         rdfs:comment  "A un titre. Property abstraite, voir les subproperties."@fr ,
-                                      "Has a title. Abstract property, see subproperties."@en .
+                                      "Has a title. Abstract property, see subproperties."@en ;
 
+                        salsah-gui:guiElement salsah-gui:SimpleText .
+                        # abstrait, pas de guiOrder
 
 
 
@@ -828,14 +833,17 @@ roud-oeuvres:writtenSourceHasTitle    rdf:type owl:ObjectProperty ;
 
                                       knora-base:objectClassConstraint knora-base:TextValue ;
                                       
-                                      salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                       rdfs:label  "Titre du document"@fr ,
                                                   "Document title"@en ,
                                                   "Titolo del documento"@it ;
 
                                       rdfs:comment  "Le titre du document."@fr ,
-                                                    "The title of the document."@en .
+                                                    "The title of the document."@en ;
+
+                                      salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                      salsah-gui:guiOrder "0"^^xsd:integer .
+
 
 
 
@@ -845,14 +853,16 @@ roud-oeuvres:hasShelfmark   rdf:type owl:ObjectProperty ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
                             
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
                             rdfs:label  "Cote"@fr ,
                                         "Shelf number"@en ,
                                         "Segnatura"@it ;
 
                             rdfs:comment  "La cote. Property abstraite, voir subproperties."@fr ,
-                                          "The shelfmark.Abstract property, see subproperties."@en .
+                                          "The shelfmark.Abstract property, see subproperties."@en ;
+
+                            salsah-gui:guiElement salsah-gui:SimpleText .
+                            # abstrait, pas de guiOrder
+
 
 
 
@@ -866,14 +876,16 @@ roud-oeuvres:writtenSourceHasShelfmark  rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
                                         
-                                        salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                         rdfs:label  "Cote du document"@fr ,
                                                     "Shelfmark of the document"@en ,
                                                     "Segnatura del documento"@it ;
 
                                         rdfs:comment  "La cote du document."@fr ,
-                                                      "The shelfmark of the document."@en .
+                                                      "The shelfmark of the document."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                        salsah-gui:guiOrder "2"^^xsd:integer .
 
                   
 
@@ -1758,14 +1770,16 @@ roud-oeuvres:publicationHasTitle    rdf:type owl:ObjectProperty ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
                                     
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                     rdfs:label  "Titre de la publication"@fr ,
                                                 "Publication title"@en ,
                                                 "Titolo della pubblicazione"@it ;
 
                                     rdfs:comment  "Le titre de la publication."@fr ,
-                                                  "The publication title."@en .
+                                                  "The publication title."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 

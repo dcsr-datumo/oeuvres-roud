@@ -6,6 +6,16 @@
 ## TODO
 ##############
 
+Correggere onto (anche gui order) e aggiungere lists, usando SalsahDemo.
+
+------> GUI ORDER
+DOCUMENT
+writtenSourceHasTitle		salsah-gui:guiOrder "0"^^xsd:integer
+writtenSourceIsInArchive	salsah-gui:guiOrder "1"^^xsd:integer
+writtenSourceHasShelfmark	salsah-gui:guiOrder "2"^^xsd:integer
+
+
+
 
 
 
@@ -39,8 +49,6 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 ##########################
 ## CHIEDERE A MARION
 ##########################
-
-How important is it to have correct DatatypeProperty or ObjectProperty ?
 
 
 
