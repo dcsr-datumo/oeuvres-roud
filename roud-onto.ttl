@@ -101,9 +101,9 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                         owl:minCardinality "0"^^xsd:nonNegativeInteger
                                       ];
 
-                                      rdfs:label  "Document d'archive"@fr ,
-                                                  "Archival document"@en ,
-                                                  "Documento d'archivio"@it ;
+                                      rdfs:label  "Document d'archive (Classe abstraite, ne pas utiliser)"@fr ,
+                                                  "Archival document (Abstract class, do not use)"@en ,
+                                                  "Documento d'archivio (Classe astratta, non usare)"@it ;
 
                                       rdfs:comment  """NE PAS UTILISER. Tout document écrit conservé dans un archive (CRLR ou autre). Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."""@fr ,
                                                     """DO NOT USE. Any written document contained in an archive (CRLR or other). This is an abstract class, see its sub-classes."""@en .
@@ -186,15 +186,20 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:hasSeqnum ;
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:pageHasName ;
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                     ];
                                  
                     rdfs:label    "Page"@fr,
                                   "Page"@en,
                                   "Pagina"@it ;
 
-                    rdfs:comment  """Une page. Dans le cas d'un manuscrit, spécifier le numéro du feuillet et recto/verso."""@fr ,
+                    rdfs:comment  """Une page."""@fr ,
 
-                                  """A page. For a manuscript, specify the folio number and the face (recto/verso)."""@en .
+                                  """A page."""@en .
 
 
 
@@ -209,9 +214,9 @@ roud-oeuvres:PublicationInArchive   rdf:type owl:Class ;
                                     
                                     rdfs:subClassOf roud-oeuvres:Publication ;
 
-                                    rdfs:label  "Publication conservé dans un fonds d'archive."@fr ,
-                                                "Publication in an archive."@en ,
-                                                "Pubblicazione conservata in un fondo d'archivio"@it ;
+                                    rdfs:label  "Publication conservé dans un fonds d'archive (Classe abstraite, ne pas utiliser)"@fr ,
+                                                "Publication in an archive (Abstract class, do not use)"@en ,
+                                                "Pubblicazione conservata in un fondo d'archivio (Classe astratta, non usare)"@it ;
 
                                     rdfs:comment  "Une publication, conservé dans un fonds d'archive. Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."@fr ,
                                                   "A publication, found in an archive. This is an abstract classe, see its sub-classes."@en .
@@ -294,12 +299,12 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasEstablishedText ;
+                            owl:onProperty roud-oeuvres:hasText ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasEstablishedTextValue ;
+                            owl:onProperty roud-oeuvres:hasTextValue ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -322,9 +327,9 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollectionValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ];
-                          rdfs:label  "Publication"@fr ,
-                                      "Publication"@en ,
-                                      "Pubblicazione"@it ;
+                          rdfs:label  "Publication (Classe abstraite, ne pas utiliser)"@fr ,
+                                      "Publication (Abstract class, do not use)"@en ,
+                                      "Pubblicazione (Classe astratta, non usare)"@it ;
 
                           rdfs:comment """Tout type de publication. Il s'agit d'une classe abstraite, voir ses subclasses."""@fr ,
                                        """Any kind of publication. This is an abstract class, see its subclasses."""@en .
@@ -477,13 +482,23 @@ roud-oeuvres:Text   rdf:type   owl:Class ;
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:hasTextContent ;
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:isTextOf ;
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:isTextOfValue ;
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ];
-                    rdfs:label  "Texte établi"@fr ,
-                                "Established text"@en ,
-                                "Testo critico"@it ;
+                    rdfs:label  "Texte"@fr ,
+                                "Text"@en ,
+                                "Testo"@it ;
 
-                    rdfs:comment  """Le texte établi pour l'édition."""@fr ,
-                                  """The critical text established for the edition."""@en .
+                    rdfs:comment  """Le texte de l'édition."""@fr ,
+                                  """The text of the edition."""@en .
 
 
 roud-oeuvres:Work   rdf:type   owl:Class ;
@@ -512,11 +527,11 @@ roud-oeuvres:Work   rdf:type   owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasNotice ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ];
-                    rdfs:label  "Œuvre"@fr ,
-                                "Work"@en ,
-                                "Opera"@it ;
+                    rdfs:label  "Œuvre (Classe abstraite, ne pas utiliser)"@fr ,
+                                "Work (Abstract class, do not use)"@en ,
+                                "Opera (Classe astratta, non usare)"@it ;
 
                     rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
                                   """A work. Abstract class, see subclasses."""@en .
@@ -528,7 +543,7 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
 
                         rdfs:subClassOf knora-base:Resource ;
 
-                        rdfs:label  "Œuvre d'artEZ"@fr ,
+                        rdfs:label  "Œuvre d'art"@fr ,
                                     "Artwork"@en ,
                                     "Opera d'arte"@it ;
 
@@ -628,7 +643,7 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasNotice ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
                                       "Person"@en ,
@@ -656,7 +671,7 @@ roud-oeuvres:Bioevent     rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasNotice ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -683,6 +698,11 @@ roud-oeuvres:Photo    rdf:type   owl:Class ;
                       rdfs:subClassOf knora-base:StillImageRepresentation ,
                       [
                         rdf:type owl:Restriction ;
+                        owl:onProperty roud-oeuvres:photoHasTitle ;
+                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                      ],
+                      [
+                        rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasDate ;
                         owl:minCardinality "0"^^xsd:nonNegativeInteger
                       ],
@@ -699,7 +719,7 @@ roud-oeuvres:Photo    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasNotice ;
-                        owl:minCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ];
                       rdfs:label  "Photo"@fr , 
                                   "Photo"@en ,
@@ -731,7 +751,7 @@ roud-oeuvres:Place    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasNotice ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -758,7 +778,6 @@ roud-oeuvres:Place    rdf:type   owl:Class ;
 ## PROPERTIES
 ##
 #######################
-
 
 
 
@@ -848,6 +867,30 @@ roud-oeuvres:writtenSourceHasTitle    rdf:type owl:ObjectProperty ;
                                       salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                       salsah-gui:guiOrder "0"^^xsd:integer .
+
+
+
+
+roud-oeuvres:photoHasTitle 	  rdf:type owl:ObjectProperty ;
+
+	                          rdfs:subPropertyOf  knora-base:hasValue ;
+
+	                          rdfs:subPropertyOf  roud-oeuvres:hasTitle ;
+
+	                          knora-base:subjectClassConstraint roud-oeuvres:Photo ;
+
+	                          knora-base:objectClassConstraint knora-base:TextValue ;
+	                          
+	                          rdfs:label  "Légende de la photo"@fr ,
+	                                      "Photo legend"@en ,
+	                                      "Legenda della foto"@it ;
+
+	                          rdfs:comment  "La légende de la photo, attributé le plus souvent par les chercheurs."@fr ,
+	                                        "The legend of the photo, attributed mostly by researchers."@en ;
+
+	                          salsah-gui:guiElement salsah-gui:SimpleText ;
+
+	                          salsah-gui:guiOrder "0"^^xsd:integer .
 
 
 
@@ -1337,6 +1380,30 @@ roud-oeuvres:publicationIsTranscribed    rdf:type owl:ObjectProperty ;
 
 
 
+roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
+
+                          rdfs:subPropertyOf knora-base:hasValue ;
+
+                          rdfs:subPropertyOf roud-oeuvres:hasName ;
+
+                          knora-base:subjectClassConstraint roud-oeuvres:Page ;
+
+                          knora-base:objectClassConstraint knora-base:TextValue ;
+                          
+                          rdfs:label  "Nom attribué à la page (cote et numéro)"@fr ,
+                                      "Name assigned to the page (shelfmark and number)"@en ,
+                                      "Nome assegnato alla pagina (segnatura e numero)"@it ;
+
+                          rdfs:comment  "Le nom du fonds, la cote (ou l’abréviation crée pour le document qui n’est pas dans un fonds) et : si feuillet, numéro du feuillet et recto ou verso. A indiquer aussi quand c'est seulement 1r. Exemple : ‘CRLR_GR_MS1A1a_1r’, ‘CRLR_GR_MS1A1a_2v’ ----- si page, ‘p’ + numéro de la page. Suivre la numérotation du document, si on scan seulement les pages 4 et 5, les nommer p4 et p5. Exemple : ‘CRLR_GR_MS1A1a_p1’, ‘CRLR_GR_MS1A1a_p2’ ----- si couverture, ‘couv’ et numéro de la couverture (1 ou 4, pour première ou quatrième) + numéro du feuillet + recto ou verso. Exemple : ‘CRLR_GR_MS1A1a_couv1_1r’, ‘CRLR_GR_MS1A1a_couv4_1v’ ----- si autre (annexes), ‘annexe’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_annexe1’, ‘CRLR_GR_MS1A1a_annexe2’, ‘CRLR_GR_MS1A1a_annexe1r’, ‘CRLR_GR_MS1A1a_annexe1v’ ----- si documents pas organisés selon un ordre significatif, ‘doc’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_doc1’, ‘CRLR_GR_MS1A1a_doc2’, ‘CRLR_GR_MS1A1a_doc1r’, ‘CRLR_GR_MS1A1a_doc1v’"@fr ,
+                                        "See the french comment."@en ;
+
+                       	  salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                          salsah-gui:guiOrder "1"^^xsd:integer .
+
+
+
+
 roud-oeuvres:pageHasStillImageFileValue   rdf:type  owl:ObjectProperty ;
                     
                                           rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
@@ -1350,7 +1417,11 @@ roud-oeuvres:pageHasStillImageFileValue   rdf:type  owl:ObjectProperty ;
                                                       "Facsimile"@it ;
 
                                           rdfs:comment  "La page a un fac-similé numérique."@fr ,
-                                                        "The page has a digital facsimile."@en .
+                                                        "The page has a digital facsimile."@en ;
+
+                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                          salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 
@@ -1361,15 +1432,18 @@ roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
                                         knora-base:subjectClassConstraint roud-oeuvres:Page ;
 
                                         knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
-                                        
-                                        salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                         rdfs:label  "Folio fait partie du document"@fr ,
                                                     "Folio is part of the document"@en ,
                                                     "Il folio è parte del documento"@it ;
 
                                         rdfs:comment    "Le folio est une partie d'un document."@fr ,
-                                                        "Folio is part of a document."@en .
+                                                        "Folio is part of a document."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                        salsah-gui:guiOrder "0"^^xsd:integer .
+
 
 
 
@@ -1380,15 +1454,17 @@ roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
                         knora-base:subjectClassConstraint roud-oeuvres:Folio ;
                                   
                         knora-base:objectClassConstraint knora-base:IntValue ;
-                        
+
+                        rdfs:label  "Numéro progressif de la page"@fr ,
+                                    "Progressif number of the page"@en ,
+                                    "Numero progressivo della pagina"@it ;
+
+                        rdfs:comment  "Le numéro progressif indique l'ordre des pages."@fr ,  
+                                      "The progressif number indicates the order of the pages."@en ;
+
                         salsah-gui:guiElement salsah-gui:Spinbox ;
 
-                        rdfs:label  "Numéro du feuillet"@fr ,
-                                    "Folio number"@en ,
-                                    "Numero del folio"@it ;
-
-                        rdfs:comment  "Le numéro du feuillet"@fr ,  ## CHECK FOLIO
-                                      "The folio number"@en .
+                        salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 
@@ -1677,14 +1753,16 @@ roud-oeuvres:publisherHasLocation   rdf:type owl:ObjectProperty ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
                                     
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                     rdfs:label  "Lieu de publication"@fr ,
                                                 "Publication place"@en ,
                                                 "Luogo di pubblicazione"@it ;
 
                                     rdfs:comment  "Le lieu de publication."@fr ,
-                                                  "The publication place."@en .
+                                                  "The publication place."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 roud-oeuvres:hasName    rdf:type  owl:ObjectProperty ;
@@ -1713,14 +1791,17 @@ roud-oeuvres:publisherHasName     rdf:type owl:ObjectProperty ;
 
                                   knora-base:objectClassConstraint knora-base:TextValue ;
                                   
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
-
                                   rdfs:label  "Nom de la maison d'édition"@fr ,
                                               "Publisher name"@en ,
                                               "Nome della casa editrice"@it ;
 
                                   rdfs:comment  "Le nom de la maison d'édition."@fr ,
-                                                "The name of the publisher."@en .
+                                                "The name of the publisher."@en ;
+
+                               	  salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                  salsah-gui:guiOrder "0"^^xsd:integer .
+
 
 
 roud-oeuvres:publicationHasDateFirstEdition     rdf:type owl:ObjectProperty ;
@@ -1928,34 +2009,69 @@ roud-oeuvres:publicationHasTranslatorValue    rdf:type owl:ObjectProperty ;
 
                                               knora-base:objectClassConstraint knora-base:LinkValue .
 
-   
 
-roud-oeuvres:HasEstablishedText   rdf:type owl:ObjectProperty ;
 
-                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
 
-                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+roud-oeuvres:hasText   rdf:type owl:ObjectProperty ;
 
-                                  knora-base:objectClassConstraint roud-oeuvres:Text ;
-                                  
-                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+                      rdfs:subPropertyOf knora-base:hasLinkTo ;
 
-                                  rdfs:label  "Publication a texte établi"@fr ,
-                                              "Publication has established text"@en ,
-                                              "Pubblicazione ha testo critico"@it ;
+                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                  rdfs:comment  "La publication a le texte établi"@fr ,
-                                                "The publication has the critical text"@en .
+                      knora-base:objectClassConstraint roud-oeuvres:Text ;
+                      
+                      salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                      rdfs:label  "Publication a texte établi"@fr ,
+                                  "Publication has established text"@en ,
+                                  "Pubblicazione ha testo critico"@it ;
+
+                      rdfs:comment  "La publication a le texte établi"@fr ,
+                                    "The publication has the critical text"@en .
+                                                  
+
+
+roud-oeuvres:hasTextValue    rdf:type owl:ObjectProperty ;
+
+                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                            knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                            knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:isTextOf  rdf:type owl:ObjectProperty ;
+
+                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                      knora-base:subjectClassConstraint roud-oeuvres:Text ;
+
+                      knora-base:objectClassConstraint roud-oeuvres:Publication ;
+                      
+                      rdfs:label  "Est le texte de l'édition"@fr ,
+                                  "Is text of edition"@en ,
+                                  "É il testo dell'edizione"@it ;
+
+                      rdfs:comment  "L'edizione del testo"@fr ,
+                                    "The edition of the text"@en ;
+
+                      salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                      salsah-gui:guiOrder "0"^^xsd:integer .
+
+
                                                               
 
 
-roud-oeuvres:HasEstablishedTextValue    rdf:type owl:ObjectProperty ;
+roud-oeuvres:isTextOfValue   rdf:type owl:ObjectProperty ;
 
-                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+                            knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
-                                        knora-base:objectClassConstraint knora-base:LinkValue .
+                            knora-base:objectClassConstraint knora-base:LinkValue .
+
 
 
 roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
@@ -1965,15 +2081,18 @@ roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
                               knora-base:objectClassConstraint roud-oeuvres:TextValue ;
-                              
-                              salsah-gui:guiElement salsah-gui:Richtext ;
 
-                              rdfs:label  "A un texte établi"@fr ,
-                                          "Has critical text"@en ,
-                                          "Ha testo critico"@it ;
+                              rdfs:label  "Texte"@fr ,
+                                          "Text"@en ,
+                                          "Testo"@it ;
 
-                              rdfs:comment  "A texte établi"@fr ,
-                                            "Has critical text"@en .
+                              rdfs:comment  "Le texte de l'édition."@fr ,
+                                            "The text of the edition."@en ;
+
+		                      salsah-gui:guiElement salsah-gui:Richtext ;
+
+		                      salsah-gui:guiOrder "1"^^xsd:integer .
+
 
 
 roud-oeuvres:publicationIsEditionOf   rdf:type owl:ObjectProperty ;
@@ -1990,8 +2109,8 @@ roud-oeuvres:publicationIsEditionOf   rdf:type owl:ObjectProperty ;
                                                   "Is an edition of the work"@en ,
                                                   "È un'edizione dell'opera"@it ;
 
-                                      rdfs:comment  "Est un édition de l'œuvre"@fr ,
-                                                    "Is an edition of the work"@en .
+                                      rdfs:comment  "Est un édition de l'œuvre."@fr ,
+                                                    "Is an edition of the work."@en .
                                                               
 
 

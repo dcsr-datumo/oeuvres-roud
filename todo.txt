@@ -50,7 +50,7 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 ## DEMANDER À MARION
 ##########################
 
-Où sont exploités les commentaires ?
+Où sont exploités les commentaires des propriétés ?
 Les indication sur comment remplir les champs (par example, poru les titres des documents "Pas de guillemets. Les titres-incipit sont donnés entre crochets, avec trois points à la fin (alt + .).") se mettent où, dans les commentaires ?
 Indications sur comment remplir le Label, vont où (en général on pourrait se dire que le label corresponde au titre, mais par exemple pour les évènements biographique c'est plus interessant d'avoir la date aussi) ? Dans un protocole externe ?
 
