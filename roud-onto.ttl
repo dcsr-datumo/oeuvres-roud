@@ -7,7 +7,6 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
 @prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
-@prefix roud-biblio: <http://www.knora.org/ontology/0112/roud-biblio#> .
 @prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
 
 
@@ -170,27 +169,36 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
 #### PAGE ################
 roud-oeuvres:Page   rdf:type owl:Class ;
               
-                    rdfs:subClassOf knora-base:StillImageRepresentation ,
-
+                    rdfs:subClassOf knora-base:Resource ,
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:pageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
+                      owl:onProperty roud-oeuvres:hasPageImage ; 
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:pageIsInWrittenSource ;
+                      owl:onProperty roud-oeuvres:hasPageImageValue ;  
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:pageIsPartOfWrittenSource ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger                    
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasSeqnum ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                      owl:onProperty roud-oeuvres:pageIsPartOfWrittenSourceValue ;
+                      owl:cardinality "1"^^xsd:nonNegativeInteger                    
                     ],
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:pageHasName ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                      owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                    ],
+                    [
+                      rdf:type owl:Restriction ;
+                      owl:onProperty roud-oeuvres:hasSeqnum ;
+                      owl:cardinality "1"^^xsd:nonNegativeInteger                 
                     ];
                                  
                     rdfs:label    "Page"@fr,
@@ -200,6 +208,24 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                     rdfs:comment  """Une page."""@fr ,
 
                                   """A page."""@en .
+
+
+roud-oeuvres:PageImage  rdf:type owl:Class ;
+              
+	                    rdfs:subClassOf knora-base:StillImageRepresentation ,
+	                    [
+	                      rdf:type owl:Restriction ;
+	                      owl:onProperty roud-oeuvres:pageImageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
+	                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+	                    ];
+	                                 
+	                    rdfs:label    "Image de la page"@fr,
+	                                  "Page image"@en,
+	                                  "Immagine della pagina"@it ;
+
+	                    rdfs:comment  """Image numérique de la page."""@fr ,
+
+	                                  """A digital image of the page."""@en .
 
 
 
@@ -1207,7 +1233,7 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     
                                     knora-base:subjectClassConstraint knora-base:WrittenSource ;
                                     
-                                    knora-base:objectClassConstraint roud-biblio:Publication ;
+                                    knora-base:objectClassConstraint roud-oeuvres:Publication ;
                                     
                                     salsah-gui:guiElement salsah-gui:Searchbox ;
 
@@ -1404,45 +1430,83 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:pageHasStillImageFileValue   rdf:type  owl:ObjectProperty ;
+roud-oeuvres:pageImageHasStillImageFileValue  rdf:type  owl:ObjectProperty ;
                     
-                                          rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
+	                                          rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
 
-                                          knora-base:subjectClassConstraint roud-oeuvres:Page ;
+	                                          knora-base:subjectClassConstraint roud-oeuvres:PageImage ;
 
-                                          knora-base:objectClassConstraint knora-base:hasStillImageFileValue ;
+	                                          knora-base:objectClassConstraint knora-base:hasStillImageFileValue ;
 
-                                          rdfs:label  "Fac-similé"@fr ,
-                                                      "Facsimile"@en ,
-                                                      "Facsimile"@it ;
+	                                          rdfs:label  "Fac-similé"@fr ,
+	                                                      "Facsimile"@en ,
+	                                                      "Facsimile"@it ;
 
-                                          rdfs:comment  "La page a un fac-similé numérique."@fr ,
-                                                        "The page has a digital facsimile."@en ;
+	                                          rdfs:comment  "La page a un fac-similé numérique."@fr ,
+	                                                        "The page has a digital facsimile."@en .
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                                          salsah-gui:guiOrder "3"^^xsd:integer .
+
+
+roud-oeuvres:hasPageImage   rdf:type owl:ObjectProperty ;
+      
+	                        rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+	                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
+
+	                        knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
+
+	                        rdfs:label  "Image numérique de la page"@fr ,
+	                                    "Digital image of the page"@en ,
+	                                    "Immagine digitale della pagina"@it ;
+
+	                        rdfs:comment    "Image numérique de la page."@fr ,
+	                                        "Digital image of the page."@en ;
+
+	                        salsah-gui:guiElement salsah-gui:Searchbox ;
+
+	                        salsah-gui:guiOrder "3"^^xsd:integer .
+
+                                        
+
+roud-oeuvres:hasPageImageValue  rdf:type owl:ObjectProperty ;
+      
+                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                knora-base:subjectClassConstraint roud-oeuvres:Page ;
+
+                                knora-base:objectClassConstraint knora-base:LinkValue .
+
 
 
 
 roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
-      
+
                                         rdfs:subPropertyOf knora-base:isPartOf ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Page ;
 
                                         knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
 
-                                        rdfs:label  "Folio fait partie du document"@fr ,
-                                                    "Folio is part of the document"@en ,
-                                                    "Il folio è parte del documento"@it ;
+                                        rdfs:label  "Page de"@fr ,
+                                                    "Page of"@en ,
+                                                    "Pagina di"@it ;
 
-                                        rdfs:comment    "Le folio est une partie d'un document."@fr ,
-                                                        "Folio is part of a document."@en ;
+                                        rdfs:comment    "La page est une partie d'un document."@fr ,
+                                                        "Page is part of a document."@en ;
 
                                         salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                         salsah-gui:guiOrder "0"^^xsd:integer .
+
+
+roud-oeuvres:pageIsPartOfWrittenSourceValue     rdf:type owl:ObjectProperty ;
+      
+		                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+		                                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
+
+		                                        knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -2076,7 +2140,7 @@ roud-oeuvres:isTextOfValue   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
 
-                              rdfs:subPropertyOf knora-base:hasValue ;
+                              rdfs:subPropertyOf knora-base:hasValue ;  ##TextRepresentation ???
 
                               knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
