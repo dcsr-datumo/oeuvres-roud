@@ -93,16 +93,11 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                         rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:writtenSourceHasInternalComment ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                                      ],
-                                      [
-                                        rdf:type owl:Restriction ;
-                                        owl:onProperty roud-oeuvres:isPreviousStageOf ;
-                                        owl:minCardinality "0"^^xsd:nonNegativeInteger
-                                      ];
+                                      ];  ## isPreviousStageOf - minCard 0 - eliminato, che era ??
 
-                                      rdfs:label  "Document d'archive (Classe abstraite, ne pas utiliser)"@fr ,
-                                                  "Archival document (Abstract class, do not use)"@en ,
-                                                  "Documento d'archivio (Classe astratta, non usare)"@it ;
+                                      rdfs:label  "(Classe abstraite, ne pas utiliser. Document)"@fr ,
+                                                  "(Abstract class, do not use. Document)"@en ,
+                                                  "(Classe astratta, non usare. Documento)"@it ;
 
                                       rdfs:comment  """NE PAS UTILISER. Tout document écrit conservé dans un archive (CRLR ou autre). Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."""@fr ,
                                                     """DO NOT USE. Any written document contained in an archive (CRLR or other). This is an abstract class, see its sub-classes."""@en .
@@ -150,11 +145,10 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             owl:onProperty roud-oeuvres:hasWritingColor ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ];
-                          rdfs:label  "Document"@fr ,
-                                      "Document"@en ,
-                                      "Documento"@it ;
-                                      ## The label is that because Manuscript is a sub-class of WrittenSourceInArchive (absract), so each manuscript is a document in the archive. Also, Manuscript includes manuscripts and typescripts, so Document can cover both.
-
+                          rdfs:label  "Document d'archive"@fr ,
+                                      "Archival document"@en ,
+                                      "Documento d'archivio"@it ;
+                                      
                           rdfs:comment  """Un manuscrit ou un dactylogramme qui se trouve dans un fonds d’archive."""@fr ,
                                         """A manuscript or a typescript in an archive."""@en .
 
@@ -436,11 +430,11 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                               owl:onProperty roud-oeuvres:isInBookVolume ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ];
-                            rdfs:label  "Maison d'édition"@fr ,
-                                        "Publisher"@en ,
-                                        "Casa editrice"@it ;
-                            rdfs:comment  """La maison d'édition."""@fr ,
-                                          """The publisher."""@en .
+                            rdfs:label  "Section d'un livre"@fr ,
+                                        "Book section"@en ,
+                                        "Sezione di un libro"@it ;
+                            rdfs:comment  """Le chapitre ou section d'un livre."""@fr ,
+                                          """The chapter or section of a book."""@en .
 
 
 roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
@@ -961,15 +955,19 @@ roud-oeuvres:writtenSourceHasOldShelfmark   rdf:type owl:ObjectProperty ;
                                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                                             knora-base:objectClassConstraint knora-base:TextValue ;
-                                            
-                                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                             rdfs:label  "Ancienne cote du document"@fr ,
                                                         "Previous shelfmark of the document"@en ,
                                                         "Segnatura precedente del documento"@it ;
 
                                             rdfs:comment  "Ancienne cote du document."@fr ,
-                                                          "The old shelfmark of the document."@en .
+                                                          "The old shelfmark of the document."@en ;
+
+                                            salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                            salsah-gui:guiOrder "3"^^xsd:integer .
+
+
 
 
 roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
@@ -990,6 +988,8 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
 
                               rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
                                             "The editorial set to which the document belongs."@en .
+
+
 
 
 roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;  
@@ -1022,7 +1022,7 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                               
                               salsah-gui:guiElement salsah-gui:Pulldown ;
                               
-                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType>" ;
                               
 
                               rdfs:label  "Type de document"@fr ,
@@ -1062,7 +1062,7 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                               
                               salsah-gui:guiElement salsah-gui:Pulldown ;
                               
-                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>" ;
                               
 
                               rdfs:label  "Type de support"@fr ,
@@ -1082,14 +1082,14 @@ roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                             knora-base:objectClassConstraint knora-base:TextValue ;
-                            
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
 
                             rdfs:label  "Plus d'informations sur le support matérial"@fr ,
                                         "More information about the material support"@en ,
                                         "Più informazioni sul supporto materiale"@it ;
 
-                            rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr .
+                            rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr ;
+                            
+                            salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -1103,7 +1103,7 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                               
                               salsah-gui:guiElement salsah-gui:Pulldown ;
                               
-                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>" ;
                               
 
                               rdfs:label  "Instrument d'écriture"@fr ,
@@ -1125,7 +1125,7 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
                               
                               salsah-gui:guiElement salsah-gui:Pulldown ;
                               
-                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/UUID1>" ;
+                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>" ;
                               
 
                               rdfs:label  "Couleur"@fr ,
@@ -1163,15 +1163,15 @@ roud-oeuvres:manuscriptHasDate      rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                     knora-base:objectClassConstraint knora-base:DateValue ;
-                                    
-                                    salsah-gui:guiElement salsah-gui:Date ;
 
                                     rdfs:label  "Date dans le manuscrit"@fr ,
                                                 "Date on the manuscript"@en ,
                                                 "Data sul manoscritto"@it ;
 
                                     rdfs:comment  "La date presente dans le manuscrit, s'il y en a."@fr ,
-                                                  "The date present in the manuscript, if any."@en .
+                                                  "The date present in the manuscript, if any."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:Date .
 
 
 roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
@@ -1183,15 +1183,15 @@ roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
                                                 knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                                 knora-base:objectClassConstraint knora-base:DateValue ;
-                                                
-                                                salsah-gui:guiElement salsah-gui:Date ;
 
                                                 rdfs:label  "Date (hypothèse)"@fr ,
                                                             "Date (hypothesis)"@en ,
                                                             "Data (ipotesi)"@it ;
 
                                                 rdfs:comment  "La date individué par les chercheures."@fr ,
-                                                              "The date identified by the scholars."@en .
+                                                              "The date identified by the scholars."@en ;
+
+                                                salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -1266,20 +1266,20 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;     ## boolean values ??
 
 roud-oeuvres:hasPublicComment   rdf:type owl:ObjectProperty ;
                           
-                          rdfs:subPropertyOf  knora-base:hasValue ;
+                                rdfs:subPropertyOf  knora-base:hasValue ;
 
-                          knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
-                          knora-base:objectClassConstraint knora-base:TextValue ;
-                          
-                          salsah-gui:guiElement salsah-gui:Richtext ;
+                                knora-base:objectClassConstraint knora-base:TextValue ;
+                                
+                                salsah-gui:guiElement salsah-gui:Richtext ;
 
-                          rdfs:label  "Commentaire (publique)"@fr ,
-                                      "Comment (public)"@en ,
-                                      "Commento (pubblico)"@it ;
+                                rdfs:label  "Commentaire (publique)"@fr ,
+                                            "Comment (public)"@en ,
+                                            "Commento (pubblico)"@it ;
 
-                          rdfs:comment  "Tout commentaire va dans ce champ, y compris les informations sur une datation incertaine, les relations avec autres textes, etc."@fr ,
-                                        "All comments should go in this field, including information about uncertain dates, relations with other documents, etc."@en .
+                                rdfs:comment  "Tout commentaire va dans ce champ, y compris les informations sur une datation incertaine, les relations avec autres textes, etc."@fr ,
+                                              "All comments should go in this field, including information about uncertain dates, relations with other documents, etc."@en .
 
 
 
@@ -1300,46 +1300,45 @@ roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
 
 
                           
-roud-oeuvres:writtenSourceHasInternalComment   rdf:type owl:ObjectProperty ;
+roud-oeuvres:writtenSourceHasInternalComment  rdf:type owl:ObjectProperty ;
                           
-                                  rdfs:subPropertyOf  knora-base:hasValue ;
+                                              rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                  knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
-                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                              knora-base:objectClassConstraint knora-base:TextValue ;
 
+                                              rdfs:label  "Cuisine interne"@fr ,
+                                                          "Internal comment"@en ,
+                                                          "Commenti interni"@it ;
 
-                                  rdfs:label  "Cuisine interne"@fr ,
-                                              "Internal comment"@en ,
-                                              "Commenti interni"@it ;
-
-                                  rdfs:comment  "Commentaire sur le document qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
-                                                "Internal comments on the document, for the project team only ."@en ;
-          
-                                  salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                  salsah-gui:guiOrder "10"^^xsd:integer .
+                                              rdfs:comment  "Commentaire sur le document qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                            "Internal comments on the document, for the project team only ."@en ;
+                      
+                                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
 
-roud-oeuvres:publicationHasInternalComment   rdf:type owl:ObjectProperty ;
+roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
                           
-                                  rdfs:subPropertyOf  knora-base:hasValue ;
+                                              rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+                                              knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                  knora-base:objectClassConstraint knora-base:TextValue ;
-                                  
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
+                                              knora-base:objectClassConstraint knora-base:TextValue ;
 
+                                              rdfs:label  "Cuisine interne"@fr ,
+                                                          "Internal comment"@en ,
+                                                          "Commenti interni"@it ;
 
-                                  rdfs:label  "Cuisine interne"@fr ,
-                                              "Internal comment"@en ,
-                                              "Commenti interni"@it ;
+                                              rdfs:comment  "Commentaire sur la publication qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                            "Internal comments on the publication, for the project team only."@en ;
 
-                                  rdfs:comment  "Commentaire sur la publication qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
-                                                "Internal comments on the publication, for the project team only."@en .
+                                              
+                                              salsah-gui:guiElement salsah-gui:Richtext ;
+
+                                              salsah-gui:guiOrder "10"^^xsd:integer .
 
 
 
