@@ -93,7 +93,7 @@ roud-oeuvres:WrittenSourceInArchive   rdf:type owl:Class ;
                                         rdf:type owl:Restriction ;
                                         owl:onProperty roud-oeuvres:writtenSourceHasInternalComment ;
                                         owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                                      ];  ## isPreviousStageOf - minCard 0 - eliminato, che era ??
+                                      ];  ## isPreviousStageOf - minCardinality 0 - eliminato, che era ??
 
                                       rdfs:label  "(Classe abstraite, ne pas utiliser. Document)"@fr ,
                                                   "(Abstract class, do not use. Document)"@en ,
@@ -143,6 +143,11 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasWritingColor ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasDatationComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ];
                           rdfs:label  "Document d'archive"@fr ,
@@ -229,9 +234,9 @@ roud-oeuvres:PublicationInArchive   rdf:type owl:Class ;
                                     
                                     rdfs:subClassOf roud-oeuvres:Publication ;
 
-                                    rdfs:label  "Publication conservé dans un fonds d'archive (Classe abstraite, ne pas utiliser)"@fr ,
-                                                "Publication in an archive (Abstract class, do not use)"@en ,
-                                                "Pubblicazione conservata in un fondo d'archivio (Classe astratta, non usare)"@it ;
+                                    rdfs:label  "(Classe abstraite, ne pas utiliser. Publication conservé dans un fonds d'archive)"@fr ,
+                                                  "(Abstract class, do not use. Publication in an archive)"@en ,
+                                                  "(Classe astratta, non usare. Pubblicazione conservata in un fondo d'archivio)"@it ;
 
                                     rdfs:comment  "Une publication, conservé dans un fonds d'archive. Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."@fr ,
                                                   "A publication, found in an archive. This is an abstract classe, see its sub-classes."@en .
@@ -327,9 +332,9 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollectionValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ];
-                          rdfs:label  "Publication (Classe abstraite, ne pas utiliser)"@fr ,
-                                      "Publication (Abstract class, do not use)"@en ,
-                                      "Pubblicazione (Classe astratta, non usare)"@it ;
+                          rdfs:label  "(Classe abstraite, ne pas utiliser. Publication)"@fr ,
+                                                  "(Abstract class, do not use. Publication)"@en ,
+                                                  "(Classe astratta, non usare. Pubblicazione)"@it ;
 
                           rdfs:comment """Tout type de publication. Il s'agit d'une classe abstraite, voir ses subclasses."""@fr ,
                                        """Any kind of publication. This is an abstract class, see its subclasses."""@en .
@@ -539,9 +544,9 @@ roud-oeuvres:Work   rdf:type   owl:Class ;
                       owl:onProperty roud-oeuvres:workHasNotice ;
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ];
-                    rdfs:label  "Œuvre (Classe abstraite, ne pas utiliser)"@fr ,
-                                "Work (Abstract class, do not use)"@en ,
-                                "Opera (Classe astratta, non usare)"@it ;
+                    rdfs:label  "(Classe abstraite, ne pas utiliser. Œuvre)"@fr ,
+                                "(Abstract class, do not use. Work)"@en ,
+                                "(Classe astratta, non usare. Opera)"@it ;
 
                     rdfs:comment  """Une œuvre. Classe abstraite, voir les subclasses."""@fr ,
                                   """A work. Abstract class, see subclasses."""@en .
@@ -978,8 +983,6 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>" ;
 
                               rdfs:label  "Ensemble éditorial"@fr ,
@@ -987,7 +990,11 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                                           "Insieme editoriale"@it ;
 
                               rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
-                                            "The editorial set to which the document belongs."@en .
+                                            "The editorial set to which the document belongs."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                              salsah-gui:guiOrder "4"^^xsd:integer .
 
 
 
@@ -999,15 +1006,18 @@ roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
-                            
-                            salsah-gui:guiElement salsah-gui:Checkbox ;
                                             
                             rdfs:label  "Photocopie"@fr ,
                                         "Photocopy"@en ,
                                         "Fotocopia"@it ;
                             
                             rdfs:comment  "Le document est une photocopie de l'original."@fr ,
-                                          "The document is a photocopy of the original."@en .
+                                          "The document is a photocopy of the original."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                              salsah-gui:guiOrder "5"^^xsd:integer .
+
 
 
 
@@ -1019,9 +1029,7 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
-                              
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
+
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType>" ;
                               
 
@@ -1030,7 +1038,12 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                                           "Tipo di documento"@it ;
 
                               rdfs:comment  "Le type de document : manuscrit, dactylogramme, imprimé"@fr ,
-                                            "The document type: manuscript, typescript, print."@en .
+                                            "The document type: manuscript, typescript, print."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                              salsah-gui:guiOrder "6"^^xsd:integer .
+
 
 
 
@@ -1041,14 +1054,16 @@ roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
                             knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
-                            
-                            salsah-gui:guiElement salsah-gui:Checkbox ;
                                             
                             rdfs:label  "Avec annotations"@fr ,
                                         "With annotations"@en ;
                 
                             rdfs:comment  "Le document presènte des annotations manuscrites."@fr ,
-                                          "The document has annotations."@en .
+                                          "The document has annotations."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                              salsah-gui:guiOrder "7"^^xsd:integer .
 
 
 
@@ -1060,8 +1075,6 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>" ;
                               
 
@@ -1070,7 +1083,11 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                                           "Tipo di supporto"@it ;
 
                               rdfs:comment  "Le type de support matérial du document."@fr ,
-                                            "The type pf material support du document."@en .
+                                            "The type pf material support du document."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                              salsah-gui:guiOrder "8"^^xsd:integer .
 
 
                     
@@ -1087,9 +1104,12 @@ roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
                                         "More information about the material support"@en ,
                                         "Più informazioni sul supporto materiale"@it ;
 
-                            rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr ;
+                            rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr,
+                                          "More info about the material support."@en ;
                             
-                            salsah-gui:guiElement salsah-gui:SimpleText .
+                            salsah-gui:guiElement salsah-gui:SimpleText ;
+                            
+                            salsah-gui:guiOrder "9"^^xsd:integer .
 
 
 
@@ -1101,8 +1121,6 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>" ;
                               
 
@@ -1111,7 +1129,12 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                                           "Strumento di scrittura"@it ;
 
                               rdfs:comment  "L'instrument d'écriture de l'écriture principale."@fr ,
-                                            "The writing tool of the main layer."@en .  ##  ??  layer, guarda anche sotto
+                                            "The writing tool of the main layer."@en  ; ## layer? vd. anche sotto
+
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                              salsah-gui:guiOrder "10"^^xsd:integer .
+
 
 
 
@@ -1123,8 +1146,6 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>" ;
                               
 
@@ -1133,7 +1154,33 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
                                           "Colore"@it ;
 
                               rdfs:comment  "La couleur de l'écriture principale"@fr ,
-                                            "The color or the main writing."@en .
+                                            "The color or the main writing."@en ;
+
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                              salsah-gui:guiOrder "11"^^xsd:integer .
+
+
+
+roud-oeuvres:hasOtherWritingTool  rdf:type owl:ObjectProperty ;
+                          
+                                  rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                  rdfs:label  "Autre(s) instrument(s) d'écriture"@fr ,
+                                              "Other writing tool(s)"@en ,
+                                              "Altri strumenti di scrittura"@it ;
+
+                                  rdfs:comment  "Autres instruments d'écriture utilisés dans le document."@fr ,
+                                                "Other writing tools in use in the document"@en ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
+                                  
+                                  salsah-gui:guiOrder "12"^^xsd:integer .
+
 
 
 
@@ -1171,7 +1218,9 @@ roud-oeuvres:manuscriptHasDate      rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "La date presente dans le manuscrit, s'il y en a."@fr ,
                                                   "The date present in the manuscript, if any."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Date .
+                                    salsah-gui:guiElement salsah-gui:Date ;
+                                  
+                                    salsah-gui:guiOrder "13"^^xsd:integer .
 
 
 roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
@@ -1184,14 +1233,37 @@ roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
 
                                                 knora-base:objectClassConstraint knora-base:DateValue ;
 
-                                                rdfs:label  "Date (hypothèse)"@fr ,
-                                                            "Date (hypothesis)"@en ,
-                                                            "Data (ipotesi)"@it ;
+                                                rdfs:label  "Datation"@fr ,
+                                                            "Datation"@en ,
+                                                            "Datazione"@it ;
 
                                                 rdfs:comment  "La date individué par les chercheures."@fr ,
                                                               "The date identified by the scholars."@en ;
 
-                                                salsah-gui:guiElement salsah-gui:Date .
+                                                salsah-gui:guiElement salsah-gui:Date ;
+                                  
+                                                salsah-gui:guiOrder "14"^^xsd:integer .
+
+
+
+roud-oeuvres:hasDatationComment   rdf:type owl:ObjectProperty ;
+                          
+                                  rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                  rdfs:label  "Commentaire sur la datation"@fr ,
+                                              "Comment on datation"@en ,
+                                              "Commento sulla datazione"@it ;
+
+                                  rdfs:comment  "Spécifier info sur la datation."@fr ,
+                                                "Additional info on datation."@en ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:SimpleText ;
+                                  
+                                  salsah-gui:guiOrder "15"^^xsd:integer .
 
 
 
@@ -1203,8 +1275,6 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>" ;
                               
 
@@ -1213,7 +1283,11 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
                                           "Stadi nel processo di scrittura"@it ;
 
                               rdfs:comment  "L'étape du processus d'écriture répresenté par le document."@fr ,
-                                            "The genetic stage of the text."@en .
+                                            "The genetic stage of the text."@en ;
+                                  
+                              salsah-gui:guiElement salsah-gui:Pulldown ;
+                              
+                              salsah-gui:guiOrder "16"^^xsd:integer .
 
 
 
@@ -1224,14 +1298,17 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint knora-base:WrittenSource ;
                                     
                                     knora-base:objectClassConstraint roud-oeuvres:Publication ;
-                                    
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                     rdfs:label  "Référence bibliographique"@fr ,
                                                 "Bibliographical reference"@en ;
 
                                     rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
-                                                  "The bibliographical reference (published version or other)."@en .
+                                                  "The bibliographical reference (published version or other)."@en ;
+                                  
+                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+                                  
+                                  salsah-gui:guiOrder "17"^^xsd:integer .
+
 
 
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
@@ -1244,7 +1321,8 @@ roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;     ## boolean values ?? ObjectProperty or DatatypeProperty
+
+roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;     
                     
                           rdfs:subPropertyOf knora-base:hasValue ;
 
