@@ -326,11 +326,6 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollection ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollectionValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ];
                           rdfs:label  "(Classe abstraite, ne pas utiliser. Publication)"@fr ,
                                                   "(Abstract class, do not use. Publication)"@en ,
@@ -2145,11 +2140,11 @@ roud-oeuvres:hasText   rdf:type owl:ObjectProperty ;
 
                       knora-base:objectClassConstraint roud-oeuvres:Text ;
 
-                      rdfs:label  "Texte de la publication"@fr ,
+                      rdfs:label  "Texte de la publication (NE PAS REMPLIR POUR L'INSTANT)"@fr ,
                                   "Publication text"@en ,
                                   "Testo della pubblicazione"@it ;
 
-                      rdfs:comment  "Le texte de la publication (NE PAS REMPLIR POUR L'INSTANT)."@fr ,
+                      rdfs:comment  "Le texte de la publication."@fr ,
                                     "The text of the publication."@en ;
 
                       salsah-gui:guiElement salsah-gui:Searchbox ;
@@ -2285,7 +2280,7 @@ roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
 
                                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                                  knora-base:objectClassConstraint roud-oeuvres:Publication ;
+                                                  knora-base:objectClassConstraint roud-oeuvres:TextValue ;
 
                                                   rdfs:label  "Repris dans (est une version précédente d'une partie de)"@fr ,
                                                               "Reused in (is previous version of a section of)"@en ,
@@ -2294,19 +2289,9 @@ roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
                                                   rdfs:comment  "Est une version précédente d'une partie de la publication, par exemple un article paru et après inclus dans un recueil."@fr ,
                                                                 "Is previous version of a section of the publication, for instance an article which, after some reworking, has been included in a collection."@en ;
 
-                                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+                                                  salsah-gui:guiElement salsah-gui:Richtext ;
 
                                                   salsah-gui:guiOrder "10"^^xsd:integer .
-                                                      
-
-
-roud-oeuvres:isPreviousStageOfPartOfCollectionValue   rdf:type owl:ObjectProperty ;
-
-                                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-
-                                                      knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
