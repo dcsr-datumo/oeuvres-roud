@@ -447,11 +447,6 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                   rdfs:subClassOf knora-base:Resource ,
                                   [
                                     rdf:type owl:Restriction ;
-                                    owl:onProperty roud-oeuvres:periodicalArticleIsInPages ;
-                                    owl:minCardinality "0"^^xsd:nonNegativeInteger
-                                  ],
-                                  [
-                                    rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isPublishedInPeriodical ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
                                   ],
@@ -459,6 +454,20 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isPublishedInPeriodicalValue ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ],
+                                  [
+                                    rdf:type owl:Restriction ;
+                                    owl:onProperty roud-oeuvres:isInPeriodicalIssue ;
+                                    owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                  ],
+                                  [
+                                    rdf:type owl:Restriction ;
+                                    owl:onProperty roud-oeuvres:isInPeriodicalVolume ;
+                                    owl:cardinality "1"^^xsd:nonNegativeInteger
+                                  ],[
+                                    rdf:type owl:Restriction ;
+                                    owl:onProperty roud-oeuvres:periodicalArticleIsInPages ;
+                                    owl:minCardinality "0"^^xsd:nonNegativeInteger
                                   ];
                                   rdfs:label  "Article de périodique"@fr ,
                                               "Periodical article"@en ,
@@ -469,17 +478,10 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
 
 roud-oeuvres:Periodical   rdf:type owl:Class ;
                          
-                          rdfs:subClassOf roud-oeuvres:Publication ;
-                         
                           rdfs:subClassOf knora-base:Resource ,
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isPeriodicalIssue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isPeriodicalNumber ;
+                            owl:onProperty roud-oeuvres:periodicalHasTitle ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Périodique"@fr ,
@@ -1406,7 +1408,7 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
 
                                               knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                              rdfs:label  "Cuisine interne"@fr ,
+                                              rdfs:label  "Commentaire interne"@fr ,
                                                           "Internal comment"@en ,
                                                           "Commenti interni"@it ;
 
@@ -1416,7 +1418,7 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
                                               
                                               salsah-gui:guiElement salsah-gui:Richtext ;
 
-                                              salsah-gui:guiOrder "10"^^xsd:integer .
+                                              salsah-gui:guiOrder "11"^^xsd:integer .
 
 
 
@@ -1570,42 +1572,70 @@ roud-oeuvres:hasPublicationType    rdf:type  owl:ObjectProperty ;
 
 
 
-roud-oeuvres:isPeriodicalIssue      rdf:type  owl:ObjectProperty ;
-    
+roud-oeuvres:periodicalHasTitle     rdf:type owl:ObjectProperty ;
+
                                     rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasTitle ;
 
                                     knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
                                     
+                                    rdfs:label  "Titre"@fr ,
+                                                "Title"@en ,
+                                                "Titolo"@it ;
+
+                                    rdfs:comment  "Le titre du périodique."@fr ,
+                                                  "The periodical title."@en ;
+
                                     salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "2"^^xsd:integer .
+
+
+
+roud-oeuvres:isInPeriodicalIssue    rdf:type  owl:ObjectProperty ;
+    
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
 
                                     rdfs:label  "Numéro"@fr ,
                                                 "Issue"@en ,
                                                 "Numero"@it ;
 
                                     rdfs:comment  "Le numéro du périodique."@fr ,
-                                                  "The issue of the periodical."@en .
+                                                  "The issue of the periodical."@en ,
+                                                  "Il numero del periodico" ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "4"^^xsd:integer .
 
 
 
 
-roud-oeuvres:isPeriodicalVolume     rdf:type  owl:ObjectProperty ;
+roud-oeuvres:isInPeriodicalVolume   rdf:type  owl:ObjectProperty ;
     
                                     rdfs:subPropertyOf knora-base:hasValue ;
 
-                                    knora-base:subjectClassConstraint roud-oeuvres:Periodical ;
+                                    knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
-                                    
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
-                                    rdfs:label  "Volume du numéro"@fr ,
-                                                "Volume of the issue"@en ,
-                                                "Fascicolo del numero"@it ;
+                                    rdfs:label  "Le volume du numéro"@fr ,
+                                                "The volume of the issue"@en ,
+                                                "Il fascicolo del numero"@it ;
 
                                     rdfs:comment  "Le volume du numéro du périodique."@fr ,
-                                                  "The volume of the journal (or other periodical) issue."@en .
+                                                  "The volume of the journal (or other periodical) issue."@en  ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "5"^^xsd:integer .
 
 
 
@@ -1645,7 +1675,7 @@ roud-oeuvres:periodicalArticleIsInPages   rdf:type  owl:ObjectProperty ;
 
                                           salsah-gui:guiElement salsah-gui:SimpleText ;
 
-                                          salsah-gui:guiOrder "5"^^xsd:integer .
+                                          salsah-gui:guiOrder "7"^^xsd:integer .
 
 
 
@@ -1930,7 +1960,7 @@ roud-oeuvres:publicationHasDate     rdf:type owl:ObjectProperty ;
 
                                     salsah-gui:guiElement salsah-gui:Date ;
 
-                                    salsah-gui:guiOrder "4"^^xsd:integer .
+                                    salsah-gui:guiOrder "6"^^xsd:integer .
 
 
 
@@ -2001,7 +2031,7 @@ roud-oeuvres:publicationHasPhoto    rdf:type owl:ObjectProperty ;
 
                                     salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                                    salsah-gui:guiOrder "7"^^xsd:integer .
+                                    salsah-gui:guiOrder "9"^^xsd:integer .
                                                               
 
 
@@ -2091,7 +2121,7 @@ roud-oeuvres:publicationHasTranslator   rdf:type owl:ObjectProperty ;
 
                                         salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                                        salsah-gui:guiOrder "6"^^xsd:integer .
+                                        salsah-gui:guiOrder "8"^^xsd:integer .
 
                                                               
 
@@ -2119,12 +2149,12 @@ roud-oeuvres:hasText   rdf:type owl:ObjectProperty ;
                                   "Publication text"@en ,
                                   "Testo della pubblicazione"@it ;
 
-                      rdfs:comment  "Le texte de la publication."@fr ,
+                      rdfs:comment  "Le texte de la publication (NE PAS REMPLIR POUR L'INSTANT)."@fr ,
                                     "The text of the publication."@en ;
 
                       salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                      salsah-gui:guiOrder "9"^^xsd:integer .
+                      salsah-gui:guiOrder "12"^^xsd:integer .
                                                   
 
 
@@ -2266,7 +2296,7 @@ roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
 
                                                   salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                                                  salsah-gui:guiOrder "8"^^xsd:integer .
+                                                  salsah-gui:guiOrder "10"^^xsd:integer .
                                                       
 
 
@@ -2301,7 +2331,7 @@ roud-oeuvres:workHasTitle     rdf:type owl:ObjectProperty ;
 
                               salsah-gui:guiElement salsah-gui:SimpleText ;
 
-                              salsah-gui:guiOrder "0"^^xsd:integer .
+                              salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 
@@ -2391,7 +2421,7 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
                               
                               salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                              salsah-gui:guiOrder "1"^^xsd:integer .
+                              salsah-gui:guiOrder "0"^^xsd:integer .
                                   
 
 roud-oeuvres:workHasAuthorValue   rdf:type owl:ObjectProperty ;
