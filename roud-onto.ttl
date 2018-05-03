@@ -304,7 +304,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationHasInternalComment ;
+                            owl:onProperty roud-oeuvres:publicationHasInternalComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -448,7 +448,7 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                             [
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:isInBookVolume ;
-                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
                             ];
                             rdfs:label  "Section d'un livre"@fr ,
                                         "Book section"@en ,
@@ -1806,15 +1806,17 @@ roud-oeuvres:bookSectionIsInPages   rdf:type  owl:ObjectProperty ;
                                     knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                                     knora-base:objectClassConstraint knora-base:TextValue ;
-                                    
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     rdfs:label  "Pages"@fr ,
                                                 "Pages"@en ,
                                                 "Pagine"@it ;
 
                                     rdfs:comment  "Les pages d'une section d'un livre."@fr ,
-                                                  "The pages of a book section."@en .
+                                                  "The pages of a book section."@en ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "5"^^xsd:integer .
 
 
 
@@ -1857,15 +1859,17 @@ roud-oeuvres:isInBookVolume   rdf:type  owl:ObjectProperty ;
                               knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
-                              
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
 
-                              rdfs:label  "Volume de la section d'un livre."@fr ,
-                                          "Volume of a book section"@en ,
+                              rdfs:label  "Volume de la section d'un livre (si plusieurs volumes)."@fr ,
+                                          "Volume of a book section (if more than one volume)"@en ,
                                           "Volume della sezione di un libro"@it ;
 
                               rdfs:comment  "Le volume dans lequel apparaît la section d'un livre."@fr ,
-                                            "The volume in which the book section appears."@en .
+                                            "The volume in which the book section appears."@en ;
+                              
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "4"^^xsd:integer .
  
 
 roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
@@ -1875,15 +1879,17 @@ roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
                                       knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
                                       knora-base:objectClassConstraint roud-oeuvres:Book ;
-                                      
-                                      salsah-gui:guiElement salsah-gui:Searchbox ;
 
                                       rdfs:label  "Fait partie du livre"@fr ,
                                                   "Is part of the book"@en ,
                                                   "Fa parte del libro"@it ;
 
                                       rdfs:comment  "La section (chapitre ou autre) fait partie d'un livre"@fr ,
-                                                    "The section is part of the book"@en .
+                                                    "The section is part of the book"@en ;
+                                      
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                      salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 roud-oeuvres:bookSectionIsPartOfValue       rdf:type  owl:ObjectProperty ;
@@ -1894,6 +1900,8 @@ roud-oeuvres:bookSectionIsPartOfValue       rdf:type  owl:ObjectProperty ;
 
                                             knora-base:objectClassConstraint knora-base:LinkValue .
 
+
+
 roud-oeuvres:hasNumberOfVolumes     rdf:type owl:ObjectProperty ;
 
                                     rdfs:subPropertyOf knora-base:hasValue ;
@@ -1902,7 +1910,7 @@ roud-oeuvres:hasNumberOfVolumes     rdf:type owl:ObjectProperty ;
 
                                     knora-base:objectClassConstraint knora-base:IntValue ;
                                     
-                                    rdfs:label  "Nombre des volumes"@fr ,
+                                    rdfs:label  "Nombre des volumes (indiquer seulement si plus de 1)"@fr ,
                                                 "Number of volumes"@en ,
                                                 "Numero di volumi"@it ;
 
