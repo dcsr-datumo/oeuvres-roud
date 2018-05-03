@@ -81,7 +81,7 @@ roud-oeuvres:WrittenSource    rdf:type owl:Class ;
                               ],
                               [
                                 rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:isDigitized ;
+                                owl:onProperty roud-oeuvres:writtenSourceIsDigitized ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger                    
                               ],
                               [
@@ -331,6 +331,21 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollection ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationIsDigitized ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationIsTranscribed ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:originalIsInCrlrArchive ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
                           ];
                           rdfs:label  "(Classe abstraite, ne pas utiliser. Publication)"@fr ,
                                                   "(Abstract class, do not use. Publication)"@en ,
@@ -458,13 +473,14 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                   [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isInPeriodicalIssue ;
-                                    owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
                                   ],
                                   [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isInPeriodicalVolume ;
-                                    owl:cardinality "1"^^xsd:nonNegativeInteger
-                                  ],[
+                                    owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                  ],
+                                  [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:periodicalArticleIsInPages ;
                                     owl:minCardinality "0"^^xsd:nonNegativeInteger
@@ -510,7 +526,7 @@ roud-oeuvres:Text   rdf:type   owl:Class ;
                       owl:onProperty roud-oeuvres:isTextOfValue ;
                       owl:maxCardinality "1"^^xsd:nonNegativeInteger
                     ];
-                    rdfs:label  "Texte"@fr ,
+                    rdfs:label  "Texte (ne pas remplir pour l'instant)"@fr ,
                                 "Text"@en ,
                                 "Testo"@it ;
 
@@ -1362,21 +1378,107 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
                     
                           rdfs:subPropertyOf knora-base:hasValue ;
 
-                          knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
                           knora-base:objectClassConstraint knora-base:BooleanValue ;
                                           
                           rdfs:label  "Numérisé"@fr ,
                                       "Digitized"@en ,
                                       "Scannerizzato"@it ;
 
-                          rdfs:comment  "Le document a été numérisé."@fr ,
-                                        "The document has been digitized."@en ;
+                          rdfs:comment  "Le document ou la publication a été numérisé."@fr ,
+                                        "The document or the publication has been digitized."@en .
 
-                          salsah-gui:guiElement salsah-gui:Checkbox ;
 
-                          salsah-gui:guiOrder "19"^^xsd:integer .
+
+
+roud-oeuvres:writtenSourceIsDigitized   rdf:type owl:ObjectProperty ;     
+                    
+                                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf knora-base:isDigitized ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+
+                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                                        
+                                        rdfs:label  "Numérisé"@fr ,
+                                                    "Digitized"@en ,
+                                                    "Scannerizzato"@it ;
+
+                                        rdfs:comment  "Le document a été numérisé."@fr ,
+                                                      "The document has been digitized."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                                        salsah-gui:guiOrder "19"^^xsd:integer .
+
+
+
+roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;     
+                    
+                                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf knora-base:isDigitized ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                                        
+                                        rdfs:label  "Numérisé"@fr ,
+                                                    "Digitized"@en ,
+                                                    "Scannerizzato"@it ;
+
+                                        rdfs:comment  "La publication a été numérisé."@fr ,
+                                                      "The publication has been digitized."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                                        salsah-gui:guiOrder "12"^^xsd:integer .
+                    
+
+
+
+roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;     
+                    
+                                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                                        
+                                        rdfs:label  "Retranscrit (OCR)"@fr ,
+                                                    "Transcribed (OCR)"@en ,
+                                                    "Trascritto (OCR)"@it ;
+
+                                        rdfs:comment  "La publication a été retranscrite avec OCR corrigé."@fr ,
+                                                      "The publication has been transcribed with corrected OCR."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                                        salsah-gui:guiOrder "11"^^xsd:integer .
+
+
                      
+
+roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;     
+                    
+                                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                                        
+                                        rdfs:label  "Retranscrit (OCR)"@fr ,
+                                                    "Transcribed (OCR)"@en ,
+                                                    "Trascritto (OCR)"@it ;
+
+                                        rdfs:comment  "Original est dans le fonds Roud au CRLR."@fr ,
+                                                      "Original in is Roud archive at CRLR."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+
+                                        salsah-gui:guiOrder "13"^^xsd:integer .
+
+
 
 
 roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
@@ -1390,11 +1492,7 @@ roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
                                               "Commento interno"@it ;
 
                                   rdfs:comment  "Commentaire qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié. Property abstraite, voir subproperties."@fr ,
-                                                "Internal comments for the project team. Abstract property, see subproperties."@en ;
-                      
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                  salsah-gui:guiOrder "20"^^xsd:integer .
+                                                "Internal comments for the project team. Abstract property, see subproperties."@en .
 
 
                           
@@ -1438,7 +1536,7 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
                                               
                                               salsah-gui:guiElement salsah-gui:Richtext ;
 
-                                              salsah-gui:guiOrder "20"^^xsd:integer .
+                                              salsah-gui:guiOrder "14"^^xsd:integer .
 
 
 
@@ -1726,7 +1824,7 @@ roud-oeuvres:isPublishedInPeriodical  rdf:type owl:ObjectProperty ;
 
                                       knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
 
-                                      knora-base:objectClassConstraint knora-base:Periodical ;
+                                      knora-base:objectClassConstraint roud-oeuvres:Periodical ;
 
                                       rdfs:label  "Périodique"@fr ,
                                                   "Periodical"@en ,
@@ -2182,7 +2280,7 @@ roud-oeuvres:hasText   rdf:type owl:ObjectProperty ;
 
                       salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                      salsah-gui:guiOrder "12"^^xsd:integer .
+                      salsah-gui:guiOrder "15"^^xsd:integer .
                                                   
 
 

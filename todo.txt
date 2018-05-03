@@ -50,9 +50,9 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 
 Où sont exploités les commentaires des propriétés ?
 Les indication sur comment remplir les champs (par example, poru les titres des documents "Pas de guillemets. Les titres-incipit sont donnés entre crochets, avec trois points à la fin (alt + .).") se mettent où, dans les commentaires ?
-Indications sur comment remplir le Label, vont où (en général on pourrait se dire que le label corresponde au titre, mais par exemple pour les évènements biographique c'est plus interessant d'avoir la date aussi) ? Dans un protocole externe ?
+Indications sur comment remplir le Label, vont où (en général on pourrait se dire que le label corresponde au titre, mais par exemple pour les évènements biographique c'est plus interessant d'avoir la date aussi) ? Dans un protocole externe ? Par exemple, pour les personnes, ça serait bien que les labels soit nom+prenom, parceque la recherche (pendant la saisie) se fait sur les premières trois lettres et ce n'est pas toujours facile de se souvenir des prénom (ou le contraire? Mais tenir en compte).
 
-Possibilités de recherche dans Salsah (API) ? Recherche partout ?
+Y-a-t il un moyen de ne pas faire apparaître les classes abstraites dans Salsah ?
   
 
 
