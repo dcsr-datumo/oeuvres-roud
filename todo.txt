@@ -31,6 +31,7 @@ Les liens StandoffLinkTo peuvent se faire entre toutes les classes, pas besoin d
 
 Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de Vaud.
 
+Anche i dati cancellati rimangono.
 
 
 

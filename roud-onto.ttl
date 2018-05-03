@@ -304,7 +304,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasInternalComment ;
+                            owl:onProperty roud-oeuvres:PublicationHasInternalComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -1467,9 +1467,9 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:BooleanValue ;
                                                         
-                                        rdfs:label  "Retranscrit (OCR)"@fr ,
-                                                    "Transcribed (OCR)"@en ,
-                                                    "Trascritto (OCR)"@it ;
+                                        rdfs:label  "Original dans le fonds Roud du CRLR"@fr ,
+                                                    "Original is in CRLR Roud archive"@en ,
+                                                    "L'originale è nel fondo Roud del CRLR"@it ;
 
                                         rdfs:comment  "Original est dans le fonds Roud au CRLR."@fr ,
                                                       "Original in is Roud archive at CRLR."@en ;
@@ -1528,10 +1528,10 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
 
                                               rdfs:label  "Commentaire interne"@fr ,
                                                           "Internal comment"@en ,
-                                                          "Commenti interni"@it ;
+                                                          "Commento interno"@it ;
 
                                               rdfs:comment  "Commentaire sur la publication qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
-                                                            "Internal comments on the publication, for the project team only."@en ;
+                                                            "Internal comment on the publication, for the project team only."@en ;
 
                                               
                                               salsah-gui:guiElement salsah-gui:Richtext ;
@@ -2413,7 +2413,7 @@ roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
 
                                                   knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                                  knora-base:objectClassConstraint roud-oeuvres:TextValue ;
+                                                  knora-base:objectClassConstraint knora-base:TextValue ;
 
                                                   rdfs:label  "Repris dans (est une version précédente d'une partie de)"@fr ,
                                                               "Reused in (is previous version of a section of)"@en ,
@@ -2673,7 +2673,7 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Identifiant unique pour la personne. Spécifier le Permalink VIAF, et non pas le VIAF ID."@fr ,
                                             "Uniquer identifier for a person. Specify the VIAF Permalink, not the VIAF ID."@en ;
 
-                                            /* ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants */
+                                            ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
 
                               salsah-gui:guiElement salsah-gui:SimpleText ;
 
