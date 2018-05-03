@@ -61,16 +61,6 @@ roud-oeuvres:WrittenSource    rdf:type owl:Class ;
                               ],
                               [
                                 rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPublishedReference ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasGeneticStage ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                               ],
@@ -154,6 +144,16 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasDatationComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasPublishedReference ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Document d'archive"@fr ,
                                       "Archival document"@en ,
@@ -1325,7 +1325,7 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                   
                                     rdfs:subPropertyOf knora-base:hasLinkTo ;       
                                     
-                                    knora-base:subjectClassConstraint knora-base:WrittenSource ;
+                                    knora-base:subjectClassConstraint knora-base:Manuscript ;
                                     
                                     knora-base:objectClassConstraint roud-oeuvres:Publication ;
 
@@ -1345,7 +1345,7 @@ roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;        
                                         
-                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                                         
                                         knora-base:objectClassConstraint knora-base:LinkValue .
 
@@ -1928,9 +1928,9 @@ roud-oeuvres:isEditionNumber    rdf:type owl:ObjectProperty ;
 
                                 knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
-                                knora-base:objectClassConstraint knora-base:TextValue ;
+                                knora-base:objectClassConstraint knora-base:IntValue ;
 
-                                rdfs:label  "Numéro de la réédition"@fr ,
+                                rdfs:label  "Si réédition (même maison d'édition), numéro de la réédition"@fr ,
                                             "Number of the republication"@en ,
                                             "Numero della riedizione"@it ;
 
