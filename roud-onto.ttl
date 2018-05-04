@@ -52,7 +52,7 @@ roud-oeuvres:WrittenSource    rdf:type owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasEditorialSet ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                                owl:cardinality "0"^^xsd:nonNegativeInteger                      
                               ],
                               [
                                 rdf:type owl:Restriction ;  
@@ -83,6 +83,16 @@ roud-oeuvres:WrittenSource    rdf:type owl:Class ;
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:writtenSourceHasInternalComment ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasPublishedReference ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
                               ];  ## isPreviousStageOf - minCardinality 0 - eliminato, che era ??
 
                               rdfs:label  "(Classe abstraite, ne pas utiliser. Document)"@fr ,
@@ -112,13 +122,13 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
-                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablished ;   ## add class DateEstablished, with Date and Comment ??
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablished ;   
                             owl:minCardinality "0"
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasSupportType ;    ## cardinality of SupportType and SupportInfo should be 1, when all fiches will be done.
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:onProperty roud-oeuvres:hasSupportType ;    
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -127,7 +137,7 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasWritingTool ;   ## cardinality of WritingTool and WritingColor should be 1, when all fiches will be done.
+                            owl:onProperty roud-oeuvres:hasWritingTool ;   
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ],
                           [
@@ -144,16 +154,6 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasDatationComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasPublishedReference ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Document d'archive"@fr ,
                                       "Archival document"@en ,
@@ -1325,7 +1325,7 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                   
                                     rdfs:subPropertyOf knora-base:hasLinkTo ;       
                                     
-                                    knora-base:subjectClassConstraint knora-base:Manuscript ;
+                                    knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
                                     
                                     knora-base:objectClassConstraint roud-oeuvres:Publication ;
 
@@ -1345,7 +1345,7 @@ roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;        
                                         
-                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
                                         
                                         knora-base:objectClassConstraint knora-base:LinkValue .
 
