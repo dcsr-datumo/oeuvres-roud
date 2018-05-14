@@ -52,7 +52,7 @@ roud-oeuvres:WrittenSource    rdf:type owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasEditorialSet ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                                owl:cardinality "1"^^xsd:nonNegativeInteger                      
                               ],
                               [
                                 rdf:type owl:Restriction ;  
