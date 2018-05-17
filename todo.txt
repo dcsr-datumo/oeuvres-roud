@@ -12,16 +12,11 @@
 ### ONTO / SALSAH
 ##
 #
-- Auteur traduit dans Document d'archive
-- Repris dans / Is previous stage of (sia per Manuscript che per Publication)
+- Creare propeità isPrevious, che sostiuitsce isPreviousStageOfPartOfCollection. Ms et Pub devono essere legati da 'isPrevious'. Mettere anche nell'ontologie un commento sul fatto che si può dettagliare, e lasciarlo anche qui. Da cambiare in grafo e ontologia. Add link to Reseau genetique e in reseau genetique, dire che è per creare reseau
 - Il tempo
 - Test Sipi
-Delete class PublicationInArchive because it does not exist in the previous db so the import would be too complicated.
-Publication check numero edizione e numero volumi (cardinality)
+- Publication check numero edizione e numero volumi (cardinality)
 
-Auteur traduit
-delete PublicationInarchive
-Update admin with new project description
 
 
 #
@@ -29,7 +24,7 @@ Update admin with new project description
 ### KNORA
 ##
 #
-Open issue (question) sur le temps
+Sul Github di Knora, open Issue (type: question) sur la modelisation du temps
 
 
 
@@ -38,7 +33,8 @@ Open issue (question) sur le temps
 ### DOC 
 ##
 #
-Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes)
+Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
+Un bon label pour les fiches serait titre+cote
 
 
 
@@ -105,11 +101,7 @@ curl -X POST -d @testImport.xml http://elena.spadini%40unil.ch:k32V@localhost:33
 ##
 ######################
 
-
-Q: Period: before / after / around; après / avant / vers
-A: 
-
-
+Espaces dans les labels ?
 
 
 
