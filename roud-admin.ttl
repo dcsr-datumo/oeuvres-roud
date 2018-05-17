@@ -16,8 +16,8 @@
         	knora-base:projectLongname "Oeuvres complètes de Gustave Roud" ;
         	knora-base:projectShortname "roud-oeuvres" ;
         	knora-base:projectShortcode "0112" ;
-        	knora-base:projectDescription "Lumières.Lausanne est une plateforme qui met à la disposition des chercheurs et de toute personne intéressée par le riche passé culturel de la Suisse francophone à l'époque des Lumières des sources inédites, de la littérature secondaire et des fiches biographiques sur des personnalités qui l’ont marqué (lien vers la recherche avancée). Cet instrument de recherche est également un support de publication et un outil d'enseignement académique." ;
-        	knora-base:projectKeywords "Lumières, Lausanne, Suisse francophone, sources, littérature secondaire, personnalités" ;
+        	knora-base:projectDescription "Le projet « Les Œuvres complètes de Gustave Roud » fournit tous les textes de l'écrivain vaudois avec la notation complémentaire, contient les reproductions numériques des manuscrits originaux et offre de parcours critiques." ;
+        	knora-base:projectKeywords "Gustave Roud, édition, Vaud, littérature, écrivain, génétique" ;
         	knora-base:projectOntology <http://www.knora.org/ontology/0112/roud-oeuvres> ;
         	knora-base:status "true"^^xsd:boolean ;
         	knora-base:hasSelfJoinEnabled "false"^^xsd:boolean .
