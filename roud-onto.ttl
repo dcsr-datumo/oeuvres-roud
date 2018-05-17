@@ -2341,7 +2341,7 @@ roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
-                              knora-base:objectClassConstraint roud-oeuvres:TextValue ;
+                              knora-base:objectClassConstraint knora-base:TextValue ;
 
                               rdfs:label  "Texte"@fr ,
                                           "Text"@en ,

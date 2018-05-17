@@ -44,15 +44,22 @@ Anche i dati cancellati rimangono.
 ## QUESTIONS DASCH
 ##########################
 
-Où sont exploités les commentaires des propriétés ?
+Q: Où sont exploités les commentaires des propriétés ?
 Les indication sur comment remplir les champs (par example, poru les titres des documents "Pas de guillemets. Les titres-incipit sont donnés entre crochets, avec trois points à la fin (alt + .).") se mettent où, dans les commentaires ?
 Indications sur comment remplir le Label, vont où (en général on pourrait se dire que le label corresponde au titre, mais par exemple pour les évènements biographique c'est plus interessant d'avoir la date aussi) ? Dans un protocole externe ? Par exemple, pour les personnes, ça serait bien que les labels soit nom+prenom, parceque la recherche (pendant la saisie) se fait sur les premières trois lettres et ce n'est pas toujours facile de se souvenir des prénom (ou le contraire? Mais tenir en compte).
+A: Pas dans Salsah
 
-Period: before / after / around; après / avant / vers
- 
+Q: Period: before / after / around; après / avant / vers
+A: 
+
 Add link ?
+NON IMPORTA
 
+Download xsd for bulk import
+http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=root%40example.com&password=test
 
+Upload xml for bulk import
+curl -X POST -d @testImport.xml http://elena.spadini%40unil.ch:k32V@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres
 
 
 

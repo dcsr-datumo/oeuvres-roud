@@ -1,0 +1,1469 @@
+<xs:schema 
+vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" elementFormDefault="qualified" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+<xs:schema 
+vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" elementFormDefault="qualified" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" elementFormDefault="qualified" xmlns:vc="http://www.w3.org/2007/XMLSchema-versioning" xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+    <xs:import schemaLocation="knoraXmlImport.xsd" namespace="http://api.knora.org/ontology/knoraXmlImport/v1#"/>
+    <xs:import schemaLocation="knoraXmlImport.xsd" namespace="http://api.knora.org/ontology/knoraXmlImport/v1#"/>
+    <xs:element name="ArtWork">
+        <xs:complexType>
+    <xs:element name="ArtWork">
+    <xs:import schemaLocation="knoraXmlImport.xsd" namespace="http://api.knora.org/ontology/knoraXmlImport/v1#"/>
+        <xs:complexType>
+    <xs:element name="ArtWork">
+            <xs:complexContent>
+        <xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+            <xs:complexContent>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ArtWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="ArtWork"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent><xs:element name="Bioevent">
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ArtWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="ArtWork"/>
+        </xs:sequence>
+    </xs:complexType>
+        <xs:complexType>
+    <xs:element name="Bioevent">
+            <xs:complexContent>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="1" name="bioeventHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="bioeventHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="bioeventHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="bioeventHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Bioevent_linkValueType">
+        <xs:sequence>
+                    <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Bioevent"/>
+        </xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="ArtWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="ArtWork"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+    <xs:element name="Bioevent">
+        <xs:complexType>
+    <xs:element name="Book">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="1" name="bioeventHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="bioeventHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="bioeventHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="bioeventHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Bioevent_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Bioevent"/>
+        </xs:sequence>
+    </xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="1" name="bioeventHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="bioeventHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="bioeventHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="bioeventHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Bioevent_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Bioevent"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasCollaborators"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="hasNumberOfVolumes"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publisher_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublisher"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="isEditionNumber"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="Book_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReeditionOf"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+    <xs:element name="Book">
+        <xs:complexType>
+    <xs:element name="Book">
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasCollaborators"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="hasNumberOfVolumes"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publisher_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublisher"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="isEditionNumber"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="Book_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReeditionOf"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                    <xs:sequence>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasCollaborators"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publisher_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublisher"/>
+    <xs:complexType name="Book_linkValueType">
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="isEditionNumber"/>
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Book"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element type="Book_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReeditionOf"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Book_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Book"/>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Book_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Book"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="BookSection">
+    <xs:element name="BookSection">
+    <xs:element name="BookSection">
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="bookSectionIsInPages"/>
+                        <xs:element type="Book_linkValueType" maxOccurs="1" minOccurs="1" name="bookSectionIsPartOf"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInBookVolume"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="BookSection_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="BookSection"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="LiteratureWork">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="bookSectionIsInPages"/>
+        <xs:complexType>
+                        <xs:element type="Book_linkValueType" maxOccurs="1" minOccurs="1" name="bookSectionIsPartOf"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                    <xs:sequence>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInBookVolume"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="bookSectionIsInPages"/>
+                        <xs:element type="Book_linkValueType" maxOccurs="1" minOccurs="1" name="bookSectionIsPartOf"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInBookVolume"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+    <xs:complexType name="BookSection_linkValueType">
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+        <xs:sequence>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+            <xs:element type="knoraXmlImport:linkValueType" name="BookSection"/>
+                    </xs:sequence>
+        </xs:sequence>
+                </xs:extension>
+    </xs:complexType>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="BookSection_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="BookSection"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="LiteratureWork">
+    <xs:element name="LiteratureWork">
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="LiteratureWork_linkValueType">
+        <xs:sequence>
+                    <xs:sequence>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="LiteratureWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="LiteratureWork"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Manuscript">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+        <xs:complexType>
+    <xs:element name="Manuscript">
+            <xs:complexContent>
+        <xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="LiteratureWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="LiteratureWork"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasDatationComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasDocumentType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasOtherWritingTool"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasSupportInfo"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasSupportType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingColor"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingTool"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDateEstablished"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Manuscript_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Manuscript"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="MusicWork">
+    <xs:element name="Manuscript">
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+        <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="MusicWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="MusicWork"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Page">
+            <xs:complexContent>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="0" name="hasPageImage"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="1" name="hasSeqnum"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="pageHasName"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="1" name="pageIsPartOfWrittenSource"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Page_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Page"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="PageImage">
+        <xs:complexType>
+            <xs:complexContent>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasDatationComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasDocumentType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasOtherWritingTool"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PageImage_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PageImage"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:element name="Periodical">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="periodicalHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Periodical_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Periodical"/>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasSupportInfo"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasSupportType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingColor"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingTool"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+    <xs:element name="PeriodicalArticle">
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDateEstablished"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Manuscript_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Manuscript"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasDatationComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasDocumentType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasOtherWritingTool"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasSupportInfo"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasSupportType"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingColor"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasWritingTool"/>
+    <xs:element name="MusicWork">
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDateEstablished"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Manuscript_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Manuscript"/>
+        </xs:sequence>
+    </xs:complexType>
+        <xs:complexType>
+    <xs:element name="MusicWork">
+            <xs:complexContent>
+        <xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="MusicWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="MusicWork"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+    <xs:element name="Page">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="0" name="hasPageImage"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="1" name="hasSeqnum"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="pageHasName"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="1" name="pageIsPartOfWrittenSource"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Page_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Page"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="PageImage">
+        <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+            <xs:complexContent>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalIssue"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalVolume"/>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="Periodical_linkValueType" maxOccurs="1" minOccurs="1" name="isPublishedInPeriodical"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="periodicalArticleIsInPages"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                    <xs:sequence>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PageImage_linkValueType">
+        <xs:sequence>
+    <xs:complexType name="PeriodicalArticle_linkValueType">
+            <xs:element type="knoraXmlImport:linkValueType" name="PageImage"/>
+        </xs:sequence>
+    </xs:complexType>
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PeriodicalArticle"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Periodical">
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence><xs:complexContent>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="periodicalHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Periodical_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Periodical"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Person">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="MusicWork_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="MusicWork"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Page">
+        <xs:complexType>
+        <xs:complexType>
+    <xs:element name="PeriodicalArticle">
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+        <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="0" name="hasPageImage"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="1" name="hasSeqnum"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="pageHasName"/>
+                        <xs:element type="WrittenSource_linkValueType" maxOccurs="1" minOccurs="1" name="pageIsPartOfWrittenSource"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Page_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Page"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="PageImage">
+                <xs:extension base="knoraXmlImport:resourceType">
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasAuthorityID"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasBirthDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasDeathDate"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasDhsID"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasFamilyName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasGivenName"/>
+                        <xs:element type="Work_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isCharacterIn"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReferenceFor"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="personHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Person_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Person"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:element name="Photo">
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+        <xs:complexType>
+    <xs:complexType name="PageImage_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PageImage"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalIssue"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalVolume"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="Periodical_linkValueType" maxOccurs="1" minOccurs="1" name="isPublishedInPeriodical"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+    <xs:element name="Periodical">
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="periodicalArticleIsInPages"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PeriodicalArticle_linkValueType">
+        <xs:sequence>
+        <xs:complexType>
+            <xs:element type="knoraXmlImport:linkValueType" name="PeriodicalArticle"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="periodicalHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Periodical_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Periodical"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+    <xs:element name="Person">
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="photoHasTitle"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="photoIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Photo_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Photo"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Place">
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLatitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLongitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="placeHasName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="placeHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="placeHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Place_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Place"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasAuthorityID"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasBirthDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasDeathDate"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasDhsID"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasFamilyName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasGivenName"/>
+                        <xs:element type="Work_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isCharacterIn"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReferenceFor"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="personHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Person_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Person"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Publication">
+    <xs:element name="Photo">
+    <xs:element name="PeriodicalArticle">
+        <xs:complexType>
+            <xs:complexContent>
+        <xs:complexType>
+        <xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="photoHasTitle"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="photoIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Photo_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Photo"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+    <xs:element name="Place">
+            <xs:complexContent>
+        <xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLatitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLongitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="placeHasName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="placeHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="placeHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+    <xs:complexType name="Place_linkValueType">
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+        <xs:sequence>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/><xs:element type="knoraXmlImport:linkValueType" name="Place"/>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+    <xs:complexType name="Publication_linkValueType">
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalIssue"/>
+        <xs:sequence>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInPeriodicalVolume"/>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publication"/>
+        </xs:sequence>
+    </xs:complexType>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="Periodical_linkValueType" maxOccurs="1" minOccurs="1" name="isPublishedInPeriodical"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="periodicalArticleIsInPages"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PeriodicalArticle_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PeriodicalArticle"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Publication">
+        <xs:complexType>
+    <xs:element name="PublicationInArchive">
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+        <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Publication_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publication"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+    <xs:element name="PublicationInArchive">
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:element name="Person">
+        <xs:complexType>
+        <xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+            <xs:complexContent>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PublicationInArchive_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PublicationInArchive"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+    <xs:element name="Publisher">
+                <xs:extension base="knoraXmlImport:resourceType">
+        <xs:complexType>
+            <xs:complexContent>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasAuthorityID"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasBirthDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="hasDeathDate"/>
+                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="hasDhsID"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasFamilyName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasGivenName"/>
+                        <xs:element type="Work_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isCharacterIn"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="isReferenceFor"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="personHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:complexType name="Person_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Person"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publisherHasLocation"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="publisherHasName"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Publisher_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publisher"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Photo">
+    <xs:element name="Text">
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                <xs:extension base="knoraXmlImport:resourceType">
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PublicationInArchive_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PublicationInArchive"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasTextContent"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="1" minOccurs="0" name="isTextOf"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Text_linkValueType">
+    <xs:element name="Publisher">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Text"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasAuthor"/>
+        <xs:complexType>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="photoHasTitle"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="photoIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Photo_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Photo"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:element name="Work">
+    <xs:element name="Place">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publisherHasLocation"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="publisherHasName"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Publisher_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publisher"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Text">
+        <xs:complexType>
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+            <xs:complexContent>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasTextContent"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="1" minOccurs="0" name="isTextOf"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Text_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Text"/>
+        </xs:sequence>
+    </xs:complexType>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+    <xs:element name="Work">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Work_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Work"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLatitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLongitude"/>
+        <xs:complexType>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="placeHasName"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="placeHasNotice"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="placeHasPhoto"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Place_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Place"/>
+        </xs:sequence>
+    </xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Work_linkValueType">
+    <xs:element name="WrittenSource">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Work"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Publication">
+    <xs:element name="WrittenSource">
+        <xs:complexType>
+        <xs:complexType>
+        <xs:complexType>
+            <xs:complexContent>
+            <xs:complexContent>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Publication_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publication"/>
+        </xs:sequence>
+    </xs:complexType>
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                    <xs:sequence>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+    <xs:complexType name="WrittenSource_linkValueType">
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+        <xs:sequence>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+            <xs:element type="knoraXmlImport:linkValueType" name="WrittenSource"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="WrittenSource_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="WrittenSource"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
+    <xs:element name="PublicationInArchive">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="Text_linkValueType" maxOccurs="1" minOccurs="0" name="hasText"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="isPreviousStageOfPartOfCollection"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="originalIsInCrlrArchive"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationHasInternalComment"/>
+                        <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTranslator"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsDigitized"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="1" name="publicationIsTranscribed"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="PublicationInArchive_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="PublicationInArchive"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Publisher">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publisherHasLocation"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="publisherHasName"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Publisher_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Publisher"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Text">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasTextContent"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="1" minOccurs="0" name="isTextOf"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Text_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Text"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="Work">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="Person_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="workHasNotice"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="workHasTitle"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="Work_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="Work"/>
+        </xs:sequence>
+    </xs:complexType>
+    <xs:element name="WrittenSource">
+        <xs:complexType>
+            <xs:complexContent>
+                <xs:extension base="knoraXmlImport:resourceType">
+                    <xs:sequence>
+                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="hasAnnotation"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="unbounded" minOccurs="0" name="hasEditorialSet"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="hasGeneticStage"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasPublicComment"/>
+                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublishedReference"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasInternalComment"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="writtenSourceHasOldShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasShelfmark"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="writtenSourceHasTitle"/>
+                        <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="writtenSourceIsDigitized"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="writtenSourceIsInArchive"/>
+                    </xs:sequence>
+                </xs:extension>
+            </xs:complexContent>
+        </xs:complexType>
+    </xs:element>
+    <xs:complexType name="WrittenSource_linkValueType">
+        <xs:sequence>
+            <xs:element type="knoraXmlImport:linkValueType" name="WrittenSource"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
