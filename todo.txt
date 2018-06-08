@@ -17,6 +17,10 @@
 - Test Sipi
 - Publication check numero edizione e numero volumi (cardinality)
 
+TESTO NELL'ONTOLOGIA !!!
+
+EditedText hasSource pub | ms
+EditedText hasWitness pub | ms
 
 
 #
