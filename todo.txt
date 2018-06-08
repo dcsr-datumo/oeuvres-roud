@@ -14,7 +14,6 @@
 #
 - Il tempo
 - Test Sipi
-- Publication check numero edizione e numero volumi (cardinality)
 
 TESTO NELL'ONTOLOGIA !!!
 
@@ -22,7 +21,12 @@ EditedText hasSource pub | ms
 EditedText hasWitness pub | ms
 
 
-When we'll change the location of the cardinality (v2?), put isPreviousManuscript dopo étape génétique.
+When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
+
+
+
+
+
 
 
 #
@@ -69,6 +73,8 @@ Les rdfs:comment des proprietés ne sont pas visibles dans Salsah. Les rdfs:comm
 
 Bouton AddLink en haut à droite ne sert pas.
 
+isEditionNumber has cardinality max:1, because it can and cannot be there (but not more than one). This info will be exploited only when the value is different from 1. Same for hasNumberOfVolumes.
+
 
 
 
@@ -84,6 +90,10 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 
 Upload xml for bulk import
 curl -X POST -d @testImport.xml http://elena.spadini%40unil.ch:k32V@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres
+
+
+Fiche --> Document d'archive (roud-ouvres:Manuscript), datation + datationcomment = hasDateEstablishedReadable
+Create rules for transforming datation into hasDateEstablishedComputable (if avant, create period with starting point at 1918, for example, etc.)
 
 
 
@@ -108,6 +118,7 @@ curl -X POST -d @testImport.xml http://elena.spadini%40unil.ch:k32V@localhost:33
 ######################
 
 Espaces dans les labels ?
+Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après?
 
 
 

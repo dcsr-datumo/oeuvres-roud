@@ -36,11 +36,16 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasDate ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger       
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedReadable ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
-                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablished ;   
-                            owl:minCardinality "0"
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedComputable ;   
+                            owl:maxCardinality "1"
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -65,11 +70,6 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasOtherWritingTool ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasDatationComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ],
                           [
@@ -1242,47 +1242,50 @@ roud-oeuvres:manuscriptHasDate      rdf:type owl:ObjectProperty ;
                                     salsah-gui:guiOrder "13"^^xsd:integer .
 
 
-roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
-
-                                                rdfs:subPropertyOf knora-base:hasValue ;
-
-                                                rdfs:subPropertyOf roud-oeuvres:hasDate ;
-
-                                                knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-
-                                                knora-base:objectClassConstraint knora-base:DateValue ;
-
-                                                rdfs:label  "Datation"@fr ,
-                                                            "Datation"@en ,
-                                                            "Datazione"@it ;
-
-                                                rdfs:comment  "La date individué par les chercheures."@fr ,
-                                                              "The date identified by the scholars."@en ;
-
-                                                salsah-gui:guiElement salsah-gui:Date ;
-                                  
-                                                salsah-gui:guiOrder "14"^^xsd:integer .
 
 
+roud-oeuvres:manuscriptHasDateEstablishedComputable   rdf:type  owl:ObjectProperty ;
 
-roud-oeuvres:hasDatationComment   rdf:type owl:ObjectProperty ;
+                                                      rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                      rdfs:subPropertyOf roud-oeuvres:hasDate ;
+
+                                                      knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                                      knora-base:objectClassConstraint knora-base:DateValue ;
+
+                                                      rdfs:label  "Datation formalisé"@fr ,
+                                                                  "Formalized datation"@en ,
+                                                                  "Datazione formalizzata"@it ;
+
+                                                      rdfs:comment  "La date individué par les chercheures, esprimée de façon formalizé et computable."@fr ,
+                                                                    "The date identified by the scholars, expressed in a formalized and computable way."@en ;
+
+                                                      salsah-gui:guiElement salsah-gui:Date ;
+                                        
+                                                      salsah-gui:guiOrder "15"^^xsd:integer .
+
+
+
+roud-oeuvres:manuscriptHasDateEstablishedReadable   rdf:type owl:ObjectProperty ;
                           
-                                  rdfs:subPropertyOf  knora-base:hasValue ;
+                                                    rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                  knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                                    knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
-                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                                    knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                  rdfs:label  "Commentaire sur la datation"@fr ,
-                                              "Comment on datation"@en ,
-                                              "Commento sulla datazione"@it ;
+                                                    rdfs:label  "Datation"@fr ,
+                                                                "Datation"@en ,
+                                                                "Datazione"@it ;
 
-                                  rdfs:comment  "Spécifier info sur la datation."@fr ,
-                                                "Additional info on datation."@en ;
-                                  
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
-                                  
-                                  salsah-gui:guiOrder "15"^^xsd:integer .
+                                                    rdfs:comment  "La date individué par les chercheures. On peut insérer une date, ou une date précedé de 'vers', 'avant', 'après'. Pas de majuscule. Insérer ici aussi les commentaires."@fr ,
+                                                                  "The date identified by the scholars. Write a date, or a date preceded by 'vers', 'avant', 'après'. No capital letters. Insérer ici aussi les commentaires."@en ;
+
+                                                    
+                                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+                                                    
+                                                    salsah-gui:guiOrder "14"^^xsd:integer .
 
 
 
@@ -2474,7 +2477,7 @@ roud-oeuvres:isPreviousManuscript     rdf:type owl:ObjectProperty ;
 
                                       rdfs:label  "Le document précède génétiquement un autre document"@fr ,
                                                   "The document is genetically before another document"@en ,
-                                                  "Documento geneticamente precedente un altro documento"@it ;
+                                                  "Documento geneticamente precedente un altro manoscritto"@it ;
 
                                       rdfs:comment  "Ces liens forment un reseau génétique."@fr ,
                                                     "These links create a genetic network."@en ;
