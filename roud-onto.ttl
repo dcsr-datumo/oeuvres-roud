@@ -146,6 +146,16 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasTranslatedAuthorValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isPreviousManuscript ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isPreviousManuscriptValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ];
                           rdfs:label  "Document d'archive"@fr ,
                                       "Archival document"@en ,
@@ -301,7 +311,12 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollection ;
+                            owl:onProperty roud-oeuvres:isPreviousPublication ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:isPreviousPublicationValue ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -2419,26 +2434,63 @@ roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
                                   knora-base:objectClassConstraint knora-base:LinkValue .
 
 
-roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
+roud-oeuvres:isPreviousPublication    rdf:type owl:ObjectProperty ;
 
-                                                  rdfs:subPropertyOf knora-base:hasValue ;
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
 
-                                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+                                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                      knora-base:objectClassConstraint roud-oeuvres:Publication ;
 
-                                                  rdfs:label  "Repris dans (est une version précédente d'une partie de)"@fr ,
-                                                              "Reused in (is previous version of a section of)"@en ,
-                                                              "Ripreso in (è una versione precedente di una parte di)"@it ;
+                                      rdfs:label  "Est une version précédente d'une autre publication ou partie de publication"@fr ,
+                                                  "Is a previous version of another publication or part of a publication"@en ,
+                                                  "È una versione precedente di un'altra pubblicazione o di una parte di una pubblicazione"@it ;
 
-                                                  rdfs:comment  "Est une version précédente d'une partie de la publication, par exemple un article paru et après inclus dans un recueil."@fr ,
-                                                                "Is previous version of a section of the publication, for instance an article which, after some reworking, has been included in a collection."@en ;
+                                      rdfs:comment  "Reprise, par exemple un article paru et après inclus dans un recueil."@fr ,
+                                                    "Reuse, for instance a published article which has been afterwards included in a collection."@en ;
 
-                                                  salsah-gui:guiElement salsah-gui:Richtext ;
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
 
-                                                  salsah-gui:guiOrder "10"^^xsd:integer .
+                                      salsah-gui:guiOrder "10"^^xsd:integer .
 
 
+roud-oeuvres:isPreviousPublicationValue   rdf:type owl:ObjectProperty ;
+
+                                          rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                          knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                          knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:isPreviousManuscript     rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                      knora-base:objectClassConstraint roud-oeuvres:Manuscript ;
+
+                                      rdfs:label  "Le document précède génétiquement un autre document"@fr ,
+                                                  "The document is genetically before another document"@en ,
+                                                  "Documento geneticamente precedente un altro documento"@it ;
+
+                                      rdfs:comment  "Ces liens forment un reseau génétique."@fr ,
+                                                    "These links create a genetic network."@en ;
+
+                                      salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                      salsah-gui:guiOrder "25"^^xsd:integer .
+
+
+roud-oeuvres:isPreviousManuscriptValue    rdf:type owl:ObjectProperty ;
+
+                                          rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                          knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                          knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 

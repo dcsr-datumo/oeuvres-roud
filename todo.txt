@@ -12,7 +12,6 @@
 ### ONTO / SALSAH
 ##
 #
-- Creare propeità isPrevious, che sostiuitsce isPreviousStageOfPartOfCollection. Ms et Pub devono essere legati da 'isPrevious'. Mettere anche nell'ontologie un commento sul fatto che si può dettagliare, e lasciarlo anche qui. Da cambiare in grafo e ontologia. Add link to Reseau genetique e in reseau genetique, dire che è per creare reseau
 - Il tempo
 - Test Sipi
 - Publication check numero edizione e numero volumi (cardinality)
@@ -21,6 +20,9 @@ TESTO NELL'ONTOLOGIA !!!
 
 EditedText hasSource pub | ms
 EditedText hasWitness pub | ms
+
+
+When we'll change the location of the cardinality (v2?), put isPreviousManuscript dopo étape génétique.
 
 
 #
