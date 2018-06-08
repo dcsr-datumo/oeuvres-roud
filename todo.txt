@@ -12,19 +12,11 @@
 ### ONTO / SALSAH
 ##
 #
-- Il tempo
+
 - Test Sipi
-
-TESTO NELL'ONTOLOGIA !!!
-
-EditedText hasSource pub | ms
-EditedText hasWitness pub | ms
 
 
 When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
-
-
-
 
 
 
@@ -75,6 +67,7 @@ Bouton AddLink en haut à droite ne sert pas.
 
 isEditionNumber has cardinality max:1, because it can and cannot be there (but not more than one). This info will be exploited only when the value is different from 1. Same for hasNumberOfVolumes.
 
+There is no abstract property hasDirectSource, perché non si può non specificare l'oggetto
 
 
 
