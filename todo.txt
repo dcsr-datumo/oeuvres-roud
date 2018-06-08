@@ -13,8 +13,6 @@
 ##
 #
 
-- Test Sipi
-
 
 When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
 
