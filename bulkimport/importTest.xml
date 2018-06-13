@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# p0112-roud-oeuvres-xml-schemas/knoraXmlImport.xsd"
+ xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+ xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#">
+    <p0112-roud-oeuvres id="ramuz">
+        <knoraXmlImport:label>Ramuz</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Ferdinand</p0112-roud-oeuvres:hasGivenName>
+        <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">blabldbslad dsadsa</p0112-roud-oeuvres:personHasNotice>
+    </p0112-roud-oeuvres>
+</knoraXmlImport:resources>
