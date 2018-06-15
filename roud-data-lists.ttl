@@ -522,10 +522,10 @@
 		rdfs:label "Violet"@fr .		
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray> a knora-base:ListNode ;
-		knora-base:listNodeName "gray" ;
+		knora-base:listNodeName "gris" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
 		knora-base:listNodePosition 5 ;
-		rdfs:label "Gray"@fr .	
+		rdfs:label "Gris"@fr .	
 
 
 

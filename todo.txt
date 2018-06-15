@@ -34,7 +34,7 @@ Sul Github di Knora, open Issue (type: question) sur la modelisation du temps
 ##
 #
 Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
-Un bon label pour les fiches serait titre+cote
+Un bon label pour les fiches serait titre+cote, pour les articles titre+revue+anne
 
 
 
@@ -110,6 +110,12 @@ Create rules for transforming datation into hasDateEstablishedComputable (if ava
 
 Espaces dans les labels ?
 Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après?
+
+Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
+
+Insérer texte xml dans Knora, comme pièce jointe? (easiness of editing)
+
+Download all texts, pour les transformer en Word?
 
 
 
