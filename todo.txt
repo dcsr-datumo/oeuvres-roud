@@ -13,6 +13,13 @@
 ##
 #
 
+Fixed EstbalishedText
+Add list for presence in digital edition
+Update comment di class EstavlishedText
+Réference bibliographique (en lien avec la publication; pour les manuscrits) --> changer le label
+Reference bibliographique dans le texte doit punter au Texte !
+Change label --> surtout document d'archive qui precede un autre document d'archive
+
 
 When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
 
@@ -118,6 +125,12 @@ Insérer texte xml dans Knora, comme pièce jointe? (easiness of editing)
 
 Download all texts, pour les transformer en Word?
 
-Find empty shelfmarks
+Requetes - API:
+- Find empty shelfmarks
+- Catena di isPreviousStageOf (item isPreviousStageOf x, x isPreviousStageOf xx, xx isPreviousStageOf ....)
 
+
+Feedback per Salsah2
+Creare i label è mortale e totalmente error prone ! Crearli automaticamente?
+Commenti delle property vanno usati
 

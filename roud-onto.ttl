@@ -160,17 +160,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
 #### PAGE ################
 roud-oeuvres:Page   rdf:type owl:Class ;
               
-                    rdfs:subClassOf knora-base:Resource ,
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasPageImage ; 
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasPageImageValue ;  
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
+                    rdfs:subClassOf knora-base:StillImageRepresentation,
+                    
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:pageIsPartOfManuscript ;
@@ -199,24 +190,6 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                     rdfs:comment  """Une page."""@fr ,
 
                                   """A page."""@en .
-
-
-roud-oeuvres:PageImage  rdf:type owl:Class ;
-              
-	                    rdfs:subClassOf knora-base:StillImageRepresentation ,
-	                    [
-	                      rdf:type owl:Restriction ;
-	                      owl:onProperty roud-oeuvres:pageImageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
-	                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-	                    ];
-	                                 
-	                    rdfs:label    "Image de la page"@fr,
-	                                  "Page image"@en,
-	                                  "Immagine della pagina"@it ;
-
-	                    rdfs:comment  """Image numérique de la page."""@fr ,
-
-	                                  """A digital image of the page."""@en .
 
 
 
@@ -567,7 +540,7 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                                           "Text"@en ,
                                           "Testo"@it ;
 
-                              rdfs:comment  """Unité textuelle pour l'édition (texte et fac-similé, ou fac-similé)."""@fr ,
+                              rdfs:comment  """Unité textuelle pour l'édition (texte et fac-similé, ou fac-similé). L'unité textuelle corresponde à un texte dans l'édition Zoé, c'est à dire une entrée dans la table de matière. L'unité texteulle corresponde aussi à une page de l'édition numérique.<br/>Tous les liens d'un texte sont à d'autres textes, et non pas directement aux publications ou aux documents."""@fr ,
                                             """Textual unit for the edition (text and scan, or only scan)."""@en .
 
 
@@ -931,9 +904,10 @@ roud-oeuvres:isInPaperEdition   rdf:type  owl:ObjectProperty ;
 
                                 salsah-gui:guiElement salsah-gui:Pulldown ;
                                 
-                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
+                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
 
-                                salsah-gui:guiOrder "10"^^xsd:integer .
+
+                                salsah-gui:guiOrder "18"^^xsd:integer .
 
 
 
@@ -954,9 +928,9 @@ roud-oeuvres:scanIsInDigitalEdition   rdf:type  owl:ObjectProperty ;
 
                                       salsah-gui:guiElement salsah-gui:Pulldown ;
 
-                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
+                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
 
-                                      salsah-gui:guiOrder "11"^^xsd:integer .
+                                      salsah-gui:guiOrder "19"^^xsd:integer .
 
 
 
@@ -977,9 +951,9 @@ roud-oeuvres:txtIsInDigitalEdition  rdf:type  owl:ObjectProperty ;
 
                                     salsah-gui:guiElement salsah-gui:Pulldown ;
 
-                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
 
-                                    salsah-gui:guiOrder "12"^^xsd:integer .
+                                    salsah-gui:guiOrder "20"^^xsd:integer .
                                         
 
 
@@ -1552,10 +1526,10 @@ roud-oeuvres:manuscriptHasPublishedReference  rdf:type owl:ObjectProperty ;
                                               
                                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                                               
-                                              knora-base:objectClassConstraint roud-oeuvres:Publication ;
+                                              knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                              rdfs:label  "Référence bibliographique (en lien avec publication)"@fr ,
-                                                          "Bibliographical reference (linked to publication)"@en ;
+                                              rdfs:label  "Référence bibliographique (pour les manuscrits qui sont en lien avec une publication)"@fr ,
+                                                          "Bibliographical reference (for manuscripts linked to a publication)"@en ;
 
                                               rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
                                                             "The bibliographical reference (published version or other)."@en ;
@@ -1922,12 +1896,12 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
                           knora-base:objectClassConstraint knora-base:TextValue ;
                           
-                          rdfs:label  "Nom attribué à la page (cote et numéro)"@fr ,
-                                      "Name assigned to the page (shelfmark and number)"@en ,
-                                      "Nome assegnato alla pagina (segnatura e numero)"@it ;
+                          rdfs:label  "Nom attribué à la page (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@fr ,
+                                      "Name assigned to the page (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@en ,
+                                      "Nome assegnato alla pagina (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@it ;
 
-                          rdfs:comment  "Le nom du fonds, la cote (ou l’abréviation crée pour le document qui n’est pas dans un fonds) et : si feuillet, numéro du feuillet et recto ou verso. A indiquer aussi quand c'est seulement 1r. Exemple : ‘CRLR_GR_MS1A1a_1r’, ‘CRLR_GR_MS1A1a_2v’ ----- si page, ‘p’ + numéro de la page. Suivre la numérotation du document, si on scan seulement les pages 4 et 5, les nommer p4 et p5. Exemple : ‘CRLR_GR_MS1A1a_p1’, ‘CRLR_GR_MS1A1a_p2’ ----- si couverture, ‘couv’ et numéro de la couverture (1 ou 4, pour première ou quatrième) + numéro du feuillet + recto ou verso. Exemple : ‘CRLR_GR_MS1A1a_couv1_1r’, ‘CRLR_GR_MS1A1a_couv4_1v’ ----- si autre (annexes), ‘annexe’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_annexe1’, ‘CRLR_GR_MS1A1a_annexe2’, ‘CRLR_GR_MS1A1a_annexe1r’, ‘CRLR_GR_MS1A1a_annexe1v’ ----- si documents pas organisés selon un ordre significatif, ‘doc’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_doc1’, ‘CRLR_GR_MS1A1a_doc2’, ‘CRLR_GR_MS1A1a_doc1r’, ‘CRLR_GR_MS1A1a_doc1v’"@fr ,
-                                        "See the french comment."@en ;
+                          rdfs:comment  "Utiliser le nom du scan, in extenso."@fr ,
+                                        "Use the name of the scan, in extenso."@en ;
 
                        	  salsah-gui:guiElement salsah-gui:SimpleText ;
 
@@ -1936,52 +1910,7 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:pageImageHasStillImageFileValue  rdf:type  owl:ObjectProperty ;
-                    
-	                                          rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
 
-	                                          knora-base:subjectClassConstraint roud-oeuvres:PageImage ;
-
-	                                          knora-base:objectClassConstraint knora-base:hasStillImageFileValue ;
-
-	                                          rdfs:label  "Fac-similé"@fr ,
-	                                                      "Facsimile"@en ,
-	                                                      "Facsimile"@it ;
-
-	                                          rdfs:comment  "La page a un fac-similé numérique."@fr ,
-	                                                        "The page has a digital facsimile."@en .
-
-
-
-
-roud-oeuvres:hasPageImage   rdf:type owl:ObjectProperty ;
-      
-	                        rdfs:subPropertyOf knora-base:hasLinkTo ;
-
-	                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
-
-	                        knora-base:objectClassConstraint roud-oeuvres:Manuscript ;
-
-	                        rdfs:label  "Image numérique de la page"@fr ,
-	                                    "Digital image of the page"@en ,
-	                                    "Immagine digitale della pagina"@it ;
-
-	                        rdfs:comment    "Image numérique de la page."@fr ,
-	                                        "Digital image of the page."@en ;
-
-	                        salsah-gui:guiElement salsah-gui:Searchbox ;
-
-	                        salsah-gui:guiOrder "3"^^xsd:integer .
-
-                                        
-
-roud-oeuvres:hasPageImageValue  rdf:type owl:ObjectProperty ;
-      
-                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                knora-base:subjectClassConstraint roud-oeuvres:Page ;
-
-                                knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -2019,9 +1948,9 @@ roud-oeuvres:pageIsPartOfManuscriptValue     rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
 
-						rdfs:subPropertyOf knora-base:seqnum ;
+						            rdfs:subPropertyOf knora-base:seqnum ;
 
-                        knora-base:subjectClassConstraint roud-oeuvres:Folio ;
+                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
                                   
                         knora-base:objectClassConstraint knora-base:IntValue ;
 
@@ -2733,8 +2662,8 @@ roud-oeuvres:isPreviousStageOf    rdf:type owl:ObjectProperty ;
 
                                   knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                  rdfs:label  "Le texte précède génétiquement un autre texte (surtout document d'archive)"@fr ,
-                                              "The text is genetically before another text"@en ,
+                                  rdfs:label  "Le texte précède génétiquement un autre texte (pour un document d'archive qui précède génétiquement un autre document d'archive). Ces liens forment un reseau génétique."@fr ,
+                                              "The text is genetically before another text (for an archival document which is genetically before another archival document). These links create a genetic network."@en ,
                                               "Testo geneticamente precedente un altro testo"@it ;
 
                                   rdfs:comment  "Ces liens forment un reseau génétique."@fr ,
