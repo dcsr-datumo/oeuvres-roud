@@ -550,11 +550,6 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               ],
                               [
                                 rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:isInEdition ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:isInPaperEdition ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                               ],
@@ -918,33 +913,10 @@ roud-oeuvres:manuscriptIsInArchive   rdf:type  owl:ObjectProperty ;
                                         salsah-gui:guiOrder "1"^^xsd:integer .
 
 
-roud-oeuvres:isInEdition    rdf:type owl:ObjectProperty ;
-
-                            rdfs:subPropertyOf knora-base:hasValue ;
-                            
-                            knora-base:objectClassConstraint knora-base:ListValue ;
-                            
-                            rdfs:label  "Est dans l'édition"@fr ,
-                                        "Is in edition"@en ,
-                                        "È nell'edizione"@it ;
-
-                            rdfs:comment  "Sera dans l'édition. Property abstraite, voir les subproperties."@fr ,
-                                          "Will be in the edition. Abstract property, see subproperties."@en ;
-
-                            salsah-gui:guiElement salsah-gui:Pulldown ;
-                            
-                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" .
-                            # abstrait, pas de guiOrder
-
-       
-
-
 
 roud-oeuvres:isInPaperEdition   rdf:type  owl:ObjectProperty ;
                         
                                 rdfs:subPropertyOf knora-base:hasValue ;
-
-                                rdfs:subPropertyOf roud-oeuvres:isInEdition ;
 
                                 knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
@@ -958,14 +930,16 @@ roud-oeuvres:isInPaperEdition   rdf:type  owl:ObjectProperty ;
                                               "The text will be part of the Œuvres complètes (print edition)." ;
 
                                 salsah-gui:guiElement salsah-gui:Pulldown ;
+                                
+                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
 
                                 salsah-gui:guiOrder "10"^^xsd:integer .
+
+
 
 roud-oeuvres:scanIsInDigitalEdition   rdf:type  owl:ObjectProperty ;
                         
                                       rdfs:subPropertyOf knora-base:hasValue ;
-
-                                      rdfs:subPropertyOf roud-oeuvres:isInEdition ;
 
                                       knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
@@ -980,13 +954,15 @@ roud-oeuvres:scanIsInDigitalEdition   rdf:type  owl:ObjectProperty ;
 
                                       salsah-gui:guiElement salsah-gui:Pulldown ;
 
+                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
+
                                       salsah-gui:guiOrder "11"^^xsd:integer .
+
+
 
 roud-oeuvres:txtIsInDigitalEdition  rdf:type  owl:ObjectProperty ;
                         
                                     rdfs:subPropertyOf knora-base:hasValue ;
-
-                                    rdfs:subPropertyOf roud-oeuvres:isInEdition ;
 
                                     knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
@@ -1000,6 +976,8 @@ roud-oeuvres:txtIsInDigitalEdition  rdf:type  owl:ObjectProperty ;
                                                   "The text will be part of the Œuvres complètes (digital edition)." ;
 
                                     salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
 
                                     salsah-gui:guiOrder "12"^^xsd:integer .
                                         

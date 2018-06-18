@@ -109,13 +109,15 @@ Create rules for transforming datation into hasDateEstablishedComputable (if ava
 ######################
 
 Espaces dans les labels ?
-Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après?
 
-Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
+Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après (json)?
+
+Expliquer la solution dans l'ontologie. Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
 
 Insérer texte xml dans Knora, comme pièce jointe? (easiness of editing)
 
 Download all texts, pour les transformer en Word?
 
+Find empty shelfmarks
 
 
