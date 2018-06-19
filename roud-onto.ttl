@@ -155,7 +155,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                                         """A manuscript or a typescript in an archive."""@en .
 
                           
-                    
+
+                 
 
 #### PAGE ################
 roud-oeuvres:Page   rdf:type owl:Class ;
