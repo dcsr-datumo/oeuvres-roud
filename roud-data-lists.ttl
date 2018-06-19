@@ -522,12 +522,42 @@
 		rdfs:label "Violet"@fr .		
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray> a knora-base:ListNode ;
-		knora-base:listNodeName "gray" ;
+		knora-base:listNodeName "gris" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
 		knora-base:listNodePosition 5 ;
-		rdfs:label "Gray"@fr .	
+		rdfs:label "Gris"@fr .	
 
 
 
 
 
+##############################################
+##
+## isInEdition - oui, non, peut-être
+##
+##############################################
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Sera dans les éditions"@fr ;
+	rdfs:label "Présence"@fr , "Presence"@en ;
+	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre> .
+	
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> a knora-base:ListNode ;
+		knora-base:listNodeName "oui" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "oui"@fr , "yes"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non> a knora-base:ListNode ;
+		knora-base:listNodeName "non" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "non"@fr , "no"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre> a knora-base:ListNode ;
+		knora-base:listNodeName "peutetre" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
+		knora-base:listNodePosition 3 ;
+		rdfs:label "peut-être"@fr , "maybe"@en .
