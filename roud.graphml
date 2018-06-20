@@ -123,7 +123,7 @@
           <y:Geometry height="40.296875" width="117.2880859375" x="1302.2841568837996" y="961.8515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.2880859375" x="20.0" y="3.0">ListValue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="77.2880859375" x="20.0" y="10.837500156500369">ListValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -927,7 +927,7 @@
           <y:Geometry height="40.296875" width="123.310546875" x="4328.8447265625" y="891.3515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="3.0">TextValue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="10.837500156500369">TextValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1032,7 +1032,7 @@
           <y:Geometry height="40.296875" width="201.90098974959756" x="3865.84521484375" y="1637.886091052457"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093548778" y="3.0">TextValue [Rich text]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093549006" y="10.837500156500482">TextValue [Rich text]<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1305,7 +1305,7 @@
           <y:Geometry height="40.296875" width="123.310546875" x="4310.8447265625" y="2139.8515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="3.0">TextValue<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="10.837500156500482">TextValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1529,27 +1529,29 @@
     <node id="n74">
       <data key="d4"/>
       <data key="d6">
-        <y:ShapeNode>
-          <y:Geometry height="56.59375" width="253.7880859375" x="2952.2544304027306" y="1372.703125"/>
-          <y:Fill color="#993366" transparent="false"/>
+        <y:UMLClassNode>
+          <y:Geometry height="40.296875" width="123.310546875" x="1562.7969839624582" y="961.8515625"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="36.59375" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="213.7880859375" x="20.0" y="10.0">ro:PageImage
-[kb:StillImageRepresentation]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="3.0">TextValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="0.0" nodeRatioY="0.0" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="3.3306690738754696E-16" nodeRatioY="0.020783253205128194" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
             </y:ModelParameter>
           </y:NodeLabel>
-          <y:Shape type="ellipse"/>
-        </y:ShapeNode>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
       </data>
     </node>
     <node id="n75">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="40.296875" width="123.310546875" x="1562.7969839624582" y="961.8515625"/>
+          <y:Geometry height="40.296875" width="123.310546875" x="2243.6907554985996" y="961.8515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
           <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="3.0">TextValue<y:LabelModel>
@@ -1570,27 +1572,6 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="40.296875" width="123.310546875" x="2125.716796875" y="961.8515625"/>
-          <y:Fill color="#C0C0C0" transparent="false"/>
-          <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="83.310546875" x="20.0" y="3.0">TextValue<y:LabelModel>
-              <y:SmartNodeLabelModel distance="4.0"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="3.3306690738754696E-16" nodeRatioY="0.020783253205128194" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
-            </y:ModelParameter>
-          </y:NodeLabel>
-          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
-            <y:AttributeLabel/>
-            <y:MethodLabel/>
-          </y:UML>
-        </y:UMLClassNode>
-      </data>
-    </node>
-    <node id="n77">
-      <data key="d4"/>
-      <data key="d6">
-        <y:UMLClassNode>
           <y:Geometry height="40.296875" width="123.310546875" x="2770.4598622304634" y="2828.475531131646"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
@@ -1608,7 +1589,7 @@
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n78">
+    <node id="n77">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -1629,7 +1610,7 @@
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n79">
+    <node id="n78">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -1650,7 +1631,7 @@
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n80">
+    <node id="n79">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
@@ -1671,14 +1652,35 @@
         </y:UMLClassNode>
       </data>
     </node>
-    <node id="n81">
+    <node id="n80">
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
           <y:Geometry height="40.296875" width="201.90098974959756" x="4177.813781197065" y="1350.1283530784697"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093548778" y="3.0">TextValue [Rich text]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093549006" y="10.837500156500482">TextValue [Rich text]<y:LabelModel>
+              <y:SmartNodeLabelModel distance="4.0"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:SmartNodeLabelModelParameter labelRatioX="0.0" labelRatioY="0.0" nodeRatioX="3.3306690738754696E-16" nodeRatioY="0.020783253205128194" offsetX="0.0" offsetY="0.0" upX="0.0" upY="-1.0"/>
+            </y:ModelParameter>
+          </y:NodeLabel>
+          <y:UML clipContent="true" constraint="" hasDetailsColor="false" omitDetails="false" stereotype="" use3DEffect="true">
+            <y:AttributeLabel/>
+            <y:MethodLabel/>
+          </y:UML>
+        </y:UMLClassNode>
+      </data>
+    </node>
+    <node id="n81">
+      <data key="d4"/>
+      <data key="d6">
+        <y:UMLClassNode>
+          <y:Geometry height="40.296875" width="201.90098974959756" x="4186.591525134807" y="1279.8314780784697"/>
+          <y:Fill color="#C0C0C0" transparent="false"/>
+          <y:BorderStyle color="#000000" type="line" width="1.0"/>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093549006" y="10.837500156500482">TextValue [Rich text]<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1696,10 +1698,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="40.296875" width="201.90098974959756" x="4186.591525134807" y="1279.8314780784697"/>
+          <y:Geometry height="40.296875" width="201.90098974959756" x="4201.7455432678735" y="1188.10582956096"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093548778" y="3.0">TextValue [Rich text]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093549006" y="10.837500156500482">TextValue [Rich text]<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1717,10 +1719,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="40.296875" width="201.90098974959756" x="4201.7455432678735" y="1188.10582956096"/>
+          <y:Geometry height="40.296875" width="201.90098974959756" x="4082.233902763862" y="1137.3150522003893"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093548778" y="3.0">TextValue [Rich text]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093549006" y="10.837500156500482">TextValue [Rich text]<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -1738,10 +1740,10 @@
       <data key="d4"/>
       <data key="d6">
         <y:UMLClassNode>
-          <y:Geometry height="40.296875" width="201.90098974959756" x="4082.233902763862" y="1137.3150522003893"/>
+          <y:Geometry height="40.296875" width="125.798828125" x="2114.3502360578577" y="961.8515625"/>
           <y:Fill color="#C0C0C0" transparent="false"/>
           <y:BorderStyle color="#000000" type="line" width="1.0"/>
-          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="171.6103515625" x="15.145319093548778" y="3.0">TextValue [Rich text]<y:LabelModel>
+          <y:NodeLabel alignment="center" autoSizePolicy="content" fontFamily="Dialog" fontSize="14" fontStyle="bold" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" textColor="#000000" verticalTextPosition="bottom" visible="true" width="85.798828125" x="20.0" y="3.0">DateValue<y:LabelModel>
               <y:SmartNodeLabelModel distance="4.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -2021,7 +2023,7 @@
           <y:Path sx="26.09782465736633" sy="4.8149946230405885" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="-39.02570560723416" anchorY="-234.61917425667593" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#993366" upX="-0.9667204194500028" upY="0.25583516298275116" verticalTextPosition="bottom" visible="true" width="335.037109375" x="-144.3613826029814" y="-558.5063891629924">ro:manuscriptHasDateEstablished [ro:hasDate]<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="-42.45961810490644" anchorY="-247.59484691793637" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#993366" upX="-0.9667204194500028" upY="0.25583516298275116" verticalTextPosition="bottom" visible="true" width="308.1923828125" x="-140.92747010530908" y="-545.5307165017322">ro:manuscriptHasDateEstablishedReadable<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -3367,33 +3369,13 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e81" source="n74" target="n8">
+    <edge id="e81" source="n8" target="n28">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
-          <y:Path sx="-23.352779460266447" sy="-4.562441504539493" tx="49.30715074530781" ty="-6.739213231073336"/>
-          <y:LineStyle color="#0000FF" type="line" width="3.0"/>
-          <y:Arrows source="delta" target="none"/>
-          <y:EdgeLabel alignment="center" anchorX="-57.31078505561345" anchorY="-22.609946587665718" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" upX="-0.005457392175473195" upY="0.9999851083244405" verticalTextPosition="bottom" visible="true" width="107.11328125" x="-164.53323921619253" y="-23.19450577064873">hasPageImage<y:LabelModel>
-              <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
-            </y:LabelModel>
-            <y:ModelParameter>
-              <y:RotatedDiscreteEdgeLabelModelParameter position="head"/>
-            </y:ModelParameter>
-            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
-          </y:EdgeLabel>
-          <y:StyleProperties>
-            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
-          </y:StyleProperties>
-        </y:GenericEdge>
-      </data>
-    </edge>
-    <edge id="e82" source="n74" target="n28">
-      <data key="d10">
-        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:Path sx="52.966013431102965" sy="-12.831897038892748" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="18.30970216386322" anchorY="-183.51828654738028" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" upX="-0.9939246611588038" upY="-0.11006256375515278" verticalTextPosition="bottom" visible="true" width="4.0" x="14.334003519228006" y="-187.9342354470361">
+          <y:EdgeLabel alignment="center" anchorX="214.00480883891714" anchorY="-189.60351960231583" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" hasText="false" height="4.0" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#008000" upX="-0.6578938436838493" upY="-0.75311067609143" verticalTextPosition="bottom" visible="true" width="4.0" x="211.37323346418174" y="-195.24753768141696">
             <y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
@@ -3402,7 +3384,7 @@
             </y:ModelParameter>
             <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
           </y:EdgeLabel>
-          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="262.345703125" x="-80.4718007230158" y="-194.2703857421875">ro:pageImageHasStillImageRepresentation<y:LabelModel>
+          <y:EdgeLabel alignment="center" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="12" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="17.96875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#000000" verticalTextPosition="bottom" visible="true" width="262.345703125" x="126.32657019535418" y="-194.09298829612862">ro:pageImageHasStillImageRepresentation<y:LabelModel>
               <y:SmartEdgeLabelModel autoRotationEnabled="false" defaultAngle="0.0" defaultDistance="10.0"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -3416,19 +3398,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e83" source="n74" target="n74">
-      <data key="d10">
-        <y:ArcEdge>
-          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
-            <y:Point x="3079.1484375" y="1401.0"/>
-          </y:Path>
-          <y:LineStyle color="#000000" type="line" width="1.0"/>
-          <y:Arrows source="none" target="standard"/>
-          <y:Arc height="0.0" ratio="1.0" type="fixedRatio"/>
-        </y:ArcEdge>
-      </data>
-    </edge>
-    <edge id="e84" source="n0" target="n75">
+    <edge id="e82" source="n0" target="n74">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3448,13 +3418,13 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e85" source="n0" target="n76">
+    <edge id="e83" source="n0" target="n75">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="37.90960311284039" sy="0.1808913099869187" tx="0.0" ty="0.0"/>
           <y:LineStyle color="#000000" type="line" width="1.0"/>
           <y:Arrows source="none" target="plain"/>
-          <y:EdgeLabel alignment="center" anchorX="-7.480116711062692" anchorY="-307.18411907752534" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#993366" upX="-0.9953017995499954" upY="0.09682111243184872" verticalTextPosition="bottom" visible="true" width="176.62109375" x="-44.782283699608854" y="-482.9754115253888">ro:hasDatationComment<y:LabelModel>
+          <y:EdgeLabel alignment="center" anchorX="12.189684713298902" anchorY="-305.24926938760564" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#993366" upX="-0.9989209616469545" upY="-0.046442570797959624" verticalTextPosition="bottom" visible="true" width="176.62109375" x="-8.085289180129127" y="-482.6224212576574">ro:hasDatationComment<y:LabelModel>
               <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
             </y:LabelModel>
             <y:ModelParameter>
@@ -3468,7 +3438,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e86" source="n26" target="n77">
+    <edge id="e84" source="n26" target="n76">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3488,7 +3458,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e87" source="n15" target="n78">
+    <edge id="e85" source="n15" target="n77">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3508,7 +3478,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e88" source="n15" target="n79">
+    <edge id="e86" source="n15" target="n78">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3528,7 +3498,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e89" source="n15" target="n80">
+    <edge id="e87" source="n15" target="n79">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3548,7 +3518,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e90" source="n0" target="n29">
+    <edge id="e88" source="n0" target="n29">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="34.71145033718949" sy="3.6010773017803785" tx="-5.488707311267717" ty="0.0"/>
@@ -3568,7 +3538,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e91" source="n57" target="n57">
+    <edge id="e89" source="n57" target="n57">
       <data key="d10">
         <y:ArcEdge>
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0">
@@ -3580,7 +3550,7 @@
         </y:ArcEdge>
       </data>
     </edge>
-    <edge id="e92" source="n15" target="n0">
+    <edge id="e90" source="n15" target="n0">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="-17.880270927754736" sy="4.763335615304641" tx="0.0" ty="0.0"/>
@@ -3600,7 +3570,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e93" source="n15" target="n71">
+    <edge id="e91" source="n15" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="26.576508430609465" sy="4.183313099870247" tx="37.26698307212382" ty="0.0">
@@ -3622,7 +3592,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e94" source="n0" target="n71">
+    <edge id="e92" source="n0" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="34.36893430443297" sy="3.4839302373607097" tx="42.273013099788386" ty="0.0">
@@ -3644,7 +3614,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e95" source="n81" target="n71">
+    <edge id="e93" source="n80" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="50.46846781397835" ty="1.1718810950758325"/>
@@ -3664,7 +3634,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e96" source="n82" target="n71">
+    <edge id="e94" source="n81" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3684,7 +3654,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e97" source="n83" target="n71">
+    <edge id="e95" source="n82" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3704,7 +3674,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e98" source="n84" target="n71">
+    <edge id="e96" source="n83" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
@@ -3724,7 +3694,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e99" source="n15" target="n71">
+    <edge id="e97" source="n15" target="n71">
       <data key="d10">
         <y:GenericEdge configuration="com.yworks.bpmn.Connection">
           <y:Path sx="20.75539235970973" sy="-0.26280118287968435" tx="-9.924065491682086" ty="2.7604657695246715"/>
@@ -3744,8 +3714,7 @@
         </y:GenericEdge>
       </data>
     </edge>
-    <edge id="e100" source="n71" target="n71">
-      <data key="d9"/>
+    <edge id="e98" source="n71" target="n71">
       <data key="d10">
         <y:ArcEdge>
           <y:Path sx="-54.84685517780781" sy="1.5060256346353071" tx="30.085944960540473" ty="-0.9322365702932984">
@@ -3765,8 +3734,7 @@
         </y:ArcEdge>
       </data>
     </edge>
-    <edge id="e101" source="n71" target="n71">
-      <data key="d9"/>
+    <edge id="e99" source="n71" target="n71">
       <data key="d10">
         <y:ArcEdge>
           <y:Path sx="-48.780290889005755" sy="1.5060256346353071" tx="47.531066205676325" ty="-2.1513676727574875">
@@ -3784,6 +3752,26 @@
           </y:EdgeLabel>
           <y:Arc height="127.64508819580078" ratio="5.2975239753723145" type="fixedRatio"/>
         </y:ArcEdge>
+      </data>
+    </edge>
+    <edge id="e100" source="n0" target="n84">
+      <data key="d10">
+        <y:GenericEdge configuration="com.yworks.bpmn.Connection">
+          <y:Path sx="0.0" sy="0.0" tx="0.0" ty="0.0"/>
+          <y:LineStyle color="#000000" type="line" width="1.0"/>
+          <y:Arrows source="none" target="plain"/>
+          <y:EdgeLabel alignment="center" anchorX="10.812610449814656" anchorY="-181.76513909263986" configuration="AutoFlippingLabel" distance="2.0" fontFamily="Dialog" fontSize="14" fontStyle="plain" hasBackgroundColor="false" hasLineColor="false" height="20.296875" horizontalTextPosition="center" iconTextGap="4" modelName="custom" preferredPlacement="anywhere" ratio="0.5" textColor="#993366" upX="-0.997994441649305" upY="0.063301614806354" verticalTextPosition="bottom" visible="true" width="420.2333984375" x="-36.04501069969179" y="-601.1557349286626">ro:manuscriptHasDateEstablishedComputable [ro:hasDate]<y:LabelModel>
+              <y:RotatedDiscreteEdgeLabelModel angle="0.0" autoRotationEnabled="true" candidateMask="18" distance="2.0" positionRelativeToSegment="false"/>
+            </y:LabelModel>
+            <y:ModelParameter>
+              <y:RotatedDiscreteEdgeLabelModelParameter position="head"/>
+            </y:ModelParameter>
+            <y:PreferredPlacementDescriptor angle="0.0" angleOffsetOnRightSide="0" angleReference="absolute" angleRotationOnRightSide="co" distance="-1.0" frozen="true" placement="anywhere" side="anywhere" sideReference="relative_to_edge_flow"/>
+          </y:EdgeLabel>
+          <y:StyleProperties>
+            <y:Property class="com.yworks.yfiles.bpmn.view.BPMNTypeEnum" name="com.yworks.bpmn.type" value="CONNECTION_TYPE_DIRECTED_ASSOCIATION"/>
+          </y:StyleProperties>
+        </y:GenericEdge>
       </data>
     </edge>
   </graph>

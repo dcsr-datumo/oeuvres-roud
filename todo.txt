@@ -13,14 +13,6 @@
 ##
 #
 
-Fixed EstbalishedText
-Add list for presence in digital edition
-Update comment di class EstavlishedText
-Réference bibliographique (en lien avec la publication; pour les manuscrits) --> changer le label
-Reference bibliographique dans le texte doit punter au Texte !
-Change label --> surtout document d'archive qui precede un autre document d'archive
-
-
 When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
 
 
@@ -41,7 +33,16 @@ Sul Github di Knora, open Issue (type: question) sur la modelisation du temps
 ##
 #
 Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
-Un bon label pour les fiches serait titre+cote, pour les articles titre+revue+anne
+
+LABEL (tout minuscule, pas d'accent)
+Document d'archive: doc_cote_premiermotdutitre
+Texte (si document): txt_cote_premiermotdutitre
+Texte (si publication): txt_
+Article: pub_titre_revue_annee
+Section d'un livre: pub_titre_livre_annee
+Livre: pub_titre_annee
+Personne: nom_prenom
+Maison d'édition: edi_premiermotdunom
 
 
 
@@ -74,6 +75,7 @@ isEditionNumber has cardinality max:1, because it can and cannot be there (but n
 
 There is no abstract property hasDirectSource, perché non si può non specificare l'oggetto
 
+Mentre Salsah 2 è un progetto a parte, Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 
 
 
@@ -115,22 +117,19 @@ Create rules for transforming datation into hasDateEstablishedComputable (if ava
 ##
 ######################
 
-Espaces dans les labels ?
 
+GRAPHDB
 Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après (json)?
 
-Expliquer la solution dans l'ontologie. Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
-
+SALSAH - KNORA - ONTOLOGIE
+Espaces dans les labels ?
 Insérer texte xml dans Knora, comme pièce jointe? (easiness of editing)
-
-Download all texts, pour les transformer en Word?
-
-Requetes - API:
-- Find empty shelfmarks
-- Catena di isPreviousStageOf (item isPreviousStageOf x, x isPreviousStageOf xx, xx isPreviousStageOf ....)
+Page - Document
+Catena di isPreviousStageOf (item isPreviousStageOf x, x isPreviousStageOf y, y isPreviousStageOf ....)
+Time. Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
 
 
 Feedback per Salsah2
-Creare i label è mortale e totalmente error prone ! Crearli automaticamente?
+Creare i label è noioso e error prone. Crearli automaticamente?
 Commenti delle property vanno usati
 
