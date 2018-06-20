@@ -21,93 +21,10 @@
 #
 ##########################################################
 
-## per Ele: Cardinality for everything about the archive often is maxCardinality 1, in order to include 'inventaire' et 'fiches'.
-## Change this ?
-
-
-#### DOCUMENT DU FONDS D'ARCHIVE - abstract class ##############
-roud-oeuvres:WrittenSource    rdf:type owl:Class ;
-                              rdfs:subClassOf knora-base:Resource ,
-                              
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceIsInArchive ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceHasTitle ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceHasShelfmark ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceHasOldShelfmark ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasEditorialSet ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;  
-                                owl:onProperty roud-oeuvres:hasAnnotation ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasGeneticStage ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;  
-                                owl:onProperty roud-oeuvres:isPhotocopy ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger               
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceIsDigitized ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                    
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPublicComment ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [ 
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:writtenSourceHasInternalComment ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPublishedReference ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger                      
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPublishedReferenceValue ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
-                              ];  ## isPreviousStageOf - minCardinality 0 - eliminato, che era ??
-
-                              rdfs:label  "(Classe abstraite, ne pas utiliser. Document)"@fr ,
-                                          "(Abstract class, do not use. Document)"@en ,
-                                          "(Classe astratta, non usare. Documento)"@it ;
-
-                              rdfs:comment  """NE PAS UTILISER. Tout document écrit conservé dans un archive (CRLR ou autre). Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."""@fr ,
-                                            """DO NOT USE. Any written document contained in an archive (CRLR or other). This is an abstract class, see its sub-classes."""@en .
-
 
 
 #### MANUSCRIPT
 roud-oeuvres:Manuscript   rdf:type owl:Class ;
-
-                          rdfs:subClassOf roud-oeuvres:WrittenSource ;
 
                           rdfs:subClassOf knora-base:Resource ,
                           [
@@ -119,11 +36,16 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasDate ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger       
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedReadable ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
-                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablished ;   
-                            owl:minCardinality "0"
+                            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedComputable ;   
+                            owl:maxCardinality "1"
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -152,8 +74,78 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasDatationComment ;
+                            owl:onProperty roud-oeuvres:manuscriptIsInArchive ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasTitle ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasShelfmark ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasOldShelfmark ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasEditorialSet ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;  
+                            owl:onProperty roud-oeuvres:hasAnnotation ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasGeneticStage ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;  
+                            owl:onProperty roud-oeuvres:isPhotocopy ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger               
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptIsDigitized ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                    
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasPublicComment ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [ 
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasInternalComment ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasPublishedReference ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:manuscriptHasPublishedReferenceValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasTranslatedAuthor ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:hasTranslatedAuthorValue ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Document d'archive"@fr ,
                                       "Archival document"@en ,
@@ -163,30 +155,22 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                                         """A manuscript or a typescript in an archive."""@en .
 
                           
-                    
+
+                 
 
 #### PAGE ################
 roud-oeuvres:Page   rdf:type owl:Class ;
               
-                    rdfs:subClassOf knora-base:Resource ,
+                    rdfs:subClassOf knora-base:StillImageRepresentation,
+                    
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasPageImage ; 
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasPageImageValue ;  
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:pageIsPartOfWrittenSource ;
+                      owl:onProperty roud-oeuvres:pageIsPartOfManuscript ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger                    
                     ],
                     [
                       rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:pageIsPartOfWrittenSourceValue ;
+                      owl:onProperty roud-oeuvres:pageIsPartOfManuscriptValue ;
                       owl:cardinality "1"^^xsd:nonNegativeInteger                    
                     ],
                     [
@@ -207,44 +191,6 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                     rdfs:comment  """Une page."""@fr ,
 
                                   """A page."""@en .
-
-
-roud-oeuvres:PageImage  rdf:type owl:Class ;
-              
-	                    rdfs:subClassOf knora-base:StillImageRepresentation ,
-	                    [
-	                      rdf:type owl:Restriction ;
-	                      owl:onProperty roud-oeuvres:pageImageHasStillImageFileValue ;  ## sub-property of kb:hasStillImageFileValue, CHECK
-	                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-	                    ];
-	                                 
-	                    rdfs:label    "Image de la page"@fr,
-	                                  "Page image"@en,
-	                                  "Immagine della pagina"@it ;
-
-	                    rdfs:comment  """Image numérique de la page."""@fr ,
-
-	                                  """A digital image of the page."""@en .
-
-
-
-
-
-#### PUBLICATION IN ARCHIVE - abstract class ################
-roud-oeuvres:PublicationInArchive   rdf:type owl:Class ;
-                                    
-                                    rdfs:subClassOf knora-base:Resource ;
-                                    
-                                    rdfs:subClassOf roud-oeuvres:WrittenSource ;
-                                    
-                                    rdfs:subClassOf roud-oeuvres:Publication ;
-
-                                    rdfs:label  "(Classe abstraite, ne pas utiliser. Publication conservé dans un fonds d'archive)"@fr ,
-                                                  "(Abstract class, do not use. Publication in an archive)"@en ,
-                                                  "(Classe astratta, non usare. Pubblicazione conservata in un fondo d'archivio)"@it ;
-
-                                    rdfs:comment  "Une publication, conservé dans un fonds d'archive. Il s'agit d'une classe abstraite, voir plutôt ses sub-classes."@fr ,
-                                                  "A publication, found in an archive. This is an abstract classe, see its sub-classes."@en .
 
 
 
@@ -315,21 +261,6 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isEditionOfValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasText ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasTextValue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:isPreviousStageOfPartOfCollection ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger                 
                           ],
                           [
@@ -508,30 +439,110 @@ roud-oeuvres:Periodical   rdf:type owl:Class ;
 
 
 
-roud-oeuvres:Text   rdf:type   owl:Class ;
+roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                    
-                    rdfs:subClassOf knora-base:Resource ,
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:hasTextContent ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:isTextOf ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ],
-                    [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty roud-oeuvres:isTextOfValue ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                    ];
-                    rdfs:label  "Texte (ne pas remplir pour l'instant)"@fr ,
-                                "Text"@en ,
-                                "Testo"@it ;
+                              rdfs:subClassOf knora-base:Resource ,
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasTextContent ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasDirectSourcePublication ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasDirectSourcePublicationValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasDirectSourceManuscript ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasDirectSourceManuscriptValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasInternalComment ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger 
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:estbalishedTextHasEditorialSet ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasTitle ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasNotice ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasPublishedReference ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasPublishedReferenceValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isPreviousStageOf ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isPreviousStageOfValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isPreviousStageOfCollectionSection ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isPreviousStageOfCollectionSectionValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:establishedTextHasDate ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isInPaperEdition ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:scanIsInDigitalEdition ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:txtIsInDigitalEdition ;
+                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                              ];
+                              rdfs:label  "Texte"@fr ,
+                                          "Text"@en ,
+                                          "Testo"@it ;
 
-                    rdfs:comment  """Le texte de l'édition."""@fr ,
-                                  """The text of the edition."""@en .
+                              rdfs:comment  """Unité textuelle pour l'édition (texte et fac-similé, ou fac-similé). L'unité textuelle corresponde à un texte dans l'édition Zoé, c'est à dire une entrée dans la table de matière. L'unité texteulle corresponde aussi à une page de l'édition numérique.<br/>Tous les liens d'un texte sont à d'autres textes, et non pas directement aux publications ou aux documents."""@fr ,
+                                            """Textual unit for the edition (text and scan, or only scan)."""@en .
 
 
 roud-oeuvres:Work   rdf:type   owl:Class ;
@@ -852,13 +863,13 @@ roud-oeuvres:isInArchive    rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
+roud-oeuvres:manuscriptIsInArchive   rdf:type  owl:ObjectProperty ;
                         
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
                                         rdfs:subPropertyOf roud-oeuvres:isInArchive ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                         knora-base:objectClassConstraint knora-base:ListValue ;
                                         
@@ -874,6 +885,76 @@ roud-oeuvres:writtenSourceIsInArchive   rdf:type  owl:ObjectProperty ;
                                         salsah-gui:guiElement salsah-gui:Pulldown ;
 
                                         salsah-gui:guiOrder "1"^^xsd:integer .
+
+
+
+roud-oeuvres:isInPaperEdition   rdf:type  owl:ObjectProperty ;
+                        
+                                rdfs:subPropertyOf knora-base:hasValue ;
+
+                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                knora-base:objectClassConstraint knora-base:ListValue ;
+                                
+                                rdfs:label  "Sera dans l'édition papier"@fr ,
+                                            "Will be into print edition"@en ,
+                                            "Sarà nell'edizione cartacea"@it ;
+
+                                rdfs:comment  "Le texte fera partie des Œuvres complètes (papier)."@fr ,
+                                              "The text will be part of the Œuvres complètes (print edition)." ;
+
+                                salsah-gui:guiElement salsah-gui:Pulldown ;
+                                
+                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+
+
+                                salsah-gui:guiOrder "18"^^xsd:integer .
+
+
+
+roud-oeuvres:scanIsInDigitalEdition   rdf:type  owl:ObjectProperty ;
+                        
+                                      rdfs:subPropertyOf knora-base:hasValue ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                      knora-base:objectClassConstraint knora-base:ListValue ;
+                                      
+                                      rdfs:label  "Fac-similé dans le complement numérique"@fr ,
+                                                  "Fac-similé in digital edition"@en ,
+                                                  "Scan nell'edizione digitale"@it ;
+
+                                      rdfs:comment  "Le scan fera partie des Œuvres complètes (numérique)."@fr ,
+                                                    "The scan will be part of the Œuvres complètes (digital edition)." ;
+
+                                      salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+
+                                      salsah-gui:guiOrder "19"^^xsd:integer .
+
+
+
+roud-oeuvres:txtIsInDigitalEdition  rdf:type  owl:ObjectProperty ;
+                        
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                    knora-base:objectClassConstraint knora-base:ListValue ;
+                                    
+                                    rdfs:label  "Texte dans le complement numérique"@fr ,
+                                                "Texte in digital edition"@en ,
+                                                "Testo nell'edizione digitale"@it ;
+
+                                    rdfs:comment  "Le texte fera partie des Œuvres complètes (numérique)."@fr ,
+                                                  "The text will be part of the Œuvres complètes (digital edition)." ;
+
+                                    salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+
+                                    salsah-gui:guiOrder "20"^^xsd:integer .
                                         
 
 
@@ -892,13 +973,13 @@ roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:writtenSourceHasTitle    rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasTitle    rdf:type owl:ObjectProperty ;
 
                                       rdfs:subPropertyOf  knora-base:hasValue ;
 
                                       rdfs:subPropertyOf  roud-oeuvres:hasTitle ;
 
-                                      knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                      knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                       knora-base:objectClassConstraint knora-base:TextValue ;
                                       
@@ -938,6 +1019,28 @@ roud-oeuvres:photoHasTitle 	  rdf:type owl:ObjectProperty ;
 	                          salsah-gui:guiOrder "0"^^xsd:integer .
 
 
+roud-oeuvres:establishedTextHasTitle    rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf  roud-oeuvres:hasTitle ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                        knora-base:objectClassConstraint knora-base:TextValue ;
+                                        
+                                        rdfs:label  "Titre"@fr ,
+                                                    "Title"@en ,
+                                                    "Legenda della foto"@it ;
+
+                                        rdfs:comment  "Le titre qui apparaitra dans l'édition."@fr ,
+                                                      "The title, as it will appear in the edition."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Richtext ;
+
+                                        salsah-gui:guiOrder "0"^^xsd:integer .
+
+
 
 
 roud-oeuvres:hasShelfmark   rdf:type owl:ObjectProperty ;
@@ -959,35 +1062,37 @@ roud-oeuvres:hasShelfmark   rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:writtenSourceHasShelfmark  rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasShelfmark   rdf:type owl:ObjectProperty ;
 
-                                        rdfs:subPropertyOf  knora-base:hasValue ;
+                                      rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                        rdfs:subPropertyOf roud-oeuvres:hasShelfmark ;
+                                      rdfs:subPropertyOf roud-oeuvres:hasShelfmark ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                      knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
-                                        knora-base:objectClassConstraint knora-base:TextValue ;
-                                        
-                                        rdfs:label  "Cote du document"@fr ,
-                                                    "Shelfmark of the document"@en ,
-                                                    "Segnatura del documento"@it ;
+                                      knora-base:objectClassConstraint knora-base:TextValue ;
+                                      
+                                      rdfs:label  "Cote du document"@fr ,
+                                                  "Shelfmark of the document"@en ,
+                                                  "Segnatura del documento"@it ;
 
-                                        rdfs:comment  "La cote du document."@fr ,
-                                                      "The shelfmark of the document."@en ;
+                                      rdfs:comment  "La cote du document."@fr ,
+                                                    "The shelfmark of the document."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:SimpleText ;
+                                      salsah-gui:guiElement salsah-gui:SimpleText ;
 
-                                        salsah-gui:guiOrder "2"^^xsd:integer .
+                                      salsah-gui:guiOrder "2"^^xsd:integer .
 
                   
 
 
-roud-oeuvres:writtenSourceHasOldShelfmark   rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasOldShelfmark      rdf:type owl:ObjectProperty ;
                           
                                             rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                            knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                            rdfs:subPropertyOf roud-oeuvres:hasShelfmark ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                             knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -1009,8 +1114,6 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                       
                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
-
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>" ;
@@ -1020,11 +1123,55 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                                           "Insieme editoriale"@it ;
 
                               rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
-                                            "The editorial set to which the document belongs."@en ;
+                                            "The editorial set to which the document belongs."@en .
 
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
 
-                              salsah-gui:guiOrder "4"^^xsd:integer .
+roud-oeuvres:manuscriptHasEditorialSet  rdf:type  owl:ObjectProperty ;
+                      
+                                        rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf  roud-oeuvres:hasEditorialSet ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                        knora-base:objectClassConstraint knora-base:ListValue ;
+                                        
+                                        salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>" ;
+
+                                        rdfs:label  "Ensemble éditorial"@fr ,
+                                                    "Editorial set"@en ,
+                                                    "Insieme editoriale"@it ;
+
+                                        rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
+                                                      "The editorial set to which the document belongs."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                        salsah-gui:guiOrder "4"^^xsd:integer .
+
+
+roud-oeuvres:estbalishedTextHasEditorialSet   rdf:type  owl:ObjectProperty ;
+                      
+                                              rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                              rdfs:subPropertyOf  roud-oeuvres:hasEditorialSet ;
+
+                                              knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                              knora-base:objectClassConstraint knora-base:ListValue ;
+                                              
+                                              salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>" ;
+
+                                              rdfs:label  "Ensemble éditorial"@fr ,
+                                                          "Editorial set"@en ,
+                                                          "Insieme editoriale"@it ;
+
+                                              rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
+                                                            "The editorial set to which the document belongs."@en ;
+
+                                              salsah-gui:guiElement salsah-gui:Pulldown ;
+
+                                              salsah-gui:guiOrder "4"^^xsd:integer .
 
 
 
@@ -1033,7 +1180,7 @@ roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
                     
                             rdfs:subPropertyOf knora-base:hasValue ;
 
-                            knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                            knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
                                             
@@ -1081,7 +1228,7 @@ roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
                     
                             rdfs:subPropertyOf knora-base:hasValue ;
 
-                            knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                            knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                             knora-base:objectClassConstraint knora-base:BooleanValue ;
                                             
@@ -1253,47 +1400,72 @@ roud-oeuvres:manuscriptHasDate      rdf:type owl:ObjectProperty ;
                                     salsah-gui:guiOrder "13"^^xsd:integer .
 
 
-roud-oeuvres:manuscriptHasDateEstablished       rdf:type  owl:ObjectProperty ;
+roud-oeuvres:establishedTextHasDate      rdf:type owl:ObjectProperty ;
 
-                                                rdfs:subPropertyOf knora-base:hasValue ;
+                                    rdfs:subPropertyOf knora-base:hasValue ;
 
-                                                rdfs:subPropertyOf roud-oeuvres:hasDate ;
+                                    rdfs:subPropertyOf roud-oeuvres:hasDate ;
 
-                                                knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                    knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                                knora-base:objectClassConstraint knora-base:DateValue ;
+                                    knora-base:objectClassConstraint knora-base:DateValue ;
 
-                                                rdfs:label  "Datation"@fr ,
-                                                            "Datation"@en ,
-                                                            "Datazione"@it ;
+                                    rdfs:label  "Date (seulement pour le journal)"@fr ,
+                                                "Date (only for diary note)"@en ,
+                                                "Data (solo per nota di diario)"@it ;
 
-                                                rdfs:comment  "La date individué par les chercheures."@fr ,
-                                                              "The date identified by the scholars."@en ;
+                                    rdfs:comment  "La date de la note de journal."@fr ,
+                                                  "The date of the diary note."@en ;
 
-                                                salsah-gui:guiElement salsah-gui:Date ;
+                                    salsah-gui:guiElement salsah-gui:Date ;
                                   
-                                                salsah-gui:guiOrder "14"^^xsd:integer .
+                                    salsah-gui:guiOrder "13"^^xsd:integer .
 
 
 
-roud-oeuvres:hasDatationComment   rdf:type owl:ObjectProperty ;
+
+roud-oeuvres:manuscriptHasDateEstablishedComputable   rdf:type  owl:ObjectProperty ;
+
+                                                      rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                      rdfs:subPropertyOf roud-oeuvres:hasDate ;
+
+                                                      knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                                      knora-base:objectClassConstraint knora-base:DateValue ;
+
+                                                      rdfs:label  "Datation formalisé"@fr ,
+                                                                  "Formalized datation"@en ,
+                                                                  "Datazione formalizzata"@it ;
+
+                                                      rdfs:comment  "La date individué par les chercheures, esprimée de façon formalizé et computable."@fr ,
+                                                                    "The date identified by the scholars, expressed in a formalized and computable way."@en ;
+
+                                                      salsah-gui:guiElement salsah-gui:Date ;
+                                        
+                                                      salsah-gui:guiOrder "15"^^xsd:integer .
+
+
+
+roud-oeuvres:manuscriptHasDateEstablishedReadable   rdf:type owl:ObjectProperty ;
                           
-                                  rdfs:subPropertyOf  knora-base:hasValue ;
+                                                    rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                  knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                                    knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
-                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                                    knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                  rdfs:label  "Commentaire sur la datation"@fr ,
-                                              "Comment on datation"@en ,
-                                              "Commento sulla datazione"@it ;
+                                                    rdfs:label  "Datation"@fr ,
+                                                                "Datation"@en ,
+                                                                "Datazione"@it ;
 
-                                  rdfs:comment  "Spécifier info sur la datation."@fr ,
-                                                "Additional info on datation."@en ;
-                                  
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
-                                  
-                                  salsah-gui:guiOrder "15"^^xsd:integer .
+                                                    rdfs:comment  "La date individué par les chercheures. On peut insérer une date, ou une date précedé de 'vers', 'avant', 'après'. Pas de majuscule. Insérer ici aussi les commentaires."@fr ,
+                                                                  "The date identified by the scholars. Write a date, or a date preceded by 'vers', 'avant', 'après'. No capital letters. Insérer ici aussi les commentaires."@en ;
+
+                                                    
+                                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+                                                    
+                                                    salsah-gui:guiOrder "14"^^xsd:integer .
 
 
 
@@ -1301,7 +1473,7 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                               knora-base:objectClassConstraint knora-base:ListValue ;
                               
@@ -1323,31 +1495,118 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
 
 roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                   
-                                    rdfs:subPropertyOf knora-base:hasLinkTo ;       
-                                    
-                                    knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ; 
                                     
                                     knora-base:objectClassConstraint roud-oeuvres:Publication ;
 
                                     rdfs:label  "Référence bibliographique"@fr ,
                                                 "Bibliographical reference"@en ;
 
-                                    rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
-                                                  "The bibliographical reference (published version or other)."@en ;
+                                    rdfs:comment  "La référence bibliographique."@fr ,
+                                                  "The bibliographical reference."@en ;
                                   
-                                  salsah-gui:guiElement salsah-gui:Searchbox ;
-                                  
-                                  salsah-gui:guiOrder "17"^^xsd:integer .
-
-
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+                                    
+                                    salsah-gui:guiOrder "17"^^xsd:integer .
 
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;        
                                         
-                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                                         
                                         knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:manuscriptHasPublishedReference  rdf:type owl:ObjectProperty ;
+                  
+                                              rdfs:subPropertyOf knora-base:hasLinkTo ;    
+
+                                              rdfs:subPropertyOf roud-oeuvres:hasPublishedReference ;        
+                                              
+                                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                              
+                                              knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                              rdfs:label  "Référence bibliographique (pour les manuscrits qui sont en lien avec une publication)"@fr ,
+                                                          "Bibliographical reference (for manuscripts linked to a publication)"@en ;
+
+                                              rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
+                                                            "The bibliographical reference (published version or other)."@en ;
+                                            
+                                              salsah-gui:guiElement salsah-gui:Searchbox ;
+                                              
+                                              salsah-gui:guiOrder "17"^^xsd:integer .
+
+roud-oeuvres:manuscriptHasPublishedReferenceValue rdf:type owl:ObjectProperty ;
+                      
+                                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;        
+                                                  
+                                                  knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                                  
+                                                  knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:establishedTextHasPublishedReference  rdf:type owl:ObjectProperty ;
+                  
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ;       
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasPublishedReference ;        
+                                    
+                                    knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+                                    
+                                    knora-base:objectClassConstraint roud-oeuvres:Publication ;
+
+                                    rdfs:label  "Référence bibliographique (en lien avec publication)"@fr ,
+                                                "Bibliographical reference (linked to publication)"@en ;
+
+                                    rdfs:comment  "Le texte du document d'archive est en lien avec la publication."@fr ,
+                                                  "The text of the document is linked to the publication."@en ; 
+                                  
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+                                    
+                                    salsah-gui:guiOrder "17"^^xsd:integer .
+
+roud-oeuvres:establishedTextHasPublishedReferenceValue rdf:type owl:ObjectProperty ;
+                      
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;        
+                                        
+                                        knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+                                        
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+roud-oeuvres:hasTranslatedAuthor    rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+                                    
+                                    knora-base:objectClassConstraint roud-oeuvres:Person ;
+
+                                    rdfs:label  "Auteur traduit"@fr ,
+                                                "The translated author"@en ,
+                                                "Autore tradotto"@it ;
+
+                                    rdfs:comment  "L'auter ou autrice traduit-e."@fr ,
+                                                  "The author translated in the manuscript."@en ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                    salsah-gui:guiOrder "20"^^xsd:integer .
+                                  
+
+roud-oeuvres:hasTranslatedAuthorValue   rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
 
 
 
@@ -1355,7 +1614,7 @@ roud-oeuvres:hasPublicComment   rdf:type owl:ObjectProperty ;
                           
                                 rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                 knora-base:objectClassConstraint knora-base:TextValue ;
                                 
@@ -1390,13 +1649,13 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:writtenSourceIsDigitized   rdf:type owl:ObjectProperty ;     
+roud-oeuvres:manuscriptIsDigitized   rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
                                         rdfs:subPropertyOf knora-base:isDigitized ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                         knora-base:objectClassConstraint knora-base:BooleanValue ;
                                                         
@@ -1496,11 +1755,11 @@ roud-oeuvres:hasInternalComment   rdf:type owl:ObjectProperty ;
 
 
                           
-roud-oeuvres:writtenSourceHasInternalComment  rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptHasInternalComment  rdf:type owl:ObjectProperty ;
                           
                                               rdfs:subPropertyOf  knora-base:hasValue ;
 
-                                              knora-base:subjectClassConstraint roud-oeuvres:WrittenSource ;
+                                              knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                               knora-base:objectClassConstraint knora-base:TextValue ;
 
@@ -1513,7 +1772,7 @@ roud-oeuvres:writtenSourceHasInternalComment  rdf:type owl:ObjectProperty ;
                       
                                               salsah-gui:guiElement salsah-gui:Richtext ;
 
-                                              salsah-gui:guiOrder "20"^^xsd:integer .
+                                              salsah-gui:guiOrder "21"^^xsd:integer .
 
 
 
@@ -1540,6 +1799,94 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
 
 
 
+roud-oeuvres:establishedTextHasInternalComment    rdf:type owl:ObjectProperty ;
+                          
+                                                  rdfs:subPropertyOf  knora-base:hasValue ;
+
+                                                  knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                  knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                                  rdfs:label  "Commentaire interne"@fr ,
+                                                              "Internal comment"@en ,
+                                                              "Commento interno"@it ;
+
+                                                  rdfs:comment  "Commentaire sur l'édition qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
+                                                                "Internal comment on the edition, for the project team only."@en ;
+
+                                                  
+                                                  salsah-gui:guiElement salsah-gui:Richtext ;
+
+                                                  salsah-gui:guiOrder "3"^^xsd:integer .
+
+
+
+
+
+roud-oeuvres:hasDirectSourcePublication   rdf:type owl:ObjectProperty ;
+      
+                                          rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                          knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                          knora-base:objectClassConstraint roud-oeuvres:Publication ;
+
+                                          rdfs:label  "Témoin de base pour l'édition (publication), avec fac-similés numériques"@fr ,
+                                                      "Base witness (publication), with scans"@en ,
+                                                      "Testimone di base per l'edizione (pubblicazione), con scan"@it ;
+
+                                          rdfs:comment    "La source directe pour l'édition, quand il s'agit d'une publication."@fr ,
+                                                          "The direct source of the edition, when it is a publication."@en ;
+
+                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                          salsah-gui:guiOrder "2"^^xsd:integer .
+
+
+                                        
+
+roud-oeuvres:hasDirectSourcePublicationValue    rdf:type owl:ObjectProperty ;
+      
+                                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:hasDirectSourceManuscript    rdf:type owl:ObjectProperty ;
+      
+                                          rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                          knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                          knora-base:objectClassConstraint roud-oeuvres:Manuscript ;
+
+                                          rdfs:label  "Témoin de base pour l'édition (document d'archive), avec fac-similés numériques"@fr ,
+                                                      "Base witness (manuscript), with scans"@en ,
+                                                      "Testimone di base per l'edizione (manoscritto), con scan"@it ;
+
+                                          rdfs:comment    "La source directe pour l'édition, quand il s'agit d'un document d'archive."@fr ,
+                                                          "The direct source of the edition, when it is a manuscript."@en ;
+
+                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                          salsah-gui:guiOrder "1"^^xsd:integer .
+
+
+                                        
+
+roud-oeuvres:hasDirectSourceManuscriptValue     rdf:type owl:ObjectProperty ;
+      
+                                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
 roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
                           rdfs:subPropertyOf knora-base:hasValue ;
@@ -1550,12 +1897,12 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
                           knora-base:objectClassConstraint knora-base:TextValue ;
                           
-                          rdfs:label  "Nom attribué à la page (cote et numéro)"@fr ,
-                                      "Name assigned to the page (shelfmark and number)"@en ,
-                                      "Nome assegnato alla pagina (segnatura e numero)"@it ;
+                          rdfs:label  "Nom attribué à la page (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@fr ,
+                                      "Name assigned to the page (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@en ,
+                                      "Nome assegnato alla pagina (ex. 'f. 1r', 'p. 2', 'couverture 1r', 'document 1', 'quatrième de coverture 2v')"@it ;
 
-                          rdfs:comment  "Le nom du fonds, la cote (ou l’abréviation crée pour le document qui n’est pas dans un fonds) et : si feuillet, numéro du feuillet et recto ou verso. A indiquer aussi quand c'est seulement 1r. Exemple : ‘CRLR_GR_MS1A1a_1r’, ‘CRLR_GR_MS1A1a_2v’ ----- si page, ‘p’ + numéro de la page. Suivre la numérotation du document, si on scan seulement les pages 4 et 5, les nommer p4 et p5. Exemple : ‘CRLR_GR_MS1A1a_p1’, ‘CRLR_GR_MS1A1a_p2’ ----- si couverture, ‘couv’ et numéro de la couverture (1 ou 4, pour première ou quatrième) + numéro du feuillet + recto ou verso. Exemple : ‘CRLR_GR_MS1A1a_couv1_1r’, ‘CRLR_GR_MS1A1a_couv4_1v’ ----- si autre (annexes), ‘annexe’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_annexe1’, ‘CRLR_GR_MS1A1a_annexe2’, ‘CRLR_GR_MS1A1a_annexe1r’, ‘CRLR_GR_MS1A1a_annexe1v’ ----- si documents pas organisés selon un ordre significatif, ‘doc’ + numéro (si recto ou verso, insérer). Exemple : ‘CRLR_GR_MS1A1a_doc1’, ‘CRLR_GR_MS1A1a_doc2’, ‘CRLR_GR_MS1A1a_doc1r’, ‘CRLR_GR_MS1A1a_doc1v’"@fr ,
-                                        "See the french comment."@en ;
+                          rdfs:comment  "Utiliser le nom du scan, in extenso."@fr ,
+                                        "Use the name of the scan, in extenso."@en ;
 
                        	  salsah-gui:guiElement salsah-gui:SimpleText ;
 
@@ -1564,63 +1911,18 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:pageImageHasStillImageFileValue  rdf:type  owl:ObjectProperty ;
-                    
-	                                          rdfs:subPropertyOf knora-base:hasStillImageFileValue ;
-
-	                                          knora-base:subjectClassConstraint roud-oeuvres:PageImage ;
-
-	                                          knora-base:objectClassConstraint knora-base:hasStillImageFileValue ;
-
-	                                          rdfs:label  "Fac-similé"@fr ,
-	                                                      "Facsimile"@en ,
-	                                                      "Facsimile"@it ;
-
-	                                          rdfs:comment  "La page a un fac-similé numérique."@fr ,
-	                                                        "The page has a digital facsimile."@en .
 
 
 
 
-roud-oeuvres:hasPageImage   rdf:type owl:ObjectProperty ;
-      
-	                        rdfs:subPropertyOf knora-base:hasLinkTo ;
 
-	                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
-
-	                        knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
-
-	                        rdfs:label  "Image numérique de la page"@fr ,
-	                                    "Digital image of the page"@en ,
-	                                    "Immagine digitale della pagina"@it ;
-
-	                        rdfs:comment    "Image numérique de la page."@fr ,
-	                                        "Digital image of the page."@en ;
-
-	                        salsah-gui:guiElement salsah-gui:Searchbox ;
-
-	                        salsah-gui:guiOrder "3"^^xsd:integer .
-
-                                        
-
-roud-oeuvres:hasPageImageValue  rdf:type owl:ObjectProperty ;
-      
-                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                knora-base:subjectClassConstraint roud-oeuvres:Page ;
-
-                                knora-base:objectClassConstraint knora-base:LinkValue .
-
-
-
-
-roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
+roud-oeuvres:pageIsPartOfManuscript  rdf:type owl:ObjectProperty ;
 
                                         rdfs:subPropertyOf knora-base:isPartOf ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Page ;
 
-                                        knora-base:objectClassConstraint roud-oeuvres:WrittenSource ;
+                                        knora-base:objectClassConstraint roud-oeuvres:Manuscript ;
 
                                         rdfs:label  "Page de"@fr ,
                                                     "Page of"@en ,
@@ -1634,7 +1936,7 @@ roud-oeuvres:pageIsPartOfWrittenSource  rdf:type owl:ObjectProperty ;
                                         salsah-gui:guiOrder "0"^^xsd:integer .
 
 
-roud-oeuvres:pageIsPartOfWrittenSourceValue     rdf:type owl:ObjectProperty ;
+roud-oeuvres:pageIsPartOfManuscriptValue     rdf:type owl:ObjectProperty ;
       
 		                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -1647,9 +1949,9 @@ roud-oeuvres:pageIsPartOfWrittenSourceValue     rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
 
-						rdfs:subPropertyOf knora-base:seqnum ;
+						            rdfs:subPropertyOf knora-base:seqnum ;
 
-                        knora-base:subjectClassConstraint roud-oeuvres:Folio ;
+                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
                                   
                         knora-base:objectClassConstraint knora-base:IntValue ;
 
@@ -2271,77 +2573,13 @@ roud-oeuvres:publicationHasTranslatorValue    rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:hasText   rdf:type owl:ObjectProperty ;
-
-                      rdfs:subPropertyOf knora-base:hasLinkTo ;
-
-                      knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-
-                      knora-base:objectClassConstraint roud-oeuvres:Text ;
-
-                      rdfs:label  "Texte de la publication (NE PAS REMPLIR POUR L'INSTANT)"@fr ,
-                                  "Publication text"@en ,
-                                  "Testo della pubblicazione"@it ;
-
-                      rdfs:comment  "Le texte de la publication."@fr ,
-                                    "The text of the publication."@en ;
-
-                      salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                      salsah-gui:guiOrder "15"^^xsd:integer .
-                                                  
-
-
-roud-oeuvres:hasTextValue    rdf:type owl:ObjectProperty ;
-
-                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                            knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-
-                            knora-base:objectClassConstraint knora-base:LinkValue .
-
-
-
-roud-oeuvres:isTextOf  rdf:type owl:ObjectProperty ;
-
-                      rdfs:subPropertyOf knora-base:hasLinkTo ;
-
-                      knora-base:subjectClassConstraint roud-oeuvres:Text ;
-
-                      knora-base:objectClassConstraint roud-oeuvres:Publication ;
-                      
-                      rdfs:label  "Est le texte de l'édition"@fr ,
-                                  "Is text of edition"@en ,
-                                  "É il testo dell'edizione"@it ;
-
-                      rdfs:comment  "L'edizione del testo"@fr ,
-                                    "The edition of the text"@en ;
-
-                      salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                      salsah-gui:guiOrder "0"^^xsd:integer .
-
-
-                                                              
-
-
-roud-oeuvres:isTextOfValue   rdf:type owl:ObjectProperty ;
-
-                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                            knora-base:subjectClassConstraint roud-oeuvres:Text ;
-
-                            knora-base:objectClassConstraint knora-base:LinkValue .
-
-
-
 roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;  ##TextRepresentation ???
 
                               knora-base:subjectClassConstraint roud-oeuvres:Text ;
 
-                              knora-base:objectClassConstraint roud-oeuvres:TextValue ;
+                              knora-base:objectClassConstraint knora-base:TextValue ;
 
                               rdfs:label  "Texte"@fr ,
                                           "Text"@en ,
@@ -2352,7 +2590,7 @@ roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
 
 		                      salsah-gui:guiElement salsah-gui:Richtext ;
 
-		                      salsah-gui:guiOrder "1"^^xsd:integer .
+		                      salsah-gui:guiOrder "4"^^xsd:integer .
 
 
 
@@ -2415,26 +2653,66 @@ roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
                                   knora-base:objectClassConstraint knora-base:LinkValue .
 
 
-roud-oeuvres:isPreviousStageOfPartOfCollection    rdf:type owl:ObjectProperty ;
-
-                                                  rdfs:subPropertyOf knora-base:hasValue ;
-
-                                                  knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-
-                                                  knora-base:objectClassConstraint knora-base:TextValue ;
-
-                                                  rdfs:label  "Repris dans (est une version précédente d'une partie de)"@fr ,
-                                                              "Reused in (is previous version of a section of)"@en ,
-                                                              "Ripreso in (è una versione precedente di una parte di)"@it ;
-
-                                                  rdfs:comment  "Est une version précédente d'une partie de la publication, par exemple un article paru et après inclus dans un recueil."@fr ,
-                                                                "Is previous version of a section of the publication, for instance an article which, after some reworking, has been included in a collection."@en ;
-
-                                                  salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                                  salsah-gui:guiOrder "10"^^xsd:integer .
 
 
+roud-oeuvres:isPreviousStageOf    rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                  knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                  rdfs:label  "Le texte précède génétiquement un autre texte (pour un document d'archive qui précède génétiquement un autre document d'archive). Ces liens forment un reseau génétique."@fr ,
+                                              "The text is genetically before another text (for an archival document which is genetically before another archival document). These links create a genetic network."@en ,
+                                              "Testo geneticamente precedente un altro testo"@it ;
+
+                                  rdfs:comment  "Ces liens forment un reseau génétique."@fr ,
+                                                "These links create a genetic network."@en ;
+
+                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                  salsah-gui:guiOrder "25"^^xsd:integer .
+
+
+roud-oeuvres:isPreviousStageOfValue   rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                      knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+roud-oeuvres:isPreviousStageOfCollectionSection   rdf:type owl:ObjectProperty ;
+
+                                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                                  knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                  knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                  rdfs:label  "Le texte est repris dans la section d'un recueil"@fr ,
+                                                              "The text is used in the collection section"@en ,
+                                                              "Testo ripreso in raccolta nella sezione"@it ;
+
+                                                  rdfs:comment  "Reprises en recueil."@fr ,
+                                                                "Reuse in a collection."@en ;
+
+                                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                                  salsah-gui:guiOrder "25"^^xsd:integer .
+
+
+roud-oeuvres:isPreviousStageOfCollectionSectionValue  rdf:type owl:ObjectProperty ;
+
+                                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                      knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                      knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -2502,6 +2780,28 @@ roud-oeuvres:workHasNotice    rdf:type owl:ObjectProperty ;
                               salsah-gui:guiElement salsah-gui:Richtext ;
 
                               salsah-gui:guiOrder "3"^^xsd:integer .
+
+
+roud-oeuvres:establishedTextHasNotice   rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf roud-oeuvres:hasNotice ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+                                        
+                                        knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                        rdfs:label  "Notice"@fr ,
+                                                    "About"@en ,
+                                                    "Notizia informativa"@it ;
+
+                                        rdfs:comment  "La petite notice qui va avec chaque texte."@fr ,
+                                                      "Some information, that goes with each text in the edition."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Richtext ;
+
+                                        salsah-gui:guiOrder "3"^^xsd:integer .
 
 
 

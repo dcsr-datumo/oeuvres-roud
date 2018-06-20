@@ -1,27 +1,61 @@
 
 
-
-
-############## 
+###################
+##
 ## TODO
-##############
+##
+###################
 
-Check label classes abtraites (caricare l'ultima versione dell'ontologia)
 
-Check ordine properties
+#
+##
+### ONTO / SALSAH
+##
+#
 
-Inserire dati per tutte
+When we'll change the location of the cardinality (v2?), put 'isPreviousManuscript' after 'étape génétique'.
 
-Pull request
+
+
+
+#
+##
+### KNORA
+##
+#
+Sul Github di Knora, open Issue (type: question) sur la modelisation du temps
+
+
+
+#
+##
+### DOC 
+##
+#
+Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
+
+LABEL (tout minuscule, pas d'accent)
+Document d'archive: doc_cote_premiermotdutitre
+Texte (si document): txt_cote_premiermotdutitre
+Texte (si publication): txt_
+Article: pub_titre_revue_annee
+Section d'un livre: pub_titre_livre_annee
+Livre: pub_titre_annee
+Personne: nom_prenom
+Maison d'édition: edi_premiermotdunom
+
 
 
 
 
 ####################
+##
 ## DECISO e CAPITO
+##
 ####################
 
 Nel fondo ci sono anche oggetti, documenti amministrativi, coupures de presse ... vogliamo inserire tutto questo? No ..., solo manoscritti. Tutto il resto sta bene in una nota, senza che debba avere il suo posto nella BD.
+Nel fondo c'è un solo manoscritto non di Roud, che è di Trakl.
 
 Commenti almeno in due lingue (en, fr). Label: fr, en, de.
 
@@ -33,35 +67,69 @@ Lieux, pas d'organisation hiérarchique, parce que chez Roud tout est canton de 
 
 Anche i dati cancellati rimangono.
 
+Les rdfs:comment des proprietés ne sont pas visibles dans Salsah. Les rdfs:comment des classes sont visible dans Salsah.
+
+Bouton AddLink en haut à droite ne sert pas.
+
+isEditionNumber has cardinality max:1, because it can and cannot be there (but not more than one). This info will be exploited only when the value is different from 1. Same for hasNumberOfVolumes.
+
+There is no abstract property hasDirectSource, perché non si può non specificare l'oggetto
+
+Mentre Salsah 2 è un progetto a parte, Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 
 
 
-##########################
+#####################
+##
+## BULK IMPORT
+##
+#####################
+
+Download xsd for bulk import
+http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=root%40example.com&password=test
+
+Upload xml for bulk import
+curl -X POST -d @testImport.xml http://elena.spadini%40unil.ch:k32V@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres
+
+
+Fiche --> Document d'archive (roud-ouvres:Manuscript), datation + datationcomment = hasDateEstablishedReadable
+Create rules for transforming datation into hasDateEstablishedComputable (if avant, create period with starting point at 1918, for example, etc.)
+
+
+
+
+
+#######################
+##
 ## PARLARNE CON EQUIPE
-##########################
+##
+#######################
 
 
 
 
 
 
-##########################
+
+######################
+##
 ## QUESTIONS DASCH
-##########################
-
-Où sont exploités les commentaires des propriétés ?
-Les indication sur comment remplir les champs (par example, poru les titres des documents "Pas de guillemets. Les titres-incipit sont donnés entre crochets, avec trois points à la fin (alt + .).") se mettent où, dans les commentaires ?
-Indications sur comment remplir le Label, vont où (en général on pourrait se dire que le label corresponde au titre, mais par exemple pour les évènements biographique c'est plus interessant d'avoir la date aussi) ? Dans un protocole externe ? Par exemple, pour les personnes, ça serait bien que les labels soit nom+prenom, parceque la recherche (pendant la saisie) se fait sur les premières trois lettres et ce n'est pas toujours facile de se souvenir des prénom (ou le contraire? Mais tenir en compte).
-
-Y-a-t il un moyen de ne pas faire apparaître les classes abstraites dans Salsah ?
-
-Period: before / after / around; après / avant / vers
-  
+##
+######################
 
 
+GRAPHDB
+Changer l'ontologie comporte la destruction des données. On peut faire un backup et les re-uploader, non? Dans quel format télécharger les données dans GraphDB, pour les réutiliser après (json)?
+
+SALSAH - KNORA - ONTOLOGIE
+Espaces dans les labels ?
+Insérer texte xml dans Knora, comme pièce jointe? (easiness of editing)
+Page - Document
+Catena di isPreviousStageOf (item isPreviousStageOf x, x isPreviousStageOf y, y isPreviousStageOf ....)
+Time. Afficher les datations dans une timeline? Datation formalisé (avant 1950?)
 
 
-
-Nota: nel fondo c'è un solo manoscritto non di Roud, che è di Trakl.
-
+Feedback per Salsah2
+Creare i label è noioso e error prone. Crearli automaticamente?
+Commenti delle property vanno usati
 
