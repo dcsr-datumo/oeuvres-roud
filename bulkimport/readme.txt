@@ -16,7 +16,7 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @import_publisher.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @publishers.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 
