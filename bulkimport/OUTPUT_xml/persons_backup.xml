@@ -1,0 +1,800 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                          xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+                          xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+                          xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+                          xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd">
+   <p0112-roud-oeuvres:Person id="Affolter_famille">
+      <knoraXmlImport:label>pers_Affolter famille</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Affolter</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">famille</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Famille de paysans de Carrouge qui loue aux Roud une
+                                partie de leurs terres.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   
+   <p0112-roud-oeuvres:Person id="Roud_Gustave">
+      <knoraXmlImport:label>pers_Roud Gustave</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+      
+   <p0112-roud-oeuvres:Person id="Anex_Georges">
+      <knoraXmlImport:label>pers_Anex Georges</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1916</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1991</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Anex</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Georges</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur et critique littéraire
+                                suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Ansermet_Ernest">
+      <knoraXmlImport:label>pers_Ansermet Ernest</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1883</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1969</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Ansermet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Ernest</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur de mathématiques de Roud au
+                                Collège classique à Lausanne. En 1918, fonde l’Orchestre de la
+                                Suisse romande (OSR). Dans les années 20, chef du file d’un
+                                mouvement ouvert aux tendances internationales et contemporaines,
+                                refusant l’existence d’une musique nationale, contre le courant
+                                inverse, tenant d’une identité helvétique marquée, s’inspirant de la
+                                France, du post-romantisme et du folklore, représenté par Gustave
+                                Doré.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Auberjonois_René">
+      <knoraXmlImport:label>pers_Auberjonois René</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1872</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1957</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Auberjonois</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">René</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Balsiger_René">
+      <knoraXmlImport:label>pers_Balsiger René</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1918</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1977</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Balsiger</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">René</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Carrouge, dont le ferme et le
+                                domaine se situent à Bois-Devant, au-dessus du hameau du Bourgeau.
+                                Roud le rencontre fréquemment à partir de 1944. Devenu aveugle, René
+                                s’installe à Lausanne en 1961. La même année, Roud apprend le
+                                braille pour pouvoir correspondre avec lui. Correspondance à partir
+                                de 1953, également avec Denise, l’épouse de René.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Béguin_Albert">
+      <knoraXmlImport:label>pers_Béguin Albert</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1901</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1957</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Béguin</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Albert</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Critique et écrivain suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Beidler_Wilhelm_Franz">
+      <knoraXmlImport:label>pers_Beidler Wilhelm Franz</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1901</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1981</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Beidler</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Wilhelm Franz</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Secrétaire (quand ? au moins en 1970) de la
+                                Société des Écrivains suisses (SES).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Bertschi_Arthur">
+      <knoraXmlImport:label>pers_Bertschi Arthur</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1903</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1962</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Bertschi</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Arthur</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète suisse (Paroles , Neuchâtel, La Baconnière, 1937).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Bieri_Jakob">
+      <knoraXmlImport:label>pers_Bieri Jakob</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Bieri</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jakob</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1928. Paysan de Därstetten (Berne), dont la
+                                ferme se situe à Nitfluh (ou Nidfluh). A passé l’année 1944-1945 à
+                                Carrouge, dans la famille des Jordan, voisins des Roud.
+                                Correspondance entre 1945 et 1956. « L’ami dans la vallée » évoque
+                                une visite de Roud dans le Simmental.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Borgeaud_Georges">
+      <knoraXmlImport:label>pers_Borgeaud Georges</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1914</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1998</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Borgeaud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Georges</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Écrivain suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Buchet_Gustave">
+      <knoraXmlImport:label>pers_Buchet Gustave</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1888</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1963</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Buchet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre suisse. Vit à Paris.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Buchet-Ramuz_Berthe">
+      <knoraXmlImport:label>pers_Buchet-Ramuz Berthe</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1897</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1994</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Buchet-Ramuz</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Berthe</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Femme de lettres suisse. Sœur de C. F.
+                                Ramuz.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Buenzod_Emmanuel">
+      <knoraXmlImport:label>pers_Buenzod Emmanuel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Buenzod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Emmanuel</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Burnand_Francis">
+      <knoraXmlImport:label>pers_Burnand Francis</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Burnand</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Francis</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan à Vulliens. A épousé l’une des sœurs d’Olivier
+                                Cherpillod.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Cardis_Fernand">
+      <knoraXmlImport:label>pers_Cardis Fernand</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1898</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1990</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Cardis</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Fernand</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Médecin et mécène. Docteur de Roud à
+                                Beau-Site, et proche ami d’Edmond-Henri Crisinel.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Chappaz_Maurice">
+      <knoraXmlImport:label>pers_Chappaz Maurice</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1916</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:2009</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Chappaz</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Maurice</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">C’est Roud qui, en 1938 (ou 1939 ?) , prend l’initiative d’écrire à Chappaz pour lui
+                                demander des poèmes manuscrits. Correspondance 1939-1976.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Cherpillod_Fernand">
+      <knoraXmlImport:label>pers_Cherpillod Fernand</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1916</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1971</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Cherpillod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Fernand</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Ferlens. Fils d’Edmond Cherpillod
+                                et neveu d’Olivier. Frères : Isaac et Louis. Roud fait sa
+                                connaissance à partir de 1937. Il est le parrain de Gilbert, l’un
+                                des trois fils de Fernand.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Cherpillod_Lucien">
+      <knoraXmlImport:label>pers_Cherpillod Lucien</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1892</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1957</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Cherpillod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Lucien</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysans de Vucherens. Époux de
+                                Marthe.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Cherpillod_Olivier">
+      <knoraXmlImport:label>pers_Cherpillod Olivier</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1895</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1983</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Cherpillod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Olivier</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Vucherens. Roud fait sa
+                                connaissance en 1917. Amitié très intense, surtout à partir de 1932
+                                (correspondance entre 1927 et 1943). Né à Sarandin, lieu-dit du
+                                village de Vucherens, a deux frères, Edmond et Fernand (à ne pas
+                                confondre avec son neveu, Fernand), C. vit depuis son mariage à La
+                                Gottaz, dans la ferme de ses beaux-parents, Emma et Elie. Marié à
+                                Louisa, dont il a deux fils, Gaston et Robert.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Chessex_Jacques">
+      <knoraXmlImport:label>pers_Chessex Jacques</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1934</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:2009</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Chessex</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jacques</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Chevallaz_Georges-André">
+      <knoraXmlImport:label>pers_Chevallaz Georges-André</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Chevallaz</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Georges-André</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Chevalley_Étienne">
+      <knoraXmlImport:label>pers_Chevalley Étienne</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1920</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1979</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Chevalley</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Étienne</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète. Entre en contact avec Roud vers
+                                1948. Son fonds est conservé à la BCU.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Clément_Charles">
+      <knoraXmlImport:label>pers_Clément Charles</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1889</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1972</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Clément</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Charles</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre vaudois. C’est à l’une de ses
+                                expositions que Roud consacre son premier article de critique d’art,
+                                en novembre 1920.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Coigny_Alice">
+      <knoraXmlImport:label>pers_Coigny Alice</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1863</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1931</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Coigny</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Alice</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Tante maternelle de Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Coigny_Clara">
+      <knoraXmlImport:label>pers_Coigny Clara</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1869</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1943</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Coigny</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Clara</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Tante maternelle de Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Coigny-Oulevey_Élise">
+      <knoraXmlImport:label>pers_Coigny-Oulevey Élise</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1839</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1931</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Coigny-Oulevey</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Élise</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Grand-mère maternelle de Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Coigny_Jean-Daniel">
+      <knoraXmlImport:label>pers_Coigny Jean-Daniel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1833</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1905</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Coigny</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jean-Daniel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Grand-père maternel de Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Colomb_Catherine">
+      <knoraXmlImport:label>pers_Colomb Catherine</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1892</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1965</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Colomb</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Catherine</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Roud fait sa connaissance en 1945, à
+                                l’occasion de la parution de Châteaux en enfance . Correspondance 1945-1964.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Crisinel_Edmond-Henri">
+      <knoraXmlImport:label>pers_Crisinel Edmond-Henri</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1897</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1948</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Crisinel</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Edmond-Henri</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète. Journaliste à La Revue de Lausanne . En 1927, Roud lui envoie  Adieu  en service de presse. S’ensuit une correspondance, de
+                                1928 à 1947. Pour les 20 ans de sa mort, en septembre 1968, Roud lui
+                                consacre un texte, « La désertion ».</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Delhorbe_Florian">
+      <knoraXmlImport:label>pers_Delhorbe Florian</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1888</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1972</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Delhorbe</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Florian</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur de latin de Roud au Gymnase
+                                classique cantonal, à Lausanne. Ami et correspondance de Ramuz, il a
+                                publié Dans le chaos  ( Cahiers vaudois , 4 e  cahier de la 2 e  série, 1915).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Descoullayes_Jean">
+      <knoraXmlImport:label>pers_Descoullayes Jean</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Descoullayes</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jean</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Critique d’art et de théâtre à  La Revue de Lausanne , directeur de la revue  Présence , puis directeur du Musée cantonal des
+                                Beaux-Arts.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Desmeules_Louis">
+      <knoraXmlImport:label>pers_Desmeules Louis</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1889</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1977</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Desmeules</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Louis</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Carrouge, dont la ferme se situe
+                                à La Louchyre, près de la maison du poète.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Eicher_Robert">
+      <knoraXmlImport:label>pers_Eicher Robert</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Eicher</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Robert</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Domestique agricole dans la famille de Francis
+                                Burnand. Roud fait sa connaissance en 1935, et le rencontre
+                                fréquemment près du pont du vieux moulin de Vulliens, puis en 1937
+                                dans la région de Corges et de Trey, puis encore à Payerne.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Fabricius_Pierre">
+      <knoraXmlImport:label>pers_Fabricius Pierre</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Fabricius</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Pierre</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Habite à Paris. Se propose de traduire des poèmes de
+                                Trakl (cf. lettre de Birgit von Ficker, 1 er  septembre 1946).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Ferrini_Louis">
+      <knoraXmlImport:label>pers_Ferrini Louis</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1918</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Ferrini</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Louis</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Lieutenant mort de la grippe espagnole, à
+                                qui Roud dédie « Novembre ancien ».</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Freymond_André">
+      <knoraXmlImport:label>pers_Freymond André</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Freymond</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">André</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1946. Paysan de Neyruz, dont Roud fait la
+                                connaissance au début des années 1960. Dès 1968, Roud le cite
+                                fréquemment comme dédicataire possible de  Campagne perdue .</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Gagnebin_Élie">
+      <knoraXmlImport:label>pers_Gagnebin Élie</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1891</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1949</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Gagnebin</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Élie</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Géologue, animateur de la vie littéraire de
+                                la Société de Belles-Lettres. A tenu le rôle du « Lecteur » dans
+                                l’Histoire du soldat  de Ramuz et Strawinsky lors de sa création en
+                                1918.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Gilliard_Charles">
+      <knoraXmlImport:label>pers_Gilliard Charles</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1879</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1944</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Gilliard</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Charles</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Historien. Professeur d’histoire de Roud au
+                                Gymnase classique cantonal, à Lausanne, qu’il a dirigé. Professeur à
+                                l’université de Lausanne. Cousin germain d’Edmond Gilliard.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Gilliard_Edmond">
+      <knoraXmlImport:label>pers_Gilliard Edmond</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1875</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1969</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Gilliard</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Edmond</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur de français de Roud au Collège
+                                classique à Lausanne. Avec Paul Budry, a fondé et dirigé les Cahiers vaudois  (1914-1918) avant de prendre la direction littéraire
+                                des Éditions du Verseau (1925-1928) où est publié  Adieu  en 1927.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Grossrieder_Hans">
+      <knoraXmlImport:label>pers_Grossrieder Hans</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1912</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1990</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Grossrieder</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Hans</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Écrivain suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Haldy_Frédéric">
+      <knoraXmlImport:label>pers_Haldy Frédéric</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1915</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:2001</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Haldy</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Frédéric</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan et vigneron à Mont-sur-Rolle, puis à
+                                Longirod. Roud fait sa connaissance lors d’un concours de lutte, le
+                                29 septembre 1940. Correspondance entre 1940 et 1970.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Held_André">
+      <knoraXmlImport:label>pers_Held André</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Held</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">André</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Imprimeur.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Heubi_Émile">
+      <knoraXmlImport:label>pers_Heubi Émile</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1894</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1952</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Heubi</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Émile</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Passionné d’histoire et de musique,
+                                directeur de l’Institut de Brillanmont, pensionnat de jeunes filles
+                                de l’avenue Secrétan à Lausanne, où se tiennent les réunions de la
+                                Société de Poésie.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Heyd_Richard">
+      <knoraXmlImport:label>pers_Heyd Richard</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Heyd</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Richard</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Éditeur suisse. Responsable de l’ Hommage à C. F. Ramuz , Lausanne, Porchet et C ie  éditeur, 1938.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Jaccard_Henri">
+      <knoraXmlImport:label>pers_Jaccard Henri</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Jaccard</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Henri</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Journaliste à la  Feuille d’Avis de Lausanne .</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Jaccottet_Philippe">
+      <knoraXmlImport:label>pers_Jaccottet Philippe</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Jaccottet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Philippe</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1925. Poète suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Jaloux_Edmond">
+      <knoraXmlImport:label>pers_Jaloux Edmond</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1878</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1949</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Jaloux</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Edmond</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Écrivain français.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Landry_Charles-François">
+      <knoraXmlImport:label>pers_Landry Charles-François</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1909</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1973</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Landry</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Charles-François</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Écrivain suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Lang_Siegfried">
+      <knoraXmlImport:label>pers_Lang Siegfried</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1887</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1970</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Lang</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Siegfried</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète et journaliste bâlois. Publie en 1938
+                                une anthologie de poésie des quatre langues nationales suisses, Lesebuch schweizerischer Dichtung  (Zurich, Schweizer Bücherfreunde), contenant entre
+                                autres des traductions de Roud. Lang dédicace à Roud son recueil  Gedichte und Übertragung  (Johannespresse, 1950).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Martin_Auguste">
+      <knoraXmlImport:label>pers_Martin Auguste</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1908</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1979</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Martin</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Auguste</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète (Journées , Lausanne, Freudweiler, 1933), président central de
+                                la Société de Belles-Lettres de 1934 à 1935.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Martin_Vio">
+      <knoraXmlImport:label>pers_Martin Vio</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1906</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1986</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Martin</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Vio</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poétesse, avec qui Roud se lie d’amitié
+                                dans les années 1940.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Martinet_Edouard">
+      <knoraXmlImport:label>pers_Martinet Edouard</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1896</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1962</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Martinet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Edouard</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né à Genève en 1896, Edouard Martinet a
+                                fait ses études dans sa ville natale. Compositeur et critique
+                                musical dans ses jeunes années, il s'est cependant voué à la
+                                littérature. On doit à son goût de la nature et sa poésie du
+                                souvenir plusieurs recueils de prose et de vers : "Verjus"
+                                (1930), "Imageries rustiques" (1933), "Poésie de mon
+                                pays" (1942) "Femmes étranges" (1942). Chroniqueur à
+                                "La Suisse", à "L'illustré" puis à la
+                                "Tribune de Genève", collaborateur de Radio-Genève
+                                ("Causeries intimes et romanesques"), Martinet a laissé
+                                quelques ouvrages de critique littéraire : "André Gide,
+                                l'amour et la divinité" (1931), "Portraits
+                                d'écrivains romands" (1940 et 1954), "Princes de
+                                lettres" (1945). Edouard Martinet était membre du Groupe Jean
+                                Violette et du Comité de la Fondation Charles-Ferdinand Ramuz; il a
+                                présidé durant vingt ans la Section de littérature de
+                                l'Institut national genevois. Après son décès, le 1er août
+                                1962, ses papiers ont été donnés à la Bibliothèque de Genève par
+                                Madame Edouard Martinet. (source :
+                                http://w3public.ville-ge.ch/bge/odyssee.nsf/Attachments/martinet_edouardframeset.htm/$file/martinet_edouard.pdf)</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Matthey_Pierre-Louis">
+      <knoraXmlImport:label>pers_Matthey Pierre-Louis</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1893</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1970</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Matthey</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Pierre-Louis</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète suisse. Correspondance entre 1932 et
+                                1969.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Méléra_Marguerite-Yerta">
+      <knoraXmlImport:label>pers_Méléra Marguerite-Yerta</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1889</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1965</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Méléra</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Marguerite-Yerta</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Romancière et critique suisse, auteure
+                                d’études sur Rimbaud et d’un roman, Le Val aux sept villages  (Genève-Paris, Éditions Jeheber, 1946).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Mermod_Henry-Louis">
+      <knoraXmlImport:label>pers_Mermod Henry-Louis</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1891</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1962</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Mermod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Henry-Louis</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Éditeur et mécène suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Mermoud_Albert">
+      <knoraXmlImport:label>pers_Mermoud Albert</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1905</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1997</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Mermoud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Albert</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Éditeur suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Nicolas_Léon">
+      <knoraXmlImport:label>pers_Nicolas Léon</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Nicolas (Olé)</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Léon</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Facteur à Carrouge, « olé [olé] » dans ses manières et
+                                son langage.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Nicole_Georges">
+      <knoraXmlImport:label>pers_Nicole Georges</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1898</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1959</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Nicole</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Georges</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Critique et poète. Camarade de collège et
+                                d’études de Roud, professeur au Collège de Nyon. Correspondance de
+                                1920 à 1959.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Perretten_Marcel">
+      <knoraXmlImport:label>pers_Perretten Marcel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1898</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1970</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Perretten (Perrette)</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Marcel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Meunier de Lussery. Roud l’a rencontré au
+                                service militaire. Correspondance entre 1925 et 1968.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Perrin_Raymond">
+      <knoraXmlImport:label>pers_Perrin Raymond</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Perrin</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Raymond</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1932. Paysan de Pailly, dont la ferme se nomme
+                                La Croix. « Petite halte à Pailly » évoque une visite chez lui. « Le
+                                repos du cavalier », dans le recueil éponyme, lui est dédié.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Pourrat_Henri">
+      <knoraXmlImport:label>pers_Pourrat Henri</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1887</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1959</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Pourrat</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Henri</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Romancier auvergnat, ami de Ramuz. Contacte
+                                Roud en 1929, après l’avoir lu dans le premier numéro d’Aujourd’hui .</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Ramseyer_André">
+      <knoraXmlImport:label>pers_Ramseyer André</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1924</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Ramseyer</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">André</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Palézieux-Gare, dont la ferme se
+                                situe à Monnéaz, à l’écart du village. Roud lui rend de fréquentes
+                                visites dès 1946. Frère de Willy, Edmond et Émile.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Ramuz_Ferdinand_Charles">
+      <knoraXmlImport:label>pers_Ramuz Ferdinand Charles</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1878</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1947</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Ramuz</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Ferdinand Charles</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Raymond_Marcel">
+      <knoraXmlImport:label>pers_Raymond Marcel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1897</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1981</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Raymond</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Marcel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur et critique littéraire
+                                suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Remund_Fritz">
+      <knoraXmlImport:label>pers_Remund Fritz</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Remund</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Fritz</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Chauffeur de car postal (fin des années 1960).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Rey-Milliet_Constant">
+      <knoraXmlImport:label>pers_Rey-Milliet Constant</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1905</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1959</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Rey-Milliet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Constant</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre savoyard, très attaché à la Suisse
+                                romande où il a passé son adolescence. Roud le rencontre en 1932.
+                                Correspondance.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Reymond_Casimir">
+      <knoraXmlImport:label>pers_Reymond Casimir</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1893</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1969</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Reymond</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Casimir</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Sculpteur, dont le fils, Alain, meurt dans
+                                un incendie en octobre 1968 (Roud se rend à l’enterrement).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Reymond-Robert_Françoise">
+      <knoraXmlImport:label>pers_Reymond-Robert Françoise</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Reymond-Robert</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Françoise</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Fille de Steven-Paul Robert et épouse de ? Reymond, le
+                                fils de Catherine Colomb.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Robert_Jean-Dominique">
+      <knoraXmlImport:label>pers_Robert Jean-Dominique</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Robert (Lo)</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jean-Dominique</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Fils aîné de Steven-Paul Robert et filleul de
+                                Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Robert_Steven-Paul">
+      <knoraXmlImport:label>pers_Robert Steven-Paul</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1896</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1985</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Robert</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Steven-Paul</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre suisse, ami de Roud. S’installe à
+                                Paris en 1932.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Rod_Arnold">
+      <knoraXmlImport:label>pers_Rod Arnold</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Rod</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Arnold</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Paysan de Carrouge.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roorda_Henri">
+      <knoraXmlImport:label>pers_Roorda Henri</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roorda</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Henri</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur de mathématiques de Roud au Gymnase
+                                classique cantonal, à Lausanne.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roud-Coigny_Constance">
+      <knoraXmlImport:label>pers_Roud-Coigny Constance</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1864</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1933</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud-Coigny</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Constance</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Mère de Gustave et Madeleine Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roud_Juliette">
+      <knoraXmlImport:label>pers_Roud Juliette</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1859</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1936</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Juliette</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Tante paternelle de Roud. Vit jusqu’à sa
+                                mort à Saint-Légier avec sa sœur, Marguerite.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roud_Madeleine">
+      <knoraXmlImport:label>pers_Roud Madeleine</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1893</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1971</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Madeleine</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Sœur de Gustave Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roud_Marguerite">
+      <knoraXmlImport:label>pers_Roud Marguerite</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1876</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1957</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Marguerite</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Tante paternelle de Roud. Institutrice,
+                                elle vit à Saint-Légier jusqu’en 194 ? , où elle emménage dans la maison de Carrouge.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Roud_Samuel">
+      <knoraXmlImport:label>pers_Roud Samuel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1862</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1930</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Samuel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Père de Gustave et Madeleine Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Secretan_Daniel">
+      <knoraXmlImport:label>pers_Secretan Daniel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1895</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1971</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Secretan</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Daniel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Diplomate suisse. Camarade d’études de
+                                Roud, auteur notamment d’un « Poème » dans le Cahier vaudois  intitulé  Poèmes et nouvelles  (1915). Frère de Jacques Secretan (1897-1964), avocat
+                                et professeur suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Simond_Daniel">
+      <knoraXmlImport:label>pers_Simond Daniel</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1904</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1973</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Simond</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Daniel</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur et critique littéraire
+                                suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Staehli_Marie">
+      <knoraXmlImport:label>pers_Staehli Marie</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Staehli</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Marie</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Amie de Constance Roud, qui écrit à Roud, enfant, en
+                                l’appelant « poète ».</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Subilia_Françoise">
+      <knoraXmlImport:label>pers_Subilia Françoise</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Subilia</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Françoise</p0112-roud-oeuvres:hasGivenName>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Thévoz_Edmond">
+      <knoraXmlImport:label>pers_Thévoz Edmond</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1896</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1984</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Thévoz</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Edmond</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né à Missy. Ami de gymnase de Roud- Médecin
+                                à Estavayer-le-Lac, puis Lausanne. Correspondance entre 1925 et
+                                1975. Frère de Roger Thévoz.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Tissot_Jeanne">
+      <knoraXmlImport:label>pers_Tissot Jeanne</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Tissot</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jeanne</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Pianiste. Son père est instituteur à Carrouge et
+                                Mézières. Correspondance entre 1928 et 1938.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Trolliet_Gilbert">
+      <knoraXmlImport:label>pers_Trolliet Gilbert</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1907</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1980</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Trolliet</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gilbert</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Poète et journaliste habitant Genève et
+                                Paris. Directeur de la revue Présence .</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Vallotton_Paul">
+      <knoraXmlImport:label>pers_Vallotton Paul</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1864</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1936</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Vallotton</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Paul</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Directeur de galerie. De 1913 à 1922, il
+                                tient à Lausanne une succursale de la galerie Bernheim-Jeune de
+                                Paris, puis ouvre sa propre galerie en 1923. Il œuvre comme pionnier
+                                pour la diffusion de la peinture française en Suisse, lance et
+                                soutient des artistes locaux et contribue à la renommée de son
+                                frère, Félix (cf. DHS).</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Velan_Yves">
+      <knoraXmlImport:label>pers_Velan Yves</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1925</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:2017</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Velan</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Yves</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Écrivain suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Vincent_Gilbert">
+      <knoraXmlImport:label>pers_Vincent Gilbert</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Vincent</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gilbert</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1933. Abbé, ami de Roud.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Viollier_Jean">
+      <knoraXmlImport:label>pers_Viollier Jean</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1896</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1985</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Viollier</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Jean</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Peintre suisse.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Weber_Werner">
+      <knoraXmlImport:label>pers_Weber Werner</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Weber</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Werner</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Né en 1919. Professeur de littérature à l’université
+                                de Zurich, après avoir été longtemps rédacteur à la  Neue Zürcher Zeitung .  Unter Dach und Himmel  (Zurich, E. Rentsch, 1942) et  Im Hof des Herbstes  (même éditeur, 1944). Roud lui consacre une « Lettre
+                                au poëte Werner Weber »,  Bulletin de la Guilde du livre , mai 1949, pp. 114-116.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+   <p0112-roud-oeuvres:Person id="Weber-Perret_Myrian">
+      <knoraXmlImport:label>pers_Weber-Perret Myrian</knoraXmlImport:label>
+      <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1922</p0112-roud-oeuvres:hasBirthDate>
+      <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1985</p0112-roud-oeuvres:hasDeathDate>
+      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Weber-Perret</p0112-roud-oeuvres:hasFamilyName>
+      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Myrian</p0112-roud-oeuvres:hasGivenName>
+      <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">Professeur suisse, directeur de l’Alliance
+                                culturelle romande. Roud lui consacre une « Petite lettre au
+                                président Weber-Perret », Cahiers de l’Alliance culturelle romande , « Le Pays de Vaud », cahier n o  12, novembre 1968, pp. 9-13.</p0112-roud-oeuvres:personHasNotice>
+   </p0112-roud-oeuvres:Person>
+</knoraXmlImport:resources>

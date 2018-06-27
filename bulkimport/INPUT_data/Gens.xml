@@ -1,0 +1,1198 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<!-- 
+        1. extracted from odt version of chronologie_gens_lieux_revues.docx
+       only the persons
+        2. cleaned of all the odt blabla and left only structures, plus added element <person> around each h (was text:a) including p, with find and replace.
+        
+-->
+
+<document-content>
+
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858277"/>
+                        <span style-name="T1">famille Affolter</span>
+                        <bookmark-end name="_Toc517858277"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Famille de paysans de Carrouge qui loue aux Roud une
+                                partie de leurs terres.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858278"/>
+                        <span style-name="T1">Georges Anex</span>
+                        <bookmark-end name="_Toc517858278"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1916-1991. Professeur et critique littéraire
+                                suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858279"/>
+                        <span style-name="T1">Ernest Ansermet</span>
+                        <bookmark-end name="_Toc517858279"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1883-1969. Professeur de mathématiques de Roud au
+                                Collège classique à Lausanne. En 1918, fonde l’Orchestre de la
+                                Suisse romande (OSR). Dans les années 20, chef du file d’un
+                                mouvement ouvert aux tendances internationales et contemporaines,
+                                refusant l’existence d’une musique nationale, contre le courant
+                                inverse, tenant d’une identité helvétique marquée, s’inspirant de la
+                                France, du post-romantisme et du folklore, représenté par Gustave
+                                Doré.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858280"/>
+                        <span style-name="T1">René Auberjonois</span>
+                        <bookmark-end name="_Toc517858280"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1872-1957. Peintre suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858281"/>
+                        <span style-name="T1">René Balsiger</span>
+                        <bookmark-end name="_Toc517858281"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1918-1977. Paysan de Carrouge, dont le ferme et le
+                                domaine se situent à Bois-Devant, au-dessus du hameau du Bourgeau.
+                                Roud le rencontre fréquemment à partir de 1944. Devenu aveugle, René
+                                s’installe à Lausanne en 1961. La même année, Roud apprend le
+                                braille pour pouvoir correspondre avec lui. Correspondance à partir
+                                de 1953, également avec Denise, l’épouse de René.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858282"/>
+                        <span style-name="T1">Albert Béguin</span>
+                        <bookmark-end name="_Toc517858282"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1901-1957. Critique et écrivain suisse.</span>
+                </p>
+                <p style-name="P1"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858283"/>
+                        <span style-name="T1">Franz Wilhelm Beidler</span>
+                        <bookmark-end name="_Toc517858283"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1901-1981. Secrétaire (quand ? au moins en 1970) de la
+                                Société des Écrivains suisses (SES).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858284"/>
+                        <span style-name="T1">Arthur Bertschi</span>
+                        <bookmark-end name="_Toc517858284"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1903-1962. Poète suisse (</span>
+                        <span style-name="T4">Paroles</span>
+                        <span style-name="T2">, Neuchâtel, La Baconnière, 1937).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858285"/>
+                        <span style-name="T1">Jakob Bieri</span>
+                        <bookmark-end name="_Toc517858285"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Né en 1928. Paysan de Därstetten (Berne), dont la
+                                ferme se situe à Nitfluh (ou Nidfluh). A passé l’année 1944-1945 à
+                                Carrouge, dans la famille des Jordan, voisins des Roud.
+                                Correspondance entre 1945 et 1956. « L’ami dans la vallée » évoque
+                                une visite de Roud dans le Simmental.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858286"/>
+                        <span style-name="T1">Georges Borgeaud</span>
+                        <bookmark-end name="_Toc517858286"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1914-1998. Écrivain suisse.</span>
+                </p>
+                <p style-name="P2">
+                        <soft-page-break/>
+                </p>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858287"/>
+                        <span style-name="T1">Gustave Buchet</span>
+                        <bookmark-end name="_Toc517858287"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1888-1963. Peintre suisse. Vit à Paris.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858288"/>
+                        <span style-name="T1">Berthe Buchet-Ramuz</span>
+                        <bookmark-end name="_Toc517858288"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1897-1994. Femme de lettres suisse. Sœur de C. F.
+                                Ramuz.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858289"/>
+                        <span style-name="T1">Emmanuel Buenzod</span>
+                        <bookmark-end name="_Toc517858289"/>
+                </h>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858290"/>
+                        <span style-name="T1">Francis Burnand</span>
+                        <bookmark-end name="_Toc517858290"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Paysan à Vulliens. A épousé l’une des sœurs d’Olivier
+                                Cherpillod.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858291"/>
+                        <span style-name="T1">Fernand Cardis</span>
+                        <bookmark-end name="_Toc517858291"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1898-1990. Médecin et mécène. Docteur de Roud à
+                                Beau-Site, et proche ami d’Edmond-Henri Crisinel.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858292"/>
+                        <span style-name="T1">Maurice Chappaz</span>
+                        <bookmark-end name="_Toc517858292"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1916-2009. C’est Roud qui, en 1938 </span>
+                        <span style-name="T3">(ou 1939 ?)</span>
+                        <span style-name="T2">, prend l’initiative d’écrire à Chappaz pour lui
+                                demander des poèmes manuscrits. Correspondance 1939-1976.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858293"/>
+                        <span style-name="T1">Fernand Cherpillod</span>
+                        <bookmark-end name="_Toc517858293"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1916-1971. Paysan de Ferlens. Fils d’Edmond Cherpillod
+                                et neveu d’Olivier. Frères : Isaac et Louis. Roud fait sa
+                                connaissance à partir de 1937. Il est le parrain de Gilbert, l’un
+                                des trois fils de Fernand.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858294"/>
+                        <span style-name="T1">Lucien Cherpillod</span>
+                        <bookmark-end name="_Toc517858294"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1892-1957. Paysans de Vucherens. Époux de
+                                Marthe.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858295"/>
+                        <span style-name="T1">Olivier Cherpillod</span>
+                        <bookmark-end name="_Toc517858295"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1895-1983. Paysan de Vucherens. Roud fait sa
+                                connaissance en 1917. Amitié très intense, surtout à partir de 1932
+                                (correspondance entre 1927 et 1943). Né à Sarandin, lieu-dit du
+                                village de Vucherens, a deux frères, Edmond et Fernand (à ne pas
+                                confondre avec son neveu, Fernand), C. vit depuis son mariage à La
+                                Gottaz, dans la ferme de ses beaux-parents, Emma et Elie. Marié à
+                                Louisa, dont il a deux fils, Gaston et Robert.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858296"/>
+                        <span style-name="T1">Jacques Chessex</span>
+                        <bookmark-end name="_Toc517858296"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1934-2009.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858297"/>
+                        <span style-name="T1">Georges-André Chevallaz</span>
+                        <bookmark-end name="_Toc517858297"/>
+                </h>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858298"/>
+                        <span style-name="T1">Étienne Chevalley</span>
+                        <bookmark-end name="_Toc517858298"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1920-1979. Poète. Entre en contact avec Roud vers
+                                1948. Son fonds est conservé à la BCU.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858299"/>
+                        <soft-page-break/>
+                        <span style-name="T1">Charles Clément</span>
+                        <bookmark-end name="_Toc517858299"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1889-1972. Peintre vaudois. C’est à l’une de ses
+                                expositions que Roud consacre son premier article de critique d’art,
+                                en novembre 1920.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858300"/>
+                        <span style-name="T1">Alice Coigny</span>
+                        <bookmark-end name="_Toc517858300"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1863-1931. Tante maternelle de Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858301"/>
+                        <span style-name="T1">Clara Coigny</span>
+                        <bookmark-end name="_Toc517858301"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1869-1943. Tante maternelle de Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858302"/>
+                        <span style-name="T1">Élise Coigny-Oulevey</span>
+                        <bookmark-end name="_Toc517858302"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1839-1931. Grand-mère maternelle de Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858303"/>
+                        <span style-name="T1">Jean-Daniel Coigny</span>
+                        <bookmark-end name="_Toc517858303"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1833-1905. Grand-père maternel de Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858304"/>
+                        <span style-name="T1">Catherine Colomb</span>
+                        <bookmark-end name="_Toc517858304"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1892-1965. Roud fait sa connaissance en 1945, à
+                                l’occasion de la parution de </span>
+                        <span style-name="T4">Châteaux en enfance</span>
+                        <span style-name="T2">. Correspondance 1945-1964.</span>
+                </p>
+                <p style-name="P5">
+                        <span style-name="T2">Son fils cadet, Dominique Reymond, épouse Françoise,
+                                la fille de Steven-Paul Robert.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858305"/>
+                        <span style-name="T1">Edmond-Henri Crisinel</span>
+                        <bookmark-end name="_Toc517858305"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1897-1948. Poète. Journaliste à </span>
+                        <span style-name="T4">La Revue de Lausanne</span>
+                        <span style-name="T2">. En 1927, Roud lui envoie </span>
+                        <span style-name="T4">Adieu </span>
+                        <span style-name="T2">en service de presse. S’ensuit une correspondance, de
+                                1928 à 1947. Pour les 20 ans de sa mort, en septembre 1968, Roud lui
+                                consacre un texte, « La désertion ».</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858306"/>
+                        <span style-name="T1">Florian Delhorbe</span>
+                        <bookmark-end name="_Toc517858306"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1888-1972. Professeur de latin de Roud au Gymnase
+                                classique cantonal, à Lausanne. Ami et correspondance de Ramuz, il a
+                                publié </span>
+                        <span style-name="T4">Dans le chaos </span>
+                        <span style-name="T2">(</span>
+                        <span style-name="T4">Cahiers vaudois</span>
+                        <span style-name="T2">, 4</span>
+                        <span style-name="T14">e</span>
+                        <span style-name="T2"> cahier de la 2</span>
+                        <span style-name="T14">e</span>
+                        <span style-name="T2"> série, 1915).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858307"/>
+                        <span style-name="T1">Jean Descoullayes</span>
+                        <bookmark-end name="_Toc517858307"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Critique d’art et de théâtre à </span>
+                        <span style-name="T4">La Revue de Lausanne</span>
+                        <span style-name="T2">, directeur de la revue </span>
+                        <span style-name="T4">Présence</span>
+                        <span style-name="T2">, puis directeur du Musée cantonal des
+                                Beaux-Arts.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858308"/>
+                        <span style-name="T1">Louis Desmeules</span>
+                        <bookmark-end name="_Toc517858308"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1889-1977. Paysan de Carrouge, dont la ferme se situe
+                                à La Louchyre, près de la maison du poète.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858309"/>
+                        <span style-name="T1">Robert Eicher</span>
+                        <bookmark-end name="_Toc517858309"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Domestique agricole dans la famille de Francis
+                                Burnand. Roud fait sa connaissance en 1935, et le rencontre
+                                fréquemment près du pont du vieux moulin de Vulliens, puis en 1937
+                                dans la région de Corges et de Trey, puis encore à Payerne.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858310"/>
+                        <soft-page-break/>
+                        <span style-name="T1">Pierre Fabricius</span>
+                        <bookmark-end name="_Toc517858310"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Habite à Paris. Se propose de traduire des poèmes de
+                                Trakl (cf. lettre de Birgit von Ficker, 1</span>
+                        <span style-name="T14">er</span>
+                        <span style-name="T2"> septembre 1946).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858311"/>
+                        <span style-name="T1">Louis Ferrini</span>
+                        <bookmark-end name="_Toc517858311"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">18 ?-1918. Lieutenant mort de la grippe espagnole, à
+                                qui Roud dédie « Novembre ancien ».</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858312"/>
+                        <span style-name="T1">André Freymond</span>
+                        <bookmark-end name="_Toc517858312"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Né en 1946. Paysan de Neyruz, dont Roud fait la
+                                connaissance au début des années 1960. Dès 1968, Roud le cite
+                                fréquemment comme dédicataire possible de </span>
+                        <span style-name="T4">Campagne perdue</span>
+                        <span style-name="T2">.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858313"/>
+                        <span style-name="T1">Élie Gagnebin</span>
+                        <bookmark-end name="_Toc517858313"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1891-1949. Géologue, animateur de la vie littéraire de
+                                la Société de Belles-Lettres. A tenu le rôle du « Lecteur » dans
+                                l’</span>
+                        <span style-name="T4">Histoire du soldat </span>
+                        <span style-name="T2">de Ramuz et Strawinsky lors de sa création en
+                                1918.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858314"/>
+                        <span style-name="T1">Charles Gilliard</span>
+                        <bookmark-end name="_Toc517858314"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1879-1944. Historien. Professeur d’histoire de Roud au
+                                Gymnase classique cantonal, à Lausanne, qu’il a dirigé. Professeur à
+                                l’université de Lausanne. Cousin germain d’Edmond Gilliard.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858315"/>
+                        <span style-name="T1">Edmond Gilliard</span>
+                        <bookmark-end name="_Toc517858315"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1875-1969. Professeur de français de Roud au Collège
+                                classique à Lausanne. Avec Paul Budry, a fondé et dirigé les </span>
+                        <span style-name="T4">Cahiers vaudois </span>
+                        <span style-name="T2">(1914-1918) avant de prendre la direction littéraire
+                                des Éditions du Verseau (1925-1928) où est publié </span>
+                        <span style-name="T4">Adieu </span>
+                        <span style-name="T2">en 1927.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858316"/>
+                        <span style-name="T1">Hans Grossrieder</span>
+                        <bookmark-end name="_Toc517858316"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1912-1990. Écrivain suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858317"/>
+                        <span style-name="T1">Frédéric Haldy</span>
+                        <bookmark-end name="_Toc517858317"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1915-2001. Paysan et vigneron à Mont-sur-Rolle, puis à
+                                Longirod. Roud fait sa connaissance lors d’un concours de lutte, le
+                                29 septembre 1940. Correspondance entre 1940 et 1970.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858318"/>
+                        <span style-name="T1">André Held</span>
+                        <bookmark-end name="_Toc517858318"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Imprimeur.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858319"/>
+                        <span style-name="T1">Émile Heubi</span>
+                        <bookmark-end name="_Toc517858319"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1894-1952. Passionné d’histoire et de musique,
+                                directeur de l’Institut de Brillanmont, pensionnat de jeunes filles
+                                de l’avenue Secrétan à Lausanne, où se tiennent les réunions de la
+                                Société de Poésie.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858320"/>
+                        <span style-name="T1">Richard Heyd</span>
+                        <bookmark-end name="_Toc517858320"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Éditeur suisse. Responsable de l’</span>
+                        <span style-name="T4">Hommage à C. F. Ramuz</span>
+                        <span style-name="T2">, Lausanne, Porchet et C</span>
+                        <span style-name="T14">ie</span>
+                        <span style-name="T2"> éditeur, 1938.</span>
+                </p>
+                <p style-name="P2">
+                        <soft-page-break/>
+                </p>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858321"/>
+                        <span style-name="T1">Henri Jaccard</span>
+                        <bookmark-end name="_Toc517858321"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Journaliste à la </span>
+                        <span style-name="T4">Feuille d’Avis de Lausanne</span>
+                        <span style-name="T2">.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858322"/>
+                        <span style-name="T1">Philippe Jaccottet</span>
+                        <bookmark-end name="_Toc517858322"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Né en 1925. Poète suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858323"/>
+                        <span style-name="T1">Edmond Jaloux</span>
+                        <bookmark-end name="_Toc517858323"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1878-1949. Écrivain français.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858324"/>
+                        <span style-name="T1">Charles-François Landry</span>
+                        <bookmark-end name="_Toc517858324"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1909-1973. Écrivain suisse.</span>
+                </p>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858325"/>
+                        <span style-name="T1">Siegfried Lang</span>
+                        <bookmark-end name="_Toc517858325"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1887-1970. Poète et journaliste bâlois. Publie en 1938
+                                une anthologie de poésie des quatre langues nationales suisses, </span>
+                        <span style-name="T4">Lesebuch schweizerischer Dichtung </span>
+                        <span style-name="T2">(Zurich, Schweizer Bücherfreunde), contenant entre
+                                autres des traductions de Roud. Lang dédicace à Roud son recueil </span>
+                        <span style-name="T4">Gedichte und Übertragung </span>
+                        <span style-name="T2">(Johannespresse, 1950).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858326"/>
+                        <span style-name="T1">Auguste Martin</span>
+                        <bookmark-end name="_Toc517858326"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1908-1979. Poète (</span>
+                        <span style-name="T4">Journées</span>
+                        <span style-name="T2">, Lausanne, Freudweiler, 1933), président central de
+                                la Société de Belles-Lettres de 1934 à 1935.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858327"/>
+                        <span style-name="T1">Vio Martin</span>
+                        <bookmark-end name="_Toc517858327"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1906-1986. Poétesse, avec qui Roud se lie d’amitié
+                                dans les années 1940.</span>
+                </p>
+                <p style-name="P1"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858328"/>
+                        <span style-name="T1">Edouard Martinet</span>
+                        <bookmark-end name="_Toc517858328"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1896-1962. Né à Genève en 1896, Edouard Martinet a
+                                fait ses études dans sa ville natale. Compositeur et critique
+                                musical dans ses jeunes années, il s&apos;est cependant voué à la
+                                littérature. On doit à son goût de la nature et sa poésie du
+                                souvenir plusieurs recueils de prose et de vers : &quot;Verjus&quot;
+                                (1930), &quot;Imageries rustiques&quot; (1933), &quot;Poésie de mon
+                                pays&quot; (1942) &quot;Femmes étranges&quot; (1942). Chroniqueur à
+                                &quot;La Suisse&quot;, à &quot;L&apos;illustré&quot; puis à la
+                                &quot;Tribune de Genève&quot;, collaborateur de Radio-Genève
+                                (&quot;Causeries intimes et romanesques&quot;), Martinet a laissé
+                                quelques ouvrages de critique littéraire : &quot;André Gide,
+                                l&apos;amour et la divinité&quot; (1931), &quot;Portraits
+                                d&apos;écrivains romands&quot; (1940 et 1954), &quot;Princes de
+                                lettres&quot; (1945). Edouard Martinet était membre du Groupe Jean
+                                Violette et du Comité de la Fondation Charles-Ferdinand Ramuz; il a
+                                présidé durant vingt ans la Section de littérature de
+                                l&apos;Institut national genevois. Après son décès, le 1er août
+                                1962, ses papiers ont été donnés à la Bibliothèque de Genève par
+                                Madame Edouard Martinet. (source :
+                                http://w3public.ville-ge.ch/bge/odyssee.nsf/Attachments/martinet_edouardframeset.htm/$file/martinet_edouard.pdf)</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858329"/>
+                        <span style-name="T1">Pierre-Louis Matthey</span>
+                        <bookmark-end name="_Toc517858329"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1893-1970. Poète suisse. Correspondance entre 1932 et
+                                1969.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858330"/>
+                        <soft-page-break/>
+                        <span style-name="T1">Marguerite-Yerta Méléra</span>
+                        <bookmark-end name="_Toc517858330"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1889-1965. Romancière et critique suisse, auteure
+                                d’études sur Rimbaud et d’un roman, </span>
+                        <span style-name="T4">Le Val aux sept villages </span>
+                        <span style-name="T2">(Genève-Paris, Éditions Jeheber, 1946).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858331"/>
+                        <span style-name="T1">Henry-Louis Mermod</span>
+                        <bookmark-end name="_Toc517858331"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1891-1962. Éditeur et mécène suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858332"/>
+                        <span style-name="T1">Albert Mermoud</span>
+                        <bookmark-end name="_Toc517858332"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1905-1997. Éditeur suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858333"/>
+                        <span style-name="T1">Léon Nicolas (Olé)</span>
+                        <bookmark-end name="_Toc517858333"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Facteur à Carrouge, « olé [olé] » dans ses manières et
+                                son langage.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858334"/>
+                        <span style-name="T1">Georges Nicole</span>
+                        <bookmark-end name="_Toc517858334"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1898-1959. Critique et poète. Camarade de collège et
+                                d’études de Roud, professeur au Collège de Nyon. Correspondance de
+                                1920 à 1959.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858335"/>
+                        <span style-name="T1">Marcel Perretten (Perrette)</span>
+                        <bookmark-end name="_Toc517858335"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1898-1970. Meunier de Lussery. Roud l’a rencontré au
+                                service militaire. Correspondance entre 1925 et 1968.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858336"/>
+                        <span style-name="T1">Raymond Perrin</span>
+                        <bookmark-end name="_Toc517858336"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Né en 1932. Paysan de Pailly, dont la ferme se nomme
+                                La Croix. « Petite halte à Pailly » évoque une visite chez lui. « Le
+                                repos du cavalier », dans le recueil éponyme, lui est dédié.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858337"/>
+                        <span style-name="T1">Henri Pourrat</span>
+                        <bookmark-end name="_Toc517858337"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1887-1959. Romancier auvergnat, ami de Ramuz. Contacte
+                                Roud en 1929, après l’avoir lu dans le premier numéro d’</span>
+                        <span style-name="T4">Aujourd’hui</span>
+                        <span style-name="T2">.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858338"/>
+                        <span style-name="T1">André Ramseyer</span>
+                        <bookmark-end name="_Toc517858338"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">*1924. Paysan de Palézieux-Gare, dont la ferme se
+                                situe à Monnéaz, à l’écart du village. Roud lui rend de fréquentes
+                                visites dès 1946. Frère de Willy, Edmond et Émile.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858339"/>
+                        <span style-name="T1">Charles Ferdinand Ramuz</span>
+                        <bookmark-end name="_Toc517858339"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1878-1947.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858340"/>
+                        <span style-name="T1">Marcel Raymond</span>
+                        <bookmark-end name="_Toc517858340"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1897-1981. Professeur et critique littéraire
+                                suisse.</span>
+                </p>
+                <p style-name="P1"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858341"/>
+                        <span style-name="T1">Fritz Remund</span>
+                        <bookmark-end name="_Toc517858341"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Chauffeur de car postal (fin des années 1960).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858342"/>
+                        <span style-name="T1">Constant Rey-Milliet</span>
+                        <bookmark-end name="_Toc517858342"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1905-1959. Peintre savoyard, très attaché à la Suisse
+                                romande où il a passé son adolescence. Roud le rencontre en 1932.
+                                Correspondance.</span>
+                </p>
+                <p style-name="P2">
+                        <soft-page-break/>
+                </p>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858343"/>
+                        <span style-name="T1">Casimir Reymond</span>
+                        <bookmark-end name="_Toc517858343"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1893-1969. Sculpteur, dont le fils, Alain, meurt dans
+                                un incendie en octobre 1968 (Roud se rend à l’enterrement).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858344"/>
+                        <span style-name="T1">Françoise Reymond-Robert</span>
+                        <bookmark-end name="_Toc517858344"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Fille de Steven-Paul Robert et épouse de ? Reymond, le
+                                fils de Catherine Colomb.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858345"/>
+                        <span style-name="T1">Jean-Dominique Robert (Lo)</span>
+                        <bookmark-end name="_Toc517858345"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Fils aîné de Steven-Paul Robert et filleul de
+                                Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858346"/>
+                        <span style-name="T1">Steven-Paul Robert</span>
+                        <bookmark-end name="_Toc517858346"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1896-1985. Peintre suisse, ami de Roud. S’installe à
+                                Paris en 1932.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858347"/>
+                        <span style-name="T1">Arnold Rod</span>
+                        <bookmark-end name="_Toc517858347"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Paysan de Carrouge.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858348"/>
+                        <span style-name="T1">Henri Roorda</span>
+                        <bookmark-end name="_Toc517858348"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Professeur de <s/>mathématiques de Roud au Gymnase
+                                classique cantonal, à Lausanne.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858349"/>
+                        <span style-name="T1">Constance Roud-Coigny</span>
+                        <bookmark-end name="_Toc517858349"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1864-1933. Mère de Gustave et Madeleine Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858350"/>
+                        <span style-name="T1">Juliette Roud</span>
+                        <bookmark-end name="_Toc517858350"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1859-1936. Tante paternelle de Roud. Vit jusqu’à sa
+                                mort à Saint-Légier avec sa sœur, Marguerite.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858351"/>
+                        <span style-name="T1">Madeleine Roud</span>
+                        <bookmark-end name="_Toc517858351"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1893-1971. Sœur de Gustave Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858352"/>
+                        <span style-name="T1">Marguerite Roud</span>
+                        <bookmark-end name="_Toc517858352"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1876-1957. Tante paternelle de Roud. Institutrice,
+                                elle vit à Saint-Légier jusqu’en </span>
+                        <span style-name="T3">194 ?</span>
+                        <span style-name="T2">, où elle emménage dans la maison de Carrouge.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858353"/>
+                        <span style-name="T1">Samuel Roud</span>
+                        <bookmark-end name="_Toc517858353"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1862-1930. Père de Gustave et Madeleine Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858354"/>
+                        <span style-name="T1">Daniel Secretan</span>
+                        <bookmark-end name="_Toc517858354"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1895-1971. Diplomate suisse. Camarade d’études de
+                                Roud, auteur notamment d’un « Poème » dans le </span>
+                        <span style-name="T4">Cahier vaudois </span>
+                        <span style-name="T2">intitulé </span>
+                        <span style-name="T4">Poèmes et nouvelles </span>
+                        <span style-name="T2">(1915). Frère de Jacques Secretan (1897-1964), avocat
+                                et professeur suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858355"/>
+                        <span style-name="T1">Daniel Simond</span>
+                        <bookmark-end name="_Toc517858355"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1904-1973. Professeur et critique littéraire
+                                suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858356"/>
+                        <soft-page-break/>
+                        <span style-name="T1">Marie Staehli</span>
+                        <bookmark-end name="_Toc517858356"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Amie de Constance Roud, qui écrit à Roud, enfant, en
+                                l’appelant « poète ».</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858357"/>
+                        <span style-name="T1">Françoise Subilia</span>
+                        <bookmark-end name="_Toc517858357"/>
+                </h>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858358"/>
+                        <span style-name="T1">Edmond Thévoz</span>
+                        <bookmark-end name="_Toc517858358"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1896-1984. Né à Missy. Ami de gymnase de Roud- Médecin
+                                à Estavayer-le-Lac, puis Lausanne. Correspondance entre 1925 et
+                                1975. Frère de Roger Thévoz.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858359"/>
+                        <span style-name="T1">Jeanne Tissot</span>
+                        <bookmark-end name="_Toc517858359"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Pianiste. Son père est instituteur à Carrouge et
+                                Mézières. Correspondance entre 1928 et 1938.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858360"/>
+                        <span style-name="T1">Gilbert Trolliet</span>
+                        <bookmark-end name="_Toc517858360"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1907-1980. Poète et journaliste habitant Genève et
+                                Paris. Directeur de la revue </span>
+                        <span style-name="T4">Présence</span>
+                        <span style-name="T2">.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858361"/>
+                        <span style-name="T1">Paul Vallotton</span>
+                        <bookmark-end name="_Toc517858361"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1864-1936. Directeur de galerie. De 1913 à 1922, il
+                                tient à Lausanne une succursale de la galerie Bernheim-Jeune de
+                                Paris, puis ouvre sa propre galerie en 1923. Il œuvre comme pionnier
+                                pour la diffusion de la peinture française en Suisse, lance et
+                                soutient des artistes locaux et contribue à la renommée de son
+                                frère, Félix (cf. DHS).</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858362"/>
+                        <span style-name="T1">Yves Velan</span>
+                        <bookmark-end name="_Toc517858362"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">1925-2017. Écrivain suisse.</span>
+                </p>
+                <p style-name="P1"/>
+        </person>
+        <person>
+                <h style-name="Heading_20_2" outline-level="2">
+                        <bookmark-start name="_Toc517858363"/>
+                        <span style-name="T1">Gilbert Vincent</span>
+                        <bookmark-end name="_Toc517858363"/>
+                </h>
+                <p style-name="Standard">
+                        <span style-name="T2">Né en 1933. Abbé, ami de Roud.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858364"/>
+                        <span style-name="T1">Jean Viollier</span>
+                        <bookmark-end name="_Toc517858364"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1896-1985. Peintre suisse.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858365"/>
+                        <span style-name="T1">Werner Weber</span>
+                        <bookmark-end name="_Toc517858365"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">Né en 1919. Professeur de littérature à l’université
+                                de Zurich, après avoir été longtemps rédacteur à la </span>
+                        <span style-name="T4">Neue Zürcher Zeitung</span>
+                        <span style-name="T2">. </span>
+                        <span style-name="T4">Unter Dach und Himmel </span>
+                        <span style-name="T2">(Zurich, E. Rentsch, 1942) et </span>
+                        <span style-name="T4">Im Hof des Herbstes </span>
+                        <span style-name="T2">(même éditeur, 1944). Roud lui consacre une « Lettre
+                                au poëte Werner Weber », </span>
+                        <span style-name="T4">Bulletin de la Guilde du livre</span>
+                        <span style-name="T2">, mai 1949, pp. 114-116.</span>
+                </p>
+                <p style-name="P2"/>
+        </person>
+        <person>
+                <h style-name="P11" outline-level="2">
+                        <bookmark-start name="_Toc517858366"/>
+                        <span style-name="T1">Myrian Weber-Perret</span>
+                        <bookmark-end name="_Toc517858366"/>
+                </h>
+                <p style-name="P5">
+                        <span style-name="T2">1922-1985. Professeur suisse, directeur de l’Alliance
+                                culturelle romande. Roud lui consacre une « Petite lettre au
+                                président Weber-Perret », </span>
+                        <span style-name="T4">Cahiers de l’Alliance culturelle romande</span>
+                        <span style-name="T2">, « Le Pays de Vaud », cahier n</span>
+                        <span style-name="T14">o</span>
+                        <span style-name="T2"> 12, novembre 1968, pp. 9-13.</span>
+                </p>
+        </person>
+
+</document-content>
