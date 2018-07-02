@@ -13,8 +13,8 @@
 ##
 #
 
-CHANGE IN GRAPH 
 
+CHANGE IN GRAPH - done ------------------------------------- START
 Given Name and Family Name are both not mandatory (esempio di Aimée, ma esempio anche di famiglia Affolter)
 
 Add Disque as publication type nell'ontologia (Class)
@@ -23,11 +23,8 @@ Create new class author (different from person because it has no notice etc.), f
 
 Add hasContributors per Article (lo aggiungiamo a Publication, così appare dappertutto?)
 
-book has obligatory publishers? if yes, problem ... (ci sono libri senza)
-
 Avant de faire de la saisie, fix guiOrder
-When we'll change the location of the guiOrder (v2 vanno insieme a cardinality), put 'isPreviousManuscript' after 'étape génétique'.
-
+CHANGE IN GRAPH - done ------------------------------------- END
 
 
 Test XML dans Salsah, voir s'il y a des messages d'érreurs
