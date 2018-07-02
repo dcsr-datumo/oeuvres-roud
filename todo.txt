@@ -13,14 +13,25 @@
 ##
 #
 
-Avant de faire de la saisie, fix guiOrder
-When we'll change the location of the guiOrder (v2 vanno insieme a cardinality), put 'isPreviousManuscript' after 'étape génétique'.
-
-Test XML dans Salsah, voir s'il y a des messages d'érreurs
+CHANGE IN GRAPH 
 
 Given Name and Family Name are both not mandatory (esempio di Aimée, ma esempio anche di famiglia Affolter)
 
-Add Disque a publication type nell'ontologia (Class)
+Add Disque as publication type nell'ontologia (Class)
+
+Delete link tra pubblicazione e autore, add literal to property hasAuthor
+
+Add hasContributors per Article (lo aggiungiamo a Publication, così appare dappertutto?)
+
+book has obligatory publishers? if yes, problem ... (ci sono libri senza)
+
+Avant de faire de la saisie, fix guiOrder
+When we'll change the location of the guiOrder (v2 vanno insieme a cardinality), put 'isPreviousManuscript' after 'étape génétique'.
+
+
+
+Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
 
 
 

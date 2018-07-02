@@ -16,9 +16,9 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @publishers.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @periodicals.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @persons.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 
@@ -27,21 +27,26 @@ curl -X POST -d @persons.xml http://root%40example.com:test@localhost:3333/v1/re
 IMPORT PROCEDURES
 
 
-Problemi durante IMPORT
+
+-----------------------> Problemi durante IMPORT <-----------------------
+
 - invalid text : attenzione che non vuole elementi vuoti. Check elementi vuoti: //*[not(text())]
+- lexical error : no "" in label
+------------------------------------->  <--------------------------------
 
 
 
-TO IMPORT PUBLICATION, I NEED:
-- persons (author, translator)
+
+TO IMPORT PUBLICATIONS, I NEED:
 - publishers
-- periodical
+- periodicals
 
 
-- PUBLISHERS -> publishers_backup
+
+PUBLISHERS -> publishers_backup
 --- Extract column 8 and 9 from BiblioDB, corresponding to Class Publishers and properties publisherHasName and publisherHasLocation [copy-paste, create a dedicated csv]
---- Delete empty lines [import_publisher.ipynb]
---- Sort and deduplicate [import_publisher.ipynb] -> import_data/publishers_sorted_distinct.csv
+--- Delete empty lines [import.ipynb]
+--- Sort and deduplicate [import.ipynb] -> import_data/publishers_sorted_distinct.csv
 --- Clean manually from false distinct and changed in biblioDB: 
 	'J. R. Geigy' > 'J.R. Geigy'
 	L'Aire ("Cooperative Rencontre"), Lausanne > L'Aire, Vevey
@@ -51,7 +56,31 @@ TO IMPORT PUBLICATION, I NEED:
 	Horizons de France, "Champs" > Horizons de France
 	Pierre Seghers, coll. Poètes d'aujourd'hui, no 173 > Pierre Seghers
 	-> publishers_sorted_distinct_manuallychecked.csv (THIS IS THE GOOD SOURCE FOR TRANSFORMATION IN XML!)
---- Create XML [import_publisher.ipynb] -> publisher.xml
+--- Create XML [import.ipynb] -> publishers.xml
+
+
+
+
+PUBLICATIONS 
+In biblioDB.ods
+--- doppio autore separato da virgola, non da ET
+--- find and replace all ’ -> '
+--- dividere tra le classi: book, book section, periodicalArticle, disk
+		https://docs.google.com/spreadsheets/d/1xgVFlQ7-lmf9U6Sx7G9yPNpOAumEd79N2nabi3R6BDI/edit#gid=96888708
+
+
+
+PERIODICALS
+--- Clean biblioDB (the copy in googleDoc), check periodicals e issues and volumes numbers (comma distinguishes issue and volume, - means that more issues or volumes are taken)
+--- extract colonna periodical in nuovo csv -> periodicals.csv
+--- deduplicate [import.ipynb] -> delete manually first column (it has numbers that are not important for us) -> periodicals_distinct.csv
+--- Create XML [import.ipynb] -> periodicals.xml
+
+
+
+
+--- s.i.a. ? s.n.a. ?
+
 
 
 
@@ -70,7 +99,6 @@ PERSONS -> persons_backup
 				      <knoraXmlImport:label>pers_Roud Gustave</knoraXmlImport:label>
 				      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
 				      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:hasGivenName>
-				   </p0112-roud-oeuvres:Person>
-
+				   	</p0112-roud-oeuvres:Person>
 
 
