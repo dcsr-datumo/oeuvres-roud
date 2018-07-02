@@ -439,6 +439,40 @@ roud-oeuvres:Periodical   rdf:type owl:Class ;
 
 
 
+roud-oeuvres:Author       rdf:type   owl:Class ;
+    
+                          rdfs:subClassOf knora-base:Resource ,
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:authorHasGivenName ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:authorHasFamilyName ;
+                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:authorHasAuthorityID ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:authorHasDhsID ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          ];
+                          rdfs:label  "Auteur, traducteur, éditeur, collaborateur"@fr ,
+                                      "Author, translator, editor, collaborator"@en ,
+                                      "Autore, traduttore, editore, collaboratore"@it ;
+
+                          rdfs:comment  """Auteur, traducteur, éditeur, collaborateur."""@fr ,
+                                        """Author, translator, editor, collaborator."""@en .
+
+
+
+
+
 roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                    
                               rdfs:subClassOf knora-base:Resource ,
@@ -631,12 +665,12 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           rdfs:subClassOf knora-base:Resource ,
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasGivenName ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:onProperty roud-oeuvres:personHasGivenName ;
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasFamilyName ;
+                            owl:onProperty roud-oeuvres:personHasFamilyName ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
@@ -651,12 +685,12 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasAuthorityID ;
+                            owl:onProperty roud-oeuvres:personHasAuthorityID ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:hasDhsID ;
+                            owl:onProperty roud-oeuvres:personHasDhsID ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
@@ -1585,7 +1619,7 @@ roud-oeuvres:hasTranslatedAuthor    rdf:type owl:ObjectProperty ;
 
                                     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                                     
-                                    knora-base:objectClassConstraint roud-oeuvres:Person ;
+                                    knora-base:objectClassConstraint roud-oeuvres:Author ;
 
                                     rdfs:label  "Auteur traduit"@fr ,
                                                 "The translated author"@en ,
@@ -2485,7 +2519,7 @@ roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
 
                         rdfs:subPropertyOf knora-base:hasLinkTo ;
                         
-                        knora-base:objectClassConstraint roud-oeuvres:Person ;
+                        knora-base:objectClassConstraint roud-oeuvres:Author ;
                         
                         salsah-gui:guiElement salsah-gui:Searchbox ;
 
@@ -2514,7 +2548,7 @@ roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
 
                                     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                    knora-base:objectClassConstraint roud-oeuvres:Person ;
+                                    knora-base:objectClassConstraint roud-oeuvres:Author ;
                                     
                                     rdfs:label  "Auteur"@fr ,
                                                 "Author"@en ,
@@ -2546,7 +2580,7 @@ roud-oeuvres:publicationHasTranslator   rdf:type owl:ObjectProperty ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                        knora-base:objectClassConstraint roud-oeuvres:Person ;
+                                        knora-base:objectClassConstraint roud-oeuvres:Author ;
 
                                         rdfs:label  "Traducteur, traductrice"@fr ,
                                                     "Translator"@en ,
@@ -2836,7 +2870,7 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
                               
-                              knora-base:objectClassConstraint roud-oeuvres:Person ;
+                              knora-base:objectClassConstraint roud-oeuvres:Author ;
 
                               rdfs:label  "Auteur de l'œuvre"@fr ,
                                           "The author of the work"@en ,
@@ -2970,8 +3004,6 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
-
                               knora-base:objectClassConstraint knora-base:UriValue ;
                               
                               rdfs:label  "Identifiant fichier autorités (Permalink VIAF)"@fr ,
@@ -2983,9 +3015,56 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 
                                             ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
+                              salsah-gui:guiElement salsah-gui:SimpleText .
 
-                              salsah-gui:guiOrder "4"^^xsd:integer .
+
+
+roud-oeuvres:personHasAuthorityID   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasAuthorityID ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                    knora-base:objectClassConstraint knora-base:UriValue ;
+                                    
+                                    rdfs:label  "Identifiant fichier autorités (Permalink VIAF)"@fr ,
+                                                "Authority File ID (Permalink VIAF)"@en ,
+                                                "Identificante Autorità (Permalink VIAF)"@it ;
+
+                                    rdfs:comment  "Identifiant unique pour la personne. Spécifier le Permalink VIAF, et non pas le VIAF ID."@fr ,
+                                                  "Uniquer identifier for a person. Specify the VIAF Permalink, not the VIAF ID."@en ;
+
+                                                  ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "4"^^xsd:integer .
+
+
+roud-oeuvres:authorHasAuthorityID   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasAuthorityID ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Author ;
+
+                                    knora-base:objectClassConstraint knora-base:UriValue ;
+                                    
+                                    rdfs:label  "Identifiant fichier autorités (Permalink VIAF)"@fr ,
+                                                "Authority File ID (Permalink VIAF)"@en ,
+                                                "Identificante Autorità (Permalink VIAF)"@it ;
+
+                                    rdfs:comment  "Identifiant unique pour la personne. Spécifier le Permalink VIAF, et non pas le VIAF ID."@fr ,
+                                                  "Uniquer identifier for a person. Specify the VIAF Permalink, not the VIAF ID."@en ;
+
+                                                  ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "2"^^xsd:integer .
 
 
 
@@ -2993,8 +3072,6 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 roud-oeuvres:hasDhsID   rdf:type owl:ObjectProperty ;
 
                         rdfs:subPropertyOf knora-base:hasValue ;
-
-                        knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                         knora-base:objectClassConstraint knora-base:UriValue ;
                         
@@ -3005,9 +3082,51 @@ roud-oeuvres:hasDhsID   rdf:type owl:ObjectProperty ;
                         rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
                                       "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
 
-                        salsah-gui:guiElement salsah-gui:SimpleText ;
+                        salsah-gui:guiElement salsah-gui:SimpleText .
 
-                        salsah-gui:guiOrder "5"^^xsd:integer .
+
+roud-oeuvres:personHasDhsID   rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasValue ;
+
+                              rdfs:subPropertyOf roud-oeuvres:hasDhsID ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                              knora-base:objectClassConstraint knora-base:UriValue ;
+                              
+                              rdfs:label  "Dictionnaire historique de la Suisse (URL)"@fr ,
+                                          "Dictionnaire historique de la Suisse (URL)"@en ,
+                                          "Dizionario storico della Svizzera (URL)"@it ;
+
+                              rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
+                                            "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "5"^^xsd:integer .
+
+
+roud-oeuvres:authorHasDhsID   rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasValue ;
+
+                              rdfs:subPropertyOf roud-oeuvres:hasDhsID ;
+
+                              knora-base:subjectClassConstraint roud-oeuvres:Author ;
+
+                              knora-base:objectClassConstraint knora-base:UriValue ;
+                              
+                              rdfs:label  "Dictionnaire historique de la Suisse (URL)"@fr ,
+                                          "Dictionnaire historique de la Suisse (URL)"@en ,
+                                          "Dizionario storico della Svizzera (URL)"@it ;
+
+                              rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
+                                            "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
+
+                              salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                              salsah-gui:guiOrder "3"^^xsd:integer .
    
 
 
@@ -3084,8 +3203,6 @@ roud-oeuvres:hasGivenName     rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
-
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
                               rdfs:label  "Prénom"@fr ,
@@ -3095,29 +3212,114 @@ roud-oeuvres:hasGivenName     rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Le nom."@fr ,
                                             "The name."@en ;
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
+                              salsah-gui:guiElement salsah-gui:SimpleText .
 
-                              salsah-gui:guiOrder "0"^^xsd:integer .
+
+roud-oeuvres:personHasGivenName     rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasGivenName ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    rdfs:label  "Prénom"@fr ,
+                                                "Name"@en ,
+                                                "Nome"@it ;
+
+                                    rdfs:comment  "Le nom."@fr ,
+                                                  "The name."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "0"^^xsd:integer .
+
+
+roud-oeuvres:authorHasGivenName     rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasGivenName ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Author ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    rdfs:label  "Prénom"@fr ,
+                                                "Name"@en ,
+                                                "Nome"@it ;
+
+                                    rdfs:comment  "Le nom."@fr ,
+                                                  "The name."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "0"^^xsd:integer .
+
 
 
 roud-oeuvres:hasFamilyName    rdf:type owl:ObjectProperty ;
 
                               rdfs:subPropertyOf knora-base:hasValue ;
 
-                              knora-base:subjectClassConstraint roud-oeuvres:Person ;
-
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              rdfs:label  "Nom"@fr ,
+                              rdfs:label  "Nom de famille"@fr ,
                                           "Surname"@en ,
                                           "Cognome"@it ;
 
                               rdfs:comment  "Le nom de famille."@fr ,
-                                            "The surname."@en ;
+                                            "Surname."@en ;
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
+                              salsah-gui:guiElement salsah-gui:SimpleText .
 
-                              salsah-gui:guiOrder "1"^^xsd:integer .
+
+roud-oeuvres:personHasFamilyName    rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasFamilyName ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    rdfs:label  "Nom de famille"@fr ,
+                                                "Surname"@en ,
+                                                "Cognome"@it ;
+
+                                    rdfs:comment  "Le nom de famille."@fr ,
+                                                  "The surname."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "1"^^xsd:integer .
+
+
+roud-oeuvres:authorHasFamilyName     rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:hasFamilyName ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Author ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+                                    
+                                    rdfs:label  "Nom de famille"@fr ,
+                                                "Surname"@en ,
+                                                "Cognome"@it ;
+
+                                    rdfs:comment  "Le nom de famille."@fr ,
+                                                  "The surname."@en ;
+
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                    salsah-gui:guiOrder "1"^^xsd:integer .
+
+
 
 
 
@@ -3225,7 +3427,7 @@ roud-oeuvres:photoHasAuthor   rdf:type owl:ObjectProperty ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Photo ;
 
-                              knora-base:objectClassConstraint roud-oeuvres:Person ;
+                              knora-base:objectClassConstraint roud-oeuvres:Author ;
 
                               rdfs:label  "Auteur de la photo"@fr ,
                                           "The author of the photo"@en ,

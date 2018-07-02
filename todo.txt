@@ -19,7 +19,7 @@ Given Name and Family Name are both not mandatory (esempio di Aimée, ma esempio
 
 Add Disque as publication type nell'ontologia (Class)
 
-Delete link tra pubblicazione e autore, add literal to property hasAuthor
+Create new class author (different from person because it has no notice etc.), for publications, photo and works
 
 Add hasContributors per Article (lo aggiungiamo a Publication, così appare dappertutto?)
 

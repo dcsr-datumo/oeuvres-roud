@@ -68,12 +68,17 @@
 		knora-base:listNodePosition 5 ;
 		rdfs:label "Correspondance"@fr , "Correspondence"@en .
 
-
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> a knora-base:ListNode ;
 		knora-base:listNodeName "SurRoud" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
 		knora-base:listNodePosition 6 ;
 		rdfs:label "À propos de Roud"@fr , "About Roud"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque> a knora-base:ListNode ;
+		knora-base:listNodeName "Disque" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
+		knora-base:listNodePosition 7 ;
+		rdfs:label "Disque"@fr , "Disc"@en .
 
 
 

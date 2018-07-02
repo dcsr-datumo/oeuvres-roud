@@ -40,6 +40,7 @@ IMPORT PROCEDURES
 TO IMPORT PUBLICATIONS, I NEED:
 - publishers
 - periodicals
+- author/translator
 
 
 
