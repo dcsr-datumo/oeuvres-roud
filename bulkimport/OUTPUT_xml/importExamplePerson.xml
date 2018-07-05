@@ -22,8 +22,8 @@
         <knoraXmlImport:label>ramuz ferdinand</knoraXmlImport:label>
         <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1890-06-02</p0112-roud-oeuvres:hasBirthDate>
         <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1935-07-02</p0112-roud-oeuvres:hasDeathDate>
-        <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Ramuz</p0112-roud-oeuvres:hasFamilyName>
-        <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Ferdinand</p0112-roud-oeuvres:hasGivenName>
+        <p0112-roud-oeuvres:personHasFamilyName knoraType="richtext_value">Ramuz</p0112-roud-oeuvres:personHasFamilyName>
+        <p0112-roud-oeuvres:personHasGivenName knoraType="richtext_value">Ferdinand</p0112-roud-oeuvres:personHasGivenName>
         <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">blabldbsladdsadsa</p0112-roud-oeuvres:personHasNotice>
     </p0112-roud-oeuvres:Person>
     

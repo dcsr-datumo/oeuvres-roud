@@ -270,18 +270,23 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:publicationHasToBeDigitized ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsDigitized ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsTranscribed ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ];
                           rdfs:label  "(Classe abstraite, ne pas utiliser. Publication)"@fr ,
                                                   "(Abstract class, do not use. Publication)"@en ,
@@ -1720,6 +1725,30 @@ roud-oeuvres:manuscriptIsDigitized   rdf:type owl:ObjectProperty ;
 
 
 
+roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;     
+                    
+                                            rdfs:subPropertyOf knora-base:hasValue ;
+
+                                            rdfs:subPropertyOf knora-base:isDigitized ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+
+                                            knora-base:objectClassConstraint knora-base:ListValue ;
+                                                            
+                                            rdfs:label  "Numérisé"@fr ,
+                                                        "Digitized"@en ,
+                                                        "Scannerizzato"@it ;
+
+                                            rdfs:comment  "La publication a été numérisé."@fr ,
+                                                          "The publication has been digitized."@en ;
+
+                                            salsah-gui:guiElement salsah-gui:Pulldown ;
+                                
+                                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+
+                                            salsah-gui:guiOrder "12"^^xsd:integer .
+
+
 roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
@@ -1739,7 +1768,7 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
 
                                         salsah-gui:guiElement salsah-gui:Checkbox ;
 
-                                        salsah-gui:guiOrder "12"^^xsd:integer .
+                                        salsah-gui:guiOrder "13"^^xsd:integer .
                     
 
 
@@ -1750,7 +1779,7 @@ roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                        knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
                                         rdfs:label  "Retranscrit (OCR)"@fr ,
                                                     "Transcribed (OCR)"@en ,
@@ -1759,7 +1788,7 @@ roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "La publication a été retranscrite avec OCR corrigé."@fr ,
                                                       "The publication has been transcribed with corrected OCR."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+                                        salsah-gui:guiElement salsah-gui:Richtext ;
 
                                         salsah-gui:guiOrder "11"^^xsd:integer .
 
@@ -1772,7 +1801,7 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
-                                        knora-base:objectClassConstraint knora-base:BooleanValue ;
+                                        knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
                                         rdfs:label  "Original dans le fonds Roud du CRLR"@fr ,
                                                     "Original is in CRLR Roud archive"@en ,
@@ -1781,9 +1810,9 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "Original est dans le fonds Roud au CRLR."@fr ,
                                                       "Original in is Roud archive at CRLR."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Checkbox ;
+                                        salsah-gui:guiElement salsah-gui:Richtext ;
 
-                                        salsah-gui:guiOrder "13"^^xsd:integer .
+                                        salsah-gui:guiOrder "14"^^xsd:integer .
 
 
 
@@ -1833,9 +1862,9 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
 
                                               knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                              rdfs:label  "Commentaire interne"@fr ,
-                                                          "Internal comment"@en ,
-                                                          "Commento interno"@it ;
+                                              rdfs:label  "Commentaire interne (reprises et remarques)"@fr ,
+                                                          "Internal comment (reuse and remarks)"@en ,
+                                                          "Commento interno (riusi e altre info)"@it ;
 
                                               rdfs:comment  "Commentaire sur la publication qui est outil pour l'équipe travaillant sur le projet et qui ne sera pas publié."@fr ,
                                                             "Internal comment on the publication, for the project team only."@en ;

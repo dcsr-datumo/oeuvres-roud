@@ -37,7 +37,7 @@
         <p0112-roud-oeuvres:originalIsInCrlrArchive knoraType="boolean_value">false</p0112-roud-oeuvres:originalIsInCrlrArchive>
         <p0112-roud-oeuvres:periodicalArticleIsInPages knoraType="richtext_value">p. 27</p0112-roud-oeuvres:periodicalArticleIsInPages>
         <p0112-roud-oeuvres:publicationHasAuthor>
-            <p0112-roud-oeuvres:Person knoraType="link_value" target="pers_Roud_Gustave" linkType="ref"></p0112-roud-oeuvres:Person>
+            <p0112-roud-oeuvres:Author knoraType="link_value" target="aut_Roud_Gustave" linkType="ref"></p0112-roud-oeuvres:Author>
         </p0112-roud-oeuvres:publicationHasAuthor>
         <p0112-roud-oeuvres:publicationHasDate knoraType="date_value">GREGORIAN:1967-4-22 CE:1967-4-23 CE</p0112-roud-oeuvres:publicationHasDate>
         <p0112-roud-oeuvres:publicationHasInternalComment knoraType="richtext_value">Le début de Requiem (Payot, 1967), avec une seule différence : "des oiseaux la blessent parfois" (dans le recueil : "des oiseaux parfois la blessent").</p0112-roud-oeuvres:publicationHasInternalComment>
@@ -46,11 +46,11 @@
         <publicationIsTranscribed knoraType="boolean_value">true</publicationIsTranscribed>
     </p0112-roud-oeuvres:PeriodicalArticle>
     
-    <p0112-roud-oeuvres:Person id="pers_Roud_Gustave">
-        <knoraXmlImport:label>pers_Roud Gustave</knoraXmlImport:label>
-        <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
-        <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:hasGivenName>
-    </p0112-roud-oeuvres:Person>
+    <p0112-roud-oeuvres:Author id="pers_Roud_Gustave">
+        <knoraXmlImport:label>aut_Roud Gustave</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
     
     
     <p0112-roud-oeuvres:Periodical id="period_Gazette_Lausanne">

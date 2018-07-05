@@ -18,6 +18,9 @@ curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1
 
 curl -X POST -d @periodicals.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
+curl -X POST -d @authors_backup.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+
+
 curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
@@ -30,9 +33,17 @@ IMPORT PROCEDURES
 
 -----------------------> Problemi durante IMPORT <-----------------------
 
-- invalid text : attenzione che non vuole elementi vuoti. Check elementi vuoti: //*[not(text())]
-- lexical error : no "" in label
+- invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
+- lexical error : no "", ?, and other characters in label
 ------------------------------------->  <--------------------------------
+
+
+
+-----------------------> TO BE DONE MANUALLY AFTER IMPORT <-----------------------
+
+- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
+------------------------------------->  <--------------------------------
+
 
 
 
@@ -75,13 +86,31 @@ PERIODICALS
 --- Clean biblioDB (the copy in googleDoc), check periodicals e issues and volumes numbers (comma distinguishes issue and volume, - means that more issues or volumes are taken)
 --- extract colonna periodical in nuovo csv -> periodicals.csv
 --- deduplicate [import.ipynb] -> delete manually first column (it has numbers that are not important for us) -> periodicals_distinct.csv
---- Create XML [import.ipynb] -> periodicals.xml
+--- create XML [import.ipynb] -> periodicals.xml
 
 
 
+AUTHORS
+--- extract column Creator (for all kinds of publication) -> author.csv
+--- deduplicate [import.ipynb] > check manually delete entry with more than one author (create another row or delete if the second author already exists), delete first column (it has number that are not important for us) -> authors_distinct.csv
+--- create csv with column for name and column for surname [import.ipynb] -> authors_distinct_surname_name.csv
+--- create XML [import.ipynb] -> authors.xml
 
---- s.i.a. ? s.n.a. ?
 
+
+ARTICLES
+--- extract spreadsheet from googledoc -> articles.csv
+--- create XML [import.ipynb] -> authors.xml
+--- DA FARE A MANO: andare a ricercare in Articles.csv (o google doc) e controllare a mano: autore '?' o vuoto; data ?
+
+Fait
+Pas fait
+Fait + photocopié
+Fait (sous le document des inédits)  2
+Fait mais pas inséré (texte identique mais incomplet)  1
+Fait mais pas inséré (texte identique)   1
+Pas fait (photocopié)    4
+Pas fait (variantes inscrites en note)   1 
 
 
 

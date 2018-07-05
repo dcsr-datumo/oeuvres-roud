@@ -13,19 +13,16 @@
 ##
 #
 
+OK  change property PublicationIsTranscribed from boolean to literal
+OK  ADD Publication is to be digitized    oui/non/peut-etre    cardinality max 1  LIST
+OK  PublicationIsDigitized    oui / non     cardinality max 1   boolean
+OK  OriginalIsInCrlrArchive    from boolean to literal   +1 guiOrder
 
-CHANGE IN GRAPH - done ------------------------------------- START
-Given Name and Family Name are both not mandatory (esempio di Aimée, ma esempio anche di famiglia Affolter)
 
-Add Disque as publication type nell'ontologia (Class)
-
-Create new class author (different from person because it has no notice etc.), for publications, photo and works
-
-Add hasContributors per Article (lo aggiungiamo a Publication, così appare dappertutto?)
-
-Avant de faire de la saisie, fix guiOrder
-CHANGE IN GRAPH - done ------------------------------------- END
-
+problemi con Salsah 1
+Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
+- visualize comment on properties (otherwise I put that info in label). Esempi: publicationHasInternalComment, supportInfo?
+- sort results 
 
 Test XML dans Salsah, voir s'il y a des messages d'érreurs
 
@@ -39,18 +36,24 @@ Test XML dans Salsah, voir s'il y a des messages d'érreurs
 ##
 #
 
+Add Source to Person (texte, avec possibilité de faire des liens à la biblio)
+Delete publicationHasTranslator
+
+
 Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
+
 
 LABEL
 
-Document d'archive: doc_cote_premiermotdutitre
-Texte (si document): txt_cote_premiermotdutitre
+Document d'archive: doc_cote 	premiermotdutitre
+Texte (si document): txt_cote premiermotdutitre
 Texte (si publication): txt_
-Article: pub_titre_revue_annee
+Article: pub_titre revue annee
 Revue: period_
-Section d'un livre: pub_titre_livre_annee
-Livre: pub_titre_annee
-Personne: nom_prenom
+Section d'un livre: pub_titre livre_annee
+Livre: pub_titre annee
+Personne: pers_nom prenom
+Author: aut_nom prenom
 Maison d'édition: edi_premiermotdunom
 
 

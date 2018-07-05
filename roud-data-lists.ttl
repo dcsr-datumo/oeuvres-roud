@@ -30,7 +30,8 @@
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-traduction> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-photo> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-correspondance> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> .
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque> .
 	
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique> a knora-base:ListNode ;
 		knora-base:listNodeName "ŒuvrePoétique" ;

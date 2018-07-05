@@ -7,6 +7,8 @@
     version="2.0">
     <xsl:output encoding="UTF-8" indent="yes" method="xml"></xsl:output>
     
+    <!-- APPLY TO GENS.XML -->
+    
     <xsl:template match="/">
         
         <!-- insert root element -->
@@ -46,13 +48,13 @@
                         </p0112-roud-oeuvres:hasDeathDate>
                     </xsl:if>
                     
-                    <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">
+                    <p0112-roud-oeuvres:personHasFamilyName knoraType="richtext_value">
                         <xsl:value-of select="substring-after(./h//span, ' ')"/>
-                    </p0112-roud-oeuvres:hasFamilyName>
+                    </p0112-roud-oeuvres:personHasFamilyName>
                     
-                    <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">
+                    <p0112-roud-oeuvres:personHasGivenName knoraType="richtext_value">
                         <xsl:value-of select="substring-before(./h//span, ' ')"/>
-                    </p0112-roud-oeuvres:hasGivenName>
+                    </p0112-roud-oeuvres:personHasGivenName>
                     
                     <xsl:if test="./p//span">
                         
