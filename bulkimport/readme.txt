@@ -18,9 +18,6 @@ curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1
 
 curl -X POST -d @periodicals.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @authors_backup.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-
-
 curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
@@ -101,16 +98,14 @@ AUTHORS
 ARTICLES
 --- extract spreadsheet from googledoc -> articles.csv
 --- create XML [import.ipynb] -> authors.xml
---- DA FARE A MANO: andare a ricercare in Articles.csv (o google doc) e controllare a mano: autore '?' o vuoto; data ?
+attention:  row[5] photo not included because there are no photo yet
+    		row[8] and row[9] place and publisher not included
+    		row[14] website interest not included
+    		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
+--- DA FARE A MANO: andare a ricercare in Articles.csv (o google doc) e controllare a mano: 
+			when author = "?" (1 occurrence)
+			when there are ten authors, Sainte Hildegarde etc. (1 occurrence)
 
-Fait
-Pas fait
-Fait + photocopié
-Fait (sous le document des inédits)  2
-Fait mais pas inséré (texte identique mais incomplet)  1
-Fait mais pas inséré (texte identique)   1
-Pas fait (photocopié)    4
-Pas fait (variantes inscrites en note)   1 
 
 
 

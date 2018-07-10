@@ -14,7 +14,7 @@
 #
 
 OK  change property PublicationIsTranscribed from boolean to literal
-OK  ADD Publication is to be digitized    oui/non/peut-etre    cardinality max 1  LIST
+OK  ADD Publication has to be digitized    oui/non/peut-etre    cardinality max 1  LIST
 OK  PublicationIsDigitized    oui / non     cardinality max 1   boolean
 OK  OriginalIsInCrlrArchive    from boolean to literal   +1 guiOrder
 
