@@ -16,15 +16,18 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @periodicals.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @authors_periodicals_articles.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 
 
-
-IMPORT PROCEDURES
+###################
+##
+## IMPORT PROCEDURES
+##
+###################
 
 
 
@@ -32,6 +35,7 @@ IMPORT PROCEDURES
 
 - invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
 - lexical error : no "", ?, and other characters in label
+- when importing something with @target, the targeted resources need to be present as well
 ------------------------------------->  <--------------------------------
 
 
@@ -75,7 +79,7 @@ In biblioDB.ods
 --- doppio autore separato da virgola, non da ET
 --- find and replace all ’ -> '
 --- dividere tra le classi: book, book section, periodicalArticle, disk
-		https://docs.google.com/spreadsheets/d/1xgVFlQ7-lmf9U6Sx7G9yPNpOAumEd79N2nabi3R6BDI/edit#gid=96888708
+		https://docs.google.com/spreadsheets/d/1xgVFlQ7-lmf9U6Sx7G9yPNpOAumEd79N2nabi3R6BDI/edit?usp=sharing
 
 
 
@@ -103,10 +107,15 @@ attention:  row[5] photo not included because there are no photo yet
     		row[14] website interest not included
     		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
 --- DA FARE A MANO: andare a ricercare in Articles.csv (o google doc) e controllare a mano: 
-			when author = "?" (1 occurrence)
-			when there are ten authors, Sainte Hildegarde etc. (1 occurrence)
+			two author "Werner Weber" corresponds to nothing (first and last)
+			when there are ten authors, Sainte Hildegarde etc. (1 occurrence), add manually
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+AUTHORS_PERIODICALS_ARTICLES:
+Bizarre ... I import 596 and we have only 500 visible in Salsah ...
+Still missing the article with ten authors (see above)
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 PERSONS -> persons_backup
