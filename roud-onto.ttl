@@ -1729,8 +1729,6 @@ roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;
                     
                                             rdfs:subPropertyOf knora-base:hasValue ;
 
-                                            rdfs:subPropertyOf knora-base:isDigitized ;
-
                                             knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                             knora-base:objectClassConstraint knora-base:ListValue ;
@@ -1752,8 +1750,6 @@ roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;
 roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
-
-                                        rdfs:subPropertyOf knora-base:isDigitized ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
