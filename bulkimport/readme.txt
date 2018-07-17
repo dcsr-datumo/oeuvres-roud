@@ -18,7 +18,7 @@ curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1
 
 curl -X POST -d @authors_periodicals_articles.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 
@@ -43,6 +43,13 @@ curl -X POST -d @importExamplePeriodical.xml http://root%40example.com:test@loca
 -----------------------> TO BE DONE MANUALLY AFTER IMPORT <-----------------------
 
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
+- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
+- check, se non sono già tra gli articoli inserirli a mano:
+	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
+	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
+	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
+
+
 ------------------------------------->  <--------------------------------
 
 
@@ -95,6 +102,7 @@ AUTHORS
 --- extract column Creator (for all kinds of publication) -> author.csv
 --- deduplicate [import.ipynb] > check manually delete entry with more than one author (create another row or delete if the second author already exists), delete first column (it has number that are not important for us) -> authors_distinct.csv
 --- create csv with column for name and column for surname [import.ipynb] -> authors_distinct_surname_name.csv
+--- check manually
 --- create XML [import.ipynb] -> authors.xml
 
 
@@ -115,6 +123,8 @@ attention:  row[5] photo not included because there are no photo yet
 AUTHORS_PERIODICALS_ARTICLES:
 Bizarre ... I import 596 and we have only 500 visible in Salsah ...
 Still missing the article with ten authors (see above)
+
+ATTenzione, rifare aggiungendo authors a label di articles!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 

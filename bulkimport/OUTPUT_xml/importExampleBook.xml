@@ -28,7 +28,7 @@
         <knoraXmlImport:label>pub_Roud ___ Campagne perdue ___ 1972</knoraXmlImport:label>
         <p0112-roud-oeuvres:hasPublicationType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique</p0112-roud-oeuvres:hasPublicationType>
         <hasPublisher>
-            <Publisher knoraType="link_value" target="Bibliotheque_des_Arts" linkType="ref"></Publisher>
+            <Publisher knoraType="link_value" target="ed_Bibliothèque_des_Arts" linkType="ref"></Publisher>
         </hasPublisher>
         <p0112-roud-oeuvres:originalIsInCrlrArchive knoraType="richtext_value">false</p0112-roud-oeuvres:originalIsInCrlrArchive>
         <p0112-roud-oeuvres:publicationHasAuthor>
@@ -41,17 +41,17 @@
         <publicationIsTranscribed knoraType="richtext_value">true</publicationIsTranscribed>
     </p0112-roud-oeuvres:Book>
     
-    <p0112-roud-oeuvres:Author id="pers_Roud_Gustave">
+    <p0112-roud-oeuvres:Author id="aut_Roud_Gustave">
         <knoraXmlImport:label>aut_Roud Gustave</knoraXmlImport:label>
         <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:authorHasFamilyName>
         <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:authorHasGivenName>
     </p0112-roud-oeuvres:Author>
     
     
-    <p0112-roud-oeuvres:Periodical id="period_Gazette_Lausanne">
-        <knoraXmlImport:label>period_Gazette de Lausanne</knoraXmlImport:label>
-        <p0112-roud-oeuvres:periodicalHasTitle knoraType="richtext_value">Gazette de Lausanne</p0112-roud-oeuvres:periodicalHasTitle>
-    </p0112-roud-oeuvres:Periodical>
+    <p0112-roud-oeuvres:Publisher id="ed_Bibliothèque_des_Arts">
+        <knoraXmlImport:label>ed_Bibliothèque des Arts</knoraXmlImport:label>
+        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bibliothèque des Arts</p0112-roud-oeuvres:publisherHasName>
+    </p0112-roud-oeuvres:Publisher>
     
     
    

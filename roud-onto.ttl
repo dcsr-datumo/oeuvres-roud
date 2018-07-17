@@ -319,15 +319,20 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         owl:onProperty roud-oeuvres:hasNumberOfVolumes ;
                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
+####                   [
+####                     rdf:type owl:Restriction ;
+####                        owl:onProperty roud-oeuvres:isReeditionOf ;
+####                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+####                      ],
+####                      [
+####                        rdf:type owl:Restriction ;
+####                        owl:onProperty roud-oeuvres:isReeditionOfValue ;
+####                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+####                      ],
                       [
                         rdf:type owl:Restriction ;
-                        owl:onProperty roud-oeuvres:isReeditionOf ;
-                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-                      ],
-                      [
-                        rdf:type owl:Restriction ;
-                        owl:onProperty roud-oeuvres:isReeditionOfValue ;
-                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                        owl:onProperty roud-oeuvres:bookHasSpecificPages ;
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                       ];
                       rdfs:label  "Livre"@fr ,
                                   "Book"@en ,
@@ -1733,12 +1738,12 @@ roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;
 
                                             knora-base:objectClassConstraint knora-base:ListValue ;
                                                             
-                                            rdfs:label  "Numérisé"@fr ,
-                                                        "Digitized"@en ,
-                                                        "Scannerizzato"@it ;
+                                            rdfs:label  "À numériser"@fr ,
+                                                        "To be digitized"@en ,
+                                                        "Da digitalizzare"@it ;
 
-                                            rdfs:comment  "La publication a été numérisé."@fr ,
-                                                          "The publication has been digitized."@en ;
+                                            rdfs:comment  "La publication est à numériser."@fr ,
+                                                          "The publication has to be digitized."@en ;
 
                                             salsah-gui:guiElement salsah-gui:Pulldown ;
                                 
@@ -1750,6 +1755,8 @@ roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;
 roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
+
+                                        rdfs:subPropertyOf knora-base:isDigitized ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
@@ -2192,6 +2199,27 @@ roud-oeuvres:bookSectionIsInPages   rdf:type  owl:ObjectProperty ;
                                     salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                     salsah-gui:guiOrder "5"^^xsd:integer .
+
+
+roud-oeuvres:bookHasSpecificPages   rdf:type  owl:ObjectProperty ;
+    
+                                    rdfs:subPropertyOf knora-base:hasValue ;
+
+                                    rdfs:subPropertyOf roud-oeuvres:isInPages ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Book ;
+
+                                    knora-base:objectClassConstraint knora-base:TextValue ;
+
+                                    rdfs:label  "Pages"@fr ,
+                                                "Pages"@en ,
+                                                "Pagine"@it ;
+
+                                    rdfs:comment  "Les pages d'une section d'un livre."@fr ,
+                                                  "The pages of a book section."@en ;
+                                    
+                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+                                    salsah-gui:guiOrder "9"^^xsd:integer .
 
 
 
@@ -2696,34 +2724,22 @@ roud-oeuvres:publicationIsEditionOfValue    rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:isReeditionOf    rdf:type owl:ObjectProperty ;
+####roud-oeuvres:isReeditionOf    rdf:type owl:ObjectProperty ;
+####                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+####                              knora-base:subjectClassConstraint roud-oeuvres:Book ;
+####                              knora-base:objectClassConstraint roud-oeuvres:Book ;
+####                              rdfs:label  "Est une réédition de (seulement si autre maison d'édition)"@fr ,
+####                                          "Is a reedition of (only if other publisher)"@en ,
+####                                          "È una riedizione di (solamente se altra casa editrice)"@it ;
+####                              rdfs:comment  "Est un réédition de. Different de réimpression."@fr ,
+####                                            "Is a republication of. Different from reprint."@en ;
+####                              salsah-gui:guiElement salsah-gui:Searchbox ;
+####                              salsah-gui:guiOrder "13"^^xsd:integer .
 
-                              rdfs:subPropertyOf knora-base:hasLinkTo ;
-
-                              knora-base:subjectClassConstraint roud-oeuvres:Book ;
-
-                              knora-base:objectClassConstraint roud-oeuvres:Book ;
-
-                              rdfs:label  "Est une réédition de (seulement si autre maison d'édition)"@fr ,
-                                          "Is a reedition of (only if other publisher)"@en ,
-                                          "È una riedizione di (solamente se altra casa editrice)"@it ;
-
-                              rdfs:comment  "Est un réédition de. Different de réimpression."@fr ,
-                                            "Is a republication of. Different from reprint."@en ;
-
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "13"^^xsd:integer .
-                                                      
-
-
-roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
-
-                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                  knora-base:subjectClassConstraint roud-oeuvres:Book ;
-
-                                  knora-base:objectClassConstraint knora-base:LinkValue .
+####roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
+####                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
+####                                  knora-base:subjectClassConstraint roud-oeuvres:Book ;
+####                                  knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
