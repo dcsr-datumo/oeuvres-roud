@@ -16,7 +16,7 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @authors_periodicals_articles.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @BIBLIOGRAPHY_authors_publishers_periodicals_articles_books_booksections.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
@@ -40,7 +40,7 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 
 
 
------------------------> TO BE DONE MANUALLY AFTER IMPORT <-----------------------
+-----------------------> TO BE DONE MANUALLY IN FINAL XML !!! così poi l'import è completo <-----------------------
 
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
 - pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
@@ -48,7 +48,8 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
 	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
 	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
-
+	- articolo di traduzione con 10 autori ...
+- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
 
 ------------------------------------->  <--------------------------------
 
@@ -114,18 +115,28 @@ attention:  row[5] photo not included because there are no photo yet
     		row[8] and row[9] place and publisher not included
     		row[14] website interest not included
     		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
---- DA FARE A MANO: andare a ricercare in Articles.csv (o google doc) e controllare a mano: 
-			two author "Werner Weber" corresponds to nothing (first and last)
-			when there are ten authors, Sainte Hildegarde etc. (1 occurrence), add manually
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 AUTHORS_PERIODICALS_ARTICLES:
 Bizarre ... I import 596 and we have only 500 visible in Salsah ...
-Still missing the article with ten authors (see above)
-
-ATTenzione, rifare aggiungendo authors a label di articles!!
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+BOOKS
+--- import.ipynb
+
+
+BOOKSECTIONS
+--- import.ipynb
+
+
+
+
+
+
+
 
 
 PERSONS -> persons_backup

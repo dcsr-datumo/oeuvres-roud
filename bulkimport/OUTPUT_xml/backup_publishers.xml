@@ -1,761 +1,146 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
-    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
-
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Amis_de_C._F._Landry">
-        <knoraXmlImport:label>edi_Amis de C. F. Landry</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Amis de C. F.
-            Landry</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Association_des_Amis_de_Gustave_Roud">
-        <knoraXmlImport:label>edi_Association des Amis de Gustave Roud</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne et
-            Carrouge</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Association des Amis de
-            Gustave Roud</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Atelier_Saint-Prex_et_Jean_Genoud">
-        <knoraXmlImport:label>edi_Atelier Saint-Prex et Jean Genoud</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Atelier Saint-Prex et Jean
-            Genoud</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Au_Verseau">
-        <knoraXmlImport:label>edi_Au Verseau</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Au
-            Verseau</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Bertil_Galland">
-        <knoraXmlImport:label>edi_Bertil Galland</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Vevey</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bertil
-            Galland</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Bibliothèque_des_Arts">
-        <knoraXmlImport:label>edi_Bibliothèque des Arts</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bibliothèque des
-            Arts</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Chambre_économique_du_Jura">
-        <knoraXmlImport:label>edi_Chambre économique du Jura</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Chambre économique du
-            Jura</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Clairefontaine">
-        <knoraXmlImport:label>edi_Clairefontaine</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Clairefontaine</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Corti">
-        <knoraXmlImport:label>edi_Corti</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Corti</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Cyclades">
-        <knoraXmlImport:label>edi_Cyclades</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Nyon</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Cyclades</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Delpire">
-        <knoraXmlImport:label>edi_Delpire</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Delpire</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="éditeurs_Jacques_Chessex_Bertil_Galland_Daniel_Laufer_Maurice_Maffeï">
-        <knoraXmlImport:label>edi_éditeurs Jacques Chessex, Bertil Galland, Daniel Laufer, Maurice Maffeï</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">éditeurs Jacques Chessex,
-            Bertil Galland, Daniel Laufer, Maurice Maffeï</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Edition_du_Lien">
-        <knoraXmlImport:label>edi_Edition du Lien</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Leysin</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Edition du
-            Lien</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Éditions_de_Mon_Repos">
-        <knoraXmlImport:label>edi_Éditions de Mon Repos</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions de Mon
-            Repos</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Éditions_des_Portes_de_France">
-        <knoraXmlImport:label>edi_Éditions des Portes de France</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Porrentruy</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions des Portes de
-            France</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Éditions_des_Terreaux">
-        <knoraXmlImport:label>edi_Éditions des Terreaux</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions des
-            Terreaux</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Editions_du_Comte-Vert">
-        <knoraXmlImport:label>edi_Editions du Comte-Vert</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Editions du
-            Comte-Vert</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Éditions_Paroles">
-        <knoraXmlImport:label>edi_Éditions Paroles</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions
-            Paroles</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Editions_Vie">
-        <knoraXmlImport:label>edi_Editions Vie</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Editions
-            Vie</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Empreintes">
-        <knoraXmlImport:label>edi_Empreintes</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Moudon</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Empreintes</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Études_de_lettres">
-        <knoraXmlImport:label>edi_Études de lettres</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Études de
-            lettres</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Fario">
-        <knoraXmlImport:label>edi_Fario</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Fario</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Fata_Morgana">
-        <knoraXmlImport:label>edi_Fata Morgana</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Montpellier</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Fata
-            Morgana</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="FIPF">
-        <knoraXmlImport:label>edi_FIPF</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Sèvres</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >FIPF</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Fondation_Jan_Michalski_pour_l_écriture_et_la_littérature">
-        <knoraXmlImport:label>edi_Fondation Jan Michalski pour l'écriture et la littérature</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Montricher</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Fondation Jan Michalski pour
-            l'écriture et la littérature</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Gallimard">
-        <knoraXmlImport:label>edi_Gallimard</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Gallimard</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Horizons_de_France">
-        <knoraXmlImport:label>edi_Horizons de France</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Horizons de
-            France</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Imprimerie_Held">
-        <knoraXmlImport:label>edi_Imprimerie Held</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Imprimerie
-            Held</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Infolio">
-        <knoraXmlImport:label>edi_Infolio</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Gollion</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Infolio</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="J.-M._Place">
-        <knoraXmlImport:label>edi_J.-M. Place</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">J.-M.
-            Place</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="J.R._Geigy">
-        <knoraXmlImport:label>edi_J.R. Geigy</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Bâle</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">J.R.
-            Geigy</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="José_Corti">
-        <knoraXmlImport:label>edi_José Corti</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">José
-            Corti</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Kandelaber_Verlag">
-        <knoraXmlImport:label>edi_Kandelaber Verlag</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Berne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Kandelaber
-            Verlag</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="L_Âge_d_Homme">
-        <knoraXmlImport:label>edi_L'Âge d'Homme</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">L'Âge
-            d'Homme</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="L_Aire">
-        <knoraXmlImport:label>edi_L'Aire</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Vevey</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >L'Aire</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Baconnière">
-        <knoraXmlImport:label>edi_La Baconnière</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Neuchâtel</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La
-            Baconnière</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Bibliothèque_des_Arts">
-        <knoraXmlImport:label>edi_La Bibliothèque des Arts</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Bibliothèque des
-            Arts</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Délirante">
-        <knoraXmlImport:label>edi_La Délirante</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La
-            Délirante</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Dogana">
-        <knoraXmlImport:label>edi_La Dogana</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Genève</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La
-            Dogana</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Guilde_du_Livre">
-        <knoraXmlImport:label>edi_La Guilde du Livre</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Guilde du
-            Livre</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Manufacture">
-        <knoraXmlImport:label>edi_La Manufacture</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lyon</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La
-            Manufacture</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="La_Suisse_Société_d_assurances">
-        <knoraXmlImport:label>edi_La Suisse, Société d'assurances</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Suisse, Société
-            d'assurances</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Le_Verseau">
-        <knoraXmlImport:label>edi_Le Verseau</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Le
-            Verseau</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Les_Cahiers_du_Sud">
-        <knoraXmlImport:label>edi_Les Cahiers du Sud</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Marseille</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Les Cahiers du
-            Sud</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Les_Chantres">
-        <knoraXmlImport:label>edi_Les Chantres</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Etoy</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Les
-            Chantres</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Max_Roth">
-        <knoraXmlImport:label>edi_Max Roth</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Max
-            Roth</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Mermod">
-        <knoraXmlImport:label>edi_Mermod</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Mermod</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Musée_cantonal_des_Beaux-Arts">
-        <knoraXmlImport:label>edi_Musée cantonal des Beaux-Arts</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Musée cantonal des
-            Beaux-Arts</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Musée_des_Beaux-Arts">
-        <knoraXmlImport:label>edi_Musée des Beaux-Arts</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Vevey</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Musée des
-            Beaux-Arts</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="NRF_Bibliothèque_de_la_Pléiade">
-        <knoraXmlImport:label>edi_NRF, Bibliothèque de la Pléiade</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">NRF, Bibliothèque de la
-            Pléiade</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Paul_Castella">
-        <knoraXmlImport:label>edi_Paul Castella</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Albeuve</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Paul
-            Castella</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Payot">
-        <knoraXmlImport:label>edi_Payot</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Payot</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Payot_Centre_de_recherches_sur_les_lettres_romandes">
-        <knoraXmlImport:label>edi_Payot, Centre de recherches sur les lettres romandes</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Dorigny</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Payot, Centre de recherches
-            sur les lettres romandes</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Peter_Lang">
-        <knoraXmlImport:label>edi_Peter Lang</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">New
-            York</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Peter
-            Lang</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Pierre_Cailler">
-        <knoraXmlImport:label>edi_Pierre Cailler</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Genève</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pierre
-            Cailler</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Pierre_Seghers">
-        <knoraXmlImport:label>edi_Pierre Seghers</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Paris</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pierre
-            Seghers</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Pour_l_Art">
-        <knoraXmlImport:label>edi_Pour l'Art</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pour
-            l'Art</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Presse_universitaire_de_Strasbourg">
-        <knoraXmlImport:label>edi_Presse universitaire de Strasbourg</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Strasbourg</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Presse universitaire de
-            Strasbourg</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Raynald_Métraux">
-        <knoraXmlImport:label>edi_Raynald Métraux</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Raynald
-            Métraux</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Rencontre">
-        <knoraXmlImport:label>edi_Rencontre</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Rencontre</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Schweizer_Bücherfreunde">
-        <knoraXmlImport:label>edi_Schweizer Bücherfreunde</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Zurich</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Schweizer
-            Bücherfreunde</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Slatkine">
-        <knoraXmlImport:label>edi_Slatkine</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Genève</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Slatkine</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Société_de_la_feuille_d_avis_de_Lausanne">
-        <knoraXmlImport:label>edi_Société de la feuille d'avis de Lausanne</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Société de la feuille d'avis
-            de Lausanne</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Sources_-_Revue_de_la_Maison_de_la_Poésie">
-        <knoraXmlImport:label>edi_Sources - Revue de la Maison de la Poésie</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Namur</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Sources - Revue de la Maison
-            de la Poésie</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Union_suisse_des_paysans">
-        <knoraXmlImport:label>edi_Union suisse des paysans</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Brougg</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Union suisse des
-            paysans</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="V._Porchet">
-        <knoraXmlImport:label>edi_V. Porchet</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Lausanne</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">V.
-            Porchet</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Zoé">
-        <knoraXmlImport:label>edi_Zoé</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Genève</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Zoé</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Zofingue">
-        <knoraXmlImport:label>edi_Zofingue</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Zofingue</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
-
-    <p0112-roud-oeuvres:Publisher
-        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
-        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
-        id="Zollikofer">
-        <knoraXmlImport:label>edi_Zollikofer</knoraXmlImport:label>
-        <p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value"
-            >Saint-Gall</p0112-roud-oeuvres:publisherHasLocation>
-        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value"
-            >Zollikofer</p0112-roud-oeuvres:publisherHasName>
-    </p0112-roud-oeuvres:Publisher>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd" xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Aire"><knoraXmlImport:label>edi_Aire</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Vevey</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Aire</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Amis_de_C._F._Landry"><knoraXmlImport:label>edi_Amis de C. F. Landry</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Amis de C. F. Landry</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Association_des_Amis_de_Gustave_Roud"><knoraXmlImport:label>edi_Association des Amis de Gustave Roud</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne et Carrouge</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Association des Amis de Gustave Roud</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Atelier_Saint-Prex_et_Jean_Genoud"><knoraXmlImport:label>edi_Atelier Saint-Prex et Jean Genoud</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Atelier Saint-Prex et Jean Genoud</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Au_Verseau"><knoraXmlImport:label>edi_Au Verseau</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Au Verseau</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Bertil_Galland"><knoraXmlImport:label>edi_Bertil Galland</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Vevey</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bertil Galland</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Bibliothèque_des_Arts"><knoraXmlImport:label>edi_Bibliothèque des Arts</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bibliothèque des Arts</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Chambre_économique_du_Jura"><knoraXmlImport:label>edi_Chambre économique du Jura</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Chambre économique du Jura</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Clairefontaine"><knoraXmlImport:label>edi_Clairefontaine</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Clairefontaine</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Corti"><knoraXmlImport:label>edi_Corti</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Corti</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Cyclades"><knoraXmlImport:label>edi_Cyclades</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Nyon</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Cyclades</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Delpire"><knoraXmlImport:label>edi_Delpire</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Delpire</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="éditeurs_Jacques_Chessex_Bertil_Galland_Daniel_Laufer_Maurice_Maffeï"><knoraXmlImport:label>edi_éditeurs Jacques Chessex, Bertil Galland, Daniel Laufer, Maurice Maffeï</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">éditeurs Jacques Chessex, Bertil Galland, Daniel Laufer, Maurice Maffeï</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Edition_du_Lien"><knoraXmlImport:label>edi_Edition du Lien</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Leysin</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Edition du Lien</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Éditions_de_Mon_Repos"><knoraXmlImport:label>edi_Éditions de Mon Repos</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions de Mon Repos</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Éditions_des_Portes_de_France"><knoraXmlImport:label>edi_Éditions des Portes de France</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Porrentruy</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions des Portes de France</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Éditions_des_Terreaux"><knoraXmlImport:label>edi_Éditions des Terreaux</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions des Terreaux</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Editions_du_Comte-Vert"><knoraXmlImport:label>edi_Editions du Comte-Vert</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Editions du Comte-Vert</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Éditions_Paroles"><knoraXmlImport:label>edi_Éditions Paroles</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions Paroles</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Editions_Vie"><knoraXmlImport:label>edi_Editions Vie</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Editions Vie</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Empreintes"><knoraXmlImport:label>edi_Empreintes</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Moudon</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Empreintes</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Études_de_lettres"><knoraXmlImport:label>edi_Études de lettres</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Études de lettres</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Fario"><knoraXmlImport:label>edi_Fario</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Fario</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Fata_Morgana"><knoraXmlImport:label>edi_Fata Morgana</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Montpellier</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Fata Morgana</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="FIPF"><knoraXmlImport:label>edi_FIPF</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Sèvres</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">FIPF</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Fondation_Jan_Michalski_pour_l_écriture_et_la_littérature"><knoraXmlImport:label>edi_Fondation Jan Michalski pour l'écriture et la littérature</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Montricher</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Fondation Jan Michalski pour l'écriture et la littérature</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Gallimard"><knoraXmlImport:label>edi_Gallimard</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Gallimard</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Horizons_de_France"><knoraXmlImport:label>edi_Horizons de France</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Horizons de France</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Imprimerie_Held"><knoraXmlImport:label>edi_Imprimerie Held</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Imprimerie Held</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Infolio"><knoraXmlImport:label>edi_Infolio</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Gollion</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Infolio</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="J.-M._Place"><knoraXmlImport:label>edi_J.-M. Place</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">J.-M. Place</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="J.R._Geigy"><knoraXmlImport:label>edi_J.R. Geigy</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Bâle</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">J.R. Geigy</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="José_Corti"><knoraXmlImport:label>edi_José Corti</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">José Corti</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Kandelaber_Verlag"><knoraXmlImport:label>edi_Kandelaber Verlag</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Berne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Kandelaber Verlag</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="L_Âge_d_Homme"><knoraXmlImport:label>edi_L'Âge d'Homme</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">L'Âge d'Homme</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="L_Aire"><knoraXmlImport:label>edi_L'Aire</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Vevey</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">L'Aire</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Baconnière"><knoraXmlImport:label>edi_La Baconnière</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Neuchâtel</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Baconnière</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Bibliothèque_des_Arts"><knoraXmlImport:label>edi_La Bibliothèque des Arts</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Bibliothèque des Arts</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Délirante"><knoraXmlImport:label>edi_La Délirante</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Délirante</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Dogana"><knoraXmlImport:label>edi_La Dogana</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Genève</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Dogana</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Guilde_du_Livre"><knoraXmlImport:label>edi_La Guilde du Livre</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Guilde du Livre</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Manufacture"><knoraXmlImport:label>edi_La Manufacture</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lyon</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Manufacture</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="La_Suisse_Société_d_assurances"><knoraXmlImport:label>edi_La Suisse, Société d'assurances</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">La Suisse, Société d'assurances</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Le_Verseau"><knoraXmlImport:label>edi_Le Verseau</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Le Verseau</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Les_Cahiers_du_Sud"><knoraXmlImport:label>edi_Les Cahiers du Sud</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Marseille</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Les Cahiers du Sud</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Les_Chantres"><knoraXmlImport:label>edi_Les Chantres</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Etoy</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Les Chantres</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Max_Roth"><knoraXmlImport:label>edi_Max Roth</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Max Roth</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Mermod"><knoraXmlImport:label>edi_Mermod</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Mermod</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Musée_cantonal_des_Beaux-Arts"><knoraXmlImport:label>edi_Musée cantonal des Beaux-Arts</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Musée cantonal des Beaux-Arts</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Musée_des_Beaux-Arts"><knoraXmlImport:label>edi_Musée des Beaux-Arts</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Vevey</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Musée des Beaux-Arts</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="NRF_Bibliothèque_de_la_Pléiade"><knoraXmlImport:label>edi_NRF, Bibliothèque de la Pléiade</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">NRF, Bibliothèque de la Pléiade</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Paul_Castella"><knoraXmlImport:label>edi_Paul Castella</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Albeuve</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Paul Castella</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Payot"><knoraXmlImport:label>edi_Payot</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Payot</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Payot_Centre_de_recherches_sur_les_lettres_romandes"><knoraXmlImport:label>edi_Payot, Centre de recherches sur les lettres romandes</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Dorigny</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Payot, Centre de recherches sur les lettres romandes</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Peter_Lang"><knoraXmlImport:label>edi_Peter Lang</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">New York</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Peter Lang</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Pierre_Cailler"><knoraXmlImport:label>edi_Pierre Cailler</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Genève</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pierre Cailler</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Pierre_Seghers"><knoraXmlImport:label>edi_Pierre Seghers</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Paris</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pierre Seghers</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Pour_l_Art"><knoraXmlImport:label>edi_Pour l'Art</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Pour l'Art</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Presse_universitaire_de_Strasbourg"><knoraXmlImport:label>edi_Presse universitaire de Strasbourg</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Strasbourg</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Presse universitaire de Strasbourg</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Raynald_Métraux"><knoraXmlImport:label>edi_Raynald Métraux</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Raynald Métraux</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Rencontre"><knoraXmlImport:label>edi_Rencontre</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Rencontre</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Schweizer_Bücherfreunde"><knoraXmlImport:label>edi_Schweizer Bücherfreunde</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Zurich</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Schweizer Bücherfreunde</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Slatkine"><knoraXmlImport:label>edi_Slatkine</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Genève</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Slatkine</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Société_de_la_feuille_d_avis_de_Lausanne"><knoraXmlImport:label>edi_Société de la feuille d'avis de Lausanne</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Société de la feuille d'avis de Lausanne</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Sources_-_Revue_de_la_Maison_de_la_Poésie"><knoraXmlImport:label>edi_Sources - Revue de la Maison de la Poésie</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Namur</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Sources - Revue de la Maison de la Poésie</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Union_suisse_des_paysans"><knoraXmlImport:label>edi_Union suisse des paysans</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Brougg</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Union suisse des paysans</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="V._Porchet"><knoraXmlImport:label>edi_V. Porchet</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">V. Porchet</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Zoé"><knoraXmlImport:label>edi_Zoé</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Genève</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Zoé</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Zofingue"><knoraXmlImport:label>edi_Zofingue</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Zofingue</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Zollikofer"><knoraXmlImport:label>edi_Zollikofer</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Saint-Gall</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Zollikofer</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
+
+<p0112-roud-oeuvres:Publisher xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="Éditions_Chantegrive"><knoraXmlImport:label>edi_Éditions Chantegrive</knoraXmlImport:label><p0112-roud-oeuvres:publisherHasLocation knoraType="richtext_value">Lausanne</p0112-roud-oeuvres:publisherHasLocation><p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Éditions Chantegrive</p0112-roud-oeuvres:publisherHasName></p0112-roud-oeuvres:Publisher>
 </knoraXmlImport:resources>

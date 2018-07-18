@@ -373,12 +373,17 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                             
                             [
                               rdf:type owl:Restriction ;
-                              owl:onProperty roud-oeuvres:bookSectionIsPartOf ;
-                              owl:cardinality "1"^^xsd:nonNegativeInteger
+                              owl:onProperty roud-oeuvres:bookSectionHasPublisher ;
+                              owl:minCardinality "0"^^xsd:nonNegativeInteger
                             ],
                             [
                               rdf:type owl:Restriction ;
-                              owl:onProperty roud-oeuvres:bookSectionIsPartOfValue ;
+                              owl:onProperty roud-oeuvres:bookSectionHasPublisherValue ;
+                              owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            ],
+                            [
+                              rdf:type owl:Restriction ;
+                              owl:onProperty roud-oeuvres:bookSectionIsPartOf ;
                               owl:cardinality "1"^^xsd:nonNegativeInteger
                             ],
                             [
@@ -2277,31 +2282,22 @@ roud-oeuvres:isInBookVolume   rdf:type  owl:ObjectProperty ;
 
 roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
 
-                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+                                      rdfs:subPropertyOf knora-base:hasValue ;
 
                                       knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
 
-                                      knora-base:objectClassConstraint roud-oeuvres:Book ;
+                                      knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                      rdfs:label  "Fait partie du livre"@fr ,
-                                                  "Is part of the book"@en ,
-                                                  "Fa parte del libro"@it ;
+                                      rdfs:label  "Titre du livre"@fr ,
+                                                  "Title of the book"@en ,
+                                                  "Titolo del libro"@it ;
 
                                       rdfs:comment  "La section (chapitre ou autre) fait partie d'un livre"@fr ,
                                                     "The section is part of the book"@en ;
                                       
-                                      salsah-gui:guiElement salsah-gui:Searchbox ;
+                                      salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                       salsah-gui:guiOrder "3"^^xsd:integer .
-
-
-roud-oeuvres:bookSectionIsPartOfValue       rdf:type  owl:ObjectProperty ;
-
-                                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                            knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
-
-                                            knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -2395,6 +2391,35 @@ roud-oeuvres:hasPublisherValue    rdf:type  owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
                                   knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:bookSectionHasPublisher    rdf:type  owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                                        knora-base:objectClassConstraint roud-oeuvres:Publisher ;
+
+                                        rdfs:label  "Maison d'édition"@fr ,
+                                                    "Publisher"@en ,
+                                                    "Casa editrice"@it ;
+
+                                        rdfs:comment  "La maison d'édition."@fr ,
+                                                      "The publisher."@en ;
+
+                                        salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                        salsah-gui:guiOrder "4"^^xsd:integer .
+
+
+roud-oeuvres:bookSectionHasPublisherValue   rdf:type  owl:ObjectProperty ;
+
+                                            rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                            knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
+
+                                            knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 

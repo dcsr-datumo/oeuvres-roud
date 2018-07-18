@@ -14,9 +14,10 @@
 #
 
 
-books add possibility to specify pages
-clean numerise deux fois (DOVREBBE ESSERE OK)
-------->>>>>>> upload ontology and download new zip for import
+DONE. books add possibility to specify pages
+DONE. bookSectionIsPartOf textValue instead of link
+DONE. property hasPublisher added to BookSection
+--> change in graph
 
 
 
