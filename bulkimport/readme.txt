@@ -1,4 +1,6 @@
 
+
+
 ###################
 ##
 ## BULK IMPORT
@@ -16,7 +18,7 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @BIBLIOGRAPHY_authors_publishers_periodicals_articles_books_booksections.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @BIBLIOGRAPHY_refined.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
@@ -30,12 +32,11 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 ###################
 
 
-
 -----------------------> Problemi durante IMPORT <-----------------------
 
 - invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
 - lexical error : no "", ?, and other characters in label
-- when importing something with @target, the targeted resources need to be present as well
+- when importing something with @target, the targeted resources need to be present as well :)
 ------------------------------------->  <--------------------------------
 
 
@@ -50,18 +51,9 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
 	- articolo di traduzione con 10 autori ...
 - libri (books.csv) con più di due autori, add gli autori dal terzo in poi
+- INPUT_data/check.csv
 
 ------------------------------------->  <--------------------------------
-
-
-
-
-
-TO IMPORT PUBLICATIONS, I NEED:
-- publishers
-- periodicals
-- author/translator
-
 
 
 PUBLISHERS -> publishers_backup
@@ -80,8 +72,6 @@ PUBLISHERS -> publishers_backup
 --- Create XML [import.ipynb] -> publishers.xml
 
 
-
-
 PUBLICATIONS 
 In biblioDB.ods
 --- doppio autore separato da virgola, non da ET
@@ -90,13 +80,11 @@ In biblioDB.ods
 		https://docs.google.com/spreadsheets/d/1xgVFlQ7-lmf9U6Sx7G9yPNpOAumEd79N2nabi3R6BDI/edit?usp=sharing
 
 
-
 PERIODICALS
 --- Clean biblioDB (the copy in googleDoc), check periodicals e issues and volumes numbers (comma distinguishes issue and volume, - means that more issues or volumes are taken)
 --- extract colonna periodical in nuovo csv -> periodicals.csv
 --- deduplicate [import.ipynb] -> delete manually first column (it has numbers that are not important for us) -> periodicals_distinct.csv
 --- create XML [import.ipynb] -> periodicals.xml
-
 
 
 AUTHORS
@@ -107,7 +95,6 @@ AUTHORS
 --- create XML [import.ipynb] -> authors.xml
 
 
-
 ARTICLES
 --- extract spreadsheet from googledoc -> articles.csv
 --- create XML [import.ipynb] -> authors.xml
@@ -115,13 +102,8 @@ attention:  row[5] photo not included because there are no photo yet
     		row[8] and row[9] place and publisher not included
     		row[14] website interest not included
     		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 AUTHORS_PERIODICALS_ARTICLES:
 Bizarre ... I import 596 and we have only 500 visible in Salsah ...
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 
 
 BOOKS
@@ -132,9 +114,9 @@ BOOKSECTIONS
 --- import.ipynb
 
 
-
-
-
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+	BIBLIOGRAPHY.xml > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
