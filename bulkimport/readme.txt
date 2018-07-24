@@ -20,7 +20,7 @@ curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1
 
 curl -X POST -d @BIBLIOGRAPHY_refined.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 
@@ -41,7 +41,7 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 
 
 
------------------------> TO BE DONE MANUALLY IN FINAL XML !!! così poi l'import è completo <-----------------------
+-----------------------> BIBLIO - TO BE DONE MANUALLY IN FINAL XML !!! così poi l'import è completo <-----------------------
 
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
 - pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
@@ -52,6 +52,7 @@ curl -X POST -d @importExampleBook.xml http://root%40example.com:test@localhost:
 	- articolo di traduzione con 10 autori ...
 - libri (books.csv) con più di due autori, add gli autori dal terzo in poi
 - INPUT_data/check.csv
+- sections recueils
 
 ------------------------------------->  <--------------------------------
 
@@ -139,3 +140,14 @@ PERSONS -> persons_backup
 				   	</p0112-roud-oeuvres:Person>
 
 
+
+
+FICHES 
+--- prepare importExampleFiche.xml
+--- export fiches from mysql (export as csv for Excel, better than csv)
+
+		- dates with missing year (only months and day) not accepted by Knora
+		- preserve xml (html) as such when importing, do not transform it into entities, otherwise Knora cannot read it
+				substitute it with ENTITY is not enough
+				--> read it (fromstring / parse) and then append (create new children)
+				OK, it works for 4:5, but not for 6:7 because of UNDEFINED ENTITIES - UseForeignDTD is not a solution for us because it's not an XML file that we are calling, unless we can call an external DTD ... so I guess we need to preprocess the XML inside the CSV

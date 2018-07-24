@@ -1417,7 +1417,7 @@ roud-oeuvres:hasOtherWritingTool  rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Autres instruments d'écriture utilisés dans le document."@fr ,
                                                 "Other writing tools in use in the document"@en ;
                                   
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
+                                  salsah-gui:guiElement salsah-gui:Richtext ;
                                   
                                   salsah-gui:guiOrder "12"^^xsd:integer .
 
@@ -1590,7 +1590,7 @@ roud-oeuvres:manuscriptHasPublishedReference  rdf:type owl:ObjectProperty ;
                                               
                                               knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
                                               
-                                              knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
+                                              knora-base:objectClassConstraint roud-oeuvres:Publication ;
 
                                               rdfs:label  "Référence bibliographique (pour les manuscrits qui sont en lien avec une publication)"@fr ,
                                                           "Bibliographical reference (for manuscripts linked to a publication)"@en ;

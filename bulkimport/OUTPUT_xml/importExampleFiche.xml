@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    
+   
+   
+    <!--    IMPORT RULES. From Knora Documentation
+            The remaining child elements of each resource represent its property values. 
+            These must be sorted in alphabetical order by property name.
+            If a property has mutliple values, these are represented as multiple adjacent property elements.
+            The type of each value must be specified using the attribute knoraType.    
+            Attention to capital letters (for Classes) !   -->
+   
+   
+
+    <!--    Define mapping between unicode entities and HTML code or symbol 
+            Example: eacute > "&#233;" | "é"  -->
+    <!DOCTYPE
+     resource
+     [
+        <!ENTITY eacute "é" > 
+        <!ENTITY egrave "è" >
+        <!ENTITY rsquo "'" > <!-- changed to apostrophe, should be &apos; > "&#39;" -->
+    ]>
+    
+    
+        
+        
+   
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+    
+    <p0112-roud-oeuvres:Manuscript id="fiche89">
+        <knoraXmlImport:label>fiche891 ___ L’enclave 24 août 17h1/2 ___ MS 4 D/28a</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value">false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasOtherWritingTool knoraType="richtext_value"
+            mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping"><text xmlns=""
+                >&lt;p&gt;Crayon gris&lt;/p&gt;</text></p0112-roud-oeuvres:hasOtherWritingTool>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
+            <text xmlns="">
+                <p>Liste de mots allemands avec leurs traductions. Quatre vers (traduits ?) non identifi&eacute;s.</p>
+                <p>Le tambour y scande le pas lourd</p>
+                <p>De notre horde prisonni&egrave;re</p>
+                <p>La trompette, et ce fouet sur nos chers (?)</p>
+                <p>Seigneur, pourtant je n&rsquo;ai pu voir</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
+            <text xmlns="">
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" target="Novalis" linkType="ref"></p0112-roud-oeuvres:Author>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value">false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDate knoraType="date_value">GREGORIAN:1978 CE</p0112-roud-oeuvres:manuscriptHasDate>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value">GREGORIAN:1939 CE:1959 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <!-- Inside manuscriptHasDateEstablishedReadable are gathered columns of the DB: datationlist_id, datation, datationcomment -->
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">Avant 1949 ou 1959</p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
+            <text xmlns="">
+                <p>Jaquier et Delacr&eacute;taz [Biblio 451] datent cette note de 1949 ; selon Maggetti, elle daterait de 1959.</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">MS 6/A</p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" target="biblio_514" linkType="ref"></p0112-roud-oeuvres:Publication>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">MS 4 D/28a</p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">L’enclave 24 août 17h1/2</p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value">false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript> 
+        
+        
+        
+        
+    <!-- support data, here just to make it work but might be not accurate -->    
+    <p0112-roud-oeuvres:Author id="Novalis">
+        <knoraXmlImport:label>Novalis</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Novalis</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+    
+    <p0112-roud-oeuvres:Book id="biblio_514">
+        <knoraXmlImport:label>pub_Roud ___ Campagne perdue ___ 1972</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasPublicationType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique</p0112-roud-oeuvres:hasPublicationType>
+        <p0112-roud-oeuvres:originalIsInCrlrArchive knoraType="richtext_value">false</p0112-roud-oeuvres:originalIsInCrlrArchive>
+        <p0112-roud-oeuvres:publicationHasDate knoraType="date_value">GREGORIAN:1972 CE</p0112-roud-oeuvres:publicationHasDate>
+        <p0112-roud-oeuvres:publicationHasInternalComment knoraType="richtext_value">blabla.</p0112-roud-oeuvres:publicationHasInternalComment>
+        <p0112-roud-oeuvres:publicationHasTitle knoraType="richtext_value">Campagne perdue</p0112-roud-oeuvres:publicationHasTitle>
+        <p0112-roud-oeuvres:publicationIsDigitized knoraType="boolean_value">false</p0112-roud-oeuvres:publicationIsDigitized>
+        <publicationIsTranscribed knoraType="richtext_value">true</publicationIsTranscribed>
+    </p0112-roud-oeuvres:Book>
+    
+    
+    
+</knoraXmlImport:resources>

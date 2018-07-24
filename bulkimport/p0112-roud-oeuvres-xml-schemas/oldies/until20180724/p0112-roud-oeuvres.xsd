@@ -198,7 +198,7 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasEditorialSet"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasInternalComment"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasOldShelfmark"/>
-                        <xs:element type="Publication_linkValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasPublishedReference"/>
+                        <xs:element type="EstablishedText_linkValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasPublishedReference"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="manuscriptHasShelfmark"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="manuscriptHasTitle"/>
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="manuscriptIsDigitized"/>
