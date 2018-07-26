@@ -144,10 +144,11 @@ PERSONS -> persons_backup
 
 FICHES 
 --- prepare importExampleFiche.xml
---- export fiches from mysql (export as csv for Excel, better than csv)
+--- export fiches from mysql (export: csv, custom: only fiche_texte)
+--- manually correct the CSV
+		- mismatched tags (one case only: <i>some text<i/> in hasPublicComment, linea 121 se ordinato per numero fiche). This is caused by the HTML editor used in Remplir fiche in fonds-roud.unil.ch
+		- [Biblio xxx, p. ...] move p. outside [Biblio xxx]
+
+
 
 		- dates with missing year (only months and day) not accepted by Knora
-		- preserve xml (html) as such when importing, do not transform it into entities, otherwise Knora cannot read it
-				substitute it with ENTITY is not enough
-				--> read it (fromstring / parse) and then append (create new children)
-				OK, it works for 4:5, but not for 6:7 because of UNDEFINED ENTITIES - UseForeignDTD is not a solution for us because it's not an XML file that we are calling, unless we can call an external DTD ... so I guess we need to preprocess the XML inside the CSV

@@ -31,8 +31,8 @@
     xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
     xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
     
-    <p0112-roud-oeuvres:Manuscript id="fiche89">
-        <knoraXmlImport:label>fiche891 ___ L’enclave 24 août 17h1/2 ___ MS 4 D/28a</knoraXmlImport:label>
+    <p0112-roud-oeuvres:Manuscript id="fiche89link">
+        <knoraXmlImport:label>fiche89link ___ L’enclave 24 août 17h1/2 ___ MS 4 D/28a</knoraXmlImport:label>
         <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value">false</p0112-roud-oeuvres:hasAnnotation>
         <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
         <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
@@ -67,7 +67,7 @@
         <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
         <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
             <text xmlns="">
-                <p>Jaquier et Delacr&eacute;taz [Biblio 451] datent cette note de 1949 ; selon Maggetti, elle daterait de 1959.</p>
+                <p>Jaquier et Delacr&eacute;taz <a class="salsah-link" href="ref:biblio_514">[Biblio 514]</a> datent cette note de 1949 ; selon Maggetti, elle daterait de 1959.</p>
             </text>
         </p0112-roud-oeuvres:manuscriptHasInternalComment>
         <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">MS 6/A</p0112-roud-oeuvres:manuscriptHasOldShelfmark>
