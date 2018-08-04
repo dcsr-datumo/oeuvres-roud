@@ -32,11 +32,20 @@ curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost
 ###################
 
 
+-----------------------> Chidere a colleghi <-----------------------
+
+- volete resp ?
+- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?
+Fiche 103 --- commentaire interne truncated ... sorry ...
+------------------------------------->  <--------------------------------
+
+
 -----------------------> Problemi durante IMPORT <-----------------------
 
 - invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
 - lexical error : no "", ?, and other characters in label
 - when importing something with @target, the targeted resources need to be present as well :)
+- when there is a problem, limit the processing to few rows and see where exactly the problem is
 ------------------------------------->  <--------------------------------
 
 
@@ -103,8 +112,6 @@ attention:  row[5] photo not included because there are no photo yet
     		row[8] and row[9] place and publisher not included
     		row[14] website interest not included
     		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
-AUTHORS_PERIODICALS_ARTICLES:
-Bizarre ... I import 596 and we have only 500 visible in Salsah ...
 
 
 BOOKS
@@ -144,11 +151,33 @@ PERSONS -> persons_backup
 
 FICHES 
 --- prepare importExampleFiche.xml
---- export fiches from mysql (export: csv, custom: only fiche_texte)
---- manually correct the CSV
-		- mismatched tags (one case only: <i>some text<i/> in hasPublicComment, linea 121 se ordinato per numero fiche). This is caused by the HTML editor used in Remplir fiche in fonds-roud.unil.ch
-		- [Biblio xxx, p. ...] move p. outside [Biblio xxx]
+--- export fiches from mysql 
+		- select table 'fiche_texte'
+		- go to tab Export
+		- Custom, CSV: 	columns separated with $
+						columns enclosed with §
+						columns escaped with 
+						lines terminated with AUTO
+						replace NULL with 
+						[check] remove carriage return/line feed characters within columns
+		The same parameters should be in the csv.reader function in the python import file
+						f = open('../INPUT_data/fiche_texte.csv')
+						csv_f = csv.reader(f, delimiter='$', quotechar="§")   
+
+--- corrected in DB (fiches fonds-roud/unil.ch). Done
+		- [Biblio xxx] with pages inside squared brackets > pages reference moved outside (fiche 114)
+		- mismatched tags (one case only: <i>some text<i/> in hasPublicComment, fiche 243). This is caused by the HTML editor used in Remplir fiche in fonds-roud.unil.ch
+		- fields with richtext that does not have <p> paragraphs, because have been created before the new editor > add <p>
+		- dates, a lot of dates (missing parts, not well formatted, not in the right column)
+		- 
+
+
+		row14 = date ---> datereadable and datecomputable
+		Inside manuscriptHasDateEstablishedReadable are gathered columns of the DB: datationlist_id, datation, datationcomment 
+		Date facciamole per ultime, perché dovremo cambiare cose direttamente nel csv
 
 
 
-		- dates with missing year (only months and day) not accepted by Knora
+
+
+RECOMPILE authors (added Heine, Lavater-Sloman, D'Annunzio, Michelangelo, Coccioli, )

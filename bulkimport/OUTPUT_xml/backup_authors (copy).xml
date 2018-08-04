@@ -1,0 +1,1453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="A._L.">
+        <knoraXmlImport:label>aut_A. L.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >A.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >L.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+    
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Acatos_Sylvio">
+        <knoraXmlImport:label>aut_Acatos Sylvio</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Acatos</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Sylvio</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Altwegg_Jürg">
+        <knoraXmlImport:label>aut_Altwegg Jürg</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Altwegg</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jürg</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Anet_Daniel">
+        <knoraXmlImport:label>aut_Anet Daniel</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Anet</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Daniel</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Anex_Georges">
+        <knoraXmlImport:label>aut_Anex Georges</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Anex</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Georges</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="ATS">
+        <knoraXmlImport:label>aut_ATS</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >ATS</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Auberjonois_René">
+        <knoraXmlImport:label>aut_Auberjonois René</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Auberjonois</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >René</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Aubert_Claude">
+        <knoraXmlImport:label>aut_Aubert Claude</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Aubert</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Claude</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="B._Gr.">
+        <knoraXmlImport:label>aut_B. Gr.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >B.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gr.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="B._L.">
+        <knoraXmlImport:label>aut_B. L.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >B.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >L.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Barilli_Bruno">
+        <knoraXmlImport:label>aut_Barilli Bruno</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Barilli</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Bruno</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Béguin_Albert">
+        <knoraXmlImport:label>aut_Béguin Albert</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Béguin</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Albert</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bergé_René">
+        <knoraXmlImport:label>aut_Bergé René</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bergé</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >René</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bergengruen_Werner">
+        <knoraXmlImport:label>aut_Bergengruen Werner</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bergengruen</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Werner</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Blanc_Maurice">
+        <knoraXmlImport:label>aut_Blanc Maurice</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Blanc</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Maurice</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Boller_Willy">
+        <knoraXmlImport:label>aut_Boller Willy</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Boller</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Willy</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bonnard_Olivier">
+        <knoraXmlImport:label>aut_Bonnard Olivier</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bonnard</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Olivier</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Borgeaud_Georges">
+        <knoraXmlImport:label>aut_Borgeaud Georges</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Borgeaud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Georges</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Boulanger_Mousse">
+        <knoraXmlImport:label>aut_Boulanger Mousse</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Boulanger</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Mousse</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bounoure_Gabriel">
+        <knoraXmlImport:label>aut_Bounoure Gabriel</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bounoure</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gabriel</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Brentano_Clemens">
+        <knoraXmlImport:label>aut_Brentano Clemens</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Brentano</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Clemens</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bridel_Yves">
+        <knoraXmlImport:label>aut_Bridel Yves</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bridel</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Yves</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Brock-Sulzer_Elisabeth">
+        <knoraXmlImport:label>aut_Brock-Sulzer Elisabeth</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Brock-Sulzer</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Elisabeth</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Bucher_Werner">
+        <knoraXmlImport:label>aut_Bucher Werner</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Bucher</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Werner</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Cardarelli_Vincenzo">
+        <knoraXmlImport:label>aut_Cardarelli Vincenzo</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Cardarelli</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Vincenzo</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Chappaz_Maurice">
+        <knoraXmlImport:label>aut_Chappaz Maurice</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Chappaz</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Maurice</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Chastonay_Jacques_de">
+        <knoraXmlImport:label>aut_Chastonay Jacques de</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Chastonay</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Jacques
+            de</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Chessex_Jacques">
+        <knoraXmlImport:label>aut_Chessex Jacques</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Chessex</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jacques</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Clerc_Charly">
+        <knoraXmlImport:label>aut_Clerc Charly</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Clerc</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Charly</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Collectif">
+        <knoraXmlImport:label>aut_Collectif</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Collectif</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Colomb_Catherine">
+        <knoraXmlImport:label>aut_Colomb Catherine</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Colomb</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Catherine</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Cornuz_Jeanlouis">
+        <knoraXmlImport:label>aut_Cornuz Jeanlouis</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Cornuz</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jeanlouis</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Crisinel_Edmond-Henri">
+        <knoraXmlImport:label>aut_Crisinel Edmond-Henri</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Crisinel</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Edmond-Henri</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="dAguila_Carlos">
+        <knoraXmlImport:label>aut_d'Aguila Carlos</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >d'Aguila</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Carlos</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Delapierre_Roger">
+        <knoraXmlImport:label>aut_Delapierre Roger</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Delapierre</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Roger</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Depoissier_Claude">
+        <knoraXmlImport:label>aut_Depoissier Claude</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Depoissier</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Claude</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Deriex_Suzanne">
+        <knoraXmlImport:label>aut_Deriex Suzanne</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Deriex</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Suzanne</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Dürer_Albrecht">
+        <knoraXmlImport:label>aut_Dürer Albrecht</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Dürer</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Albrecht</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Eichendorff_Joseph_von">
+        <knoraXmlImport:label>aut_Eichendorff Joseph von</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Eichendorff</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Joseph
+            von</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Ernest_Dutoit">
+        <knoraXmlImport:label>aut_Ernest Dutoit</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Ernest</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Dutoit</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Fischer_Hans">
+        <knoraXmlImport:label>aut_Fischer Hans</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Fischer</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Hans</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Franz_Werfel">
+        <knoraXmlImport:label>aut_Franz Werfel</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Franz</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Werfel</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="G.">
+        <knoraXmlImport:label>aut_G.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >G.</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="G._R.">
+        <knoraXmlImport:label>aut_G. R.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >G.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >R.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Galland_Bertil">
+        <knoraXmlImport:label>aut_Galland Bertil</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Galland</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Bertil</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Gander_Bernard">
+        <knoraXmlImport:label>aut_Gander Bernard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Gander</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Bernard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Garzarolli_Richard">
+        <knoraXmlImport:label>aut_Garzarolli Richard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Garzarolli</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Richard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Geiser_Bernhard">
+        <knoraXmlImport:label>aut_Geiser Bernhard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Geiser</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Bernhard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Goethe_Johann_Wolfgang_von">
+        <knoraXmlImport:label>aut_Goethe Johann Wolfgang von</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Goethe</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Johann Wolfgang
+            von</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Gotthelf_Jeremias">
+        <knoraXmlImport:label>aut_Gotthelf Jeremias</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Gotthelf</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jeremias</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Grimm_frères">
+        <knoraXmlImport:label>aut_Grimm (frères)</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Grimm</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >(frères)</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Gsteiger_Manfred">
+        <knoraXmlImport:label>aut_Gsteiger Manfred</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Gsteiger</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Manfred</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Gudmundsson_Kristmann">
+        <knoraXmlImport:label>aut_Gudmundsson Kristmann</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Gudmundsson</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Kristmann</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="H._S.">
+        <knoraXmlImport:label>aut_H. S.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >H.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >S.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Hesse_Hermann">
+        <knoraXmlImport:label>aut_Hesse Hermann</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Hesse</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Hermann</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Heym_Georg">
+        <knoraXmlImport:label>aut_Heym Georg</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Heym</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Georg</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Hölderlin_Friedrich">
+        <knoraXmlImport:label>aut_Hölderlin Friedrich</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Hölderlin</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Friedrich</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Hollaert_Grietje">
+        <knoraXmlImport:label>aut_Hollaert Grietje</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Hollaert</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Grietje</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Humeau_Edmond">
+        <knoraXmlImport:label>aut_Humeau Edmond</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Humeau</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Edmond</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Huttinger_Edouard">
+        <knoraXmlImport:label>aut_Huttinger Edouard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Huttinger</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Edouard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="I.d.B._Marie-Anne">
+        <knoraXmlImport:label>aut_I.d.B. Marie-Anne</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >I.d.B.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Marie-Anne</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Jaccottet_Philippe">
+        <knoraXmlImport:label>aut_Jaccottet Philippe</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Jaccottet</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Philippe</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Jackson_John_E.">
+        <knoraXmlImport:label>aut_Jackson John E.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Jackson</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">John
+            E.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Jakubec_Doris">
+        <knoraXmlImport:label>aut_Jakubec Doris</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Jakubec</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Doris</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Jaquier_Claire">
+        <knoraXmlImport:label>aut_Jaquier Claire</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Jaquier</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Claire</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Guérin_Jean">
+        <knoraXmlImport:label>aut_Guérin Jean</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Guérin</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Oeschger_Johannes">
+        <knoraXmlImport:label>aut_Oeschger Johannes</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Oeschger</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Johannes</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Keller_Urs">
+        <knoraXmlImport:label>aut_Keller Urs</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Keller</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Urs</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Kobilijac_Ursula">
+        <knoraXmlImport:label>aut_Kobilijac Ursula</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Kobilijac</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Ursula</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Lacôte_René">
+        <knoraXmlImport:label>aut_Lacôte René</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Lacôte</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >René</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Laederach_Monique">
+        <knoraXmlImport:label>aut_Laederach Monique</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Laederach</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Monique</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Landry_Charles-François">
+        <knoraXmlImport:label>aut_Landry Charles-François</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Landry</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Charles-François</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Leisinger_Hermann">
+        <knoraXmlImport:label>aut_Leisinger Hermann</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Leisinger</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Hermann</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Lejeune_Robert">
+        <knoraXmlImport:label>aut_Lejeune Robert</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Lejeune</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Robert</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Leopardi_Giacomo">
+        <knoraXmlImport:label>aut_Leopardi Giacomo</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Leopardi</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Giacomo</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Le_promeneur_solitaire">
+        <knoraXmlImport:label>aut_Le promeneur solitaire</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Le promeneur
+            solitaire</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Lossier_Jean-Georges">
+        <knoraXmlImport:label>aut_Lossier Jean-Georges</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Lossier</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean-Georges</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Tieck_Louis">
+        <knoraXmlImport:label>aut_Tieck Louis</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Tieck</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Louis</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="M._M.">
+        <knoraXmlImport:label>aut_M. M.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >M.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >M.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Martin_Annie">
+        <knoraXmlImport:label>aut_Martin Annie</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Martin</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Annie</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Martin_Vio">
+        <knoraXmlImport:label>aut_Martin Vio</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Martin</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Vio</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Martinet_Édouard">
+        <knoraXmlImport:label>aut_Martinet Édouard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Martinet</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Édouard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Martinet_Jean-Pierre">
+        <knoraXmlImport:label>aut_Martinet Jean-Pierre</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Martinet</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean-Pierre</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Matthey_Pierre-Louis">
+        <knoraXmlImport:label>aut_Matthey Pierre-Louis</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Matthey</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Pierre-Louis</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Mercanton_Jacques">
+        <knoraXmlImport:label>aut_Mercanton Jacques</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Mercanton</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jacques</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Montale_Eugenio">
+        <knoraXmlImport:label>aut_Montale Eugenio</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Montale</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Eugenio</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Müller_Wilhelm">
+        <knoraXmlImport:label>aut_Müller Wilhelm</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Müller</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Wilhelm</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Muret_Colette">
+        <knoraXmlImport:label>aut_Muret Colette</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Muret</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Colette</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Nicole_Georges">
+        <knoraXmlImport:label>aut_Nicole Georges</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Nicole</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Georges</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Nicole_Jean">
+        <knoraXmlImport:label>aut_Nicole Jean</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Nicole</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Nietzsche_Friedrich">
+        <knoraXmlImport:label>aut_Nietzsche Friedrich</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Nietzsche</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Friedrich</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Novalis">
+        <knoraXmlImport:label>aut_Novalis</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Novalis</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Nr._J.">
+        <knoraXmlImport:label>aut_Nr. J.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Nr.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >J.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Pache_Jean">
+        <knoraXmlImport:label>aut_Pache Jean</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Pache</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Pache_Roger">
+        <knoraXmlImport:label>aut_Pache Roger</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Pache</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Roger</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Palézieux_Gérard_de">
+        <knoraXmlImport:label>aut_Palézieux Gérard de</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Palézieux</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gérard
+            de</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Paulhan_Jean">
+        <knoraXmlImport:label>aut_Paulhan Jean</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Paulhan</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Pe._J.">
+        <knoraXmlImport:label>aut_Pe. J.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Pe.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >J.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Perrochon_Henri">
+        <knoraXmlImport:label>aut_Perrochon Henri</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Perrochon</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Henri</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Pittet_Raymond">
+        <knoraXmlImport:label>aut_Pittet Raymond</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Pittet</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Raymond</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Platen_August_von">
+        <knoraXmlImport:label>aut_Platen August von</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Platen</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">August
+            von</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Ramuz_Charles_Ferdinand">
+        <knoraXmlImport:label>aut_Ramuz Charles Ferdinand</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Ramuz</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Charles
+            Ferdinand</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Raymond_Marcel">
+        <knoraXmlImport:label>aut_Raymond Marcel</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Raymond</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Marcel</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Rilke_Rainer_Maria">
+        <knoraXmlImport:label>aut_Rilke Rainer Maria</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Rilke</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Rainer
+            Maria</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Robert_Steven-Paul">
+        <knoraXmlImport:label>aut_Robert Steven-Paul</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Robert</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Steven-Paul</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Rolland_de_Renéville_André">
+        <knoraXmlImport:label>aut_Rolland de Renéville André</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Rolland de
+            Renéville</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >André</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Roud_Gustave">
+        <knoraXmlImport:label>aut_Roud Gustave</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gustave</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Roud_Gustave_pas_sûr">
+        <knoraXmlImport:label>aut_Roud Gustave (pas sûr)</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave (pas
+            sûr)</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Roud_Gustave_signé_Adrien_Delarze">
+        <knoraXmlImport:label>aut_Roud Gustave (signé Adrien Delarze)</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave (signé Adrien
+            Delarze)</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Roud_Gustave_signé_L._V.">
+        <knoraXmlImport:label>aut_Roud Gustave (signé L. V.)</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave (signé L.
+            V.)</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Roud_Gustave_signé_O._C.">
+        <knoraXmlImport:label>aut_Roud Gustave (signé O. C.)</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave (signé O.
+            C.)</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="s.i.a">
+        <knoraXmlImport:label>aut_s.i.a</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >s.i.a</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="s.n.a.">
+        <knoraXmlImport:label>aut_s.n.a.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >s.n.a.</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Sainte_Hildegarde">
+        <knoraXmlImport:label>aut_Sainte Hildegarde</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Sainte
+            Hildegarde</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Salem_Gilbert">
+        <knoraXmlImport:label>aut_Salem Gilbert</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Salem</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gilbert</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Santschi_Madeleine">
+        <knoraXmlImport:label>aut_Santschi Madeleine</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Santschi</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Madeleine</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Schnyder_Peter">
+        <knoraXmlImport:label>aut_Schnyder Peter</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Schnyder</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Peter</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Schuh_Gotthard">
+        <knoraXmlImport:label>aut_Schuh Gotthard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Schuh</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gotthard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Schwendimann_Max_A.">
+        <knoraXmlImport:label>aut_Schwendimann Max A.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Schwendimann</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Max
+            A.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Simond_Daniel">
+        <knoraXmlImport:label>aut_Simond Daniel</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Simond</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Daniel</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Tâche_Pierre-Alain">
+        <knoraXmlImport:label>aut_Tâche Pierre-Alain</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Tâche</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Pierre-Alain</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Tauxe_Henri-Charles">
+        <knoraXmlImport:label>aut_Tauxe Henri-Charles</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Tauxe</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Henri-Charles</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Textes_égyptiens">
+        <knoraXmlImport:label>aut_Textes égyptiens</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Textes
+            égyptiens</p0112-roud-oeuvres:authorHasFamilyName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Titus-Carmel_Gérard">
+        <knoraXmlImport:label>aut_Titus-Carmel Gérard</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Titus-Carmel</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gérard</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Trakl_Georg">
+        <knoraXmlImport:label>aut_Trakl Georg</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Trakl</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Georg</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="V._Ph.">
+        <knoraXmlImport:label>aut_V. Ph.</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >V.</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Ph.</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Vincent_Gilbert">
+        <knoraXmlImport:label>aut_Vincent Gilbert</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Vincent</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Gilbert</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Vuilleumier_Jean">
+        <knoraXmlImport:label>aut_Vuilleumier Jean</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Vuilleumier</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jean</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Weber_Werner">
+        <knoraXmlImport:label>aut_Weber Werner</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Weber</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Werner</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Weber-Perret_Myrian">
+        <knoraXmlImport:label>aut_Weber-Perret Myrian</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Weber-Perret</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Myrian</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Werfel_Franz">
+        <knoraXmlImport:label>aut_Werfel Franz</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Werfel</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Franz</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Wyrsch_Jakob">
+        <knoraXmlImport:label>aut_Wyrsch Jakob</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value"
+            >Wyrsch</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Jakob</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+
+    <p0112-roud-oeuvres:Author
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="D._Sueur_Yves">
+        <knoraXmlImport:label>aut_D. Sueur Yves</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">D.
+            Sueur</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value"
+            >Yves</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+</knoraXmlImport:resources>
