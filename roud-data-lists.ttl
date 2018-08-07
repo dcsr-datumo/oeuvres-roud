@@ -151,7 +151,10 @@
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> .
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert> .
+
 	
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR> a knora-base:ListNode ;
 		knora-base:listNodeName "CRLRGR" ;
@@ -200,6 +203,18 @@
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
 		knora-base:listNodePosition 2 ;
 		rdfs:label "CRLR Colomb"@fr , "CRLR Colomb"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee> a knora-base:ListNode ;
+		knora-base:listNodeName "CollectionPrivee" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 8 ;
+		rdfs:label "CRLR Colomb"@fr , "Collection privée"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert> a knora-base:ListNode ;
+		knora-base:listNodeName "CRLRStevenPaulRobert" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 9 ;
+		rdfs:label "CRLR Colomb"@fr , "CRLR Steven-Paul Robert"@en .
 
 
 
@@ -352,7 +367,8 @@
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe> ,
 								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> .
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime> .
 	
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet> a knora-base:ListNode ;
 		knora-base:listNodeName "feuillet" ;
@@ -393,14 +409,20 @@
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud> a knora-base:ListNode ;
 		knora-base:listNodeName "imprimesReliesParRoud" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 6 ;
+		knora-base:listNodePosition 7 ;
 		rdfs:label "Imprimes reliés par Roud"@fr , "Print publication bound by Roud"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> a knora-base:ListNode ;
 		knora-base:listNodeName "divers" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 7 ;
+		knora-base:listNodePosition 8 ;
 		rdfs:label "Divers"@fr , "Other"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime> a knora-base:ListNode ;
+		knora-base:listNodeName "imprime" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
+		knora-base:listNodePosition 6 ;
+		rdfs:label "Imprimé"@fr , "Print"@en .
 
 
 
@@ -567,3 +589,37 @@
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
 		knora-base:listNodePosition 3 ;
 		rdfs:label "peut-être"@fr , "maybe"@en .
+
+
+
+
+##############################################
+##
+## datation - established date list
+##
+##############################################
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> a knora-base:ListNode ;
+	knora-base:isRootNode true ;
+	rdfs:comment "Liste pour préciser la datation"@fr ;
+	rdfs:label "Indications sur la datation"@fr , "Indications on the established date"@en ;
+	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before> ,
+								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after> .
+	
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa> a knora-base:ListNode ;
+		knora-base:listNodeName "circa" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
+		knora-base:listNodePosition 0 ;
+		rdfs:label "vers"@fr , "circa"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before> a knora-base:ListNode ;
+		knora-base:listNodeName "before" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
+		knora-base:listNodePosition 1 ;
+		rdfs:label "avant"@fr , "before"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after> a knora-base:ListNode ;
+		knora-base:listNodeName "after" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
+		knora-base:listNodePosition 2 ;
+		rdfs:label "after"@fr , "après"@en .

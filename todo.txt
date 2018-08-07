@@ -14,6 +14,17 @@
 #
 
 
+TODO
+
+upload new ontology (cambiato da SimpleText a Richtext per hasSupportInfo)
+cambiato: create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
+
+
+Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
+
+
+
 DONE. books add possibility to specify pages
 DONE. bookSectionIsPartOf textValue instead of link
 DONE. property hasPublisher added to BookSection
@@ -26,8 +37,10 @@ problemi con Salsah 1
 Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 - visualize comment on properties (otherwise I put that info in label). Esempi: publicationHasInternalComment, supportInfo?
 - sort results 
+AUTHORS_PERIODICALS_ARTICLES:
+Bizarre ... I import 596 and we have only 500 visible in Salsah ...
 
-Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
 
 
 

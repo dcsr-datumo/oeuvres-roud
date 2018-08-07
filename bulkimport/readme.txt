@@ -18,10 +18,54 @@ http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2
 UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
+
 curl -X POST -d @BIBLIOGRAPHY_refined.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
+
+	COMMAND
+curl -X POST -d @BIBLIOGRAPHY_refined__FICHES.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+
+	Tolti tutti attributi mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping"
+	
+	-- manca biblio_321 (effettivamente è tra quelli da aggiungere manualmente), biblio_309, biblio_671
+	
+	Request: MALFORMED QUERY: Lexical error at line 333440, column 75.  Encountered: \"\\n\" (10), after : \"\\\" ;\""}
+	significa "\n", after "\" ;"
+
+	89 - 223 ok
+	224 NOOOOOOOOOOOOOOOOOOOO
+	225 - 239 ok
+	242 - 246 ok
+	247 NOOOOOOOOOOOOOOOOOOOO
+	248 - 250 ok
+	252 NOOOOOOOOOOOOOOOOOOOO
+	253 NOOOOOOOOOOOOOOOOOOOO
+	254 - 259 ok
+	260 NOOOOOOOOOOOOOOOOOOOO
+	262 NOOOOOOOOOOOOOOOOOOOO
+	263 NOOOOOOOOOOOOOOOOOOOO
+	264 NOOOOOOOOOOOOOOOOOOOO
+	266 - 307 ok
+	308 NOOOOOOOOOOOOOOOOOOOO
+	309 - 317 ok
+	318 NOOOOOOOOOOOOOOOOOOOO
+	319 - 387 ok
+	388 NOOOOOOOOOOOOOOOOOOOO
+	389 - 678 ok
+	679 NOOOOOOOOOOOOOOOOOOOO
+	680 - 1241 ok
+	1242 NOOOOOOOOOOOOOOOOOOO
+	1243 - 1366 ok
+	1367 NOOOOOOOOOOOOOOOOOOO
+	1368 NOOOOOOOOOOOOOOOOOOO
+	1369 - 1370 ok
+	1371 NOOOOOOOOOOOOOOOOOOO
+	1372 - fine ok
+	1423 NOOOOOOOOOOOOOOOOOOO
+	
+	
 
 
 
@@ -37,6 +81,11 @@ curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost
 - volete resp ?
 - Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?
 Fiche 103 --- commentaire interne truncated ... sorry ...
+- added 'cote manquante' to fiches without cote
+- weekday addded <lundi, >
+- check datation après qui ont un comment du type "notes allant de .." ---> devrait être periode
+- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)
+- fiches 577 : 72 septembre
 ------------------------------------->  <--------------------------------
 
 
@@ -59,6 +108,7 @@ Fiche 103 --- commentaire interne truncated ... sorry ...
 	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
 	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
 	- articolo di traduzione con 10 autori ...
+	- 
 - libri (books.csv) con più di due autori, add gli autori dal terzo in poi
 - INPUT_data/check.csv
 - sections recueils
@@ -169,15 +219,21 @@ FICHES
 		- mismatched tags (one case only: <i>some text<i/> in hasPublicComment, fiche 243). This is caused by the HTML editor used in Remplir fiche in fonds-roud.unil.ch
 		- fields with richtext that does not have <p> paragraphs, because have been created before the new editor > add <p>
 		- dates, a lot of dates (missing parts, not well formatted, not in the right column)
-		- 
 
 
-		row14 = date ---> datereadable and datecomputable
-		Inside manuscriptHasDateEstablishedReadable are gathered columns of the DB: datationlist_id, datation, datationcomment 
-		Date facciamole per ultime, perché dovremo cambiare cose direttamente nel csv
+		row15 = datation
+			--> dateEstablished
+		row15, 16, 17 = datation, list, comment
+			--> 
+		datation list: 1, ''; 2, 'vers'; 3, 'avant'; 4, 'après'
+
+
+		DR# Data che non può essere computable perché manca l'anno 
+			--> può andare in manuscriptHasDateReadable
+			if (row[17] starts with DR#):
+				dateReadable = quello che c'è tra 'DR#' e eventualmente altro #
+		
 
 
 
-
-
-RECOMPILE authors (added Heine, Lavater-Sloman, D'Annunzio, Michelangelo, Coccioli, )
+RIFARE persons perché non è dritto ma formatted
