@@ -1,11 +1,11 @@
 
 
 
-###################
+#######################
 ##
-## BULK IMPORT
+## BULK IMPORT COMMANDS
 ##
-###################
+#######################
 
 DOWNLOAD (in browser)
 http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=root%40example.com&password=test
@@ -19,77 +19,95 @@ UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
-curl -X POST -d @BIBLIOGRAPHY_refined.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-
 curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
-	COMMAND
-curl -X POST -d @BIBLIOGRAPHY_refined__FICHES.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+- [solved] missing object for target ref: biblio_321, biblio_309, biblio_671, biblio_672. Added on the fly (will be corrected after)
+- it works without attributes mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping", but it means there is no html (no links) inside the fields (for example, in commentary)
 
-	Tolti tutti attributi mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping"
-	
-	-- manca biblio_321 (effettivamente è tra quelli da aggiungere manualmente), biblio_309, biblio_671
-	
-	Request: MALFORMED QUERY: Lexical error at line 333440, column 75.  Encountered: \"\\n\" (10), after : \"\\\" ;\""}
-	significa "\n", after "\" ;"
 
-	89 - 223 ok
-	224 NOOOOOOOOOOOOOOOOOOOO
-	225 - 239 ok
-	242 - 246 ok
-	247 NOOOOOOOOOOOOOOOOOOOO
-	248 - 250 ok
-	252 NOOOOOOOOOOOOOOOOOOOO
-	253 NOOOOOOOOOOOOOOOOOOOO
-	254 - 259 ok
-	260 NOOOOOOOOOOOOOOOOOOOO
-	262 NOOOOOOOOOOOOOOOOOOOO
-	263 NOOOOOOOOOOOOOOOOOOOO
-	264 NOOOOOOOOOOOOOOOOOOOO
-	266 - 307 ok
-	308 NOOOOOOOOOOOOOOOOOOOO
-	309 - 317 ok
-	318 NOOOOOOOOOOOOOOOOOOOO
-	319 - 387 ok
-	388 NOOOOOOOOOOOOOOOOOOOO
-	389 - 678 ok
-	679 NOOOOOOOOOOOOOOOOOOOO
-	680 - 1241 ok
-	1242 NOOOOOOOOOOOOOOOOOOO
-	1243 - 1366 ok
-	1367 NOOOOOOOOOOOOOOOOOOO
-	1368 NOOOOOOOOOOOOOOOOOOO
-	1369 - 1370 ok
-	1371 NOOOOOOOOOOOOOOOOOOO
-	1372 - fine ok
-	1423 NOOOOOOOOOOOOOOOOOOO
+curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS__withMappingId.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+TERMINAL
+	{"status":11,"error":"org.knora.webapi.BadRequestException: namespace http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1# not defined in mapping"}
+DOCKER LOGS
+	Warning 
+	  SXXP0005: The source document is in namespace
+	  http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#, but all the template rules
+	  match elements in no namespace (Use --suppressXsltNamespaceCheck:on to avoid this warning)
 	
-	
+
+
 
 
 
 ###################
 ##
-## IMPORT PROCEDURES
+## TO DO
+##
+###################
+
+PLATEC
+- once mapping problem is fixed, test import ALL
+- date, ok ?
+- come funziona import immagini
+
+
+
+
+
+
+
+
+###################
+##
+## IMPORT PROBLEMS
 ##
 ###################
 
 
------------------------> Chidere a colleghi <-----------------------
 
-- volete resp ?
-- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?
-Fiche 103 --- commentaire interne truncated ... sorry ...
-- added 'cote manquante' to fiches without cote
-- weekday addded <lundi, >
-- check datation après qui ont un comment du type "notes allant de .." ---> devrait être periode
-- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)
-- fiches 577 : 72 septembre
+-----------------------> Dire a colleghi <-----------------------
+DONE
+	CAMBIAMENTI FATTI
+	- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?  OK
+	- Fiche 103 --- commentaire interne truncated ... sorry ...   OK
+	- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)  OK
+	- weekday addded <lundi, >  OK
+	- resp ?   NOT IMPORTED, OK
+RIDIRE QUANTO IMPORT È FINITO
+	- added 'cote manquante' to fiches without cote   OK
+	- fiches 577 : 72 septembre
+DECIDERE
+	- gestione del tempo: punto e periodo
 ------------------------------------->  <--------------------------------
 
 
------------------------> Problemi durante IMPORT <-----------------------
+
+--------------------> ADD MANUALLY AFTER IMPORT <-----------------------
+
+- correct biblio_321, biblio_309, biblio_671, biblio_672 ("FAKE" in label), do not delete because there are links
+- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
+- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
+- check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
+	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
+	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
+	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
+	- articolo di traduzione con 10 autori ...
+- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
+- INPUT_data/check.csv
+- sections recueils
+- fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
+- luoghi
+- persons added after (in yellow) and check if there is any source that was not there before
+- notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
+- 72 ---> 27 septembre (fiches to be corrected)
+- check in backup fiche 103
+------------------------------------->  <--------------------------------
+
+
+
+-----------------------> problems during IMPORT <-----------------------
 
 - invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
 - lexical error : no "", ?, and other characters in label
@@ -99,21 +117,13 @@ Fiche 103 --- commentaire interne truncated ... sorry ...
 
 
 
------------------------> BIBLIO - TO BE DONE MANUALLY IN FINAL XML !!! così poi l'import è completo <-----------------------
 
-- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
-- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
-- check, se non sono già tra gli articoli inserirli a mano:
-	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
-	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
-	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
-	- articolo di traduzione con 10 autori ...
-	- 
-- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
-- INPUT_data/check.csv
-- sections recueils
 
-------------------------------------->  <--------------------------------
+###################
+##
+## IMPORT PROCEDURES
+##
+###################
 
 
 PUBLISHERS -> publishers_backup
@@ -172,31 +182,23 @@ BOOKSECTIONS
 --- import.ipynb
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	BIBLIOGRAPHY.xml > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
 PERSONS -> persons_backup
 --- Save Chronologie_Gens_Revues_Lieux.docx as ODT, because the xml below is easier
 --- Consider only the person and save only the xml content of the odt file -> Gens.xml
 --- Delete all the odt blabla and namespaces and left only structures, plus add element <person> around each h (was text:a) including p, with find and replace. -> Gens.xml
 --- cambiato a mano: Affolter (aggiunto famille così ha un giveName), Franz. W. Beidler (cambiato in Franz Wilhelm Beidler) -> Gens.xml
 --- Transform using   person_word2xml.xslt -> persons.xml
---- Corrected by hand in the xml output (it's faster) 
-			name (two names): Ramuz, Leon Nicolas, Marcel Perretten, Robert Jean Dominique
-			birthDate (take from notice): Ferrini, Ramseyer André
-			delete hasNotice because empty: Chessex, ramuz 
-			added by hand: Gustave Roud !  
+--- Corrected by hand in the xml output (it's faster)  --- NO PROBLEM THAT IT IS INDENTED ---
+			- add "pers_" to id, otherwise has the same of some authors (find and replace)
+			- name (two names): Ramuz, Leon Nicolas, Marcel Perretten, Robert Jean Dominique
+			- birthDate (take from notice): Ferrini, Ramseyer André
+			- delete hasNotice because empty: Chessex, ramuz 
+			- added by hand: Gustave Roud !  
 					<p0112-roud-oeuvres:Person id="Roud_Gustave">
 				      <knoraXmlImport:label>pers_Roud Gustave</knoraXmlImport:label>
 				      <p0112-roud-oeuvres:hasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:hasFamilyName>
 				      <p0112-roud-oeuvres:hasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:hasGivenName>
 				   	</p0112-roud-oeuvres:Person>
-
-
 
 
 FICHES 
@@ -221,19 +223,25 @@ FICHES
 		- dates, a lot of dates (missing parts, not well formatted, not in the right column)
 
 
-		row15 = datation
-			--> dateEstablished
-		row15, 16, 17 = datation, list, comment
-			--> 
-		datation list: 1, ''; 2, 'vers'; 3, 'avant'; 4, 'après'
 
 
-		DR# Data che non può essere computable perché manca l'anno 
-			--> può andare in manuscriptHasDateReadable
-			if (row[17] starts with DR#):
-				dateReadable = quello che c'è tra 'DR#' e eventualmente altro #
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%         TO BUILD ALL.xml        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- BIBLIOGRAPHY.xml (BIBLIOGRAPHY_authors_publishers_periodicals_articles_books_booksections) > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
+- add PERSONS and FICHES
+----> ALL !!	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+to generate ----> ALL__withMappingId.xml
+(find and replace the followings)
+	hasOtherWritingTool knoraType="richtext_value">
+hasOtherWritingTool knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
+	same thing for hasPublicComment, hasSupportInfo, manuscriptHasInternalComment
 		
 
 
 
-RIFARE persons perché non è dritto ma formatted

@@ -320,6 +320,7 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="personHasGivenName"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personHasNotice"/>
                         <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="personHasPhoto"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personInfoHasSource"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>

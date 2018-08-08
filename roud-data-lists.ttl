@@ -338,7 +338,7 @@
 		knora-base:listNodeName "dactylo" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> ;
 		knora-base:listNodePosition 1 ;
-		rdfs:label "Dactlogramme"@fr , "Typescript"@en .
+		rdfs:label "Dactylogramme"@fr , "Typescript"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-imprime> a knora-base:ListNode ;
 		knora-base:listNodeName "imprime" ;

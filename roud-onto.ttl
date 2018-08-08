@@ -766,6 +766,11 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasNotice ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:personInfoHasSource ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
                                       "Person"@en ,
@@ -3327,6 +3332,26 @@ roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
 
                               salsah-gui:guiOrder "6"^^xsd:integer .
 
+
+
+roud-oeuvres:personInfoHasSource  rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                  knora-base:objectClassConstraint knora-base:TextValue ;
+                                  
+                                  rdfs:label  "Source"@fr ,
+                                              "Source"@en ,
+                                              "Fonte"@it ;
+
+                                  rdfs:comment  "Source des information sur la personne."@fr ,
+                                                "Information source."@en ;
+
+                                  salsah-gui:guiElement salsah-gui:Richtext ;
+
+                                  salsah-gui:guiOrder "6"^^xsd:integer .
 
 
 

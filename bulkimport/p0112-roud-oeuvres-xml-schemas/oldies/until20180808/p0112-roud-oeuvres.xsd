@@ -194,6 +194,7 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="isPhotocopy"/>
                         <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDateComputable"/>
                         <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasDateEstablishedComputable"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasDateEstablishedList"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasDateEstablishedReadable"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptHasDateReadable"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="manuscriptHasEditorialSet"/>

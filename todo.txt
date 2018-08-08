@@ -14,21 +14,22 @@
 #
 
 
-TODO
-
-upload new ontology (cambiato da SimpleText a Richtext per hasSupportInfo)
-cambiato: create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
-
 
 Test XML dans Salsah, voir s'il y a des messages d'érreurs
 
 
 
 
+
+--> CHECK IF ALREADY CHANGED IN GRAPH
+DONE. Cambiato da SimpleText a Richtext per hasSupportInfo)
+DONE. Create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
 DONE. books add possibility to specify pages
 DONE. bookSectionIsPartOf textValue instead of link
 DONE. property hasPublisher added to BookSection
---> change in graph
+DONE. added personInfoHasSource to Person
+
+
 
 
 

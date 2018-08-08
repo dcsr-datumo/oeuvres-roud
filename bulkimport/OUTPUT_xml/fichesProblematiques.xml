@@ -1,0 +1,975 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BLA>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche224">
+        <knoraXmlImport:label>fiche224 ___ CG 236/61 ___ "Si proche…"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Parmi plusieurs listes de choses à faire, de dépenses, on lit : "Si proche, le
+                    xxxx d'eau vive et d'écumes que ma main tremble et plonge/tombe au xxxx
+                    glacé</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1951-09-11 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈mardi, 〉11 septembre 1951</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>CG 236/61</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"Si proche…"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche247">
+        <knoraXmlImport:label>fiche247 ___ CG 305 ___ "Commissions restantes"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Dans cette liste à commissions, Gustave Roud prévoit d'acheter des chocolats pour
+                    sa soeur Madeleine, et aussi des cigares ou des cigarettes pour Aimé, le
+                    personnage qu'il a inventé. D'où un vertige entre fiction et réalité.</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f. Au verso d'une lettre d'Emile l'Hoste.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1929 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1929</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>CG 305</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"Commissions restantes"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche252">
+        <knoraXmlImport:label>fiche252 ___ COTE MANQUANTE ___ "à Fernand
+            Cherpillod"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>Bloc-notes, 1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1940 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1940</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">
+            <text>MS 14 carnet 19bis</text>
+        </p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_508"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>COTE MANQUANTE</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"à Fernand Cherpillod"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche253">
+        <knoraXmlImport:label>fiche253 ___ MS 4 E/4a ___ "Poussin"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1950 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1950</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value">
+            <text>
+                <p>Retranscrit dans les inédits</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">
+            <text>MS 14 carnet 23</text>
+        </p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 4 E/4a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"Poussin"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche260">
+        <knoraXmlImport:label>fiche260 ___ MS 6 F16/1b ___ [Qu’elle provînt d’un malaise du
+            corps…]</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >true</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Traduction de la préface de <em>Dormi, che vuoi di più?</em></p>
+                <p> </p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+                <p> </p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" linkType="ref"
+                target="Oeschger_Johannes"/>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1957 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1957</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value">
+            <text>
+                <p>Un exemplaire se trouve dans CG 371/4.</p>
+                <p>Le manuscrit se trouvait avec une lettre de Johannes Oeschger datée de 1956.</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">
+            <text>CG 371</text>
+        </p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_635"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 6 F16/1b</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>[Qu’elle provînt d’un malaise du corps…]</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche262">
+        <knoraXmlImport:label>fiche262 ___ CG 394/1 ___ "Seiler – 19"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Liste des expositions de Steven-Paul Robert, de la première à la Galerie Seiler
+                    en 1919, à la dernière en date, en 1949 à Berne.</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1949-05-10 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈mardi, 〉10 mai 1949</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value">
+            <text>
+                <p>Enveloppe d'une lettre envoyée par Henri Perrochon le 10 mai 1949.</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>CG 394/1</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"Seiler – 19"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche263">
+        <knoraXmlImport:label>fiche263 ___ CG 394/2/34 ___ "[mot illisible] les
+            Auberjonois"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Notes sur des tableaux d'Auberjonois</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1952-05-26 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈lundi, 〉26 mai 1952</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value">
+            <text>
+                <p>Enveloppe d'une lettre de Henri Perrochon du 26 mai 1952</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>CG 394/2/34</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"[mot illisible] les Auberjonois"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche264">
+        <knoraXmlImport:label>fiche264 ___ CG 394/2bis/74 ___ "[Il résulte de tout
+            cela...]"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Brève ébauche de traduction, probablement pour Jakob Wyrsch, «Über Depressionen
+                    », Documenta Geigy, Acta psychosomatica, n° 1, 1958 (à confirmer).</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1958-12-08 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈lundi, 〉8 décembre 1958</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>CG 394/2bis/74</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"[Il résulte de tout cela...]"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche308">
+        <knoraXmlImport:label>fiche308 ___ Bibliothèque Roud ___ Note de lecture Cesare Pavese: "La
+            Luna e i falò"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Note de Roud dans Cesare Pavese, "La Luna e i falò", Turin, Einaudi, 1962: "Un
+                    ancien valet de ferme, migrant rentré des États-Unis, retourne aux lieux où il a
+                    vécu enfant et adolescent, y évoque pour nous le passé qu'il chercher retrouver
+                    vivant après tant d'années. Un beau livre, humaine, simple et grave. Une version
+                    française vient de paraître chez Gallimard… Il faudrait voir ce que vaut la
+                    traduction."</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1962 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1962</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>Bibliothèque Roud</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Note de lecture Cesare Pavese: "La Luna e i falò"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche318">
+        <knoraXmlImport:label>fiche318 ___ MS 4 F/23a ___ "6 mars Croix féd.
+            Neyruz"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateComputable knoraType="date_value">GREGORIAN:1967-03-06
+            CE</p0112-roud-oeuvres:manuscriptHasDateComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateReadable knoraType="richtext_value">
+            <text>〈lundi, 〉6 mars 1967</text>
+        </p0112-roud-oeuvres:manuscriptHasDateReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 4 F/23a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>"6 mars Croix féd. Neyruz"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche388">
+        <knoraXmlImport:label>fiche388 ___ MS 1 E/7a ___ Gustave Roud : fragment d’une ébauche de
+            "D’une certaine pureté"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Repris dans <a class="salsah-link" href="ref:biblio_509">[Biblio 509]</a>.</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>2 ff.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1940-01 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>janvier 1940</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_192"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 1 E/7a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Gustave Roud : fragment d’une ébauche de "D’une certaine pureté"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >true</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche679">
+        <knoraXmlImport:label>fiche679 ___ MS 4 D/6a ___ Petite Notes sur "Rive
+            bleue"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>17v-18r</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-cahier</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" linkType="ref"
+                target="Gudmundsson_Kristmann"/>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1944 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1944</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">
+            <text>MS 14/34</text>
+        </p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 4 D/6a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Petite Notes sur "Rive bleue"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1242">
+        <knoraXmlImport:label>fiche1242 ___ MS 6 F2/1e ___ Brentano: "Ich
+            wohnte…"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>"[J'ai vécu parmi la foule infinie des hommes…]".</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" linkType="ref"
+                target="Brentano_Clemens"/>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1939 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1939</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_664"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 6 F2/1e</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Brentano: "Ich wohnte…"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1367">
+        <knoraXmlImport:label>fiche1367 ___ MS 4 B/17a ___ Notes pour
+            "Calendrier"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>p. 23-24</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1930-08-28 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈jeudi, 〉28 août 1930</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">
+            <text>14 bis</text>
+        </p0112-roud-oeuvres:manuscriptHasOldShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref" target="biblio_96"
+            />
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 4 B/17a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Notes pour "Calendrier"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1368">
+        <knoraXmlImport:label>fiche1368 ___ MS 6 A2/3a ___ [Mère, qui pose un seul regard sur
+            toi…]</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" linkType="ref" target="Novalis"/>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1948 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1948</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_430"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 6 A2/3a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>[Mère, qui pose un seul regard sur toi…]</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1369">
+        <knoraXmlImport:label>fiche1369 ___ MS 6 A2/3a ___ Novalis: "Ich fühle des
+            Todes…"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>[Aux vaugues de la mort…] ([Aux flots de la mort…])</p>
+                <p>Fragment de l'Hymne 4.</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>1 f.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasTranslatedAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" linkType="ref" target="Novalis"/>
+        </p0112-roud-oeuvres:hasTranslatedAuthor>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1948-10-15 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>〈vendredi, 〉15 octobre 1948</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_462"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 6 A2/3a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Novalis: "Ich fühle des Todes…"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1371">
+        <knoraXmlImport:label>fiche1371 ___ ALS, Fonds Chessex (sans cote) ___ Ébauches du poëme
+            "Laboureur au repos"</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasOtherWritingTool knoraType="richtext_value">
+            <text>
+                <p>Plume, bleu</p>
+            </text>
+        </p0112-roud-oeuvres:hasOtherWritingTool>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>7 ff.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1941 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1941</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value">
+            <text>
+                <p>À classer sous Fonds ALS !</p>
+                <p>Numérisation demandée</p>
+            </text>
+        </p0112-roud-oeuvres:manuscriptHasInternalComment>
+        <p0112-roud-oeuvres:manuscriptHasPublishedReference>
+            <p0112-roud-oeuvres:Publication knoraType="link_value" linkType="ref"
+                target="biblio_508"/>
+        </p0112-roud-oeuvres:manuscriptHasPublishedReference>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>ALS, Fonds Chessex (sans cote)</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Ébauches du poëme "Laboureur au repos"</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+    <p0112-roud-oeuvres:Manuscript
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="fiche1423">
+        <knoraXmlImport:label>fiche1423 ___ MS 5 E/4a ___ Pages de
+            l&amp;amp;rsquo;été</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasAnnotation knoraType="boolean_value"
+            >true</p0112-roud-oeuvres:hasAnnotation>
+        <p0112-roud-oeuvres:hasDocumentType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo</p0112-roud-oeuvres:hasDocumentType>
+        <p0112-roud-oeuvres:hasGeneticStage knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-miseAuNet</p0112-roud-oeuvres:hasGeneticStage>
+        <p0112-roud-oeuvres:hasOtherWritingTool knoraType="richtext_value">
+            <text>
+                <p>Crayon, gris</p>
+            </text>
+        </p0112-roud-oeuvres:hasOtherWritingTool>
+        <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value">
+            <text>
+                <p>Reprend avec des modifications les textes "Les Foins" <a class="salsah-link"
+                        href="ref:biblio_254">[Biblio 254]</a>, "Cueilleurs de cerises" <a
+                        class="salsah-link" href="ref:biblio_285">[Biblio 285]</a>, et "Fin
+                    d'hiver", repris de "Fin d'hiver au Jorat", Lectures du foyer, no 10, 11 mars
+                    1939 [Pas de Biblio ID ?? ].</p>
+            </text>
+        </p0112-roud-oeuvres:hasPublicComment>
+        <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value">
+            <text>
+                <p>6 ff.</p>
+            </text>
+        </p0112-roud-oeuvres:hasSupportInfo>
+        <p0112-roud-oeuvres:hasSupportType knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet</p0112-roud-oeuvres:hasSupportType>
+        <p0112-roud-oeuvres:hasWritingColor knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black</p0112-roud-oeuvres:hasWritingColor>
+        <p0112-roud-oeuvres:hasWritingTool knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-typingMachine</p0112-roud-oeuvres:hasWritingTool>
+        <p0112-roud-oeuvres:isPhotocopy knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:isPhotocopy>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable knoraType="date_value"
+            >GREGORIAN:1945 CE</p0112-roud-oeuvres:manuscriptHasDateEstablishedComputable>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedList knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa</p0112-roud-oeuvres:manuscriptHasDateEstablishedList>
+        <p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable knoraType="richtext_value">
+            <text>1945</text>
+        </p0112-roud-oeuvres:manuscriptHasDateEstablishedReadable>
+        <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
+        <p0112-roud-oeuvres:manuscriptHasShelfmark knoraType="richtext_value">
+            <text>MS 5 E/4a</text>
+        </p0112-roud-oeuvres:manuscriptHasShelfmark>
+        <p0112-roud-oeuvres:manuscriptHasTitle knoraType="richtext_value">
+            <text>Pages de l&amp;rsquo;été</text>
+        </p0112-roud-oeuvres:manuscriptHasTitle>
+        <p0112-roud-oeuvres:manuscriptIsDigitized knoraType="boolean_value"
+            >false</p0112-roud-oeuvres:manuscriptIsDigitized>
+        <p0112-roud-oeuvres:manuscriptIsInArchive knoraType="hlist_value"
+            >http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR</p0112-roud-oeuvres:manuscriptIsInArchive>
+    </p0112-roud-oeuvres:Manuscript>
+
+
+</BLA>
