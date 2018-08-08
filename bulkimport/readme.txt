@@ -23,18 +23,6 @@ curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost
 
 
 curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-- [solved] missing object for target ref: biblio_321, biblio_309, biblio_671, biblio_672. Added on the fly (will be corrected after)
-- it works without attributes mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping", but it means there is no html (no links) inside the fields (for example, in commentary)
-
-
-curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS__withMappingId.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-TERMINAL
-	{"status":11,"error":"org.knora.webapi.BadRequestException: namespace http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1# not defined in mapping"}
-DOCKER LOGS
-	Warning 
-	  SXXP0005: The source document is in namespace
-	  http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#, but all the template rules
-	  match elements in no namespace (Use --suppressXsltNamespaceCheck:on to avoid this warning)
 	
 
 
@@ -47,10 +35,15 @@ DOCKER LOGS
 ##
 ###################
 
-PLATEC
-- once mapping problem is fixed, test import ALL
-- date, ok ?
-- come funziona import immagini
+fix in IMPORT FICHES and then copy in ALL
+	- richtext vs simpletext
+	- add namespace to <text xmlns="">	
+	- delete class in <p class="p1">
+	- delete class in <p class="p2">
+
+import images using bulk import
+https://docs.knora.org/paradox/03-apis/api-v1/adding-resources.html#bulk-import-of-resources-with-digital-representations
+
 
 
 
@@ -84,9 +77,9 @@ DECIDERE
 
 
 
---------------------> ADD MANUALLY AFTER IMPORT <-----------------------
+--------------------> DO MANUALLY AFTER IMPORT <-----------------------
 
-- correct biblio_321, biblio_309, biblio_671, biblio_672 ("FAKE" in label), do not delete because there are links
+- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
 - pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
 - check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
@@ -113,6 +106,7 @@ DECIDERE
 - lexical error : no "", ?, and other characters in label
 - when importing something with @target, the targeted resources need to be present as well :)
 - when there is a problem, limit the processing to few rows and see where exactly the problem is
+- 
 ------------------------------------->  <--------------------------------
 
 
@@ -126,7 +120,13 @@ DECIDERE
 ###################
 
 
-PUBLISHERS -> publishers_backup
+Note:
+All mentions of 'import.ipynb' refers to the scripts in the jupyter notebook in folder transformation_scripts
+_____________________________________________________________________________________________________________
+
+
+
+PUBLISHERS
 --- Extract column 8 and 9 from BiblioDB, corresponding to Class Publishers and properties publisherHasName and publisherHasLocation [copy-paste, create a dedicated csv]
 --- Delete empty lines [import.ipynb]
 --- Sort and deduplicate [import.ipynb] -> import_data/publishers_sorted_distinct.csv
@@ -172,7 +172,6 @@ attention:  row[5] photo not included because there are no photo yet
     		row[8] and row[9] place and publisher not included
     		row[14] website interest not included
     		PublicationIsDigitized = row[15] not included, because there is no scan made with the new rules
-
 
 BOOKS
 --- import.ipynb
@@ -226,22 +225,19 @@ FICHES
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%         TO BUILD ALL.xml        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-- BIBLIOGRAPHY.xml (BIBLIOGRAPHY_authors_publishers_periodicals_articles_books_booksections) > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%         TO BUILD ALL.xml        %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+- BIBLIOGRAPHY.xml (authors_publishers_periodicals_articles_books_booksections) > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
 - add PERSONS and FICHES
 ----> ALL !!	
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-to generate ----> ALL__withMappingId.xml
-(find and replace the followings)
-	hasOtherWritingTool knoraType="richtext_value">
-hasOtherWritingTool knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
-	same thing for hasPublicComment, hasSupportInfo, manuscriptHasInternalComment
-		
+
+
+
 
 
 
