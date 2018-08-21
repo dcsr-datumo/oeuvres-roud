@@ -38,8 +38,7 @@ problemi con Salsah 1
 Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 - visualize comment on properties (otherwise I put that info in label). Esempi: publicationHasInternalComment, supportInfo?
 - sort results 
-AUTHORS_PERIODICALS_ARTICLES:
-Bizarre ... I import 596 and we have only 500 visible in Salsah ...
+- results only 500 ... !!!! (publications, archival document)
 
 
 
@@ -132,6 +131,8 @@ SI PUÒ ENTRARE NELLA VIRTUAL MACHINE CREATA DA DOCKER (bash come ssh). Per esem
 		bash-4.4# ls
 		arbor                  ckeditor               ckeditor_4.7.0
 		bootstrap              ckeditor-4.7.2-Editor  jQuery
+Oppure
+	docker exec -it knora bash
 
 
 

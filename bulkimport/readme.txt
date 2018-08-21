@@ -2,7 +2,7 @@
 
 
 #######################
-##
+## 
 ## BULK IMPORT COMMANDS
 ##
 #######################
@@ -19,7 +19,7 @@ UPLOAD (in terminal)
 curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
-curl -X POST -d @importExampleFiche.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @importExampleScan.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 
 curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
@@ -43,8 +43,43 @@ fix in IMPORT FICHES and then copy in ALL
 
 import images using bulk import
 https://docs.knora.org/paradox/03-apis/api-v1/adding-resources.html#bulk-import-of-resources-with-digital-representations
+	- starting Knora from sources (vd. mail Gilles DA COPIARE QUI !!!!!!!!!!!!!!!!) > Knora works
+	- import gives error message: {"status":4,"error":"org.knora.webapi.SipiException: Sipi reported an internal server error 500 Internal Server Error - {\n   \"message\": \"Submitted file path could not be read: /home/espadini/Pictures/cavallicavalieri.jpg\"\n}"}
+	- start Salsah from sources (sbt), because does not work from docker
+	- only path accepted is /tmp/ (and /tmp subdirs)	
+	
+	- try to upload from image on nas server: mount in /tmp/ (instead of /mnt/) but the error reappears: "Submitted file path could not be read". Permissions on the folder are "drwxr-xr-x 2 root root 0 juin  29 15:06", which seems ok. But I've already entered the password for mounting ...Even if I move all the images on my computer and upload from there, the problem is still there when we want to upload everything into demo and then in the production version. Should all the images be on Loïc computer then ?! Seems not ideal.
+
+ATTENTION: multiple pages of the same resources should be created together in the same xml file, otherwise, it would create multiple times also the targeted resources (of course!)
+
+START KNORA FROM SOURCES
+	
+	1. seguire istruzioni di Gilles in mail: distruggere sipi e ricrearlo, specificando nas
+	2. spostare in un'altra cartella del nas le immagini da importare (solo quelle dopo un certo punto)
+	3. fare script per creare xml per immagini
+		    	per ogni cartella in FondsArchive:
+		    		per ogni file in quella cartella:
+		    			path = print(path)
+		    			seqnum = path.lastPartAfter_
+		    			name = path.PartBetween_ (check if has p. or f.)
+		    			isPartOfManuscript = Manuscript/@id [when Manuscript/ShelfMark = Path.firstPart]
+		    			label = ??
+		    			@id = ??
+
+-----> che abbiamo per riunione mercoledì?
+- Passare a Demo l'import delle info, tanto per ...  Per farlo testare autonomamente da Daniel e colleghi. Quell'import si può fare a partire da json creato da me facendo download dei dati in graphdb in locale  CHIEDERE A LOIC IMMEDIATAMENTE i
+
+Cher Loïc,
+je vais travailler à l'import des images plus tard. 
+Entretemps, serait-il possible d'avoir les données (pas les images) dans Demo? 
+Dans Demo, il y a déjà les turtles 'roud-admin' et 'roud-permissions'. Il faudrait eliminer l'ontologie et les données-listes et les remplacer avec 'roud-onto' et 'roud-data-lists-AND-dataFromBulkImport' (generé pas GraphDB après un bulk import). Je les ai testés et tout devrait marcher. Les files sont tous en pièce jointe.
+Auras-tu le temps de le faire ENTRO mecredi matin ? Sinon, pas de problème, JE M'ARRANGE.
+À bientôt avec plus d'info,
+merci, ciao !
+elena
 
 
+- Import finito in locale (tutte info + images available)   [punti 1, 2, 3 sopra]
 
 
 
@@ -70,7 +105,7 @@ DONE
 	- resp ?   NOT IMPORTED, OK
 RIDIRE QUANTO IMPORT È FINITO
 	- added 'cote manquante' to fiches without cote   OK
-	- fiches 577 : 72 septembre
+	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
 DECIDERE
 	- gestione del tempo: punto e periodo
 ------------------------------------->  <--------------------------------
@@ -78,6 +113,7 @@ DECIDERE
 
 
 --------------------> DO MANUALLY AFTER IMPORT <-----------------------
+2400 items imported, 60 da ricontrollare manualmente (2,5%)
 
 - correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
@@ -105,8 +141,7 @@ DECIDERE
 - invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
 - lexical error : no "", ?, and other characters in label
 - when importing something with @target, the targeted resources need to be present as well :)
-- when there is a problem, limit the processing to few rows and see where exactly the problem is
-- 
+- when there is a problem, limit the processing to half of the rows and see where exactly the problem is
 ------------------------------------->  <--------------------------------
 
 
