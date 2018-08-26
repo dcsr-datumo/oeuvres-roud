@@ -26,15 +26,16 @@
         
    
 <knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# p0112-roud-oeuvres.xsd"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
     xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
     xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
     xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
     
     
     <p0112-roud-oeuvres:Page id="test_page1">
-        <knoraXmlImport:label>Test 6 page MS1A1A f.1r</knoraXmlImport:label>
-        <knoraXmlImport:file path="/tmp/tmpScanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/CRLR_GR_MS1A1a/CRLR_GR_MS1A1a_1r.tif" mimetype="image/tiff"></knoraXmlImport:file>
+        <knoraXmlImport:label>Test 1 page MS1A1A f.1r</knoraXmlImport:label>
+        <knoraXmlImport:file path="/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/CRLR_GR_MS1A1a/CRLR_GR_MS1A1a_1r.tif" mimetype="image/tiff"></knoraXmlImport:file>
+        <!-- YES  <knoraXmlImport:file path="/tmp/tmpScanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/CRLR_GR_MS1A1a/CRLR_GR_MS1A1a_1r.tif" mimetype="image/tiff"></knoraXmlImport:file> -->
         <!-- YES  <knoraXmlImport:file path="/tmp/testScanKnora/CRLR_GR_MS1A1a_1r.tif" mimetype="image/tiff"/> -->
         <!-- YES  <knoraXmlImport:file path="/tmp/image.tif" mimetype="image/tiff"></knoraXmlImport:file> -->
         <!-- YES  <knoraXmlImport:file path="/tmp/venanzi_gomitolo.jpg" mimetype="image/jpeg"></knoraXmlImport:file> -->

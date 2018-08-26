@@ -40,47 +40,19 @@ fix in IMPORT FICHES and then copy in ALL
 	- add namespace to <text xmlns="">	
 	- delete class in <p class="p1">
 	- delete class in <p class="p2">
+	- controllare se richtext e simpletext corrispondono all'ontologia cambiata (vd. todo per i cambi)
 
-import images using bulk import
-https://docs.knora.org/paradox/03-apis/api-v1/adding-resources.html#bulk-import-of-resources-with-digital-representations
-	- starting Knora from sources (vd. mail Gilles DA COPIARE QUI !!!!!!!!!!!!!!!!) > Knora works
-	- import gives error message: {"status":4,"error":"org.knora.webapi.SipiException: Sipi reported an internal server error 500 Internal Server Error - {\n   \"message\": \"Submitted file path could not be read: /home/espadini/Pictures/cavallicavalieri.jpg\"\n}"}
-	- start Salsah from sources (sbt), because does not work from docker
-	- only path accepted is /tmp/ (and /tmp subdirs)	
-	
-	- try to upload from image on nas server: mount in /tmp/ (instead of /mnt/) but the error reappears: "Submitted file path could not be read". Permissions on the folder are "drwxr-xr-x 2 root root 0 juin  29 15:06", which seems ok. But I've already entered the password for mounting ...Even if I move all the images on my computer and upload from there, the problem is still there when we want to upload everything into demo and then in the production version. Should all the images be on Loïc computer then ?! Seems not ideal.
-
-ATTENTION: multiple pages of the same resources should be created together in the same xml file, otherwise, it would create multiple times also the targeted resources (of course!)
-
-START KNORA FROM SOURCES
-	
-	1. seguire istruzioni di Gilles in mail: distruggere sipi e ricrearlo, specificando nas
-	2. spostare in un'altra cartella del nas le immagini da importare (solo quelle dopo un certo punto)
-	3. fare script per creare xml per immagini
-		    	per ogni cartella in FondsArchive:
-		    		per ogni file in quella cartella:
-		    			path = print(path)
-		    			seqnum = path.lastPartAfter_
-		    			name = path.PartBetween_ (check if has p. or f.)
-		    			isPartOfManuscript = Manuscript/@id [when Manuscript/ShelfMark = Path.firstPart]
-		    			label = ??
-		    			@id = ??
-
------> che abbiamo per riunione mercoledì?
-- Passare a Demo l'import delle info, tanto per ...  Per farlo testare autonomamente da Daniel e colleghi. Quell'import si può fare a partire da json creato da me facendo download dei dati in graphdb in locale  CHIEDERE A LOIC IMMEDIATAMENTE i
-
-Cher Loïc,
-je vais travailler à l'import des images plus tard. 
-Entretemps, serait-il possible d'avoir les données (pas les images) dans Demo? 
-Dans Demo, il y a déjà les turtles 'roud-admin' et 'roud-permissions'. Il faudrait eliminer l'ontologie et les données-listes et les remplacer avec 'roud-onto' et 'roud-data-lists-AND-dataFromBulkImport' (generé pas GraphDB après un bulk import). Je les ai testés et tout devrait marcher. Les files sont tous en pièce jointe.
-Auras-tu le temps de le faire ENTRO mecredi matin ? Sinon, pas de problème, JE M'ARRANGE.
-À bientôt avec plus d'info,
-merci, ciao !
-elena
+- cambiare tutti i label delle fiche per la cote??? più intuitivo del numero della fiche ... ?
+- test con colleghi
+- import images
+- test complex established texts
+- scrivere doc
 
 
-- Import finito in locale (tutte info + images available)   [punti 1, 2, 3 sopra]
-
+------>>>>>> AIMS FOR MEETING SEPTEMBER THE 5TH <<<<<<--------
+Have working ontology in Demo (semplified version of EstablishedText)
+Have on my computer working version of everything, including complex version of EstablishedText and Images
+Mode d'emploi complete pour Salsah
 
 
 
@@ -108,6 +80,11 @@ RIDIRE QUANTO IMPORT È FINITO
 	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
 DECIDERE
 	- gestione del tempo: punto e periodo
+
+----------------
+PER TEST
+	- possibili queries: tutti articoli pubblicati in una rivista, tutti i documenti tra 34 e 36
+	- documentazione
 ------------------------------------->  <--------------------------------
 
 
@@ -132,6 +109,11 @@ DECIDERE
 - notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
 - 72 ---> 27 septembre (fiches to be corrected)
 - check in backup fiche 103
+- A Propos de Roud: 
+Titre: « Gustave Roud » 
+Auteur: SIMOND Daniel
+Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
+
 ------------------------------------->  <--------------------------------
 
 

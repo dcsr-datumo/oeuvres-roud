@@ -14,14 +14,17 @@
 #
 
 
-
-Test XML dans Salsah, voir s'il y a des messages d'érreurs
-
+cambiare nell'ontologia
 
 
-
-
---> CHECK IF ALREADY CHANGED IN GRAPH
+--> CHECK IF ALREADY CHANGED IN GRAPH (changes after test - 20-24 august 2018)
+DONE. specifier pages du fac-similés si le texte ne correspond pas à la totalité du témoin de base (par exemple, section d'un cahier, ou d'une liasse d'un recueil). Better like this, even if it adds another info, because we need to retrieve also the "fiche" for the description of the document; if we link directly to the pages, it would need anyway another step to go back to the document containing those pages. In this way, request can be made to look at the specific pages only if the field for specific pages is not empty.
+DONE. title of publication. richtext, not simple !! Oppure decidere come citare cose in titolo
+DONE. original dans le fonds roud in publications --> 'oui ou non ou indiquer le fonds' to be added to the label. Simpletext, not rich
+DONE. retranscrit (ocr) in publications --> 'fait ou pas fait' to be added to the label. Simpletext, not rich 
+DONE. titre du livre in BookSection
+DONE. properties of EstablishedText
+DONE. delete publicationHasTranslator
 DONE. Cambiato da SimpleText a Richtext per hasSupportInfo)
 DONE. Create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
 DONE. books add possibility to specify pages
@@ -30,6 +33,9 @@ DONE. property hasPublisher added to BookSection
 DONE. added personInfoHasSource to Person
 
 
+Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
+If needed, later: create link 'sameAs' between Author and Person.
 
 
 
@@ -39,6 +45,7 @@ Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 - visualize comment on properties (otherwise I put that info in label). Esempi: publicationHasInternalComment, supportInfo?
 - sort results 
 - results only 500 ... !!!! (publications, archival document)
+- label creati manualmente = cauchemar and error prone (per ognuno si dovrebbe poter definire a partire da quali campi crearlo)
 
 
 
@@ -46,31 +53,6 @@ Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
 
 
 
-#
-##
-### DOC 
-##
-#
-
-Add Source to Person (texte, avec possibilité de faire des liens à la biblio)
-Delete publicationHasTranslator
-
-
-Avant de commencer la saisie manuelle (après l'import), créer protocole avec indications sur comment insérer les données et nommer les labels, dans un document externe (Salsah ne lit pas les commentaire des proprietés, mais oui ceux des classes).
-
-
-LABEL
-
-Document d'archive: doc_cote 	premiermotdutitre
-Texte (si document): txt_cote premiermotdutitre
-Texte (si publication): txt_
-Article: pub_titre revue annee
-Revue: period_
-Section d'un livre: pub_titre livre_annee
-Livre: pub_titre annee
-Personne: pers_nom prenom
-Author: aut_nom prenom
-Maison d'édition: edi_premiermotdunom
 
 
 
@@ -116,6 +98,7 @@ Pour insérer du XML, copier-coller dans le champ correspondant, qui dans Salsa 
 Tutto quanto lo mette in standoff quindi nel testo trovi solo il testo
 
 URI can be checked in graphdb > explore > visual graph
+Esempio: http://rdfh.ch/0112/roud-oeuvres/YSmHh1XJTvKfsbkKPhpy_w
 
 SI PUÒ ENTRARE NELLA VIRTUAL MACHINE CREATA DA DOCKER (bash come ssh). Per esempio, per cambiare editore HTML ... Poi far partire webserver (bisogna cambiare qualcosa in public/js = https://github.com/dhlab-basel/Knora/blob/develop/salsah1/src/public/js/00_init_javascript.js)
 		docker exec -it salsah bash
@@ -133,6 +116,13 @@ SI PUÒ ENTRARE NELLA VIRTUAL MACHINE CREATA DA DOCKER (bash come ssh). Per esem
 		bootstrap              ckeditor-4.7.2-Editor  jQuery
 Oppure
 	docker exec -it knora bash
+
+Multiple pages of the same resources should be created together in the same xml file, otherwise, it would create multiple times also the targeted resources (of course!)
+
+START KNORA and SALSAH FROM SOURCES
+
+Container Sipi must be created specifying to share the nas in location where it is mounted, vd. notes Gilles
+
 
 
 
