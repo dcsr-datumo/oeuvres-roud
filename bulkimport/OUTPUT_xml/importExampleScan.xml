@@ -2,27 +2,6 @@
     
    
    
-    <!--    IMPORT RULES. From Knora Documentation
-            The remaining child elements of each resource represent its property values. 
-            These must be sorted in alphabetical order by property name.
-            If a property has mutliple values, these are represented as multiple adjacent property elements.
-            The type of each value must be specified using the attribute knoraType.    
-            Attention to capital letters (for Classes) !   -->
-   
-   
-
-    <!--    Define mapping between unicode entities and HTML code or symbol 
-            Example: eacute > "&#233;" | "é"  -->
-    <!DOCTYPE
-     resource
-     [
-        <!ENTITY eacute "é" > 
-        <!ENTITY egrave "è" >
-        <!ENTITY rsquo "'" > <!-- changed to apostrophe, should be &apos; > "&#39;" -->
-    ]>
-    
-    
-        
         
    
 <knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -51,18 +30,7 @@
     </p0112-roud-oeuvres:Page>
     
     
-    <!-- 
-    <p0112-roud-oeuvres:Page id="test_page2">
-        <knoraXmlImport:label>Test 5 zib page MS1A1A f.1v</knoraXmlImport:label>
-        <knoraXmlImport:file path="/tmp/testScanKnora/zibaldone.png" mimetype="image/png"/>
-        <hasSeqnum knoraType="int_value">2</hasSeqnum>
-        <pageHasName knoraType="richtext_value">f. 1v</pageHasName>
-        <pageIsPartOfManuscript>
-            <Manuscript knoraType="link_value" target="fiche89TEST2" linkType="ref"></Manuscript>
-        </pageIsPartOfManuscript>
-    </p0112-roud-oeuvres:Page>
-     -->
-        
+   
         
         
     <!-- support data, here just to make it work but might be not accurate -->    
@@ -77,11 +45,11 @@
                 >&lt;p&gt;Crayon gris&lt;/p&gt;</text></p0112-roud-oeuvres:hasOtherWritingTool>
         <p0112-roud-oeuvres:hasPublicComment knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
             <text xmlns="">
-                <p>Liste de mots allemands avec leurs traductions. Quatre vers (traduits ?) non identifi&eacute;s.</p>
+                <p>Liste de mots allemands avec leurs traductions. Quatre vers (traduits ?) non identifis.</p>
                 <p>Le tambour y scande le pas lourd</p>
-                <p>De notre horde prisonni&egrave;re</p>
+                <p>De notre horde prisonnire</p>
                 <p>La trompette, et ce fouet sur nos chers (?)</p>
-                <p>Seigneur, pourtant je n&rsquo;ai pu voir</p>
+                <p>Seigneur, pourtant je nai pu voir</p>
             </text>
         </p0112-roud-oeuvres:hasPublicComment>
         <p0112-roud-oeuvres:hasSupportInfo knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
@@ -103,7 +71,7 @@
         <p0112-roud-oeuvres:manuscriptHasEditorialSet knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique</p0112-roud-oeuvres:manuscriptHasEditorialSet>
         <p0112-roud-oeuvres:manuscriptHasInternalComment knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping">
             <text xmlns="">
-                <p>Jaquier et Delacr&eacute;taz <a class="salsah-link" href="ref:biblio_514">[Biblio 514]</a> datent cette note de 1949 ; selon Maggetti, elle daterait de 1959.</p>
+                <p>Jaquier et Delacrtaz <a class="salsah-link" href="ref:biblio_514">[Biblio 514]</a> datent cette note de 1949 ; selon Maggetti, elle daterait de 1959.</p>
             </text>
         </p0112-roud-oeuvres:manuscriptHasInternalComment>
         <p0112-roud-oeuvres:manuscriptHasOldShelfmark knoraType="richtext_value">MS 6/A</p0112-roud-oeuvres:manuscriptHasOldShelfmark>

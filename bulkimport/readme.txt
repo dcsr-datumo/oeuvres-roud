@@ -21,8 +21,9 @@ curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1
 
 curl -X POST -d @importExampleScan.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
+curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS__IMAGES.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+curl -X POST -d @monnezza.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 	
 
 
@@ -35,19 +36,23 @@ curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml http://root%40ex
 ##
 ###################
 
-fix in IMPORT FICHES and then copy in ALL
-	- richtext vs simpletext
-	- add namespace to <text xmlns="">	
-	- delete class in <p class="p1">
-	- delete class in <p class="p2">
-	- controllare se richtext e simpletext corrispondono all'ontologia cambiata (vd. todo per i cambi)
+Situazione:
+LOCALHOST:
+	import data all done
+	stanno, insieme a data-lists, in Dropbox/Roud
+	images importate (per problemi vedi sotto)
 
-- cambiare tutti i label delle fiche per la cote??? più intuitivo del numero della fiche ... ?
-- test con colleghi
-- import images
+
+
+Ancora su import fiches
+	- links non funzionano
+	DONE. per ogni biblio nello stesso commento
+    DONE. add a commento interno
+
+- apostrophe dans les titres (DEMANDER À BRUNO, PARCE QUE DANS LES IMPORTS DES PUBLICATIONS JE NE LE TROUVE PAS)
+- import images (try different 350, otherwise with links to existing resources)
 - test complex established texts
 - scrivere doc
-
 
 ------>>>>>> AIMS FOR MEETING SEPTEMBER THE 5TH <<<<<<--------
 Have working ontology in Demo (semplified version of EstablishedText)
@@ -78,13 +83,7 @@ DONE
 RIDIRE QUANTO IMPORT È FINITO
 	- added 'cote manquante' to fiches without cote   OK
 	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
-DECIDERE
-	- gestione del tempo: punto e periodo
-
-----------------
-PER TEST
-	- possibili queries: tutti articoli pubblicati in una rivista, tutti i documenti tra 34 e 36
-	- documentazione
+	- À majuscule parfois est A. Comment doit être?
 ------------------------------------->  <--------------------------------
 
 
@@ -92,7 +91,7 @@ PER TEST
 --------------------> DO MANUALLY AFTER IMPORT <-----------------------
 2400 items imported, 60 da ricontrollare manualmente (2,5%)
 
-- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links
+- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links. Check also in commentaries
 - check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
 - pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
 - check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
@@ -113,7 +112,9 @@ PER TEST
 Titre: « Gustave Roud » 
 Auteur: SIMOND Daniel
 Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
-
+-  MS 2 B/1a  check commentaire (public) à > a
+- plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
+- vérifier qu'il n'y a rien avec "test" ou "dsa"
 ------------------------------------->  <--------------------------------
 
 
@@ -138,7 +139,7 @@ Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, 
 
 
 Note:
-All mentions of 'import.ipynb' refers to the scripts in the jupyter notebook in folder transformation_scripts
+All mentions of 'import.ipynb' refers to the  python scripts (jupyter notebook) in folder transformation_scripts
 _____________________________________________________________________________________________________________
 
 
@@ -237,6 +238,30 @@ FICHES
 		- mismatched tags (one case only: <i>some text<i/> in hasPublicComment, fiche 243). This is caused by the HTML editor used in Remplir fiche in fonds-roud.unil.ch
 		- fields with richtext that does not have <p> paragraphs, because have been created before the new editor > add <p>
 		- dates, a lot of dates (missing parts, not well formatted, not in the right column)
+--- import.ipynb
+--- in the xml output, manually
+	- delete "fiches problematiques" (easier to add them manually afterwards than to try to understand why they cause problems. They are liste in OUTPUT/fiches_problematiques.xml)
+	- replace <text> with <text xmlns="">
+	- replace <p class="p1"> with <p>
+	- replace <p class="p2"> with <p>
+	- replace     knoraType="richtext_value"><text xmlns="">    with     knoraType="richtext_value" mapping_id="http://rdfh.ch/standoff/mappings/StandardMapping"><text xmlns="">    (because commented out in the import, stupid!)  
+	- replace <i>  with   <em>   and   </i>   with   </em>  (<i> not present in StandardMapping, oh yes)
+
+
+
+PAGES (SCANS)
+--- connect à /mnt/
+--- import.ipynb 
+		this is an import with link to existing resources, so need the iri (of manuscripts, in this case, because the images are part of a manuscript). The iris are downloaded, together with the shelfmark for finding the correspondance, from graphdb (sparql query saved) in a csv. This csv is needed for the import to work
+
+--- for importing the xml with curl
+	147 images yes, 189 no, 170 yes
+	Also, this image does not work
+		<p0112-roud-oeuvres:Page xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="CRLR_GR_MS2C14a_1r_1.png"><knoraXmlImport:label>page_CRLR GR MS 2 C/14a___f. 1r___1</knoraXmlImport:label><knoraXmlImport:file mimetype="image/png" path="/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_import/FondsArchive/CRLR_GR_MS2C14a/CRLR_GR_MS2C14a_1r_1.png" /><p0112-roud-oeuvres:hasSeqnum knoraType="int_value">1</p0112-roud-oeuvres:hasSeqnum><p0112-roud-oeuvres:pageHasName knoraType="richtext_value">f. 1r</p0112-roud-oeuvres:pageHasName><p0112-roud-oeuvres:pageIsPartOfManuscript><p0112-roud-oeuvres:Manuscript knoraType="link_value" linkType="iri" target="http://rdfh.ch/0112/roud-oeuvres/vG0O91nzRWuwx7r3fAaiXw" /></p0112-roud-oeuvres:pageIsPartOfManuscript></p0112-roud-oeuvres:Page>
+	deleted in backup_images_all.xml !!!!!!!!!!!!
+
+
+
 
 
 
@@ -247,7 +272,8 @@ FICHES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 - BIBLIOGRAPHY.xml (authors_publishers_periodicals_articles_books_booksections) > refine_biblio.xsl > BIBLIOGRAPHY_refined.xml
 - add PERSONS and FICHES
-----> ALL !!	
+----> ALL !!
+ATTENTION: 'ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS.xml' has a number of fake publications added in order to to make it work	
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

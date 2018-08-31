@@ -14,10 +14,27 @@
 #
 
 
-cambiare nell'ontologia
+DIRE A DASCH
+filtri per autore de saisie
+résultats: pas plus de 500
+permissions pour collegues (delete entire resource)
+Typos/coquille: 
+	"Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
+	a standoff lien vers
+tiff pas trop lourds pour charger dans salsah
+default anglais pour les liste dans demo?
+
+Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
 
 
 --> CHECK IF ALREADY CHANGED IN GRAPH (changes after test - 20-24 august 2018)
+DONE. aggiungere abstract property al LABEL e non COMMENT delle proprietà astratte
+DONE. aggiungere datecomputable come properietà astratta ???
+DONE. in data-lists: correspondence > correspondance
+DONE. témoin de base pour la page du site
+DONE. texte > page du site
+DONE. ajouter notice à périodique et éditeur
 DONE. specifier pages du fac-similés si le texte ne correspond pas à la totalité du témoin de base (par exemple, section d'un cahier, ou d'une liasse d'un recueil). Better like this, even if it adds another info, because we need to retrieve also the "fiche" for the description of the document; if we link directly to the pages, it would need anyway another step to go back to the document containing those pages. In this way, request can be made to look at the specific pages only if the field for specific pages is not empty.
 DONE. title of publication. richtext, not simple !! Oppure decidere come citare cose in titolo
 DONE. original dans le fonds roud in publications --> 'oui ou non ou indiquer le fonds' to be added to the label. Simpletext, not rich
@@ -32,8 +49,20 @@ DONE. bookSectionIsPartOf textValue instead of link
 DONE. property hasPublisher added to BookSection
 DONE. added personInfoHasSource to Person
 
+-------
+FIX IN IMPORT FICHES
+	- DONE. richtext vs simpletext (vd. onto)
+	- DONE. cambiare tutti i label delle fiche per la cote??? più intuitivo del numero della fiche ... ? forse si
+	- DONE. ajouter automtiquement reference dans [Biblio num] dans les commentaire internes et externes
+FIX IN XML OUTPUT
+	- DONE. eliminare fiches problematiche
+	- DONE. replace <text> with <text xmlns="">
+	- DONE. replace <p class="p1"> with <p>
+	- DONE. replace <p class="p2"> with <p>
+COPY IN ALL
 
-Test XML dans Salsah, voir s'il y a des messages d'érreurs
+
+
 
 If needed, later: create link 'sameAs' between Author and Person.
 

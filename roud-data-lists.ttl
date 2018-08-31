@@ -67,7 +67,7 @@
 		knora-base:listNodeName "Correspondance" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
 		knora-base:listNodePosition 5 ;
-		rdfs:label "Correspondance"@fr , "Correspondence"@en .
+		rdfs:label "Correspondance"@fr , "correspondance"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> a knora-base:ListNode ;
 		knora-base:listNodeName "SurRoud" ;
@@ -332,7 +332,7 @@
 		knora-base:listNodeName "manuscript" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> ;
 		knora-base:listNodePosition 0 ;
-		rdfs:label "Manuscript"@fr , "Manuscript"@en .
+		rdfs:label "Manuscrit"@fr , "Manuscript"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo> a knora-base:ListNode ;
 		knora-base:listNodeName "dactylo" ;
