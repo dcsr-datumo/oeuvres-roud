@@ -7,28 +7,61 @@
 ###################
 
 
-#
-##
-### ONTO / SALSAH / KNORA
-##
-#
+Aaaah, error in adding photo to artwork !!! Check in ontology ...
+
+error
+Internal Server Error
+{"status":4,"error":"org.knora.webapi.TriplestoreResponseException: Triplestore responded with HTTP code 500 Internal Server Error: org.eclipse.rdf4j.query.UpdateExecutionException: org.eclipse.rdf4j.repository.RepositoryException: org.eclipse.rdf4j.sail.SailException: com.ontotext.trree.consistency.ConsistencyException: Consistency check subject_class_constraint_1 failed:\nhttp://rdfh.ch/0112/roud-oeuvres/84eVYYySQxa8OU5lqI38FA http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto http://rdfh.ch/0112/roud-oeuvres/4Orl78ZJRkarbnWDlddmPw\nhttp://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto http://www.knora.org/ontology/knora-base#subjectClassConstraint http://www.knora.org/ontology/0112/roud-oeuvres#Artwork\n-----------------------------------\nhttp://rdfh.ch/0112/roud-oeuvres/84eVYYySQxa8OU5lqI38FA http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.knora.org/ontology/0112/roud-oeuvres#Artwork\n"}
+
+ConsistencyException: Consistency check subject_class_constraint_1 failed:
+
+http://rdfh.ch/0112/roud-oeuvres/8EmLYq_XSRa3SLupDSMnpQ
+http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto
+http://rdfh.ch/0112/roud-oeuvres/4Orl78ZJRkarbnWDlddmPw
+
+http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto
+http://www.knora.org/ontology/knora-base#subjectClassConstraint
+http://www.knora.org/ontology/0112/roud-oeuvres#Artwork
+
+http://rdfh.ch/0112/roud-oeuvres/8EmLYq_XSRa3SLupDSMnpQ
+http://www.w3.org/1999/02/22-rdf-syntax-ns#type
+http://www.knora.org/ontology/0112/roud-oeuvres#Artwork
 
 
-DIRE A DASCH
-filtri per autore de saisie
-résultats: pas plus de 500
-permissions pour collegues (delete entire resource)
-Typos/coquille: 
-	"Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
-	a standoff lien vers
-tiff pas trop lourds pour charger dans salsah
-default anglais pour les liste dans demo?
 
-Test XML dans Salsah, voir s'il y a des messages d'érreurs
+============================ with DASCH ===============================
+OPEN ISSUES
+- In Salsah: filters on author of resource?
+- Permissions for colleagues (delete entire resource)
+- if ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data) ? is it possible?
+- Test XML in Salsah, check if error
+- Add item to list (for example archives or translated author)
 
 
+IMPORT
+	ONTO AND DATA
+		- admin.ttl
+		- permissions.ttl
+		- onto.ttl
+		- data.ttl (last version sent with Switch, important because the URI of the manuscripts will be reused for importing images)
+	IMAGES
+		- access to scanlett
+		- bulk import (multiple xml files)
+			ssh espadini@junipero
+			sudo mount -t cifs -o username=espadini,domain=ad,vers=3.0 //nas.unil.ch/scanlett /mnt/scanlettMounted
 
---> CHECK IF ALREADY CHANGED IN GRAPH (changes after test - 20-24 august 2018)
+
+
+
+=============================== ELENA ==============================
+Once import is finished: 
+- finish documentation
+- fix manual fixes (below)
+- check visual graph (below)
+
+
+
+----------------------> CHECK IF ALREADY CHANGED IN VISUAL GRAPH (changes after test - 20-24 august 2018)
 DONE. aggiungere abstract property al LABEL e non COMMENT delle proprietà astratte
 DONE. aggiungere datecomputable come properietà astratta ???
 DONE. in data-lists: correspondence > correspondance
@@ -49,34 +82,76 @@ DONE. bookSectionIsPartOf textValue instead of link
 DONE. property hasPublisher added to BookSection
 DONE. added personInfoHasSource to Person
 
--------
-FIX IN IMPORT FICHES
-	- DONE. richtext vs simpletext (vd. onto)
-	- DONE. cambiare tutti i label delle fiche per la cote??? più intuitivo del numero della fiche ... ? forse si
-	- DONE. ajouter automtiquement reference dans [Biblio num] dans les commentaire internes et externes
-FIX IN XML OUTPUT
-	- DONE. eliminare fiches problematiche
-	- DONE. replace <text> with <text xmlns="">
-	- DONE. replace <p class="p1"> with <p>
-	- DONE. replace <p class="p2"> with <p>
-COPY IN ALL
+
+
+
+--------------------> DO MANUALLY AFTER IMPORT <-----------------------
+2400 items imported, 60 da ricontrollare manualmente (2,5%)
+
+- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links. Check also in commentaries
+- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
+- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
+- check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
+	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
+	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
+	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
+	- articolo di traduzione con 10 autori ...
+- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
+- INPUT_data/check.csv
+- sections recueils
+- fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
+- luoghi
+- persons added after (in yellow) and check if there is any source that was not there before
+- notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
+- 72 ---> 27 septembre (fiches to be corrected)
+- check in backup fiche 103
+- A Propos de Roud: 
+Titre: « Gustave Roud » 
+Auteur: SIMOND Daniel
+Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
+-  MS 2 B/1a  check commentaire (public) à > a
+- plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
+- vérifier qu'il n'y a rien avec "test" ou "dsa"
+- aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
+------------------------------------->  <--------------------------------
 
 
 
 
-If needed, later: create link 'sameAs' between Author and Person.
+============================= FOR EQUIPE ROUD ==================================
+DONE
+	CAMBIAMENTI FATTI
+	- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?  OK
+	- Fiche 103 --- commentaire interne truncated ... sorry ...   OK
+	- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)  OK
+	- weekday addded <lundi, >  OK
+	- resp ?   NOT IMPORTED, OK
+RIDIRE QUANDO IMPORT È FINITO
+	- added 'cote manquante' to fiches without cote   OK
+	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
+	- À majuscule parfois est A. Comment doit être?
 
 
 
 
-problemi con Salsah 1
-Salsah 1 sta in Github dentro Knora (ticket frontend salsah, question)
-- visualize comment on properties (otherwise I put that info in label). Esempi: publicationHasInternalComment, supportInfo?
-- sort results 
+
+============================ OPEN ISSUES IN SALSAH1 =================================================================
+https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsah, question)
+- visualize comment on properties (otherwise I put that info in label). Examples: publicationHasInternalComment, supportInfo?
+- sort results in alphabetical order at least
 - results only 500 ... !!!! (publications, archival document)
 - label creati manualmente = cauchemar and error prone (per ognuno si dovrebbe poter definire a partire da quali campi crearlo)
+- Typos/coquille: 
+	- "Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
+	- a standoff lien vers
+	- Defaul anglais pour les liste dans demo?
 
 
+
+
+=========================== AFTER ===============================
+
+If needed, later: create link 'sameAs' between Author and Person.
 
 
 
@@ -150,7 +225,7 @@ Multiple pages of the same resources should be created together in the same xml 
 
 START KNORA and SALSAH FROM SOURCES
 
-Container Sipi must be created specifying to share the nas in location where it is mounted, vd. notes Gilles
+Container Sipi must be created specifying to share the nas in location where it is mounted, vd. installationLocal.txt
 
 
 

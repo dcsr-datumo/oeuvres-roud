@@ -660,7 +660,17 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
 
                         rdfs:subClassOf roud-oeuvres:Work ;
 
-                        rdfs:subClassOf knora-base:Resource ;
+                        rdfs:subClassOf knora-base:Resource ,
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:onProperty roud-oeuvres:artworkHasPhoto ;
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        ],
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:onProperty roud-oeuvres:artworkHasPhotoValue ;
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        ];
 
                         rdfs:label  "Œuvre d'art"@fr ,
                                     "Artwork"@en ,
@@ -833,12 +843,12 @@ roud-oeuvres:Photo    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasDate ;
-                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoIsInArchive ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -2741,6 +2751,38 @@ roud-oeuvres:publicationHasPhotoValue   rdf:type owl:ObjectProperty ;
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                         knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:artworkHasPhoto    rdf:type owl:ObjectProperty ;
+
+                                rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                rdfs:subPropertyOf roud-oeuvres:hasPhoto ;
+
+                                # knora-base:subjectClassConstraint roud-oeuvres:Artwork ; 
+
+                                knora-base:objectClassConstraint roud-oeuvres:Photo ;
+
+                                rdfs:label  "Reproduction de l'œuvre"@fr ,
+                                            "Reproduction of the work"@en ,
+                                            "Riproduzione dell'opera"@it ;
+
+                                rdfs:comment  "Reproduction de l'œuvre."@fr ,
+                                              "Reproduction of the work."@en ;
+
+                                salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                salsah-gui:guiOrder "5"^^xsd:integer .
+                                                              
+
+
+roud-oeuvres:artworkHasPhotoValue   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                    # knora-base:subjectClassConstraint roud-oeuvres:Artwork ;
+
+                                    knora-base:objectClassConstraint knora-base:LinkValue .
 
    
 

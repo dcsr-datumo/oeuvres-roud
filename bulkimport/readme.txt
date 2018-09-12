@@ -7,125 +7,17 @@
 ##
 #######################
 
-DOWNLOAD (in browser)
-http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=root%40example.com&password=test
 
-Download sembra funzionare anche con utente root, ma just in case funziona anche con il mio:
-http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=elena.spadini%40unil.ch&password=k32V
+DOWNLOAD the schemas for the XML files (in browser)
+	http://localhost:3333/v1/resources/xmlimportschemas/http%3A%2F%2Fwww.knora.org%2Fontology%2F0112%2Froud-oeuvres?email=root%40example.com&password=test
 
 
+UPLOAD the XML file (in terminal)
+	curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
-UPLOAD (in terminal)
-curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-
-
-curl -X POST -d @importExampleScan.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-
-curl -X POST -d @ALL___BIBLIOGRAPHYrefined__FICHES__PERSONS__IMAGES.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
-
-curl -X POST -d @monnezza.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+	
 	
 
-
-
-
-
-###################
-##
-## TO DO
-##
-###################
-
-Situazione:
-LOCALHOST:
-	import data all done
-	stanno, insieme a data-lists, in Dropbox/Roud
-	images importate (per problemi vedi sotto)
-
-
-
-Ancora su import fiches
-	- links non funzionano
-	DONE. per ogni biblio nello stesso commento
-    DONE. add a commento interno
-
-- apostrophe dans les titres (DEMANDER À BRUNO, PARCE QUE DANS LES IMPORTS DES PUBLICATIONS JE NE LE TROUVE PAS)
-- import images (try different 350, otherwise with links to existing resources)
-- test complex established texts
-- scrivere doc
-
------->>>>>> AIMS FOR MEETING SEPTEMBER THE 5TH <<<<<<--------
-Have working ontology in Demo (semplified version of EstablishedText)
-Have on my computer working version of everything, including complex version of EstablishedText and Images
-Mode d'emploi complete pour Salsah
-
-
-
-
-
-
-###################
-##
-## IMPORT PROBLEMS
-##
-###################
-
-
-
------------------------> Dire a colleghi <-----------------------
-DONE
-	CAMBIAMENTI FATTI
-	- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?  OK
-	- Fiche 103 --- commentaire interne truncated ... sorry ...   OK
-	- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)  OK
-	- weekday addded <lundi, >  OK
-	- resp ?   NOT IMPORTED, OK
-RIDIRE QUANTO IMPORT È FINITO
-	- added 'cote manquante' to fiches without cote   OK
-	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
-	- À majuscule parfois est A. Comment doit être?
-------------------------------------->  <--------------------------------
-
-
-
---------------------> DO MANUALLY AFTER IMPORT <-----------------------
-2400 items imported, 60 da ricontrollare manualmente (2,5%)
-
-- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links. Check also in commentaries
-- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
-- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
-- check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
-	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
-	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
-	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
-	- articolo di traduzione con 10 autori ...
-- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
-- INPUT_data/check.csv
-- sections recueils
-- fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
-- luoghi
-- persons added after (in yellow) and check if there is any source that was not there before
-- notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
-- 72 ---> 27 septembre (fiches to be corrected)
-- check in backup fiche 103
-- A Propos de Roud: 
-Titre: « Gustave Roud » 
-Auteur: SIMOND Daniel
-Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
--  MS 2 B/1a  check commentaire (public) à > a
-- plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
-- vérifier qu'il n'y a rien avec "test" ou "dsa"
-------------------------------------->  <--------------------------------
-
-
-
------------------------> problems during IMPORT <-----------------------
-
-- invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
-- lexical error : no "", ?, and other characters in label
-- when importing something with @target, the targeted resources need to be present as well :)
-- when there is a problem, limit the processing to half of the rows and see where exactly the problem is
-------------------------------------->  <--------------------------------
 
 
 
@@ -138,8 +30,19 @@ Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, 
 ###################
 
 
+
+-----------------------> problems during IMPORT <-----------------------
+
+- invalid text : attention, it does not want empty element. Check empty elements: //*[not(text())]
+- lexical error : no "", ?, and other characters in label
+- when importing something with @target, the targeted resources need to be present as well :)
+- when there is a problem, limit the processing to half of the rows and see where exactly the problem is (painful debugging)
+------------------------------------->  <--------------------------------
+
+
+
 Note:
-All mentions of 'import.ipynb' refers to the  python scripts (jupyter notebook) in folder transformation_scripts
+All mentions of 'import.ipynb' refers to the python scripts (jupyter notebook) in folder transformation_scripts
 _____________________________________________________________________________________________________________
 
 
@@ -253,14 +156,15 @@ PAGES (SCANS)
 --- connect à /mnt/
 --- import.ipynb 
 		this is an import with link to existing resources, so need the iri (of manuscripts, in this case, because the images are part of a manuscript). The iris are downloaded, together with the shelfmark for finding the correspondance, from graphdb (sparql query saved) in a csv. This csv is needed for the import to work
-
 --- for importing the xml with curl
 	147 images yes, 189 no, 170 yes
 	Also, this image does not work
 		<p0112-roud-oeuvres:Page xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="CRLR_GR_MS2C14a_1r_1.png"><knoraXmlImport:label>page_CRLR GR MS 2 C/14a___f. 1r___1</knoraXmlImport:label><knoraXmlImport:file mimetype="image/png" path="/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_import/FondsArchive/CRLR_GR_MS2C14a/CRLR_GR_MS2C14a_1r_1.png" /><p0112-roud-oeuvres:hasSeqnum knoraType="int_value">1</p0112-roud-oeuvres:hasSeqnum><p0112-roud-oeuvres:pageHasName knoraType="richtext_value">f. 1r</p0112-roud-oeuvres:pageHasName><p0112-roud-oeuvres:pageIsPartOfManuscript><p0112-roud-oeuvres:Manuscript knoraType="link_value" linkType="iri" target="http://rdfh.ch/0112/roud-oeuvres/vG0O91nzRWuwx7r3fAaiXw" /></p0112-roud-oeuvres:pageIsPartOfManuscript></p0112-roud-oeuvres:Page>
 	deleted in backup_images_all.xml !!!!!!!!!!!!
-
-
+--- per importare i tiff: in backup_images_all
+		replace '.png' with '.tif'
+		replace 'image/png' with 'image/tiff'
+		replace 'E_Scan/Scans_import/FondsArchive' with 'E_Scan/Scans_complets/FondsArchive'
 
 
 
