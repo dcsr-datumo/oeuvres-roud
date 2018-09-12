@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+    
+   
+
+    <p0112-roud-oeuvres:Person id="ramuz_ferdinand">
+        <knoraXmlImport:label>TEST ramuz ferdinand</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasBirthDate knoraType="date_value">GREGORIAN:1890-06-02</p0112-roud-oeuvres:hasBirthDate>
+        <p0112-roud-oeuvres:hasDeathDate knoraType="date_value">GREGORIAN:1935-07-02</p0112-roud-oeuvres:hasDeathDate>
+        <p0112-roud-oeuvres:personHasFamilyName knoraType="richtext_value">TEST Ramuz</p0112-roud-oeuvres:personHasFamilyName>
+        <p0112-roud-oeuvres:personHasGivenName knoraType="richtext_value">TEST Ferdinand</p0112-roud-oeuvres:personHasGivenName>
+        <p0112-roud-oeuvres:personHasNotice knoraType="richtext_value">blabldbsladdsadsa</p0112-roud-oeuvres:personHasNotice>
+    </p0112-roud-oeuvres:Person>
+    
+</knoraXmlImport:resources>

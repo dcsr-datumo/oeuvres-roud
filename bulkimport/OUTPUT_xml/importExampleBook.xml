@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+    
+    <!-- 
+        DOC Knora :
+        The remaining child elements of each resource represent its property values. 
+        These must be sorted in alphabetical order by property name.
+        If a property has mutliple values, these are represented as multiple adjacent property elements.
+        The type of each value must be specified using the attribute knoraType.
+    -->
+
+    <!--
+        Attention to capital letters (for Classes) !
+    -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <p0112-roud-oeuvres:Book id="biblio_518">
+        <knoraXmlImport:label>pub_Roud ___ Campagne perdue ___ 1972</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasPublicationType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique</p0112-roud-oeuvres:hasPublicationType>
+        <hasPublisher>
+            <Publisher knoraType="link_value" target="ed_Bibliothèque_des_Arts" linkType="ref"></Publisher>
+        </hasPublisher>
+        <p0112-roud-oeuvres:originalIsInCrlrArchive knoraType="richtext_value">false</p0112-roud-oeuvres:originalIsInCrlrArchive>
+        <p0112-roud-oeuvres:publicationHasAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" target="aut_Roud_Gustave" linkType="ref"></p0112-roud-oeuvres:Author>
+        </p0112-roud-oeuvres:publicationHasAuthor>
+        <p0112-roud-oeuvres:publicationHasDate knoraType="date_value">GREGORIAN:1972 CE</p0112-roud-oeuvres:publicationHasDate>
+        <p0112-roud-oeuvres:publicationHasInternalComment knoraType="richtext_value">blabla.</p0112-roud-oeuvres:publicationHasInternalComment>
+        <p0112-roud-oeuvres:publicationHasTitle knoraType="richtext_value">Campagne perdue</p0112-roud-oeuvres:publicationHasTitle>
+        <p0112-roud-oeuvres:publicationIsDigitized knoraType="boolean_value">false</p0112-roud-oeuvres:publicationIsDigitized>
+        <publicationIsTranscribed knoraType="richtext_value">true</publicationIsTranscribed>
+    </p0112-roud-oeuvres:Book>
+    
+    <p0112-roud-oeuvres:Author id="aut_Roud_Gustave">
+        <knoraXmlImport:label>aut_Roud Gustave</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+    
+    
+    <p0112-roud-oeuvres:Publisher id="ed_Bibliothèque_des_Arts">
+        <knoraXmlImport:label>ed_Bibliothèque des Arts</knoraXmlImport:label>
+        <p0112-roud-oeuvres:publisherHasName knoraType="richtext_value">Bibliothèque des Arts</p0112-roud-oeuvres:publisherHasName>
+    </p0112-roud-oeuvres:Publisher>
+    
+    
+   
+    
+</knoraXmlImport:resources>

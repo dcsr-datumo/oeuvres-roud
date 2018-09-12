@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+    
+    <!-- 
+        DOC Knora :
+        The remaining child elements of each resource represent its property values. 
+        These must be sorted in alphabetical order by property name.
+        If a property has mutliple values, these are represented as multiple adjacent property elements.
+        The type of each value must be specified using the attribute knoraType.
+    -->
+
+    <!--
+        Attention to capital letters (for Classes) !
+    -->
+    
+    
+    
+    
+    
+    
+    
+    
+    <!-- ATTENZIONe A NUMERO DI PAGINA -->
+
+
+    <p0112-roud-oeuvres:PeriodicalArticle id="pub_450">
+        <knoraXmlImport:label>pub_Journal 1982</knoraXmlImport:label>
+        <p0112-roud-oeuvres:hasPublicationType knoraType="hlist_value">http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique</p0112-roud-oeuvres:hasPublicationType>
+        <p0112-roud-oeuvres:isInPeriodicalIssue knoraType="richtext_value">93</p0112-roud-oeuvres:isInPeriodicalIssue>
+        <p0112-roud-oeuvres:isPublishedInPeriodical>
+            <p0112-roud-oeuvres:Periodical knoraType="link_value" target="period_Gazette_Lausanne" linkType="ref"></p0112-roud-oeuvres:Periodical>
+        </p0112-roud-oeuvres:isPublishedInPeriodical>
+        <p0112-roud-oeuvres:originalIsInCrlrArchive knoraType="boolean_value">false</p0112-roud-oeuvres:originalIsInCrlrArchive>
+        <p0112-roud-oeuvres:periodicalArticleIsInPages knoraType="richtext_value">p. 27</p0112-roud-oeuvres:periodicalArticleIsInPages>
+        <p0112-roud-oeuvres:publicationHasAuthor>
+            <p0112-roud-oeuvres:Author knoraType="link_value" target="aut_Roud_Gustave" linkType="ref"></p0112-roud-oeuvres:Author>
+        </p0112-roud-oeuvres:publicationHasAuthor>
+        <p0112-roud-oeuvres:publicationHasDate knoraType="date_value">GREGORIAN:1967-4-22 CE:1967-4-23 CE</p0112-roud-oeuvres:publicationHasDate>
+        <p0112-roud-oeuvres:publicationHasInternalComment knoraType="richtext_value">Le début de Requiem (Payot, 1967), avec une seule différence : "des oiseaux la blessent parfois" (dans le recueil : "des oiseaux parfois la blessent").</p0112-roud-oeuvres:publicationHasInternalComment>
+        <p0112-roud-oeuvres:publicationHasTitle knoraType="richtext_value">D'un Requiem</p0112-roud-oeuvres:publicationHasTitle>
+        <p0112-roud-oeuvres:publicationIsDigitized knoraType="boolean_value">false</p0112-roud-oeuvres:publicationIsDigitized>
+        <publicationIsTranscribed knoraType="boolean_value">true</publicationIsTranscribed>
+    </p0112-roud-oeuvres:PeriodicalArticle>
+    
+    <p0112-roud-oeuvres:Author id="pers_Roud_Gustave">
+        <knoraXmlImport:label>aut_Roud Gustave</knoraXmlImport:label>
+        <p0112-roud-oeuvres:authorHasFamilyName knoraType="richtext_value">Roud</p0112-roud-oeuvres:authorHasFamilyName>
+        <p0112-roud-oeuvres:authorHasGivenName knoraType="richtext_value">Gustave</p0112-roud-oeuvres:authorHasGivenName>
+    </p0112-roud-oeuvres:Author>
+    
+    
+    <p0112-roud-oeuvres:Periodical id="period_Gazette_Lausanne">
+        <knoraXmlImport:label>period_Gazette de Lausanne</knoraXmlImport:label>
+        <p0112-roud-oeuvres:periodicalHasTitle knoraType="richtext_value">Gazette de Lausanne</p0112-roud-oeuvres:periodicalHasTitle>
+    </p0112-roud-oeuvres:Periodical>
+    
+    
+   
+    
+</knoraXmlImport:resources>

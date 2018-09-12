@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd"
+    xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+    xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+    xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+
+    
+    
+    <p0112-roud-oeuvres:Periodical
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Gazette_de_Lausanne">
+        <knoraXmlImport:label>period_Gazette de Lausanne</knoraXmlImport:label>
+        <p0112-roud-oeuvres:periodicalHasTitle knoraType="richtext_value">Gazette de Lausanne</p0112-roud-oeuvres:periodicalHasTitle>
+    </p0112-roud-oeuvres:Periodical>
+
+    <p0112-roud-oeuvres:Periodical
+        xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#"
+        xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#"
+        id="Guilde_Livre">
+        <knoraXmlImport:label>period_Guilde du Livre</knoraXmlImport:label>
+        <p0112-roud-oeuvres:periodicalHasTitle knoraType="richtext_value">Guilde du Livre</p0112-roud-oeuvres:periodicalHasTitle>
+    </p0112-roud-oeuvres:Periodical> 
+    
+</knoraXmlImport:resources>
