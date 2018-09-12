@@ -338,11 +338,11 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
                         <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:file"/>
                         <xs:element type="Author_linkValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasAuthor"/>
-                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="photoHasDate"/>
+                        <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="photoHasDate"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasNotice"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="photoHasShelfmark"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="photoHasTitle"/>
-                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="photoIsInArchive"/>
+                        <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="photoIsInArchive"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>

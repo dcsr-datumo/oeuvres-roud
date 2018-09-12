@@ -7,27 +7,6 @@
 ###################
 
 
-Aaaah, error in adding photo to artwork !!! Check in ontology ...
-
-error
-Internal Server Error
-{"status":4,"error":"org.knora.webapi.TriplestoreResponseException: Triplestore responded with HTTP code 500 Internal Server Error: org.eclipse.rdf4j.query.UpdateExecutionException: org.eclipse.rdf4j.repository.RepositoryException: org.eclipse.rdf4j.sail.SailException: com.ontotext.trree.consistency.ConsistencyException: Consistency check subject_class_constraint_1 failed:\nhttp://rdfh.ch/0112/roud-oeuvres/84eVYYySQxa8OU5lqI38FA http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto http://rdfh.ch/0112/roud-oeuvres/4Orl78ZJRkarbnWDlddmPw\nhttp://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto http://www.knora.org/ontology/knora-base#subjectClassConstraint http://www.knora.org/ontology/0112/roud-oeuvres#Artwork\n-----------------------------------\nhttp://rdfh.ch/0112/roud-oeuvres/84eVYYySQxa8OU5lqI38FA http://www.w3.org/1999/02/22-rdf-syntax-ns#type http://www.knora.org/ontology/0112/roud-oeuvres#Artwork\n"}
-
-ConsistencyException: Consistency check subject_class_constraint_1 failed:
-
-http://rdfh.ch/0112/roud-oeuvres/8EmLYq_XSRa3SLupDSMnpQ
-http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto
-http://rdfh.ch/0112/roud-oeuvres/4Orl78ZJRkarbnWDlddmPw
-
-http://www.knora.org/ontology/0112/roud-oeuvres#artworkHasPhoto
-http://www.knora.org/ontology/knora-base#subjectClassConstraint
-http://www.knora.org/ontology/0112/roud-oeuvres#Artwork
-
-http://rdfh.ch/0112/roud-oeuvres/8EmLYq_XSRa3SLupDSMnpQ
-http://www.w3.org/1999/02/22-rdf-syntax-ns#type
-http://www.knora.org/ontology/0112/roud-oeuvres#Artwork
-
-
 
 ============================ with DASCH ===============================
 OPEN ISSUES
