@@ -10,12 +10,11 @@
 
 ============================ with DASCH ===============================
 OPEN ISSUES
-- In Salsah: filters on author of resource?
-- Permissions for colleagues (delete entire resource)
-- if ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data) ? is it possible?
+- DONE. Permissions for colleagues (delete entire resource)
+- OK. if ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data) ? is it possible?
 - Test XML in Salsah, check if error
-- Add item to list (for example archives or translated author)
-
+- OK. Add item to list (for example archives or translated author)
+- DONE. permissions changed, only project members can see our data
 
 IMPORT
 	ONTO AND DATA
@@ -120,6 +119,7 @@ https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsa
 - sort results in alphabetical order at least
 - results only 500 ... !!!! (publications, archival document)
 - label creati manualmente = cauchemar and error prone (per ognuno si dovrebbe poter definire a partire da quali campi crearlo)
+- filters on author of resource?
 - Typos/coquille: 
 	- "Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
 	- a standoff lien vers
@@ -206,6 +206,7 @@ START KNORA and SALSAH FROM SOURCES
 
 Container Sipi must be created specifying to share the nas in location where it is mounted, vd. installationLocal.txt
 
+Cardinality can be changed even if data are implied
 
 
 
