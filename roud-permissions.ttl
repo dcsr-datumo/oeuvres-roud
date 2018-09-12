@@ -36,13 +36,13 @@
 #
 
 ### Default Object Access Permission on Admin
-<http://rdfh.ch/permissions/0112/roud-oeuvres-o002> a knora-base:DefaultObjectAccessPermission ;
+<http://rdfh.ch/permissions/0112/roud-oeuvres-o001> a knora-base:DefaultObjectAccessPermission ;
 	knora-base:hasPermissions "CR knora-base:ProjectAdmin|M knora-base:ProjectMember|V knora-base:KnownUser,knora-base:UnknownUser" ;
 	knora-base:forProject <http://rdfh.ch/projects/0112> ;
 	knora-base:forGroup knora-base:ProjectAdmin .
 
 ### Default Object Access Permission on ProjectMember
-<http://rdfh.ch/permissions/0112/roud-oeuvres-o001> a knora-base:DefaultObjectAccessPermission ;
+<http://rdfh.ch/permissions/0112/roud-oeuvres-o002> a knora-base:DefaultObjectAccessPermission ;
 	knora-base:hasPermissions "CR knora-base:ProjectAdmin|M knora-base:ProjectMember|V knora-base:KnownUser,knora-base:UnknownUser" ;
 	knora-base:forProject <http://rdfh.ch/projects/0112> ;
 	knora-base:forGroup knora-base:ProjectMember .
