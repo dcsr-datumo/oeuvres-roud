@@ -99,7 +99,7 @@ the following is the one allowing to take images from the NAS mounted in /mnt/sc
 
 
 
-========================== COMMANDS =========================================
+========================== COMMANDS DOCKER =========================================
 List images
 	docker images
 

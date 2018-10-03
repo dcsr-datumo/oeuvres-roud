@@ -20,8 +20,6 @@
         <!-- YES  <knoraXmlImport:file path="/tmp/venanzi_gomitolo.jpg" mimetype="image/jpeg"></knoraXmlImport:file> -->
         <!-- YES  <knoraXmlImport:file path="/tmp/zibaldone.png" mimetype="image/png"></knoraXmlImport:file> -->
         <!-- YES  <knoraXmlImport:file path="/tmp/CRLR_GR_MS1A1a_1r.tif" mimetype="image/tiff"/> -->
-        <!-- NO   <knoraXmlImport:file path="/home/espadini/Pictures/cavallicavalieri.jpg" mimetype="image/jpeg"/> -->
-        <!-- NO   <knoraXmlImport:file path="/home/espadini/Pictures/zibaldone.png" mimetype="image/png"></knoraXmlImport:file> -->
         <hasSeqnum knoraType="int_value">1</hasSeqnum>
         <pageHasName knoraType="richtext_value">f. 1r</pageHasName>
         <pageIsPartOfManuscript>

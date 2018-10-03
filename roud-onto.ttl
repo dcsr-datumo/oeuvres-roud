@@ -1774,7 +1774,7 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:manuscriptIsDigitized   rdf:type owl:ObjectProperty ;     
+roud-oeuvres:manuscriptIsDigitized      rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -1825,7 +1825,7 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
 
                                         rdfs:subPropertyOf knora-base:isDigitized ;
 
-                                        knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+                                        knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                         knora-base:objectClassConstraint knora-base:BooleanValue ;
                                                         
@@ -1833,8 +1833,8 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
                                                     "Digitized"@en ,
                                                     "Scannerizzato"@it ;
 
-                                        rdfs:comment  "La publication a été numérisé."@fr ,
-                                                      "The publication has been digitized."@en ;
+                                        rdfs:comment  "Le document a été numérisé."@fr ,
+                                                      "The document has been digitized."@en ;
 
                                         salsah-gui:guiElement salsah-gui:Checkbox ;
 
