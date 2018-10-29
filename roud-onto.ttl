@@ -276,7 +276,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsDigitized ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -497,9 +497,9 @@ roud-oeuvres:Author       rdf:type   owl:Class ;
                             owl:onProperty roud-oeuvres:authorHasDhsID ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
-                          rdfs:label  "Auteur, traducteur, éditeur, collaborateur"@fr ,
-                                      "Author, translator, editor, collaborator"@en ,
-                                      "Autore, traduttore, editore, collaboratore"@it ;
+                          rdfs:label  "Auteur, traducteur, éditeur, collaborateur, artiste"@fr ,
+                                      "Author, translator, editor, collaborator, artist"@en ,
+                                      "Autore, traduttore, editore, collaboratore, artista"@it ;
 
                           rdfs:comment  """Auteur, traducteur, éditeur, collaborateur."""@fr ,
                                         """Author, translator, editor, collaborator."""@en .
@@ -890,12 +890,12 @@ roud-oeuvres:Place    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLatitude ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLongitude ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -1851,9 +1851,9 @@ roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
-                                        rdfs:label  "Retranscrit ou OCR (remplir avec 'fait' ou 'pas fait')"@fr ,
-                                                    "Transcribed or OCR (fill with 'fait' or 'pas fait')"@en ,
-                                                    "Trascritto o OCR (riempire con 'fait' ou 'pas fait)"@it ;
+                                        rdfs:label  "Retranscrit ou OCR (remplir avec 'Fait' ou 'Pas fait')"@fr ,
+                                                    "Transcribed or OCR (fill with 'Fait' or 'Pas fait')"@en ,
+                                                    "Trascritto o OCR (riempire con 'Fait' ou 'Pas fait)"@it ;
 
                                         rdfs:comment  "La publication a été retranscrite ou avec OCR corrigé."@fr ,
                                                       "The publication has been transcribed or OCR and then corrected."@en ;
@@ -1873,9 +1873,9 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
-                                        rdfs:label  "Original dans le fonds Roud du CRLR (remplir avec 'oui', 'non' ou indiquer le fonds)"@fr ,
-                                                    "Original is in CRLR Roud archive (fill with 'oui', 'non' or specify the archive)"@en ,
-                                                    "L'originale è nel fondo Roud del CRLR (riempire con 'si', 'no' o indicare il fondo)"@it ;
+                                        rdfs:label  "Original dans le fonds Roud du CRLR (remplir avec 'Oui', 'Non' ou indiquer le fonds)"@fr ,
+                                                    "Original is in CRLR Roud archive (fill with 'Oui', 'Non' or specify the archive)"@en ,
+                                                    "L'originale è nel fondo Roud del CRLR (riempire con 'Oui', 'Non' o indicare il fondo)"@it ;
 
                                         rdfs:comment  "Original est dans le fonds Roud au CRLR ou dans un autre fonds."@fr ,
                                                       "Original in is Roud archive at CRLR or in other archive."@en ;
@@ -2386,7 +2386,7 @@ roud-oeuvres:isInBookVolume   rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
-                              rdfs:label  "Volume de la section d'un livre (si plusieurs volumes)."@fr ,
+                              rdfs:label  "Volume de la section d'un livre (si plusieurs volumes)"@fr ,
                                           "Volume of a book section (if more than one volume)"@en ,
                                           "Volume della sezione di un libro"@it ;
 

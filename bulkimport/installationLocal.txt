@@ -1,9 +1,33 @@
 
 
-FINAL CONFIGURATION:
-- graphdb and sipi run in Docker images
-- knora and salsah run from sources in Scala
+FINAL CONFIGURATION
 
+
+=========================================
+graphdb and sipi run in Docker images
+=========================================
+	docker start graphdb
+	
+	docker start sipi
+
+
+================================================
+knora and salsah run from sources in Scala
+================================================
+	cd Knora/webapi
+	sbt
+	reStart
+
+	cd Knora/salsah
+	sbt
+	reStart
+
+When something changed in ontology --> restart Knora
+
+
+
+
+	
 
 
 

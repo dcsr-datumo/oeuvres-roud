@@ -107,7 +107,11 @@ EMPLOI : les données maintenant sont protegés
 --------------------------------------------------------------------------------------------
 
 In ONTOLOGY
-- change cardinality lat and long for places to optional
+
+DONE - change cardinality lat and long for places to optional
+DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
+DONE - change Auteur, traducteur --> anche Artiste
+DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
 
 - add link instead of image for work of arts
 - create link 'sameAs' between Author and Person
@@ -121,9 +125,6 @@ In ONTOLOGY
 		- Avec Ramuz, 1967, rééd 1985
 		- vingtquatre poemes de Trakl, 1978, rééd 1996
 
-- correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
-- change Auteur, traducteur --> anche Artiste
-- Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
 
 In LISTES
 - fonds chessex, sans cote !!!! fiche ... add archive ... ??? e correggere nomi archives in francese!!!
@@ -143,7 +144,7 @@ CHIEDERE A LOIC di cancellare l'immagine "test_image"
 - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
 
 - possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
-Bois de lare ?
+Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
 
 
 
