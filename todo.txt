@@ -100,26 +100,20 @@ DONE. EMPLOI: web_  à la pace de texte_ comme label
 EMPLOI : les données maintenant sont protegés
 
 
---------------------------------------------------------------------------------------------
 
-In ONTOLOGY
-
+	In ONTOLOGY
 DONE - change cardinality lat and long for places to optional
 DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
 DONE - change Auteur, traducteur --> anche Artiste
 DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
-
 DONE - add link instead of image for work of arts
-- create link 'sameAs' between Author and Person (Person --> is same as --> Author)
-- change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
-		aggiungerlo a
-		- Haut-Jorat 2001, rééd. 2011
-		- Les fleurs et les saisons, 1991, rééd. 2003
-		- Écrits I, II, III, 1978, rééd. 1989.
-		- Écrit à Carrouge, précédé de Calendrier, 2001, rééd 2011
-		- Halte en juin, 2001, rééd 2010
-		- Avec Ramuz, 1967, rééd 1985
-		- vingtquatre poemes de Trakl, 1978, rééd 1996
+DONE - create link 'sameAs' between Author and Person (Person --> is same as --> Author)
+DONE - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
+
+
+--------------------------------------------------------------------------------------------
+
+
 
 
 In LISTES
@@ -135,6 +129,15 @@ In ModeEmploi
 
 FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
 CHIEDERE A LOIC di cancellare l'immagine "test_image"
+
+Change or add reedition:
+	- Haut-Jorat 2001, rééd. 2011
+	- Les fleurs et les saisons, 1991, rééd. 2003
+	- Écrits I, II, III, 1978, rééd. 1989.
+	- Écrit à Carrouge, précédé de Calendrier, 2001, rééd 2011
+	- Halte en juin, 2001, rééd 2010
+	- Avec Ramuz, 1967, rééd 1985
+	- vingtquatre poemes de Trakl, 1978, rééd 1996
 
 
 - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
