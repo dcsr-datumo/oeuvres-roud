@@ -661,6 +661,7 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         rdfs:subClassOf roud-oeuvres:Work ;
 
                         rdfs:subClassOf knora-base:Resource ,
+
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhoto ;
@@ -669,6 +670,11 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhotoValue ;
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        ],
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:onProperty roud-oeuvres:artworkHasLinkToDigitalFacsimile ;
                           owl:minCardinality "0"^^xsd:nonNegativeInteger
                         ];
 
@@ -2784,7 +2790,28 @@ roud-oeuvres:artworkHasPhotoValue   rdf:type owl:ObjectProperty ;
 
                                     knora-base:objectClassConstraint knora-base:LinkValue .
 
-   
+
+roud-oeuvres:artworkHasLinkToDigitalFacsimile   rdf:type owl:ObjectProperty ;
+
+                                                rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:Work ;  # Artwork causes problem, but Work no (Artwork is subclass of Work, so it's ok)
+
+                                                knora-base:objectClassConstraint knora-base:UriValue ;
+                                                
+                                                rdfs:label  "Lien (URL) à une reproduction numérique de l'œuvre, par exemple dans le site d'un musée ou sur Wikipedia (choisir le lien plus stable, qui ne va pas changer dans le temps)"@fr ,
+                                                            "Link (URL) to digital facsimile of the work, for exemple in the museum website or Wikipedia (chose the most stable resource)"@en ,
+                                                            "Link (URL) verso una riproduzione digitale dell'opera"@it ;
+
+                                                rdfs:comment  "Lien (URL) à une reproduction numérique de l'œuvre, par exemple dans le site d'un musée ou sur wikipedia ; choisir le lien plus stable, qui ne va pas changer dans le temps."@fr ,
+                                                              "Link (URL) to digital facsimile of the work, for exemple in the museum website or Wikipedia; chose the most stable resource."@en ;
+
+                                                salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                                salsah-gui:guiOrder "6"^^xsd:integer .
+
+
+
 
 roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
 

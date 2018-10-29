@@ -10,11 +10,7 @@
 
 ============================ with DASCH ===============================
 OPEN ISSUES
-- DONE. Permissions for colleagues (delete entire resource)
-- OK. if ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data) ? is it possible?
-- OK. Add item to list (for example archives or translated author)
-- DONE. permissions changed, only project members can see our data
-
+- Cannot delete image, normal ?
 
 
 
@@ -113,8 +109,8 @@ DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui
 DONE - change Auteur, traducteur --> anche Artiste
 DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
 
-- add link instead of image for work of arts
-- create link 'sameAs' between Author and Person
+DONE - add link instead of image for work of arts
+- create link 'sameAs' between Author and Person (Person --> is same as --> Author)
 - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
 		aggiungerlo a
 		- Haut-Jorat 2001, rééd. 2011
@@ -286,6 +282,14 @@ START KNORA and SALSAH FROM SOURCES
 Container Sipi must be created specifying to share the nas in location where it is mounted, vd. installationLocal.txt
 
 Cardinality can be changed even if data are implied
+
+Colleagues have permissions to delete entire resources
+
+If ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data), I can do if it does not affect data
+If needed to change something in data, be careful !
+
+Permissions changed, only project members can see our data
+
 
 
 
