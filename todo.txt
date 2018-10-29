@@ -104,13 +104,13 @@ DONE. EMPLOI: web_  à la pace de texte_ comme label
 EMPLOI : les données maintenant sont protegés
 
 
-FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
+--------------------------------------------------------------------------------------------
 
-- si section d'un recueil de Roud, only titre et titre du recueil !!! ???	
-
-- check perché pubblicazioni non si può mettere numérisé (digitized) in Salsah ... check in localhost .. vedere quali sono digitzed da bibliodb
-- correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
+In ONTOLOGY
 - change cardinality lat and long for places to optional
+
+- add link instead of image for work of arts
+- create link 'sameAs' between Author and Person
 - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
 		aggiungerlo a
 		- Haut-Jorat 2001, rééd. 2011
@@ -120,15 +120,33 @@ FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre 
 		- Halte en juin, 2001, rééd 2010
 		- Avec Ramuz, 1967, rééd 1985
 		- vingtquatre poemes de Trakl, 1978, rééd 1996
-fonds chessex, sans cote !!!! fiche ... add archive ... ??? e correggere nomi archives in francese!!!
+
+- correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
+- change Auteur, traducteur --> anche Artiste
+- Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
+
+In LISTES
+- fonds chessex, sans cote !!!! fiche ... add archive ... ??? e correggere nomi archives in francese!!!
+
+In ModeEmploi
+- Add how to create places
+
+
+
+
+=============================== AFTER ==============================
+
+FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
+CHIEDERE A LOIC di cancellare l'immagine "test_image"
 
 
 - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
 
-possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
+- possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
+Bois de lare ?
 
 
-check bulk import images
+
 ------------------------------------->  <--------------------------------
 
 
@@ -161,24 +179,26 @@ RIDIRE QUANDO IMPORT È FINITO
 	- grosjean, c'est quoi?
 	- FICHE DOPPIA MS 4 D/21a CHECK
 	- fiche di Campagne perdue è recuperata (MS 1 I/13a, fiche 103)
+	- Section d'un recueil de Roud, only titre et titre du recueil ? Si, tanto anche se inserisco le altre informazioni non saranno considerate. 
 
-	- sections recueils
 
-	- add to bibliography: Jean-Pierre Monnier, « Présentation de Gustave Roud », Joie, avril 1943 (voir notice sur Joie e togliere questa parte)
-	RISOLVERE
-	- [person] Marguerite Roud. 1876-1957. Tante paternelle de Roud. Institutrice, elle vit à Saint-Légier jusqu’en 194 ?, où elle emménage dans la maison de Carrouge.
-	- [person] Maurice Chappaz. 1916-2009. C’est Roud qui, en 1938 (ou 1939 ?), prend l’initiative d’écrire à Chappaz pour lui demander des poèmes manuscrits. Correspondance 1939-1976.
 
 
 
 
 ============================ OPEN ISSUES IN SALSAH1 =================================================================
 https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsah, question)
+
 - visualize comment on properties (otherwise I put that info in label). Examples: publicationHasInternalComment, supportInfo?
+
 - sort results in alphabetical order at least
+
 - results only 500 ... !!!! (publications, archival document)
+
 - label creati manualmente = cauchemar and error prone (per ognuno si dovrebbe poter definire a partire da quali campi crearlo)
+
 - filters on author of resource?
+
 - Typos/coquille: 
 	- "Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
 	- a standoff lien vers
@@ -187,9 +207,6 @@ https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsa
 
 
 
-=========================== AFTER ===============================
-
-If needed, later: create link 'sameAs' between Author and Person.
 
 
 
@@ -240,7 +257,9 @@ Pour insérer du XML, copier-coller dans le champ correspondant, qui dans Salsa 
 Tutto quanto lo mette in standoff quindi nel testo trovi solo il testo
 
 URI can be checked in graphdb > explore > visual graph
-Esempio: http://rdfh.ch/0112/roud-oeuvres/YSmHh1XJTvKfsbkKPhpy_w
+Esempio: http://rdfh.ch/0112/roud-oeuvres/YSmHh1XJTvKfsbkKPhpy_w 
+
+Per cercare una classe o proprietà in GraphDB, nella HomePage di GraphDB vai a View resource e metti label (con prefix, che sarà risolto automaticamente)
 
 SI PUÒ ENTRARE NELLA VIRTUAL MACHINE CREATA DA DOCKER (bash come ssh). Per esempio, per cambiare editore HTML ... Poi far partire webserver (bisogna cambiare qualcosa in public/js = https://github.com/dhlab-basel/Knora/blob/develop/salsah1/src/public/js/00_init_javascript.js)
 		docker exec -it salsah bash
@@ -271,15 +290,3 @@ Cardinality can be changed even if data are implied
 
 
 
-
-
--------->>>>>>> Feedback per Salsah2  <<<<<<<----------
-
-Creare i label è noioso e error prone. Crearli automaticamente?
-Commenti delle property vanno usati
-
-
-
-
-#############################
-##
