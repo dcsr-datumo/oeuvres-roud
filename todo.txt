@@ -11,6 +11,7 @@
 ============================ with DASCH ===============================
 OPEN ISSUES
 - Cannot delete image, normal ?
+- Mi sembra che quando metto come subject di una property una classe, se questa classe è una subclass bisogna mettere la classe "madre", altrimenti dà errore. Esempio: Artwork has photo and Artwork has link to ...
 
 
 
@@ -36,10 +37,6 @@ IMPORT
 
 
 =============================== ELENA ==============================
-Once import is finished: 
-- finish documentation
-- fix manual fixes (below)
-- check visual graph (below)
 
 
 
@@ -111,17 +108,40 @@ DONE - create link 'sameAs' between Author and Person (Person --> is same as -->
 DONE - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
 
 
---------------------------------------------------------------------------------------------
 
 
 
 
+-------------------------  LISTES. DONE ---------------------------------------------------------
 In LISTES
-- fonds chessex, sans cote !!!! fiche ... add archive ... ??? e correggere nomi archives in francese!!!
+- isInArchiveList : Correggere nomi archives in francese 
+	--- changed line 94738 from "CRLR Colomb" to "Collection privée" (this is the @fr, at line 94744 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+	--- changed line 94742 from "CRLR Colomb" to "CRLR Steven-Paul Robert" (this is the @fr, at line 94748 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+
+e ajouter à la liste
+- CRLR Gilbert Vincent :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Mauriche Chappaz :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Chessex :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS SES (Societé des écrivains suisse) :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+
+(au cas où ajouter "autre" ..)
+	--- [SUB] :a :ListNode
+	--- [SUB] :label
+	--- :hasSublistNode [OBJ] 
+	--- [SUB] :hasRootNode
+	--- [SUB] :listNodePosition
+	--- [SUB] :listNodeName
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a :ListNode .
+---------------------------------------------------------------------------------------------------
+
+
 
 In ModeEmploi
 - Add how to create places
-
 
 
 
@@ -129,6 +149,11 @@ In ModeEmploi
 
 FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
 CHIEDERE A LOIC di cancellare l'immagine "test_image"
+
+
+In ONTOLOGY
+- parte genetica
+- per il journal, in texte établi (ou nelle fiche?) aggiungere property:livello (1,2,3) e property:type (intention, regie, meta)
 
 Change or add reedition:
 	- Haut-Jorat 2001, rééd. 2011
@@ -145,6 +170,8 @@ Change or add reedition:
 - possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
 Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
 
+
+- Check visual graph
 
 
 ------------------------------------->  <--------------------------------
