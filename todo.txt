@@ -10,18 +10,23 @@
 
 ============================ with DASCH ===============================
 OPEN ISSUES
-- DONE. Permissions for colleagues (delete entire resource)
-- OK. if ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data) ? is it possible?
-- Test XML in Salsah, check if error
-- OK. Add item to list (for example archives or translated author)
-- DONE. permissions changed, only project members can see our data
+- Cannot delete image, normal ?
+- Mi sembra che quando metto come subject di una property una classe, se questa classe è una subclass bisogna mettere la classe "madre", altrimenti dà errore. Esempio: Artwork has photo and Artwork has link to ...
+
+
+
+
 
 IMPORT
 	ONTO AND DATA
 		- admin.ttl
 		- permissions.ttl
 		- onto.ttl
-		- data.ttl (last version sent with Switch, important because the URI of the manuscripts will be reused for importing images)
+		- data.ttl (last version sent with Switch, important because the URI of the manuscripts will be reused for importing images, attention, permissions changed from 
+			CR knora-base:ProjectAdmin|M knora-base:ProjectMember|V knora-base:KnownUser,knora-base:UnknownUser
+			to
+			CR knora-base:ProjectAdmin|D knora-base:ProjectMember
+			find and replace in the ttl)
 	IMAGES
 		- access to scanlett
 		- bulk import (multiple xml files)
@@ -32,10 +37,6 @@ IMPORT
 
 
 =============================== ELENA ==============================
-Once import is finished: 
-- finish documentation
-- fix manual fixes (below)
-- check visual graph (below)
 
 
 
@@ -66,31 +67,113 @@ DONE. added personInfoHasSource to Person
 --------------------> DO MANUALLY AFTER IMPORT <-----------------------
 2400 items imported, 60 da ricontrollare manualmente (2,5%)
 
-- correct biblio_321, biblio_309, biblio_671, biblio_672, biblio_663, biblio_634 ("FAKE" in label), do not delete because there are links. Check also in commentaries
-- check publication with photos, form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
-- pubblicato dove ? 631	Photographie	Roud Gustave	[Bûcherons], [paysans à table], [Moisonneur], [Paysage]				93			1967-04-22(23)	p. 27, 30, 31
-- check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
+- DONE. correct biblio_321 DONE, biblio_309 DONE, biblio_671 DONE, biblio_672 DONE, biblio_663 DONE, biblio_634 DONE ("FAKE" in label), do not delete because there are links. Check also in commentaries
+- DONE. rome, peintre et ecrivains, mi sa che l'autore non è goethe ... aa.vv. CHECK FICHE E RELATED
+- DONE. check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
 	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
 	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
 	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
 	- articolo di traduzione con 10 autori ...
-- libri (books.csv) con più di due autori, add gli autori dal terzo in poi
-- INPUT_data/check.csv
-- sections recueils
-- fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
-- luoghi
-- persons added after (in yellow) and check if there is any source that was not there before
-- notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
-- 72 ---> 27 septembre (fiches to be corrected)
-- check in backup fiche 103
-- A Propos de Roud: 
-Titre: « Gustave Roud » 
-Auteur: SIMOND Daniel
-Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
--  MS 2 B/1a  check commentaire (public) à > a
-- plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
-- vérifier qu'il n'y a rien avec "test" ou "dsa"
+- DONE. Check all books --books (copy).ods-- (inclusi label e related !!!)
+- DONE. luoghi
+- DONE. persons added after (in yellow) and check if there is any source that was not there before
+- DONE. vérifier qu'il n'y a rien avec "test" ou "dsa"
+- DONE. correggi tutti '&amp;rsquo;'
+- DONE. molteplici autori
+- DONE. check.csv
+- DONE. A Propos de Roud: Titre: « Gustave Roud », Auteur: SIMOND Daniel, Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
+- DONE. MS 2 B/1a  check commentaire (public) à > a
+
+- DONE. NONE FOUND .... plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
+- DONE. fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
+- DONE. notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
+- DONE. check in backup fiche 103
+- DONE. add links when in the text occurs 'fiche' (dato che non ci sono più i numeri) 
+- biographie to be added manually !!!
+
+
+DONE. MODE EMPLOI, add inidicazioni per link a biblio e a fiche (fonds + cote)
+DONE. EMPLOI: web_  à la pace de texte_ comme label
+EMPLOI : les données maintenant sont protegés
+
+
+
+	In ONTOLOGY
+DONE - change cardinality lat and long for places to optional
+DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
+DONE - change Auteur, traducteur --> anche Artiste
+DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
+DONE - add link instead of image for work of arts
+DONE - create link 'sameAs' between Author and Person (Person --> is same as --> Author)
+DONE - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
+
+
+
+
+
+
+-------------------------  LISTES. DONE ---------------------------------------------------------
+In LISTES
+- isInArchiveList : Correggere nomi archives in francese 
+	--- changed line 94738 from "CRLR Colomb" to "Collection privée" (this is the @fr, at line 94744 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+	--- changed line 94742 from "CRLR Colomb" to "CRLR Steven-Paul Robert" (this is the @fr, at line 94748 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+
+e ajouter à la liste
+- CRLR Gilbert Vincent :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Mauriche Chappaz :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Chessex :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS SES (Societé des écrivains suisse) :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+
+(au cas où ajouter "autre" ..)
+	--- [SUB] :a :ListNode
+	--- [SUB] :label
+	--- :hasSublistNode [OBJ] 
+	--- [SUB] :hasRootNode
+	--- [SUB] :listNodePosition
+	--- [SUB] :listNodeName
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a :ListNode .
+---------------------------------------------------------------------------------------------------
+
+
+
+In ModeEmploi
+- Add how to create places
+
+
+
+=============================== AFTER ==============================
+
+FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
+CHIEDERE A LOIC di cancellare l'immagine "test_image"
+
+
+In ONTOLOGY
+- parte genetica
+- per il journal, in texte établi (ou nelle fiche?) aggiungere property:livello (1,2,3) e property:type (intention, regie, meta)
+
+Change or add reedition:
+	- Haut-Jorat 2001, rééd. 2011
+	- Les fleurs et les saisons, 1991, rééd. 2003
+	- Écrits I, II, III, 1978, rééd. 1989.
+	- Écrit à Carrouge, précédé de Calendrier, 2001, rééd 2011
+	- Halte en juin, 2001, rééd 2010
+	- Avec Ramuz, 1967, rééd 1985
+	- vingtquatre poemes de Trakl, 1978, rééd 1996
+
+
 - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
+
+- possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
+Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
+
+
+- Check visual graph
+
+
 ------------------------------------->  <--------------------------------
 
 
@@ -105,9 +188,26 @@ DONE
 	- weekday addded <lundi, >  OK
 	- resp ?   NOT IMPORTED, OK
 RIDIRE QUANDO IMPORT È FINITO
-	- added 'cote manquante' to fiches without cote   OK
+	- added 'cote manquante' to fiches without cote   OK e controllare anche quelle che includono nella cote "CG", sono vecchie cotes
 	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
 	- À majuscule parfois est A. Comment doit être?
+	- commentaire interne in Publication viene da Repris dans
+	- Raphaëlle, définir bibliographie, i collettivi: traduction éparses, le romantisme allemand, rome
+	Campagne perdue de Heym ... confonde ... cmq bisognerà cancellarlo dopo quindi magari togliamolo subito 
+	-  tutti libri di autori vari: collectif (come per La plume et le regard) o niente, come per Roma o Venezia ?
+	- Le titre de tout un numéro d'une revue, en italique ? Par exemple, Traductions éparses (Cahiers Gustave Roud, 3, 1982)
+	- check publication with photos and item with the category 'photography', form BiblioDB (there are few, and in the ontology should be a link, but we don't have the photo yet)
+		I'll do it (scan photo and insert in db)
+	- biblio 631, copiare nel giornale di bordo, prima o poi la finiremo
+	- non includere nella notice sui periodici le pubblicazioni di e su Roud, quelle figurano cmq come links
+	- crrreggere maiuscole e decidere se con o senza accenti: ex. Edition vs Édition
+	- rilke ou les intermittences de la grace ... c'est quoi ? À insérer
+	- nota di lettura su La luna e i falò, cambiata da Propos à Journal 
+	- grosjean, c'est quoi?
+	- FICHE DOPPIA MS 4 D/21a CHECK
+	- fiche di Campagne perdue è recuperata (MS 1 I/13a, fiche 103)
+	- Section d'un recueil de Roud, only titre et titre du recueil ? Si, tanto anche se inserisco le altre informazioni non saranno considerate. 
+
 
 
 
@@ -115,11 +215,17 @@ RIDIRE QUANDO IMPORT È FINITO
 
 ============================ OPEN ISSUES IN SALSAH1 =================================================================
 https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsah, question)
+
 - visualize comment on properties (otherwise I put that info in label). Examples: publicationHasInternalComment, supportInfo?
+
 - sort results in alphabetical order at least
+
 - results only 500 ... !!!! (publications, archival document)
+
 - label creati manualmente = cauchemar and error prone (per ognuno si dovrebbe poter definire a partire da quali campi crearlo)
+
 - filters on author of resource?
+
 - Typos/coquille: 
 	- "Réduire les possibiliés de choix par vocabulair" > vocabulaire (dans recherche avancée)
 	- a standoff lien vers
@@ -128,9 +234,6 @@ https://github.com/dhlab-basel/Knora/tree/develop/salsah1 (ticket frontend salsa
 
 
 
-=========================== AFTER ===============================
-
-If needed, later: create link 'sameAs' between Author and Person.
 
 
 
@@ -181,7 +284,9 @@ Pour insérer du XML, copier-coller dans le champ correspondant, qui dans Salsa 
 Tutto quanto lo mette in standoff quindi nel testo trovi solo il testo
 
 URI can be checked in graphdb > explore > visual graph
-Esempio: http://rdfh.ch/0112/roud-oeuvres/YSmHh1XJTvKfsbkKPhpy_w
+Esempio: http://rdfh.ch/0112/roud-oeuvres/YSmHh1XJTvKfsbkKPhpy_w 
+
+Per cercare una classe o proprietà in GraphDB, nella HomePage di GraphDB vai a View resource e metti label (con prefix, che sarà risolto automaticamente)
 
 SI PUÒ ENTRARE NELLA VIRTUAL MACHINE CREATA DA DOCKER (bash come ssh). Per esempio, per cambiare editore HTML ... Poi far partire webserver (bisogna cambiare qualcosa in public/js = https://github.com/dhlab-basel/Knora/blob/develop/salsah1/src/public/js/00_init_javascript.js)
 		docker exec -it salsah bash
@@ -208,35 +313,15 @@ Container Sipi must be created specifying to share the nas in location where it 
 
 Cardinality can be changed even if data are implied
 
+Colleagues have permissions to delete entire resources
 
+If ever I want to update ontology (for example, changing the label or commentary, or adding mapping with other ontologies using subclassof and subpropertyof, or adding real changes not affecting data), I can do if it does not affect data
+If needed to change something in data, be careful !
 
-
-
-#######################
-##
-## PARLARNE CON EQUIPE
-##
-#######################
-
-
+Permissions changed, only project members can see our data
 
 
 
 
 
-######################
-##
-## QUESTIONS DASCH
-##
-######################
-
-
-
-
-
-
--------->>>>>>> Feedback per Salsah2  <<<<<<<----------
-
-Creare i label è noioso e error prone. Crearli automaticamente?
-Commenti delle property vanno usati
 

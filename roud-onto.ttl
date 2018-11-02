@@ -497,9 +497,9 @@ roud-oeuvres:Author       rdf:type   owl:Class ;
                             owl:onProperty roud-oeuvres:authorHasDhsID ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ];
-                          rdfs:label  "Auteur, traducteur, éditeur, collaborateur"@fr ,
-                                      "Author, translator, editor, collaborator"@en ,
-                                      "Autore, traduttore, editore, collaboratore"@it ;
+                          rdfs:label  "Auteur, traducteur, éditeur, collaborateur, artiste"@fr ,
+                                      "Author, translator, editor, collaborator, artist"@en ,
+                                      "Autore, traduttore, editore, collaboratore, artista"@it ;
 
                           rdfs:comment  """Auteur, traducteur, éditeur, collaborateur."""@fr ,
                                         """Author, translator, editor, collaborator."""@en .
@@ -661,6 +661,7 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         rdfs:subClassOf roud-oeuvres:Work ;
 
                         rdfs:subClassOf knora-base:Resource ,
+
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhoto ;
@@ -669,6 +670,11 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhotoValue ;
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        ],
+                        [
+                          rdf:type owl:Restriction ;
+                          owl:onProperty roud-oeuvres:artworkHasLinkToDigitalFacsimile ;
                           owl:minCardinality "0"^^xsd:nonNegativeInteger
                         ];
 
@@ -783,6 +789,16 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personInfoHasSource ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:personIsSameAsAuthor ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                          ],
+                          [
+                            rdf:type owl:Restriction ;
+                            owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
                                       "Person"@en ,
@@ -890,12 +906,12 @@ roud-oeuvres:Place    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLatitude ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLongitude ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -1774,7 +1790,7 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
 
 
 
-roud-oeuvres:manuscriptIsDigitized   rdf:type owl:ObjectProperty ;     
+roud-oeuvres:manuscriptIsDigitized      rdf:type owl:ObjectProperty ;     
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
@@ -1833,12 +1849,12 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
                                                     "Digitized"@en ,
                                                     "Scannerizzato"@it ;
 
-                                        rdfs:comment  "La publication a été numérisé."@fr ,
-                                                      "The publication has been digitized."@en ;
+                                        rdfs:comment  "Le document a été numérisé."@fr ,
+                                                      "The document has been digitized."@en ;
 
                                         salsah-gui:guiElement salsah-gui:Checkbox ;
 
-                                        salsah-gui:guiOrder "13"^^xsd:integer .
+                                        salsah-gui:guiOrder "11"^^xsd:integer .
                     
 
 
@@ -1851,9 +1867,9 @@ roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
-                                        rdfs:label  "Retranscrit ou OCR (remplir avec 'fait' ou 'pas fait')"@fr ,
-                                                    "Transcribed or OCR (fill with 'fait' or 'pas fait')"@en ,
-                                                    "Trascritto o OCR (riempire con 'fait' ou 'pas fait)"@it ;
+                                        rdfs:label  "Retranscrit ou OCR (remplir avec 'Fait' ou 'Pas fait')"@fr ,
+                                                    "Transcribed or OCR (fill with 'Fait' or 'Pas fait')"@en ,
+                                                    "Trascritto o OCR (riempire con 'Fait' ou 'Pas fait)"@it ;
 
                                         rdfs:comment  "La publication a été retranscrite ou avec OCR corrigé."@fr ,
                                                       "The publication has been transcribed or OCR and then corrected."@en ;
@@ -1873,9 +1889,9 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
 
                                         knora-base:objectClassConstraint knora-base:TextValue ;
                                                         
-                                        rdfs:label  "Original dans le fonds Roud du CRLR (remplir avec 'oui', 'non' ou indiquer le fonds)"@fr ,
-                                                    "Original is in CRLR Roud archive (fill with 'oui', 'non' or specify the archive)"@en ,
-                                                    "L'originale è nel fondo Roud del CRLR (riempire con 'si', 'no' o indicare il fondo)"@it ;
+                                        rdfs:label  "Original dans le fonds Roud du CRLR (remplir avec 'Oui', 'Non' ou indiquer le fonds)"@fr ,
+                                                    "Original is in CRLR Roud archive (fill with 'Oui', 'Non' or specify the archive)"@en ,
+                                                    "L'originale è nel fondo Roud del CRLR (riempire con 'Oui', 'Non' o indicare il fondo)"@it ;
 
                                         rdfs:comment  "Original est dans le fonds Roud au CRLR ou dans un autre fonds."@fr ,
                                                       "Original in is Roud archive at CRLR or in other archive."@en ;
@@ -2386,7 +2402,7 @@ roud-oeuvres:isInBookVolume   rdf:type  owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
 
-                              rdfs:label  "Volume de la section d'un livre (si plusieurs volumes)."@fr ,
+                              rdfs:label  "Volume de la section d'un livre (si plusieurs volumes)"@fr ,
                                           "Volume of a book section (if more than one volume)"@en ,
                                           "Volume della sezione di un libro"@it ;
 
@@ -2474,16 +2490,16 @@ roud-oeuvres:isEditionNumber    rdf:type owl:ObjectProperty ;
 
                                 knora-base:subjectClassConstraint roud-oeuvres:Book ;
 
-                                knora-base:objectClassConstraint knora-base:IntValue ;
+                                knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                rdfs:label  "Si réédition (même maison d'édition), numéro de la réédition"@fr ,
-                                            "Number of the republication"@en ,
-                                            "Numero della riedizione"@it ;
+                                rdfs:label  "Si réédition (même maison d'édition), spécifier l'année (et eventuellement le numéro de la réédition), ex. 'rééd. 2011'"@fr ,
+                                            "Specify the year of reprint, ex. 'rééd 2011'"@en ,
+                                            "Anno della riedizione, ex. 'rééd 2011'"@it ;
 
-                                rdfs:comment  "Quand il s'agit d'une réédition, indiquer le numéro."@fr ,
-                                              "If it is a republication, specify the number."@en ;
+                                rdfs:comment  "Si réédition (même maison d'édition), spécifier l'année (et eventuellement le numéro de la réédition), ex. 'rééd. 2011'"@fr ,
+                                              "Specify the year of reprint, ex. 'rééd 2011'."@en ;
 
-                                salsah-gui:guiElement salsah-gui:Spinbox ;
+                                salsah-gui:guiElement salsah-gui:SimpleText ;
 
                                 salsah-gui:guiOrder "5"^^xsd:integer .
 
@@ -2784,7 +2800,28 @@ roud-oeuvres:artworkHasPhotoValue   rdf:type owl:ObjectProperty ;
 
                                     knora-base:objectClassConstraint knora-base:LinkValue .
 
-   
+
+roud-oeuvres:artworkHasLinkToDigitalFacsimile   rdf:type owl:ObjectProperty ;
+
+                                                rdfs:subPropertyOf knora-base:hasValue ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:Work ;  # Artwork causes problem, but Work no (Artwork is subclass of Work, so it's ok)
+
+                                                knora-base:objectClassConstraint knora-base:UriValue ;
+                                                
+                                                rdfs:label  "Lien (URL) à une reproduction numérique de l'œuvre, par exemple dans le site d'un musée ou sur Wikipedia (choisir le lien plus stable, qui ne va pas changer dans le temps)"@fr ,
+                                                            "Link (URL) to digital facsimile of the work, for exemple in the museum website or Wikipedia (chose the most stable resource)"@en ,
+                                                            "Link (URL) verso una riproduzione digitale dell'opera"@it ;
+
+                                                rdfs:comment  "Lien (URL) à une reproduction numérique de l'œuvre, par exemple dans le site d'un musée ou sur wikipedia ; choisir le lien plus stable, qui ne va pas changer dans le temps."@fr ,
+                                                              "Link (URL) to digital facsimile of the work, for exemple in the museum website or Wikipedia; chose the most stable resource."@en ;
+
+                                                salsah-gui:guiElement salsah-gui:SimpleText ;
+
+                                                salsah-gui:guiOrder "6"^^xsd:integer .
+
+
+
 
 roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
 
@@ -3658,6 +3695,36 @@ roud-oeuvres:isCharacterInValue   rdf:type owl:ObjectProperty ;
                                   knora-base:subjectClassConstraint roud-oeuvres:Person ;
 
                                   knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+roud-oeuvres:personIsSameAsAuthor   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                    knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                    knora-base:objectClassConstraint roud-oeuvres:Author ;
+                                    
+                                    rdfs:label  "Est le/a même que (lien vers traducteur, collaborateur, artiste, etc.)"@fr ,
+                                                "Is same as (link to tranlator, collaborator, artist)"@en ,
+                                                "É lo stesso che (link a autore, traduttore, collaboratore, artista)"@it ;
+
+                                    rdfs:comment  "Est le/a même que (lien vers traducteur, collaborateur, artiste, etc.)"@fr ,
+                                                  "Is same as (link to tranlator, collaborator, artist)"@en ;
+
+                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                    salsah-gui:guiOrder "15"^^xsd:integer .
+                                                        
+
+
+roud-oeuvres:personIsSameAsAuthorValue  rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:Person ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 

@@ -208,13 +208,37 @@
 		knora-base:listNodeName "CollectionPrivee" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
 		knora-base:listNodePosition 8 ;
-		rdfs:label "CRLR Colomb"@fr , "Collection privée"@en .
+		rdfs:label "Collection privée"@fr , "Collection privée"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert> a knora-base:ListNode ;
 		knora-base:listNodeName "CRLRStevenPaulRobert" ;
 		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
 		knora-base:listNodePosition 9 ;
-		rdfs:label "CRLR Colomb"@fr , "CRLR Steven-Paul Robert"@en .
+		rdfs:label "CRLR Robert"@fr , "CRLR Steven-Paul Robert"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a :ListNode .
+		knora-base:listNodeName "CRLRGilbertVincent" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 10 ;
+		rdfs:label "CRLR Vincent"@fr , "CRLR Vincent"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a :ListNode .
+		knora-base:listNodeName "ALSChappaz" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 11 ;
+		rdfs:label "ALS Chappaz"@fr , "ALS Chappaz"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a :ListNode .
+		knora-base:listNodeName "ALSChessex" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 12 ;
+		rdfs:label "ALS Chessex"@fr , "ALS Chessex"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a :ListNode .
+		knora-base:listNodeName "ALSSES" ;
+		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
+		knora-base:listNodePosition 13 ;
+		rdfs:label "ALS SES"@fr , "ALS SES"@en .
 
 
 
