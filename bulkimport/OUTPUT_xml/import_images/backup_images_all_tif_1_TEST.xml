@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<knoraXmlImport:resources xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://api.knora.org/ontology/knoraXmlImport/v1# ../../p0112-roud-oeuvres-xml-schemas/p0112-roud-oeuvres.xsd" xmlns="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#">
+
+    <p0112-roud-oeuvres:Page xmlns:knoraXmlImport="http://api.knora.org/ontology/knoraXmlImport/v1#" xmlns:p0112-roud-oeuvres="http://api.knora.org/ontology/0112/roud-oeuvres/xml-import/v1#" id="CRLR_GR_MS2C8a_2v_3.tif"><knoraXmlImport:label>page_CRLR GR MS 2 C/8a___f. 2v___3</knoraXmlImport:label><knoraXmlImport:file mimetype="image/tiff" path="/home/espadini/Pictures/DaSCH_Logo_RGB.png" /><p0112-roud-oeuvres:hasSeqnum knoraType="int_value">3</p0112-roud-oeuvres:hasSeqnum><p0112-roud-oeuvres:pageHasName knoraType="richtext_value">f. 2v</p0112-roud-oeuvres:pageHasName><p0112-roud-oeuvres:pageIsPartOfManuscript><p0112-roud-oeuvres:Manuscript knoraType="link_value" linkType="iri" target="http://rdfh.ch/0112/roud-oeuvres/3m6mYRAYShCHBgDSMNXPaQ" /></p0112-roud-oeuvres:pageIsPartOfManuscript></p0112-roud-oeuvres:Page>
+    
+      
+</knoraXmlImport:resources>
