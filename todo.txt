@@ -2,13 +2,11 @@
 
 ###################
 ##
-## TODO
+## TODO WITH DASCH
 ##
 ###################
 
 
-
-============================ with DASCH ===============================
 OPEN ISSUES
 - Cannot delete image, normal ?
 - Mi sembra che quando metto come subject di una property una classe, se questa classe è una subclass bisogna mettere la classe "madre", altrimenti dà errore. Esempio: Artwork has photo and Artwork has link to ...
@@ -36,116 +34,17 @@ IMPORT
 
 
 
-=============================== ELENA ==============================
 
 
 
-----------------------> CHECK IF ALREADY CHANGED IN VISUAL GRAPH (changes after test - 20-24 august 2018)
-DONE. aggiungere abstract property al LABEL e non COMMENT delle proprietà astratte
-DONE. aggiungere datecomputable come properietà astratta ???
-DONE. in data-lists: correspondence > correspondance
-DONE. témoin de base pour la page du site
-DONE. texte > page du site
-DONE. ajouter notice à périodique et éditeur
-DONE. specifier pages du fac-similés si le texte ne correspond pas à la totalité du témoin de base (par exemple, section d'un cahier, ou d'une liasse d'un recueil). Better like this, even if it adds another info, because we need to retrieve also the "fiche" for the description of the document; if we link directly to the pages, it would need anyway another step to go back to the document containing those pages. In this way, request can be made to look at the specific pages only if the field for specific pages is not empty.
-DONE. title of publication. richtext, not simple !! Oppure decidere come citare cose in titolo
-DONE. original dans le fonds roud in publications --> 'oui ou non ou indiquer le fonds' to be added to the label. Simpletext, not rich
-DONE. retranscrit (ocr) in publications --> 'fait ou pas fait' to be added to the label. Simpletext, not rich 
-DONE. titre du livre in BookSection
-DONE. properties of EstablishedText
-DONE. delete publicationHasTranslator
-DONE. Cambiato da SimpleText a Richtext per hasSupportInfo)
-DONE. Create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
-DONE. books add possibility to specify pages
-DONE. bookSectionIsPartOf textValue instead of link
-DONE. property hasPublisher added to BookSection
-DONE. added personInfoHasSource to Person
+###################
+##
+## TODO ELE
+##
+###################
 
 
 
-
---------------------> DO MANUALLY AFTER IMPORT <-----------------------
-2400 items imported, 60 da ricontrollare manualmente (2,5%)
-
-- DONE. correct biblio_321 DONE, biblio_309 DONE, biblio_671 DONE, biblio_672 DONE, biblio_663 DONE, biblio_634 DONE ("FAKE" in label), do not delete because there are links. Check also in commentaries
-- DONE. rome, peintre et ecrivains, mi sa che l'autore non è goethe ... aa.vv. CHECK FICHE E RELATED
-- DONE. check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
-	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
-	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
-	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
-	- articolo di traduzione con 10 autori ...
-- DONE. Check all books --books (copy).ods-- (inclusi label e related !!!)
-- DONE. luoghi
-- DONE. persons added after (in yellow) and check if there is any source that was not there before
-- DONE. vérifier qu'il n'y a rien avec "test" ou "dsa"
-- DONE. correggi tutti '&amp;rsquo;'
-- DONE. molteplici autori
-- DONE. check.csv
-- DONE. A Propos de Roud: Titre: « Gustave Roud », Auteur: SIMOND Daniel, Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
-- DONE. MS 2 B/1a  check commentaire (public) à > a
-
-- DONE. NONE FOUND .... plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
-- DONE. fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
-- DONE. notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
-- DONE. check in backup fiche 103
-- DONE. add links when in the text occurs 'fiche' (dato che non ci sono più i numeri) 
-- biographie to be added manually !!!
-
-
-DONE. MODE EMPLOI, add inidicazioni per link a biblio e a fiche (fonds + cote)
-DONE. EMPLOI: web_  à la pace de texte_ comme label
-EMPLOI : les données maintenant sont protegés
-
-
-
-	In ONTOLOGY
-DONE - change cardinality lat and long for places to optional
-DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
-DONE - change Auteur, traducteur --> anche Artiste
-DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
-DONE - add link instead of image for work of arts
-DONE - create link 'sameAs' between Author and Person (Person --> is same as --> Author)
-DONE - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
-
-
-
-
-
-
--------------------------  LISTES. DONE ---------------------------------------------------------
-In LISTES
-- isInArchiveList : Correggere nomi archives in francese 
-	--- changed line 94738 from "CRLR Colomb" to "Collection privée" (this is the @fr, at line 94744 is @en; don't know why sometime the two languages are on the same line and sometimes no)
-	--- changed line 94742 from "CRLR Colomb" to "CRLR Steven-Paul Robert" (this is the @fr, at line 94748 is @en; don't know why sometime the two languages are on the same line and sometimes no)
-
-e ajouter à la liste
-- CRLR Gilbert Vincent :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
-- ALS Mauriche Chappaz :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
-- ALS Chessex :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
-- ALS SES (Societé des écrivains suisse) :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
-
-(au cas où ajouter "autre" ..)
-	--- [SUB] :a :ListNode
-	--- [SUB] :label
-	--- :hasSublistNode [OBJ] 
-	--- [SUB] :hasRootNode
-	--- [SUB] :listNodePosition
-	--- [SUB] :listNodeName
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a :ListNode .
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a :ListNode .
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a :ListNode .
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a :ListNode .
----------------------------------------------------------------------------------------------------
-
-
-
-In ModeEmploi
-- Add how to create places
-
-
-
-=============================== AFTER ==============================
 
 FARE DOWNLOAD CON LOIC quando importiamo immagini, poi io lavoro a queste altre cose ...
 CHIEDERE A LOIC di cancellare l'immagine "test_image"
@@ -155,14 +54,10 @@ In ONTOLOGY
 - parte genetica
 - per il journal, in texte établi (ou nelle fiche?) aggiungere property:livello (1,2,3) e property:type (intention, regie, meta)
 
-Change or add reedition:
-	- Haut-Jorat 2001, rééd. 2011
-	- Les fleurs et les saisons, 1991, rééd. 2003
-	- Écrits I, II, III, 1978, rééd. 1989.
-	- Écrit à Carrouge, précédé de Calendrier, 2001, rééd 2011
-	- Halte en juin, 2001, rééd 2010
-	- Avec Ramuz, 1967, rééd 1985
-	- vingtquatre poemes de Trakl, 1978, rééd 1996
+
+
+In ModeEmploi
+- Add how to create places
 
 
 - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
@@ -173,8 +68,6 @@ Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
 
 - Check visual graph
 
-
-------------------------------------->  <--------------------------------
 
 
 
@@ -187,6 +80,7 @@ DONE
 	- in FondsRoud Date peut avoir 0000# quand la date n'est pas computable (manque année)  OK
 	- weekday addded <lundi, >  OK
 	- resp ?   NOT IMPORTED, OK
+
 RIDIRE QUANDO IMPORT È FINITO
 	- added 'cote manquante' to fiches without cote   OK e controllare anche quelle che includono nella cote "CG", sono vecchie cotes
 	- fiches 577 : 72 septembre (GIÀ CAMBIATO ??)
@@ -322,6 +216,114 @@ Permissions changed, only project members can see our data
 
 
 
+
+
+
+
+
+
+####################
+##
+## DONE
+##
+####################
+
+
+
+----------------------> DONE- CHANGED IN VISUAL GRAPH (changes after test - 20-24 august 2018)
+DONE. aggiungere abstract property al LABEL e non COMMENT delle proprietà astratte
+DONE. aggiungere datecomputable come properietà astratta ???
+DONE. témoin de base pour la page du site
+DONE. texte > page du site
+DONE. ajouter notice à périodique et éditeur
+DONE. specifier pages du fac-similés si le texte ne correspond pas à la totalité du témoin de base (par exemple, section d'un cahier, ou d'une liasse d'un recueil). Better like this, even if it adds another info, because we need to retrieve also the "fiche" for the description of the document; if we link directly to the pages, it would need anyway another step to go back to the document containing those pages. In this way, request can be made to look at the specific pages only if the field for specific pages is not empty.
+DONE. title of publication. richtext, not simple !! Oppure decidere come citare cose in titolo
+DONE. original dans le fonds roud in publications --> 'oui ou non ou indiquer le fonds' to be added to the label. Simpletext, not rich
+DONE. retranscrit (ocr) in publications --> 'fait ou pas fait' to be added to the label. Simpletext, not rich 
+DONE. titre du livre in BookSection
+DONE. properties of EstablishedText
+DONE. delete publicationHasTranslator
+DONE. Cambiato da SimpleText a Richtext per hasSupportInfo)
+DONE. Create new property and distinguish datereadable and datecomputable, the same distinction of dateestablishedreadable and dateestablishedcomputable
+DONE. books add possibility to specify pages
+DONE. bookSectionIsPartOf textValue instead of link
+DONE. property hasPublisher added to BookSection
+DONE. added personInfoHasSource to Person
+	In ONTOLOGY
+DONE - change cardinality lat and long for places to optional
+DONE - correggere label delle proprietà che comprendono fait > Fait e oui > Oui (e contrari)
+DONE - change Auteur, traducteur --> anche Artiste
+DONE - Volume de la section d'un livre (si plusieurs volumes). ---> senza punto finale
+DONE - add link instead of image for work of arts
+DONE - create link 'sameAs' between Author and Person (Person --> is same as --> Author)
+DONE - change réédition to TEXT "Si réédition (même maison d'édition), spécifier le numéro et l'année, ex. 'rééd. 2011'"
+
+
+
+
+
+--------------------> DO MANUALLY AFTER IMPORT <-----------------------
+2400 items imported, 60 da ricontrollare manualmente (2,5%)
+
+- DONE. correct biblio_321 DONE, biblio_309 DONE, biblio_671 DONE, biblio_672 DONE, biblio_663 DONE, biblio_634 DONE ("FAKE" in label), do not delete because there are links. Check also in commentaries
+- DONE. rome, peintre et ecrivains, mi sa che l'autore non è goethe ... aa.vv. CHECK FICHE E RELATED
+- DONE. check, se non sono già tra gli articoli inserirli a mano (per vedere meglio guarda backup):
+	- 634	Traduction	Holderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert		Marseille	Les Cahiers du Sud	1949	p. 393-405	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", "Diotima de l'au-delà (fragment)", "L'Hivers", "Le Printemps", "Quatrain". Brentano: "Je suis une maison...", "Au coeur d'une douleur profonde...", "Échos d'une musique de Beethoven", "Myrte, bien aimé, murmure...", "Chant du cygne". Les versions des poèmes de Hölderlin diffèrent de celles de 1937.	Fait + photocopié			Non
+	- 663	Traduction	Hölderlin Friedrich, Brentano Clemens	Le Romantisme allemand			Dirigé par Béguin Albert	194, no. spécial	Marseille	Les Cahiers du Sud	1937-05(-06)	p. 361-371	Hölderlin: "Souvenir", "Temps de la moisson", "Âges de la vie", "Moitié de la vie", Diotima de l'au-delà (fragment)", "L'Hiver", "Le Printemps", "Quatrain") Poèmes de Clémens Brentano ("Je sais une maison", Au coeur d'une douleur profonde…", "Echos d'une musique de Beethoven", "Myrte bien-aimé murmure…", "Chant du cygne")	Fait + photocopié			Non
+	- Traduction	Leisinger Hermann	Les peintures étrusques de Tarquinia				10		La Guilde du Livre	1953			Fait		Oui	Non (mais dans boîte La Guilde du Livre)
+	- articolo di traduzione con 10 autori ...
+- DONE. Check all books --books (copy).ods-- (inclusi label e related !!!)
+- DONE. luoghi
+- DONE. persons added after (in yellow) and check if there is any source that was not there before
+- DONE. vérifier qu'il n'y a rien avec "test" ou "dsa"
+- DONE. correggi tutti '&amp;rsquo;'
+- DONE. molteplici autori
+- DONE. check.csv
+- DONE. A Propos de Roud: Titre: « Gustave Roud », Auteur: SIMOND Daniel, Le Radio, Journal de la T.S.F., Lausanne, 16 mars 1934, XIIème année, N°571, pages 396-397. Avec des photographies de Gustave Roud. 
+- DONE. MS 2 B/1a  check commentaire (public) à > a
+
+- DONE. NONE FOUND .... plusieurs reference bibliographiques dans commentaire public et commentaire interne ... à créer à la main, chercher "Biblio" dans commentaire ...
+- DONE. fiches 224, 247, 252, 253, 260, 262, 263, 264, 308, 318, 388, 679, 1242, 1367, 1368, 1369, 1371, 1423 (in OUTPUT/fiches_problematiques.xml)
+- DONE. notes allant, check backup (ho erroneamente spostato quello che c'era in datation_comment in datation trasformandolo in data ... da ripristinare, dovrebbero essere pochi casi)
+- DONE. check in backup fiche 103
+- DONE. add links when in the text occurs 'fiche' (dato che non ci sono più i numeri) 
+- biographie to be added manually !!!
+
+
+DONE. MODE EMPLOI, add inidicazioni per link a biblio e a fiche (fonds + cote)
+DONE. EMPLOI: web_  à la pace de texte_ comme label
+EMPLOI : les données maintenant sont protegés
+
+
+
+
+
+
+-------------------------  LISTES. DONE ---------------------------------------------------------
+In LISTES
+- isInArchiveList : Correggere nomi archives in francese 
+	--- changed line 94738 from "CRLR Colomb" to "Collection privée" (this is the @fr, at line 94744 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+	--- changed line 94742 from "CRLR Colomb" to "CRLR Steven-Paul Robert" (this is the @fr, at line 94748 is @en; don't know why sometime the two languages are on the same line and sometimes no)
+
+e ajouter à la liste
+- CRLR Gilbert Vincent :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Mauriche Chappaz :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS Chessex :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+- ALS SES (Societé des écrivains suisse) :a :label :hasSublistNode :hasRootNode :listNodePosition :listNodeName
+
+(au cas où ajouter "autre" ..)
+	--- [SUB] :a :ListNode
+	--- [SUB] :label
+	--- :hasSublistNode [OBJ] 
+	--- [SUB] :hasRootNode
+	--- [SUB] :listNodePosition
+	--- [SUB] :listNodeName
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a :ListNode .
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a :ListNode .
+---------------------------------------------------------------------------------------------------
 
 
 
