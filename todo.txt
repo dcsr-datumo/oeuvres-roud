@@ -51,28 +51,31 @@ CHIEDERE A LOIC di cancellare l'immagine "test_image"
 
 
 In ONTOLOGY
-- parte genetica
-- per il journal, in texte établi (ou nelle fiche?) aggiungere property:livello (1,2,3) e property:type (intention, regie, meta)
+
+	- Order of properties for WebPage (EstablishedText): prima tutte quelle per documenti, poi tutte quelle per pubblicazioni!
+	
 
 
-
-In ModeEmploi
-- Add how to create places
-
-
-- aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
-
-- possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne
-Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
+In MODEEMPLOI
+    - Add how to create places
 
 
-- Check visual graph
+In DATA
+    - aggiungere manualmente immagine: page_CRLR GR MS 2 C/14a___f. 1r___1
+    - possible Places to be added : Galerie Paul Vallotton; Marsauche, rue de Bourg; Vevey (collège de); Université de Lausanne; Gymnase classique cantonale de Lausanne; Bois de lare, da file (ultimo che resta nel file da scanlett, con cose in rosa)
+
+
+OTHERS
+    - Check visual graph
 
 
 
 
 
 ============================= FOR EQUIPE ROUD ==================================
+CHIEDERE A ALESSIO
+    - per il journal, in texte établi (ou nelle fiche?) aggiungere property:livello (1,2,3) e property:type (intention, regie, meta)
+
 DONE
 	CAMBIAMENTI FATTI
 	- Le regarde et la voix CRLR GR MS 12/K. "Le document manque". Deleted perché creava problemi. Giusto ... ?  OK
@@ -230,7 +233,22 @@ Permissions changed, only project members can see our data
 
 
 
-----------------------> DONE- CHANGED IN VISUAL GRAPH (changes after test - 20-24 august 2018)
+----------------------> DONE - IN ONTOLOGY  <--------------------
+Changed 21.01.2019
+	- OK add hasPositionInDirectSource to webpage, both when DirectSource is Document or Publication. It will help automatically create the TOC. The value of this property can be added later, when all notes or parts of collections are inserted.
+	- OK same thing for part of collection: delete prop "bookSectionIsPartOfRoudCollection". Treat it as Note in Document, that is as EstablishedText having properties: directSource, directSourceStartPage, directSourceEndPage, directSourcePosition
+	- OK delete partialTextualReuse (attention, is link) and partialThematicReuse (attention, is link)
+	- OK delete property "hasNewVersionAvantTexte"
+	- OK add to EstablishedText the property "isRewritingOf", with subproperties "isRecopiageOf" and "isRewritingInAvantTexte", object = Document, Subject = Document
+	- OK delete property "hasNewVersionAlreadyPublished" of GeneticDossier. Add property "reuseOfMaterials", with subproperties: "reuseOfUnpublishedNote", "reuseOfPublishedTxForNewTx", "reuseOfTxForCollectionPartially", "reuseOfTxForCollectionIntegrally", "isRepublicationOf".	
+	- OK "Le document fait partie du dossier génétique" --> "(Seulement pour les documents d'archives, pas pour les publications) Le document fait partie du dossier génétique"
+
+
+
+	
+
+
+----------------------> DONE- CHANGED IN VISUAL GRAPH (changes after test - 20-24 august 2018) <-----------------------
 DONE. aggiungere abstract property al LABEL e non COMMENT delle proprietà astratte
 DONE. aggiungere datecomputable come properietà astratta ???
 DONE. témoin de base pour la page du site
@@ -299,7 +317,7 @@ EMPLOI : les données maintenant sont protegés
 
 
 
--------------------------  LISTES. DONE ---------------------------------------------------------
+------------------------->  LISTES. DONE <---------------------------------------------------------
 In LISTES
 - isInArchiveList : Correggere nomi archives in francese 
 	--- changed line 94738 from "CRLR Colomb" to "Collection privée" (this is the @fr, at line 94744 is @en; don't know why sometime the two languages are on the same line and sometimes no)

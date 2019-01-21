@@ -319,16 +319,6 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         owl:onProperty roud-oeuvres:hasNumberOfVolumes ;
                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
                       ],
-####                   [
-####                     rdf:type owl:Restriction ;
-####                        owl:onProperty roud-oeuvres:isReeditionOf ;
-####                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-####                      ],
-####                      [
-####                        rdf:type owl:Restriction ;
-####                        owl:onProperty roud-oeuvres:isReeditionOfValue ;
-####                        owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-####                      ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:bookHasSpecificPages ;
@@ -389,16 +379,6 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                             [
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:bookSectionIsPartOf ;
-                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                            ],
-                            [
-                              rdf:type owl:Restriction ;
-                              owl:onProperty roud-oeuvres:bookSectionIsPartOfRoudCollection ;
-                              owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                            ],
-                            [
-                              rdf:type owl:Restriction ;
-                              owl:onProperty roud-oeuvres:bookSectionIsPartOfRoudCollectionValue ;
                               owl:maxCardinality "1"^^xsd:nonNegativeInteger
                             ],
                             [
@@ -561,6 +541,11 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               ],
                               [
                                 rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:hasDirectSourcePosition ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:establishedTextHasInternalComment ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger 
                                 ## salsah-gui:guiOrder "10"^^xsd:integer 
@@ -576,17 +561,6 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                                 owl:onProperty roud-oeuvres:establishedTextHasTitle ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ## salsah-gui:guiOrder "0"^^xsd:integer 
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPreviousStage ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "5"^^xsd:integer 
-                              ],
-                              [
-                                rdf:type owl:Restriction ;
-                                owl:onProperty roud-oeuvres:hasPreviousStageValue ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -611,6 +585,46 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                                 owl:onProperty roud-oeuvres:txtIsInDigitalEdition ;
                                 owl:cardinality "1"^^xsd:nonNegativeInteger
                                 ## salsah-gui:guiOrder "13"^^xsd:integer 
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossier ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossierValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:publicationIsPartOfGeneticDossier ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger   ## only one publication per dossier
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:publicationIsPartOfGeneticDossierValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isRecopiageOf ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isRecopiageOfValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isAfterInAvantTexte ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isAfterInAvantTexteValue ;
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
                               ];
                               rdfs:label  "Page du site"@fr ,
                                           "Website page"@en ,
@@ -618,6 +632,71 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
 
                               rdfs:comment  """Unité textuelle pour l'édition (texte et fac-similé, ou fac-similé). L'unité texteulle corresponde à une page de l'édition numérique.<br/>Tous les liens d'un texte sont à d'autres textes, et non pas directement aux publications ou aux documents."""@fr ,
                                             """Textual unit for the edition (text and scan, or only scan)."""@en .
+
+
+
+
+roud-oeuvres:GeneticDossier   rdf:type  owl:Class ;
+      
+                              rdfs:subClassOf knora-base:Resource ,
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfUnpublishedNote ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfUnpublishedNoteValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfPublishedTxForNewTx ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfPublishedTxForNewTxValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfTxForCollectionPartially ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfTxForCollectionPartiallyValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfTxForCollectionIntegrally ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:reuseOfTxForCollectionIntegrallyValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isRepublicationOf ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ],
+                              [
+                                rdf:type owl:Restriction ;
+                                owl:onProperty roud-oeuvres:isRepublicationOfValue ;
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              ];
+                              rdfs:label  "Dossier génétique"@fr ,
+                                          "Genetic dossier"@en ,
+                                          "Dossier genetico"@it ;
+
+                              rdfs:comment  """Le dossier génétique contient l'avant-texte d'une publication (achevée ou pas)."""@fr ,
+                                            """The genetic dossier included the avant-texte of a publication (which has been really published or just conceived as such)."""@en .
+
+
 
 
 roud-oeuvres:Work   rdf:type   owl:Class ;
@@ -1556,9 +1635,9 @@ roud-oeuvres:establishedTextDiaryHasDate    rdf:type owl:ObjectProperty ;
 
                                             knora-base:objectClassConstraint knora-base:DateValue ;
 
-                                            rdfs:label  "Date (seulement pour le journal)"@fr ,
-                                                        "Date (only for diary note)"@en ,
-                                                        "Data (solo per nota di diario)"@it ;
+                                            rdfs:label  "(Seulement pour le journal) Date de la note de journal"@fr ,
+                                                        "(Only for diary note) Date of the diary note"@en ,
+                                                        "(Solo per nota di diario) Data dell'entrata del diario"@it ;
 
                                             rdfs:comment  "La date de la note de journal."@fr ,
                                                           "The date of the diary note."@en ;
@@ -2104,6 +2183,24 @@ roud-oeuvres:hasDirectSourcePageEndValue    rdf:type owl:ObjectProperty ;
                                             knora-base:objectClassConstraint knora-base:LinkValue .
 
 
+roud-oeuvres:hasDirectSourcePosition  rdf:type owl:ObjectProperty ;
+      
+                                      rdfs:subPropertyOf knora-base:hasValue ;
+
+                                      knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                      knora-base:objectClassConstraint roud-oeuvres:IntValue ;
+
+                                      rdfs:label  "Position à l'intérieur de l'ensemble (ex. note dans un cahier, section dans un recueil)"@fr ,
+                                                  "Position in the ensemble (e.g. note in a notebook, section in a collection)"@en ,
+                                                  "Posizione nell'insieme (es. appunti in un quaderno, sezione di una raccolta)"@it ;
+
+                                      rdfs:comment    "Cette propriété permet de créer une table de matière de l'ensemble (cahier, recueil, etc.)."@fr ,
+                                                      "This property allows for the creation of a table of contents for notebook, collection, etc."@en ;
+
+                                      salsah-gui:guiElement salsah-gui:Spinbox ;
+
+                                      salsah-gui:guiOrder "9"^^xsd:integer .
 
 
 roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
@@ -2422,9 +2519,9 @@ roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
 
                                       knora-base:objectClassConstraint knora-base:TextValue ;
 
-                                      rdfs:label  "Titre du livre (si pas recueil de Roud; sinon choisir la propriété suivante)"@fr ,
-                                                  "Title of the book (if not Roud's collection; otherwise choose next property)"@en ,
-                                                  "Titolo del libro (se non raccolta di Roud; altrimenti scegliere prossima proprietà)"@it ;
+                                      rdfs:label  "Titre du livre"@fr ,
+                                                  "Title of the book"@en ,
+                                                  "Titolo del libro"@it ;
 
                                       rdfs:comment  "La section (chapitre ou autre) fait partie d'un livre"@fr ,
                                                     "The section is part of the book"@en ;
@@ -2434,33 +2531,6 @@ roud-oeuvres:bookSectionIsPartOf      rdf:type  owl:ObjectProperty ;
                                       salsah-gui:guiOrder "3"^^xsd:integer .
 
 
-roud-oeuvres:bookSectionIsPartOfRoudCollection    rdf:type  owl:ObjectProperty ;
-
-                                                  rdfs:subPropertyOf knora-base:hasLinkTo ;
-
-                                                  knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
-
-                                                  knora-base:objectClassConstraint roud-oeuvres:Book ;
-
-                                                  rdfs:label  "Titre du recueil de Gustave Roud"@fr ,
-                                                              "Title of Gustave Roud's collection"@en ,
-                                                              "Titolo della raccolta di Gustave Roud"@it ;
-
-                                                  rdfs:comment  "La section (chapitre ou autre) fait partie d'un livre"@fr ,
-                                                                "The section is part of the book"@en ;
-                                                  
-                                                  salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                                  salsah-gui:guiOrder "3"^^xsd:integer .
-                                                  
-
-roud-oeuvres:bookSectionIsPartOfRoudCollectionValue   rdf:type  owl:ObjectProperty ;
-
-                                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
-
-                                                      knora-base:subjectClassConstraint roud-oeuvres:BookSection ;
-
-                                                      knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -2934,54 +3004,65 @@ roud-oeuvres:publicationIsEditionOfValue    rdf:type owl:ObjectProperty ;
 
 
 
-####roud-oeuvres:isReeditionOf    rdf:type owl:ObjectProperty ;
-####                              rdfs:subPropertyOf knora-base:hasLinkTo ;
-####                              knora-base:subjectClassConstraint roud-oeuvres:Book ;
-####                              knora-base:objectClassConstraint roud-oeuvres:Book ;
-####                              rdfs:label  "Est une réédition de (seulement si autre maison d'édition)"@fr ,
-####                                          "Is a reedition of (only if other publisher)"@en ,
-####                                          "È una riedizione di (solamente se altra casa editrice)"@it ;
-####                              rdfs:comment  "Est un réédition de. Different de réimpression."@fr ,
-####                                            "Is a republication of. Different from reprint."@en ;
-####                              salsah-gui:guiElement salsah-gui:Searchbox ;
-####                              salsah-gui:guiOrder "13"^^xsd:integer .
 
-####roud-oeuvres:isReeditionOfValue   rdf:type owl:ObjectProperty ;
-####                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
-####                                  knora-base:subjectClassConstraint roud-oeuvres:Book ;
-####                                  knora-base:objectClassConstraint knora-base:LinkValue .
+roud-oeuvres:manuscriptIsPartOfGeneticDossier   rdf:type owl:ObjectProperty ;
 
+                                                rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
+
+                                                rdfs:label  "(Seulement pour les documents d'archives, pas pour les publications) Le document fait partie du dossier génétique"@fr ,
+                                                            "(For documents only) The document is part of the genetic dossier"@en ,
+                                                            "(Solo per documenti) Il documento fa parte del dossier genetico"@it ;
+
+                                                rdfs:comment  "Lister tous les documents qui font partie d'un dossier génétique."@fr ,
+                                                              "List all the documents that are part of a genetic dossier."@en ;
 
 
+                                                salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                                salsah-gui:guiOrder "5"^^xsd:integer .
 
 
-roud-oeuvres:hasPreviousStage   rdf:type owl:ObjectProperty ;
+roud-oeuvres:manuscriptIsPartOfGeneticDossierValue  rdf:type owl:ObjectProperty ;
 
-                                rdfs:subPropertyOf knora-base:hasLinkTo ;
+                                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
-                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+                                                    knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
-
-                                rdfs:label  "Lister tous les textes qui précèdent ce texte (ex., les articles en périodique pour la section d'un recueil, ou les manuscrit et épreuves pour une publication)."@fr ,
-                                            "List all texts that precede the text (e.g., periodical articles for a section of one of Roud's collection; or the manuscripts and proofs for a publication) ."@en ,
-                                            "Indicare tutti i testi che precedono il testo (ex., gli articoli per una sezione di una raccolta, o i manoscritti e le bozze per una pubblicazione)."@it ;
-
-                                rdfs:comment  "Ces liens permettent d'avoir la liste des ressources en relation, à visualiser sur le site dans la boite à droite pour chaque texte."@fr ,
-                                              "These links form the list of related resources, to be visualized in the website in the box on the right of each text."@en ;
-
-                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                salsah-gui:guiOrder "5"^^xsd:integer .
+                                                    knora-base:objectClassConstraint knora-base:LinkValue .
 
 
-roud-oeuvres:hasPreviousStageValue    rdf:type owl:ObjectProperty ;
+roud-oeuvres:publicationIsPartOfGeneticDossier  rdf:type owl:ObjectProperty ;
 
-                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
+                                                rdfs:subPropertyOf knora-base:hasLinkTo ;
 
-                                      knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+                                                knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                      knora-base:objectClassConstraint knora-base:LinkValue .
+                                                knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
+
+                                                rdfs:label  "(Seulement pour les publications, pas pour les documents d'archives) Dossier génétique correspondant"@fr ,
+                                                            "(Only for publications, not for archival documents) Corresponding genetic dossier"@en ,
+                                                            "(Solo per le pubblicazioni, non per i documenti d'archivio) Dossier genetico corrispondente"@it ;
+
+                                                rdfs:comment  "La publication autour de la quelle s'organise le dossier génétique"@fr ,
+                                                              "The publication around which the genetic dossier is organized"@en ;
+
+
+                                                salsah-gui:guiElement salsah-gui:Searchbox ;
+
+                                                salsah-gui:guiOrder "5"^^xsd:integer .
+
+
+roud-oeuvres:publicationIsPartOfGeneticDossierValue rdf:type owl:ObjectProperty ;
+
+                                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                    knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                                    knora-base:objectClassConstraint knora-base:LinkValue .
 
 
 
@@ -3979,4 +4060,254 @@ roud-oeuvres:placeHasPhotoValue   rdf:type owl:ObjectProperty ;
 
                                   knora-base:objectClassConstraint knora-base:LinkValue .
 
+
+
+
+
+roud-oeuvres:isRewritingOf  rdf:type owl:ObjectProperty ;
+
+                            rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                            knora-base:objectClassConstraint knora-base:EstablishedText ;
+
+                            rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Recopiage du journal ou réécriture dans l'avant-texte"@fr ,
+                                        "(Abstract property, only for querying) Rewriting of"@en ,
+                                        "(Proprietà astratta, solo per le ricerche) Copia del diario o riscrittura nell'avantesto"@it ;
+                            rdfs:comment  "Recopiage et réécriture. Property abstraite, voir les subproperties."@fr ,
+                                          "Rewriting. Abstract property, see subproperties."@en .
+
+roud-oeuvres:isRewritingOfValue rdf:type owl:ObjectProperty ;
+
+                                rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                knora-base:objectClassConstraint knora-base:LinkValue .
+   
+
+
+
+
+
+roud-oeuvres:isRecopiageOf  rdf:type owl:ObjectProperty ;
+                            
+                            rdfs:subPropertyOf knora-base:hasLinkTo ;  
+
+                            rdfs:subPropertyOf roud-oeuvres:isRewritingOf ;
+
+                            knora-base:subjectClassConstraint knora-base:EstablishedText ;
+
+                            knora-base:objectClassConstraint knora-base:EstablishedText ;
+
+                            rdfs:label  "Seuelement pour le journal. Est un recopiage de la note (source de la note niveau deux)"@fr ,
+                                        "For diary only. Is copying of (source of second level diary)"@en ,
+                                        "Solo per il diario. É copia di (fonte del diario di secondo livello)"@it ;
+                            rdfs:comment  "Passage d'un niveau à l'autre du journal."@fr ,
+                                          "Different diary levels."@en ;
+
+                            salsah-gui:guiElement salsah-gui:Searchbox .
+
+
+roud-oeuvres:isRecopiageOfValue   rdf:type owl:ObjectProperty ;
+
+                                  rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                  knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                  knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+
+
+roud-oeuvres:isAfterInAvantTexte  rdf:type owl:ObjectProperty ;
+                            
+                                  rdfs:subPropertyOf knora-base:hasLinkTo ;  
+
+                                  rdfs:subPropertyOf roud-oeuvres:isRewritingOf ;
+
+                                  knora-base:subjectClassConstraint knora-base:EstablishedText ;
+
+                                  knora-base:objectClassConstraint knora-base:EstablishedText ;
+
+                                  rdfs:label  "Seulement pour les documents. Est après dans l'avant-texte"@fr ,
+                                              "For documents only. Follows in the avant-texte"@en ,
+                                              "Solo per i documenti. Successivo nell'avantesto"@it ;
+                                  rdfs:comment  "Parcous à l'intérieur de l'avant-texte."@fr ,
+                                                "Creates the path in the avant-texte."@en ;
+
+                                  salsah-gui:guiElement salsah-gui:Searchbox .
+
+
+
+roud-oeuvres:isAfterInAvantTexteValue   rdf:type owl:ObjectProperty ;
+
+                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                        knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
+
+                                        knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+
+roud-oeuvres:reuseOfMaterials rdf:type owl:ObjectProperty ;
+
+                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                              knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Réutilisation de matériaux"@fr ,
+                                          "(Abstract property, only for querying) Reuse of materials"@en ,
+                                          "(Proprietà astratta, solo per le ricerche) Riuso di materiali"@it ;
+                              rdfs:comment  "Property abstraite, voir les subproperties."@fr ,
+                                            "Abstract property, see subproperties."@en .
+
+roud-oeuvres:reuseOfMaterialsValue  rdf:type owl:ObjectProperty ;
+
+                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                    knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+
+
+roud-oeuvres:reuseOfUnpublishedNote   rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                      rdfs:subPropertyOf roud-oeuvres:reuseOfMaterials ;
+
+                                      knora-base:subjectClassConstraint knora-base:EstablishedText ;
+
+                                      knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                                      rdfs:label  "Réutilisation de note de journal inédite"@fr ,
+                                                  "Reuse of unpublished diary note"@en ,
+                                                  "Riuso di nota di diario inedita"@it ;
+                                      rdfs:comment  "Réutilisation de note de journal inédite."@fr ,
+                                                    "Reuse of unpublished diary note."@en .
+
+roud-oeuvres:reuseOfUnpublishedNoteValue  rdf:type owl:ObjectProperty ;
+
+                                          rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                          knora-base:subjectClassConstraint knora-base:EstablishedText ;
+
+                                          knora-base:objectClassConstraint knora-base:LinkValue .
+   
+
+
+
+
+
+roud-oeuvres:reuseOfPublishedTxForNewTx   rdf:type owl:ObjectProperty ;
+
+                                          rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                          rdfs:subPropertyOf roud-oeuvres:reuseOfMaterials ;
+
+                                          knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                          knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                                          rdfs:label  "Réutilisation d'un texte publié pour un nouveau texte (ex. Préface Colomb)"@fr ,
+                                                      "Reuse of published text in a new text (e.g. Préface Colomb)"@en ,
+                                                      "Riuso di testo pubblicato in nuovo testo (es. Préface Colomb)"@it ;
+                                          rdfs:comment  "Réutilisation d'un texte publié pour un nouveau texte (ex. Préface Colomb)."@fr ,
+                                                        "Reuse of published text in a new text (e.g. Préface Colomb)."@en .
+
+roud-oeuvres:reuseOfPublishedTxForNewTxValue  rdf:type owl:ObjectProperty ;
+
+                                              rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                              knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                              knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+
+roud-oeuvres:reuseOfTxForCollectionPartially  rdf:type owl:ObjectProperty ;
+
+                                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                              rdfs:subPropertyOf roud-oeuvres:reuseOfMaterials ;
+
+                                              knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                              knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                                              rdfs:label  "Reprise partielle d'un texte publié dans un recueil [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]"@fr ,
+                                                          "Partial reuse of published text in collection"@en ,
+                                                          "Riuso parziale di testo pubblicato in raccolta"@it ;
+                                              rdfs:comment  "Reprise partielle d'un texte publié dans un recueil [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@fr ,
+                                                            "Partial reuse of published text in collection [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@en .
+
+roud-oeuvres:reuseOfTxForCollectionPartiallyValue   rdf:type owl:ObjectProperty ;
+
+                                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                    knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                                    knora-base:objectClassConstraint knora-base:LinkValue .
+
+
+
+
+
+roud-oeuvres:reuseOfTxForCollectionIntegrally rdf:type owl:ObjectProperty ;
+
+                                              rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                              rdfs:subPropertyOf roud-oeuvres:reuseOfMaterials ;
+
+                                              knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                              knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                                              rdfs:label  "Reprise integrale d'un texte publié dans un recueil (ex. « Bouvreuil » dans Air de la solitude)"@fr ,
+                                                          "Integral reuse of published text in collection (ex. « Bouvreuil » dans Air de la solitude)"@en ,
+                                                          "Riuso integrale di testo pubblicato in raccolta"@it ;
+                                              rdfs:comment  "Reprise integrale d'un texte publié dans un recueil (ex. « Bouvreuil » dans Air de la solitude)."@fr ,
+                                                            "Integral reuse of published text in collection (ex. « Bouvreuil » dans Air de la solitude)."@en .
+
+roud-oeuvres:reuseOfTxForCollectionIntegrallyValue  rdf:type owl:ObjectProperty ;
+
+                                                    rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                                    knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                                    knora-base:objectClassConstraint knora-base:LinkValue .
+   
+
+
+
+
+roud-oeuvres:isRepublicationOf  rdf:type owl:ObjectProperty ;
+
+                                rdfs:subPropertyOf knora-base:hasLinkTo ;
+
+                                rdfs:subPropertyOf roud-oeuvres:reuseOfMaterials ;
+
+                                knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                knora-base:objectClassConstraint knora-base:GeneticDossier ;
+
+                                rdfs:label  "Réédition de"@fr ,
+                                            "Re-edition of"@en ,
+                                            "Riedizione di"@it ;
+                                rdfs:comment  "Réédition de."@fr ,
+                                              "Re-edition of."@en .
+
+roud-oeuvres:isRepublicationOfValue   rdf:type owl:ObjectProperty ;
+
+                                      rdfs:subPropertyOf knora-base:hasLinkToValue ;
+
+                                      knora-base:subjectClassConstraint knora-base:GeneticDossier ;
+
+                                      knora-base:objectClassConstraint knora-base:LinkValue .
    
