@@ -1303,9 +1303,9 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                               
                               salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>" ;
 
-                              rdfs:label  "Ensemble éditorial"@fr ,
-                                          "Editorial set"@en ,
-                                          "Insieme editoriale"@it ;
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Ensemble éditorial"@fr ,
+                                          "(Abstract property, only for querying) Editorial set"@en ,
+                                          "(Proprietà astratta, solo per ricerca) Insieme editoriale"@it ;
 
                               rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
                                             "The editorial set to which the document belongs."@en .
@@ -1859,9 +1859,9 @@ roud-oeuvres:isDigitized  rdf:type owl:ObjectProperty ;
 
                           knora-base:objectClassConstraint knora-base:BooleanValue ;
                                           
-                          rdfs:label  "Numérisé"@fr ,
-                                      "Digitized"@en ,
-                                      "Scannerizzato"@it ;
+                          rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Numérisé"@fr ,
+                                      "(Abstract property, only for querying) Digitized"@en ,
+                                      "(Proprietà astratta, solo per ricerca) Scannerizzato"@it ;
 
                           rdfs:comment  "Le document ou la publication a été numérisé."@fr ,
                                         "The document or the publication has been digitized."@en .
@@ -1873,15 +1873,15 @@ roud-oeuvres:manuscriptIsDigitized      rdf:type owl:ObjectProperty ;
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
-                                        rdfs:subPropertyOf knora-base:isDigitized ;
+                                        rdfs:subPropertyOf roud-oeuvres:isDigitized ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
 
                                         knora-base:objectClassConstraint knora-base:BooleanValue ;
                                                         
-                                        rdfs:label  "Numérisé"@fr ,
-                                                    "Digitized"@en ,
-                                                    "Scannerizzato"@it ;
+                                        rdfs:label  "Document numérisé"@fr ,
+                                                    "Digitized document"@en ,
+                                                    "Documento scannerizzato"@it ;
 
                                         rdfs:comment  "Le document a été numérisé."@fr ,
                                                       "The document has been digitized."@en ;
@@ -1918,18 +1918,18 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
                     
                                         rdfs:subPropertyOf knora-base:hasValue ;
 
-                                        rdfs:subPropertyOf knora-base:isDigitized ;
+                                        rdfs:subPropertyOf roud-oeuvres:isDigitized ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Publication ;
 
                                         knora-base:objectClassConstraint knora-base:BooleanValue ;
                                                         
-                                        rdfs:label  "Numérisé"@fr ,
-                                                    "Digitized"@en ,
-                                                    "Scannerizzato"@it ;
+                                        rdfs:label  "Publication numérisée"@fr ,
+                                                    "Digitized publication"@en ,
+                                                    "Pubblicazione scannerizzata"@it ;
 
-                                        rdfs:comment  "Le document a été numérisé."@fr ,
-                                                      "The document has been digitized."@en ;
+                                        rdfs:comment  "La publication a été numérisée."@fr ,
+                                                      "The publication has been digitized."@en ;
 
                                         salsah-gui:guiElement salsah-gui:Checkbox ;
 
@@ -2847,7 +2847,9 @@ roud-oeuvres:artworkHasPhoto    rdf:type owl:ObjectProperty ;
 
                                 rdfs:subPropertyOf roud-oeuvres:hasPhoto ;
 
+                                knora-base:subjectClassConstraint roud-oeuvres:Work ; 
                                 # knora-base:subjectClassConstraint roud-oeuvres:Artwork ; 
+                                ### it gives error with Artwork, probably because Artwork is subclass of Work
 
                                 knora-base:objectClassConstraint roud-oeuvres:Photo ;
 
@@ -2868,7 +2870,9 @@ roud-oeuvres:artworkHasPhotoValue   rdf:type owl:ObjectProperty ;
 
                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
+                                    knora-base:subjectClassConstraint roud-oeuvres:Work ; 
                                     # knora-base:subjectClassConstraint roud-oeuvres:Artwork ;
+                                    ### it gives error with Artwork, probably because Artwork is subclass of Work
 
                                     knora-base:objectClassConstraint knora-base:LinkValue .
 
@@ -3346,9 +3350,9 @@ roud-oeuvres:hasAuthorityID   rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:UriValue ;
                               
-                              rdfs:label  "Identifiant fichier autorités (Permalink VIAF)"@fr ,
-                                          "Authority File ID (Permalink VIAF)"@en ,
-                                          "Identificante Autorità (Permalink VIAF)"@it ;
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Identifiant fichier autorités (Permalink VIAF)"@fr ,
+                                          "(Abstract property, only for querying) Authority File ID (Permalink VIAF)"@en ,
+                                          "(Proprietà astratta, solo per ricerca) Identificante Autorità (Permalink VIAF)"@it ;
 
                               rdfs:comment  "Identifiant unique pour la personne. Spécifier le Permalink VIAF, et non pas le VIAF ID."@fr ,
                                             "Uniquer identifier for a person. Specify the VIAF Permalink, not the VIAF ID."@en ;
@@ -3415,9 +3419,9 @@ roud-oeuvres:hasDhsID   rdf:type owl:ObjectProperty ;
 
                         knora-base:objectClassConstraint knora-base:UriValue ;
                         
-                        rdfs:label  "Dictionnaire historique de la Suisse (URL)"@fr ,
-                                    "Dictionnaire historique de la Suisse (URL)"@en ,
-                                    "Dizionario storico della Svizzera (URL)"@it ;
+                        rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Dictionnaire historique de la Suisse (URL)"@fr ,
+                                    "(Abstract property, only for querying) Dictionnaire historique de la Suisse (URL)"@en ,
+                                    "(Proprietà astratta, solo per ricerca) Dizionario storico della Svizzera (URL)"@it ;
 
                         rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
                                       "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
@@ -3565,9 +3569,9 @@ roud-oeuvres:hasGivenName     rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              rdfs:label  "Prénom"@fr ,
-                                          "Name"@en ,
-                                          "Nome"@it ;
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Prénom"@fr ,
+                                          "(Abstract property, only for querying) (Proprietà astratta, solo per ricerca) Name"@en ,
+                                          "(Proprietà astratta, solo per ricerca) Nome"@it ;
 
                               rdfs:comment  "Le nom."@fr ,
                                             "The name."@en ;
@@ -3626,9 +3630,9 @@ roud-oeuvres:hasFamilyName    rdf:type owl:ObjectProperty ;
 
                               knora-base:objectClassConstraint knora-base:TextValue ;
                               
-                              rdfs:label  "Nom de famille"@fr ,
-                                          "Surname"@en ,
-                                          "Cognome"@it ;
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Nom de famille"@fr ,
+                                          "(Abstract property, only for querying) Surname"@en ,
+                                          "(Proprietà astratta, solo per ricerca) Cognome"@it ;
 
                               rdfs:comment  "Le nom de famille."@fr ,
                                             "Surname."@en ;
