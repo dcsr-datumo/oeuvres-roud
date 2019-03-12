@@ -10,7 +10,7 @@
 OPEN ISSUES
 - Cannot delete image, normal ?
 - Quando metto come subject di una property una classe, se questa classe è una subclass bisogna mettere la classe "madre", altrimenti dà errore. Esempio: Artwork has photo and Artwork has link to ...
-
+- guiOrder di subclass publication, à faire aprés le passage à V2
 
 
 
