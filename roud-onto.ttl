@@ -1761,9 +1761,9 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;        
-                                        
+
                                         knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-                                        
+
                                         knora-base:objectClassConstraint knora-base:LinkValue .
 
 
@@ -1793,7 +1793,7 @@ roud-oeuvres:manuscriptHasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;        
                                                   
                                                   knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-                                                  
+
                                                   knora-base:objectClassConstraint knora-base:LinkValue .
 
 
