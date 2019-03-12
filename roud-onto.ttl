@@ -1630,9 +1630,9 @@ roud-oeuvres:establishedTextDiaryHasDate    rdf:type owl:ObjectProperty ;
 
                                             knora-base:objectClassConstraint knora-base:DateValue ;
 
-                                            rdfs:label  "(Seulement pour le journal) Date de la note de journal"@fr ,
-                                                        "(Only for diary note) Date of the diary note"@en ,
-                                                        "(Solo per nota di diario) Data dell'entrata del diario"@it ;
+                                            rdfs:label  "(ONLY DIARY) Date de la note de journal"@fr ,
+                                                        "(ONLY DIARY) Date of the diary note"@en ,
+                                                        "(ONLY DIARY) Data dell'entrata del diario"@it ;
 
                                             rdfs:comment  "La date de la note de journal."@fr ,
                                                           "The date of the diary note."@en ;
@@ -2992,9 +2992,9 @@ roud-oeuvres:manuscriptIsPartOfGeneticDossier   rdf:type owl:ObjectProperty ;
 
                                                 knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
 
-                                                rdfs:label  "(Seulement pour les documents d'archives, pas pour les publications) Le document fait partie du dossier génétique"@fr ,
-                                                            "(For documents only) The document is part of the genetic dossier"@en ,
-                                                            "(Solo per documenti) Il documento fa parte del dossier genetico"@it ;
+                                                rdfs:label  "(ONLY DOCS) Le document fait partie du dossier génétique"@fr ,
+                                                            "(ONLY DOCS) The document is part of the genetic dossier"@en ,
+                                                            "(ONLY DOCS) Il documento fa parte del dossier genetico"@it ;
 
                                                 rdfs:comment  "Lister tous les documents qui font partie d'un dossier génétique."@fr ,
                                                               "List all the documents that are part of a genetic dossier."@en ;
@@ -3022,9 +3022,9 @@ roud-oeuvres:geneticDossierResultsInPublication rdf:type owl:ObjectProperty ;
 
                                                 knora-base:objectClassConstraint roud-oeuvres:EstablishedText ;
 
-                                                rdfs:label  "Le dossier génétique mène à (publication)"@fr ,
-                                                            "The genetic dossier results in (publication)"@en ,
-                                                            "Il dossier genetico porta a (pubblicazione)"@it ;
+                                                rdfs:label  "Le dossier génétique mène à une publication"@fr ,
+                                                            "The genetic dossier results in a publication"@en ,
+                                                            "Il dossier genetico porta a una pubblicazione"@it ;
 
                                                 rdfs:comment  "Le dossier génétique mène à une publication, qui doit être insérée à partir de la page du site correspondante."@fr ,
                                                               "The genetic dossier results in a publication, which should be specified using the corresponding website page."@en ;
@@ -4180,9 +4180,9 @@ roud-oeuvres:publicationReusedInNewText   rdf:type owl:ObjectProperty ;
 
                                           knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
 
-                                          rdfs:label  "(ONLY PUB) Publication reprise (partiellement ou integralement) dans le dossier génétique d'un nouveau texte (ex. Préface Colomb)"@fr ,
-                                                      "(ONLY PUB) Publication reused (partially or integrally) in the genetic dossier of a new text (e.g. Préface Colomb)"@en ,
-                                                      "(ONLY PUB) Pubblicazione riutilizzata (parzialmente o integralmente) nel dossier genetico di un nuovo testo (es. Préface Colomb)"@it ;
+                                          rdfs:label  "(ONLY PUB) Publication reprise partiellement ou integralement dans le dossier génétique d'un nouveau texte [Exemple : Préface Colomb]"@fr ,
+                                                      "(ONLY PUB) Publication reused (partially or integrally) in the genetic dossier of a new text [e.g. Préface Colomb]"@en ,
+                                                      "(ONLY PUB) Pubblicazione riutilizzata (parzialmente o integralmente) nel dossier genetico di un nuovo testo [es. Préface Colomb]"@it ;
                                           rdfs:comment  "Réutilisation d'un texte publié pour un nouveau texte (ex. Préface Colomb)."@fr ,
                                                         "Reuse of published text in a new text (e.g. Préface Colomb)."@en ;
 
@@ -4244,11 +4244,11 @@ roud-oeuvres:publicationFullyReusedInCollection   rdf:type owl:ObjectProperty ;
 
                                                   knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
 
-                                                  rdfs:label  "(ONLY PUB) Publication integrallement reprise dans le dossier génétique d'un recueil [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]"@fr ,
+                                                  rdfs:label  "(ONLY PUB) Publication integrallement reprise dans le dossier génétique d'un recueil [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@fr ,
                                                               "(ONLY PUB) Publication fully reused in genetic dossier of a collection"@en ,
                                                               "(ONLY PUB) Pubblicazione ripresa integralmente nel dossier genetico per una raccolta"@it ;
-                                                  rdfs:comment  "Reprise integrale dans un recueil d'un texte publié [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@fr ,
-                                                                "Full reuse in collection of published text [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@en ;
+                                                  rdfs:comment  "Reprise integrale dans un recueil d'un texte publié [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@fr ,
+                                                                "Full reuse in collection of published text [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@en ;
 
                                                   salsah-gui:guiElement salsah-gui:Searchbox ;
 
