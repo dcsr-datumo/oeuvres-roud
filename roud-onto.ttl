@@ -245,11 +245,6 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           ],
                           [
                             rdf:type owl:Restriction ;
-                            owl:onProperty roud-oeuvres:PublicationHasDateFirstEdition ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
-                          ],
-                          [
-                            rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasPublicationType ;
                             owl:cardinality "1"^^xsd:nonNegativeInteger                 
                           ],
@@ -2715,26 +2710,6 @@ roud-oeuvres:publisherHasName     rdf:type owl:ObjectProperty ;
 
                                   salsah-gui:guiOrder "0"^^xsd:integer .
 
-
-
-roud-oeuvres:publicationHasDateFirstEdition     rdf:type owl:ObjectProperty ;
-
-                                                rdfs:subPropertyOf knora-base:hasValue ;
-
-                                                rdfs:subPropertyOf roud-oeuvres:hasDate ;
-
-                                                knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-
-                                                knora-base:objectClassConstraint knora-base:DateValue ;
-                                                
-                                                salsah-gui:guiElement salsah-gui:Date ;
-
-                                                rdfs:label  "Date de la première édition"@fr ,
-                                                            "Date of the first edition"@en ,
-                                                            "Data della prima edizione"@it ;
-
-                                                rdfs:comment  "Si réédition, spécifier la date de la première édition."@fr ,
-                                                              "If republication, specify the date of the first edition."@en .
 
 
 
