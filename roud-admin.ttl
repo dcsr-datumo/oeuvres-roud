@@ -102,6 +102,19 @@
   	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
   	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
 
+<http://rdfh.ch/users/dMaggetti> a knora-base:User ;
+	knora-base:userid "dmaggetti" ;
+	knora-base:givenName "Daniel" ;
+	knora-base:familyName "Maggetti" ;
+	knora-base:password "$e0801$BVA8n1Ed29F7qSvaZbrYLZKYJbzUa7qruYXoUBE2SFsck4qY4pcTar3ZTYAntYCgU7utclXytiJ3froTy/9xlg==$NALDyoPKKBE6jExtFW2WvC5pfvGJhFuldbV5L+NRAII=" ;
+	knora-base:email "daniel.maggetti@unil.ch" ;
+	knora-base:preferredLanguage "fr" ;
+	knora-base:status "true"^^xsd:boolean ;
+	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
+    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
+	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
+	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+
 <http://rdfh.ch/users/roud-oeuvres-test-user1> a knora-base:User ;
 	knora-base:userid "roud" ;
 	knora-base:givenName "roud" ;

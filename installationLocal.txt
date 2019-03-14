@@ -121,6 +121,8 @@ Or use run: it pull and start
 the following is the one allowing to take images from the NAS mounted in /mnt/scanlettMounted ------->>>>>>
 	docker run -v /mnt/scanlettMounted/GustaveRoud/:/mnt/scanlettMounted/GustaveRoud/ --name sipiAccessScanlett --add-host webapihost:127.0.0.1 -p 1024:1024 -d --net=host dhlabbasel/sipi:latest
 
+	docker run -v /tmp/scanlettMounted/GustaveRoud/:/tmp/scanlettMounted/GustaveRoud/ --name sipiAccessScanlett --add-host webapihost:127.0.0.1 -p 1024:1024 -d --net=host dhlabbasel/sipi:latest
+
 
 
 ========================== COMMANDS DOCKER =========================================
