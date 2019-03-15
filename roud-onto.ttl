@@ -506,8 +506,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasDirectSourceManuscript ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "7"^^xsd:integer 
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -517,7 +517,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasDirectSourcePageStart ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -2106,9 +2107,7 @@ roud-oeuvres:hasDirectSourceManuscript    rdf:type owl:ObjectProperty ;
                                           rdfs:comment    "La source directe pour l'édition, quand il s'agit d'un document d'archive."@fr ,
                                                           "The direct source of the edition, when it is a manuscript."@en ;
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                          salsah-gui:guiOrder "2"^^xsd:integer .
+                                          salsah-gui:guiElement salsah-gui:Searchbox .
 
 
                                         
@@ -2137,9 +2136,8 @@ roud-oeuvres:hasDirectSourcePageStart     rdf:type owl:ObjectProperty ;
                                           rdfs:comment    "Spécifier les pages du témoin de base (publication ou manuscrit) si ne correspondent pas à la totalité du document (ex., pages d'un cahier)."@fr ,
                                                           "Specify the pages of the base witness (publication or archival document) if they do not correspond to the entire document (ex., pages of a notebook)."@en ;
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+                                          salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                          salsah-gui:guiOrder "5"^^xsd:integer .
 
 roud-oeuvres:hasDirectSourcePageStartValue      rdf:type owl:ObjectProperty ;
       
