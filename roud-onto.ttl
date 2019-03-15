@@ -109,7 +109,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasEditorialSet ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;  
@@ -1342,9 +1343,7 @@ roud-oeuvres:establishedTextHasEditorialSet   rdf:type  owl:ObjectProperty ;
                                               rdfs:comment  "L'ensemble éditorial auquel le texte se rattache."@fr ,
                                                             "The editorial set to which the text belongs."@en ;
 
-                                              salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                                              salsah-gui:guiOrder "1"^^xsd:integer .
+                                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
