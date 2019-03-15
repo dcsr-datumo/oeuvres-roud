@@ -42,22 +42,26 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasDateComputable ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger       
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedReadable ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
                             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedList ;   
-                            owl:maxCardinality "1"
+                            owl:maxCardinality "1";
+                            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
                             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedComputable ;   
-                            owl:maxCardinality "1"
+                            owl:maxCardinality "1" ;
+                            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -128,7 +132,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasGeneticStage ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;  
@@ -139,12 +144,14 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptIsDigitized ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                    
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "19"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasPublicComment ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "18"^^xsd:nonNegativeInteger
                           ],
                           [ 
                             rdf:type owl:Restriction ;
@@ -155,7 +162,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasPublishedReference ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -165,7 +173,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasTranslatedAuthor ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                      
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "20"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -292,21 +301,25 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+			    salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsDigitized ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsTranscribed ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger .
                           ];
                           rdfs:label  "(Classe abstraite, seulement pour les requêtes. Publication)"@fr ,
                                                   "(Abstract class, only for querying. Publication)"@en ,
@@ -323,7 +336,7 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasPublisher ;
                         owl:minCardinality "0"^^xsd:nonNegativeInteger
-                        salsah-gui:guiOrder "4"^^xsd:integer .
+                        salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger .
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -610,7 +623,7 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:establishedTextDiaryHasDate ;
                                 owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "2"^^xsd:integer 
+                                salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -1398,9 +1411,7 @@ roud-oeuvres:manuscriptHasEditorialSet  rdf:type  owl:ObjectProperty ;
                                         rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
                                                       "The editorial set to which the document belongs."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                                        salsah-gui:guiOrder "4"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 roud-oeuvres:establishedTextHasEditorialSet   rdf:type  owl:ObjectProperty ;
@@ -1668,9 +1679,7 @@ roud-oeuvres:manuscriptHasDateComputable    rdf:type owl:ObjectProperty ;
                                             rdfs:comment  "La date presente dans le manuscrit, s'il y en a, écrite de manière computable."@fr ,
                                                           "The date present in the manuscript, if any, in a computable form."@en ;
 
-                                            salsah-gui:guiElement salsah-gui:Date ;
-                                          
-                                            salsah-gui:guiOrder "13"^^xsd:integer .
+                                            salsah-gui:guiElement salsah-gui:Date .
 
 
 roud-oeuvres:establishedTextDiaryHasDate    rdf:type owl:ObjectProperty ;
@@ -1690,9 +1699,7 @@ roud-oeuvres:establishedTextDiaryHasDate    rdf:type owl:ObjectProperty ;
                                             rdfs:comment  "La date de la note de journal."@fr ,
                                                           "The date of the diary note."@en ;
 
-                                            salsah-gui:guiElement salsah-gui:Date ;
-                                          
-                                            salsah-gui:guiOrder "8"^^xsd:integer .
+                                            salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -1716,9 +1723,7 @@ roud-oeuvres:manuscriptHasDateEstablishedComputable   rdf:type  owl:ObjectProper
                                                       rdfs:comment  "La date individué par les chercheures, esprimée de façon formalizé et computable. C'est un point, qui peut être projecté sur une timeline."@fr ,
                                                                     "The date identified by the scholars, expressed in a formalized and computable way. It is a point, to be visualized on a timeline."@en ;
 
-                                                      salsah-gui:guiElement salsah-gui:Date ;
-                                        
-                                                      salsah-gui:guiOrder "15"^^xsd:integer .
+                                                      salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -1738,9 +1743,7 @@ roud-oeuvres:manuscriptHasDateEstablishedReadable   rdf:type owl:ObjectProperty 
                                                                   "The date identified by the scholars. Add comments here too, if any."@en ;
 
                                                     
-                                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-                                                    
-                                                    salsah-gui:guiOrder "14"^^xsd:integer .
+                                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:manuscriptHasDateEstablishedList   rdf:type  owl:ObjectProperty ;
@@ -1761,9 +1764,7 @@ roud-oeuvres:manuscriptHasDateEstablishedList   rdf:type  owl:ObjectProperty ;
                                                 rdfs:comment  "Liste de valeurs spécifiant la datation."@fr ,
                                                               "List of values speficying the established date."@en ;
                                                     
-                                                salsah-gui:guiElement salsah-gui:Pulldown ;
-                                                
-                                                salsah-gui:guiOrder "15"^^xsd:integer .
+                                                salsah-gui:guiElement salsah-gui:Pulldown .
                                                 
 
 roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
@@ -1784,9 +1785,7 @@ roud-oeuvres:hasGeneticStage  rdf:type  owl:ObjectProperty ;
                               rdfs:comment  "L'étape du processus d'écriture répresenté par le document."@fr ,
                                             "The genetic stage of the text."@en ;
                                   
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-                              
-                              salsah-gui:guiOrder "16"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
@@ -1802,9 +1801,8 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "La référence bibliographique."@fr ,
                                                   "The bibliographical reference."@en ;
                                   
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
                                     
-                                    salsah-gui:guiOrder "17"^^xsd:integer .
 
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
@@ -1832,9 +1830,8 @@ roud-oeuvres:manuscriptHasPublishedReference  rdf:type owl:ObjectProperty ;
                                               rdfs:comment  "La référence bibliographique (version publié ou autre)."@fr ,
                                                             "The bibliographical reference (published version or other)."@en ;
                                             
-                                              salsah-gui:guiElement salsah-gui:Searchbox ;
-                                              
-                                              salsah-gui:guiOrder "17"^^xsd:integer .
+                                              salsah-gui:guiElement salsah-gui:Searchbox .
+
 
 roud-oeuvres:manuscriptHasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
@@ -1862,9 +1859,7 @@ roud-oeuvres:hasTranslatedAuthor    rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "L'auter ou autrice traduit-e."@fr ,
                                                   "The author translated in the manuscript."@en ;
                                     
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                    salsah-gui:guiOrder "20"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
                                   
 
 roud-oeuvres:hasTranslatedAuthorValue   rdf:type owl:ObjectProperty ;
@@ -1895,9 +1890,7 @@ roud-oeuvres:hasPublicComment   rdf:type owl:ObjectProperty ;
                                 rdfs:comment  "Tout commentaire va dans ce champ, y compris les informations sur une datation incertaine, les relations avec autres textes, etc."@fr ,
                                               "All comments should go in this field, including information about uncertain dates, relations with other documents, etc."@en ;
 
-                                salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                salsah-gui:guiOrder "18"^^xsd:integer .
+                                salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -1934,9 +1927,7 @@ roud-oeuvres:manuscriptIsDigitized      rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "Le document a été numérisé."@fr ,
                                                       "The document has been digitized."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Checkbox ;
-
-                                        salsah-gui:guiOrder "19"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Checkbox .
 
 
 
@@ -1957,9 +1948,7 @@ roud-oeuvres:publicationHasToBeDigitized    rdf:type owl:ObjectProperty ;
 
                                             salsah-gui:guiElement salsah-gui:Pulldown ;
                                 
-                                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
-
-                                            salsah-gui:guiOrder "12"^^xsd:integer .
+                                            salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" .
 
 
 roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;     
@@ -1979,9 +1968,7 @@ roud-oeuvres:publicationIsDigitized     rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "La publication a été numérisée."@fr ,
                                                       "The publication has been digitized."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Checkbox ;
-
-                                        salsah-gui:guiOrder "11"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Checkbox .
                     
 
 
@@ -2001,9 +1988,7 @@ roud-oeuvres:publicationIsTranscribed   rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "La publication a été retranscrite ou avec OCR corrigé."@fr ,
                                                       "The publication has been transcribed or OCR and then corrected."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                        salsah-gui:guiOrder "11"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:SimpleText .
 
 
                      
@@ -2023,9 +2008,7 @@ roud-oeuvres:originalIsInCrlrArchive    rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "Original est dans le fonds Roud au CRLR ou dans un autre fonds."@fr ,
                                                       "Original in is Roud archive at CRLR or in other archive."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                        salsah-gui:guiOrder "14"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -2081,9 +2064,7 @@ roud-oeuvres:publicationHasInternalComment    rdf:type owl:ObjectProperty ;
                                                             "Internal comment on the publication, for the project team only."@en ;
 
                                               
-                                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                              salsah-gui:guiOrder "14"^^xsd:integer .
+                                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
