@@ -489,8 +489,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasTextContent ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger 
-                                ## salsah-gui:guiOrder "8"^^xsd:integer 
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -2061,7 +2061,7 @@ roud-oeuvres:establishedTextHasInternalComment    rdf:type owl:ObjectProperty ;
 
 
 
-
+j
 roud-oeuvres:hasDirectSourcePublication   rdf:type owl:ObjectProperty ;
       
                                           rdfs:subPropertyOf knora-base:hasLinkTo ;
@@ -2950,9 +2950,7 @@ roud-oeuvres:hasTextContent   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Le texte établi."@fr ,
                                             "The established text."@en ;
 
-    		                      salsah-gui:guiElement salsah-gui:Richtext ;
-
-    		                      salsah-gui:guiOrder "7"^^xsd:integer .
+    		                      salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
