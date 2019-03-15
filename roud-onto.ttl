@@ -85,22 +85,26 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptIsInArchive ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasTitle ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasShelfmark ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasOldShelfmark ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                   
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -560,8 +564,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:establishedTextHasTitle ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "0"^^xsd:integer 
+                                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -572,20 +576,20 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:isInPaperEdition ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "11"^^xsd:integer 
+                                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:scanIsInDigitalEdition ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "12"^^xsd:integer 
+                                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "18"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:txtIsInDigitalEdition ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "13"^^xsd:integer 
+                                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "19"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -934,7 +938,8 @@ roud-oeuvres:Photo    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasTitle ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                        salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -1068,9 +1073,7 @@ roud-oeuvres:manuscriptIsInArchive   rdf:type  owl:ObjectProperty ;
 
                                         salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
 
-                                        salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                                        salsah-gui:guiOrder "1"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
@@ -1091,10 +1094,8 @@ roud-oeuvres:isInPaperEdition   rdf:type  owl:ObjectProperty ;
 
                                 salsah-gui:guiElement salsah-gui:Pulldown ;
                                 
-                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+                                salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" .
 
-
-                                salsah-gui:guiOrder "17"^^xsd:integer .
 
 
 
@@ -1115,9 +1116,7 @@ roud-oeuvres:scanIsInDigitalEdition   rdf:type  owl:ObjectProperty ;
 
                                       salsah-gui:guiElement salsah-gui:Pulldown ;
 
-                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
-
-                                      salsah-gui:guiOrder "18"^^xsd:integer .
+                                      salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" .
 
 
 
@@ -1138,10 +1137,8 @@ roud-oeuvres:txtIsInDigitalEdition  rdf:type  owl:ObjectProperty ;
 
                                     salsah-gui:guiElement salsah-gui:Pulldown ;
 
-                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" ;
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>" .
 
-                                    salsah-gui:guiOrder "19"^^xsd:integer .
-                                        
 
 
 roud-oeuvres:hasTitle   rdf:type owl:ObjectProperty ;
@@ -1176,9 +1173,7 @@ roud-oeuvres:manuscriptHasTitle    rdf:type owl:ObjectProperty ;
                                       rdfs:comment  "Le titre du document."@fr ,
                                                     "The title of the document."@en ;
 
-                                      salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                      salsah-gui:guiOrder "0"^^xsd:integer .
+                                      salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -1200,9 +1195,7 @@ roud-oeuvres:photoHasTitle 	  rdf:type owl:ObjectProperty ;
 	                          rdfs:comment  "La légende de la photo, attributé le plus souvent par les chercheurs."@fr ,
 	                                        "The legend of the photo, attributed mostly by researchers."@en ;
 
-	                          salsah-gui:guiElement salsah-gui:SimpleText ;
-
-	                          salsah-gui:guiOrder "0"^^xsd:integer .
+	                          salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:establishedTextHasTitle    rdf:type owl:ObjectProperty ;
@@ -1222,9 +1215,7 @@ roud-oeuvres:establishedTextHasTitle    rdf:type owl:ObjectProperty ;
                                         rdfs:comment  "Le titre qui apparaitra dans l'édition."@fr ,
                                                       "The title, as it will appear in the edition."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                        salsah-gui:guiOrder "0"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -1265,15 +1256,13 @@ roud-oeuvres:manuscriptHasShelfmark   rdf:type owl:ObjectProperty ;
                                       rdfs:comment  "La cote du document."@fr ,
                                                     "The shelfmark of the document."@en ;
 
-                                      salsah-gui:guiElement salsah-gui:SimpleText ;
+                                      salsah-gui:guiElement salsah-gui:SimpleText .
 
-                                      salsah-gui:guiOrder "2"^^xsd:integer .
 
-                  
 
 
 roud-oeuvres:manuscriptHasOldShelfmark      rdf:type owl:ObjectProperty ;
-                          
+
                                             rdfs:subPropertyOf  knora-base:hasValue ;
 
                                             rdfs:subPropertyOf roud-oeuvres:hasShelfmark ;
@@ -1289,9 +1278,7 @@ roud-oeuvres:manuscriptHasOldShelfmark      rdf:type owl:ObjectProperty ;
                                             rdfs:comment  "Ancienne cote du document."@fr ,
                                                           "The old shelfmark of the document."@en ;
 
-                                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                            salsah-gui:guiOrder "3"^^xsd:integer .
+                                            salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
