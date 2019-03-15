@@ -1823,6 +1823,9 @@ roud-oeuvres:hasPublishedReference  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
+                                    rdfs:label  "Référence bibliographique"@fr ,
+                                                "Bibliographical reference"@en ;
+
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;        
 
                                         knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
@@ -1852,6 +1855,9 @@ roud-oeuvres:manuscriptHasPublishedReference  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:manuscriptHasPublishedReferenceValue rdf:type owl:ObjectProperty ;
                       
+                                              rdfs:label  "Référence bibliographique (pour les manuscrits qui sont en lien avec une publication)"@fr ,
+                                                          "Bibliographical reference (for manuscripts linked to a publication)"@en ;
+
                                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;        
                                                   
                                                   knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
@@ -1880,6 +1886,10 @@ roud-oeuvres:hasTranslatedAuthor    rdf:type owl:ObjectProperty ;
                                   
 
 roud-oeuvres:hasTranslatedAuthorValue   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:label  "Auteur traduit"@fr ,
+                                                "The translated author"@en ,
+                                                "Autore tradotto"@it ;
 
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -2130,6 +2140,10 @@ roud-oeuvres:hasDirectSourcePublication   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasDirectSourcePublicationValue    rdf:type owl:ObjectProperty ;
       
+                                          rdfs:label  "Témoin de base (publication)"@fr ,
+                                                      "Base witness (publication)"@en ,
+                                                      "Testimone di base (pubblicazione)"@it ;
+
                                                 rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                                 knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -2159,6 +2173,10 @@ roud-oeuvres:hasDirectSourceManuscript    rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasDirectSourceManuscriptValue     rdf:type owl:ObjectProperty ;
       
+                                          rdfs:label  "Témoin de base (document d'archive)"@fr ,
+                                                      "Base witness (manuscript)"@en ,
+                                                      "Testimone di base (manoscritto)"@it ;
+
                                                 rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                                 knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -2186,6 +2204,10 @@ roud-oeuvres:hasDirectSourcePageStart     rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasDirectSourcePageStartValue      rdf:type owl:ObjectProperty ;
       
+                                          rdfs:label  "Spécifier les pages du témoin de base (publication ou manuscrit) si ne correspondent pas à la totalité du document (ex., pages d'un cahier). Première page"@fr ,
+                                                      "Specify the pages of the base witness (publication or archival document) if they do not correspond to the entire document (ex., pages of a notebook). Starting page"@en ,
+                                                      "Specificare le pagine del testimone di base (pubblicazione o manoscritto) se non corrispondono alla totalità del documento (es., pagine di un quaderno). Prima pagina"@it ;
+
                                                 rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                                 knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -2213,6 +2235,10 @@ roud-oeuvres:hasDirectSourcePageEnd     rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasDirectSourcePageEndValue    rdf:type owl:ObjectProperty ;
       
+                                          rdfs:label  "Spécifier les pages du témoin de base (publication ou manuscrit) si ne correspondent pas à la totalité du document (ex., pages d'un cahier). Dernière page (indiquer aussi quand est égale à la première)"@fr ,
+                                                      "Specify the pages of the base witness (publication or archival document) if they do not correspond to the entire document (ex., pages of a notebook). Ending page (indicate also if the same of the starting page)"@en ,
+                                                      "Specificare le pagine del testimone di base (pubblicazione o manoscritto) se non corrispondono alla totalità del documento (es., pagine di un quaderno). Ultima pagina (indicare anche quando è la stessa della prima)"@it ;
+
                                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                             knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -2285,6 +2311,10 @@ roud-oeuvres:pageIsPartOfManuscript  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:pageIsPartOfManuscriptValue     rdf:type owl:ObjectProperty ;
       
+                                        rdfs:label  "Page de"@fr ,
+                                                    "Page of"@en ,
+                                                    "Pagina di"@it ;
+
 		                                        rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
 		                                        knora-base:subjectClassConstraint roud-oeuvres:Page ;
@@ -2497,6 +2527,10 @@ roud-oeuvres:isPublishedInPeriodical  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:isPublishedInPeriodicalValue   rdf:type owl:ObjectProperty ;
 
+                                      rdfs:label  "Périodique"@fr ,
+                                                  "Periodical"@en ,
+                                                  "Periodico"@it ;
+
                                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                             knora-base:subjectClassConstraint roud-oeuvres:PeriodicalArticle ;
@@ -2621,6 +2655,10 @@ roud-oeuvres:hasPublisher     rdf:type  owl:ObjectProperty ;
 
 roud-oeuvres:hasPublisherValue    rdf:type  owl:ObjectProperty ;
 
+                              rdfs:label  "Maison d'édition"@fr ,
+                                          "Publisher"@en ,
+                                          "Casa editrice"@it ;
+
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Book ;
@@ -2647,6 +2685,10 @@ roud-oeuvres:bookSectionHasPublisher    rdf:type  owl:ObjectProperty ;
 
 
 roud-oeuvres:bookSectionHasPublisherValue   rdf:type  owl:ObjectProperty ;
+
+                                        rdfs:label  "Maison d'édition"@fr ,
+                                                    "Publisher"@en ,
+                                                    "Casa editrice"@it ;
 
                                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -2772,6 +2814,10 @@ roud-oeuvres:hasPhoto   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasPhotoValue  rdf:type owl:ObjectProperty ;
 
+                        rdfs:label  "(Propriété abstraite, seulement pour les requêtes) A une photo"@fr ,
+                                    "(Abstract property, only for querying) Has a photo"@en ,
+                                    "(Proprietà astratta, solo per le ricerche) Ha una foto"@it ;
+
                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
                             
                             knora-base:objectClassConstraint knora-base:LinkValue .
@@ -2801,6 +2847,10 @@ roud-oeuvres:publicationHasPhoto    rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:publicationHasPhotoValue   rdf:type owl:ObjectProperty ;
+
+                                    rdfs:label  "Photo dans la publication"@fr ,
+                                                "Photo in the publication"@en ,
+                                                "Foto nella pubblicazione"@it ;
 
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -2833,6 +2883,10 @@ roud-oeuvres:artworkHasPhoto    rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:artworkHasPhotoValue   rdf:type owl:ObjectProperty ;
+
+                                rdfs:label  "Reproduction de l'œuvre"@fr ,
+                                            "Reproduction of the work"@en ,
+                                            "Riproduzione dell'opera"@it ;
 
                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -2881,6 +2935,10 @@ roud-oeuvres:hasAuthor  rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:hasAuthorValue   rdf:type owl:ObjectProperty ;
 
+                        rdfs:label  "(Propriété abstraite, seulement pour les requêtes) A un-e auteur"@fr ,
+                                    "(Abstract property, only for querying) Has an author"@en ,
+                                    "(Proprietà astratta, solo per le ricerche) Ha un autore o un'autrice"@it ;
+
                               rdfs:subPropertyOf knora-base:hasLinkToValue ;
                               
                               knora-base:objectClassConstraint knora-base:LinkValue .
@@ -2910,6 +2968,10 @@ roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:publicationHasAuthorValue  rdf:type owl:ObjectProperty ;
+
+                                    rdfs:label  "Auteur"@fr ,
+                                                "Author"@en ,
+                                                "Autore"@it ;
 
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -2962,6 +3024,10 @@ roud-oeuvres:publicationIsEditionOf   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:publicationIsEditionOfValue    rdf:type owl:ObjectProperty ;
 
+                                      rdfs:label  "Est un édition de l'œuvre"@fr ,
+                                                  "Is an edition of the work"@en ,
+                                                  "È un'edizione dell'opera"@it ;
+
                                             rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                             knora-base:subjectClassConstraint roud-oeuvres:Publication ;
@@ -2989,6 +3055,10 @@ roud-oeuvres:manuscriptIsPartOfGeneticDossier   rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:manuscriptIsPartOfGeneticDossierValue  rdf:type owl:ObjectProperty ;
+
+                                                rdfs:label  "(ONLY DOCS) Le document fait partie du dossier génétique"@fr ,
+                                                            "(ONLY DOCS) The document is part of the genetic dossier"@en ,
+                                                            "(ONLY DOCS) Il documento fa parte del dossier genetico"@it ;
 
                                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -3172,6 +3242,10 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:workHasAuthorValue   rdf:type owl:ObjectProperty ;
 
+                              rdfs:label  "Auteur de l'œuvre"@fr ,
+                                          "The author of the work"@en ,
+                                          "Autore o autrice dell'opera"@it ;
+
                               rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                               knora-base:subjectClassConstraint roud-oeuvres:Work ;
@@ -3269,6 +3343,10 @@ roud-oeuvres:bioeventHasPhoto   rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:bioeventHasPhotoValue  rdf:type owl:ObjectProperty ;
+
+                                rdfs:label  "Photo liée à l'événement ou à la période"@fr ,
+                                            "Photo related with the event or period"@en ,
+                                            "Foto dell'avvenimento o del periodo"@it ;
 
                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -3621,6 +3699,10 @@ roud-oeuvres:personHasPhoto   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:personHasPhotoValue  rdf:type owl:ObjectProperty ;
 
+                              rdfs:label  "Photo de la personne"@fr ,
+                                          "Photo of the person"@en ,
+                                          "Foto della persona"@it ;
+
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Person ;
@@ -3651,6 +3733,10 @@ roud-oeuvres:isReferenceFor   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:isReferenceForValue  rdf:type owl:ObjectProperty ;
 
+                              rdfs:label  "La personne réelle est une référence pour le personnage"@fr ,
+                                          "The real person is reference for a character"@en ,
+                                          "La persone reale è un riferimento per il personaggio"@it ;
+
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Person ;
@@ -3680,6 +3766,10 @@ roud-oeuvres:isCharacterIn    rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:isCharacterInValue   rdf:type owl:ObjectProperty ;
 
+                                  rdfs:label  "Est un personnage dans"@fr ,
+                                              "Is a character in"@en ,
+                                              "È un personaggio in"@it ;
+
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Person ;
@@ -3707,6 +3797,10 @@ roud-oeuvres:personIsSameAsAuthor   rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:personIsSameAsAuthorValue  rdf:type owl:ObjectProperty ;
+
+                                        rdfs:label  "Est le/a même que (lien vers traducteur, collaborateur, artiste, etc.)"@fr ,
+                                                    "Is same as (link to tranlator, collaborator, artist)"@en ,
+                                                    "É lo stesso che (link a autore, traduttore, collaboratore, artista)"@it ;
 
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -3738,6 +3832,10 @@ roud-oeuvres:photoHasAuthor   rdf:type owl:ObjectProperty ;
                                   
 
 roud-oeuvres:photoHasAuthorValue    rdf:type owl:ObjectProperty ;
+
+                              rdfs:label  "Auteur de la photo"@fr ,
+                                          "The author of the photo"@en ,
+                                          "Autore o autrice della foto"@it ;
 
                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -3939,6 +4037,10 @@ roud-oeuvres:placeHasPhoto    rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:placeHasPhotoValue   rdf:type owl:ObjectProperty ;
 
+                                  rdfs:label  "Photo du lieu"@fr ,
+                                              "Photo of the place"@en ,
+                                              "Foto del luogo"@it ;
+
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                   knora-base:subjectClassConstraint roud-oeuvres:Place ;
@@ -3969,6 +4071,10 @@ roud-oeuvres:diaryRewrittenInDiary  rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:diaryRewrittenInDiaryValue   rdf:type owl:ObjectProperty ;
+
+                                          rdfs:label  "(ONLY DIARY) La note de journal est réécrite dans une note d'une autre niveau"@fr ,
+                                                      "(ONLY DIARY) The diary entry is rewritten in a diary entry of another level"@en ,
+                                                      "(ONLY DIARY) L'entrata del diario è riscritta in un'entrata di diario di diverso livello"@it ;
 
                                           rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -4001,6 +4107,10 @@ roud-oeuvres:isBeforeInAvantTexte rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:isBeforeInAvantTexteValue  rdf:type owl:ObjectProperty ;
 
+                                        rdfs:label  "(ONLY DOCS) Dans l'avant-texte le document précède (un autre document)"@fr ,
+                                                    "(ONLY DOCS) In the avant-texte the document is before (another document)"@en ,
+                                                    "(ONLY DOCS) Nell'avantesto il documento precede (un altro documento)"@it ;
+
                                         rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                         knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -4028,6 +4138,10 @@ roud-oeuvres:isReusedIn rdf:type owl:ObjectProperty ;
                         salsah-gui:guiElement salsah-gui:Searchbox .
 
 roud-oeuvres:isReusedInValue  rdf:type owl:ObjectProperty ;
+
+                              rdfs:label  "(Propriété abstraite, seulement pour les requêtes) Réutilisation de matériaux"@fr ,
+                                          "(Abstract property, only for querying) Reuse of materials"@en ,
+                                          "(Proprietà astratta, solo per le ricerche) Riuso di materiali"@it ;
 
                               rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -4058,6 +4172,10 @@ roud-oeuvres:diaryReusedIn  rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:diaryReusedInValue   rdf:type owl:ObjectProperty ;
+
+                                  rdfs:label  "(ONLY DIARY) La note de journal inédite est utilisé dans un dossier génétique"@fr ,
+                                              "(ONLY DIARY) The unpublished note is used in a genetic dossier"@en ,
+                                              "(ONLY DIARY) La nota di giornale inedita è usata in un dossier genetico"@it ;
 
                                   rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -4091,6 +4209,10 @@ roud-oeuvres:publicationReusedInNewText   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:publicationReusedInNewTextValue  rdf:type owl:ObjectProperty ;
 
+                                              rdfs:label  "(ONLY PUB) Publication reprise partiellement ou integralement dans le dossier génétique d'un nouveau texte [Exemple : Préface Colomb]"@fr ,
+                                                          "(ONLY PUB) Publication reused (partially or integrally) in the genetic dossier of a new text [e.g. Préface Colomb]"@en ,
+                                                          "(ONLY PUB) Pubblicazione riutilizzata (parzialmente o integralmente) nel dossier genetico di un nuovo testo [es. Préface Colomb]"@it ;
+
                                               rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                               knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -4121,6 +4243,10 @@ roud-oeuvres:publicationPartiallyReusedInCollection   rdf:type owl:ObjectPropert
 
 
 roud-oeuvres:publicationPartiallyReusedInCollectionValue  rdf:type owl:ObjectProperty ;
+
+                                                          rdfs:label  "(ONLY PUB) Publication partiellement reprise dans le dossier génétique d'un recueil [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]"@fr ,
+                                                                      "(ONLY PUB) Publication partially reused in genetic dossier of a collection"@en ,
+                                                                      "(ONLY PUB) Pubblicazione ripresa parzialmente nel dossier genetico per una raccolta"@it ;
 
                                                           rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
@@ -4153,6 +4279,10 @@ roud-oeuvres:publicationFullyReusedInCollection   rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:publicationFullyReusedInCollectionValue  rdf:type owl:ObjectProperty ;
 
+                                                      rdfs:label  "(ONLY PUB) Publication integrallement reprise dans le dossier génétique d'un recueil [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@fr ,
+                                                                  "(ONLY PUB) Publication fully reused in genetic dossier of a collection"@en ,
+                                                                  "(ONLY PUB) Pubblicazione ripresa integralmente nel dossier genetico per una raccolta"@it ;
+
                                                       rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                                       knora-base:subjectClassConstraint roud-oeuvres:EstablishedText ;
@@ -4183,6 +4313,10 @@ roud-oeuvres:publicationIsReissued  rdf:type owl:ObjectProperty ;
 
 
 roud-oeuvres:publicationIsReissuedValue   rdf:type owl:ObjectProperty ;
+
+                                          rdfs:label  "(ONLY PUB) Publication réédité (lien vers dossier génétique de la réédition)"@fr ,
+						      "(ONLY PUB) Publication reissued (link to genetic dossier of the reissue)"@en ,
+						      "(ONLY PUB) Nuova edizione della pubblicazione (link verso il dossier genetico della riedizione)"@it ;
 
                                           rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
