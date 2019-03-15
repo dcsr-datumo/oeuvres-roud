@@ -495,8 +495,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasDirectSourcePublication ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                                ## salsah-gui:guiOrder "6"^^xsd:integer 
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -2077,9 +2077,7 @@ roud-oeuvres:hasDirectSourcePublication   rdf:type owl:ObjectProperty ;
                                           rdfs:comment    "La source directe pour l'édition, quand il s'agit d'une publication."@fr ,
                                                           "The direct source of the edition, when it is a publication."@en ;
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                          salsah-gui:guiOrder "3"^^xsd:integer .
+                                          salsah-gui:guiElement salsah-gui:Searchbox .
 
 
                                         
