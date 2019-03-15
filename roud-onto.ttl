@@ -363,7 +363,8 @@ roud-oeuvres:Publisher    rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publisherHasNotice ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+		            salsah-gui:"2"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Maison d'édition"@fr ,
                                       "Publisher"@en ,
@@ -456,7 +457,8 @@ roud-oeuvres:Periodical   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:periodicalHasNotice ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+		            salsah-gui:"1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Périodique"@fr ,
                                       "Journal"@en ,
@@ -484,7 +486,8 @@ roud-oeuvres:Author       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:authorHasAuthorityID ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"2"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -735,7 +738,8 @@ roud-oeuvres:Work   rdf:type   owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasAuthor ;
-                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+		      salsah-gui:"0"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
@@ -745,12 +749,14 @@ roud-oeuvres:Work   rdf:type   owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasDate ;
-                      owl:minCardinality "0"^^xsd:nonNegativeInteger
+                      owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+		      salsah-gui:"2"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasNotice ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                      owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+		      salsah-gui:"3"^^xsd:nonNegativeInteger
                     ];
                     rdfs:label  "(Classe abstraite, seulement pour les requêtes. Œuvre)"@fr ,
                                 "(Abstract class, only for querying. Work)"@en ,
@@ -851,7 +857,8 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasAuthorityID ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"4"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -931,22 +938,26 @@ roud-oeuvres:Bioevent     rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasDate ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasTitle ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasNotice ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"2"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:bioeventHasPhoto ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"3"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -3083,9 +3094,7 @@ roud-oeuvres:hasNotice  rdf:type  owl:ObjectProperty ;
                         rdfs:comment  "A une notice. Property abstraite. Voir les subproperties."@fr ,
                                       "There is a note (short explanation or description). Abstract property. See subproperties."@en ;
 
-                        salsah-gui:guiElement salsah-gui:Richtext ;
-
-                        salsah-gui:guiOrder "0"^^xsd:integer .
+                        salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3106,9 +3115,7 @@ roud-oeuvres:publisherHasNotice   rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Quelques informations sur la maison d'édition, relevant dans le contexte de l'édition et de la présentation des textes de Roud."@fr ,
                                                 "Some information about the publisher, relevant in the context of the edition and presentation of Roud's texts."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                  salsah-gui:guiOrder "2"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3129,9 +3136,7 @@ roud-oeuvres:periodicalHasNotice  rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Quelques informations sur le périodique, relevant dans le contexte de l'édition et de la présentation des textes de Roud."@fr ,
                                                 "Some information about the periodical, relevant in the context of the edition and presentation of Roud's texts."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                  salsah-gui:guiOrder "1"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3152,9 +3157,7 @@ roud-oeuvres:workHasNotice    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Quelques informations sur l'œuvre, relevant dans le contexte de l'édition et de la présentation des textes de Roud."@fr ,
                                             "Some information about the work, relevant in the context of the edition and presentation of Roud's texts."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "3"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3175,9 +3178,7 @@ roud-oeuvres:workHasDate      rdf:type owl:ObjectProperty ;
                               rdfs:comment  "La date de l'œuvre."@fr ,
                                             "The date of the work."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Date ;
-
-                              salsah-gui:guiOrder "2"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -3198,9 +3199,7 @@ roud-oeuvres:workHasAuthor    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "L'auteur de l'œuvre."@fr ,
                                             "The author of the work."@en ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "0"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
                                   
 
 roud-oeuvres:workHasAuthorValue   rdf:type owl:ObjectProperty ;
@@ -3230,9 +3229,7 @@ roud-oeuvres:bioeventHasTitle     rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Le titre de l'événement. Par exemple, le titre d'une section de la biographie de Gustave Roud."@fr ,
                                                 "The title of the event. For example, the title of a one section of Roud's biography."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                  salsah-gui:guiOrder "0"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3253,9 +3250,7 @@ roud-oeuvres:bioeventHasNotice    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Le texte qui décrit un événement en particulier ou une période de la biographie de Gustave Roud."@fr ,
                                             "The text that describes an event or period in Roud's biography."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "2"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3279,9 +3274,7 @@ roud-oeuvres:bioeventHasDate      rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "La date ou les dates d'un événement ou d'une période de la biographie de Gustave Roud."@fr ,
                                                 "The date or dates of an event or period in Roud's biography."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:Date ;
-
-                                  salsah-gui:guiOrder "1"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -3302,9 +3295,7 @@ roud-oeuvres:bioeventHasPhoto   rdf:type owl:ObjectProperty ;
                                 rdfs:comment  "Une photo liée à l'événement ou à la période."@fr ,
                                               "Photo related with the event or the period."@en ;
 
-                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                salsah-gui:guiOrder "3"^^xsd:integer .
+                                salsah-gui:guiElement salsah-gui:Searchbox .
 
                                                           
 
@@ -3357,9 +3348,7 @@ roud-oeuvres:personHasAuthorityID   rdf:type owl:ObjectProperty ;
 
                                                   ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "4"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:authorHasAuthorityID   rdf:type owl:ObjectProperty ;
@@ -3381,9 +3370,7 @@ roud-oeuvres:authorHasAuthorityID   rdf:type owl:ObjectProperty ;
 
                                                   ## ISNI ??? écrit à la Bibliothèque nationale suisse pour savoir s'ils ont leur propre système d'identifiants 
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "2"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
