@@ -30,7 +30,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasDocumentType ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -60,27 +61,32 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasSupportType ;    
-                            owl:cardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasSupportInfo ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasWritingTool ;   
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasWritingColor ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasOtherWritingTool ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                      
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -110,12 +116,13 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasEditorialSet ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger
+                            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;  
                             owl:onProperty roud-oeuvres:hasAnnotation ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -125,7 +132,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;  
                             owl:onProperty roud-oeuvres:isPhotocopy ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger               
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -1363,9 +1371,7 @@ roud-oeuvres:isPhotocopy    rdf:type owl:ObjectProperty ;
                             rdfs:comment  "Le document est une photocopie de l'original."@fr ,
                                           "The document is a photocopy of the original."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Checkbox ;
-
-                              salsah-gui:guiOrder "5"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Checkbox .
 
 
 
@@ -1389,9 +1395,7 @@ roud-oeuvres:hasDocumentType  rdf:type  owl:ObjectProperty ;
                               rdfs:comment  "Le type de document : manuscrit, dactylogramme, imprimé"@fr ,
                                             "The document type: manuscript, typescript, print."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                              salsah-gui:guiOrder "6"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
@@ -1410,9 +1414,7 @@ roud-oeuvres:hasAnnotation  rdf:type owl:ObjectProperty ;
                             rdfs:comment  "Le document presènte des annotations manuscrites."@fr ,
                                           "The document has annotations."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Checkbox ;
-
-                              salsah-gui:guiOrder "7"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Checkbox .
 
 
 
@@ -1434,9 +1436,7 @@ roud-oeuvres:hasSupportType   rdf:type  owl:ObjectProperty ;
                               rdfs:comment  "Le type de support matérial du document."@fr ,
                                             "The type pf material support du document."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                              salsah-gui:guiOrder "8"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
                     
@@ -1456,9 +1456,7 @@ roud-oeuvres:hasSupportInfo rdf:type owl:ObjectProperty ;
                             rdfs:comment  "Plus d'informations sur le support matériel, comme quantité de feuillets et papier particulier."@fr,
                                           "More info about the material support."@en ;
                             
-                            salsah-gui:guiElement salsah-gui:Richtext ;
-                            
-                            salsah-gui:guiOrder "9"^^xsd:integer .
+                            salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -1480,9 +1478,7 @@ roud-oeuvres:hasWritingTool   rdf:type  owl:ObjectProperty ;
                               rdfs:comment  "L'instrument d'écriture de l'écriture principale."@fr ,
                                             "The writing tool of the main layer."@en  ; ## layer? vd. anche sotto
 
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                              salsah-gui:guiOrder "10"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
@@ -1505,9 +1501,7 @@ roud-oeuvres:hasWritingColor  rdf:type  owl:ObjectProperty ;
                               rdfs:comment  "La couleur de l'écriture principale"@fr ,
                                             "The color or the main writing."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Pulldown ;
-
-                              salsah-gui:guiOrder "11"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 
@@ -1526,9 +1520,7 @@ roud-oeuvres:hasOtherWritingTool  rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Autres instruments d'écriture utilisés dans le document."@fr ,
                                                 "Other writing tools in use in the document"@en ;
                                   
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
-                                  
-                                  salsah-gui:guiOrder "12"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
