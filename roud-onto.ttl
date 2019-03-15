@@ -176,7 +176,8 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:pageIsPartOfManuscript ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger                    
+                      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                      salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
@@ -186,12 +187,14 @@ roud-oeuvres:Page   rdf:type owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:pageHasName ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                      salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:hasSeqnum ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger                 
+                      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                      salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger
                     ];
                                  
                     rdfs:label    "Page scannée d'un document ou d'une publication"@fr,
@@ -539,7 +542,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasDirectSourcePosition ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -2191,9 +2195,7 @@ roud-oeuvres:hasDirectSourcePosition  rdf:type owl:ObjectProperty ;
                                       rdfs:comment    "Cette propriété permet de créer une table de matière de l'ensemble (cahier, recueil, etc.)."@fr ,
                                                       "This property allows for the creation of a table of contents for notebook, collection, etc."@en ;
 
-                                      salsah-gui:guiElement salsah-gui:Spinbox ;
-
-                                      salsah-gui:guiOrder "4"^^xsd:integer .
+                                      salsah-gui:guiElement salsah-gui:Spinbox .
 
 
 roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
@@ -2213,9 +2215,7 @@ roud-oeuvres:pageHasName  rdf:type owl:ObjectProperty ;
                           rdfs:comment  "Utiliser le nom du scan, in extenso."@fr ,
                                         "Use the name of the scan, in extenso."@en ;
 
-                       	  salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                          salsah-gui:guiOrder "1"^^xsd:integer .
+                       	  salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -2271,9 +2271,7 @@ roud-oeuvres:hasSeqnum  rdf:type  owl:ObjectProperty ;
                         rdfs:comment  "Le numéro progressif indique l'ordre des pages."@fr ,  
                                       "The progressif number indicates the order of the pages."@en ;
 
-                        salsah-gui:guiElement salsah-gui:Spinbox ;
-
-                        salsah-gui:guiOrder "2"^^xsd:integer .
+                        salsah-gui:guiElement salsah-gui:Spinbox .
 
 
 
