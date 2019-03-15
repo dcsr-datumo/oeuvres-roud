@@ -39,6 +39,7 @@
 
 <http://rdfh.ch/users/eSpadini> a knora-base:User ;
 	knora-base:userid "eSpadini" ;
+	knora-base:username "eSpadini" ;
 	knora-base:givenName "Elena" ;
 	knora-base:familyName "Spadini" ;
 	knora-base:password "$e0801$Rqo/KdpRJrdfClnleE87H0eCxhUOQZLHi61eDALBBVIwWwrqhWLBlq0IuZ2U1I2g/tHsmbpzZ/LgSnF1+CJEdw==$xHzwW/GXVV0eSZiGjKleqGfQ90F6QlOIvV0hZLCOTRU=" ;
@@ -52,6 +53,7 @@
 
   <http://rdfh.ch/users/rLacord> a knora-base:User ;
   	knora-base:userid "rLacord" ;
+  	knora-base:username "rLacord" ;
   	knora-base:givenName "Raphaëlle" ;
   	knora-base:familyName "Lacord" ;
   	knora-base:password "$e0801$C+Y8x9ENM0/R4zy3xOkDHY93lKMxS2o+RHy+o/+bScxYEXawACa7Ut8F4cxJxnkse5bYJQN6oP4E+6Jq6KnPRQ==$Xdf9te3ufhy/kTpHmjSNbSIF4xtoAOIIMaUGu9zKTc4=" ;
@@ -65,6 +67,7 @@
 
   <http://rdfh.ch/users/aChristen> a knora-base:User ;
   	knora-base:userid "aChristen" ;
+  	knora-base:username "aChristen" ;
   	knora-base:givenName "Alessio" ;
   	knora-base:familyName "Christen" ;
   	knora-base:password "$e0801$pGiH23H1ERVr7LsD5Q5T3hYB7L1ulIjkhrGcOjR67YXg+jUyBCYFh2kiKVJyPgIGOwNBg+2E8Hw7ZCnfoG3eaQ==$fEDdz2FlLwXEhvKYDR/4Ag3S1u1rSVa3SnWyjAMxA/U=" ;
@@ -78,6 +81,7 @@
 
   <http://rdfh.ch/users/jBurri> a knora-base:User ;
   	knora-base:userid "jBurri" ;
+  	knora-base:username "jBurri" ;
   	knora-base:givenName "Julien" ;
   	knora-base:familyName "Burri" ;
   	knora-base:password "$e0801$uU86iwjYqylZk4fntS8B2Cs12hlsXvU3pfqGFUTMIKcQYaLGfZ8os7KGTCq+EZlgyHhk3MTZuEL+R4PzhaM0Lw==$KIBV8ohNpeze+ZN8sLx/VLb6b6SATNPi5KAzMYYTyA8=" ;
@@ -91,6 +95,7 @@
 
   <http://rdfh.ch/users/bPellegrino> a knora-base:User ;
   	knora-base:userid "bPellegrino" ;
+  	knora-base:username "bPellegrino" ;
   	knora-base:givenName "Bruno" ;
   	knora-base:familyName "Pellegrino" ;
   	knora-base:password "$e0801$bN84IU1URdaHyDaHv/l4bcoQcqChUvlFEEkcfD7qqs0Eae8i83fUD+ZVU+qhp8lLs/rxBz6fOVxq+rEhPEXE2g==$SXpws4TDx7N74GK2Nay0mNFx2JryrI32VhGjyeMLj+A=" ;
@@ -103,7 +108,8 @@
   	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
 
 <http://rdfh.ch/users/dMaggetti> a knora-base:User ;
-	knora-base:userid "dmaggetti" ;
+	knora-base:userid "dMaggetti" ;
+	knora-base:username "dMaggetti" ;
 	knora-base:givenName "Daniel" ;
 	knora-base:familyName "Maggetti" ;
 	knora-base:password "$e0801$BVA8n1Ed29F7qSvaZbrYLZKYJbzUa7qruYXoUBE2SFsck4qY4pcTar3ZTYAntYCgU7utclXytiJ3froTy/9xlg==$NALDyoPKKBE6jExtFW2WvC5pfvGJhFuldbV5L+NRAII=" ;
@@ -117,6 +123,7 @@
 
 <http://rdfh.ch/users/roud-oeuvres-test-user1> a knora-base:User ;
 	knora-base:userid "roud" ;
+	knora-base:username "roud" ;
 	knora-base:givenName "roud" ;
 	knora-base:familyName "roud" ;
 	knora-base:password "$e0801$FGl9FDIWw+D83OeNPGmD9u2VTqIkJopIQECgmb2DSWQLS0TeKSvYoWAkbEv6KxePPlCI3CP9MmVHuvnWv8/kag==$mlegCYdGXt+ghuo8i0rLjgOiNnGDW604Q5g/v7zwBPU=" ;
