@@ -17,7 +17,7 @@
         	knora-base:projectShortname "roud-oeuvres" ;
         	knora-base:projectShortcode "0112" ;
         	knora-base:projectDescription "Le projet « Les Œuvres complètes de Gustave Roud » fournit tous les textes de l'écrivain vaudois avec la notation complémentaire, contient les reproductions numériques des manuscrits originaux et offre de parcours critiques." ;
-        	knora-base:projectKeywords "Gustave Roud, édition, Vaud, littérature, écrivain, génétique" ;
+        	knora-base:projectKeywords "Gustave Roud"^^xsd:string, "édition"^^xsd:string, "Vaud"^^xsd:string, "littérature"^^xsd:string, "écrivain"^^xsd:string, "génétique"^^xsd:string ;
         	knora-base:projectOntology <http://www.knora.org/ontology/0112/roud-oeuvres> ;
         	knora-base:status "true"^^xsd:boolean ;
         	knora-base:hasSelfJoinEnabled "false"^^xsd:boolean .
