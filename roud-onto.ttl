@@ -61,13 +61,13 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;   
                             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedList ;   
-                            owl:maxCardinality "1";
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
                             salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                           ],                         
                           [
                             rdf:type owl:Restriction ;   
                             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedComputable ;   
-                            owl:maxCardinality "1" ;
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
                             salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                           ],
                           [
