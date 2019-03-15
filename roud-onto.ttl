@@ -228,7 +228,8 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasAuthor ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "1"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -248,17 +249,20 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasPhotoValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "9"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasTitle ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "2"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasDate ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger                 
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "6"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -353,12 +357,14 @@ roud-oeuvres:Publisher    rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publisherHasLocation ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "1"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publisherHasName ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "0"^^xsd:integer .
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -382,7 +388,8 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                             [
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:bookSectionHasPublisher ;
-                              owl:minCardinality "0"^^xsd:nonNegativeInteger
+                              owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                              salsah-gui:guiOrder "4"^^xsd:integer .
                             ],
                             [
                               rdf:type owl:Restriction ;
@@ -610,7 +617,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossier ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -710,12 +718,13 @@ roud-oeuvres:GeneticDossier   rdf:type  owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:geneticDossierResultsInPublication ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                owl:cardinality "1"^^xsd:nonNegativeInteger ;
+		                salsah-gui:"5"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:geneticDossierResultsInPublicationValue ;
-                                owl:cardinality "1"^^xsd:nonNegativeInteger
+                                owl:cardinality "1"^^xsd:nonNegativeInteger .
                               ];
                               rdfs:label  "Dossier génétique"@fr ,
                                           "Genetic dossier"@en ,
@@ -733,7 +742,8 @@ roud-oeuvres:Work   rdf:type   owl:Class ;
                     [
                       rdf:type owl:Restriction ;
                       owl:onProperty roud-oeuvres:workHasTitle ;
-                      owl:cardinality "1"^^xsd:nonNegativeInteger
+                      owl:cardinality "1"^^xsd:nonNegativeInteger ;
+		      salsah-gui:"1"^^xsd:nonNegativeInteger
                     ],
                     [
                       rdf:type owl:Restriction ;
@@ -780,12 +790,14 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhotoValue ;
-                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                          salsah-gui:guiOrder "4"^^xsd:integer .
                         ],
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasLinkToDigitalFacsimile ;
-                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                          salsah-gui:guiOrder "5"^^xsd:integer .
                         ];
 
                         rdfs:label  "Œuvre d'art"@fr ,
@@ -2651,9 +2663,7 @@ roud-oeuvres:bookSectionHasPublisher    rdf:type  owl:ObjectProperty ;
                                         rdfs:comment  "La maison d'édition."@fr ,
                                                       "The publisher."@en ;
 
-                                        salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                        salsah-gui:guiOrder "4"^^xsd:integer .
+                                        salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 roud-oeuvres:bookSectionHasPublisherValue   rdf:type  owl:ObjectProperty ;
@@ -2681,9 +2691,7 @@ roud-oeuvres:publisherHasLocation   rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le lieu de publication."@fr ,
                                                   "The publication place."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "1"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:hasName    rdf:type  owl:ObjectProperty ;
@@ -2719,9 +2727,7 @@ roud-oeuvres:publisherHasName     rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Le nom de la maison d'édition."@fr ,
                                                 "The name of the publisher."@en ;
 
-                               	  salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                  salsah-gui:guiOrder "0"^^xsd:integer .
+                               	  salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -2743,9 +2749,7 @@ roud-oeuvres:publicationHasDate     rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "La date de publication."@fr ,
                                                   "The publication date."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Date ;
-
-                                    salsah-gui:guiOrder "6"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Date .
 
 
 
@@ -2766,9 +2770,7 @@ roud-oeuvres:publicationHasTitle    rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le titre de la publication."@fr ,
                                                   "The publication title."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                    salsah-gui:guiOrder "2"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -2814,9 +2816,7 @@ roud-oeuvres:publicationHasPhoto    rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "La publication contient la photo."@fr ,
                                                   "The publication contains the photo."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                    salsah-gui:guiOrder "9"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
                                                               
 
 
@@ -2848,9 +2848,7 @@ roud-oeuvres:artworkHasPhoto    rdf:type owl:ObjectProperty ;
                                 rdfs:comment  "Reproduction de l'œuvre."@fr ,
                                               "Reproduction of the work."@en ;
 
-                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                salsah-gui:guiOrder "4"^^xsd:integer .
+                                salsah-gui:guiElement salsah-gui:Searchbox .
                                                               
 
 
@@ -2880,9 +2878,7 @@ roud-oeuvres:artworkHasLinkToDigitalFacsimile   rdf:type owl:ObjectProperty ;
                                                 rdfs:comment  "Lien (URL) à une reproduction numérique de l'œuvre, par exemple dans le site d'un musée ou sur wikipedia ; choisir le lien plus stable, qui ne va pas changer dans le temps."@fr ,
                                                               "Link (URL) to digital facsimile of the work, for exemple in the museum website or Wikipedia; chose the most stable resource."@en ;
 
-                                                salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                                salsah-gui:guiOrder "5"^^xsd:integer .
+                                                salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -2929,9 +2925,7 @@ roud-oeuvres:publicationHasAuthor   rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Auteur de la publication"@fr ,
                                                   "Publication author"@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                    salsah-gui:guiOrder "1"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
                                                               
 
 
@@ -3011,9 +3005,7 @@ roud-oeuvres:manuscriptIsPartOfGeneticDossier   rdf:type owl:ObjectProperty ;
                                                               "List all the documents that are part of a genetic dossier."@en ;
 
 
-                                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                                salsah-gui:guiOrder "11"^^xsd:integer .
+                                                salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 roud-oeuvres:manuscriptIsPartOfGeneticDossierValue  rdf:type owl:ObjectProperty ;
@@ -3041,9 +3033,7 @@ roud-oeuvres:geneticDossierResultsInPublication rdf:type owl:ObjectProperty ;
                                                               "The genetic dossier results in a publication, which should be specified using the corresponding website page."@en ;
 
 
-                                                salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                                salsah-gui:guiOrder "5"^^xsd:integer .
+                                                salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 roud-oeuvres:geneticDossierResultsInPublicationValue  rdf:type owl:ObjectProperty ;
@@ -3074,9 +3064,7 @@ roud-oeuvres:workHasTitle     rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Le titre de l'œuvre."@fr ,
                                             "The title of the work."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "1"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
