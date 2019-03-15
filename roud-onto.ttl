@@ -36,7 +36,8 @@ roud-oeuvres:Manuscript   rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:manuscriptHasDateReadable ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger       
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -614,6 +615,7 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:diaryRewrittenInDiary ;
                                 owl:minCardinality "0"^^xsd:nonNegativeInteger
+				salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -623,7 +625,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:isBeforeInAvantTexte ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -633,17 +636,19 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:diaryReusedIn ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:diaryReusedInValue ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger .
                               ],
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:publicationReusedInNewText ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -653,7 +658,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:publicationPartiallyReusedInCollection ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -663,7 +669,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:publicationFullyReusedInCollection ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -673,7 +680,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:publicationIsReissued ;
-                                owl:minCardinality "0"^^xsd:nonNegativeInteger
+                                owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+				salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -861,7 +869,8 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isCharacterInValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"9"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -891,7 +900,8 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"11"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
                                       "Person"@en ,
@@ -953,27 +963,32 @@ roud-oeuvres:Photo    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasDate ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                        salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoIsInArchive ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                        salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasShelfmark ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			salsah-gui:"2"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasNotice ;
                         owl:maxCardinality "1"^^xsd:nonNegativeInteger
+			salsah-gui:"5"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:photoHasAuthor ;
-                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			salsah-gui:"3"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -995,27 +1010,32 @@ roud-oeuvres:Place    rdf:type   owl:Class ;
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasName ;
-                        owl:cardinality "1"^^xsd:nonNegativeInteger
+                        owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			salsah-gui:"0"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLatitude ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			salsah-gui:"1"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasLongitude ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			salsah-gui:"2"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasNotice ;
-                        owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                        owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			salsah-gui:"3"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:placeHasPhoto ;
-                        owl:minCardinality "0"^^xsd:nonNegativeInteger
+                        owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			salsah-gui:"4"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -1556,9 +1576,7 @@ roud-oeuvres:manuscriptHasDateReadable      rdf:type owl:ObjectProperty ;
                                             rdfs:comment  "La date presente dans le manuscrit, s'il y en a."@fr ,
                                                           "The date present in the manuscript, if any."@en ;
 
-                                            salsah-gui:guiElement salsah-gui:SimpleText ;
-                                          
-                                            salsah-gui:guiOrder "13"^^xsd:integer .
+                                            salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:hasDateOrEstablishedDateComputable rdf:type owl:ObjectProperty ;
@@ -3712,9 +3730,7 @@ roud-oeuvres:isCharacterIn    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Est un personnage dans"@fr ,
                                             "Is a character in"@en ;
 
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "9"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
                                                         
 
 
@@ -3742,9 +3758,7 @@ roud-oeuvres:personIsSameAsAuthor   rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Est le/a même que (lien vers traducteur, collaborateur, artiste, etc.)"@fr ,
                                                   "Is same as (link to tranlator, collaborator, artist)"@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                    salsah-gui:guiOrder "11"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
                                                         
 
 
@@ -3775,9 +3789,7 @@ roud-oeuvres:photoHasAuthor   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "L'auteur de la photo."@fr ,
                                             "The author of the photo."@en ;
                               
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "3"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
 
                                   
 
@@ -3807,12 +3819,8 @@ roud-oeuvres:photoHasDate      rdf:type owl:ObjectProperty ;
                                                 "Data della foto"@it ;
 
                                     rdfs:comment  "La date de la photo."@fr ,
-                                                  "The date of the photo."@en ;
-                              
-                                    salsah-gui:guiElement salsah-gui:Date ;
+                                                  "The date of the photo."@en .
 
-                                    salsah-gui:guiOrder "4"^^xsd:integer .
-                              
 
 
 
@@ -3833,9 +3841,7 @@ roud-oeuvres:photoHasNotice   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Brève note sur la photo."@fr ,
                                             "Short note on the photo."@en ;
                               
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "5"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
                               
 
 
@@ -3860,10 +3866,8 @@ roud-oeuvres:photoIsInArchive       rdf:type owl:ObjectProperty ;
                               
                                     salsah-gui:guiElement salsah-gui:Pulldown ;
                                     
-                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" ;
+                                    salsah-gui:guiAttribute "hlist=<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>" .
 
-                                    salsah-gui:guiOrder "1"^^xsd:integer .
-                                    
 
 
 roud-oeuvres:photoHasShelfmark      rdf:type owl:ObjectProperty ;
@@ -3883,9 +3887,7 @@ roud-oeuvres:photoHasShelfmark      rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "La cote de la photo."@fr ,
                                                   "The shelfmark of the photo."@en ;
                               
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "2"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
   
 
@@ -3906,9 +3908,7 @@ roud-oeuvres:placeHasName     rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Le nom du lieu."@fr ,
                                             "The name of the place."@en ;
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                              salsah-gui:guiOrder "0"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3927,9 +3927,7 @@ roud-oeuvres:hasLatitude    rdf:type owl:ObjectProperty ;
                             rdfs:comment  "La latitude du lieu."@fr ,
                                           "The latitude of the place."@en ;
 
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                            salsah-gui:guiOrder "1"^^xsd:integer .
+                            salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3948,9 +3946,7 @@ roud-oeuvres:hasLongitude   rdf:type owl:ObjectProperty ;
                             rdfs:comment  "La longitude du lieu."@fr ,
                                           "The longitude of the place."@en ;
 
-                            salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                            salsah-gui:guiOrder "2"^^xsd:integer .
+                            salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3972,9 +3968,7 @@ roud-oeuvres:placeHasNotice   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Brève note sur le lieu."@fr ,
                                             "Short note about the place."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "3"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3995,9 +3989,7 @@ roud-oeuvres:placeHasPhoto    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Une photo du lieu."@fr ,
                                             "The photo of the place."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "4"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
           
 
 
@@ -4029,9 +4021,7 @@ roud-oeuvres:diaryRewrittenInDiary  rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Passage d'un niveau à l'autre du journal."@fr ,
                                                   "Different diary levels."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                    salsah-gui:guiOrder "9"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 roud-oeuvres:diaryRewrittenInDiaryValue   rdf:type owl:ObjectProperty ;
@@ -4061,9 +4051,7 @@ roud-oeuvres:isBeforeInAvantTexte rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Parcous à l'intérieur de l'avant-texte."@fr ,
                                                 "Creates the path in the avant-texte."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                                  salsah-gui:guiOrder "12"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 
@@ -4122,9 +4110,7 @@ roud-oeuvres:diaryReusedIn  rdf:type owl:ObjectProperty ;
                             rdfs:comment  "Réutilisation de note de journal inédite."@fr ,
                                           "Reuse of unpublished diary note."@en ;
 
-                            salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                            salsah-gui:guiOrder "10"^^xsd:integer .
+                            salsah-gui:guiElement salsah-gui:Searchbox .
 
 
 roud-oeuvres:diaryReusedInValue   rdf:type owl:ObjectProperty ;
@@ -4156,9 +4142,8 @@ roud-oeuvres:publicationReusedInNewText   rdf:type owl:ObjectProperty ;
                                           rdfs:comment  "Réutilisation d'un texte publié pour un nouveau texte (ex. Préface Colomb)."@fr ,
                                                         "Reuse of published text in a new text (e.g. Préface Colomb)."@en ;
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+                                          salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                          salsah-gui:guiOrder "13"^^xsd:integer .
 
 roud-oeuvres:publicationReusedInNewTextValue  rdf:type owl:ObjectProperty ;
 
@@ -4188,9 +4173,8 @@ roud-oeuvres:publicationPartiallyReusedInCollection   rdf:type owl:ObjectPropert
                                                       rdfs:comment  "Reprise partielle dans un recueil d'un texte publié [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@fr ,
                                                                     "Partial reuse in collection of published text [Exemples : note “(Un tout petit écureuil brun…”, publiée dans “Dictées” (Bulletin de la Guilde, 1940) reprise dans Campagne perdue (1972)]."@en ;
 
-                                                      salsah-gui:guiElement salsah-gui:Searchbox ;
+                                                      salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                                      salsah-gui:guiOrder "14"^^xsd:integer .  
 
 roud-oeuvres:publicationPartiallyReusedInCollectionValue  rdf:type owl:ObjectProperty ;
 
@@ -4220,9 +4204,8 @@ roud-oeuvres:publicationFullyReusedInCollection   rdf:type owl:ObjectProperty ;
                                                   rdfs:comment  "Reprise integrale dans un recueil d'un texte publié [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@fr ,
                                                                 "Full reuse in collection of published text [Exemples : « Bouvreuil » dans Air de la solitude ; « Passage du vin » dans Campagne perdue ; « Les Cueilleurs de pommes » dans Le Repos du cavalier]."@en ;
 
-                                                  salsah-gui:guiElement salsah-gui:Searchbox ;
+                                                  salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                                  salsah-gui:guiOrder "15"^^xsd:integer .
 
 roud-oeuvres:publicationFullyReusedInCollectionValue  rdf:type owl:ObjectProperty ;
 
@@ -4252,9 +4235,8 @@ roud-oeuvres:publicationIsReissued  rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Réédition."@fr ,
                                                   "Reissued."@en  ;
 
-                                    salsah-gui:guiElement salsah-gui:Searchbox ;
+                                    salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                    salsah-gui:guiOrder "16"^^xsd:integer .
 
 roud-oeuvres:publicationIsReissuedValue   rdf:type owl:ObjectProperty ;
 
