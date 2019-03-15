@@ -528,7 +528,8 @@ roud-oeuvres:EstablishedText  rdf:type   owl:Class ;
                               [
                                 rdf:type owl:Restriction ;
                                 owl:onProperty roud-oeuvres:hasDirectSourcePageEnd ;
-                                owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                                owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                                salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger
                               ],
                               [
                                 rdf:type owl:Restriction ;
@@ -2163,9 +2164,8 @@ roud-oeuvres:hasDirectSourcePageEnd     rdf:type owl:ObjectProperty ;
                                           rdfs:comment    "Spécifier les pages du témoin de base (publication ou manuscrit) si ne correspondent pas à la totalité du document (ex., pages d'un cahier)."@fr ,
                                                           "Specify the pages of the base witness (publication or archival document) if they do not correspond to the entire document (ex., pages of a notebook)."@en ;
 
-                                          salsah-gui:guiElement salsah-gui:Searchbox ;
+                                          salsah-gui:guiElement salsah-gui:Searchbox .
 
-                                          salsah-gui:guiOrder "6"^^xsd:integer .
 
 roud-oeuvres:hasDirectSourcePageEndValue    rdf:type owl:ObjectProperty ;
       
