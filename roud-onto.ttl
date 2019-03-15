@@ -472,12 +472,14 @@ roud-oeuvres:Author       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:authorHasGivenName ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:authorHasFamilyName ;
-                            owl:cardinality "1"^^xsd:nonNegativeInteger
+                            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -487,7 +489,8 @@ roud-oeuvres:Author       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:authorHasDhsID ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"3"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Auteur, traducteur, éditeur, collaborateur, artiste"@fr ,
                                       "Author, translator, editor, collaborator, artist"@en ,
@@ -824,22 +827,26 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasGivenName ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasFamilyName ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"1"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasBirthDate ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"2"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasDeathDate ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"3"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -849,12 +856,14 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasDhsID ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"5"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isReferenceFor ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"10"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -875,7 +884,8 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasPhoto ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"8"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -885,12 +895,14 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personHasNotice ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"6"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personInfoHasSource ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+			    salsah-gui:"7"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -3409,9 +3421,7 @@ roud-oeuvres:personHasDhsID   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
                                             "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                              salsah-gui:guiOrder "5"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:authorHasDhsID   rdf:type owl:ObjectProperty ;
@@ -3431,9 +3441,7 @@ roud-oeuvres:authorHasDhsID   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Lien à la notice de la personne dans le dictionnaire historique de la Suisse."@fr ,
                                             "Link to the information about this person in Dictionnaire historique de la Suisse (URL)."@en ;
 
-                              salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                              salsah-gui:guiOrder "3"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:SimpleText .
    
 
 
@@ -3455,9 +3463,7 @@ roud-oeuvres:hasBirthDate     rdf:type owl:ObjectProperty ;
                               rdfs:comment  "La date de naissance."@fr ,
                                             "The date of birth."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Date ;
-
-                              salsah-gui:guiOrder "2"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Date .
 
 
 roud-oeuvres:hasDeathDate     rdf:type owl:ObjectProperty ;
@@ -3477,9 +3483,7 @@ roud-oeuvres:hasDeathDate     rdf:type owl:ObjectProperty ;
                               rdfs:comment  "La date de mort."@fr ,
                                             "The date of death."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Date ;
-
-                              salsah-gui:guiOrder "3"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Date .
 
 
 roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
@@ -3499,9 +3503,7 @@ roud-oeuvres:personHasNotice    rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Brève note sur la personne."@fr ,
                                             "Short note on the person."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Richtext ;
-
-                              salsah-gui:guiOrder "6"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3520,9 +3522,7 @@ roud-oeuvres:personInfoHasSource  rdf:type owl:ObjectProperty ;
                                   rdfs:comment  "Source des information sur la personne."@fr ,
                                                 "Information source."@en ;
 
-                                  salsah-gui:guiElement salsah-gui:Richtext ;
-
-                                  salsah-gui:guiOrder "7"^^xsd:integer .
+                                  salsah-gui:guiElement salsah-gui:Richtext .
 
 
 
@@ -3559,9 +3559,7 @@ roud-oeuvres:personHasGivenName     rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le nom."@fr ,
                                                   "The name."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "0"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 roud-oeuvres:authorHasGivenName     rdf:type owl:ObjectProperty ;
@@ -3581,9 +3579,7 @@ roud-oeuvres:authorHasGivenName     rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le nom."@fr ,
                                                   "The name."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "0"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3620,9 +3616,8 @@ roud-oeuvres:personHasFamilyName    rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le nom de famille."@fr ,
                                                   "The surname."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
-                                    salsah-gui:guiOrder "1"^^xsd:integer .
 
 
 roud-oeuvres:authorHasFamilyName     rdf:type owl:ObjectProperty ;
@@ -3642,9 +3637,7 @@ roud-oeuvres:authorHasFamilyName     rdf:type owl:ObjectProperty ;
                                     rdfs:comment  "Le nom de famille."@fr ,
                                                   "The surname."@en ;
 
-                                    salsah-gui:guiElement salsah-gui:SimpleText ;
-
-                                    salsah-gui:guiOrder "1"^^xsd:integer .
+                                    salsah-gui:guiElement salsah-gui:SimpleText .
 
 
 
@@ -3667,9 +3660,7 @@ roud-oeuvres:personHasPhoto   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "Une photo de la personne."@fr ,
                                             "Photo of the person."@en ;
 
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "8"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
                                                         
 
 
@@ -3699,9 +3690,7 @@ roud-oeuvres:isReferenceFor   rdf:type owl:ObjectProperty ;
                               rdfs:comment  "La personne réelle est une référence pour le personnage"@fr ,
                                             "The real person is reference for a character"@en ;
 
-                              salsah-gui:guiElement salsah-gui:Searchbox ;
-
-                              salsah-gui:guiOrder "10"^^xsd:integer .
+                              salsah-gui:guiElement salsah-gui:Searchbox .
                                                         
 
 
