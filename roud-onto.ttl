@@ -258,7 +258,7 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasCollaborators ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-			    salsah-gui:"3"^^xsd:nonNegativeInteger
+			    salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
