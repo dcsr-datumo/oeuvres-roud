@@ -1407,7 +1407,9 @@ roud-oeuvres:hasEditorialSet  rdf:type  owl:ObjectProperty ;
                                           "(Proprietà astratta, solo per ricerca) Insieme editoriale"@it ;
 
                               rdfs:comment  "L'ensemble éditorial auquel le document se rattache."@fr ,
-                                            "The editorial set to which the document belongs."@en .
+                                            "The editorial set to which the document belongs."@en ;
+
+			      salsah-gui:guiElement salsah-gui:Pulldown .
 
 
 roud-oeuvres:manuscriptHasEditorialSet  rdf:type  owl:ObjectProperty ;
