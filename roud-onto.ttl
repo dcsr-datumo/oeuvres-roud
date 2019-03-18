@@ -3089,6 +3089,10 @@ roud-oeuvres:geneticDossierResultsInPublication rdf:type owl:ObjectProperty ;
 
 roud-oeuvres:geneticDossierResultsInPublicationValue  rdf:type owl:ObjectProperty ;
 
+                                                rdfs:label  "Le dossier génétique mène à une publication"@fr ,
+                                                            "The genetic dossier results in a publication"@en ,
+                                                            "Il dossier genetico porta a una pubblicazione"@it ;
+
                                                     rdfs:subPropertyOf knora-base:hasLinkToValue ;
 
                                                     knora-base:subjectClassConstraint roud-oeuvres:GeneticDossier ;
