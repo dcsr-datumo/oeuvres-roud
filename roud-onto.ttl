@@ -295,16 +295,6 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
                             salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
                           ],
-                          # [
-                          #   rdf:type owl:Restriction ;
-                          #   owl:onProperty roud-oeuvres:isEditionOf ;
-                          #   owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-                          # ],
-                          # [
-                          #   rdf:type owl:Restriction ;
-                          #   owl:onProperty roud-oeuvres:isEditionOfValue ;
-                          #   owl:minCardinality "0"^^xsd:nonNegativeInteger                 
-                          # ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsEditionOf ;
