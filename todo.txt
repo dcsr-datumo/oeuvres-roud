@@ -1,5 +1,52 @@
 
 
+========= PRIORITY 1
+	guiOrder di subclass publication, à faire aprés le passage à V2
+
+
+========= PRIORITY 2 - import images
+- TEST IMAGES (avec script Gilles)
+	ls -1 -d $(pwd)/* > xx.txt
+	run scriptGilles sur xx.txt (qui contiennent une dizaine de dossiers chaque fois)
+
+- RE-CRÉER XML (import.py)
+	attention à changement rdf, già cambiato in cote-iri-mss
+
+- IMPORT IMAGES (BULK IMPORT)
+
+
+
+
+
+========= Notes 2019-03-19
+
+When starting a new terminal, start with setting the environment variables:
+
+cd DaSCH-CI-CD/lausanne-v5+/
+source platform_local.env
+source release_v6.0.0.env
+
+docker compose survival guides:
+
+# check what's running
+docker-compose ps
+# check see logs
+docker-compose logs -tf
+# or for one container
+docker-compose logs -tf api
+# start the knora ecosystem
+docker-compose up -d
+# stop it
+docker-compose down
+# restart knora only (after changing the ontology or to test after an import)
+docker-compose restart api
+
+import roud-oeuvres project: upload the ttl files from github (onto, admin, permission) and data-list (list only) and the data that have been ported to v6 (this file)
+
+
+
+
+
 ###################
 ##
 ## TODO WITH DASCH
@@ -8,10 +55,7 @@
 
 
 OPEN ISSUES
-- Cannot delete image, normal ?
 - Quando metto come subject di una property una classe, se questa classe è una subclass bisogna mettere la classe "madre", altrimenti dà errore. Esempio: Artwork has photo and Artwork has link to ...
-- guiOrder di subclass publication, à faire aprés le passage à V2
-
 
 
 
@@ -28,10 +72,7 @@ IMPORT
 	IMAGES
 		- access to scanlett
 		- bulk import (multiple xml files)
-			ssh espadini@junipero
-			sudo mount -t cifs -o username=espadini,domain=ad,vers=3.0 //nas.unil.ch/scanlett /mnt/scanlettMounted
-
-
+			
 
 
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!--
- * Copyright © 2015-2019 the contributors (see Contributors.md).
+ * Copyright © 2015 Lukas Rosenthaler, Benjamin Geer, Ivan Subotic,
+ * Tobias Schweizer, André Kilchenmann, and Sepideh Alassi.
  *
  * This file is part of Knora.
  *
@@ -24,7 +25,6 @@
 
     <xs:complexType name="resourceType">
         <xs:attribute name="id" use="required" type="xs:NCName"/>
-        <xs:attribute name="creationDate" use="optional" type="xs:dateTime"/>
     </xs:complexType>
 
     <xs:element name="file">
@@ -43,18 +43,6 @@
     <xs:complexType name="Resource_linkValueType">
         <xs:sequence>
             <xs:element name="Resource" type="linkValueType"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Representation_linkValueType">
-        <xs:sequence>
-            <xs:element name="Representation" type="linkValueType"/>
-        </xs:sequence>
-    </xs:complexType>
-
-    <xs:complexType name="Region_linkValueType">
-        <xs:sequence>
-            <xs:element name="Region" type="linkValueType"/>
         </xs:sequence>
     </xs:complexType>
 
@@ -85,7 +73,6 @@
             <xs:any minOccurs="0" maxOccurs="unbounded" processContents="lax"/>
         </xs:sequence>
         <xs:attribute name="knoraType" use="required" fixed="richtext_value"/>
-        <xs:attribute name="lang" use="optional" type="xs:string"/>
         <xs:attribute name="mapping_id" use="optional" type="xs:string"/>
     </xs:complexType>
 
