@@ -257,13 +257,13 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:hasCollaborators ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-			                       salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger
+			                       salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasPhoto ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger                
+                            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger                
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -292,13 +292,13 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasInternalComment ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
+                            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsEditionOf ;
                             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger                
+                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger                
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -309,25 +309,25 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;                
-			                       salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger
+			                       salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsDigitized ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
+                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsTranscribed ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
+                            salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ;
                             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger
+                            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "(Classe abstraite, seulement pour les requêtes. Publication)"@fr ,
                                                   "(Abstract class, only for querying. Publication)"@en ,
@@ -344,7 +344,7 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:hasPublisher ;
                         owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                        salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
+                        salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -355,7 +355,7 @@ roud-oeuvres:Book     rdf:type owl:Class ;
                         rdf:type owl:Restriction ;
                         owl:onProperty roud-oeuvres:isEditionNumber ;
                         owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-	                       salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
+	                       salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger
                       ],
                       [
                         rdf:type owl:Restriction ;
@@ -418,7 +418,7 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:bookSectionHasPublisher ;
                               owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                              salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
+                              salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
                             ],
                             [
                               rdf:type owl:Restriction ;
@@ -435,13 +435,13 @@ roud-oeuvres:BookSection    rdf:type owl:Class ;
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:bookSectionIsInPages ;
                               owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                              salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
+                              salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger
                             ],
                             [
                               rdf:type owl:Restriction ;
                               owl:onProperty roud-oeuvres:isInBookVolume ;
                               owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                              salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
+                              salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger
                             ];
                             rdfs:label  "Section d'un livre"@fr ,
                                         "Book section"@en ,
@@ -457,7 +457,7 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isPublishedInPeriodical ;
                                     owl:cardinality "1"^^xsd:nonNegativeInteger ;
-                                    salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger
+                                    salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
                                   ],
                                   [
                                     rdf:type owl:Restriction ;
@@ -468,19 +468,19 @@ roud-oeuvres:PeriodicalArticle    rdf:type owl:Class ;
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isInPeriodicalIssue ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                                    salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
+                                    salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger
                                   ],
                                   [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:isInPeriodicalVolume ;
                                     owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-                                    salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger
+                                    salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger
                                   ],
                                   [
                                     rdf:type owl:Restriction ;
                                     owl:onProperty roud-oeuvres:periodicalArticleIsInPages ;
                                     owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                                    salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger
+                                    salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
                                   ];
                                   rdfs:label  "Article de périodique"@fr ,
                                               "Periodical article"@en ,
