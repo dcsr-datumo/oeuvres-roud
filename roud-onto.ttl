@@ -262,13 +262,13 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasPhoto ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger                
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationHasPhotoValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger 
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -297,7 +297,8 @@ roud-oeuvres:Publication  rdf:type owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:publicationIsEditionOf ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger                 
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger                
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -821,13 +822,13 @@ roud-oeuvres:ArtWork    rdf:type   owl:Class ;
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhoto ;
-                          owl:minCardinality "0"^^xsd:nonNegativeInteger
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                          salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
                         ],
                         [
                           rdf:type owl:Restriction ;
                           owl:onProperty roud-oeuvres:artworkHasPhotoValue ;
-                          owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-                          salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger
+                          owl:minCardinality "0"^^xsd:nonNegativeInteger
                         ],
                         [
                           rdf:type owl:Restriction ;
@@ -928,13 +929,13 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isCharacterIn ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+                             salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:isCharacterInValue ;
-                            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-			                       salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger
+                            owl:minCardinality "0"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
@@ -962,13 +963,13 @@ roud-oeuvres:Person       rdf:type   owl:Class ;
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personIsSameAsAuthor ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+                             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
                           ],
                           [
                             rdf:type owl:Restriction ;
                             owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ;
-                            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-			                       salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger
+                            owl:maxCardinality "1"^^xsd:nonNegativeInteger
                           ];
                           rdfs:label  "Personne"@fr ,
                                       "Person"@en ,
