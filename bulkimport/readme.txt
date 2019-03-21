@@ -17,6 +17,8 @@ DOWNLOAD the schemas for the XML files (in browser)
 UPLOAD the XML file (in terminal)
 	curl -X POST -d @importTest.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
+	curl -X POST -d @backup_images_all_tif_1_copy.xml http://root%40example.com:test@localhost:3333/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+
 	curl -X POST -d @backup_images_all_tif_1.xml http://root%40example.com:test@knora.unil.ch/v1/resources/xmlimport/http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
 
 

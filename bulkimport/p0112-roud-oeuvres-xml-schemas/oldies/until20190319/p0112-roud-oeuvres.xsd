@@ -7,7 +7,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                 <xs:extension base="knoraXmlImport:resourceType">
                     <xs:sequence>
                         <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
-                        <xs:element type="knoraXmlImport:uriValueType" maxOccurs="unbounded" minOccurs="0" name="artworkHasLinkToDigitalFacsimile"/>
                         <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="artworkHasPhoto"/>
                         <xs:element type="Author_linkValueType" maxOccurs="unbounded" minOccurs="0" name="workHasAuthor"/>
                         <xs:element type="knoraXmlImport:dateValueType" maxOccurs="unbounded" minOccurs="0" name="workHasDate"/>
@@ -74,7 +73,7 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="hasNumberOfVolumes"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
                         <xs:element type="Publisher_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPublisher"/>
-                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isEditionNumber"/>
+                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="isEditionNumber"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="originalIsInCrlrArchive"/>
                         <xs:element type="Author_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasAuthor"/>
                         <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="publicationHasDate"/>
@@ -83,7 +82,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="publicationHasToBeDigitized"/>
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="publicationIsDigitized"/>
-                        <xs:element type="LiteratureWork_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationIsEditionOf"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationIsTranscribed"/>
                     </xs:sequence>
                 </xs:extension>
@@ -104,6 +102,7 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="Publisher_linkValueType" maxOccurs="unbounded" minOccurs="0" name="bookSectionHasPublisher"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="bookSectionIsInPages"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="bookSectionIsPartOf"/>
+                        <xs:element type="Book_linkValueType" maxOccurs="1" minOccurs="0" name="bookSectionIsPartOfRoudCollection"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="hasCollaborators"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="hasPublicationType"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="isInBookVolume"/>
@@ -115,7 +114,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="publicationHasToBeDigitized"/>
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="publicationIsDigitized"/>
-                        <xs:element type="LiteratureWork_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationIsEditionOf"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationIsTranscribed"/>
                     </xs:sequence>
                 </xs:extension>
@@ -133,8 +131,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                 <xs:extension base="knoraXmlImport:resourceType">
                     <xs:sequence>
                         <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="diaryReusedIn"/>
-                        <xs:element type="EstablishedText_linkValueType" maxOccurs="unbounded" minOccurs="0" name="diaryRewrittenInDiary"/>
                         <xs:element type="knoraXmlImport:dateValueType" maxOccurs="1" minOccurs="0" name="establishedTextDiaryHasDate"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="establishedTextHasEditorialSet"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="establishedTextHasInternalComment"/>
@@ -142,16 +138,10 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="Manuscript_linkValueType" maxOccurs="1" minOccurs="0" name="hasDirectSourceManuscript"/>
                         <xs:element type="Page_linkValueType" maxOccurs="1" minOccurs="0" name="hasDirectSourcePageEnd"/>
                         <xs:element type="Page_linkValueType" maxOccurs="1" minOccurs="0" name="hasDirectSourcePageStart"/>
-                        <xs:element type="knoraXmlImport:intValueType" maxOccurs="1" minOccurs="0" name="hasDirectSourcePosition"/>
                         <xs:element type="Publication_linkValueType" maxOccurs="1" minOccurs="0" name="hasDirectSourcePublication"/>
+                        <xs:element type="EstablishedText_linkValueType" maxOccurs="unbounded" minOccurs="0" name="hasPreviousStage"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasTextContent"/>
-                        <xs:element type="EstablishedText_linkValueType" maxOccurs="1" minOccurs="0" name="isBeforeInAvantTexte"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="isInPaperEdition"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="manuscriptIsPartOfGeneticDossier"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationFullyReusedInCollection"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationIsReissued"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationPartiallyReusedInCollection"/>
-                        <xs:element type="GeneticDossier_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationReusedInNewText"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="scanIsInDigitalEdition"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="1" name="txtIsInDigitalEdition"/>
                     </xs:sequence>
@@ -162,23 +152,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
     <xs:complexType name="EstablishedText_linkValueType">
         <xs:sequence>
             <xs:element type="knoraXmlImport:linkValueType" name="EstablishedText"/>
-        </xs:sequence>
-    </xs:complexType>
-    <xs:element name="GeneticDossier">
-        <xs:complexType>
-            <xs:complexContent>
-                <xs:extension base="knoraXmlImport:resourceType">
-                    <xs:sequence>
-                        <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
-                        <xs:element type="EstablishedText_linkValueType" maxOccurs="1" minOccurs="1" name="geneticDossierResultsInPublication"/>
-                    </xs:sequence>
-                </xs:extension>
-            </xs:complexContent>
-        </xs:complexType>
-    </xs:element>
-    <xs:complexType name="GeneticDossier_linkValueType">
-        <xs:sequence>
-            <xs:element type="knoraXmlImport:linkValueType" name="GeneticDossier"/>
         </xs:sequence>
     </xs:complexType>
     <xs:element name="LiteratureWork">
@@ -319,7 +292,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="publicationHasToBeDigitized"/>
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="publicationIsDigitized"/>
-                        <xs:element type="LiteratureWork_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationIsEditionOf"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationIsTranscribed"/>
                     </xs:sequence>
                 </xs:extension>
@@ -348,7 +320,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personHasNotice"/>
                         <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="personHasPhoto"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="personInfoHasSource"/>
-                        <xs:element type="Author_linkValueType" maxOccurs="1" minOccurs="0" name="personIsSameAsAuthor"/>
                     </xs:sequence>
                 </xs:extension>
             </xs:complexContent>
@@ -388,8 +359,8 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                 <xs:extension base="knoraXmlImport:resourceType">
                     <xs:sequence>
                         <xs:element maxOccurs="1" minOccurs="1" ref="knoraXmlImport:label"/>
-                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasLatitude"/>
-                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="hasLongitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLatitude"/>
+                        <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="hasLongitude"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="1" name="placeHasName"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="placeHasNotice"/>
                         <xs:element type="Photo_linkValueType" maxOccurs="unbounded" minOccurs="0" name="placeHasPhoto"/>
@@ -419,7 +390,6 @@ vc:minVersion="1.0" targetNamespace="http://api.knora.org/ontology/0112/roud-oeu
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="unbounded" minOccurs="0" name="publicationHasTitle"/>
                         <xs:element type="knoraXmlImport:hlistValueType" maxOccurs="1" minOccurs="0" name="publicationHasToBeDigitized"/>
                         <xs:element type="knoraXmlImport:booleanValueType" maxOccurs="1" minOccurs="0" name="publicationIsDigitized"/>
-                        <xs:element type="LiteratureWork_linkValueType" maxOccurs="unbounded" minOccurs="0" name="publicationIsEditionOf"/>
                         <xs:element type="knoraXmlImport:richtextValueType" maxOccurs="1" minOccurs="0" name="publicationIsTranscribed"/>
                     </xs:sequence>
                 </xs:extension>
