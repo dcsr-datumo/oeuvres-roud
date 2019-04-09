@@ -1,0 +1,14 @@
+
+<http://www.knora.org/data/admin> {
+	<http://rdfh.ch/users/T0x_LOB5SIySW8PgDPVzSQ> <http://www.knora.org/ontology/knora-base#email> "gustave@unil.ch" ;
+		<http://www.knora.org/ontology/knora-base#familyName> "Roud - import des données" ;
+		<http://www.knora.org/ontology/knora-base#givenName> "Gustave" ;
+		<http://www.knora.org/ontology/knora-base#isInProject> <http://rdfh.ch/projects/0112> ;
+		<http://www.knora.org/ontology/knora-base#isInProjectAdminGroup> <http://rdfh.ch/projects/0112> ;
+		<http://www.knora.org/ontology/knora-base#isInSystemAdminGroup> "false"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.knora.org/ontology/knora-base#password> "$e0801$7a30n3gfKF8PKZX/CuMQmzwzTRNFe19TByvMYQusFjim0H/plvq4L2I985SI2E2kokmFnX9fuR64gVe4ux73lg==$/D121AkHjxQQ14viQOFKKduyKLO3StECdLdBj8/u+eE=" ;
+		<http://www.knora.org/ontology/knora-base#preferredLanguage> "fr" ;
+		<http://www.knora.org/ontology/knora-base#status> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+		<http://www.knora.org/ontology/knora-base#username> "gRoud" ;
+		a <http://www.knora.org/ontology/knora-base#User> .
+}
