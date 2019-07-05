@@ -138,9 +138,21 @@
 	knora-base:givenName "Gustave" ;
 	knora-base:familyName "Roud - import des données" ;
 	knora-base:password "$e0801$7a30n3gfKF8PKZX/CuMQmzwzTRNFe19TByvMYQusFjim0H/plvq4L2I985SI2E2kokmFnX9fuR64gVe4ux73lg==$/D121AkHjxQQ14viQOFKKduyKLO3StECdLdBj8/u+eE=" ;
-  knora-base:email "gustave@unil.ch" ;
+        knora-base:email "gustave@unil.ch" ;
 	knora-base:preferredLanguage "fr" ;
 	knora-base:status "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
 	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
 	knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
+	knora-base:isInSystemAdminGroup "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
+
+
+<http://rdfh.ch/users/OxRjdZl8TGWhM-L77hsDfw> a knora-base:User ;
+	knora-base:username "cJaquier" ;
+	knora-base:givenName "Claire" ;
+	knora-base:familyName "Jaquier" ;
+	knora-base:password "$e0801$g5VYIa1dtxD82nEUT4xwFsTZL3sYjvEHp/Cpp2inmt4a2+tNz8sJfnqTCvlmPe+DoNZW1TAuR7HZOls9tdoQzw==$Suey/o3TIOV48TbUBYxWk0X3Zi3vK/WKORo8VXzMJYI=" ;
+	knora-base:email "claire.jaquier@unine.ch" ;
+	knora-base:preferredLanguage "fr" ;
+	knora-base:status "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
+	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
 	knora-base:isInSystemAdminGroup "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
