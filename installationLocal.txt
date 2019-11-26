@@ -1,28 +1,78 @@
 
 
-FINAL CONFIGURATION
 
 
-=========================================
-graphdb and sipi run in Docker images
-=========================================
-	docker start graphdb
+
+
+
+
+
+
+
+
+
+
+===============================================================
+
+
+
+
+CONFIGURATION from 19.03.2019 (v6)
+All together docker
+
+When starting a new terminal, start with setting the environment variables:
+	cd DaSCH-CI-CD/lausanne-v5+/
+	NO: source platform_local.env  -->>>>> source platform_dev.env
+	source release_v6.0.0.env
+then
+	docker-compose up -d
+
+	Docker compose survival guides:
+# check what's running
+	docker-compose ps
+# check see logs
+	docker-compose logs -tf
+# or for one container
+	docker-compose logs -tf api
+# start the knora ecosystem
+	docker-compose up -d
+# stop it
+	docker-compose down
+# restart knora only (after changing the ontology or to test after an import)
+	docker-compose restart api
+
+import roud-oeuvres project: upload the ttl files from github (onto, admin, permission) and data-list (list only) and the data that have been ported to v6 (see gitlab)
+
+
+
+
+
+
+ALTERNATIVE
+
+Accendere
+	cd Github/LaDhul/Knora
+
+	git checkout tags/v6.0.1
 	
-	docker start sipi
+	export KNORA_GDB_LICENSE=/home/espadini/Github/LaDHUL/DaSCH-CI-CD/lausanne-v5+/data/graphdb/UNIL_DEV_STANDARD_latest-17-11-2019_2cores.license
+	
+	sbt dockerComposeUp
+
+>>quando cambia qualcosa
+note id of webapi container
+	docker restart idContainer
+ex. docker restart 1651b93c1f4a
+
+INITIALIZATION (NON RIFARE, altrimenti cancella tutto)
+cd webapi/scripts/
+./graphdb-se-docker-init-knora-test.sh 
+./load-onto.expect http://localhost:7200
+
+Spegnere
+	sbt dockerComposeStop
 
 
-================================================
-knora and salsah run from sources in Scala
-================================================
-	cd Knora/webapi
-	sbt
-	reStart
-
-	cd Knora/salsah
-	sbt
-	reStart
-
-When something changed in ontology --> restart Knora
 
 
 
@@ -44,6 +94,7 @@ Each time something is changed in GraphDB, stop and start Knora
 
 
 IMPORT GRAPHDB (to be done in this order)
+Check named graph, during the import
 
 - Admin
 import admin.ttl
@@ -213,5 +264,29 @@ Same thing done for Knora (from Knora-1.1.0/salsah)
 
 
 
+
+------------------------------------------------------------------------------------------------
+
+
+
+FINAL CONFIGURATION until 19.03.2019
+=========================================
+graphdb and sipi run in Docker images
+=========================================
+	docker start graphdb
+	
+	docker start sipi
+================================================
+knora and salsah run from sources in Scala
+================================================
+	cd Knora/webapi
+	sbt
+	reStart
+
+	cd Knora/salsah
+	sbt
+	reStart
+
+When something changed in ontology --> restart Knora
 
 
