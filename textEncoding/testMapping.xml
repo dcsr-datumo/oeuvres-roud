@@ -2,8 +2,9 @@
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
 
+<!--
 <defaultXSLTransformation>http://rdfh.ch/0112/_WPnrXhfQUCgqc2zSdUrLQ</defaultXSLTransformation>
- 
+ -->
     
     <!-- standoff:text -->
     <mappingElement>
@@ -35,6 +36,7 @@
             <namespace>noNamespace</namespace>
             <!-- <namespace>http://www.tei-c.org/ns/1.0</namespace>-->
             <separatesWords>false</separatesWords>
+            <!-- or true for indexing ?? -->
         </tag>
         <standoffClass>
             <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffRootTEITag</classIri>
