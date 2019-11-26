@@ -1,158 +1,171 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
+@prefix ns1: <http://www.knora.org/ontology/knora-admin#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix dcterms: <http://purl.org/dc/terms/#> .
-@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
-@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
 
+<http://rdfh.ch/users/OxRjdZl8TGWhM-L77hsDfw> a ns1:User ;
+    ns1:email "claire.jaquier@unine.ch" ;
+    ns1:familyName "Jaquier" ;
+    ns1:givenName "Claire" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$g5VYIa1dtxD82nEUT4xwFsTZL3sYjvEHp/Cpp2inmt4a2+tNz8sJfnqTCvlmPe+DoNZW1TAuR7HZOls9tdoQzw==$Suey/o3TIOV48TbUBYxWk0X3Zi3vK/WKORo8VXzMJYI=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "cJaquier" .
 
-#################################################################
-#    Project
-#################################################################
+<http://rdfh.ch/users/T0x_LOB5SIySW8PgDPVzSQ> a ns1:User ;
+    ns1:email "gustave@unil.ch" ;
+    ns1:familyName "Roud - import des données" ;
+    ns1:givenName "Gustave" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$7a30n3gfKF8PKZX/CuMQmzwzTRNFe19TByvMYQusFjim0H/plvq4L2I985SI2E2kokmFnX9fuR64gVe4ux73lg==$/D121AkHjxQQ14viQOFKKduyKLO3StECdLdBj8/u+eE=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "gRoud" .
 
-<http://rdfh.ch/projects/0112> a knora-base:knoraProject ;
-        	knora-base:projectLongname "Oeuvres complètes de Gustave Roud" ;
-        	knora-base:projectShortname "roud-oeuvres" ;
-        	knora-base:projectShortcode "0112" ;
-        	knora-base:projectDescription "Le projet « Les Œuvres complètes de Gustave Roud » fournit tous les textes de l'écrivain vaudois avec la notation complémentaire, contient les reproductions numériques des manuscrits originaux et offre de parcours critiques."@fr ;
-        	knora-base:projectKeywords "Gustave Roud"^^xsd:string, "édition"^^xsd:string, "Vaud"^^xsd:string, "littérature"^^xsd:string, "écrivain"^^xsd:string, "génétique"^^xsd:string ;
-        	knora-base:projectOntology <http://www.knora.org/ontology/0112/roud-oeuvres> ;
-        	knora-base:status "true"^^xsd:boolean ;
-        	knora-base:hasSelfJoinEnabled "false"^^xsd:boolean .
+<http://rdfh.ch/users/aChristen> a ns1:User ;
+    ns1:email "alessio.christen@unil.ch" ;
+    ns1:familyName "Christen" ;
+    ns1:givenName "Alessio" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$pGiH23H1ERVr7LsD5Q5T3hYB7L1ulIjkhrGcOjR67YXg+jUyBCYFh2kiKVJyPgIGOwNBg+2E8Hw7ZCnfoG3eaQ==$fEDdz2FlLwXEhvKYDR/4Ag3S1u1rSVa3SnWyjAMxA/U=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "aChristen" ;
+    knora-base:userid "aChristen" .
 
-#################################################################
-#    Groups
-#################################################################
+<http://rdfh.ch/users/bPellegrino> a ns1:User ;
+    ns1:email "bruno.pellegrino@unil.ch" ;
+    ns1:familyName "Pellegrino" ;
+    ns1:givenName "Bruno" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$bN84IU1URdaHyDaHv/l4bcoQcqChUvlFEEkcfD7qqs0Eae8i83fUD+ZVU+qhp8lLs/rxBz6fOVxq+rEhPEXE2g==$SXpws4TDx7N74GK2Nay0mNFx2JryrI32VhGjyeMLj+A=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "bPellegrino" ;
+    knora-base:userid "bPellegrino" .
 
-#<http://rdfh.ch/groups/0112/researchers> rdf:type knora-base:UserGroup ;
-#  knora-base:groupName "Associate researcher"^^xsd:string ;
-#  knora-base:groupDescription "A group of associated researchers."^^xsd:string ;
-#  knora-base:belongsToProject <http://rdfh.ch/projects/0112> ;
-#  knora-base:status "true"^^xsd:boolean ;
-#  knora-base:hasSelfJoinEnabled "false"^^xsd:boolean .
+<http://rdfh.ch/users/dMaggetti> a ns1:User ;
+    ns1:email "daniel.maggetti@unil.ch" ;
+    ns1:familyName "Maggetti" ;
+    ns1:givenName "Daniel" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$BVA8n1Ed29F7qSvaZbrYLZKYJbzUa7qruYXoUBE2SFsck4qY4pcTar3ZTYAntYCgU7utclXytiJ3froTy/9xlg==$NALDyoPKKBE6jExtFW2WvC5pfvGJhFuldbV5L+NRAII=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "dMaggetti" ;
+    knora-base:userid "dMaggetti" .
 
-#################################################################
-#    Users
-#################################################################
+<http://rdfh.ch/users/eSpadini> a ns1:User ;
+    ns1:email "elena.spadini@unil.ch" ;
+    ns1:familyName "Spadini" ;
+    ns1:givenName "Elena" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup true ;
+    ns1:password "$e0801$Rqo/KdpRJrdfClnleE87H0eCxhUOQZLHi61eDALBBVIwWwrqhWLBlq0IuZ2U1I2g/tHsmbpzZ/LgSnF1+CJEdw==$xHzwW/GXVV0eSZiGjKleqGfQ90F6QlOIvV0hZLCOTRU=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "eSpadini" ;
+    knora-base:userid "eSpadini" .
 
-<http://rdfh.ch/users/eSpadini> a knora-base:User ;
-	knora-base:userid "eSpadini" ;
-	knora-base:username "eSpadini" ;
-	knora-base:givenName "Elena" ;
-	knora-base:familyName "Spadini" ;
-	knora-base:password "$e0801$Rqo/KdpRJrdfClnleE87H0eCxhUOQZLHi61eDALBBVIwWwrqhWLBlq0IuZ2U1I2g/tHsmbpzZ/LgSnF1+CJEdw==$xHzwW/GXVV0eSZiGjKleqGfQ90F6QlOIvV0hZLCOTRU=" ;
-	knora-base:email "elena.spadini@unil.ch" ;
-	knora-base:preferredLanguage "fr" ;
-	knora-base:status "true"^^xsd:boolean ;
-	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-  #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-	knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-	knora-base:isInSystemAdminGroup "true"^^xsd:boolean .
+<http://rdfh.ch/users/gFaucherand> a ns1:User ;
+    ns1:email "gilles.faucherand@unil.ch" ;
+    ns1:familyName "Faucherand" ;
+    ns1:givenName "Gilles" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112>,
+        ns1:SystemProject ;
+    ns1:isInSystemAdminGroup true ;
+    ns1:password "$e0801$TMjgDCZJ5wRUv0dcR03t7dOk2JQrYuZl6IyX8tqkqq5lOPg7od8idKSSgNafFSri0mwakULJa559mM+NJBpvEA==$RfOfkTasCr0uyjX1yHrfhC+p+GnrxF54AUF3wEObK4c=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "gFaucherand" .
 
-  <http://rdfh.ch/users/rLacord> a knora-base:User ;
-  	knora-base:userid "rLacord" ;
-  	knora-base:username "rLacord" ;
-  	knora-base:givenName "Raphaëlle" ;
-  	knora-base:familyName "Lacord" ;
-  	knora-base:password "$e0801$C+Y8x9ENM0/R4zy3xOkDHY93lKMxS2o+RHy+o/+bScxYEXawACa7Ut8F4cxJxnkse5bYJQN6oP4E+6Jq6KnPRQ==$Xdf9te3ufhy/kTpHmjSNbSIF4xtoAOIIMaUGu9zKTc4=" ;
-  	knora-base:email "raphaelle.lacord@unil.ch" ;
-  	knora-base:preferredLanguage "fr" ;
-  	knora-base:status "true"^^xsd:boolean ;
-  	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-  	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-  	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+<http://rdfh.ch/users/jBurri> a ns1:User ;
+    ns1:email "julien.burri@unil.ch" ;
+    ns1:familyName "Burri" ;
+    ns1:givenName "Julien" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$uU86iwjYqylZk4fntS8B2Cs12hlsXvU3pfqGFUTMIKcQYaLGfZ8os7KGTCq+EZlgyHhk3MTZuEL+R4PzhaM0Lw==$KIBV8ohNpeze+ZN8sLx/VLb6b6SATNPi5KAzMYYTyA8=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "jBurri" ;
+    knora-base:userid "jBurri" .
 
-  <http://rdfh.ch/users/aChristen> a knora-base:User ;
-  	knora-base:userid "aChristen" ;
-  	knora-base:username "aChristen" ;
-  	knora-base:givenName "Alessio" ;
-  	knora-base:familyName "Christen" ;
-  	knora-base:password "$e0801$pGiH23H1ERVr7LsD5Q5T3hYB7L1ulIjkhrGcOjR67YXg+jUyBCYFh2kiKVJyPgIGOwNBg+2E8Hw7ZCnfoG3eaQ==$fEDdz2FlLwXEhvKYDR/4Ag3S1u1rSVa3SnWyjAMxA/U=" ;
-  	knora-base:email "alessio.christen@unil.ch" ;
-  	knora-base:preferredLanguage "fr" ;
-  	knora-base:status "true"^^xsd:boolean ;
-  	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-  	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-  	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+<http://rdfh.ch/users/lJaouen> a ns1:User ;
+    ns1:email "loic.jaouen@unil.ch" ;
+    ns1:familyName "Jaouen" ;
+    ns1:givenName "Loïc" ;
+    ns1:isInProject 
+        <http://rdfh.ch/projects/0112>,
+        ns1:SystemProject ;
+    ns1:isInSystemAdminGroup true ;
+    ns1:password "$e0801$NxbpmpoqqZt/vwaOGHrFVkUhVIMqr7xCj9xCLu4e9WLyWEwM8GSWO2f9cIsS4hR7Srg4MxjxfhbpqJJPTehGuw==$4DBa0cNmjaKQFfi3YEWRNIORFkuT9Y7Msc8YlDAQyMs=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "lJaouen" .
 
-  <http://rdfh.ch/users/jBurri> a knora-base:User ;
-  	knora-base:userid "jBurri" ;
-  	knora-base:username "jBurri" ;
-  	knora-base:givenName "Julien" ;
-  	knora-base:familyName "Burri" ;
-  	knora-base:password "$e0801$uU86iwjYqylZk4fntS8B2Cs12hlsXvU3pfqGFUTMIKcQYaLGfZ8os7KGTCq+EZlgyHhk3MTZuEL+R4PzhaM0Lw==$KIBV8ohNpeze+ZN8sLx/VLb6b6SATNPi5KAzMYYTyA8=" ;
-  	knora-base:email "julien.burri@unil.ch" ;
-  	knora-base:preferredLanguage "fr" ;
-  	knora-base:status "true"^^xsd:boolean ;
-  	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-  	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-  	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+<http://rdfh.ch/users/mRivoal> a ns1:User ;
+    ns1:email "marion.rivoal@unil.ch" ;
+    ns1:familyName "Rivoal" ;
+    ns1:givenName "Marion" ;
+    ns1:isInProject 
+        <http://rdfh.ch/projects/0112>,
+        ns1:SystemProject ;
+    ns1:isInSystemAdminGroup true ;
+    ns1:password "$e0801$GixW+508x22RZIcS10IWtXHJjn4znFNQpObreAavsiclAazUAPh99XJD5gycaPo72EyR5XBdfiTbR/NW2Dgsdg==$ZECNsLwMliVbfl2dhVBpU/ctMJqg4SFOP701D8ChrIw=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "mRivoal" .
 
-  <http://rdfh.ch/users/bPellegrino> a knora-base:User ;
-  	knora-base:userid "bPellegrino" ;
-  	knora-base:username "bPellegrino" ;
-  	knora-base:givenName "Bruno" ;
-  	knora-base:familyName "Pellegrino" ;
-  	knora-base:password "$e0801$bN84IU1URdaHyDaHv/l4bcoQcqChUvlFEEkcfD7qqs0Eae8i83fUD+ZVU+qhp8lLs/rxBz6fOVxq+rEhPEXE2g==$SXpws4TDx7N74GK2Nay0mNFx2JryrI32VhGjyeMLj+A=" ;
-  	knora-base:email "bruno.pellegrino@unil.ch" ;
-  	knora-base:preferredLanguage "fr" ;
-  	knora-base:status "true"^^xsd:boolean ;
-  	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-  	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-  	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+<http://rdfh.ch/users/rLacord> a ns1:User ;
+    ns1:email "raphaelle.lacord@unil.ch" ;
+    ns1:familyName "Lacord" ;
+    ns1:givenName "Raphaëlle" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup false ;
+    ns1:password "$e0801$C+Y8x9ENM0/R4zy3xOkDHY93lKMxS2o+RHy+o/+bScxYEXawACa7Ut8F4cxJxnkse5bYJQN6oP4E+6Jq6KnPRQ==$Xdf9te3ufhy/kTpHmjSNbSIF4xtoAOIIMaUGu9zKTc4=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "rLacord" ;
+    knora-base:userid "rLacord" .
 
-<http://rdfh.ch/users/dMaggetti> a knora-base:User ;
-	knora-base:userid "dMaggetti" ;
-	knora-base:username "dMaggetti" ;
-	knora-base:givenName "Daniel" ;
-	knora-base:familyName "Maggetti" ;
-	knora-base:password "$e0801$BVA8n1Ed29F7qSvaZbrYLZKYJbzUa7qruYXoUBE2SFsck4qY4pcTar3ZTYAntYCgU7utclXytiJ3froTy/9xlg==$NALDyoPKKBE6jExtFW2WvC5pfvGJhFuldbV5L+NRAII=" ;
-	knora-base:email "daniel.maggetti@unil.ch" ;
-	knora-base:preferredLanguage "fr" ;
-	knora-base:status "true"^^xsd:boolean ;
-	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-    #knora-base:isInGroup <http://rdfh.ch/groups/0112/researchers> ;
-	#knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-	knora-base:isInSystemAdminGroup "false"^^xsd:boolean .
+<http://rdfh.ch/users/roud-oeuvres-test-user1> a ns1:User ;
+    ns1:email "roud1@unil.ch" ;
+    ns1:familyName "roud" ;
+    ns1:givenName "roud" ;
+    ns1:isInProject <http://rdfh.ch/projects/0112> ;
+    ns1:isInSystemAdminGroup true ;
+    ns1:password "$e0801$/+Dkt7OKXDB/C28WFPgqQ+9Ny7e+DiuEAuy/oMqlcM1Lrbn6iMCnoBw2iuc8jGECGm9W5EkpEAaCOK7oQRgw/w==$WB+ALTbn02Tz6RhDj+z3NcuBzPCWm2p1CAevZT97ZaQ=" ;
+    ns1:preferredLanguage "fr" ;
+    ns1:status true ;
+    ns1:username "roud" ;
+    knora-base:userid "roud" .
 
-<http://rdfh.ch/users/roud-oeuvres-test-user1> a knora-base:User ;
-	knora-base:userid "roud" ;
-	knora-base:username "roud" ;
-	knora-base:givenName "roud" ;
-	knora-base:familyName "roud" ;
-	knora-base:password "$e0801$FGl9FDIWw+D83OeNPGmD9u2VTqIkJopIQECgmb2DSWQLS0TeKSvYoWAkbEv6KxePPlCI3CP9MmVHuvnWv8/kag==$mlegCYdGXt+ghuo8i0rLjgOiNnGDW604Q5g/v7zwBPU=" ;
-	knora-base:email "roud1@unil.ch" ;
-	knora-base:preferredLanguage "fr" ;
-	knora-base:status "true"^^xsd:boolean ;
-	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-	knora-base:isInSystemAdminGroup "true"^^xsd:boolean .
+<http://rdfh.ch/projects/0112> a ns1:knoraProject ;
+    ns1:hasSelfJoinEnabled false ;
+    ns1:projectDescription "Le projet « Les Œuvres complètes de Gustave Roud » fournit tous les textes de l'écrivain vaudois avec la notation complémentaire, contient les reproductions numériques des manuscrits originaux et offre de parcours critiques."@fr ;
+    ns1:projectLongname "Oeuvres complètes de Gustave Roud" ;
+    ns1:projectShortcode "0112" ;
+    ns1:projectShortname "roud-oeuvres" ;
+    ns1:status true ;
+    knora-base:projectKeywords "Gustave Roud",
+        "Vaud",
+        "génétique",
+        "littérature",
+        "écrivain",
+        "édition" ;
+    knora-base:projectOntology <http://www.knora.org/ontology/0112/roud-oeuvres> .
 
-<http://rdfh.ch/users/T0x_LOB5SIySW8PgDPVzSQ> a knora-base:User ;
-	knora-base:username "gRoud" ;
-	knora-base:givenName "Gustave" ;
-	knora-base:familyName "Roud - import des données" ;
-	knora-base:password "$e0801$7a30n3gfKF8PKZX/CuMQmzwzTRNFe19TByvMYQusFjim0H/plvq4L2I985SI2E2kokmFnX9fuR64gVe4ux73lg==$/D121AkHjxQQ14viQOFKKduyKLO3StECdLdBj8/u+eE=" ;
-        knora-base:email "gustave@unil.ch" ;
-	knora-base:preferredLanguage "fr" ;
-	knora-base:status "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
-	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-	knora-base:isInProjectAdminGroup <http://rdfh.ch/projects/0112> ;
-	knora-base:isInSystemAdminGroup "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
-
-
-<http://rdfh.ch/users/OxRjdZl8TGWhM-L77hsDfw> a knora-base:User ;
-	knora-base:username "cJaquier" ;
-	knora-base:givenName "Claire" ;
-	knora-base:familyName "Jaquier" ;
-	knora-base:password "$e0801$g5VYIa1dtxD82nEUT4xwFsTZL3sYjvEHp/Cpp2inmt4a2+tNz8sJfnqTCvlmPe+DoNZW1TAuR7HZOls9tdoQzw==$Suey/o3TIOV48TbUBYxWk0X3Zi3vK/WKORo8VXzMJYI=" ;
-	knora-base:email "claire.jaquier@unine.ch" ;
-	knora-base:preferredLanguage "fr" ;
-	knora-base:status "true"^^<http://www.w3.org/2001/XMLSchema#boolean> ;
-	knora-base:isInProject <http://rdfh.ch/projects/0112> ;
-	knora-base:isInSystemAdminGroup "false"^^<http://www.w3.org/2001/XMLSchema#boolean> .
