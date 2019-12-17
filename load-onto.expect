@@ -1,9 +1,12 @@
 #!/usr/bin/expect
 
 set timeout 120
-# require console.sh in the PATH or replace by full path to knora project:
+
+
+# BEFORE LAUNCHING THIS, require console.sh in the PATH or replace by full path to knora project:
 # /path/ot/Knora/webapi/scripts/openrdf-console/bin/console.sh
-spawn /home/espadini/Github/LaDHUL/Knora/webapi/scripts/openrdf-console/bin/console.sh --force --echo --serverURL [lindex $argv 0]
+
+spawn console.sh --force --echo --serverURL [lindex $argv 0]
 set prompt "> "
 expect $prompt
 send "open knora-test .\r"
