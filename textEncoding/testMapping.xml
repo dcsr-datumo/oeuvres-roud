@@ -2,9 +2,7 @@
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
  xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
 
-<!--
-<defaultXSLTransformation>http://rdfh.ch/0112/_WPnrXhfQUCgqc2zSdUrLQ</defaultXSLTransformation>
- -->
+<defaultXSLTransformation>http://rdfh.ch/0112/_IGPKDN8SliC8LH_lwlN8A</defaultXSLTransformation>
     
     <!-- standoff:text -->
     <mappingElement>
@@ -126,11 +124,11 @@
         </standoffClass>
     </mappingElement> 
     
-    <!-- tei:placeName @ref -->
+    <!-- tei:placeName @ref  avevo messo salsah-link come class, ma non funziona -->
     <mappingElement>
         <tag>
             <name>placeName</name>
-            <class>salsah-link</class>
+            <class>noClass</class>
             <namespace>noNamespace</namespace>
             <separatesWords>true</separatesWords>
         </tag>
