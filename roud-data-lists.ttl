@@ -1,649 +1,526 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
-@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
-@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
-
-
-
-## ALL THE LISTS USED IN ROUD-OEUVRES ONTOLOGY
-
-
-
-
-
-##############################################
-##
-## type de publication - publication type
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Le type de publication"@fr ;
-	rdfs:label "Type de publication"@fr , "Publication type"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-propos> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-journal> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-traduction> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-photo> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-correspondance> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique> a knora-base:ListNode ;
-		knora-base:listNodeName "ŒuvrePoétique" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Œuvre poétique"@fr , "Poetic work"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-propos> a knora-base:ListNode ;
-		knora-base:listNodeName "Propos" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Propos"@fr , "Article about art, literature and others"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-journal> a knora-base:ListNode ;
-		knora-base:listNodeName "Journal" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "Journal"@fr , "Diary"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-traduction> a knora-base:ListNode ;
-		knora-base:listNodeName "Traduction" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Traduction"@fr , "Translation"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-photo> a knora-base:ListNode ;
-		knora-base:listNodeName "Photo" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "Photographie"@fr , "Photography"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-correspondance> a knora-base:ListNode ;
-		knora-base:listNodeName "Correspondance" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "Correspondance"@fr , "correspondance"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> a knora-base:ListNode ;
-		knora-base:listNodeName "SurRoud" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 6 ;
-		rdfs:label "À propos de Roud"@fr , "About Roud"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque> a knora-base:ListNode ;
-		knora-base:listNodeName "Disque" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> ;
-		knora-base:listNodePosition 7 ;
-		rdfs:label "Disque"@fr , "Disc"@en .
-
-
-
-
-
-##############################################
-##
-## ensemble editorial - editorial set
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Ensemble éditorial"@fr ;
-	rdfs:label "Ensemble éditorial"@fr , "Editorial set"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-aDeterminer> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique> a knora-base:ListNode ;
-		knora-base:listNodeName "ŒuvrePoétique" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Œuvre poétique"@fr , "Poetic work"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos> a knora-base:ListNode ;
-		knora-base:listNodeName "Propos" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Propos"@fr , "Article about art, literature and others"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal> a knora-base:ListNode ;
-		knora-base:listNodeName "Journal" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "Journal"@fr , "Diary"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction> a knora-base:ListNode ;
-		knora-base:listNodeName "Traduction" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Traduction"@fr , "Translation"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-aDeterminer> a knora-base:ListNode ;
-		knora-base:listNodeName "ADeterminer" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "À déterminer"@fr , "Undetermined"@en .
-
-
-
-
-
-
-##############################################
-##
-## fonds d'archive - archives
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Archive dans le quel se trouve le document ou la publication"@fr ;
-	rdfs:label "Fonds d'archive"@fr , "Archive"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert> .
-
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR> a knora-base:ListNode ;
-		knora-base:listNodeName "CRLRGR" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "CRLR GR"@fr , "CRLR GR"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod> a knora-base:ListNode ;
-		knora-base:listNodeName "CRLRMermod" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "CRLR Mermod"@fr , "CRLR Mermod"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond> a knora-base:ListNode ;
-		knora-base:listNodeName "BCUSimond" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "BCU Simond"@fr , "BCU Simond"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley> a knora-base:ListNode ;
-		knora-base:listNodeName "BCUChevalley" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "BCU Chevalley"@fr , "BCU Chevalley"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre> a knora-base:ListNode ;
-		knora-base:listNodeName "BCUGuildeDuLivre" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "BCU Guilde du livre"@fr , "BCU Guilde du livre"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier> a knora-base:ListNode ;
-		knora-base:listNodeName "BCUHutterPerrier" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 6 ;
-		rdfs:label "BCU Hutter-Perrier"@fr , "BCU Hutter-Perrier"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds> a knora-base:ListNode ;
-		knora-base:listNodeName "BiblioChauxDeFonds" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 7 ;
-		rdfs:label "Bibliothèque La Chaux-de-Fonds"@fr , "Bibliothèque La Chaux-de-Fonds"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> a knora-base:ListNode ;
-		knora-base:listNodeName "CRLRColomb" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "CRLR Colomb"@fr , "CRLR Colomb"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee> a knora-base:ListNode ;
-		knora-base:listNodeName "CollectionPrivee" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 8 ;
-		rdfs:label "Collection privée"@fr , "Collection privée"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert> a knora-base:ListNode ;
-		knora-base:listNodeName "CRLRStevenPaulRobert" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 9 ;
-		rdfs:label "CRLR Robert"@fr , "CRLR Steven-Paul Robert"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a knora-base:ListNode ;
-		knora-base:listNodeName "CRLRGilbertVincent" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 10 ;
-		rdfs:label "CRLR Vincent"@fr , "CRLR Vincent"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a knora-base:ListNode ;
-		knora-base:listNodeName "ALSChappaz" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 11 ;
-		rdfs:label "ALS Chappaz"@fr , "ALS Chappaz"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a knora-base:ListNode ;
-		knora-base:listNodeName "ALSChessex" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 12 ;
-		rdfs:label "ALS Chessex"@fr , "ALS Chessex"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a knora-base:ListNode ;
-		knora-base:listNodeName "ALSSES" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> ;
-		knora-base:listNodePosition 13 ;
-		rdfs:label "ALS SES"@fr , "ALS SES"@en .
-
-
-
-
-
-
-
-##############################################
-##
-## étape génétique - genetic stage
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "L'étape génétique"@fr ;
-	rdfs:label "Étape génétique"@fr , "Genetic stage"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-plan> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-liste> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-miseAuNet> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-manuscritDefinitif> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesCorriges> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesNonCorriges> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalCorrige> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalTireAPart> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-verifier> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note> a knora-base:ListNode ;
-		knora-base:listNodeName "note" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Note"@fr , "Note"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-plan> a knora-base:ListNode ;
-		knora-base:listNodeName "plan" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Plan"@fr , "Plan"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-liste> a knora-base:ListNode ;
-		knora-base:listNodeName "liste" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Liste"@fr , "List"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon> a knora-base:ListNode ;
-		knora-base:listNodeName "brouillon" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "Brouillon"@fr , "Draft"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-miseAuNet> a knora-base:ListNode ;
-		knora-base:listNodeName "miseAuNet" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "Mise au net"@fr , "Clean copy"@en . 
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-manuscritDefinitif> a knora-base:ListNode ;
-		knora-base:listNodeName "manuscritDefinitif" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 6 ;
-		rdfs:label "Manuscrit définitif"@fr , "Final manuscript"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesCorriges> a knora-base:ListNode ;
-		knora-base:listNodeName "epreuvesCorriges" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 7 ;
-		rdfs:label "Épreuves corrigées"@fr , "Corrected proofs"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesNonCorriges> a knora-base:ListNode ;
-		knora-base:listNodeName "epreuvesNonCorriges" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 8 ;
-		rdfs:label "Épreuves non corrigées"@fr , "Proofs not corrected"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalCorrige> a knora-base:ListNode ;
-		knora-base:listNodeName "originalCorrige" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 9 ;
-		rdfs:label "Original corrigé"@fr , "Corrected original"@en .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalTireAPart> a knora-base:ListNode ;
-		knora-base:listNodeName "originalTireAPart" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 10 ;
-		rdfs:label "Original (tiré à part)"@fr , "Offprint"@en .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-verifier> a knora-base:ListNode ;
-		knora-base:listNodeName "verifier" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> ;
-		knora-base:listNodePosition 11 ;
-		rdfs:label "À vérifier"@fr , "To be verified"@en .
-
-
-
-
-
-##############################################
-##
-## type de document - document type
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Le type de document"@fr ;
-	rdfs:label "Type de document"@fr , "Document type"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-imprime> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript> a knora-base:ListNode ;
-		knora-base:listNodeName "manuscript" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Manuscrit"@fr , "Manuscript"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo> a knora-base:ListNode ;
-		knora-base:listNodeName "dactylo" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Dactylogramme"@fr , "Typescript"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-imprime> a knora-base:ListNode ;
-		knora-base:listNodeName "imprime" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Imprimé"@fr , "Print"@en .
-
-
-
-
-
-
-##############################################
-##
-## type de support - support type
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Le type de support"@fr ;
-	rdfs:label "Type de support"@fr , "Support type"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-agenda> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-cahier> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet> a knora-base:ListNode ;
-		knora-base:listNodeName "feuillet" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Feuillet"@fr , "Leaf"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-agenda> a knora-base:ListNode ;
-		knora-base:listNodeName "agenda" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Agenda"@fr , "Diary"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet> a knora-base:ListNode ;
-		knora-base:listNodeName "carnet" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "Carnet"@fr , "Notebook (carnet)"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-cahier> a knora-base:ListNode ;
-		knora-base:listNodeName "cahier" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Cahier"@fr , "Notebook (cahier)"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes> a knora-base:ListNode ;
-		knora-base:listNodeName "blocNotes" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "Bloc-notes"@fr , "Notepad"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe> a knora-base:ListNode ;
-		knora-base:listNodeName "enveloppe" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "Enveloppe"@fr , "Envelope"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud> a knora-base:ListNode ;
-		knora-base:listNodeName "imprimesReliesParRoud" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 7 ;
-		rdfs:label "Imprimes reliés par Roud"@fr , "Print publication bound by Roud"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> a knora-base:ListNode ;
-		knora-base:listNodeName "divers" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 8 ;
-		rdfs:label "Divers"@fr , "Other"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime> a knora-base:ListNode ;
-		knora-base:listNodeName "imprime" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> ;
-		knora-base:listNodePosition 6 ;
-		rdfs:label "Imprimé"@fr , "Print"@en .
-
-
-
-
-
-
-##############################################
-##
-## instrument d'écriture - writing tool
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "L'instrument d'écriture"@fr ;
-	rdfs:label "L'instrument d'écriture"@fr ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-typingMachine> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-feltTip> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-other> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-toBeDetermined> . 
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil> a knora-base:ListNode ;
-		knora-base:listNodeName "pencil" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Crayon"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-typingMachine> a knora-base:ListNode ;
-		knora-base:listNodeName "typingMachine" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Machine à écrire"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill> a knora-base:ListNode ;
-		knora-base:listNodeName "quill" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "Plume"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen> a knora-base:ListNode ;
-		knora-base:listNodeName "ballpointPen" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Stylo à bille"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-feltTip> a knora-base:ListNode ;
-		knora-base:listNodeName "feltTip" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "Stylo feutre"@fr .		
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-other> a knora-base:ListNode ;
-		knora-base:listNodeName "other" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "Divers"@fr .		
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-toBeDetermined> a knora-base:ListNode ;
-		knora-base:listNodeName "toBeDetermined" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> ;
-		knora-base:listNodePosition 6 ;
-		rdfs:label "À déterminer"@fr .		
-
-
-
-
-
-
-##############################################
-##
-## couleur de l'écriture - writing color
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "La couleur de l'écriture"@fr ;
-	rdfs:label "The color of the writing"@fr ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-red> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-rose> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-violet> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray> .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black> a knora-base:ListNode ;
-		knora-base:listNodeName "black" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "Noir"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-red> a knora-base:ListNode ;
-		knora-base:listNodeName "red" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "Rouge"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue> a knora-base:ListNode ;
-		knora-base:listNodeName "blue" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "Bleu"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-rose> a knora-base:ListNode ;
-		knora-base:listNodeName "rose" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "Rose"@fr .
-
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-violet> a knora-base:ListNode ;
-		knora-base:listNodeName "violet" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 4 ;
-		rdfs:label "Violet"@fr .		
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray> a knora-base:ListNode ;
-		knora-base:listNodeName "gris" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> ;
-		knora-base:listNodePosition 5 ;
-		rdfs:label "Gris"@fr .	
-
-
-
-
-
-##############################################
-##
-## isInEdition - oui, non, peut-être
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Sera dans les éditions"@fr ;
-	rdfs:label "Présence"@fr , "Presence"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> a knora-base:ListNode ;
-		knora-base:listNodeName "oui" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "oui"@fr , "yes"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non> a knora-base:ListNode ;
-		knora-base:listNodeName "non" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "non"@fr , "no"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre> a knora-base:ListNode ;
-		knora-base:listNodeName "peutetre" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> ;
-		knora-base:listNodePosition 3 ;
-		rdfs:label "peut-être"@fr , "maybe"@en .
-
-
-
-
-##############################################
-##
-## datation - established date list
-##
-##############################################
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> a knora-base:ListNode ;
-	knora-base:isRootNode true ;
-	rdfs:comment "Liste pour préciser la datation"@fr ;
-	rdfs:label "Indications sur la datation"@fr , "Indications on the established date"@en ;
-	knora-base:hasSubListNode 	<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before> ,
-								<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after> .
-	
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa> a knora-base:ListNode ;
-		knora-base:listNodeName "circa" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
-		knora-base:listNodePosition 0 ;
-		rdfs:label "vers"@fr , "circa"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before> a knora-base:ListNode ;
-		knora-base:listNodeName "before" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
-		knora-base:listNodePosition 1 ;
-		rdfs:label "avant"@fr , "before"@en .
-
-<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after> a knora-base:ListNode ;
-		knora-base:listNodeName "after" ;
-		knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> ;
-		knora-base:listNodePosition 2 ;
-		rdfs:label "after"@fr , "après"@en .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa>;
+  knora-base:isRootNode true;
+  rdfs:comment "Liste pour préciser la datation"@fr;
+  rdfs:label "Indications on the established date"@en, "Indications sur la datation"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-imprime>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript>;
+  knora-base:isRootNode true;
+  rdfs:comment "Le type de document"@fr;
+  rdfs:label "Document type"@en, "Type de document"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-aDeterminer>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction>;
+  knora-base:isRootNode true;
+  rdfs:comment "Ensemble éditorial"@fr;
+  rdfs:label "Editorial set"@en, "Ensemble éditorial"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesCorriges>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesNonCorriges>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-liste>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-manuscritDefinitif>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-miseAuNet>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalCorrige>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalTireAPart>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-plan>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-verifier>;
+  knora-base:isRootNode true;
+  rdfs:comment "L'étape génétique"@fr;
+  rdfs:label "Genetic stage"@en, "Étape génétique"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-correspondance>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-journal>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-photo>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-propos>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-traduction>;
+  knora-base:isRootNode true;
+  rdfs:comment "Le type de publication"@fr;
+  rdfs:label "Publication type"@en, "Type de publication"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-agenda>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-cahier>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud>;
+  knora-base:isRootNode true;
+  rdfs:comment "Le type de support"@fr;
+  rdfs:label "Support type"@en, "Type de support"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-red>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-rose>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-violet>;
+  knora-base:isRootNode true;
+  rdfs:comment "La couleur de l'écriture"@fr;
+  rdfs:label "The color of the writing"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-feltTip>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-other>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-toBeDetermined>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-typingMachine>;
+  knora-base:isRootNode true;
+  rdfs:comment "L'instrument d'écriture"@fr;
+  rdfs:label "L'instrument d'écriture"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee>;
+  knora-base:isRootNode true;
+  rdfs:comment "Archive dans le quel se trouve le document ou la publication"@fr;
+  rdfs:label "Archive"@en, "Fonds d'archive"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition> a knora-base:ListNode;
+  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre>;
+  knora-base:isRootNode true;
+  rdfs:comment "Sera dans les éditions"@fr;
+  rdfs:label "Presence"@en, "Présence"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-circa> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList>;
+  knora-base:listNodeName "circa";
+  knora-base:listNodePosition 0;
+  rdfs:label "circa"@en, "vers"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-before> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList>;
+  knora-base:listNodeName "before";
+  knora-base:listNodePosition 1;
+  rdfs:label "avant"@fr, "before"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList-after> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-dateEstablishedList>;
+  knora-base:listNodeName "after";
+  knora-base:listNodePosition 2;
+  rdfs:label "after"@fr, "après"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-manuscript> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType>;
+  knora-base:listNodeName "manuscript";
+  knora-base:listNodePosition 0;
+  rdfs:label "Manuscript"@en, "Manuscrit"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-dactylo> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType>;
+  knora-base:listNodeName "dactylo";
+  knora-base:listNodePosition 1;
+  rdfs:label "Dactylogramme"@fr, "Typescript"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType-imprime> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasDocumentType>;
+  knora-base:listNodeName "imprime";
+  knora-base:listNodePosition 3;
+  rdfs:label "Imprimé"@fr, "Print"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-oeuvrePoetique> a
+    knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>;
+  knora-base:listNodeName "ŒuvrePoétique";
+  knora-base:listNodePosition 0;
+  rdfs:label "Poetic work"@en, "Œuvre poétique"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-propos> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>;
+  knora-base:listNodeName "Propos";
+  knora-base:listNodePosition 1;
+  rdfs:label "Article about art, literature and others"@en, "Propos"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-journal> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>;
+  knora-base:listNodeName "Journal";
+  knora-base:listNodePosition 2;
+  rdfs:label "Diary"@en, "Journal"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-traduction> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>;
+  knora-base:listNodeName "Traduction";
+  knora-base:listNodePosition 3;
+  rdfs:label "Traduction"@fr, "Translation"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet-aDeterminer> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasEditorialSet>;
+  knora-base:listNodeName "ADeterminer";
+  knora-base:listNodePosition 4;
+  rdfs:label "Undetermined"@en, "À déterminer"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-note> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "note";
+  knora-base:listNodePosition 0;
+  rdfs:label "Note"@en, "Note"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-plan> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "plan";
+  knora-base:listNodePosition 1;
+  rdfs:label "Plan"@en, "Plan"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-liste> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "liste";
+  knora-base:listNodePosition 3;
+  rdfs:label "List"@en, "Liste"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-brouillon> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "brouillon";
+  knora-base:listNodePosition 4;
+  rdfs:label "Brouillon"@fr, "Draft"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-miseAuNet> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "miseAuNet";
+  knora-base:listNodePosition 5;
+  rdfs:label "Clean copy"@en, "Mise au net"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-manuscritDefinitif>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "manuscritDefinitif";
+  knora-base:listNodePosition 6;
+  rdfs:label "Final manuscript"@en, "Manuscrit définitif"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesCorriges>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "epreuvesCorriges";
+  knora-base:listNodePosition 7;
+  rdfs:label "Corrected proofs"@en, "Épreuves corrigées"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-epreuvesNonCorriges>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "epreuvesNonCorriges";
+  knora-base:listNodePosition 8;
+  rdfs:label "Proofs not corrected"@en, "Épreuves non corrigées"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalCorrige>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "originalCorrige";
+  knora-base:listNodePosition 9;
+  rdfs:label "Corrected original"@en, "Original corrigé"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-originalTireAPart>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "originalTireAPart";
+  knora-base:listNodePosition 10;
+  rdfs:label "Offprint"@en, "Original (tiré à part)"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage-verifier> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasGeneticStage>;
+  knora-base:listNodeName "verifier";
+  knora-base:listNodePosition 11;
+  rdfs:label "To be verified"@en, "À vérifier"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-oeuvrePoetique>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "ŒuvrePoétique";
+  knora-base:listNodePosition 0;
+  rdfs:label "Poetic work"@en, "Œuvre poétique"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-propos> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Propos";
+  knora-base:listNodePosition 1;
+  rdfs:label "Article about art, literature and others"@en, "Propos"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-journal> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Journal";
+  knora-base:listNodePosition 2;
+  rdfs:label "Diary"@en, "Journal"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-traduction> a
+    knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Traduction";
+  knora-base:listNodePosition 3;
+  rdfs:label "Traduction"@fr, "Translation"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-photo> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Photo";
+  knora-base:listNodePosition 4;
+  rdfs:label "Photographie"@fr, "Photography"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-correspondance>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Correspondance";
+  knora-base:listNodePosition 5;
+  rdfs:label "Correspondance"@fr, "correspondance"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-surRoud> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "SurRoud";
+  knora-base:listNodePosition 6;
+  rdfs:label "About Roud"@en, "À propos de Roud"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType-disque> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasPublicationType>;
+  knora-base:listNodeName "Disque";
+  knora-base:listNodePosition 7;
+  rdfs:label "Disc"@en, "Disque"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-feuillet> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "feuillet";
+  knora-base:listNodePosition 0;
+  rdfs:label "Feuillet"@fr, "Leaf"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-agenda> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "agenda";
+  knora-base:listNodePosition 1;
+  rdfs:label "Agenda"@fr, "Diary"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-carnet> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "carnet";
+  knora-base:listNodePosition 2;
+  rdfs:label "Carnet"@fr, "Notebook (carnet)"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-cahier> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "cahier";
+  knora-base:listNodePosition 3;
+  rdfs:label "Cahier"@fr, "Notebook (cahier)"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-blocNotes> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "blocNotes";
+  knora-base:listNodePosition 4;
+  rdfs:label "Bloc-notes"@fr, "Notepad"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-enveloppe> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "enveloppe";
+  knora-base:listNodePosition 5;
+  rdfs:label "Envelope"@en, "Enveloppe"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprime> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "imprime";
+  knora-base:listNodePosition 6;
+  rdfs:label "Imprimé"@fr, "Print"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-imprimesReliesParRoud>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "imprimesReliesParRoud";
+  knora-base:listNodePosition 7;
+  rdfs:label "Imprimes reliés par Roud"@fr, "Print publication bound by Roud"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType-divers> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasSupportType>;
+  knora-base:listNodeName "divers";
+  knora-base:listNodePosition 8;
+  rdfs:label "Divers"@fr, "Other"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-black> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "black";
+  knora-base:listNodePosition 0;
+  rdfs:label "Noir"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-red> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "red";
+  knora-base:listNodePosition 1;
+  rdfs:label "Rouge"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-blue> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "blue";
+  knora-base:listNodePosition 2;
+  rdfs:label "Bleu"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-rose> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "rose";
+  knora-base:listNodePosition 3;
+  rdfs:label "Rose"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-violet> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "violet";
+  knora-base:listNodePosition 4;
+  rdfs:label "Violet"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor-gray> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingColor>;
+  knora-base:listNodeName "gris";
+  knora-base:listNodePosition 5;
+  rdfs:label "Gris"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-pencil> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "pencil";
+  knora-base:listNodePosition 0;
+  rdfs:label "Crayon"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-typingMachine> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "typingMachine";
+  knora-base:listNodePosition 1;
+  rdfs:label "Machine à écrire"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-quill> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "quill";
+  knora-base:listNodePosition 2;
+  rdfs:label "Plume"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-ballpointPen> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "ballpointPen";
+  knora-base:listNodePosition 3;
+  rdfs:label "Stylo à bille"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-feltTip> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "feltTip";
+  knora-base:listNodePosition 4;
+  rdfs:label "Stylo feutre"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-other> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "other";
+  knora-base:listNodePosition 5;
+  rdfs:label "Divers"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool-toBeDetermined> a
+    knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-hasWritingTool>;
+  knora-base:listNodeName "toBeDetermined";
+  knora-base:listNodePosition 6;
+  rdfs:label "À déterminer"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CRLRGR";
+  knora-base:listNodePosition 0;
+  rdfs:label "CRLR GR"@en, "CRLR GR"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CRLRMermod";
+  knora-base:listNodePosition 1;
+  rdfs:label "CRLR Mermod"@en, "CRLR Mermod"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CRLRColomb";
+  knora-base:listNodePosition 2;
+  rdfs:label "CRLR Colomb"@en, "CRLR Colomb"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "BCUSimond";
+  knora-base:listNodePosition 3;
+  rdfs:label "BCU Simond"@en, "BCU Simond"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "BCUChevalley";
+  knora-base:listNodePosition 4;
+  rdfs:label "BCU Chevalley"@en, "BCU Chevalley"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "BCUGuildeDuLivre";
+  knora-base:listNodePosition 5;
+  rdfs:label "BCU Guilde du livre"@en, "BCU Guilde du livre"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "BCUHutterPerrier";
+  knora-base:listNodePosition 6;
+  rdfs:label "BCU Hutter-Perrier"@en, "BCU Hutter-Perrier"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds> a
+    knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "BiblioChauxDeFonds";
+  knora-base:listNodePosition 7;
+  rdfs:label "Bibliothèque La Chaux-de-Fonds"@en, "Bibliothèque La Chaux-de-Fonds"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CollectionPrivee";
+  knora-base:listNodePosition 8;
+  rdfs:label "Collection privée"@en, "Collection privée"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert>
+  a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CRLRStevenPaulRobert";
+  knora-base:listNodePosition 9;
+  rdfs:label "CRLR Robert"@fr, "CRLR Steven-Paul Robert"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a
+    knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "CRLRGilbertVincent";
+  knora-base:listNodePosition 10;
+  rdfs:label "CRLR Vincent"@en, "CRLR Vincent"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "ALSChappaz";
+  knora-base:listNodePosition 11;
+  rdfs:label "ALS Chappaz"@en, "ALS Chappaz"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "ALSChessex";
+  knora-base:listNodePosition 12;
+  rdfs:label "ALS Chessex"@en, "ALS Chessex"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "ALSSES";
+  knora-base:listNodePosition 13;
+  rdfs:label "ALS SES"@en, "ALS SES"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>;
+  knora-base:listNodeName "oui";
+  knora-base:listNodePosition 0;
+  rdfs:label "oui"@fr, "yes"@en .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-non> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>;
+  knora-base:listNodeName "non";
+  knora-base:listNodePosition 1;
+  rdfs:label "no"@en, "non"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-peutetre> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>;
+  knora-base:listNodeName "peutetre";
+  knora-base:listNodePosition 3;
+  rdfs:label "maybe"@en, "peut-être"@fr .
