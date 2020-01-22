@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
+
+<defaultXSLTransformation>http://rdfh.ch/0112/_IGPKDN8SliC8LH_lwlN8A</defaultXSLTransformation>
+    
+    <!-- standoff:text -->
+    <mappingElement>
+        <tag>
+            <name>text</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <separatesWords>false</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/standoff#StandoffRootTag</classIri>
+            <attributes>
+                <attribute>
+                    <attributeName>documentType</attributeName>
+                    <namespace>noNamespace</namespace>
+                    <propertyIri>http://www.knora.org/ontology/standoff#standoffRootTagHasDocumentType</propertyIri>
+                </attribute>
+            </attributes>
+        </standoffClass>
+    </mappingElement>
+
+
+
+    <!-- tei:TEI -->
+    <mappingElement>
+        <tag>
+            <name>TEI</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <!-- <namespace>http://www.tei-c.org/ns/1.0</namespace>-->
+            <separatesWords>false</separatesWords>
+            <!-- or true for indexing ?? -->
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffRootTEITag</classIri>
+        </standoffClass>
+    </mappingElement>
+
+    <!-- tei:div -->
+    <mappingElement>
+        <tag>
+            <name>div</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <!-- <namespace>http://www.tei-c.org/ns/1.0</namespace>-->
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffDivTag</classIri>
+            <attributes>
+                <attribute>
+                    <attributeName>n</attributeName>
+                    <namespace>noNamespace</namespace>
+                    <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffDivTagHasN</propertyIri>
+                </attribute>
+            </attributes>
+        </standoffClass>
+    </mappingElement>
+    
+
+    
+    <!-- tei:text 
+    <mappingElement>
+        <tag>
+            <name>text</name>
+            <class>noClass</class>
+            <namespace>http://www.tei-c.org/ns/1.0</namespace>
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffTextTag</classIri>
+        </standoffClass>
+    </mappingElement> -->
+    
+    <!-- tei:body 
+    <mappingElement>
+        <tag>
+            <name>body</name>
+            <class>noClass</class>
+            <namespace>http://www.tei-c.org/ns/1.0</namespace>
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffBodyTag</classIri>
+        </standoffClass>
+    </mappingElement> -->
+       
+    
+    <!-- tei:head @type-->
+    <mappingElement>
+        <tag>
+            <name>head</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffHeadTag</classIri>
+            <attributes>
+                <attribute>
+                    <attributeName>type</attributeName>
+                    <namespace>noNamespace</namespace>
+                    <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffHeadTagHasType</propertyIri>
+                </attribute>
+            </attributes>
+        </standoffClass>
+    </mappingElement>     
+    
+    <!-- tei:p -->
+    <mappingElement>
+        <tag>
+            <name>p</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffPTag</classIri>
+        </standoffClass>
+    </mappingElement> 
+    
+    <!-- tei:placeName @ref  avevo messo salsah-link come class, ma non funziona -->
+    <mappingElement>
+        <tag>
+            <name>placeName</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <separatesWords>true</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffPlaceNameTag</classIri>
+            <datatype>
+                <type>http://www.knora.org/ontology/knora-base#StandoffLinkTag</type>
+                <attributeName>ref</attributeName>
+            </datatype>
+        </standoffClass>
+    </mappingElement>
+    
+    
+</mapping>
+
+
+
+
+
