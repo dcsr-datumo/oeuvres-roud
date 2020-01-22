@@ -1,3 +1,4 @@
+@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
 @prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
 @prefix lumieres-lausanne: <http://www.knora.org/ontology/0113/lumieres-lausanne#> .
 @prefix dc: <http://purl.org/dc/terms/> .
@@ -5,6 +6,8 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@base <http://www.knora.org/ontology/0112/roud-oeuvres> .
+
 
 <http://www.knora.org/ontology/0112/roud-oeuvres> a owl:Ontology ;
     rdfs:label "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
