@@ -1,63 +1,15 @@
-<<<<<<< HEAD
 @prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
 @prefix lumieres-lausanne: <http://www.knora.org/ontology/0113/lumieres-lausanne#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
-=======
-@prefix : <http://www.knora.org/ontology/knora-admin#> .
-@prefix anything: <http://www.knora.org/ontology/0001/anything#> .
-@prefix atelier-fabula: <http://www.knora.org/ontology/0108/atelier-fabula#> .
-@prefix atelier-fabula-biblio: <http://www.knora.org/ontology/0108/atelier-fabula-biblio#> .
-@prefix beol: <http://www.knora.org/ontology/0801/beol#> .
-@prefix biblio: <http://www.knora.org/ontology/0801/biblio#> .
-@prefix bibo: <http://purl.org/ontology/bibo/> .
-@prefix dc: <http://www.knora.org/ontology/dc#> .
-@prefix dokubib: <http://www.knora.org/ontology/0804/dokubib#> .
-@prefix drawings-gods: <http://www.knora.org/ontology/0105/drawings-gods#> .
-@prefix elites-cio: <http://www.knora.org/ontology/0114/elites-cio#> .
-@prefix elites-cio-biblio: <http://www.knora.org/ontology/0114/elites-cio-biblio#> .
-@prefix event: <http://purl.org/NET/c4dm/event.owl#> .
-@prefix ex: <http://www.example.com/> .
-@prefix fabio: <http://purl.org/spar/fabio/> .
-@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix geo-ont: <http://www.geonames.org/ontology#> .
-@prefix images: <http://www.knora.org/ontology/00FF/images#> .
-@prefix incunabula: <http://www.knora.org/ontology/0803/incunabula#> .
-@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
-@prefix luc: <http://www.ontotext.com/owlim/lucene#> .
-@prefix lumieres-lausanne: <http://www.knora.org/ontology/0113/lumieres-lausanne#> .
-@prefix ns4: <http://purl.org/dc/terms/> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix parole-religieuse: <http://www.knora.org/ontology/0101/parole-religieuse#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix reforme-geneve: <http://www.knora.org/ontology/0111/reforme-geneve#> .
-@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
-@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
-@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
-@prefix something: <http://www.knora.org/ontology/0001/something> .
-@prefix standoff: <http://www.knora.org/ontology/standoff#> .
-@prefix stardom: <http://www.knora.org/ontology/0107/stardom#> .
-@prefix theatre-societe: <http://www.knora.org/ontology/0103/theatre-societe#> .
-@prefix theatre-societe-biblio: <http://www.knora.org/ontology/0103/theatre-societe-biblio#> .
-@prefix webern: <http://www.knora.org/ontology/08AE/webern#> .
-@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
->>>>>>> textEncoding
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
 <http://www.knora.org/ontology/0112/roud-oeuvres> a owl:Ontology ;
     rdfs:label "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
-<<<<<<< HEAD
     dc:description "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
     dc:title "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
-=======
-    ns4:description "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
-    ns4:title "Ontologie du projet \"Oeuvres complètes de Gustave Roud\"."@fr ;
->>>>>>> textEncoding
     knora-base:attachedToProject <http://rdfh.ch/projects/0112> .
 
 roud-oeuvres:ArtWork a owl:Class ;
@@ -2150,7 +2102,6 @@ roud-oeuvres:Work a owl:Class ;
     rdfs:comment "A work. Abstract class, see subclasses."@en,
         "Une œuvre. Classe abstraite, voir les subclasses."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-<<<<<<< HEAD
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:workHasAuthorValue ],
         [ a owl:Restriction ;
@@ -2162,8 +2113,6 @@ roud-oeuvres:Work a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:workHasDate ],
         [ a owl:Restriction ;
-=======
->>>>>>> textEncoding
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:workHasTitle ],
@@ -2171,20 +2120,6 @@ roud-oeuvres:Work a owl:Class ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:workHasAuthor ],
-<<<<<<< HEAD
-=======
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:workHasAuthorValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:workHasDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:workHasNotice ],
->>>>>>> textEncoding
         knora-base:Resource .
 
 roud-oeuvres:Photo a owl:Class ;
@@ -2198,15 +2133,9 @@ roud-oeuvres:Photo a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasTitle ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasNotice ],
-=======
-            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:photoHasDate ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2216,28 +2145,16 @@ roud-oeuvres:Photo a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasShelfmark ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasDate ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasAuthorValue ],
-=======
-            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:photoHasNotice ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasAuthor ],
-<<<<<<< HEAD
-=======
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:photoHasAuthorValue ],
->>>>>>> textEncoding
         knora-base:StillImageRepresentation .
 
 roud-oeuvres:Person a owl:Class ;
@@ -2247,7 +2164,6 @@ roud-oeuvres:Person a owl:Class ;
     rdfs:comment "A person."@en,
         "Une personne."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personInfoHasSource ],
@@ -2256,23 +2172,17 @@ roud-oeuvres:Person a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasDhsID ],
         [ a owl:Restriction ;
-=======
->>>>>>> textEncoding
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasGivenName ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasPhotoValue ],
         [ a owl:Restriction ;
-=======
->>>>>>> textEncoding
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasFamilyName ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDeathDate ],
@@ -2292,29 +2202,11 @@ roud-oeuvres:Person a owl:Class ;
             salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasBirthDate ],
-=======
-            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasBirthDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDeathDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personHasAuthorityID ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personHasDhsID ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isReferenceFor ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ],
         [ a owl:Restriction ;
@@ -2324,45 +2216,13 @@ roud-oeuvres:Person a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isCharacterInValue ],
         [ a owl:Restriction ;
-=======
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isReferenceForValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isCharacterIn ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isCharacterInValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personHasPhoto ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personHasPhotoValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personHasNotice ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personInfoHasSource ],
-        [ a owl:Restriction ;
->>>>>>> textEncoding
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personIsSameAsAuthor ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasAuthorityID ],
-=======
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ],
->>>>>>> textEncoding
         knora-base:Resource .
 
 roud-oeuvres:Publication a owl:Class ;
@@ -2372,7 +2232,6 @@ roud-oeuvres:Publication a owl:Class ;
     rdfs:comment "Any kind of publication. This is an abstract class, see its subclasses."@en,
         "Tout type de publication. Il s'agit d'une classe abstraite, voir ses subclasses."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsTranscribed ],
@@ -2380,16 +2239,10 @@ roud-oeuvres:Publication a owl:Class ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublicationType ],
-=======
-            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasAuthor ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasAuthorValue ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasAuthor ],
@@ -2397,39 +2250,15 @@ roud-oeuvres:Publication a owl:Class ;
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsEditionOf ],
-=======
-            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasCollaborators ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasPhoto ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasPhotoValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasTitle ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasDate ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
-=======
-            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasPublicationType ],
-        [ a owl:Restriction ;
->>>>>>> textEncoding
             salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasInternalComment ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsDigitized ],
@@ -2451,37 +2280,14 @@ roud-oeuvres:Publication a owl:Class ;
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasPhoto ],
-=======
-            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsEditionOf ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsEditionOfValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsDigitized ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsTranscribed ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ],
-<<<<<<< HEAD
         [ a owl:Restriction ;
             salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
-=======
->>>>>>> textEncoding
         knora-base:Resource .
 
 roud-oeuvres:Manuscript a owl:Class ;
@@ -2491,7 +2297,6 @@ roud-oeuvres:Manuscript a owl:Class ;
     rdfs:comment "A manuscript or a typescript in an archive."@en,
         "Un manuscrit ou un dactylogramme qui se trouve dans un fonds d’archive."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDocumentType ],
@@ -2527,37 +2332,11 @@ roud-oeuvres:Manuscript a owl:Class ;
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isPhotocopy ],
-=======
-            salsah-gui:guiOrder "19"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptIsDigitized ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "18"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasPublicComment ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "21"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasInternalComment ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasPublishedReference ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasPublishedReferenceValue ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "20"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasTranslatedAuthor ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
-=======
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasTranslatedAuthorValue ],
-        [ a owl:Restriction ;
->>>>>>> textEncoding
             salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptHasDateComputable ],
@@ -2566,22 +2345,10 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedReadable ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
-=======
-            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedList ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasDateEstablishedComputable ],
-        [ a owl:Restriction ;
->>>>>>> textEncoding
             salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasSupportType ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasWritingTool ],
@@ -2611,43 +2378,6 @@ roud-oeuvres:Manuscript a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptHasPublishedReferenceValue ],
-=======
-            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasSupportInfo ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasWritingTool ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDocumentType ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasWritingColor ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasOtherWritingTool ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptIsInArchive ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasTitle ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasShelfmark ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasOldShelfmark ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2657,7 +2387,6 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasAnnotation ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptHasPublishedReference ],
@@ -2669,19 +2398,6 @@ roud-oeuvres:Manuscript a owl:Class ;
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasWritingColor ],
-=======
-            salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasGeneticStage ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isPhotocopy ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptHasDateReadable ],
->>>>>>> textEncoding
         knora-base:Resource .
 
 roud-oeuvres:EstablishedText a owl:Class ;
@@ -2691,7 +2407,6 @@ roud-oeuvres:EstablishedText a owl:Class ;
     rdfs:comment "Textual unit for the edition (text and scan, or only scan)."@en,
         "Unité textuelle pour l'édition (texte et fac-similé, ou fac-similé). L'unité texteulle corresponde à une page de l'édition numérique.<br/>Tous les liens d'un texte sont à d'autres textes, et non pas directement aux publications ou aux documents."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationPartiallyReusedInCollection ],
@@ -2710,30 +2425,10 @@ roud-oeuvres:EstablishedText a owl:Class ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:establishedTextHasEditorialSet ],
-=======
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationFullyReusedInCollectionValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsReissued ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsReissuedValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasTextContent ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourcePublication ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePublicationValue ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossier ],
@@ -2744,36 +2439,22 @@ roud-oeuvres:EstablishedText a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:diaryReusedInValue ],
-=======
-            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourceManuscript ],
-        [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourceManuscriptValue ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePageStart ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReissued ],
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePageEndValue ],
-=======
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourcePageStartValue ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePageEnd ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isBeforeInAvantTexte ],
@@ -2804,74 +2485,20 @@ roud-oeuvres:EstablishedText a owl:Class ;
             salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:diaryRewrittenInDiary ],
-=======
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourcePageEndValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasDirectSourcePosition ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "20"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:establishedTextHasInternalComment ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:establishedTextHasEditorialSet ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:establishedTextHasTitle ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:establishedTextDiaryHasDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isInPaperEdition ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "18"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:scanIsInDigitalEdition ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "19"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:txtIsInDigitalEdition ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossier ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptIsPartOfGeneticDossierValue ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationPartiallyReusedInCollectionValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:diaryReusedIn ],
-=======
-            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:diaryRewrittenInDiary ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:diaryRewrittenInDiaryValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:isBeforeInAvantTexte ],
->>>>>>> textEncoding
         [ a owl:Restriction ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isBeforeInAvantTexteValue ],
         [ a owl:Restriction ;
-<<<<<<< HEAD
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:diaryRewrittenInDiaryValue ],
         [ a owl:Restriction ;
@@ -2899,31 +2526,5 @@ roud-oeuvres:EstablishedText a owl:Class ;
             salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:establishedTextDiaryHasDate ],
-=======
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:diaryReusedIn ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:diaryReusedInValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationReusedInNewText ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationReusedInNewTextValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationPartiallyReusedInCollection ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationPartiallyReusedInCollectionValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationFullyReusedInCollection ],
->>>>>>> textEncoding
         knora-base:Resource .
 

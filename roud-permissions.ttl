@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 @prefix knora-admin: <http://www.knora.org/ontology/knora-admin#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -17,35 +16,3 @@
   knora-admin:forGroup knora-admin:ProjectMember;
   knora-admin:forProject <http://rdfh.ch/projects/0112>;
   <http://www.knora.org/ontology/knora-base#hasPermissions> "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
-=======
-@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
-@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
-@prefix ns1: <http://www.knora.org/ontology/knora-admin#> .
-@prefix owl: <http://www.w3.org/2002/07/owl#> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
-@prefix xml: <http://www.w3.org/XML/1998/namespace> .
-@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-
-<http://rdfh.ch/permissions/0112/roud-oeuvres-a001> a ns1:AdministrativePermission ;
-    ns1:forGroup ns1:ProjectAdmin ;
-    ns1:forProject <http://rdfh.ch/projects/0112> ;
-    knora-base:hasPermissions "ProjectAdminAllPermission|ProjectResourceCreateAllPermission" .
-
-<http://rdfh.ch/permissions/0112/roud-oeuvres-a002> a ns1:AdministrativePermission ;
-    ns1:forGroup ns1:ProjectMember ;
-    ns1:forProject <http://rdfh.ch/projects/0112> ;
-    knora-base:hasPermissions "ProjectResourceCreateAllPermission" .
-
-<http://rdfh.ch/permissions/0112/roud-oeuvres-o001> a ns1:DefaultObjectAccessPermission ;
-    ns1:forGroup ns1:ProjectAdmin ;
-    ns1:forProject <http://rdfh.ch/projects/0112> ;
-    knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
-
-<http://rdfh.ch/permissions/0112/roud-oeuvres-o002> a ns1:DefaultObjectAccessPermission ;
-    ns1:forGroup ns1:ProjectMember ;
-    ns1:forProject <http://rdfh.ch/projects/0112> ;
-    knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
-
->>>>>>> textEncoding
