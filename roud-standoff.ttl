@@ -13,55 +13,26 @@
 # reference is https://github.com/dhlab-basel/Knora/blob/develop/knora-ontologies/standoff-onto.ttl
 
 
-# tei:TEI
-:StandoffRootTEITag rdf:type owl:Class ;
+
+### http://www.knora.org/ontology/standoff#StandoffRoot
+:StandoffRoot rdf:type owl:Class ;
+            rdfs:subClassOf knora-base:StandoffTag ;
+            rdfs:comment "Represents the root node if the TextValue has been created from XML"@en .
+
+
+### http://www.knora.org/ontology/0112/roud-oeuvres#StandoffRootTEI
+:StandoffRootTEI rdf:type owl:Class ;
     rdfs:subClassOf knora-base:StandoffTag;
     rdfs:label "TEI root"@en.
 
 
-
-# tei:div @n
-:StandoffDivTag rdf:type owl:Class ;
-    rdfs:subClassOf knora-base:StandoffTag,
-                   [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty :standoffDivTagHasN ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                   ] ;
+### http://www.knora.org/ontology/standoff#StandoffDiv
+:StandoffDiv rdf:type owl:Class ;
+    rdfs:subClassOf knora-base:StandoffTag ;
     rdfs:label "A division"@en.
 
-:standoffDivTagHasN rdf:type owl:DatatypeProperty ;
-                  knora-base:subjectClassConstraint :StandoffDivTag ;
-                  knora-base:objectDatatypeConstraint xsd:integer .
 
-
-
-# tei:head @type
-:StandoffHeadTag rdf:type owl:Class ;
-    rdfs:subClassOf knora-base:StandoffTag,
-                   [
-                      rdf:type owl:Restriction ;
-                      owl:onProperty :standoffHeadTagHasType ;
-                      owl:maxCardinality "1"^^xsd:nonNegativeInteger
-                   ] ;
-    rdfs:label "A title"@en.
-
-:standoffHeadTagHasType rdf:type owl:DatatypeProperty ;
-                  knora-base:subjectClassConstraint :StandoffHeadTag ;
-                  knora-base:objectDatatypeConstraint xsd:string .
-
-
-
-
-# tei:placeName @ref
-:StandoffPlaceNameTag rdf:type owl:Class ;
+### http://www.knora.org/ontology/0112/roud-oeuvres#StandoffPlaceName
+:StandoffPlaceName rdf:type owl:Class ;
     rdfs:subClassOf knora-base:StandoffLinkTag;
     rdfs:label "A name of a place"@en.
-
-
-
-
-
-roud-oeuvres:StandoffPTag rdf:type owl:Class ;
-    rdfs:subClassOf knora-base:StandoffTag;
-    rdfs:label "A paragraph"@en.

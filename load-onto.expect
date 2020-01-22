@@ -3,8 +3,8 @@
 set timeout 120
 
 
-# BEFORE LAUNCHING THIS, require console.sh in the PATH or replace by full path to knora project:
-# /path/ot/Knora/webapi/scripts/openrdf-console/bin/console.sh
+# BEFORE LAUNCHING THIS, require console.sh in the PATH or replace by full path to knora project (see textEncoding for an example)
+
 
 spawn console.sh --force --echo --serverURL [lindex $argv 0]
 set prompt "> "
@@ -19,8 +19,8 @@ send "load ./roud-permissions.ttl into http://www.knora.org/data/permissions .\r
 expect $prompt
 send "load ./roud-onto.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
 expect $prompt
-send "load ./roud-standoff.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
-expect $prompt
+# send "load ./roud-standoff.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
+# expect $prompt
 send "load ./roud-data-lists.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
 expect $prompt
 
