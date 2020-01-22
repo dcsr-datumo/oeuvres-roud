@@ -1,0 +1,126 @@
+@prefix fn: <http://www.w3.org/2005/xpath-functions#> .
+@prefix knora-admin: <http://www.knora.org/ontology/knora-admin#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sesame: <http://www.openrdf.org/schema/sesame#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<http://rdfh.ch/projects/0112> a knora-admin:knoraProject;
+  knora-admin:hasSelfJoinEnabled false;
+  knora-admin:projectDescription "Le projet « Les Œuvres complètes de Gustave Roud » fournit tous les textes de l'écrivain vaudois avec la notation complémentaire, contient les reproductions numériques des manuscrits originaux et offre de parcours critiques."@fr;
+  knora-admin:projectLongname "Oeuvres complètes de Gustave Roud";
+  knora-admin:projectShortcode "0112";
+  knora-admin:projectShortname "roud-oeuvres";
+  knora-admin:status true;
+  <http://www.knora.org/ontology/knora-base#projectKeywords> "Gustave Roud", "Vaud",
+    "génétique", "littérature", "écrivain", "édition";
+  <http://www.knora.org/ontology/knora-base#projectOntology> <http://www.knora.org/ontology/0112/roud-oeuvres> .
+
+<http://rdfh.ch/users/aChristen> a knora-admin:User;
+  knora-admin:email "alessio.christen@unil.ch";
+  knora-admin:familyName "Christen";
+  knora-admin:givenName "Alessio";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$pGiH23H1ERVr7LsD5Q5T3hYB7L1ulIjkhrGcOjR67YXg+jUyBCYFh2kiKVJyPgIGOwNBg+2E8Hw7ZCnfoG3eaQ==$fEDdz2FlLwXEhvKYDR/4Ag3S1u1rSVa3SnWyjAMxA/U=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "aChristen";
+  <http://www.knora.org/ontology/knora-base#userid> "aChristen" .
+
+<http://rdfh.ch/users/bPellegrino> a knora-admin:User;
+  knora-admin:email "bruno.pellegrino@unil.ch";
+  knora-admin:familyName "Pellegrino";
+  knora-admin:givenName "Bruno";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$bN84IU1URdaHyDaHv/l4bcoQcqChUvlFEEkcfD7qqs0Eae8i83fUD+ZVU+qhp8lLs/rxBz6fOVxq+rEhPEXE2g==$SXpws4TDx7N74GK2Nay0mNFx2JryrI32VhGjyeMLj+A=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "bPellegrino";
+  <http://www.knora.org/ontology/knora-base#userid> "bPellegrino" .
+
+<http://rdfh.ch/users/OxRjdZl8TGWhM-L77hsDfw> a knora-admin:User;
+  knora-admin:email "claire.jaquier@unine.ch";
+  knora-admin:familyName "Jaquier";
+  knora-admin:givenName "Claire";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$g5VYIa1dtxD82nEUT4xwFsTZL3sYjvEHp/Cpp2inmt4a2+tNz8sJfnqTCvlmPe+DoNZW1TAuR7HZOls9tdoQzw==$Suey/o3TIOV48TbUBYxWk0X3Zi3vK/WKORo8VXzMJYI=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "cJaquier" .
+
+<http://rdfh.ch/users/dMaggetti> a knora-admin:User;
+  knora-admin:email "daniel.maggetti@unil.ch";
+  knora-admin:familyName "Maggetti";
+  knora-admin:givenName "Daniel";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$BVA8n1Ed29F7qSvaZbrYLZKYJbzUa7qruYXoUBE2SFsck4qY4pcTar3ZTYAntYCgU7utclXytiJ3froTy/9xlg==$NALDyoPKKBE6jExtFW2WvC5pfvGJhFuldbV5L+NRAII=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "dMaggetti";
+  <http://www.knora.org/ontology/knora-base#userid> "dMaggetti" .
+
+<http://rdfh.ch/users/eSpadini> a knora-admin:User;
+  knora-admin:email "elena.spadini@unil.ch";
+  knora-admin:familyName "Spadini";
+  knora-admin:givenName "Elena";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInProjectAdminGroup <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup true;
+  knora-admin:password "$e0801$Rqo/KdpRJrdfClnleE87H0eCxhUOQZLHi61eDALBBVIwWwrqhWLBlq0IuZ2U1I2g/tHsmbpzZ/LgSnF1+CJEdw==$xHzwW/GXVV0eSZiGjKleqGfQ90F6QlOIvV0hZLCOTRU=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "eSpadini";
+  <http://www.knora.org/ontology/knora-base#userid> "eSpadini" .
+
+<http://rdfh.ch/users/T0x_LOB5SIySW8PgDPVzSQ> a knora-admin:User;
+  knora-admin:email "gustave@unil.ch";
+  knora-admin:familyName "Roud - import des données";
+  knora-admin:givenName "Gustave";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInProjectAdminGroup <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$7a30n3gfKF8PKZX/CuMQmzwzTRNFe19TByvMYQusFjim0H/plvq4L2I985SI2E2kokmFnX9fuR64gVe4ux73lg==$/D121AkHjxQQ14viQOFKKduyKLO3StECdLdBj8/u+eE=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "gRoud" .
+
+<http://rdfh.ch/users/jBurri> a knora-admin:User;
+  knora-admin:email "julien.burri@unil.ch";
+  knora-admin:familyName "Burri";
+  knora-admin:givenName "Julien";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$uU86iwjYqylZk4fntS8B2Cs12hlsXvU3pfqGFUTMIKcQYaLGfZ8os7KGTCq+EZlgyHhk3MTZuEL+R4PzhaM0Lw==$KIBV8ohNpeze+ZN8sLx/VLb6b6SATNPi5KAzMYYTyA8=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "jBurri";
+  <http://www.knora.org/ontology/knora-base#userid> "jBurri" .
+
+<http://rdfh.ch/users/rLacord> a knora-admin:User;
+  knora-admin:email "raphaelle.lacord@unil.ch";
+  knora-admin:familyName "Lacord";
+  knora-admin:givenName "Raphaëlle";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$e0801$C+Y8x9ENM0/R4zy3xOkDHY93lKMxS2o+RHy+o/+bScxYEXawACa7Ut8F4cxJxnkse5bYJQN6oP4E+6Jq6KnPRQ==$Xdf9te3ufhy/kTpHmjSNbSIF4xtoAOIIMaUGu9zKTc4=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "rLacord";
+  <http://www.knora.org/ontology/knora-base#userid> "rLacord" .
+
+<http://rdfh.ch/users/roud-oeuvres-test-user1> a knora-admin:User;
+  knora-admin:email "roud1@unil.ch";
+  knora-admin:familyName "roud";
+  knora-admin:givenName "roud";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup true;
+  knora-admin:password "$e0801$/+Dkt7OKXDB/C28WFPgqQ+9Ny7e+DiuEAuy/oMqlcM1Lrbn6iMCnoBw2iuc8jGECGm9W5EkpEAaCOK7oQRgw/w==$WB+ALTbn02Tz6RhDj+z3NcuBzPCWm2p1CAevZT97ZaQ=";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:status true;
+  knora-admin:username "roud";
+  <http://www.knora.org/ontology/knora-base#userid> "roud" .
