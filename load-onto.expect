@@ -3,7 +3,7 @@
 set timeout 120
 
 
-# BEFORE LAUNCHING THIS, require console.sh in the PATH or replace by full path to knora project (see textEncoding for an example)
+# BEFORE LAUNCHING THIS, require path/to/dir of console.sh in the PATH
 
 
 spawn console.sh --force --echo --serverURL [lindex $argv 0]
