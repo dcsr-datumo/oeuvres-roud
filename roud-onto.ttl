@@ -6,7 +6,6 @@
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
-@base <http://www.knora.org/ontology/0112/roud-oeuvres> .
 
 
 <http://www.knora.org/ontology/0112/roud-oeuvres> a owl:Ontology ;
