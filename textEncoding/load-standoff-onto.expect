@@ -1,14 +1,14 @@
 #!/usr/bin/expect
 
 set timeout 120
-spawn /home/espadini/Github/LaDHUL/Knora/webapi/scripts/openrdf-console/bin/console.sh --force --echo --serverURL [lindex $argv 0]
+spawn console.sh --force --echo --serverURL [lindex $argv 0]
 set prompt "> "
 expect $prompt
 send "open knora-test .\r"
 
 
 expect $prompt
-send "load ./testRoud1_mapping_checked_part1.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
+send "load ./roud_mapping9.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
 
 
 send "close .\r"
