@@ -1,6 +1,6 @@
 # oeuvres-roud
 
-Project ["Oeuvres complètes de Gustave Roud"](https://www.unil.ch/clsr/home/menuinst/projets-de-recherche/gustave-roud-oeuvres-completes.html).
+Project ["Gustave Roud, *Oeuvres complètes*"](https://www.unil.ch/clsr/home/menuinst/projets-de-recherche/gustave-roud-oeuvres-completes.html) (SNSF Project [157970](http://p3.snf.ch/Project-157970)).	
 
 Powered by [Knora](knora.org/) at DaSCH@Unil.
 
@@ -28,6 +28,8 @@ Work in progress on branch `textEncoding`. No public readme yet.
 ## Web app
 
 Development of the web application of the project at https://github.com/gustaveroudproject/roud-oeuvres-app.
+
+In progress documentation is available [here](https://github.com/gustaveroudproject/roud-oeuvres-app/blob/master/DOCUMENTATION.md).
 
 
 
