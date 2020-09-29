@@ -2866,7 +2866,7 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierValue ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierPartValue ],
+            owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierPartValue ], 
         
         knora-base:Resource .
 
