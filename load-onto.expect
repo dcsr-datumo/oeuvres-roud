@@ -17,13 +17,13 @@ send "load ./roud-admin.ttl into http://www.knora.org/data/admin .\r"
 expect $prompt
 send "load ./roud-permissions.ttl into http://www.knora.org/data/permissions .\r"
 expect $prompt
-send "load ./roud-onto_20200609.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
+send "load ./roud-onto.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
 expect $prompt
 # send "load ./roud-standoff.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
 # expect $prompt
 send "load ./roud-data-lists.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
 expect $prompt
-send "load ./roud-data-local_20200624.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
+send "load ../roud-data/roud-data-local_20200929.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
 expect $prompt
 
 
