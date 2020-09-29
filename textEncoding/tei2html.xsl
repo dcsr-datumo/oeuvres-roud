@@ -16,6 +16,7 @@
         <p><xsl:apply-templates/></p>
     </xsl:template>
 
+    <!--
     <xsl:template match="//pb">
         <a>
             <xsl:attribute name="href">
@@ -27,6 +28,7 @@
             <xsl:text>&#128459;</xsl:text>
         </a>
     </xsl:template>
+-->
 
     
     <xsl:template match="//quote">

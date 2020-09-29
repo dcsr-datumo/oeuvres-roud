@@ -4,7 +4,7 @@ import requests
 
 resourceParams = {
     'restype_id': 'http://www.knora.org/ontology/knora-base#XSLTransformation',
-    'label': "XSLT",
+    'label': "XSLT for Roud project",
     'properties': {},
     'project_id': 'http://rdfh.ch/projects/0112'
 }
