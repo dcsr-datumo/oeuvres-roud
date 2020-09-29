@@ -2007,6 +2007,27 @@ roud-oeuvres:publicationIsReusedInDossierPartValue a owl:ObjectProperty ;
     rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPartValue,
                         knora-base:hasLinkToValue .
 
+roud-oeuvres:publicationIsRepublishedDossier a owl:ObjectProperty ;
+    rdfs:label "is republished (genetic dossier)"@en,
+        "est réédité (dossier génétique)"@fr,
+        "é riedita (dossier genetico)"@it ;
+    knora-base:objectClassConstraint roud-oeuvres:GeneticDossier ;
+    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+    salsah-gui:guiElement salsah-gui:Searchbox ;
+    rdfs:comment "The genetic dossier of the republication."@en,
+        "Le dossier génétique de la réédition."@fr ;
+    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
+                        knora-base:hasLinkTo .
+
+roud-oeuvres:publicationIsRepublishedDossierValue a owl:ObjectProperty ;
+    rdfs:label "is republished (genetic dossier)"@en,
+        "est réédité (dossier génétique)"@fr,
+        "é riedita (dossier genetico)"@it ;
+    knora-base:objectClassConstraint knora-base:LinkValue ;
+    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
+                        knora-base:hasLinkToValue .
+
 roud-oeuvres:msIsReusedInDossier a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier (for DIARY only)"@en,
         "est utilisée dans le dossier génétique (pour le JOURNAL seulement)"@fr,
@@ -2648,10 +2669,7 @@ roud-oeuvres:Publication a owl:Class ;
         "(Classe astratta, solo per le ricerche. Pubblicazione)"@it ;
     rdfs:comment "Any kind of publication. This is an abstract class, see its subclasses."@en,
         "Tout type de publication. Il s'agit d'une classe abstraite, voir ses subclasses."@fr ;
-    rdfs:subClassOf [ a owl:Restriction ;
-            salsah-gui:guiOrder "16"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsTranscribed ],
+    rdfs:subClassOf 
         [ a owl:Restriction ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
@@ -2664,54 +2682,65 @@ roud-oeuvres:Publication a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasAuthor ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasInternalComment ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsDigitized ],
-        [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasPhotoValue ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:hasCollaborators ],
-        [ a owl:Restriction ;
             salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasTitle ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:hasCollaborators ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationHasDate ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasPhoto ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationHasInternalComment ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "15"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationIsDigitized ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "17"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationHasPhotoValue ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationIsTranscribed ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossier ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "18"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPart ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPartValue ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationIsRepublishedDossier ],
+        [ a owl:Restriction ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationIsRepublishedDossierValue ],
         knora-base:Resource .
 
 roud-oeuvres:Manuscript a owl:Class ;
