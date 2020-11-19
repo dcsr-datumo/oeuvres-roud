@@ -2901,7 +2901,7 @@ roud-oeuvres:Manuscript a owl:Class ;
 
 
 roud-oeuvres:EstablishedText a owl:Class ;
-    rdfs:label "Critical texte"@en,
+    rdfs:label "Established text"@en,
         "Texte établi"@fr,
         "Testo critico"@it ;
     rdfs:comment "Textual unit for the edition."@en,
