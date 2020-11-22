@@ -124,3 +124,15 @@
   knora-admin:status true;
   knora-admin:username "roud";
   <http://www.knora.org/ontology/knora-base#userid> "roud" .
+
+<http://rdfh.ch/users/nweqwVnxTQm4sB7-hBl8xg> a <http://www.knora.org/ontology/knora-admin#User>;
+  knora-admin:status true;
+  knora-admin:email "stephane.petermann@unil.ch";
+  knora-admin:familyName "Pétermann";
+  knora-admin:givenName "Stéphane";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$2a$12$aU9ZJHYf6M6o8e5GOJSeD.QUm0kevbRz3rW7uElg3q.cNG.24d8NO";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:username "sPetermann" .
+
