@@ -2224,6 +2224,7 @@ roud-oeuvres:ArtWork a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:artworkHasPhoto ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:artworkHasPhotoValue ],
         [ a owl:Restriction ;
@@ -2267,16 +2268,13 @@ roud-oeuvres:Bioevent a owl:Class ;
     rdfs:comment "An event, or period, of Gustave Roud's biography."@en,
         "Un Événement, ou une période, de la biographie de Gustave Roud."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:bioeventHasPhotoValue ],
+            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:bioeventHasTitle ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:bioeventHasDate ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:bioeventHasTitle ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
@@ -2285,6 +2283,10 @@ roud-oeuvres:Bioevent a owl:Class ;
             salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:bioeventHasPhoto ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:bioeventHasPhotoValue ],
         knora-base:Resource .
 
 roud-oeuvres:Book a owl:Class ;
@@ -2298,6 +2300,7 @@ roud-oeuvres:Book a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublisher ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublisherValue ],
         [ a owl:Restriction ;
@@ -2326,6 +2329,7 @@ roud-oeuvres:BookSection a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:bookSectionHasPublisher ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:bookSectionHasPublisherValue ],
         [ a owl:Restriction ;
@@ -2354,6 +2358,7 @@ roud-oeuvres:PeriodicalArticle a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isPublishedInPeriodical ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isPublishedInPeriodicalValue ],
         [ a owl:Restriction ;
@@ -2405,7 +2410,8 @@ roud-oeuvres:Page a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:pageIsPartOfManuscript ],
         [ a owl:Restriction ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
+            owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:pageIsPartOfManuscriptValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
@@ -2451,6 +2457,7 @@ roud-oeuvres:Place a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:placeHasPhoto ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:placeHasPhotoValue ],
         knora-base:Resource .
@@ -2467,6 +2474,7 @@ roud-oeuvres:GeneticDossier a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:geneticDossierResultsInPublication ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:geneticDossierResultsInPublicationValue ],
         [ a owl:Restriction ;
@@ -2540,6 +2548,7 @@ roud-oeuvres:Work a owl:Class ;
     rdfs:comment "A work. Abstract class, see subclasses."@en,
         "Une œuvre. Classe abstraite, voir les subclasses."@fr ;
     rdfs:subClassOf [ a owl:Restriction ;
+            salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:workHasAuthorValue ],
         [ a owl:Restriction ;
@@ -2587,6 +2596,7 @@ roud-oeuvres:Photo a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasDate ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:photoHasAuthorValue ],
         [ a owl:Restriction ;
@@ -2614,6 +2624,7 @@ roud-oeuvres:Person a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasGivenName ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasPhotoValue ],
         [ a owl:Restriction ;
@@ -2645,12 +2656,15 @@ roud-oeuvres:Person a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isReferenceFor ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isReferenceForValue ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isCharacterInValue ],
         [ a owl:Restriction ;
@@ -2675,6 +2689,7 @@ roud-oeuvres:Publication a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublicationType ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasAuthorValue ],
         [ a owl:Restriction ;
@@ -2714,6 +2729,7 @@ roud-oeuvres:Publication a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasPhotoValue ],
         [ a owl:Restriction ;
@@ -2882,6 +2898,7 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msIsRewrittenInMsValue ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msIsRewrittenInMsPartValue ],
         [ a owl:Restriction ;
@@ -2920,6 +2937,7 @@ roud-oeuvres:EstablishedText a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourceManuscript ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "2"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourceManuscriptValue ],
         [ a owl:Restriction ;
@@ -2927,6 +2945,7 @@ roud-oeuvres:EstablishedText a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePublication ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "3"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasDirectSourcePublicationValue ],
         [ a owl:Restriction ;
@@ -2955,6 +2974,7 @@ roud-oeuvres:MsPart a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msPartIsPartOf ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msPartIsPartOfValue ],
         [ a owl:Restriction ;
@@ -2994,6 +3014,7 @@ roud-oeuvres:MsPart a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msPartIsRewrittenInMsPart ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msPartIsRewrittenInMsPartValue ],
         knora-base:Resource .
@@ -3033,6 +3054,7 @@ roud-oeuvres:PubPart a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:pubPartIsReusedInDossier ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:pubPartIsReusedInDossierValue ],
         [ a owl:Restriction ;
@@ -3083,6 +3105,7 @@ roud-oeuvres:Essay a owl:Class ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:essayHasBibliographyItem ],
         [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:essayHasBibliographyItemValue ],
         knora-base:Resource .
