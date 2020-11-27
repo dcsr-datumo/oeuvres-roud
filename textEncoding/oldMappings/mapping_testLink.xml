@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
+   
+
+   <mappingElement>
+        <tag>
+            <name>text</name>
+            <class>noClass</class>
+            <namespace>noNamespace</namespace>
+            <separatesWords>false</separatesWords>
+        </tag>
+        <standoffClass>
+            <classIri>http://www.knora.org/ontology/standoff#StandoffRootTag</classIri>
+            <attributes>
+                <attribute>
+                    <attributeName>documentType</attributeName>
+                    <namespace>noNamespace</namespace>
+                    <propertyIri>http://www.knora.org/ontology/standoff#standoffRootTagHasDocumentType</propertyIri>
+                </attribute>
+            </attributes>
+        </standoffClass>
+   </mappingElement>
+
+
+   <mappingElement>
+      <tag>
+         <name>quote</name>
+         <class>noClass</class>
+         <namespace>noNamespace</namespace>
+         <separatesWords>false</separatesWords>
+      </tag>
+      <standoffClass>
+         <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffQuote</classIri>
+         <attributes>
+            <attribute>
+               <attributeName>source</attributeName>
+               <namespace>noNamespace</namespace>
+               <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffQuoteHasSource</propertyIri>
+            </attribute>
+         </attributes>
+         <datatype>
+            <type>http://www.knora.org/ontology/knora-base#StandoffLinkTag</type>
+            <attributeName>knoraLink</attributeName>
+         </datatype>
+      </standoffClass>
+   </mappingElement>
+
+   
+   
+   
+</mapping>

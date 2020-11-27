@@ -23,6 +23,8 @@ expect $prompt
 # expect $prompt
 send "load ./roud-data-lists.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
 expect $prompt
+send "load ../roud-data/roud-data-local_20200929.ttl into http://www.knora.org/data/0112/roud-oeuvres .\r"
+expect $prompt
 
 
 send "close .\r"

@@ -1,0 +1,188 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
+@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
+@prefix : <http://www.knora.org/ontology/0112/roud-oeuvres#> .
+@base <http://www.knora.org/ontology/0112/roud-oeuvres> .
+@prefix : <http://www.knora.org/ontology/0112/roud-oeuvres#> .
+
+
+### ----------------- classes -----------------------------
+
+:StandoffRootTag rdf:type owl:Class ;
+    rdfs:subClassOf knora-base:StandoffTag ,
+            [ rdf:type owl:Restriction ;
+              owl:onProperty :standoffRootTagHasDocumentType ;
+              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+            ] ;
+    rdfs:comment "Represents the root node if the TextValue has been created from XML"@en .
+
+:StandoffP	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ;
+	rdfs:label "A paragraph"@en ;
+	rdfs:comment """A paragraph"""@en .
+
+:StandoffQuote	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffLinkTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffQuoteHasSource ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A quote"@en ;
+	rdfs:comment """A quote"""@en .
+
+:StandoffDate	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffDateTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffDateHasWhen ;
+			owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A date"@en ;
+	rdfs:comment """A date"""@en .
+
+
+:StandoffRef	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffLinkTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffRefHasTarget ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A reference"@en ;
+	rdfs:comment """A reference"""@en .
+
+:StandoffHead	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ;
+	rdfs:label "The header of the text"@en ;
+	rdfs:comment """The header of the text"""@en .
+
+:StandoffNote	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffNoteHasResp ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A note"@en ;
+	rdfs:comment """A note"""@en .
+
+:StandoffTEI	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ;
+	rdfs:label "TEI"@en ;
+	rdfs:comment """TEI"""@en .
+
+:StandoffBody	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ;
+	rdfs:label "A body"@en ;
+	rdfs:comment """A body"""@en .
+
+:StandoffDiv	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffDivHasType ;
+			owl:maxCardinality "1"^^xsd:nonNegativeInteger ],
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffDivHasN ;
+			owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A division"@en ;
+	rdfs:comment """A division"""@en .
+
+:StandoffPersName	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffLinkTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffPersNameHasRef ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "The name of a person"@en ;
+	rdfs:comment """The name of a person"""@en .
+
+:StandoffPlaceName	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffLinkTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffPlaceNameHasRef ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "The name of a place"@en ;
+	rdfs:comment """The name of a place"""@en .
+
+:StandoffSeg	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffSegHasRend ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A segment"@en ;
+	rdfs:comment """A segment"""@en .
+
+
+
+### ----------------- properties -----------------------------
+
+
+:standoffRootTagHasDocumentType rdf:type owl:DatatypeProperty ;
+	rdfs:subPropertyOf knora-base:objectCannotBeMarkedAsDeleted ;
+	rdfs:comment "describes the document type"@en ;
+	knora-base:subjectClassConstraint :StandoffRootTag ;
+	knora-base:objectDatatypeConstraint xsd:string .
+
+
+:standoffQuoteHasSource a owl:ObjectProperty ;
+    rdfs:label "Source of the quote"@en,
+        "Source de la citation"@fr,
+        "Fonte della citazione"@it ;
+    knora-base:subjectClassConstraint :StandoffQuote ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "Source of the quote"@en,
+        "Source de la citation"@fr .
+
+
+:standoffDateHasWhen a owl:ObjectProperty ;
+    rdfs:label "Formalized date"@en,
+        "Date formalisée"@fr,
+        "Data formalizzata"@it ;
+    knora-base:subjectClassConstraint :StandoffDate ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "Formalized data"@en,
+        "Date formalisée"@fr .
+
+
+:standoffRefHasTarget a owl:ObjectProperty ;
+    rdfs:label "The target of a reference"@en;
+    knora-base:subjectClassConstraint :StandoffRef ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The target of a reference"@en .
+
+
+:standoffNoteHasResp a owl:ObjectProperty ;
+    rdfs:label "The person responsable for this note"@en;
+    knora-base:subjectClassConstraint :StandoffNote ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The person responsable for this note"@en .
+
+
+:standoffDivHasType a owl:ObjectProperty ;
+    rdfs:label "The type of the division"@en;
+    knora-base:subjectClassConstraint :StandoffDiv ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The type of the division"@en .
+
+:standoffDivHasN a owl:ObjectProperty ;
+    rdfs:label "The number of the division"@en;
+    knora-base:subjectClassConstraint :StandoffDiv ;
+    knora-base:objectDatatypeConstraint xsd:integer ;
+    rdfs:comment "The number of the division"@en .
+
+:standoffPersNameHasRef a owl:ObjectProperty ;
+    rdfs:label "The reference of the name of a person"@en;
+    knora-base:subjectClassConstraint :StandoffPersName ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The reference of the name of a person"@en .
+
+
+:standoffPlaceNameHasRef a owl:ObjectProperty ;
+    rdfs:label "The reference of the name of a place"@en;
+    knora-base:subjectClassConstraint :StandoffPlaceName ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The reference of the name of a place"@en .
+
+
+:standoffSegHasRend a owl:ObjectProperty ;
+    rdfs:label "The reference for a segment"@en;
+    knora-base:subjectClassConstraint :StandoffSeg ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "The reference for a segment"@en .
+
