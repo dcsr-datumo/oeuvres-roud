@@ -1,0 +1,13 @@
+PREFIX knora-base: <http://www.knora.org/ontology/knora-base#>
+PREFIX rdfs: <http://www.w3.org/2000/01/rdf-schema#>
+PREFIX knora-admin: <http://www.knora.org/ontology/knora-admin#>
+with <http://www.knora.org/data/0112/roud-oeuvres>
+delete {
+    ?res knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
+}
+insert {
+    ?res knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember|V knora-admin:UnknownUser" .
+}
+where { 
+    ?res knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
+}
