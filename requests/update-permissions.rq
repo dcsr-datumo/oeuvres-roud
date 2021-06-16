@@ -1,0 +1,11 @@
+PREFIX knora-base: <http://www.knora.org/ontology/knora-base#>
+PREFIX knora-admin: <http://www.knora.org/ontology/knora-admin#>
+with <http://www.knora.org/data/0112/roud-oeuvres>
+delete {
+    ?perm knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember" .
+}
+insert {
+    ?perm knora-base:hasPermissions "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember|V knora-admin:UnknownUser" .
+} where {
+    bind(<http://rdfh.ch/permissions/0112/roud-oeuvres-o002> as ?perm)
+}
