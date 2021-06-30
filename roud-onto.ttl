@@ -1,6 +1,5 @@
-@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
 @prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
-@prefix lumieres-lausanne: <http://www.knora.org/ontology/0113/lumieres-lausanne#> .
+@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
 @prefix dc: <http://purl.org/dc/terms/> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
@@ -2411,7 +2410,7 @@ roud-oeuvres:Page a owl:Class ;
             owl:onProperty roud-oeuvres:pageIsPartOfManuscript ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:pageIsPartOfManuscriptValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
