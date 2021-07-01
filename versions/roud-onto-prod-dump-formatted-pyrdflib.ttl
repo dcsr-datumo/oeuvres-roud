@@ -14,12 +14,6 @@
     knora-base:attachedToProject <http://rdfh.ch/projects/0112> .
 
 
-####################
-##
-##  PROPERTIES
-##
-###################
-
 
 roud-oeuvres:hasAuthorValue a owl:ObjectProperty ;
     rdfs:label "(Abstract property, only for querying) Has an author"@en,
@@ -304,6 +298,7 @@ roud-oeuvres:geneticDossierResultsInPublicationValue a owl:ObjectProperty ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:GeneticDossier ;
     rdfs:subPropertyOf knora-base:hasLinkToValue .
+
 
 roud-oeuvres:geneticDossierIsRepresentedByManuscript a owl:ObjectProperty ;
     rdfs:label "The archival document used to establish the critical text, in case of unpublished materials"@en,
@@ -1690,7 +1685,7 @@ roud-oeuvres:isReusedInDossierPartValue a owl:ObjectProperty ;
 
 
 
-roud-oeuvres:msPartHasTitle a owl:ObjectProperty ;
+    roud-oeuvres:msPartHasTitle a owl:ObjectProperty ;
     rdfs:label "Title"@en,
         "Titre"@fr,
         "Titolo"@it ;
@@ -1760,8 +1755,8 @@ roud-oeuvres:msPartIsReusedInDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier in which it is used."@en,
         "Le dossier génétique dans lequel est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossier,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:msPartIsReusedInDossierValue a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier"@en,
@@ -1769,8 +1764,8 @@ roud-oeuvres:msPartIsReusedInDossierValue a owl:ObjectProperty ;
         "é usata nel dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:MsPart ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:msPartIsReusedInDossierPart a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -1781,8 +1776,8 @@ roud-oeuvres:msPartIsReusedInDossierPart a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier part in which it is used."@en,
         "La partie du dossier génétique dans laquelle est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPart,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPart,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:msPartIsReusedInDossierPartValue a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -1790,8 +1785,8 @@ roud-oeuvres:msPartIsReusedInDossierPartValue a owl:ObjectProperty ;
         "é usata in una parte di un dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:MsPart ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPartValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPartValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:msPartIsRewrittenInMs a owl:ObjectProperty ;
     rdfs:label "is rewritten in manuscript (diary phases)"@en,
@@ -1931,8 +1926,8 @@ roud-oeuvres:pubPartIsReusedInDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier in which it is used."@en,
         "Le dossier génétique dans lequel est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossier,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:pubPartIsReusedInDossierValue a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier"@en,
@@ -1940,8 +1935,8 @@ roud-oeuvres:pubPartIsReusedInDossierValue a owl:ObjectProperty ;
         "é usata nel dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:PubPart ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:pubPartIsReusedInDossierPart a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -1952,8 +1947,8 @@ roud-oeuvres:pubPartIsReusedInDossierPart a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier part in which it is used."@en,
         "La partie du dossier génétique dans laquelle est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPart,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPart,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:pubPartIsReusedInDossierPartValue a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -1961,8 +1956,8 @@ roud-oeuvres:pubPartIsReusedInDossierPartValue a owl:ObjectProperty ;
         "é usata in una parte di un dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:PubPart ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPartValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPartValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:publicationIsReusedInDossier a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier"@en,
@@ -1973,8 +1968,8 @@ roud-oeuvres:publicationIsReusedInDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier in which it is used."@en,
         "Le dossier génétique dans lequel est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossier,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:publicationIsReusedInDossierValue a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier"@en,
@@ -1982,8 +1977,8 @@ roud-oeuvres:publicationIsReusedInDossierValue a owl:ObjectProperty ;
         "é usata nel dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:publicationIsReusedInDossierPart a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -1994,8 +1989,8 @@ roud-oeuvres:publicationIsReusedInDossierPart a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier part in which it is used."@en,
         "La partie du dossier génétique dans laquelle est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPart,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPart,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:publicationIsReusedInDossierPartValue a owl:ObjectProperty ;
     rdfs:label "is used in a part of a genetic dossier"@en,
@@ -2003,8 +1998,8 @@ roud-oeuvres:publicationIsReusedInDossierPartValue a owl:ObjectProperty ;
         "é usata nel dossier genetico"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPartValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPartValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:publicationIsRepublishedDossier a owl:ObjectProperty ;
     rdfs:label "is republished (genetic dossier)"@en,
@@ -2015,8 +2010,8 @@ roud-oeuvres:publicationIsRepublishedDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier of the republication."@en,
         "Le dossier génétique de la réédition."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossier,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:publicationIsRepublishedDossierValue a owl:ObjectProperty ;
     rdfs:label "is republished (genetic dossier)"@en,
@@ -2024,8 +2019,8 @@ roud-oeuvres:publicationIsRepublishedDossierValue a owl:ObjectProperty ;
         "é riedita (dossier genetico)"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:msIsReusedInDossier a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier (for DIARY only)"@en,
@@ -2036,8 +2031,8 @@ roud-oeuvres:msIsReusedInDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier in which it is used."@en,
         "Le dossier génétique dans lequel est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossier,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossier,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:msIsReusedInDossierValue a owl:ObjectProperty ;
     rdfs:label "is used in the genetic dossier (for DIARY only)"@en,
@@ -2045,8 +2040,8 @@ roud-oeuvres:msIsReusedInDossierValue a owl:ObjectProperty ;
         "é usata nel dossier genetico (per il DIARIO soltanto)"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:msIsReusedInDossierPart a owl:ObjectProperty ;
     rdfs:label "is used in a part of the genetic dossier (for DIARY only)"@en,
@@ -2057,8 +2052,8 @@ roud-oeuvres:msIsReusedInDossierPart a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier part in which it is used."@en,
         "La partie du dossier génétique dans laquelle est utilisée."@fr ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPart,
-                        knora-base:hasLinkTo .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPart,
+        knora-base:hasLinkTo .
 
 roud-oeuvres:msIsReusedInDossierPartValue a owl:ObjectProperty ;
     rdfs:label "is used in a part of the genetic dossier (for DIARY only)"@en,
@@ -2066,8 +2061,8 @@ roud-oeuvres:msIsReusedInDossierPartValue a owl:ObjectProperty ;
         "é usata nella parte del dossier genetico (per il DIARIO soltanto)"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-    rdfs:subPropertyOf  roud-oeuvres:isReusedInDossierPartValue,
-                        knora-base:hasLinkToValue .
+    rdfs:subPropertyOf roud-oeuvres:isReusedInDossierPartValue,
+        knora-base:hasLinkToValue .
 
 roud-oeuvres:msIsAvantTextInGeneticDossier a owl:ObjectProperty ;
     rdfs:label  "est avant-texte dans le dossier génétique"@fr,
@@ -2077,31 +2072,31 @@ roud-oeuvres:msIsAvantTextInGeneticDossier a owl:ObjectProperty ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier to which it belogs as avant-text."@en,
         "Le dossier génétique aulequel il appartient en tant qu'avant-texte."@fr ;
-    rdfs:subPropertyOf  knora-base:hasLinkTo .
+    rdfs:subPropertyOf knora-base:hasLinkTo .
 
 roud-oeuvres:msIsAvantTextInGeneticDossierValue a owl:ObjectProperty ;
     rdfs:label "is avant-text in the genetic dossier"@en,
         "est avant-texte dans le dossier génétique"@fr ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-    rdfs:subPropertyOf  knora-base:hasLinkToValue .
+    rdfs:subPropertyOf knora-base:hasLinkToValue .
 
 roud-oeuvres:msIsAvantTextInGeneticDossierPart a owl:ObjectProperty ;
-    rdfs:label  "est avant-texte dans le dossier génétique (partie)"@fr,
-                "is avant-text in the genetic dossier (partie)"@en ;
+    rdfs:label "is avant-text in the genetic dossier (partie)"@en,
+        "est avant-texte dans le dossier génétique (partie)"@fr ;
     knora-base:objectClassConstraint roud-oeuvres:GeneticDossierPart ;
     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
     salsah-gui:guiElement salsah-gui:Searchbox ;
     rdfs:comment "The genetic dossier to which it belogs as avant-text."@en,
         "Le dossier génétique aulequel il appartient en tant qu'avant-texte."@fr ;
-    rdfs:subPropertyOf  knora-base:hasLinkTo .
+    rdfs:subPropertyOf knora-base:hasLinkTo .
 
 roud-oeuvres:msIsAvantTextInGeneticDossierPartValue a owl:ObjectProperty ;
     rdfs:label "is avant-text in the genetic dossier (partie)"@en,
         "est avant-texte dans le dossier génétique (partie)"@fr ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Manuscript ;
-    rdfs:subPropertyOf  knora-base:hasLinkToValue .
+    rdfs:subPropertyOf knora-base:hasLinkToValue .
 
 
 roud-oeuvres:essayHasTitle a owl:ObjectProperty ;
@@ -2191,7 +2186,7 @@ roud-oeuvres:essayHasBibliographyItem a owl:ObjectProperty ;
 
 roud-oeuvres:essayHasBibliographyItemValue a owl:ObjectProperty ;
     rdfs:label "Bibliographic item"@en,
-        "Entrée bibliographique"@fr;
+        "Entrée bibliographique"@fr ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Essay ;
     rdfs:subPropertyOf knora-base:hasLinkToValue .
@@ -2357,8 +2352,8 @@ roud-oeuvres:PeriodicalArticle a owl:Class ;
             owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isPublishedInPeriodical ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
+           owl:cardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isPublishedInPeriodicalValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
@@ -2610,7 +2605,8 @@ roud-oeuvres:Person a owl:Class ;
         "Persona"@it ;
     rdfs:comment "A person."@en,
         "Une personne."@fr ;
-    rdfs:subClassOf [ a owl:Restriction ;
+    rdfs:subClassOf 
+        [ a owl:Restriction ;
             salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personInfoHasSource ],
@@ -2659,14 +2655,14 @@ roud-oeuvres:Person a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personIsSameAsAuthorValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
+           owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isReferenceForValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:isCharacterInValue ],
-        [ a owl:Restriction ;
+         [ a owl:Restriction ;
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personIsSameAsAuthor ],
@@ -2674,7 +2670,7 @@ roud-oeuvres:Person a owl:Class ;
             salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:personHasAuthorityID ],
-        knora-base:Resource .
+       knora-base:Resource .
 
 roud-oeuvres:Publication a owl:Class ;
     rdfs:label "(Abstract class, only for querying. Publication)"@en,
@@ -2892,7 +2888,7 @@ roud-oeuvres:Manuscript a owl:Class ;
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasTranslatedAuthorValue ],
-        
+
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:msIsRewrittenInMsValue ],
@@ -2911,8 +2907,8 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierValue ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierPartValue ], 
-        
+            owl:onProperty roud-oeuvres:msIsAvantTextInGeneticDossierPartValue ],
+
         knora-base:Resource .
 
 
