@@ -1331,21 +1331,13 @@ roud-oeuvres:publicationHasPhoto a owl:ObjectProperty ;
     rdfs:label "Photo in the publication"@en,
         "Photo dans la publication"@fr,
         "Foto nella pubblicazione"@it ;
-    knora-base:objectClassConstraint roud-oeuvres:Photo ;
+    knora-base:objectClassConstraint knora-base:BooleanValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-    salsah-gui:guiElement salsah-gui:Searchbox ;
-    rdfs:comment "The publication contains the photo."@en,
-        "La publication contient la photo."@fr ;
-    rdfs:subPropertyOf roud-oeuvres:hasPhoto,
-        knora-base:hasLinkTo .
+    salsah-gui:guiElement salsah-gui:Checkbox ;
+    rdfs:comment "The publication contains a photo."@en,
+        "La publication contient une photo."@fr ;
+    rdfs:subPropertyOf knora-base:hasValue .
 
-roud-oeuvres:publicationHasPhotoValue a owl:ObjectProperty ;
-    rdfs:label "Photo in the publication"@en,
-        "Photo dans la publication"@fr,
-        "Foto nella pubblicazione"@it ;
-    knora-base:objectClassConstraint knora-base:LinkValue ;
-    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
-    rdfs:subPropertyOf knora-base:hasLinkToValue .
 
 roud-oeuvres:publicationHasTitle a owl:ObjectProperty ;
     rdfs:label "Title"@en,
@@ -2727,10 +2719,6 @@ roud-oeuvres:Publication a owl:Class ;
             salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
-        [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasPhotoValue ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
