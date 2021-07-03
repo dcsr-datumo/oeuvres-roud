@@ -2701,7 +2701,7 @@ roud-oeuvres:Publication a owl:Class ;
             owl:onProperty roud-oeuvres:publicationHasDate ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
-            owl:minCardinality "0"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasPhoto ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
