@@ -88,12 +88,22 @@
   rdfs:label "L'instrument d'écriture"@fr .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive> a knora-base:ListNode;
-  knora-base:hasSubListNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSFrançoisDaulte>;
+  knora-base:hasSubListNode
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUChevalley>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUGuildeDuLivre>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUHutterPerrier>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChessex>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSSES>,
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSFrançoisDaulte>;
   knora-base:isRootNode true;
   knora-base:attachedToProject <http://rdfh.ch/projects/0112>;
   rdfs:comment "Archive dans le quel se trouve le document ou la publication"@fr;
