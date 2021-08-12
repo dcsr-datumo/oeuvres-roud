@@ -93,7 +93,7 @@
     <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BiblioChauxDeFonds>,
     <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGR>,
     <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRStevenPaulRobert>,
-    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee>;
+    <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CollectionPrivee>, <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSFrançoisDaulte>;
   knora-base:isRootNode true;
   knora-base:attachedToProject <http://rdfh.ch/projects/0112>;
   rdfs:comment "Archive dans le quel se trouve le document ou la publication"@fr;
@@ -516,6 +516,13 @@
   knora-base:listNodeName "ALSSES";
   knora-base:listNodePosition 13;
   rdfs:label "ALS SES"@en, "ALS SES"@fr .
+
+<http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSFrançoisDaulte> a knora-base:ListNode;
+  knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
+  knora-base:listNodeName "ALSFrançoisDaulte";
+  knora-base:listNodePosition 14;
+  rdfs:label "ALS François Daulte"@en, "ALS François Daulte"@fr .
+
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition-oui> a knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInEdition>;
