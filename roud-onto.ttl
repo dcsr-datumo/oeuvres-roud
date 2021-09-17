@@ -2771,7 +2771,7 @@ roud-oeuvres:Manuscript a owl:Class ;
             owl:onProperty roud-oeuvres:manuscriptHasOldShelfmark ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "4"^^xsd:nonNegativeInteger ;
-            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:manuscriptHasEditorialSet ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
