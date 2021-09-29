@@ -136,3 +136,14 @@
   knora-admin:preferredLanguage "fr";
   knora-admin:username "sPetermann" .
 
+<http://rdfh.ch/users/XfZo65lKTLW98dYpy2ouWg> a knora-admin:User;
+  knora-admin:status true;
+  knora-admin:email "arthur.brandlin@bluewin.ch";
+  knora-admin:familyName "Brandlin";
+  knora-admin:givenName "Arthur";
+  knora-admin:isInProject <http://rdfh.ch/projects/0112>;
+  knora-admin:isInSystemAdminGroup false;
+  knora-admin:password "$2a$12$U/3vzZFGZG1lAlZzbYoBs.7VfeLHZtseoMkUar0fOqMGVfhBKVeN.";
+  knora-admin:preferredLanguage "fr";
+  knora-admin:username "abrandlin" .
+
