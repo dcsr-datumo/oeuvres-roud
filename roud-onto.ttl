@@ -2715,45 +2715,45 @@ roud-oeuvres:Publication a owl:Class ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasPhoto ]
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasIllustration ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasInternalComment ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:originalIsInCrlrArchive ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsDigitized ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsTranscribed ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossier ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPart ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPartValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsRepublishedDossier ],
         [ a owl:Restriction ;
