@@ -2677,7 +2677,7 @@ roud-oeuvres:Publication a owl:Class ;
     rdfs:subClassOf 
         [ a owl:Restriction ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublicationType ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
