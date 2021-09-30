@@ -1328,14 +1328,25 @@ roud-oeuvres:publicationHasInternalComment a owl:ObjectProperty ;
     rdfs:subPropertyOf knora-base:hasValue .
 
 roud-oeuvres:publicationHasPhoto a owl:ObjectProperty ;
-    rdfs:label "Photo in the publication"@en,
-        "Photo dans la publication"@fr,
-        "Foto nella pubblicazione"@it ;
+    rdfs:label "Photo by Roud in the publication"@en,
+        "Photo de Roud dans la publication"@fr,
+        "Foto di Roud nella pubblicazione"@it ;
     knora-base:objectClassConstraint knora-base:BooleanValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
     salsah-gui:guiElement salsah-gui:Checkbox ;
-    rdfs:comment "The publication contains a photo."@en,
-        "La publication contient une photo."@fr ;
+    rdfs:comment "The publication contains a photo by Roud."@en,
+        "La publication contient une photo de Roud."@fr ;
+    rdfs:subPropertyOf knora-base:hasValue .
+
+roud-oeuvres:publicationHasIllustration a owl:ObjectProperty ;
+    rdfs:label "Illustration in the publication"@en,
+        "Illustration dans la publication"@fr,
+        "Illustrazione nella pubblicazione"@it ;
+    knora-base:objectClassConstraint knora-base:BooleanValue ;
+    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+    salsah-gui:guiElement salsah-gui:Checkbox ;
+    rdfs:comment "The publication contains illustrations not by Roud himself."@en,
+        "La publication contient des illustrations."@fr ;
     rdfs:subPropertyOf knora-base:hasValue .
 
 
@@ -2702,7 +2713,11 @@ roud-oeuvres:Publication a owl:Class ;
         [ a owl:Restriction ;
             salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasPhoto ],
+            owl:onProperty roud-oeuvres:publicationHasPhoto ]
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "5"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationHasIllustration ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
