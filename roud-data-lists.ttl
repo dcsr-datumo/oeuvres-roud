@@ -445,19 +445,19 @@
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
   knora-base:listNodeName "CRLRGR";
   knora-base:listNodePosition 0;
-  rdfs:label "CRLR GR"@en, "CRLR GR"@fr .
+  rdfs:label "CLSR GR"@en, "CLSR GR"@fr .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRMermod> a knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
   knora-base:listNodeName "CRLRMermod";
   knora-base:listNodePosition 1;
-  rdfs:label "CRLR Mermod"@en, "CRLR Mermod"@fr .
+  rdfs:label "CLSR Mermod"@en, "CLSR Mermod"@fr .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRColomb> a knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
   knora-base:listNodeName "CRLRColomb";
   knora-base:listNodePosition 2;
-  rdfs:label "CRLR Colomb"@en, "CRLR Colomb"@fr .
+  rdfs:label "CLSR Colomb"@en, "CLSR Colomb"@fr .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-BCUSimond> a knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
@@ -501,14 +501,14 @@
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
   knora-base:listNodeName "CRLRStevenPaulRobert";
   knora-base:listNodePosition 9;
-  rdfs:label "CRLR Robert"@fr, "CRLR Steven-Paul Robert"@en .
+  rdfs:label "CLSR Robert"@fr, "CLSR Steven-Paul Robert"@en .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-CRLRGilbertVincent> a
     knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
   knora-base:listNodeName "CRLRGilbertVincent";
   knora-base:listNodePosition 10;
-  rdfs:label "CRLR Vincent"@en, "CRLR Vincent"@fr .
+  rdfs:label "CLSR Vincent"@en, "CLSR Vincent"@fr .
 
 <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive-ALSChappaz> a knora-base:ListNode;
   knora-base:hasRootNode <http://rdfh.ch/lists/0112/roud-oeuvres-flatlist-isInArchive>;
