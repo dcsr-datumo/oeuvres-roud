@@ -1328,14 +1328,25 @@ roud-oeuvres:publicationHasInternalComment a owl:ObjectProperty ;
     rdfs:subPropertyOf knora-base:hasValue .
 
 roud-oeuvres:publicationHasPhoto a owl:ObjectProperty ;
-    rdfs:label "Photo in the publication"@en,
-        "Photo dans la publication"@fr,
-        "Foto nella pubblicazione"@it ;
+    rdfs:label "Photo by Roud in the publication"@en,
+        "Photo de Roud dans la publication"@fr,
+        "Foto di Roud nella pubblicazione"@it ;
     knora-base:objectClassConstraint knora-base:BooleanValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Publication ;
     salsah-gui:guiElement salsah-gui:Checkbox ;
-    rdfs:comment "The publication contains a photo."@en,
-        "La publication contient une photo."@fr ;
+    rdfs:comment "The publication contains a photo by Roud."@en,
+        "La publication contient une photo de Roud."@fr ;
+    rdfs:subPropertyOf knora-base:hasValue .
+
+roud-oeuvres:publicationHasIllustration a owl:ObjectProperty ;
+    rdfs:label "Illustration in the publication"@en,
+        "Illustration dans la publication"@fr,
+        "Illustrazione nella pubblicazione"@it ;
+    knora-base:objectClassConstraint knora-base:BooleanValue ;
+    knora-base:subjectClassConstraint roud-oeuvres:Publication ;
+    salsah-gui:guiElement salsah-gui:Checkbox ;
+    rdfs:comment "The publication contains illustrations not by Roud himself."@en,
+        "La publication contient des illustrations."@fr ;
     rdfs:subPropertyOf knora-base:hasValue .
 
 
@@ -2677,7 +2688,7 @@ roud-oeuvres:Publication a owl:Class ;
     rdfs:subClassOf 
         [ a owl:Restriction ;
             salsah-gui:guiOrder "0"^^xsd:nonNegativeInteger ;
-            owl:cardinality "1"^^xsd:nonNegativeInteger ;
+            owl:minCardinality "1"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:hasPublicationType ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "1"^^xsd:nonNegativeInteger ;
@@ -2706,39 +2717,43 @@ roud-oeuvres:Publication a owl:Class ;
         [ a owl:Restriction ;
             salsah-gui:guiOrder "6"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasInternalComment ],
+            owl:onProperty roud-oeuvres:publicationHasIllustration ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "7"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:originalIsInCrlrArchive ],
+            owl:onProperty roud-oeuvres:publicationHasInternalComment ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "8"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsDigitized ],
+            owl:onProperty roud-oeuvres:originalIsInCrlrArchive ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "9"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
+            owl:onProperty roud-oeuvres:publicationIsDigitized ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "10"^^xsd:nonNegativeInteger ;
             owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
-            owl:onProperty roud-oeuvres:publicationIsTranscribed ],
+            owl:onProperty roud-oeuvres:publicationHasToBeDigitized ],
         [ a owl:Restriction ;
             salsah-gui:guiOrder "11"^^xsd:nonNegativeInteger ;
+            owl:maxCardinality "1"^^xsd:nonNegativeInteger ;
+            owl:onProperty roud-oeuvres:publicationIsTranscribed ],
+        [ a owl:Restriction ;
+            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossier ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "12"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPart ],
         [ a owl:Restriction ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsReusedInDossierPartValue ],
         [ a owl:Restriction ;
-            salsah-gui:guiOrder "13"^^xsd:nonNegativeInteger ;
+            salsah-gui:guiOrder "14"^^xsd:nonNegativeInteger ;
             owl:minCardinality "0"^^xsd:nonNegativeInteger ;
             owl:onProperty roud-oeuvres:publicationIsRepublishedDossier ],
         [ a owl:Restriction ;
