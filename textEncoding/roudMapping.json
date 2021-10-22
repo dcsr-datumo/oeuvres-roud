@@ -1,5 +1,5 @@
 {
-    "knora-api:mappingHasName": "roud_mapping10",
+    "knora-api:mappingHasName": "roudMapping",
     "knora-api:attachedToProject": {
         "@id": "http://rdfh.ch/projects/0112"
     },

@@ -8,7 +8,7 @@ send "open knora-test .\r"
 
 
 expect $prompt
-send "load ./roud_mapping10.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
+send "load ./roudMapping.ttl into http://www.knora.org/ontology/0112/roud-oeuvres .\r"
 
 
 send "close .\r"
