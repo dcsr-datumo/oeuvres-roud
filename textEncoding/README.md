@@ -1,10 +1,17 @@
-# Roud TEI standoff Mapping
+# Load Roud TEI standoff Mapping
 
 **Resources:**
 - *How to create a standoff mapping and test with bulk import* [tutorial](https://github.com/LaDHUL/KnoraBulkStandoffImport)
+- Knora (DSP) documentation: [XML to Standoff Mapping](https://docs.dasch.swiss/DSP-API/03-apis/api-v2/xml-to-standoff-mapping/?h=mapping)
 
 
-## Import the mapping in Knora
+## What we need
+- Standoff ontology
+- Standoff XML mapping
+- (optional) XSLT
+
+
+## Load the mapping into Knora (DSP)
 
 1. Load the standoff onto `roudMapping.ttl` into db. Can use [load-standoff-onto.expect](load-standoff-onto.expect): 
 ```bash
@@ -20,7 +27,9 @@ pip3 install -r requirements.txt
 # or just enter in env and launch script
 python importXSL.py
 ```
-It will give us back the IRI of the uploaded XSL. Add it to the XML mapping, at the beginning of the file in the tag `<defaultXSLTransformation>`.
+It will give us back the IRI of the uploaded XSL.
+
+Add it to the XML mapping, at the beginning of the file in the tag `<defaultXSLTransformation>`.
 
 
 3. Restart Knora
