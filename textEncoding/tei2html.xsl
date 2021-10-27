@@ -115,7 +115,7 @@
     </xsl:template>   
     
     
-    <xsl:template match="item">
+    <xsl:template match="//item">
         <li class="tei-item">
             <xsl:apply-templates/>
         </li>
@@ -127,7 +127,7 @@
     </xsl:template>   
     
     
-    <xsl:template match="list">
+    <xsl:template match="//list">
         <ul class="tei-list" style="list-style:none">
             <xsl:apply-templates/>
         </ul>
