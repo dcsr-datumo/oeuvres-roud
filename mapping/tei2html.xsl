@@ -6,7 +6,7 @@
     <xsl:output method="html" indent="yes" omit-xml-declaration="no" encoding="UTF-8"/>
     
     
-    <!-- IN ALPHABETICA ORDER OF TEI ELEMENTS -->
+    <!-- IN ALPHABETICAL ORDER OF TEI ELEMENTS -->
     
     
     <xsl:template match="//add">
@@ -68,6 +68,18 @@
             <xsl:apply-templates/>
         </em>
     </xsl:template>
+
+    <xsl:template match="//gap[@reason='illegible']">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>tei-gap</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="style">
+                <xsl:text>color: grey</xsl:text>
+            </xsl:attribute>
+            <xsl:text>[mot ill.]</xsl:text>
+        </span>
+    </xsl:template>
     
     
     <xsl:template match="//head[@type='main']">
@@ -105,21 +117,73 @@
     </xsl:template>
     
     
-    <xsl:template match="//hi[@rend='italic']">
-        <em>
-            <xsl:attribute name="class">
-                <xsl:text>tei-hi-rendItalic</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </em>
-    </xsl:template>   
-    
-    
-    <xsl:template match="//item">
+    <xsl:template match="//hi">
+        <xsl:choose>
+            <xsl:when test="@rend = 'italic' ">
+                <em>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-hi-rendItalic</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </em>
+            </xsl:when>
+            <xsl:when test="@rend = 'align-center' ">
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-hi-rendCenter</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="style">
+                        <xsl:text>display:block; text-align: center</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend = 'align-left' ">
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-hi-rendLeft</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="style">
+                        <xsl:text>display:block; text-align: left</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend = 'align-right' ">
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-hi-rendRight</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="style">
+                        <xsl:text>display:block; text-align: right</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>  
+
+
+    <xsl:template match="item">
         <li class="tei-item">
             <xsl:apply-templates/>
         </li>
     </xsl:template>
+
+
+
+
+    <xsl:template match="//l">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>tei-l</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </span>
+        <br/>
+    </xsl:template>
+
+    
     
     
     <xsl:template match="//lb">
@@ -132,9 +196,17 @@
             <xsl:apply-templates/>
         </ul>
     </xsl:template>
+
+    <xsl:template match="//lg">
+        <div>
+            <xsl:attribute name="class">
+                <xsl:text>tei-lg</xsl:text>
+            </xsl:attribute>
+            <xsl:apply-templates/>
+        </div>
+    </xsl:template>
     
-    
-    <xsl:template match="//note">
+    <xsl:template match="//note[@resp='Roud']">
         <p>
             <xsl:attribute name="class">
                 <xsl:text>tei-note</xsl:text>
@@ -142,7 +214,15 @@
             <xsl:apply-templates/>
             <em> [Note de l'auteur]</em>
         </p>
-    </xsl:template>    
+    </xsl:template>  
+
+
+    <xsl:template match="//quote/note">
+        <span class="tei-quote-note">
+            <xsl:apply-templates></xsl:apply-templates>
+        </span>
+    </xsl:template>  
+    
     
     
     <xsl:template match="//p">
@@ -188,19 +268,28 @@
     
     
     <xsl:template match="//quote">
-        <a>
-            <xsl:attribute name="class">
-                <xsl:text>resourceLink tei-quote</xsl:text>
-            </xsl:attribute>
-            <xsl:attribute name="href">
-                <xsl:value-of select="./@source"></xsl:value-of>
-            </xsl:attribute>
-            <xsl:attribute name="target">
-                <xsl:text>_blank</xsl:text>
-            </xsl:attribute>
-            <xsl:apply-templates/>
-        </a>
-    </xsl:template> 
+        <xsl:choose>
+            <xsl:when test="@rend='block'">
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-quote</xsl:text>
+                    </xsl:attribute>
+                    <xsl:attribute name="style">
+                        <xsl:text>display: block; padding:2%</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+            <xsl:when test="@rend='inline'">
+                <span>
+                    <xsl:attribute name="class">
+                        <xsl:text>tei-quote</xsl:text>
+                    </xsl:attribute>
+                    <xsl:apply-templates/>
+                </span>
+            </xsl:when>
+        </xsl:choose>
+    </xsl:template>
     
     
     <xsl:template match="//ref">
@@ -300,6 +389,23 @@
             <xsl:text>]</xsl:text>
         </span>
     </xsl:template>
+
+
+    <xsl:template match="//unclear">
+        <span>
+            <xsl:attribute name="class">
+                <xsl:text>tei-unclear</xsl:text>
+            </xsl:attribute>
+            <xsl:attribute name="style">
+                <xsl:text>color: grey</xsl:text>
+            </xsl:attribute>
+            <xsl:text>&#60;</xsl:text>
+            <xsl:apply-templates/>
+            <xsl:text>&#62;</xsl:text>
+        </span>
+    </xsl:template>
+    
+
     
     
 </xsl:stylesheet>

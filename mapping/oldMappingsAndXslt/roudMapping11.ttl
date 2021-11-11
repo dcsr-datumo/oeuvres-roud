@@ -50,22 +50,13 @@ roud-oeuvres:StandoffNote	rdf:type	owl:Class ;
 	rdfs:subClassOf	knora-base:StandoffTag ,
 			[rdf:type	owl:Restriction ;
 			owl:onProperty	:standoffNoteHasResp ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ,
-			[rdf:type	owl:Restriction ;
-			owl:onProperty	:standoffNoteHasType ;
-			owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
 	rdfs:label "note"@en ;
 	rdfs:comment "note"@en .
 
 roud-oeuvres:standoffNoteHasResp	rdf:type	owl:DatatypeProperty ;
 	rdfs:label "resp"@en ;
 	rdfs:comment "resp"@en ;
-	knora-base:subjectClassConstraint :StandoffNote;
-	knora-base:objectDatatypeConstraint xsd:string .
-
-roud-oeuvres:standoffNoteHasType	rdf:type	owl:DatatypeProperty ;
-	rdfs:label "type"@en ;
-	rdfs:comment "type"@en ;
 	knora-base:subjectClassConstraint :StandoffNote;
 	knora-base:objectDatatypeConstraint xsd:string .
 
@@ -90,16 +81,16 @@ roud-oeuvres:StandoffP	rdf:type	owl:Class ;
 	rdfs:comment "p"@en .
 
 roud-oeuvres:StandoffQuote	rdf:type	owl:Class ;
-	rdfs:subClassOf	knora-base:StandoffTag ,
+	rdfs:subClassOf	knora-base:StandoffLinkTag ,
 			[rdf:type	owl:Restriction ;
-			owl:onProperty	:standoffQuoteHasRend ;
+			owl:onProperty	:standoffQuoteHasSource ;
 			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
 	rdfs:label "quote"@en ;
 	rdfs:comment "quote"@en .
 
-roud-oeuvres:standoffQuoteHasRend	rdf:type	owl:DatatypeProperty ;
-	rdfs:label "rend"@en ;
-	rdfs:comment "rend"@en ;
+roud-oeuvres:standoffQuoteHasSource	rdf:type	owl:DatatypeProperty ;
+	rdfs:label "source"@en ;
+	rdfs:comment "source"@en ;
 	knora-base:subjectClassConstraint :StandoffQuote;
 	knora-base:objectDatatypeConstraint xsd:string .
 
@@ -219,7 +210,7 @@ roud-oeuvres:standoffSpaceHasQuantity	rdf:type	owl:DatatypeProperty ;
 	rdfs:label "quantity"@en ;
 	rdfs:comment "quantity"@en ;
 	knora-base:subjectClassConstraint :StandoffSpace;
-	knora-base:objectDatatypeConstraint xsd:string .
+	knora-base:objectDatatypeConstraint xsd:integer .
 
 roud-oeuvres:StandoffSupplied	rdf:type	owl:Class ;
 	rdfs:subClassOf	knora-base:StandoffTag ;
@@ -240,23 +231,4 @@ roud-oeuvres:StandoffList	rdf:type	owl:Class ;
 	rdfs:subClassOf	knora-base:StandoffTag ;
 	rdfs:label "list"@en ;
 	rdfs:comment "list"@en .
-
-roud-oeuvres:StandoffGap	rdf:type	owl:Class ;
-	rdfs:subClassOf	knora-base:StandoffTag ,
-			[rdf:type	owl:Restriction ;
-			owl:onProperty	:standoffGapHasReason ;
-			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
-	rdfs:label "gap"@en ;
-	rdfs:comment "gap"@en .
-
-roud-oeuvres:standoffGapHasReason	rdf:type	owl:DatatypeProperty ;
-	rdfs:label "reason"@en ;
-	rdfs:comment "reason"@en ;
-	knora-base:subjectClassConstraint :StandoffGap;
-	knora-base:objectDatatypeConstraint xsd:string .
-
-roud-oeuvres:StandoffUnclear	rdf:type	owl:Class ;
-	rdfs:subClassOf	knora-base:StandoffTag ;
-	rdfs:label "unclear"@en ;
-	rdfs:comment "unclear"@en .
 

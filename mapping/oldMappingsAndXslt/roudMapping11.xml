@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
-
-         <defaultXSLTransformation>http://rdfh.ch/0112/oyzlKcesTBCQ2ZqG_XjFPA</defaultXSLTransformation>
+   
+   <defaultXSLTransformation>http://rdfh.ch/0112/LKaqeTtiRMiaemA72xy3yw</defaultXSLTransformation>
+   
    <mappingElement>
       <tag>
          <name>head</name>
@@ -62,11 +63,6 @@
                <attributeName>resp</attributeName>
                <namespace>noNamespace</namespace>
                <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffNoteHasResp</propertyIri>
-            </attribute>
-            <attribute>
-               <attributeName>type</attributeName>
-               <namespace>noNamespace</namespace>
-               <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffNoteHasType</propertyIri>
             </attribute>
          </attributes>
       </standoffClass>
@@ -136,11 +132,15 @@
          <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffQuote</classIri>
          <attributes>
             <attribute>
-               <attributeName>rend</attributeName>
+               <attributeName>source</attributeName>
                <namespace>noNamespace</namespace>
-               <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffQuoteHasRend</propertyIri>
+               <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffQuoteHasSource</propertyIri>
             </attribute>
          </attributes>
+         <datatype>
+            <type>http://www.knora.org/ontology/knora-base#StandoffLinkTag</type>
+            <attributeName>knoraLink</attributeName>
+         </datatype>
       </standoffClass>
    </mappingElement>
 
@@ -399,39 +399,6 @@
       </tag>
       <standoffClass>
          <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffList</classIri>
-      </standoffClass>
-   </mappingElement>
-
-
-   <mappingElement>
-      <tag>
-         <name>gap</name>
-         <class>noClass</class>
-         <namespace>noNamespace</namespace>
-         <separatesWords>false</separatesWords>
-      </tag>
-      <standoffClass>
-         <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffGap</classIri>
-         <attributes>
-            <attribute>
-               <attributeName>reason</attributeName>
-               <namespace>noNamespace</namespace>
-               <propertyIri>http://www.knora.org/ontology/0112/roud-oeuvres#standoffGapHasReason</propertyIri>
-            </attribute>
-         </attributes>
-      </standoffClass>
-   </mappingElement>
-
-
-   <mappingElement>
-      <tag>
-         <name>unclear</name>
-         <class>noClass</class>
-         <namespace>noNamespace</namespace>
-         <separatesWords>false</separatesWords>
-      </tag>
-      <standoffClass>
-         <classIri>http://www.knora.org/ontology/0112/roud-oeuvres#StandoffUnclear</classIri>
       </standoffClass>
    </mappingElement>
 
