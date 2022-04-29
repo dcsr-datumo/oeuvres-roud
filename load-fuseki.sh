@@ -13,17 +13,25 @@ ARGTTL=roud-permissions.ttl
 ARGGRAPH=http://www.knora.org/data/permissions
 curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
 
-ARGTTL=roud-onto.ttl
+ARGTTL=roud-onto-download-dasch.ttl
 ARGGRAPH=http://www.knora.org/ontology/0112/roud-oeuvres
 curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
 
-ARGTTL=roud-standoff.ttl
-ARGGRAPH=http://www.knora.org/ontology/0112/roud-oeuvres
-curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
+# ARGTTL=roud-onto.ttl
+# ARGGRAPH=http://www.knora.org/ontology/0112/roud-oeuvres
+# curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
 
-ARGTTL=roud-data-lists.ttl
+# ARGTTL=roud-standoff.ttl
+# ARGGRAPH=http://www.knora.org/ontology/0112/roud-oeuvres
+# curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
+
+ARGTTL=roud-data-download-dasch.ttl
 ARGGRAPH=http://www.knora.org/data/0112/roud-oeuvres
 curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
+
+# ARGTTL=roud-data-lists.ttl
+# ARGGRAPH=http://www.knora.org/data/0112/roud-oeuvres
+# curl -u $USERPWD  -H "Content-Type:text/turtle; charset=utf-8" --data-binary @${ARGTTL} -X POST ${ARGHOST}/${ARGREPO}\?graph\="${ARGGRAPH}"
 
 #ARGTTL=roud-data/roud-data-local_20200929.ttl
 #ARGGRAPH=http://www.knora.org/data/0112/roud-oeuvres
