@@ -16,3 +16,127 @@ Content-Type: application/json
 ###
 
 @token = {{login.response.body.token}}
+
+###
+
+# @name upload
+
+POST http://localhost:1024/upload?token={{token}} HTTP/1.1
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="file"; filename="tei2html.xsl"
+Content-Type: application/octet-stream
+
+< ./tei2html.xsl
+
+--MyBoundary--
+
+###
+
+@internalFilename = {{upload.response.body.uploadedFiles[0].internalFilename}}
+
+###
+
+# create knora-api:hasTextFileValue with the XSLT file as value
+# so we can adress it in api calls
+
+POST http://localhost:3333/v2/resources HTTP/1.1
+Content-Type: application/ld+json
+Authorization: Basic root@example.com:test
+
+{
+  "@type" : "knora-api:XSLTransformation",
+  "knora-api:hasTextFileValue" : {
+    "@type" : "knora-api:TextFileValue",
+    "knora-api:fileValueHasFilename" : "{{internalFilename}}"
+  },
+  "knora-api:attachedToProject" : {
+    "@id" : "http://rdfh.ch/projects/0112"
+  },
+  "rdfs:label" : "XSLT for Roud project",
+  "@context" : {
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "knora-api" : "http://api.knora.org/ontology/knora-api/v2#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#"
+  }
+}
+
+# local run: id of the created resource: knora-api:XSLTransformation 
+#   "@id": "http://rdfh.ch/0112/nMAGGeR_TfW5KoWeISNTvw",
+# replace it in the xml file we upload next
+
+###
+
+# create the actual mapping
+# mapping between the xml tags and standoff classes
+# xml tags that will come in uploaded transcriptions 
+
+POST http://localhost:3333/v2/mapping HTTP/1.1
+Authorization: Basic root@example.com:test
+Content-Type: multipart/form-data; boundary=MyBoundary
+
+--MyBoundary
+Content-Disposition: form-data; name="json"
+Content-Type: application/json
+
+{
+  "knora-api:mappingHasName" : "roudMapping",
+  "knora-api:attachedToProject" : {
+    "@id" : "http://rdfh.ch/projects/0112"
+  },
+  "rdfs:label" : "Mapping for Roud project",
+  "@context" : {
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "knora-api" : "http://api.knora.org/ontology/knora-api/v2#"
+  }
+}
+
+--MyBoundary
+Content-Disposition: form-data; name="xml"
+Content-Type: text/xml; charset=utf-8
+
+< ./roudMapping.xml
+
+--MyBoundary--
+
+###
+
+# test: send a transcription using the new mapping
+
+POST http://localhost:3333/v2/resources HTTP/1.1
+Content-Type: application/ld+json
+Authorization: Basic root@example.com:test
+
+{   
+  "@type" : "roud-oeuvres:EstablishedText",
+  "roud-oeuvres:hasTextContent" : {
+    "@type" : "knora-api:TextValue",
+    "knora-api:hasPermissions" : "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember|V knora-admin:UnknownUser",
+    "knora-api:textValueAsXml" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?><text> <body> <head type=\"main\">Vers libres (très)</head> <div n=\"Écrit un jour\"> <head rend=\"p\">Écrit un jour de pluie.</head> <lg> <l>Il pleut, il pleut, il pleut.</l> <l>Il pleut à torrents</l> <l>Rien n'est bleu,</l> <l>Les nuages, poussés par le vent</l> <l>Courent sur l'azur qu'ils cachent</l> <l>Les arbres gémissent et se tordent,</l> <l>Le vent leur arrache</l> <l>Un pétale qui borde</l> <l>Une corolle blanche.</l> <l>Les maisons sont (tristes et) grises</l> <l>Et sur l'aile que penche</l> <l>Un oiseau rapide</l> <l>Un rayon irise</l> <l>Une goutte tombée</l> <l>D'un nuage livide.</l> <l>Dans la forêt sombre</l> <l>Sous la feuillée</l> <l>Dans l'ombre</l> <l>Une plante mouillée</l> <l>Baisse la tête</l> <l>Tandis qu'autour d'elle</l> <l>Poussent les herbettes</l> <l>Une feuille arrête</l> <l>Un brin de soleil</l> </lg> </div> <div n=\"Test\"> <p>This is a test for an <hi rend=\"italic\">italic hi</hi>.</p> <p><hi rend=\"align-left\">This is a test for a left hi</hi></p><p><hi rend=\"align-right\">This is a test for a right hi</hi></p> <p><hi rend=\"align-center\">This is a test for a center hi</hi></p></div> <div n=\"This is\">This is a test of an <unclear>unclear</unclear> reading and a <gap reason=\"illegible\"/>.</div> <div n=\"quote\"><p>Some <quote rend=\"inline\">text<note>Citation libre de <hi rend=\"italic\">Hamlet</hi> de Shakespeare, acte IV, scène 5 : « Lord, we know what we are, but know not what we may be » (« Seigneur, nous savons ce que nous sommes, mais nous ne savons pas ce que nous serons » ; Shakespeare, Œuvres complètes, t. 1, dir. Jean-Michel Déprats, Paris, Gallimard, « Bibliothèque de la Pléiade », 2002, p. 896).</note></quote> here.</p></div><div n=\"J'ai souvent cru\"><p>J'ai souvent cru, en lisant le sonnet de Mallarmé <quote rend=\"block\">« Le printemps maladif a chassé tristement<lb/>L'hiver, saison de l'art serein, de l'art lucide »<note type=\"quote\">Citation libre des deux premiers vers de « Renouveau », de Mallarmé : « Le printemps maladif a chassé tristement / L'hiver, saison de l'art serein, l'hiver lucide. » (Poésies, <hi rend=\"italic\">Œuvres complètes</hi>, t. 1, dir. Bertrand Marchal, Paris, Gallimard, « Bibliothèque de la Pléiade », 1998, p. 11.) En parlant de « redite baudelairienne », Roud fait référence à l'une des caractéristiques du spleen de Baudelaire, tel qu'il s'exprime notamment dans les poèmes « Brumes et pluies » ou « Paysage », à savoir l'éloge de la saison hivernale perçue comme favorable à l'âme de l'artiste.</note></quote> à quelque redite baudelairienne ; aujourd'hui seulement je ressens ces vers dans leur plénitude et leur vérité. Oui, dès le printemps vous sortez de vos murs, il n'est pas une pensée, son ombre même, qui ne trouve aussitôt hors de vous un prolongement physique. Vous ne pouvez cerner votre esprit ; mille issues le laissent fuir dans un monde de résonances dévorantes.</p></div> </body> </text>",
+    "knora-api:textValueHasMapping" : {
+      "@id" : "http://rdfh.ch/projects/0112/mappings/roudMapping"
+    }
+  },
+  "roud-oeuvres:establishedTextHasTitle" : {
+    "@type" : "knora-api:TextValue",
+    "knora-api:textValueAsXml" : "<?xml version=\"1.0\" encoding=\"UTF-8\"?><text><p>Avers libres</p></text>",
+    "knora-api:textValueHasMapping" : {
+      "@id" : "http://rdfh.ch/standoff/mappings/StandardMapping"
+    }
+  },
+  "knora-api:attachedToProject" : {
+    "@id" : "http://rdfh.ch/projects/0112"
+  },
+  "rdfs:label" : "texte_AVers libres_1909",
+  
+  "@context" : {
+    "rdf" : "http://www.w3.org/1999/02/22-rdf-syntax-ns#",
+    "knora-api" : "http://api.knora.org/ontology/knora-api/v2#",
+    "rdfs" : "http://www.w3.org/2000/01/rdf-schema#",
+    "xsd" : "http://www.w3.org/2001/XMLSchema#",
+    "roud-oeuvres" : "http://0.0.0.0:3333/ontology/0112/roud-oeuvres/v2#"
+  }
+}
