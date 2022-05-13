@@ -1,0 +1,18 @@
+#
+# Note: this file is interpreted by the rest client:
+#       https://marketplace.visualstudio.com/items?itemName=humao.rest-client
+# 
+
+# @name login
+
+POST http://localhost:3333/v2/authentication HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "root@example.com",
+    "password": "test"
+}
+
+###
+
+@token = {{login.response.body.token}}
