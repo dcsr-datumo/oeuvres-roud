@@ -99,12 +99,18 @@ Content-Type: application/octet-stream
 
 ###
 
-# create knora-api:hasTextFileValue with the XSLT file as value
-# so we can adress it in api calls
 
-POST http://localhost:3333/v2/resources HTTP/1.1
+###
+
+#
+# create knora-api:XSLTransformation (a FileValue resource) with the XSLT file as value
+# so we can adress it in api calls
+#
+
+# @name transformation
+POST {{apiUrl}}/v2/resources HTTP/1.1
 Content-Type: application/ld+json
-Authorization: Basic root@example.com:test
+Authorization: Basic {{user}}:{{pwd}}
 
 {
   "@type" : "knora-api:XSLTransformation",
@@ -135,8 +141,8 @@ Authorization: Basic root@example.com:test
 # mapping between the xml tags and standoff classes
 # xml tags that will come in uploaded transcriptions 
 
-POST http://localhost:3333/v2/mapping HTTP/1.1
-Authorization: Basic root@example.com:test
+POST {{apiUrl}}/v2/mapping HTTP/1.1
+Authorization: Basic {{user}}:{{pwd}}
 Content-Type: multipart/form-data; boundary=MyBoundary
 
 --MyBoundary
@@ -166,11 +172,14 @@ Content-Type: text/xml; charset=utf-8
 
 ###
 
+
+
 # test: send a transcription using the new mapping
 
-POST http://localhost:3333/v2/resources HTTP/1.1
+# @name createdText
+POST {{apiUrl}}/v2/resources HTTP/1.1
 Content-Type: application/ld+json
-Authorization: Basic root@example.com:test
+Authorization: Basic {{user}}:{{pwd}}
 
 {   
   "@type" : "roud-oeuvres:EstablishedText",
@@ -202,3 +211,14 @@ Authorization: Basic root@example.com:test
     "roud-oeuvres" : "http://0.0.0.0:3333/ontology/0112/roud-oeuvres/v2#"
   }
 }
+
+
+###
+
+#GET {{apiUrl}}/v2/resources/{{createdTextId}} HTTP/1.1
+# how do you encode the iri automatically?
+GET {{apiUrl}}/v2/resources/http%3A%2F%2Frdfh.ch%2F0112%2FOxRjdZl8TGWhM-L77hsDfw HTTP/1.1
+Content-Type: application/ld+json
+Authorization: Basic {{user}}:{{pwd}}
+
+# in the response, read the `knora-api:textValueAsHtml` which is using the XSLT to render HTML
