@@ -90,7 +90,12 @@ Content-Type: application/octet-stream
 
 ###
 
-@internalFilename = {{upload.response.body.uploadedFiles[0].internalFilename}}
+#
+# Note: from now on we decide that the knora-api:XSLTransformation
+#       instance has the IRI: http://rdfh.ch/0112/T0x_LOB5SIySW8PgDPVzSQ
+#       (I didn't manage to make it a human readable value, it has to be a base64 v4 or 5 UUID)
+# 
+
 
 ###
 
@@ -103,6 +108,7 @@ Authorization: Basic root@example.com:test
 
 {
   "@type" : "knora-api:XSLTransformation",
+  "@id" : "http://rdfh.ch/0112/T0x_LOB5SIySW8PgDPVzSQ",
   "knora-api:hasTextFileValue" : {
     "@type" : "knora-api:TextFileValue",
     "knora-api:fileValueHasFilename" : "{{internalFilename}}"

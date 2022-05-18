@@ -2,7 +2,7 @@
 <mapping xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:noNamespaceSchemaLocation="mappingXMLToStandoff.xsd">
 
-         <defaultXSLTransformation>http://rdfh.ch/0112/wt83194BSUKrOehMBXOFmw</defaultXSLTransformation>
+         <defaultXSLTransformation>http://rdfh.ch/0112/T0x_LOB5SIySW8PgDPVzSQ</defaultXSLTransformation>
    <mappingElement>
       <tag>
          <name>head</name>
