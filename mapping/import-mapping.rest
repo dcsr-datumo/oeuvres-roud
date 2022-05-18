@@ -3,25 +3,78 @@
 #       https://marketplace.visualstudio.com/items?itemName=humao.rest-client
 # 
 
-# @name login
+# set variables TESTPWD or ROOTPWD in a file .env
 
-POST http://localhost:3333/v2/authentication HTTP/1.1
-Content-Type: application/json
+# set these default in:
+# open the settings editor: [ctrl]+","
+#   => look for "REST Client"
+#     => "Rest-client: Environment Variables"
+#       => edit in settings.json
+# add: 
+# "rest-client.environmentVariables": {
+#     "$shared": {
+#         "version": "v2"
+#     },
+#     "local": {
+#       "api_protocol": "http",
+#       "api_host": "localhost",
+#       "api_port": ":3333",
+#       "sipi_protocol": "http",
+#       "sipi_host": "localhost",
+#       "sipi_port": ":1024",
+#       "iuser": "localUser",
+#       "ipwd": "localPwd"
+#     },
+#       "production": {
+#       "api_protocol": "https",
+#       "api_host": "api.ls-prod-server.dasch.swiss",
+#       "api_port": "",
+#       "sipi_protocol": "https",
+#       "sipi_host": "iiif.ls-prod-server.dasch.swiss",
+#       "sipi_port": "",
+#       "iuser": "prodUser"
+#       "ipwd": "prodPwd"
+#     }
+# }
+#
+# local `.env` file should also define these `localUser`, `localPwd`, `prodUser`, ...
+# 
+# switch environments on the bottom right of the VS Code window
 
-{
-    "email": "root@example.com",
-    "password": "test"
-}
+@apiUrl = {{api_protocol}}://{{api_host}}{{api_port}}
+@user = {{$dotenv %importUser}}  
+@pwd = {{$dotenv %importPwd}}
+
+
+#
+# login to dsp-api
+# the returned token is needed to upload a file to sipi
+#
 
 ###
 
+# @name login
+POST {{apiUrl}}/v2/authentication HTTP/1.1
+Content-Type: application/json
+
+{
+    "email": "{{user}}",
+    "password": "{{pwd}}"
+}
+
+###
 @token = {{login.response.body.token}}
 
 ###
 
-# @name upload
+#
+# upload the style sheet to turn TEI-XML into HTML
+# that produces a temporary file on sipi that will be turned into a file value of a dsp-api resource 
+# we need to read the internal file name to pass it to the dsp-api when creating this resource
+#
 
-POST http://localhost:1024/upload?token={{token}} HTTP/1.1
+# @name upload
+POST {{sipi_protocol}}://{{sipi_host}}{{sipi_port}}/upload?token={{token}} HTTP/1.1
 Content-Type: multipart/form-data; boundary=MyBoundary
 
 --MyBoundary
@@ -31,6 +84,9 @@ Content-Type: application/octet-stream
 < ./tei2html.xsl
 
 --MyBoundary--
+
+###
+@internalFilename = {{upload.response.body.uploadedFiles[0].internalFilename}}
 
 ###
 
