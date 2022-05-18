@@ -96,9 +96,46 @@ Content-Type: application/octet-stream
 #       (I didn't manage to make it a human readable value, it has to be a base64 v4 or 5 UUID)
 # 
 
+#
+# select record to delete (if it was created before)
+#
+
+POST http://localhost:3030/knora-test/sparql HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic {{$dotenv localFusekiUser}}:{{$dotenv localFusekiPwd}}
+
+query=
+prefix knora-admin: <http://www.knora.org/ontology/knora-admin#>
+construct {
+  ?subject ?predicate ?object
+}
+WHERE {
+  bind(<http://rdfh.ch/0112/T0x_LOB5SIySW8PgDPVzSQ> as ?subject)
+  ?subject ?predicate ?object
+}
 
 ###
 
+#
+# delete failed attempt (if it was created before)
+#
+# Note: I didn't manage to delete a resource => delete the whole data graph
+#       and re-import (or all graphs)
+#
+
+POST http://localhost:3030/knora-test/update HTTP/1.1
+Content-Type: application/x-www-form-urlencoded
+Authorization: Basic {{$dotenv localFusekiUser}}:{{$dotenv localFusekiPwd}}
+
+update=
+prefix knora-admin: <http://www.knora.org/ontology/knora-admin#>
+delete {
+  ?subject ?predicate ?object
+}
+WHERE {
+  bind(<http://rdfh.ch/0112/T0x_LOB5SIySW8PgDPVzSQ> as ?subject)
+  ?subject ?predicate ?object
+}
 
 ###
 
@@ -183,6 +220,7 @@ Authorization: Basic {{user}}:{{pwd}}
 
 {   
   "@type" : "roud-oeuvres:EstablishedText",
+  "@id" : "http://rdfh.ch/0112/OxRjdZl8TGWhM-L77hsDfw",
   "roud-oeuvres:hasTextContent" : {
     "@type" : "knora-api:TextValue",
     "knora-api:hasPermissions" : "CR knora-admin:ProjectAdmin|D knora-admin:ProjectMember|V knora-admin:UnknownUser",
@@ -212,6 +250,22 @@ Authorization: Basic {{user}}:{{pwd}}
   }
 }
 
+###
+
+#
+# trying to read the "@id" to later request it... => failed
+# if you can't read "@id", fix it in the creation
+#
+
+# these two work
+@createdTextArk = {{createdText.response.body.$['knora-api:arkUrl']['@value']}}
+@createdTextArkAlt = {{createdText.response.body.knora-api:arkUrl.@value}}
+# not this one... I don't manage to grab "@id"
+@createdTextId = {{createdText.response.body.'@id'}}
+@createdTextId = {{createdText.response.body.'\x40id'}}
+@createdTextId = {{createdText.response.body.['@id']}}
+@createdTextId = {{createdText.response.body.['\x40id']}}
+@createdTextId = {{createdText.response.body.$['@id']}}
 
 ###
 
