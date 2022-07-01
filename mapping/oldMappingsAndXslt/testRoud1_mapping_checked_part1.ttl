@@ -1,0 +1,78 @@
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix knora-base: <http://www.knora.org/ontology/knora-base#> .
+@prefix salsah-gui: <http://www.knora.org/ontology/salsah-gui#> .
+@prefix roud-oeuvres: <http://www.knora.org/ontology/0112/roud-oeuvres#> .
+@base <http://www.knora.org/ontology/0112/roud-oeuvres> .
+@prefix : <http://www.knora.org/ontology/0112/roud-oeuvres#> .
+
+
+
+
+### ----------------- classes -----------------------------
+
+:StandoffRootTag rdf:type owl:Class ;
+    rdfs:subClassOf knora-base:StandoffTag ,
+            [ rdf:type owl:Restriction ;
+              owl:onProperty :standoffRootTagHasDocumentType ;
+              owl:maxCardinality "1"^^xsd:nonNegativeInteger
+            ] ;
+    rdfs:comment "Represents the root node if the TextValue has been created from XML"@en .
+
+:StandoffP	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ;
+	rdfs:label "A paragraph"@en ;
+	rdfs:comment """A paragraph"""@en .
+
+
+:StandoffQuote	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffQuoteHasSource ;
+			owl:cardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A quote"@en ;
+	rdfs:comment """A quote"""@en .
+
+:StandoffDate	rdf:type	owl:Class ;
+	rdfs:subClassOf	knora-base:StandoffDateTag ,
+			[rdf:type	owl:Restriction ;
+			owl:onProperty	:standoffDateHasWhen ;
+			owl:maxCardinality "1"^^xsd:nonNegativeInteger ] ;
+	rdfs:label "A date"@en ;
+	rdfs:comment """A date"""@en .
+
+
+### ----------------- properties -----------------------------
+
+
+:standoffRootTagHasDocumentType rdf:type owl:DatatypeProperty ;
+	rdfs:subPropertyOf knora-base:objectCannotBeMarkedAsDeleted ;
+	rdfs:comment "describes the document type"@en ;
+	knora-base:subjectClassConstraint :StandoffRootTag ;
+	knora-base:objectDatatypeConstraint xsd:string .
+
+
+:standoffQuoteHasSource a owl:ObjectProperty ;
+    rdfs:label "Source of the quote"@en,
+        "Source de la citation"@fr,
+        "Fonte della citazione"@it ;
+    knora-base:subjectClassConstraint :StandoffQuote ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "Source of the quote"@en,
+        "Source de la citation"@fr .
+
+
+:standoffDateHasWhen a owl:ObjectProperty ;
+    rdfs:label "Formalized date"@en,
+        "Date formalisée"@fr,
+        "Data formalizzata"@it ;
+    knora-base:subjectClassConstraint :StandoffDate ;
+    knora-base:objectDatatypeConstraint xsd:string ;
+    rdfs:comment "Formalized data"@en,
+        "Date formalisée"@fr .
+
+
+

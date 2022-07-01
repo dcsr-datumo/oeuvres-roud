@@ -1,0 +1,3 @@
+This folder contains the last version of the customized mapping for the Roud project. The mapping allows to work with XML-TEI data in Knora (DSP). More about TEI in the Roud project can be found in [this repo](https://github.com/gustaveroudproject/TEI-Roud).
+
+Indications on **how to load the mapping into Knora** are available at https://github.com/gustaveroudproject/TEI-Roud/tree/main/loadStandoffMapping.
