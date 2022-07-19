@@ -4,9 +4,9 @@
     shortcode="0112" default-ontology="roud-oeuvres">
     
     <permissions id="img-default">
-        <allow group="UnknownUser">V</allow> <!-- only view -->
-        <allow group="KnownUser">D</allow> <!-- read, edit, delete -->
-        <allow group="ProjectAdmin">CR</allow> <!-- change permissions -->
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
         <allow group="Creator">CR</allow>
     </permissions>
     
