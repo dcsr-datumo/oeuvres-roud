@@ -36,12 +36,6 @@ pub_Roud Gustave_D'un cahier d'instants_13 12_1947-12/pub_Roud Gustave_D'un cahi
 pub_Roud Gustave_Beau-Site. À Monsieur le Docteur Georges Rossel_Gazette_de_Beau-Site_1946-06/pub_Roud Gustave_Beau-Site. À Monsieur le Docteur Georges Rossel_Gazette_de_Beau-Site_1946-06_p17_1.tif
 pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05_p13_5.tif
 pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05_p9_1.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_9.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_2.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_10.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_6.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_4.tif
-pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_11.tif
 pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05_p12_4.tif
 pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05_p10_2.tif
 pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05/pub_Hölderlin Friedrich_Grèce Âges de la vie_Lettres françaises_1967-05_p11_3.tif
@@ -124,8 +118,6 @@ pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15/pub_Hildeg
 pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15/pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15_p287_4.tif
 pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15/pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15_p286_3.tif
 pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15/pub_Hildegard von Bingen_Bourreaux - sainte_Suisse_romande_1938-03-15_p285_2.tif
-pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
-pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_3.tif
 pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09/pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09_p2_2.tif
 pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09/pub_Roud Gustave_Au moment de prendre la parole_Le Courrier de la Broye et du Jorat_1958-01-09_p1_1.tif
 pub_Geiser Bernhard_[Picasso ne connaît nulle attache]_La_Guilde_du_Livre_1955-05/pub_Geiser Bernhard_[Picasso ne connaît nulle attache]_La_Guilde_du_Livre_1955-05_p199_2.tif
@@ -150,7 +142,6 @@ pub_Roud Gustave_Inutilisable_La_Guilde_du_Livre_1945-12/pub_Roud Gustave_Inutil
 pub_Roud Gustave_Petit traité de la marche en plaine_Alliance_culturelle_romande_1967-05/pub_Roud Gustave_Petit traité de la marche en plaine_Alliance_culturelle_romande_1967-05_p55_2.tif
 pub_Roud Gustave_Petit traité de la marche en plaine_Alliance_culturelle_romande_1967-05/pub_Roud Gustave_Petit traité de la marche en plaine_Alliance_culturelle_romande_1967-05_p54_1.tif
 pub_Roud Gustave_Moissons_Semeur_vaudois_1958-08-09/pub_Roud Gustave_Moissons_Semeur_vaudois_1958-08-09_p1_1.tif
-pub_Roud Gustave_Moissons_Semeur_vaudois_1958-08-09/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_0.tif
 pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02/pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02_p19_3.tif
 pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02/pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02_p18_2.tif
 pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02/pub_Roud Gustave_Grand-Saint-Bernard_Perspectives_1950-02_p17_1.tif
@@ -158,7 +149,6 @@ pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03/pub_Roud G
 pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03/pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03_p44_4.tif
 pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03/pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03_p41_1.tif
 pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03/pub_Roud Gustave_Visite au dragon Ramseyer_La_Guilde_du_Livre_1946-03_p43_3.tif
-pub_Roud Gustave_Je me souviens_Semeur_vaudois_1957-07-20/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_0.tif
 pub_Roud Gustave_Je me souviens_Semeur_vaudois_1957-07-20/pub_Roud Gustave_Je me souviens_Semeur_vaudois_1957-07-20_p1_1.tif
 pub_Geiser Bernhard_Pablo Picasso, Dates biographiques _La_Guilde_du_Livre_1955-11/pub_Geiser Bernhard_Pablo Picasso, Dates biographiques _La_Guilde_du_Livre_1955-11_p414_1.tif
 pub_Geiser Bernhard_Pablo Picasso, Dates biographiques _La_Guilde_du_Livre_1955-11/pub_Geiser Bernhard_Pablo Picasso, Dates biographiques _La_Guilde_du_Livre_1955-11_p415_2.tif
@@ -192,7 +182,6 @@ pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-0
 pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04/pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04_p139_7.tif
 pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04/pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04_p137_5.tif
 pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04/pub_Roud Gustave_Lettres à et de Pierre-Louis Matthey_Études_de_Lettres_1972-04_p140_8.tif
-pub_Roud Gustave_[sans titre]_Joie_1943-04/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Roud Gustave_[sans titre]_Joie_1943-04/pub_Roud Gustave_[sans titre]_Joie_1943-04_p2_1.tif
 pub_Roud Gustave_Le Jorat_Courants_1945/pub_Roud Gustave_Le Jorat_Courants_1945_p5_1.tif
 pub_Roud Gustave_Le Jorat_Courants_1945/pub_Roud Gustave_Le Jorat_Courants_1945_p14_10.tif
@@ -293,10 +282,7 @@ pub_Roud Gustave_Sur Aimé Pache_La_Guilde_du_Livre_1947-11/pub_Roud Gustave_Sur
 pub_Roud Gustave_Sur Aimé Pache_La_Guilde_du_Livre_1947-11/pub_Roud Gustave_Sur Aimé Pache_La_Guilde_du_Livre_1947-11_p285_3.tif
 pub_Roud Gustave_Sur Aimé Pache_La_Guilde_du_Livre_1947-11/pub_Roud Gustave_Sur Aimé Pache_La_Guilde_du_Livre_1947-11_p284_2.tif
 pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10/pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10_p12_2.tif
-pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
-pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_0.tif
 pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10/pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10_p6_1.tif
-pub_Roud Gustave_A-J Bataillard Dialogue avec M Gustave Roud_Joie_1943-10/renamer/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Roud Gustave_Exposition Charles Clément _La_Revue_romande_1920-11-25/pub_Roud Gustave_Exposition Charles Clément _La_Revue_romande_1920-11-25_p15_1.tif
 pub_Roud Gustave_Deux moments d'une quête_Suisse_contemporaine_1941-11/pub_Roud Gustave_Deux moments d'une quête_Suisse_contemporaine_1941-11_p807_4.tif
 pub_Roud Gustave_Deux moments d'une quête_Suisse_contemporaine_1941-11/pub_Roud Gustave_Deux moments d'une quête_Suisse_contemporaine_1941-11_p806_3.tif
@@ -330,7 +316,6 @@ pub_Roud Gustave_Sur l'Art d'Auberjonois_Perspectives_1952-08/pub_Roud Gustave_S
 pub_Roud Gustave_Sur l'Art d'Auberjonois_Perspectives_1952-08/pub_Roud Gustave_Sur l'Art d'Auberjonois_Perspectives_1952-08_p5_1.tif
 pub_Roud Gustave_Sur l'Art d'Auberjonois_Perspectives_1952-08/pub_Roud Gustave_Sur l'Art d'Auberjonois_Perspectives_1952-08_p9_5.tif
 pub_Roud Gustave_Verdures de la Nuit_Servir_1945-05-03/pub_Roud Gustave_Verdures de la Nuit_Servir_1945-05-03_p10_1.tif
-pub_Roud Gustave_Verdures de la Nuit_Servir_1945-05-03/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_0.tif
 pub_Roud Gustave_[La porte est ouverte]_Études_de_Lettres_1972-10/pub_Roud Gustave_[La porte est ouverte]_Études_de_Lettres_1972-10_p89_1.tif
 pub_Roud Gustave_[Voici revivre ces moments]_La_Guilde_du_Livre_1966-03/pub_Roud Gustave_[Voici revivre ces moments]_La_Guilde_du_Livre_1966-03_p120_1.tif
 pub_Roud Gustave_Annonce d'un Adieu_Présence_1932/pub_Roud Gustave_Annonce d'un Adieu_Présence_1932_p28c_3.tif
@@ -341,7 +326,6 @@ pub_Boller Willy_La Vie et l'Œuvre de Hokusaï_La_Guilde_du_Livre_1955-11/pub_B
 pub_Boller Willy_La Vie et l'Œuvre de Hokusaï_La_Guilde_du_Livre_1955-11/pub_Boller Willy_La Vie et l'Œuvre de Hokusaï_La_Guilde_du_Livre_1955-11_p403_2.tif
 pub_Boller Willy_La Vie et l'Œuvre de Hokusaï_La_Guilde_du_Livre_1955-11/pub_Boller Willy_La Vie et l'Œuvre de Hokusaï_La_Guilde_du_Livre_1955-11_p404_3.tif
 pub_Roud Gustave_Trois feuillets d'un printemps perdu_Joie._Journal_pour_les_étudiants_de_la_Suisse_romande_1943-05/pub_Roud Gustave_Trois feuillets d'un printemps perdu_Joie._Journal_pour_les_étudiants_de_la_Suisse_romande_1943-05_p11_1.tif
-pub_Roud Gustave_Adieu_Servir_1947-05-29/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_0.tif
 pub_Roud Gustave_Adieu_Servir_1947-05-29/pub_Roud Gustave_Adieu_Servir_1947-05-29_p1_1.tif
 pub_Roud Gustave_Vous avez bien voulu me tendre_Revue_de_Belles-Lettres_1970/pub_Roud Gustave_Vous avez bien voulu me tendre_Revue_de_Belles-Lettres_1970_p4_1.tif
 pub_Roud Gustave_Une décoration d'Auberjonois à Rumine _Présence_1934/pub_Roud Gustave_Une décoration d'Auberjonois à Rumine _Présence_1934_p46_1.tif
@@ -349,7 +333,6 @@ pub_Roud Gustave_Une décoration d'Auberjonois à Rumine _Présence_1934/pub_Rou
 pub_Roud Gustave, Simond Daniel_Pareil à un bel arbre_ADAM_1967/pub_Roud Gustave, Simond Daniel_Pareil à un bel arbre_ADAM_1967_p47_1.tif
 pub_Roud Gustave, Simond Daniel_Pareil à un bel arbre_ADAM_1967/pub_Roud Gustave, Simond Daniel_Pareil à un bel arbre_ADAM_1967_p48_2.tif
 pub_Roud Gustave_Voilà vingt ans s'éteignait le grand Ramuz_Construire_1967-05-17/pub_Roud Gustave_Voilà vingt ans s'éteignait le grand Ramuz_Construire_1967-05-17_p3_1.tif
-pub_Roud Gustave_Voilà vingt ans s'éteignait le grand Ramuz_Construire_1967-05-17/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Gudmundsson Kristmann_Retour_La_Guilde_du_Livre_1945-07/pub_Gudmundsson Kristmann_Retour_La_Guilde_du_Livre_1945-07_p108_2.tif
 pub_Gudmundsson Kristmann_Retour_La_Guilde_du_Livre_1945-07/pub_Gudmundsson Kristmann_Retour_La_Guilde_du_Livre_1945-07_p107_1.tif
 pub_Roud Gustave_Air de la solitude_Feuille_centrale_de_Zofingue_1953-01/pub_Roud Gustave_Air de la solitude_Feuille_centrale_de_Zofingue_1953-01_p66_2.tif
@@ -381,7 +364,6 @@ pub_Huttinger Edouard_La peinture hollandaise du XVIIe siècle_La_Guilde_du_Livr
 pub_Huttinger Edouard_La peinture hollandaise du XVIIe siècle_La_Guilde_du_Livre_1956-12/pub_Huttinger Edouard_La peinture hollandaise du XVIIe siècle_La_Guilde_du_Livre_1956-12_p495_2.tif
 pub_Huttinger Edouard_La peinture hollandaise du XVIIe siècle_La_Guilde_du_Livre_1956-12/pub_Huttinger Edouard_La peinture hollandaise du XVIIe siècle_La_Guilde_du_Livre_1956-12_p494_1.tif
 pub_Roud Gustave_Page de L été Les Foins_Le_Courrier_de_La_Plata_1946-08-01/pub_Roud Gustave_Page de L été Les Foins_Le_Courrier_de_La_Plata_1946-08-01_p4_1.tif
-pub_Roud Gustave_Page de L été Les Foins_Le_Courrier_de_La_Plata_1946-08-01/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Roud Gustave_Exposition Rodolphe-Théophile Bosshard_La_Revue_romande_1921-04-10/pub_Roud Gustave_Exposition Rodolphe-Théophile Bosshard_La_Revue_romande_1921-04-10_p15_2.tif
 pub_Roud Gustave_Exposition Rodolphe-Théophile Bosshard_La_Revue_romande_1921-04-10/pub_Roud Gustave_Exposition Rodolphe-Théophile Bosshard_La_Revue_romande_1921-04-10_p14_1.tif
 pub_Geiser Bernhard_Pablo Picasso, Dates biographiques_La_Guilde_du_Livre_1955-08/pub_Geiser Bernhard_Pablo Picasso, Dates biographiques_La_Guilde_du_Livre_1955-08_p316_1.tif
@@ -410,7 +392,6 @@ pub_Roud Gustave_Fragment d une réponse à C. F. Ramuz_La_Guilde_du_Livre_1941-
 pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11/pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11_p167_2.tif
 pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11/pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11_p168_3.tif
 pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11/pub_Roud Gustave_Extrême automne_La_Guilde_du_Livre_1940-11_p166_1.tif
-pub_Roud Gustave_Gérard de Palézieux_Journal_de_Sierre_et_du_Valais_central_1964-07-01/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Roud Gustave_Gérard de Palézieux_Journal_de_Sierre_et_du_Valais_central_1964-07-01/pub_Roud Gustave_Gérard de Palézieux_Journal_de_Sierre_et_du_Valais_central_1964-07-01_p1_1.tif
 pub_Roud Gustave_Quand les chevaux ne sont plus utiles aux travaux des champs_Lectures_du_foyer_1942-07/pub_Roud Gustave_Quand les chevaux ne sont plus utiles aux travaux des champs_Lectures_du_foyer_1942-07_p1_1.tif
 pub_Roud Gustave_Pouvoirs d'une prairie_La_Guilde_du_Livre_1942-10/pub_Roud Gustave_Pouvoirs d'une prairie_La_Guilde_du_Livre_1942-10_p177_1.tif
@@ -425,7 +406,6 @@ pub_Roud Gustave_Présence du poète_Lettres_1945-06/pub_Roud Gustave_Présence 
 pub_Roud Gustave_Dragon, Fernand Cherpillod, Escadron 4_La_Guilde_du_Livre_1939-10/pub_Roud Gustave_Dragon, Fernand Cherpillod, Escadron 4_La_Guilde_du_Livre_1939-10_p145_1.tif
 pub_Roud Gustave_Mémoire_Inno-Reflets_1967/pub_Roud Gustave_Mémoire_Inno-Reflets_1967_p9_2.tif
 pub_Roud Gustave_Mémoire_Inno-Reflets_1967/pub_Roud Gustave_Mémoire_Inno-Reflets_1967_p8_1.tif
-pub_Roud Gustave_Présence _La_Liberté_1972-04-01/undo/_mNumeroFeuilletRectoVerso___mNumeroProgressif_1.tif
 pub_Roud Gustave_Présence _La_Liberté_1972-04-01/pub_Roud Gustave_Présence _La_Liberté_1972-04-01_p10_1.tif
 pub_Roud Gustave_Découverte de Portalban_La_Nouvelle_Semaine_artistique_et_littéraire_1928-12-15/pub_Roud Gustave_Découverte de Portalban_La_Nouvelle_Semaine_artistique_et_littéraire_1928-12-15_p712_1.tif
 pub_Roud Gustave_Bain d'un faucheur_Cahiers_du_Sud_1943-04/pub_Roud Gustave_Bain d'un faucheur_Cahiers_du_Sud_1943-04_p308_1.tif
