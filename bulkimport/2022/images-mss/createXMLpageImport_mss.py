@@ -16,27 +16,29 @@ listTifMss = listTifMss_file.readlines()
 for tif in listTifMss:
 
     # from CRLR_GR_MS6B110a/CRLR_GR_MS6B110a_1r_1.tif, remove first part and extension > CRLR_GR_MS6B110a_1r_1
-    tif = tif.split('/')[1].split('.')[0] 
+    msContainingTif = tif.split('/')[0]
+    tif = tif.split('/')[1].split('.')[0]
+    
 
     print(tif)
     
     ### Building blocks
+    msShelfmark = msContainingTif[8:] # MS6B110a
     msN = tif[10]  # 6
-    msLet = tif[11]  # B
+    msRestShelfmark = tif[11:].split('_')[0] # B110a
+    
+    
     msRest = tif[12:]  # 110a_1r_1.tif
-    msRestShelfmark = msRest.split('_')[0]  # 110a
-    msShelfmark = 'MS' + msN + msLet + msRestShelfmark
-
     if (msRest.find('couv1') > 0):
-        # example: CRLR_GR_MS6G55a_couv1_1r_1
+        # example: G55a_couv1_1r_1.tif
         pageName = "première de couverture " + msRest.split('_')[2]
         pageSeqnum = msRest.split('_')[3]
     elif (msRest.find('couv4') > 0):
-        # example: CRLR_GR_MS6G55a_couv4_1r_255
+        # example: G55a_couv4_1r_255.tif
         pageName = "quatrième de couverture " + msRest.split('_')[2]
         pageSeqnum = msRest.split('_')[3]
     else:
-        # example: CRLR_GR_MS6B110a_1r_1
+        # example: B110a_1r_1.tif
         pageName = "f. " + msRest.split('_')[1]  # 1r
         pageSeqnum = msRest.split('_')[2]  # 1
 
@@ -49,12 +51,14 @@ for tif in listTifMss:
         for row in iriShelfmark_correspondance:
             if (msShelfmark == row[1]):
                 msTarget = row[0]
+            else:
+                print('no ms found')
 
 
         ### Content for the XML
-        pLabel = 'page_CRLR GR MS' + msN + ' ' + msLet + msRestShelfmark + '___' + pageName + '___' + pageSeqnum
+        pLabel = 'page_CRLR GR MS' + msN + ' ' + msRestShelfmark + '___' + pageName + '___' + pageSeqnum
         pId = tif + '.tif'
-        pBitstream = tif + '.tif'
+        pBitstream = '/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/' + msContainingTif + '/' + tif + '.tif'
         pName = pageName
         pSeqnum = pageSeqnum
         pMs = msTarget
