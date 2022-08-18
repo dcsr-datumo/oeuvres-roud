@@ -992,7 +992,7 @@ roud-oeuvres:pageIsPartOfManuscriptValue a owl:ObjectProperty ;
         "Pagina del documento d'archivio"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Page ;
-    rdfs:subPropertyOf knora-base:hasLinkToValue .
+    rdfs:subPropertyOf knora-base:isPartOfValue .
 
 roud-oeuvres:pageIsPartOfPublication a owl:ObjectProperty ;
     rdfs:label "Page of the publication"@en,
@@ -1011,7 +1011,7 @@ roud-oeuvres:pageIsPartOfPublicationValue a owl:ObjectProperty ;
         "Pagina della pubblicazione"@it ;
     knora-base:objectClassConstraint knora-base:LinkValue ;
     knora-base:subjectClassConstraint roud-oeuvres:Page ;
-    rdfs:subPropertyOf knora-base:hasLinkToValue .
+    rdfs:subPropertyOf knora-base:isPartOfValue .
 
 roud-oeuvres:periodicalArticleIsInPages a owl:ObjectProperty ;
     rdfs:label "Pages"@en,
