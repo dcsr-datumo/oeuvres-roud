@@ -46,14 +46,11 @@ for tif in listTifMss:
     # csv downloaded from sparql query (query saved in graphdb). First column: iri, second column: shelfmark 
     # attention to delimiter for reading csv
     ### check shelfmark and store IRI in msTarget
-    with open("iri-shelfmark_test.csv", 'r') as csv_iriShelfmark_correspondance:     
+    with open("iri-shelfmark.csv", 'r') as csv_iriShelfmark_correspondance:     
         iriShelfmark_correspondance = csv.reader(csv_iriShelfmark_correspondance, delimiter =',', doublequote=True)
         for row in iriShelfmark_correspondance:
             if (msShelfmark == row[1]):
                 msTarget = row[0]
-            else:
-                print('no ms found')
-
 
         ### Content for the XML
         pLabel = 'page_CRLR GR MS' + msN + ' ' + msRestShelfmark + '___' + pageName + '___' + pageSeqnum

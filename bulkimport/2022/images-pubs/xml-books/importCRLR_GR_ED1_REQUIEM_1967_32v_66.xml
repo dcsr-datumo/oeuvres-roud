@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"
+    shortcode="0112" default-ontology="roud-oeuvres">
+    
+    <permissions id="img-default">
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
+        <allow group="Creator">CR</allow>
+    </permissions>
+
+
+<resource label="CRLR_GR_ED1_REQUIEM_1967_32v_66" restype=":Page" id="CRLR_GR_ED1_REQUIEM_1967_32v_66.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/Publications/OuvragesNumerises/CRLR_GR_ED1_REQUIEM_1967/CRLR_GR_ED1_REQUIEM_1967_32v_66.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">p. 64</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">66</integer></integer-prop><resptr-prop name=":pageIsPartOfPublication"><resptr permissions="img-default">http://rdfh.ch/0112/Sp_Gcm6fTsGBuYitYex_SA</resptr></resptr-prop></resource>
+</knora>

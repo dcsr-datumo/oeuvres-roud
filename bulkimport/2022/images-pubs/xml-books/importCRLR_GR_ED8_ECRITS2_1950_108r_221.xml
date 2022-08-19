@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"
+    shortcode="0112" default-ontology="roud-oeuvres">
+    
+    <permissions id="img-default">
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
+        <allow group="Creator">CR</allow>
+    </permissions>
+
+
+<resource label="CRLR_GR_ED8_ECRITS2_1950_108r_221" restype=":Page" id="CRLR_GR_ED8_ECRITS2_1950_108r_221.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/Publications/OuvragesNumerises/CRLR_GR_ED8_ECRITS2_1950/CRLR_GR_ED8_ECRITS2_1950_108r_221.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">vol. II p. 221</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">221</integer></integer-prop><resptr-prop name=":pageIsPartOfPublication"><resptr permissions="img-default">http://rdfh.ch/0112/BbnLAVeaS8ChIeTqMi4wbQ</resptr></resptr-prop></resource>
+</knora>
