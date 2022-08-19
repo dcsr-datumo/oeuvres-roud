@@ -11,5 +11,5 @@
     </permissions>
 
 
-<resource label="page_CRLR GR MS6 B310a___f. 2r___2" restype=":Page" id="CRLR_GR_MS6B310a_2r_2.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/CRLR_GR_MS6B310a/CRLR_GR_MS6B310a_2r_2.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">f. 2r</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">2</integer></integer-prop><resptr-prop name=":pageIsPartOfManuscript"><resptr permissions="img-default">http://rdfh.ch/0112/yxx7CBEZTaOWnmBt4i_9nA</resptr></resptr-prop></resource>
+<resource label="page_CRLR GR MS6 B310a___f. 2r___2" restype=":Page" id="CRLR_GR_MS_6B310a_2r_2.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/FondsArchive/CRLR_GR_MS6B310a/CRLR_GR_MS_6B310a_2r_2.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">f. 2r</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">2</integer></integer-prop><resptr-prop name=":pageIsPartOfManuscript"><resptr permissions="img-default">http://rdfh.ch/0112/yxx7CBEZTaOWnmBt4i_9nA</resptr></resptr-prop></resource>
 </knora>
