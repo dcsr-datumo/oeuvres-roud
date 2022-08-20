@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"
+    shortcode="0112" default-ontology="roud-oeuvres">
+    
+    <permissions id="img-default">
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
+        <allow group="Creator">CR</allow>
+    </permissions>
+
+
+<resource label="pub_Gudmundsson Kristmann_Hakon et Bjarne aux îles des Revenants_La_Guilde_du_Livre_1944-10_p161_1" restype=":Page" id="pub_GudmundssonKristmann_HakonetBjarneauxîlesdesRevenants_La_Guilde_du_Livre_194410_p161_1.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/Publications/pub_Gudmundsson Kristmann_Hakon et Bjarne aux îles des Revenants_La_Guilde_du_Livre_1944-10/pub_Gudmundsson Kristmann_Hakon et Bjarne aux îles des Revenants_La_Guilde_du_Livre_1944-10_p161_1.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">p. 161</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">1</integer></integer-prop><resptr-prop name=":pageIsPartOfPublication"><resptr permissions="img-default">http://rdfh.ch/0112/mgCgQFb7TTamAV91ub-5kw</resptr></resptr-prop></resource>
+</knora>
