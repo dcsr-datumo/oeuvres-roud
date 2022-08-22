@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"
+    shortcode="0112" default-ontology="roud-oeuvres">
+    
+    <permissions id="img-default">
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
+        <allow group="Creator">CR</allow>
+    </permissions>
+
+
+<resource label="pub_Roud Gustave_Hommage Toute-puissance de la poésie (Scène)_Feuille_centrale_de_Zofingue_1941-08_p28_6" restype=":Page" id="pub_RoudGustave_HommageToutepuissancedelapoésieScène_Feuille_centrale_de_Zofingue_194108_p28_6.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/Publications/pub_Roud Gustave_Hommage Toute-puissance de la poésie (Scène)_Feuille_centrale_de_Zofingue_1941-08/pub_Roud Gustave_Hommage Toute-puissance de la poésie (Scène)_Feuille_centrale_de_Zofingue_1941-08_p28_6.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">p. 28</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">6</integer></integer-prop><resptr-prop name=":pageIsPartOfPublication"><resptr permissions="img-default">http://rdfh.ch/0112/6cU7MlhETKKYlvs_-M8sUA</resptr></resptr-prop></resource>
+</knora>

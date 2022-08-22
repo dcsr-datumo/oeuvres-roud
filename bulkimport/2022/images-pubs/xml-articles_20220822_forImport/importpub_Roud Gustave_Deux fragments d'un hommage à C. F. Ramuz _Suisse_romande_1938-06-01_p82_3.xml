@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"
+    shortcode="0112" default-ontology="roud-oeuvres">
+    
+    <permissions id="img-default">
+        <allow group="UnknownUser">V</allow>
+        <allow group="KnownUser">D</allow>
+        <allow group="ProjectAdmin">CR</allow>
+        <allow group="Creator">CR</allow>
+    </permissions>
+
+
+<resource label="pub_Roud Gustave_Deux fragments d'un hommage à C. F. Ramuz _Suisse_romande_1938-06-01_p82_3" restype=":Page" id="pub_RoudGustave_DeuxfragmentsdunhommageàC.F.Ramuz_Suisse_romande_19380601_p82_3.tif" permissions="img-default"><bitstream permissions="img-default">/mnt/scanlettMounted/GustaveRoud/E_Scan/Scans_complets/Publications/pub_Roud Gustave_Deux fragments d'un hommage à C. F. Ramuz _Suisse_romande_1938-06-01/pub_Roud Gustave_Deux fragments d'un hommage à C. F. Ramuz _Suisse_romande_1938-06-01_p82_3.tif</bitstream><text-prop name=":pageHasName"><text permissions="img-default" encoding="utf8">p. 82</text></text-prop><integer-prop name=":hasSeqnum"><integer permissions="img-default">3</integer></integer-prop><resptr-prop name=":pageIsPartOfPublication"><resptr permissions="img-default">http://rdfh.ch/0112/QCv9zJlUTRWj96dBhjsRnw</resptr></resptr-prop></resource>
+</knora>
