@@ -20,6 +20,7 @@ for scan in listTifPubs:
     tif = scan.split('/')[1].split('.tif')[0]
     print(tif)
     correspondingPubLabel = scan.split('/')[0]
+    print(correspondingPubLabel)
     pageSeqnum = tif.split('_')[-1]
     pageName = tif.split('_')[-2].strip('p')
     
@@ -38,9 +39,13 @@ for scan in listTifPubs:
         iriLabel_correspondance = csv.reader(csv_iriLabel_correspondance, delimiter =',', doublequote=True)
         correspondingPubIri = ""
         for row in iriLabel_correspondance:
-            if (correspondingPubLabel == row[1] or correspondingPubLabel == row[1].strip('"')):
+            if (correspondingPubLabel == row[1]):
                 correspondingPubIri = row[0]
         pPub = correspondingPubIri
+    if (pPub == ""):
+        print("MISSING LINK" + '\n')
+    else:
+        print(pPub + '\n')
     
     ### Write to XML
     if not os.path.exists('xml-articles'):
