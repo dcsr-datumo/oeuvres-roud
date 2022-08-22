@@ -448,8 +448,8 @@ pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11/pub
 pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11/pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11_p279_2.tif
 pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11/pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11_p281_4.tif
 pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11/pub_Roud Gustave_Cueilleurs de pommes à Monnéaz_La_Guilde_du_Livre_1946-11_p278_1.tif
-pub_Roud Gustave_[Ouvre les yeux ferme les yeux]_La_Guilde_du_Livre_1950-12/pub_Roud Gustave_[Ouvre les yeux ferme les yeux]_La_Guilde_du_Livre_1950-12_p264_1.tif
-pub_Roud Gustave_[Ouvre les yeux ferme les yeux]_La_Guilde_du_Livre_1950-12/pub_Roud Gustave_[Ouvre les yeux ferme les yeux]_La_Guilde_du_Livre_1950-12_p265_2.tif
+pub_Roud Gustave_Ouvre les yeux ferme les yeux_La_Guilde_du_Livre_1950-12/pub_Roud Gustave_Ouvre les yeux ferme les yeux_La_Guilde_du_Livre_1950-12_p264_1.tif
+pub_Roud Gustave_Ouvre les yeux ferme les yeux_La_Guilde_du_Livre_1950-12/pub_Roud Gustave_Ouvre les yeux ferme les yeux_La_Guilde_du_Livre_1950-12_p265_2.tif
 pub_Roud Gustave_[Pardonnez-moi si je déçois votre attente]_La_Guilde_du_Livre_1952-08/pub_Roud Gustave_[Pardonnez-moi si je déçois votre attente]_La_Guilde_du_Livre_1952-08_p223_1.tif
 pub_Roud Gustave_Notes_La_Revue_romande_1919-01/pub_Roud Gustave_Notes_La_Revue_romande_1919-01_p6_2.tif
 pub_Roud Gustave_Notes_La_Revue_romande_1919-01/pub_Roud Gustave_Notes_La_Revue_romande_1919-01_p5_1.tif
