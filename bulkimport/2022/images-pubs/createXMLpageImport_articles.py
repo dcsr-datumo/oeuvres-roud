@@ -19,7 +19,7 @@ for scan in listTifPubs:
     article = scan.split('/')[0]
     tif = scan.split('/')[1].split('.tif')[0]
     print(tif)
-    correspondingPubLabel = scan.split('/')[0] 
+    correspondingPubLabel = scan.split('/')[0]
     pageSeqnum = tif.split('_')[-1]
     pageName = tif.split('_')[-2].strip('p')
     
@@ -36,8 +36,9 @@ for scan in listTifPubs:
     ### check label and store IRI in correspondingPubIri
     with open("iri-label-articles.csv", 'r') as csv_iriLabel_correspondance:     
         iriLabel_correspondance = csv.reader(csv_iriLabel_correspondance, delimiter =',', doublequote=True)
+        correspondingPubIri = ""
         for row in iriLabel_correspondance:
-            if (correspondingPubLabel == row[1]):
+            if (correspondingPubLabel == row[1] or correspondingPubLabel == row[1].strip('"')):
                 correspondingPubIri = row[0]
         pPub = correspondingPubIri
     
