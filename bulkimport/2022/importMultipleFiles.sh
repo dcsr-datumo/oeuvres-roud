@@ -1,0 +1,1 @@
+find . -name '*.xml' -exec dsp-tools xmlupload --incremental -s https://api.ls-test-server.dasch.swiss -S https://iiif.ls-test-server.dasch.swiss -u elena.spadini@unil.ch -p k32V {} \; | tee import.log

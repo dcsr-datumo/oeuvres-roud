@@ -9,7 +9,7 @@ import os
 
 ### Open list of tiff to be imported
 # test with 'list-tiff-mss_2import_test.txt'
-listTifMss_file = open('list-tiff-mss_2import.txt', 'r', encoding="utf-8")
+listTifMss_file = open('list-tiff-mss_2import_20220822.txt', 'r', encoding="utf-8")
 
 listTifMss = listTifMss_file.readlines()
 
@@ -61,9 +61,9 @@ for tif in listTifMss:
         pMs = msTarget
 
     ### Write to XML
-    if not os.path.exists('xml'):
-        os.makedirs('xml')
-    o = open('./xml/import'+tif+'.xml', 'w', encoding="utf-8")
+    if not os.path.exists('xml_20220822_forImport'):
+        os.makedirs('xml_20220822_forImport')
+    o = open('./xml_20220822_forImport/import'+tif+'.xml', 'w', encoding="utf-8")
     o.write('<?xml version="1.0" encoding="utf-8"?>'+'\n'+'<knora xmlns="https://dasch.swiss/schema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"'+'\n'+'    xsi:schemaLocation="https://dasch.swiss/schema https://raw.githubusercontent.com/dasch-swiss/dsp-tools/main/knora/dsplib/schemas/data.xsd"'+'\n'+'    shortcode="0112" default-ontology="roud-oeuvres">'+'\n'+'    '+'\n'+'    <permissions id="img-default">'+'\n'+'        <allow group="UnknownUser">V</allow>'+'\n'+'        <allow group="KnownUser">D</allow>'+'\n'+'        <allow group="ProjectAdmin">CR</allow>'+'\n'+'        <allow group="Creator">CR</allow>'+'\n'+'    </permissions>'+'\n')
 
 
