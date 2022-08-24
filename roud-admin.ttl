@@ -138,7 +138,7 @@
 
 <http://rdfh.ch/users/XfZo65lKTLW98dYpy2ouWg> a knora-admin:User;
   knora-admin:status true;
-  knora-admin:email "arthur.brandlin@bluewin.ch";
+  knora-admin:email "arthur.brandlin@unil.ch";
   knora-admin:familyName "Brandlin";
   knora-admin:givenName "Arthur";
   knora-admin:isInProject <http://rdfh.ch/projects/0112>;
