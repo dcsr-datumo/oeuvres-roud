@@ -1,0 +1,28 @@
+### Default variables
+
+@server         = https://api.ls-prod-server.dasch.swiss
+
+@proj_id              = http://rdfh.ch/projects/0112
+
+@proj_id_enc          = http%3A%2F%2Frdfh.ch%2Fprojects%2F0112
+
+### env variables
+
+# in a `.env` file, define:
+# adminUser=<admin user>
+# adminPwd=<admin password>
+
+### Get list of projects
+
+GET {{server}}/admin/projects
+
+
+### Get administrative permissions for knora-admin:ProjectAdmin
+
+GET {{server}}/admin/permissions/ap/{{proj_id_enc}}
+Authorization: Basic {{$dotenv adminUser}}:{{$dotenv adminPwd}}
+
+### Get Default Object Access Permissions (doap)
+
+GET {{server}}/admin/permissions/doap/{{proj_id_enc}}
+Authorization: Basic {{$dotenv adminUser}}:{{$dotenv adminPwd}}
